@@ -1,0 +1,1276 @@
+{
+    "Most Assists with 0 Points": [
+        {
+            "Player": "Nick Calathes",
+            "Season": 2020,
+            "Phase": "RS",
+            "Round": 30,
+            "Assists": 11,
+            "LocalTeam": "AX Armani Exchange Milan",
+            "AwayTeam": "FC Barcelona"
+        },
+        {
+            "Player": "T.j. Ford",
+            "Season": 2011,
+            "Phase": "RS",
+            "Round": 6,
+            "Assists": 10,
+            "LocalTeam": "Zagreb",
+            "AwayTeam": "Brose Baskets"
+        },
+        {
+            "Player": "Stefan Markovic",
+            "Season": 2014,
+            "Phase": "TS",
+            "Round": 21,
+            "Assists": 10,
+            "LocalTeam": "Unicaja Malaga",
+            "AwayTeam": "CSKA Moscow"
+        },
+        {
+            "Player": "Krunoslav Simon",
+            "Season": 2021,
+            "Phase": "RS",
+            "Round": 6,
+            "Assists": 9,
+            "LocalTeam": "Panathinaikos OPAP Athens",
+            "AwayTeam": "Anadolu Efes Istanbul"
+        },
+        {
+            "Player": "Nikos Zisis",
+            "Season": 2016,
+            "Phase": "RS",
+            "Round": 11,
+            "Assists": 9,
+            "LocalTeam": "Maccabi FOX Tel Aviv",
+            "AwayTeam": "Brose Bamberg"
+        },
+        {
+            "Player": "Maodo Lo",
+            "Season": 2020,
+            "Phase": "RS",
+            "Round": 28,
+            "Assists": 9,
+            "LocalTeam": "Khimki Moscow Region",
+            "AwayTeam": "ALBA Berlin"
+        },
+        {
+            "Player": "Albert Oliver",
+            "Season": 2018,
+            "Phase": "RS",
+            "Round": 12,
+            "Assists": 9,
+            "LocalTeam": "Herbalife Gran Canaria",
+            "AwayTeam": "Buducnost VOLI Pogdorica"
+        },
+        {
+            "Player": "Sergio Rodriguez",
+            "Season": 2023,
+            "Phase": "RS",
+            "Round": 16,
+            "Assists": 9,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Partizan Mozzart Bet Belgrade"
+        },
+        {
+            "Player": "Sergio Llull",
+            "Season": 2013,
+            "Phase": "FF",
+            "Round": 31,
+            "Assists": 8,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Maccabi Electra Tel Aviv"
+        },
+        {
+            "Player": "Thomas Heurtel",
+            "Season": 2020,
+            "Phase": "RS",
+            "Round": 8,
+            "Assists": 8,
+            "LocalTeam": "FC Barcelona",
+            "AwayTeam": "Fenerbahce Beko Istanbul"
+        },
+        {
+            "Player": "Pierria Henry",
+            "Season": 2020,
+            "Phase": "RS",
+            "Round": 27,
+            "Assists": 8,
+            "LocalTeam": "TD Systems Baskonia Vitoria-Gasteiz",
+            "AwayTeam": "Olympiacos Piraeus"
+        },
+        {
+            "Player": "Sergio Rodriguez",
+            "Season": 2012,
+            "Phase": "PO",
+            "Round": 26,
+            "Assists": 8,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Maccabi Electra Tel Aviv"
+        },
+        {
+            "Player": "Sergio Rodriguez",
+            "Season": 2020,
+            "Phase": "RS",
+            "Round": 32,
+            "Assists": 8,
+            "LocalTeam": "Crvena Zvezda mts Belgrade",
+            "AwayTeam": "AX Armani Exchange Milan"
+        },
+        {
+            "Player": "Matteo Spagnolo",
+            "Season": 2023,
+            "Phase": "RS",
+            "Round": 14,
+            "Assists": 8,
+            "LocalTeam": "Crvena Zvezda Meridianbet Belgrade",
+            "AwayTeam": "ALBA Berlin"
+        },
+        {
+            "Player": "Malte Delow",
+            "Season": 2023,
+            "Phase": "RS",
+            "Round": 9,
+            "Assists": 8,
+            "LocalTeam": "Partizan Mozzart Bet Belgrade",
+            "AwayTeam": "ALBA Berlin"
+        },
+        {
+            "Player": "Dejuan Collins",
+            "Season": 2007,
+            "Phase": "TS",
+            "Round": 18,
+            "Assists": 8,
+            "LocalTeam": "Zalgiris",
+            "AwayTeam": "Real Madrid"
+        },
+        {
+            "Player": "Omar Cook",
+            "Season": 2010,
+            "Phase": "PO",
+            "Round": 17,
+            "Assists": 8,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Power Electronics Valencia"
+        },
+        {
+            "Player": "Nicolas Laprovittola",
+            "Season": 2023,
+            "Phase": "RS",
+            "Round": 19,
+            "Assists": 8,
+            "LocalTeam": "FC Barcelona",
+            "AwayTeam": "Baskonia Vitoria-Gasteiz"
+        },
+        {
+            "Player": "Dominic Waters",
+            "Season": 2012,
+            "Phase": "RS",
+            "Round": 4,
+            "Assists": 7,
+            "LocalTeam": "Khimki Moscow Region",
+            "AwayTeam": "Union Olimpija Ljubljana"
+        },
+        {
+            "Player": "Emir Preldzic",
+            "Season": 2008,
+            "Phase": "TS",
+            "Round": 15,
+            "Assists": 7,
+            "LocalTeam": "CSKA Moscow",
+            "AwayTeam": "Fenerbahce Ulker"
+        }
+    ],
+    "Most Turnovers without Scoring": [
+        {
+            "Player": "Jamal Shuler",
+            "Season": 2011,
+            "Phase": "RS",
+            "Round": 9,
+            "Turnovers": 6,
+            "LocalTeam": "Caja Laboral",
+            "AwayTeam": "SLUC Nancy"
+        },
+        {
+            "Player": "Nicolas Laprovittola",
+            "Season": 2023,
+            "Phase": "RS",
+            "Round": 19,
+            "Turnovers": 6,
+            "LocalTeam": "FC Barcelona",
+            "AwayTeam": "Baskonia Vitoria-Gasteiz"
+        },
+        {
+            "Player": "Antonio Graves",
+            "Season": 2009,
+            "Phase": "RS",
+            "Round": 1,
+            "Turnovers": 6,
+            "LocalTeam": "Cibona",
+            "AwayTeam": "Montepaschi Siena"
+        },
+        {
+            "Player": "Sonny Weems",
+            "Season": 2016,
+            "Phase": "RS",
+            "Round": 13,
+            "Turnovers": 6,
+            "LocalTeam": "Maccabi FOX Tel Aviv",
+            "AwayTeam": "CSKA Moscow"
+        },
+        {
+            "Player": "Marcelinho Huertas",
+            "Season": 2012,
+            "Phase": "FF",
+            "Round": 31,
+            "Turnovers": 6,
+            "LocalTeam": "CSKA Moscow",
+            "AwayTeam": "FC Barcelona Regal"
+        },
+        {
+            "Player": "Milos Teodosic",
+            "Season": 2013,
+            "Phase": "RS",
+            "Round": 3,
+            "Turnovers": 6,
+            "LocalTeam": "Fenerbahce Ulker Istanbul",
+            "AwayTeam": "CSKA Moscow"
+        },
+        {
+            "Player": "Luka Zoric",
+            "Season": 2013,
+            "Phase": "RS",
+            "Round": 7,
+            "Turnovers": 6,
+            "LocalTeam": "FC Barcelona",
+            "AwayTeam": "Fenerbahce Ulker Istanbul"
+        },
+        {
+            "Player": "Dimitris Diamantidis",
+            "Season": 2012,
+            "Phase": "RS",
+            "Round": 5,
+            "Turnovers": 5,
+            "LocalTeam": "Panathinaikos Athens",
+            "AwayTeam": "Khimki Moscow Region"
+        },
+        {
+            "Player": "Vassilis Spanoulis",
+            "Season": 2017,
+            "Phase": "RS",
+            "Round": 22,
+            "Turnovers": 5,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Olympiacos Piraeus"
+        },
+        {
+            "Player": "Dragan Bender",
+            "Season": 2020,
+            "Phase": "RS",
+            "Round": 12,
+            "Turnovers": 5,
+            "LocalTeam": "Maccabi Playtika Tel Aviv",
+            "AwayTeam": "Crvena Zvezda mts Belgrade"
+        },
+        {
+            "Player": "Kyle Hines",
+            "Season": 2011,
+            "Phase": "FF",
+            "Round": 23,
+            "Turnovers": 5,
+            "LocalTeam": "CSKA Moscow",
+            "AwayTeam": "Olympiacos Piraeus"
+        },
+        {
+            "Player": "Josh Magette",
+            "Season": 2018,
+            "Phase": "RS",
+            "Round": 18,
+            "Turnovers": 5,
+            "LocalTeam": "KIROLBET Baskonia Vitoria-Gasteiz",
+            "AwayTeam": "Herbalife Gran Canaria"
+        },
+        {
+            "Player": "Kresimir Loncar",
+            "Season": 2012,
+            "Phase": "RS",
+            "Round": 9,
+            "Turnovers": 5,
+            "LocalTeam": "Union Olimpija Ljubljana",
+            "AwayTeam": "Khimki Moscow Region"
+        },
+        {
+            "Player": "Marin Rozic",
+            "Season": 2008,
+            "Phase": "RS",
+            "Round": 10,
+            "Turnovers": 5,
+            "LocalTeam": "Air Avellino",
+            "AwayTeam": "Cibona"
+        },
+        {
+            "Player": "Chris Singleton",
+            "Season": 2020,
+            "Phase": "RS",
+            "Round": 4,
+            "Turnovers": 5,
+            "LocalTeam": "Zalgiris Kaunas",
+            "AwayTeam": "Anadolu Efes Istanbul"
+        },
+        {
+            "Player": "Yanni Wetzell",
+            "Season": 2023,
+            "Phase": "RS",
+            "Round": 26,
+            "Turnovers": 5,
+            "LocalTeam": "FC Barcelona",
+            "AwayTeam": "ALBA Berlin"
+        },
+        {
+            "Player": "Ioannis Bourousis",
+            "Season": 2016,
+            "Phase": "RS",
+            "Round": 10,
+            "Turnovers": 5,
+            "LocalTeam": "FC Barcelona Lassa",
+            "AwayTeam": "Panathinaikos Superfoods Athens"
+        },
+        {
+            "Player": "Tal Burstein",
+            "Season": 2008,
+            "Phase": "RS",
+            "Round": 4,
+            "Turnovers": 5,
+            "LocalTeam": "Olympiacos Piraeus",
+            "AwayTeam": "Maccabi Electra"
+        },
+        {
+            "Player": "Richard Dorsey",
+            "Season": 2011,
+            "Phase": "FF",
+            "Round": 23,
+            "Turnovers": 5,
+            "LocalTeam": "CSKA Moscow",
+            "AwayTeam": "Olympiacos Piraeus"
+        },
+        {
+            "Player": "Acie Law",
+            "Season": 2013,
+            "Phase": "RS",
+            "Round": 7,
+            "Turnovers": 5,
+            "LocalTeam": "Olympiacos Piraeus",
+            "AwayTeam": "Galatasaray Liv Hospital Istanbul"
+        }
+    ],
+    "Most Offensive Rebounds without a Defensive One": [
+        {
+            "Player": "Othello Hunter",
+            "Season": 2019,
+            "Phase": "RS",
+            "Round": 23,
+            "Offensive": 8,
+            "LocalTeam": "Maccabi FOX Tel Aviv",
+            "AwayTeam": "Khimki Moscow Region"
+        },
+        {
+            "Player": "Othello Hunter",
+            "Season": 2015,
+            "Phase": "TS",
+            "Round": 18,
+            "Offensive": 7,
+            "LocalTeam": "FC Barcelona Lassa",
+            "AwayTeam": "Olympiacos Piraeus"
+        },
+        {
+            "Player": "Jacob Wiley",
+            "Season": 2019,
+            "Phase": "RS",
+            "Round": 3,
+            "Offensive": 7,
+            "LocalTeam": "Panathinaikos OPAP Athens",
+            "AwayTeam": "AX Armani Exchange Milan"
+        },
+        {
+            "Player": "Jan Vesely",
+            "Season": 2023,
+            "Phase": "PO",
+            "Round": 38,
+            "Offensive": 7,
+            "LocalTeam": "FC Barcelona",
+            "AwayTeam": "Olympiacos Piraeus"
+        },
+        {
+            "Player": "Tonye Jekiri",
+            "Season": 2021,
+            "Phase": "RS",
+            "Round": 17,
+            "Offensive": 7,
+            "LocalTeam": "FC Barcelona",
+            "AwayTeam": "UNICS Kazan"
+        },
+        {
+            "Player": "Roman Sorkin",
+            "Season": 2022,
+            "Phase": "RS",
+            "Round": 2,
+            "Offensive": 7,
+            "LocalTeam": "Fenerbahce Beko Istanbul",
+            "AwayTeam": "Maccabi Playtika Tel Aviv"
+        },
+        {
+            "Player": "Othello Hunter",
+            "Season": 2015,
+            "Phase": "RS",
+            "Round": 2,
+            "Offensive": 6,
+            "LocalTeam": "Laboral Kutxa Vitoria Gasteiz",
+            "AwayTeam": "Olympiacos Piraeus"
+        },
+        {
+            "Player": "Fran Vazquez",
+            "Season": 2008,
+            "Phase": "TS",
+            "Round": 16,
+            "Offensive": 6,
+            "LocalTeam": "Maccabi Electra",
+            "AwayTeam": "Regal FC Barcelona"
+        },
+        {
+            "Player": "Nikola Pekovic",
+            "Season": 2008,
+            "Phase": "TS",
+            "Round": 11,
+            "Offensive": 6,
+            "LocalTeam": "Panathinaikos Athens",
+            "AwayTeam": "Partizan"
+        },
+        {
+            "Player": "Adrien Moerman",
+            "Season": 2020,
+            "Phase": "RS",
+            "Round": 21,
+            "Offensive": 6,
+            "LocalTeam": "Zenit St Petersburg",
+            "AwayTeam": "Anadolu Efes Istanbul"
+        },
+        {
+            "Player": "Jasiel Rivero",
+            "Season": 2022,
+            "Phase": "RS",
+            "Round": 11,
+            "Offensive": 6,
+            "LocalTeam": "Partizan Mozzart Bet Belgrade",
+            "AwayTeam": "Valencia Basket"
+        },
+        {
+            "Player": "Luka Mitrovic",
+            "Season": 2023,
+            "Phase": "RS",
+            "Round": 7,
+            "Offensive": 6,
+            "LocalTeam": "FC Barcelona",
+            "AwayTeam": "Crvena Zvezda Meridianbet Belgrade"
+        },
+        {
+            "Player": "Travis Watson",
+            "Season": 2010,
+            "Phase": "RS",
+            "Round": 9,
+            "Offensive": 5,
+            "LocalTeam": "Zalgiris Kaunas",
+            "AwayTeam": "Caja Laboral Vitoria"
+        },
+        {
+            "Player": "Mario Kasun",
+            "Season": 2009,
+            "Phase": "RS",
+            "Round": 1,
+            "Offensive": 5,
+            "LocalTeam": "Lietuvos Rytas",
+            "AwayTeam": "Efes Pilsen"
+        },
+        {
+            "Player": "Jure Lalic",
+            "Season": 2010,
+            "Phase": "RS",
+            "Round": 9,
+            "Offensive": 5,
+            "LocalTeam": "Cholet Basket",
+            "AwayTeam": "Cibona Zagreb"
+        },
+        {
+            "Player": "Vladimir Ivlev",
+            "Season": 2014,
+            "Phase": "RS",
+            "Round": 2,
+            "Offensive": 5,
+            "LocalTeam": "Zalgiris Kaunas",
+            "AwayTeam": "Nizhny Novgorod"
+        },
+        {
+            "Player": "Ersan Ilyasova",
+            "Season": 2007,
+            "Phase": "RS",
+            "Round": 14,
+            "Offensive": 5,
+            "LocalTeam": "Brose Baskets",
+            "AwayTeam": "AXA FC Barcelona"
+        },
+        {
+            "Player": "Erazem Lorbek",
+            "Season": 2008,
+            "Phase": "TS",
+            "Round": 12,
+            "Offensive": 5,
+            "LocalTeam": "CSKA Moscow",
+            "AwayTeam": "Cibona"
+        },
+        {
+            "Player": "Nicolo Melli",
+            "Season": 2017,
+            "Phase": "RS",
+            "Round": 8,
+            "Offensive": 5,
+            "LocalTeam": "CSKA Moscow",
+            "AwayTeam": "Fenerbahce Dogus Istanbul"
+        },
+        {
+            "Player": "M. Jean baptiste adolphe",
+            "Season": 2012,
+            "Phase": "RS",
+            "Round": 10,
+            "Offensive": 5,
+            "LocalTeam": "Unicaja Malaga",
+            "AwayTeam": "Elan Chalon-Sur-Saone"
+        }
+    ],
+    "Most Drawn Fouls in a Game": [
+        {
+            "Player": "Keith Langford",
+            "Season": 2010,
+            "Phase": "RS",
+            "Round": 10,
+            "Drawn": 15,
+            "LocalTeam": "BC Khimki Moscow Region",
+            "AwayTeam": "Zalgiris Kaunas"
+        },
+        {
+            "Player": "Bobby Brown",
+            "Season": 2012,
+            "Phase": "RS",
+            "Round": 4,
+            "Drawn": 15,
+            "LocalTeam": "Montepaschi Siena",
+            "AwayTeam": "Elan Chalon-Sur-Saone"
+        },
+        {
+            "Player": "Nando De colo",
+            "Season": 2015,
+            "Phase": "TS",
+            "Round": 24,
+            "Drawn": 13,
+            "LocalTeam": "Olympiacos Piraeus",
+            "AwayTeam": "CSKA Moscow"
+        },
+        {
+            "Player": "Ioannis Bourousis",
+            "Season": 2016,
+            "Phase": "RS",
+            "Round": 9,
+            "Drawn": 13,
+            "LocalTeam": "Panathinaikos Superfoods Athens",
+            "AwayTeam": "Darussafaka Dogus Istanbul"
+        },
+        {
+            "Player": "Zoran Planinic",
+            "Season": 2012,
+            "Phase": "TS",
+            "Round": 15,
+            "Drawn": 13,
+            "LocalTeam": "Fenerbahce Ulker Istanbul",
+            "AwayTeam": "Khimki Moscow Region"
+        },
+        {
+            "Player": "Nikola Pekovic",
+            "Season": 2007,
+            "Phase": "RS",
+            "Round": 5,
+            "Drawn": 13,
+            "LocalTeam": "Partizan Igokea",
+            "AwayTeam": "Lottomatica Roma"
+        },
+        {
+            "Player": "Luka Doncic",
+            "Season": 2017,
+            "Phase": "RS",
+            "Round": 22,
+            "Drawn": 13,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Olympiacos Piraeus"
+        },
+        {
+            "Player": "Mathias Lessort",
+            "Season": 2023,
+            "Phase": "PO",
+            "Round": 39,
+            "Drawn": 13,
+            "LocalTeam": "Maccabi Playtika Tel Aviv",
+            "AwayTeam": "Panathinaikos AKTOR Athens"
+        },
+        {
+            "Player": "Guerschon Yabusele",
+            "Season": 2020,
+            "Phase": "RS",
+            "Round": 32,
+            "Drawn": 13,
+            "LocalTeam": "Khimki Moscow Region",
+            "AwayTeam": "LDLC ASVEL Villeurbanne"
+        },
+        {
+            "Player": "Keith Langford",
+            "Season": 2013,
+            "Phase": "RS",
+            "Round": 7,
+            "Drawn": 13,
+            "LocalTeam": "Zalgiris Kaunas",
+            "AwayTeam": "EA7 Emporio Armani Milan"
+        },
+        {
+            "Player": "Mike James",
+            "Season": 2022,
+            "Phase": "RS",
+            "Round": 12,
+            "Drawn": 13,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "AS Monaco"
+        },
+        {
+            "Player": "Keith Langford",
+            "Season": 2016,
+            "Phase": "RS",
+            "Round": 4,
+            "Drawn": 13,
+            "LocalTeam": "CSKA Moscow",
+            "AwayTeam": "Unics Kazan"
+        },
+        {
+            "Player": "Dimitris Diamantidis",
+            "Season": 2013,
+            "Phase": "RS",
+            "Round": 3,
+            "Drawn": 12,
+            "LocalTeam": "Crvena Zvezda Telekom Belgrade",
+            "AwayTeam": "Panathinaikos Athens"
+        },
+        {
+            "Player": "Danilo Gallinari",
+            "Season": 2007,
+            "Phase": "RS",
+            "Round": 7,
+            "Drawn": 12,
+            "LocalTeam": "Le Mans",
+            "AwayTeam": "AJ Milano"
+        },
+        {
+            "Player": "Johnathan Motley",
+            "Season": 2022,
+            "Phase": "RS",
+            "Round": 20,
+            "Drawn": 12,
+            "LocalTeam": "Fenerbahce Beko Istanbul",
+            "AwayTeam": "AS Monaco"
+        },
+        {
+            "Player": "Vassilis Spanoulis",
+            "Season": 2013,
+            "Phase": "RS",
+            "Round": 9,
+            "Drawn": 12,
+            "LocalTeam": "Olympiacos Piraeus",
+            "AwayTeam": "Montepaschi Siena"
+        },
+        {
+            "Player": "Nenad Krstic",
+            "Season": 2012,
+            "Phase": "TS",
+            "Round": 15,
+            "Drawn": 12,
+            "LocalTeam": "CSKA Moscow",
+            "AwayTeam": "Unicaja Malaga"
+        },
+        {
+            "Player": "Marko Tomas",
+            "Season": 2009,
+            "Phase": "RS",
+            "Round": 10,
+            "Drawn": 12,
+            "LocalTeam": "Cibona",
+            "AwayTeam": "Asvel Basket"
+        },
+        {
+            "Player": "Keith Langford",
+            "Season": 2016,
+            "Phase": "RS",
+            "Round": 16,
+            "Drawn": 12,
+            "LocalTeam": "Baskonia Vitoria Gasteiz",
+            "AwayTeam": "Unics Kazan"
+        },
+        {
+            "Player": "Samardo Samuels",
+            "Season": 2014,
+            "Phase": "TS",
+            "Round": 18,
+            "Drawn": 12,
+            "LocalTeam": "Nizhny Novgorod",
+            "AwayTeam": "EA7 Emporio Armani Milan"
+        }
+    ],
+    "Worst PIR": [
+        {
+            "Player": "Luka Zoric",
+            "Season": 2013,
+            "Phase": "RS",
+            "Round": 7,
+            "PIR": -14,
+            "LocalTeam": "FC Barcelona",
+            "AwayTeam": "Fenerbahce Ulker Istanbul"
+        },
+        {
+            "Player": "Chuck Eidson",
+            "Season": 2007,
+            "Phase": "RS",
+            "Round": 13,
+            "PIR": -13,
+            "LocalTeam": "Lietuvos Rytas",
+            "AwayTeam": "Unicaja"
+        },
+        {
+            "Player": "Earl Clark",
+            "Season": 2018,
+            "Phase": "RS",
+            "Round": 4,
+            "PIR": -13,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Buducnost VOLI Pogdorica"
+        },
+        {
+            "Player": "Brent Wright",
+            "Season": 2010,
+            "Phase": "RS",
+            "Round": 10,
+            "PIR": -12,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Spirou Charleroi"
+        },
+        {
+            "Player": "Isaiah Canaan",
+            "Season": 2021,
+            "Phase": "RS",
+            "Round": 24,
+            "PIR": -12,
+            "LocalTeam": "ALBA Berlin",
+            "AwayTeam": "UNICS Kazan"
+        },
+        {
+            "Player": "Milovan Rakovic",
+            "Season": 2010,
+            "Phase": "PO",
+            "Round": 17,
+            "PIR": -12,
+            "LocalTeam": "Olympiacos Piraeus",
+            "AwayTeam": "Montepaschi Siena"
+        },
+        {
+            "Player": "Brandon Davies",
+            "Season": 2019,
+            "Phase": "RS",
+            "Round": 8,
+            "PIR": -12,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "FC Barcelona"
+        },
+        {
+            "Player": "Nihad Djedovic",
+            "Season": 2010,
+            "Phase": "RS",
+            "Round": 8,
+            "PIR": -11,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Lottomatica Roma"
+        },
+        {
+            "Player": "Tamar Slay",
+            "Season": 2008,
+            "Phase": "RS",
+            "Round": 1,
+            "PIR": -11,
+            "LocalTeam": "Air Avellino",
+            "AwayTeam": "Olympiacos Piraeus"
+        },
+        {
+            "Player": "Mindaugas Kuzminskas",
+            "Season": 2018,
+            "Phase": "RS",
+            "Round": 6,
+            "PIR": -11,
+            "LocalTeam": "AX Armani Exchange Olimpia Milan",
+            "AwayTeam": "CSKA Moscow"
+        },
+        {
+            "Player": "Jayson Granger",
+            "Season": 2014,
+            "Phase": "RS",
+            "Round": 5,
+            "PIR": -11,
+            "LocalTeam": "Unicaja Malaga",
+            "AwayTeam": "Maccabi Electra Tel Aviv"
+        },
+        {
+            "Player": "Dragan Milosavljevic",
+            "Season": 2017,
+            "Phase": "RS",
+            "Round": 4,
+            "PIR": -11,
+            "LocalTeam": "Valencia Basket",
+            "AwayTeam": "Unicaja Malaga"
+        },
+        {
+            "Player": "Louis Bullock",
+            "Season": 2008,
+            "Phase": "RS",
+            "Round": 6,
+            "PIR": -11,
+            "LocalTeam": "Panionios On Telecoms",
+            "AwayTeam": "Real Madrid"
+        },
+        {
+            "Player": "Carsen Edwards",
+            "Season": 2023,
+            "Phase": "RS",
+            "Round": 2,
+            "PIR": -11,
+            "LocalTeam": "Panathinaikos AKTOR Athens",
+            "AwayTeam": "FC Bayern Munich"
+        },
+        {
+            "Player": "Milenko Tepic",
+            "Season": 2007,
+            "Phase": "RS",
+            "Round": 10,
+            "PIR": -10,
+            "LocalTeam": "Panathinaikos",
+            "AwayTeam": "Partizan Igokea"
+        },
+        {
+            "Player": "Danilo Andjusic",
+            "Season": 2022,
+            "Phase": "RS",
+            "Round": 18,
+            "PIR": -10,
+            "LocalTeam": "Maccabi Playtika Tel Aviv",
+            "AwayTeam": "Partizan Mozzart Bet Belgrade"
+        },
+        {
+            "Player": "Ricky Hickman",
+            "Season": 2013,
+            "Phase": "TS",
+            "Round": 24,
+            "PIR": -10,
+            "LocalTeam": "Maccabi Electra Tel Aviv",
+            "AwayTeam": "CSKA Moscow"
+        },
+        {
+            "Player": "Brad Wanamaker",
+            "Season": 2016,
+            "Phase": "RS",
+            "Round": 11,
+            "PIR": -10,
+            "LocalTeam": "Baskonia Vitoria Gasteiz",
+            "AwayTeam": "Darussafaka Dogus Istanbul"
+        },
+        {
+            "Player": "Sergio Rodriguez",
+            "Season": 2010,
+            "Phase": "RS",
+            "Round": 1,
+            "PIR": -10,
+            "LocalTeam": "Olympiacos Piraeus",
+            "AwayTeam": "Real Madrid"
+        },
+        {
+            "Player": "Steed Tchicamboud",
+            "Season": 2012,
+            "Phase": "RS",
+            "Round": 10,
+            "PIR": -10,
+            "LocalTeam": "Unicaja Malaga",
+            "AwayTeam": "Elan Chalon-Sur-Saone"
+        }
+    ],
+    "Most Plus-Minus": [
+        {
+            "Player": "Ricky Hickman",
+            "Season": 2012,
+            "Phase": "TS",
+            "Round": 23,
+            "Plus-Minus": 44.0,
+            "LocalTeam": "Maccabi Electra Tel Aviv",
+            "AwayTeam": "Besiktas JK Istanbul"
+        },
+        {
+            "Player": "Nik Caner-medley",
+            "Season": 2012,
+            "Phase": "TS",
+            "Round": 23,
+            "Plus-Minus": 43.0,
+            "LocalTeam": "Maccabi Electra Tel Aviv",
+            "AwayTeam": "Besiktas JK Istanbul"
+        },
+        {
+            "Player": "Arvydas Macijauskas",
+            "Season": 2007,
+            "Phase": "RS",
+            "Round": 5,
+            "Plus-Minus": 43.0,
+            "LocalTeam": "Olympiacos",
+            "AwayTeam": "Prokom Trefl Sopot"
+        },
+        {
+            "Player": "Vasilije Micic",
+            "Season": 2021,
+            "Phase": "RS",
+            "Round": 27,
+            "Plus-Minus": 43.0,
+            "LocalTeam": "Anadolu Efes Istanbul",
+            "AwayTeam": "Maccabi Playtika Tel Aviv"
+        },
+        {
+            "Player": "Novica Velickovic",
+            "Season": 2007,
+            "Phase": "RS",
+            "Round": 13,
+            "Plus-Minus": 42.0,
+            "LocalTeam": "Partizan Igokea",
+            "AwayTeam": "Brose Baskets"
+        },
+        {
+            "Player": "Yogev Ohayon",
+            "Season": 2012,
+            "Phase": "TS",
+            "Round": 23,
+            "Plus-Minus": 42.0,
+            "LocalTeam": "Maccabi Electra Tel Aviv",
+            "AwayTeam": "Besiktas JK Istanbul"
+        },
+        {
+            "Player": "Kristjan Kangur",
+            "Season": 2012,
+            "Phase": "RS",
+            "Round": 5,
+            "Plus-Minus": 41.0,
+            "LocalTeam": "Asseco Prokom Gdynia",
+            "AwayTeam": "Montepaschi Siena"
+        },
+        {
+            "Player": "Viktor Khryapa",
+            "Season": 2008,
+            "Phase": "PO",
+            "Round": 18,
+            "Plus-Minus": 41.0,
+            "LocalTeam": "CSKA Moscow",
+            "AwayTeam": "Partizan"
+        },
+        {
+            "Player": "Bryant Dunston",
+            "Season": 2018,
+            "Phase": "PO",
+            "Round": 33,
+            "Plus-Minus": 40.0,
+            "LocalTeam": "FC Barcelona Lassa",
+            "AwayTeam": "Anadolu Efes Istanbul"
+        },
+        {
+            "Player": "Sergio Llull",
+            "Season": 2013,
+            "Phase": "TS",
+            "Round": 17,
+            "Plus-Minus": 40.0,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Zalgiris Kaunas"
+        },
+        {
+            "Player": "Arturas Jomantas",
+            "Season": 2010,
+            "Phase": "RS",
+            "Round": 5,
+            "Plus-Minus": 40.0,
+            "LocalTeam": "Lietuvos Rytas Vilnius",
+            "AwayTeam": "Cibona Zagreb"
+        },
+        {
+            "Player": "Facundo Campazzo",
+            "Season": 2023,
+            "Phase": "RS",
+            "Round": 2,
+            "Plus-Minus": 40.0,
+            "LocalTeam": "Anadolu Efes Istanbul",
+            "AwayTeam": "Real Madrid"
+        },
+        {
+            "Player": "Nigel Hayes-davis",
+            "Season": 2023,
+            "Phase": "RS",
+            "Round": 32,
+            "Plus-Minus": 39.0,
+            "LocalTeam": "Fenerbahce Beko Istanbul",
+            "AwayTeam": "ALBA Berlin"
+        },
+        {
+            "Player": "Sergi Vidal",
+            "Season": 2009,
+            "Phase": "RS",
+            "Round": 2,
+            "Plus-Minus": 38.0,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Asseco Prokom"
+        },
+        {
+            "Player": "Thomas Walkup",
+            "Season": 2022,
+            "Phase": "RS",
+            "Round": 24,
+            "Plus-Minus": 38.0,
+            "LocalTeam": "ALBA Berlin",
+            "AwayTeam": "Olympiacos Piraeus"
+        },
+        {
+            "Player": "Nikola Mirotic",
+            "Season": 2013,
+            "Phase": "TS",
+            "Round": 17,
+            "Plus-Minus": 38.0,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Zalgiris Kaunas"
+        },
+        {
+            "Player": "Djordje Gagic",
+            "Season": 2013,
+            "Phase": "RS",
+            "Round": 2,
+            "Plus-Minus": 38.0,
+            "LocalTeam": "Partizan NIS Belgrade",
+            "AwayTeam": "JSF Nanterre"
+        },
+        {
+            "Player": "Sergio Rodriguez",
+            "Season": 2013,
+            "Phase": "RS",
+            "Round": 5,
+            "Plus-Minus": 38.0,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Anadolu Efes Istanbul"
+        },
+        {
+            "Player": "David Moss",
+            "Season": 2012,
+            "Phase": "RS",
+            "Round": 5,
+            "Plus-Minus": 38.0,
+            "LocalTeam": "Asseco Prokom Gdynia",
+            "AwayTeam": "Montepaschi Siena"
+        },
+        {
+            "Player": "Nigel Williams-goss",
+            "Season": 2018,
+            "Phase": "RS",
+            "Round": 30,
+            "Plus-Minus": 38.0,
+            "LocalTeam": "Olympiacos Piraeus",
+            "AwayTeam": "Darussafaka Tekfen Istanbul"
+        }
+    ],
+    "Least Plus-Minus": [
+        {
+            "Player": "Shane Larkin",
+            "Season": 2023,
+            "Phase": "RS",
+            "Round": 2,
+            "Plus-Minus": -47.0,
+            "LocalTeam": "Anadolu Efes Istanbul",
+            "AwayTeam": "Real Madrid"
+        },
+        {
+            "Player": "Vladimir Micov",
+            "Season": 2014,
+            "Phase": "TS",
+            "Round": 19,
+            "Plus-Minus": -43.0,
+            "LocalTeam": "Galatasaray Liv Hospital Istanbul",
+            "AwayTeam": "Real Madrid"
+        },
+        {
+            "Player": "Krunoslav Simon",
+            "Season": 2011,
+            "Phase": "RS",
+            "Round": 3,
+            "Plus-Minus": -42.0,
+            "LocalTeam": "Zagreb",
+            "AwayTeam": "CSKA Moscow"
+        },
+        {
+            "Player": "Justin Hamilton",
+            "Season": 2010,
+            "Phase": "RS",
+            "Round": 10,
+            "Plus-Minus": -42.0,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Spirou Charleroi"
+        },
+        {
+            "Player": "Edwin Jackson",
+            "Season": 2019,
+            "Phase": "RS",
+            "Round": 3,
+            "Plus-Minus": -42.0,
+            "LocalTeam": "FC Bayern Munich",
+            "AwayTeam": "LDLC ASVEL Villeurbanne"
+        },
+        {
+            "Player": "Zoran Planinic",
+            "Season": 2013,
+            "Phase": "RS",
+            "Round": 5,
+            "Plus-Minus": -41.0,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Anadolu Efes Istanbul"
+        },
+        {
+            "Player": "Joseph Gomis",
+            "Season": 2010,
+            "Phase": "RS",
+            "Round": 10,
+            "Plus-Minus": -41.0,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Spirou Charleroi"
+        },
+        {
+            "Player": "Tarence Kinsey",
+            "Season": 2009,
+            "Phase": "RS",
+            "Round": 9,
+            "Plus-Minus": -41.0,
+            "LocalTeam": "Montepaschi Siena",
+            "AwayTeam": "Fenerbahce Ulker"
+        },
+        {
+            "Player": "Jordan Mickey",
+            "Season": 2022,
+            "Phase": "RS",
+            "Round": 12,
+            "Plus-Minus": -40.0,
+            "LocalTeam": "Olympiacos Piraeus",
+            "AwayTeam": "Virtus Segafredo Bologna"
+        },
+        {
+            "Player": "Jekel Foster",
+            "Season": 2009,
+            "Phase": "RS",
+            "Round": 4,
+            "Plus-Minus": -40.0,
+            "LocalTeam": "EWE Baskets",
+            "AwayTeam": "Real Madrid"
+        },
+        {
+            "Player": "Mario Kasun",
+            "Season": 2011,
+            "Phase": "RS",
+            "Round": 3,
+            "Plus-Minus": -40.0,
+            "LocalTeam": "Zagreb",
+            "AwayTeam": "CSKA Moscow"
+        },
+        {
+            "Player": "Jan-hendrick Jagla",
+            "Season": 2009,
+            "Phase": "RS",
+            "Round": 2,
+            "Plus-Minus": -39.0,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Asseco Prokom"
+        },
+        {
+            "Player": "Kostas Kaimakoglou",
+            "Season": 2016,
+            "Phase": "RS",
+            "Round": 11,
+            "Plus-Minus": -39.0,
+            "LocalTeam": "Olympiacos Piraeus",
+            "AwayTeam": "Unics Kazan"
+        },
+        {
+            "Player": "Gasper Vidmar",
+            "Season": 2012,
+            "Phase": "TS",
+            "Round": 23,
+            "Plus-Minus": -39.0,
+            "LocalTeam": "Maccabi Electra Tel Aviv",
+            "AwayTeam": "Besiktas JK Istanbul"
+        },
+        {
+            "Player": "Ademola Okulaja",
+            "Season": 2007,
+            "Phase": "RS",
+            "Round": 13,
+            "Plus-Minus": -39.0,
+            "LocalTeam": "Partizan Igokea",
+            "AwayTeam": "Brose Baskets"
+        },
+        {
+            "Player": "Thomas Heurtel",
+            "Season": 2018,
+            "Phase": "PO",
+            "Round": 33,
+            "Plus-Minus": -39.0,
+            "LocalTeam": "FC Barcelona Lassa",
+            "AwayTeam": "Anadolu Efes Istanbul"
+        },
+        {
+            "Player": "Shane Larkin",
+            "Season": 2023,
+            "Phase": "RS",
+            "Round": 24,
+            "Plus-Minus": -38.0,
+            "LocalTeam": "Zalgiris Kaunas",
+            "AwayTeam": "Anadolu Efes Istanbul"
+        },
+        {
+            "Player": "Hollis Price",
+            "Season": 2008,
+            "Phase": "TS",
+            "Round": 14,
+            "Plus-Minus": -38.0,
+            "LocalTeam": "AJ Milano",
+            "AwayTeam": "Tau Ceramica"
+        },
+        {
+            "Player": "Mark Dickel",
+            "Season": 2007,
+            "Phase": "RS",
+            "Round": 10,
+            "Plus-Minus": -38.0,
+            "LocalTeam": "Real Madrid",
+            "AwayTeam": "Brose Baskets"
+        },
+        {
+            "Player": "Jeremy Evans",
+            "Season": 2018,
+            "Phase": "RS",
+            "Round": 6,
+            "Plus-Minus": -38.0,
+            "LocalTeam": "FC Bayern Munich",
+            "AwayTeam": "Darussafaka Tekfen Istanbul"
+        }
+    ]
+}

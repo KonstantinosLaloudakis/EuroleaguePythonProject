@@ -1,0 +1,110 @@
+{
+    "Teams with Most Wins (No Player > 10 Points)": [
+        {
+            "Team": "BAR",
+            "WinCount": 2
+        },
+        {
+            "Team": "OLY",
+            "WinCount": 2
+        },
+        {
+            "Team": "BIL",
+            "WinCount": 1
+        },
+        {
+            "Team": "MAD",
+            "WinCount": 1
+        },
+        {
+            "Team": "MAL",
+            "WinCount": 1
+        },
+        {
+            "Team": "ULK",
+            "WinCount": 1
+        }
+    ],
+    "Teams with Most Wins (No Player > 15 Points)": [
+        {
+            "Team": "BAR",
+            "WinCount": 85
+        },
+        {
+            "Team": "MAD",
+            "WinCount": 70
+        },
+        {
+            "Team": "OLY",
+            "WinCount": 59
+        },
+        {
+            "Team": "PAN",
+            "WinCount": 56
+        },
+        {
+            "Team": "CSK",
+            "WinCount": 46
+        },
+        {
+            "Team": "ULK",
+            "WinCount": 45
+        },
+        {
+            "Team": "TEL",
+            "WinCount": 34
+        },
+        {
+            "Team": "MIL",
+            "WinCount": 34
+        },
+        {
+            "Team": "ZAL",
+            "WinCount": 34
+        },
+        {
+            "Team": "IST",
+            "WinCount": 32
+        },
+        {
+            "Team": "BAS",
+            "WinCount": 30
+        },
+        {
+            "Team": "MAL",
+            "WinCount": 28
+        },
+        {
+            "Team": "PAM",
+            "WinCount": 21
+        },
+        {
+            "Team": "RED",
+            "WinCount": 19
+        },
+        {
+            "Team": "BER",
+            "WinCount": 16
+        },
+        {
+            "Team": "MUN",
+            "WinCount": 16
+        },
+        {
+            "Team": "PAR",
+            "WinCount": 15
+        },
+        {
+            "Team": "SIE",
+            "WinCount": 12
+        },
+        {
+            "Team": "VIR",
+            "WinCount": 9
+        },
+        {
+            "Team": "BAM",
+            "WinCount": 8
+        }
+    ]
+}
