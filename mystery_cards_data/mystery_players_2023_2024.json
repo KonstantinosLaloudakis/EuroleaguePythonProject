@@ -1,0 +1,282 @@
+[
+  {
+    "stats": {
+      "PTS": 7.7,
+      "REB": 2.5,
+      "AST": 1.4,
+      "PIR": 6.5,
+      "MIN": 23.446014492753623,
+      "3P%": 32.7
+    },
+    "context": {
+      "player_name": "TOMAS, MARKO",
+      "team": "Real Madrid;KK Cibona;Fenerbahce Beko Istanbul;KK Cedevita Zagreb",
+      "season": "2023-2024",
+      "games_played": 46.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Real Madrid;KK Cibona;Fenerbahce Beko Istanbul;KK Cedevita Zagreb",
+      "Season: 2023-2024",
+      "Plays Guard/Forward position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 3.9,
+      "REB": 1.8,
+      "AST": 0.2,
+      "PIR": 2.7,
+      "MIN": 10.766666666666667,
+      "3P%": 0.0
+    },
+    "context": {
+      "player_name": "GLYNIADAKIS, ANDREAS",
+      "team": "AEK Athens;Olympiacos Piraeus;Rytas Vilnius",
+      "season": "2023-2024",
+      "games_played": 45.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for AEK Athens;Olympiacos Piraeus;Rytas Vilnius",
+      "Season: 2023-2024",
+      "Plays Guard/Forward position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 8.2,
+      "REB": 1.9,
+      "AST": 0.7,
+      "PIR": 7.7,
+      "MIN": 18.565686274509805,
+      "3P%": 46.3
+    },
+    "context": {
+      "player_name": "KURIC, KYLE",
+      "team": "FC Barcelona",
+      "season": "2023-2024",
+      "games_played": 136.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for FC Barcelona",
+      "Season: 2023-2024",
+      "Plays Guard/Forward position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 8.3,
+      "REB": 3.3,
+      "AST": 0.9,
+      "PIR": 7.4,
+      "MIN": 21.396666666666665,
+      "3P%": 42.0
+    },
+    "context": {
+      "player_name": "BOGDANOVIC, LUKA",
+      "team": "Partizan Mozzart Bet Belgrade;Le Mans Sarthe Basket;Club Joventut Badalona",
+      "season": "2023-2024",
+      "games_played": 65.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Partizan Mozzart Bet Belgrade;Le Mans Sarthe Basket;Club Joventut Badalona",
+      "Season: 2023-2024",
+      "Plays Forward position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 7.5,
+      "REB": 2.2,
+      "AST": 1.3,
+      "PIR": 6.0,
+      "MIN": 21.56376811594203,
+      "3P%": 38.1
+    },
+    "context": {
+      "player_name": "TIMMA, JANIS",
+      "team": "Baskonia Vitoria-Gasteiz;Olympiacos Piraeus;BC Khimki;UNICS Kazan",
+      "season": "2023-2024",
+      "games_played": 92.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Baskonia Vitoria-Gasteiz;Olympiacos Piraeus;BC Khimki;UNICS Kazan",
+      "Season: 2023-2024",
+      "Plays Guard/Forward position"
+    ]
+  },
+  {
+    "stats": {
+      "PIR": 10.2,
+      "REB": 2.5,
+      "STL": 2.0,
+      "TOV": 1.7,
+      "AST/TO": 2.53
+    },
+    "context": {
+      "player_name": "PRIGIONI, PABLO",
+      "team": "Real Madrid;Baskonia Vitoria-Gasteiz",
+      "season": "2023-2024",
+      "games_played": 105.0,
+      "difficulty": "medium"
+    },
+    "hints": [
+      "Appeared in 105.0 games",
+      "Plays Guard position"
+    ]
+  },
+  {
+    "stats": {
+      "PIR": 8.5,
+      "REB": 4.0,
+      "STL": 1.0,
+      "TOV": 1.3,
+      "AST/TO": 1.54
+    },
+    "context": {
+      "player_name": "KHRYAPA, VICTOR",
+      "team": "CSKA Moscow",
+      "season": "2023-2024",
+      "games_played": 119.0,
+      "difficulty": "medium"
+    },
+    "hints": [
+      "Appeared in 119.0 games",
+      "Plays Forward position"
+    ]
+  },
+  {
+    "stats": {
+      "PIR": 7.2,
+      "REB": 2.0,
+      "STL": 0.9,
+      "TOV": 1.3,
+      "AST/TO": 1.15
+    },
+    "context": {
+      "player_name": "MORDENTE, MARCO",
+      "team": "Montepaschi Siena;Benetton Basket Treviso;EA7 Emporio Armani Milan",
+      "season": "2023-2024",
+      "games_played": 57.0,
+      "difficulty": "medium"
+    },
+    "hints": [
+      "Appeared in 57.0 games",
+      "Plays Guard/Forward position"
+    ]
+  },
+  {
+    "stats": {
+      "PIR": 6.0,
+      "REB": 2.8,
+      "STL": 0.5,
+      "TOV": 1.0,
+      "AST/TO": 0.8
+    },
+    "context": {
+      "player_name": "BLAZIC, JAKA",
+      "team": "KK Cedevita Olimpija;Crvena Zvezda Meridianbet Belgrade;Baskonia Vitoria-Gasteiz;FC Barcelona",
+      "season": "2023-2024",
+      "games_played": 102.0,
+      "difficulty": "medium"
+    },
+    "hints": [
+      "Appeared in 102.0 games",
+      "Plays Guard/Forward position"
+    ]
+  },
+  {
+    "stats": {
+      "PIR": 8.8,
+      "REB": 5.5,
+      "STL": 0.5,
+      "TOV": 1.5,
+      "AST/TO": 0.33
+    },
+    "context": {
+      "player_name": "DUENAS, ROBERTO",
+      "team": "FC Barcelona;Club Joventut Badalona",
+      "season": "2023-2024",
+      "games_played": 62.0,
+      "difficulty": "medium"
+    },
+    "hints": [
+      "Appeared in 62.0 games",
+      "Plays Forward position"
+    ]
+  },
+  {
+    "stats": {},
+    "context": {
+      "player_name": "PIERRE, DYSHAWN",
+      "team": "Fenerbahce Beko Istanbul",
+      "season": "2023-2024",
+      "games_played": 126.0,
+      "difficulty": "hard"
+    },
+    "hints": [
+      "European professional player",
+      "Regular contributor"
+    ]
+  },
+  {
+    "stats": {},
+    "context": {
+      "player_name": "ERCEG, ZORAN",
+      "team": "Olympiacos Piraeus;CSKA Moscow;Galatasaray Spor Kulubu",
+      "season": "2023-2024",
+      "games_played": 35.0,
+      "difficulty": "hard"
+    },
+    "hints": [
+      "European professional player",
+      "Regular contributor"
+    ]
+  },
+  {
+    "stats": {},
+    "context": {
+      "player_name": "KECMAN, DUSAN",
+      "team": "Anadolu Efes Istanbul;Panathinaikos AKTOR Athens;Partizan Mozzart Bet Belgrade",
+      "season": "2023-2024",
+      "games_played": 101.0,
+      "difficulty": "hard"
+    },
+    "hints": [
+      "European professional player",
+      "Regular contributor"
+    ]
+  },
+  {
+    "stats": {},
+    "context": {
+      "player_name": "CLYBURN, WILL",
+      "team": "Darussafaka Basketbol;CSKA Moscow;Anadolu Efes Istanbul;Virtus Bologna",
+      "season": "2023-2024",
+      "games_played": 221.0,
+      "difficulty": "hard"
+    },
+    "hints": [
+      "European professional player",
+      "Regular contributor"
+    ]
+  },
+  {
+    "stats": {},
+    "context": {
+      "player_name": "GUROVIC, MILAN",
+      "team": "AEK Athens;Unicaja Malaga;Partizan Mozzart Bet Belgrade;Arka Gdynia",
+      "season": "2023-2024",
+      "games_played": 44.0,
+      "difficulty": "hard"
+    },
+    "hints": [
+      "European professional player",
+      "Regular contributor"
+    ]
+  }
+]

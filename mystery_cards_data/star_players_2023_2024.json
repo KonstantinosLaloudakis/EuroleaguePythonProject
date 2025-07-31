@@ -1,0 +1,442 @@
+[
+  {
+    "stats": {
+      "PTS": 12.3,
+      "REB": 6.5,
+      "AST": 1.3,
+      "PIR": 15.0,
+      "MIN": 24.30574712643678,
+      "3P%": 0.0
+    },
+    "context": {
+      "player_name": "BILAN, MIRO",
+      "team": "KK Cedevita Zagreb",
+      "season": "2023-2024",
+      "games_played": 29.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for KK Cedevita Zagreb",
+      "Season: 2023-2024",
+      "Plays Forward/Center position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 13.5,
+      "REB": 3.1,
+      "AST": 4.3,
+      "PIR": 15.1,
+      "MIN": 29.595714285714283,
+      "3P%": 36.5
+    },
+    "context": {
+      "player_name": "WANAMAKER, BRAD",
+      "team": "Bamberger Basketball GmbH;Darussafaka Basketbol;Fenerbahce Beko Istanbul",
+      "season": "2023-2024",
+      "games_played": 70.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Bamberger Basketball GmbH;Darussafaka Basketbol;Fenerbahce Beko Istanbul",
+      "Season: 2023-2024",
+      "Plays Guard position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 12.0,
+      "REB": 6.5,
+      "AST": 1.4,
+      "PIR": 15.2,
+      "MIN": 30.526219512195123,
+      "3P%": 37.2
+    },
+    "context": {
+      "player_name": "GOREE, MARCUS",
+      "team": "Skyliners Frankfurt;Maccabi Playtika Tel Aviv;Benetton Basket Treviso;CSKA Moscow",
+      "season": "2023-2024",
+      "games_played": 82.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Skyliners Frankfurt;Maccabi Playtika Tel Aviv;Benetton Basket Treviso;CSKA Moscow",
+      "Season: 2023-2024",
+      "Plays Forward/Center position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 13.8,
+      "REB": 5.3,
+      "AST": 1.8,
+      "PIR": 15.3,
+      "MIN": 28.05588235294118,
+      "3P%": 34.5
+    },
+    "context": {
+      "player_name": "CLYBURN, WILL",
+      "team": "Darussafaka Basketbol;CSKA Moscow;Anadolu Efes Istanbul;Virtus Bologna",
+      "season": "2023-2024",
+      "games_played": 221.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Darussafaka Basketbol;CSKA Moscow;Anadolu Efes Istanbul;Virtus Bologna",
+      "Season: 2023-2024",
+      "Plays Forward position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 12.8,
+      "REB": 6.0,
+      "AST": 1.0,
+      "PIR": 15.4,
+      "MIN": 26.736742424242426,
+      "3P%": 40.0
+    },
+    "context": {
+      "player_name": "FUCKA, GREGOR",
+      "team": "Fortitudo Pallacanestro Bologna 103;FC Barcelona;Pallacanestro Virtus Roma",
+      "season": "2023-2024",
+      "games_played": 88.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Fortitudo Pallacanestro Bologna 103;FC Barcelona;Pallacanestro Virtus Roma",
+      "Season: 2023-2024",
+      "Plays Forward position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 11.5,
+      "REB": 5.5,
+      "AST": 1.3,
+      "PIR": 15.6,
+      "MIN": 26.23317610062893,
+      "3P%": 37.9
+    },
+    "context": {
+      "player_name": "GARBAJOSA, JORGE",
+      "team": "Benetton Basket Treviso;Real Madrid;Unicaja Malaga",
+      "season": "2023-2024",
+      "games_played": 106.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Benetton Basket Treviso;Real Madrid;Unicaja Malaga",
+      "Season: 2023-2024",
+      "Plays Forward position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 9.6,
+      "REB": 6.9,
+      "AST": 1.1,
+      "PIR": 15.8,
+      "MIN": 22.98326417704011,
+      "3P%": 0.0
+    },
+    "context": {
+      "player_name": "TAVARES, WALTER",
+      "team": "Real Madrid",
+      "season": "2023-2024",
+      "games_played": 241.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Real Madrid",
+      "Season: 2023-2024",
+      "Plays Center position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 16.7,
+      "REB": 2.5,
+      "AST": 4.9,
+      "PIR": 15.9,
+      "MIN": 27.01731601731602,
+      "3P%": 34.1
+    },
+    "context": {
+      "player_name": "SHVED, ALEXEY",
+      "team": "BC Khimki;CSKA Moscow",
+      "season": "2023-2024",
+      "games_played": 154.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for BC Khimki;CSKA Moscow",
+      "Season: 2023-2024",
+      "Plays Guard position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 12.3,
+      "REB": 7.3,
+      "AST": 1.7,
+      "PIR": 16.0,
+      "MIN": 28.401360544217688,
+      "3P%": 22.6
+    },
+    "context": {
+      "player_name": "MILOJEVIC, DEJAN",
+      "team": "KK Buducnost;Partizan Mozzart Bet Belgrade",
+      "season": "2023-2024",
+      "games_played": 49.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for KK Buducnost;Partizan Mozzart Bet Belgrade",
+      "Season: 2023-2024",
+      "Plays Forward/Center position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 15.8,
+      "REB": 2.4,
+      "AST": 2.5,
+      "PIR": 16.3,
+      "MIN": 31.858630952380953,
+      "3P%": 40.2
+    },
+    "context": {
+      "player_name": "BROWN, MARCUS",
+      "team": "Benetton Basket Treviso;Anadolu Efes Istanbul;CSKA Moscow;Unicaja Malaga;Maccabi Playtika Tel Aviv;Zalgiris Kaunas",
+      "season": "2023-2024",
+      "games_played": 112.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Benetton Basket Treviso;Anadolu Efes Istanbul;CSKA Moscow;Unicaja Malaga;Maccabi Playtika Tel Aviv;Zalgiris Kaunas",
+      "Season: 2023-2024",
+      "Plays Guard/Forward position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 13.3,
+      "REB": 1.9,
+      "AST": 4.3,
+      "PIR": 16.6,
+      "MIN": 26.758130081300813,
+      "3P%": 36.5
+    },
+    "context": {
+      "player_name": "LUKOVSKI, DRAGAN",
+      "team": "Elan Bearnais Pau-Lacq-Orthez",
+      "season": "2023-2024",
+      "games_played": 41.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Elan Bearnais Pau-Lacq-Orthez",
+      "Season: 2023-2024",
+      "Plays Guard position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 11.8,
+      "REB": 6.8,
+      "AST": 2.4,
+      "PIR": 16.6,
+      "MIN": 24.60545977011494,
+      "3P%": 0.0
+    },
+    "context": {
+      "player_name": "TOMASEVIC, DEJAN",
+      "team": "KK Buducnost;Baskonia Vitoria-Gasteiz;Valencia Basket;Panathinaikos AKTOR Athens",
+      "season": "2023-2024",
+      "games_played": 58.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for KK Buducnost;Baskonia Vitoria-Gasteiz;Valencia Basket;Panathinaikos AKTOR Athens",
+      "Season: 2023-2024",
+      "Plays Forward/Center position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 16.0,
+      "REB": 3.2,
+      "AST": 2.6,
+      "PIR": 16.7,
+      "MIN": 28.3233024691358,
+      "3P%": 36.5
+    },
+    "context": {
+      "player_name": "LANGFORD, KEITH",
+      "team": "BC Khimki;Maccabi Playtika Tel Aviv;EA7 Emporio Armani Milan;UNICS Kazan;Panathinaikos AKTOR Athens",
+      "season": "2023-2024",
+      "games_played": 108.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for BC Khimki;Maccabi Playtika Tel Aviv;EA7 Emporio Armani Milan;UNICS Kazan;Panathinaikos AKTOR Athens",
+      "Season: 2023-2024",
+      "Plays Forward position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 14.6,
+      "REB": 2.6,
+      "AST": 3.8,
+      "PIR": 16.7,
+      "MIN": 24.659541984732826,
+      "3P%": 40.3
+    },
+    "context": {
+      "player_name": "DE COLO, NANDO",
+      "team": "Valencia Basket;CSKA Moscow;Fenerbahce Beko Istanbul;LDLC ASVEL Villeurbanne",
+      "season": "2023-2024",
+      "games_played": 262.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Valencia Basket;CSKA Moscow;Fenerbahce Beko Istanbul;LDLC ASVEL Villeurbanne",
+      "Season: 2023-2024",
+      "Plays Guard/Forward position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 13.3,
+      "REB": 5.8,
+      "AST": 2.9,
+      "PIR": 16.9,
+      "MIN": 26.808035714285715,
+      "3P%": 32.9
+    },
+    "context": {
+      "player_name": "VUJCIC, NIKOLA",
+      "team": "LDLC ASVEL Villeurbanne;Maccabi Playtika Tel Aviv;Olympiacos Piraeus;Anadolu Efes Istanbul",
+      "season": "2023-2024",
+      "games_played": 112.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for LDLC ASVEL Villeurbanne;Maccabi Playtika Tel Aviv;Olympiacos Piraeus;Anadolu Efes Istanbul",
+      "Season: 2023-2024",
+      "Plays Forward position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 15.0,
+      "REB": 2.8,
+      "AST": 4.5,
+      "PIR": 16.9,
+      "MIN": 29.722677595628415,
+      "3P%": 36.6
+    },
+    "context": {
+      "player_name": "EDNEY, TYUS",
+      "team": "Benetton Basket Treviso;Olympiacos Piraeus;Fortitudo Pallacanestro Bologna 103",
+      "season": "2023-2024",
+      "games_played": 61.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Benetton Basket Treviso;Olympiacos Piraeus;Fortitudo Pallacanestro Bologna 103",
+      "Season: 2023-2024",
+      "Plays Guard position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 12.1,
+      "REB": 8.6,
+      "AST": 2.0,
+      "PIR": 17.3,
+      "MIN": 30.75224358974359,
+      "3P%": 34.1
+    },
+    "context": {
+      "player_name": "LOLLIS, QUADRE-MICHAEL",
+      "team": "Fenerbahce Beko Istanbul;ALBA Berlin;AEK Athens",
+      "season": "2023-2024",
+      "games_played": 52.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Fenerbahce Beko Istanbul;ALBA Berlin;AEK Athens",
+      "Season: 2023-2024",
+      "Plays Forward/Center position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 14.5,
+      "REB": 2.7,
+      "AST": 4.6,
+      "PIR": 17.3,
+      "MIN": 28.202905198776758,
+      "3P%": 41.0
+    },
+    "context": {
+      "player_name": "LARKIN, SHANE",
+      "team": "Baskonia Vitoria-Gasteiz;Anadolu Efes Istanbul",
+      "season": "2023-2024",
+      "games_played": 218.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Baskonia Vitoria-Gasteiz;Anadolu Efes Istanbul",
+      "Season: 2023-2024",
+      "Plays Guard position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 11.5,
+      "REB": 9.9,
+      "AST": 1.4,
+      "PIR": 17.6,
+      "MIN": 28.45936329588015,
+      "3P%": 32.3
+    },
+    "context": {
+      "player_name": "TURKCAN, MIRSAD",
+      "team": "Montepaschi Siena;CSKA Moscow;Fenerbahce Beko Istanbul",
+      "season": "2023-2024",
+      "games_played": 89.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Montepaschi Siena;CSKA Moscow;Fenerbahce Beko Istanbul",
+      "Season: 2023-2024",
+      "Plays Forward/Center position"
+    ]
+  },
+  {
+    "stats": {
+      "PTS": 13.3,
+      "REB": 7.4,
+      "AST": 1.0,
+      "PIR": 17.7,
+      "MIN": 29.623684210526317,
+      "3P%": 23.3
+    },
+    "context": {
+      "player_name": "MASSEY, JEREMIAH",
+      "team": "Aris Thessaloniki;Real Madrid;Bamberger Basketball GmbH",
+      "season": "2023-2024",
+      "games_played": 38.0,
+      "difficulty": "easy"
+    },
+    "hints": [
+      "Plays for Aris Thessaloniki;Real Madrid;Bamberger Basketball GmbH",
+      "Season: 2023-2024",
+      "Plays Forward/Center position"
+    ]
+  }
+]
