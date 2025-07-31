@@ -2,6 +2,57 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 import os
 import math
 
+# Constants for better maintainability
+CARD_WIDTH = 400
+CARD_HEIGHT = 600
+POSITION_BOX_SIZE = (80, 60)
+LOGO_SIZE = 60
+PLAYER_IMG_HEIGHT_RATIO = 0.55
+PLAYER_IMG_WIDTH_RATIO = 0.85
+GLOW_SIZE = 10
+CORNER_SIZE = 30
+
+# Color constants
+GOLD_GRADIENT_START = (255, 215, 0)
+GOLD_GRADIENT_END = (184, 134, 139)
+BORDER_COLORS = [(139, 69, 19), (160, 82, 45), (205, 133, 63)]
+CORNER_COLOR = (255, 215, 0, 100)
+
+def load_fonts():
+    """Load fonts with proper fallback handling."""
+    font_paths = [
+        # Windows
+        ("arial.ttf", "arialbd.ttf"),
+        # Linux
+        ("/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf", 
+         "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"),
+        # macOS
+        ("/System/Library/Fonts/Arial.ttf", "/System/Library/Fonts/Arial Bold.ttf"),
+        # Additional Linux paths
+        ("/usr/share/fonts/TTF/arial.ttf", "/usr/share/fonts/TTF/arialbd.ttf"),
+    ]
+    
+    for regular_path, bold_path in font_paths:
+        try:
+            return {
+                'position': ImageFont.truetype(bold_path, 22),
+                'name': ImageFont.truetype(bold_path, 28),
+                'stats_label': ImageFont.truetype(regular_path, 16),
+                'stats_value': ImageFont.truetype(bold_path, 26)
+            }
+        except (OSError, IOError):
+            continue
+    
+    # Final fallback to default fonts
+    print("Warning: Could not load custom fonts, using default fonts")
+    default_font = ImageFont.load_default()
+    return {
+        'position': default_font,
+        'name': default_font,
+        'stats_label': default_font,
+        'stats_value': default_font
+    }
+
 
 def create_fifa_style_card(
         player_name,
@@ -11,8 +62,33 @@ def create_fifa_style_card(
         output_path,
         position="PG"  # Point Guard, SG, SF, PF, C
 ):
+    """
+    Create a FIFA-style basketball player card.
+    
+    Args:
+        player_name (str): Name of the player
+        stats (dict): Dictionary containing player statistics
+        image_path (str): Path to the player image
+        logo_path (str): Path to the team logo
+        output_path (str): Where to save the generated card
+        position (str): Player position (PG, SG, SF, PF, C)
+    """
+    # Input validation
+    if not player_name or not isinstance(player_name, str):
+        raise ValueError("player_name must be a non-empty string")
+    
+    if not isinstance(stats, dict):
+        raise ValueError("stats must be a dictionary")
+    
+    if not os.path.exists(image_path):
+        raise FileNotFoundError(f"Player image not found: {image_path}")
+    
+    # Logo is optional, but warn if missing
+    if not os.path.exists(logo_path):
+        print(f"Warning: Logo not found: {logo_path}")
+    
     # Card dimensions (portrait orientation like FIFA)
-    width, height = 400, 600
+    width, height = CARD_WIDTH, CARD_HEIGHT
 
     # Create card with gradient background
     card = Image.new('RGBA', (width, height), color=(0, 0, 0, 0))
@@ -59,8 +135,7 @@ def create_fifa_style_card(
     draw = ImageDraw.Draw(card)
 
     # Draw card outline with multiple borders for depth
-    border_colors = [(139, 69, 19), (160, 82, 45), (205, 133, 63)]
-    for i, color in enumerate(border_colors):
+    for i, color in enumerate(BORDER_COLORS):
         thickness = 3 - i
         draw.rectangle(
             [(i, i), (width - 1 - i, height - 1 - i)],
@@ -70,33 +145,26 @@ def create_fifa_style_card(
 
     # Load fonts - more modern, sports-themed styling
     try:
-        # Try to use bold variants for better impact
-        font_position = ImageFont.truetype("arialbd.ttf", 22)  # Arial Bold
-        font_name = ImageFont.truetype("arialbd.ttf", 28)  # Smaller but bolder
-        font_stats_label = ImageFont.truetype("arial.ttf", 16)
-        font_stats_value = ImageFont.truetype("arialbd.ttf", 26)  # Bold for numbers
+        fonts = load_fonts()
+        font_position = fonts['position']  # Arial Bold
+        font_name = fonts['name']  # Smaller but bolder
+        font_stats_label = fonts['stats_label']
+        font_stats_value = fonts['stats_value']  # Bold for numbers
     except:
-        try:
-            # Fallback to regular arial
-            font_position = ImageFont.truetype("arial.ttf", 22)
-            font_name = ImageFont.truetype("arial.ttf", 28)
-            font_stats_label = ImageFont.truetype("arial.ttf", 16)
-            font_stats_value = ImageFont.truetype("arial.ttf", 26)
-        except:
-            # Final fallback
-            font_position = ImageFont.load_default()
-            font_name = ImageFont.load_default()
-            font_stats_label = ImageFont.load_default()
-            font_stats_value = ImageFont.load_default()
+        print("Error loading fonts. Using default fonts.")
+        font_position = ImageFont.load_default()
+        font_name = ImageFont.load_default()
+        font_stats_label = ImageFont.load_default()
+        font_stats_value = ImageFont.load_default()
 
     # Position badge (top-left, simplified)
     position_x, position_y = 30, 40
-    position_bg = Image.new('RGBA', (80, 60), (0, 0, 0, 0))
+    position_bg = Image.new('RGBA', POSITION_BOX_SIZE, (0, 0, 0, 0))
     position_draw = ImageDraw.Draw(position_bg)
 
     # Position background shape (rounded rectangle)
     position_draw.rounded_rectangle(
-        [(5, 5), (75, 55)],
+        [(5, 5), (POSITION_BOX_SIZE[0] - 5, POSITION_BOX_SIZE[1] - 5)],
         radius=10,
         fill=(34, 34, 34, 220),
         outline=(255, 215, 0),
@@ -107,7 +175,7 @@ def create_fifa_style_card(
     pos_bbox = position_draw.textbbox((0, 0), position, font=font_position)
     pos_text_width = pos_bbox[2] - pos_bbox[0]
     position_draw.text(
-        (40 - pos_text_width // 2, 20),
+        (POSITION_BOX_SIZE[0] // 2 - pos_text_width // 2, 20),
         position,
         font=font_position,
         fill="white"
@@ -118,7 +186,7 @@ def create_fifa_style_card(
     # Team logo (top-right)
     try:
         logo = Image.open(logo_path).convert("RGBA")
-        logo = logo.resize((60, 60), Image.LANCZOS)
+        logo = logo.resize((LOGO_SIZE, LOGO_SIZE), Image.LANCZOS)
         card.paste(logo, (width - 90, 50), logo)
     except FileNotFoundError:
         print(f"Logo not found: {logo_path}")
@@ -128,9 +196,9 @@ def create_fifa_style_card(
         player_img = Image.open(image_path).convert("RGBA")
         # Resize maintaining aspect ratio - much larger now
         img_width, img_height = player_img.size
-        target_height = int(height * 0.55)  # 55% of card height
+        target_height = int(height * PLAYER_IMG_HEIGHT_RATIO)  # 55% of card height
         target_width = int((target_height / img_height) * img_width)
-        max_width = int(width * 0.85)  # 85% of card width
+        max_width = int(width * PLAYER_IMG_WIDTH_RATIO)  # 85% of card width
 
         if target_width > max_width:
             target_width = max_width
@@ -143,21 +211,20 @@ def create_fifa_style_card(
         img_y = 130
 
         # Add subtle glow effect around player
-        glow_size = 10
-        glow_img = Image.new('RGBA', (target_width + glow_size * 2, target_height + glow_size * 2), (0, 0, 0, 0))
+        glow_img = Image.new('RGBA', (target_width + GLOW_SIZE * 2, target_height + GLOW_SIZE * 2), (0, 0, 0, 0))
         glow_draw = ImageDraw.Draw(glow_img)
 
         # Create multiple glow layers for smooth effect
-        for i in range(glow_size, 0, -1):
-            alpha = int(15 * (glow_size - i + 1) / glow_size)
+        for i in range(GLOW_SIZE, 0, -1):
+            alpha = int(15 * (GLOW_SIZE - i + 1) / GLOW_SIZE)
             glow_draw.rectangle(
-                [i - 1, i - 1, target_width + glow_size + i, target_height + glow_size + i],
+                [i - 1, i - 1, target_width + GLOW_SIZE + i, target_height + GLOW_SIZE + i],
                 outline=(255, 215, 0, alpha),
                 width=2
             )
 
         # Paste glow first, then player image
-        card.paste(glow_img, (img_x - glow_size, img_y - glow_size), glow_img)
+        card.paste(glow_img, (img_x - GLOW_SIZE, img_y - GLOW_SIZE), glow_img)
         card.paste(player_img, (img_x, img_y), player_img)
 
         # Add subtle border around player image
@@ -173,21 +240,6 @@ def create_fifa_style_card(
 
     # Player name with enhanced styling (shadow and outline effects)
     name_y = player_img_bottom + 20
-
-    # Function to draw text with outline and shadow
-    def draw_outlined_text(draw, pos, text, font, fill_color, outline_color, shadow_color):
-        x, y = pos
-        # Draw shadow first (offset)
-        draw.text((x + 2, y + 2), text, font=font, fill=shadow_color)
-
-        # Draw outline (multiple directions)
-        for dx in [-1, 0, 1]:
-            for dy in [-1, 0, 1]:
-                if dx != 0 or dy != 0:
-                    draw.text((x + dx, y + dy), text, font=font, fill=outline_color)
-
-        # Draw main text
-        draw.text((x, y), text, font=font, fill=fill_color)
 
     # Split long names if needed
     if len(player_name) > 15:
@@ -239,27 +291,8 @@ def create_fifa_style_card(
         )
         stats_start_y = name_y + 40
 
-    # Stats section - use actual basketball stats
-    stat_mapping = {
-        "PTS": ("PTS", stats.get("PTS", 0)),
-        "REB": ("REB", stats.get("REB", 0)),
-        "AST": ("AST", stats.get("AST", 0)),
-        "PIR": ("PIR", stats.get("PIR", 0)),
-        "STL": ("STL", stats.get("STL", 0)),  # Steals if available
-        "BLK": ("BLK", stats.get("BLK", 0))  # Blocks if available
-    }
-
-    # Use actual basketball stats (no conversion)
-    basketball_stats = {}
-    for key, (label, value) in stat_mapping.items():
-        if isinstance(value, (int, float)):
-            # Format to 1 decimal place if it's a float, otherwise keep as int
-            if value % 1 == 0:
-                basketball_stats[label] = str(int(value))
-            else:
-                basketball_stats[label] = f"{value:.1f}"
-        else:
-            basketball_stats[label] = "0"
+    # Stats section - process the stats
+    basketball_stats = process_stats(stats)
 
     # Stats layout - clean text only, no backgrounds
     left_col_x = 60
@@ -283,20 +316,26 @@ def create_fifa_style_card(
         draw.text((x + 1, y + 1), stat_value, font=font_stats_value, fill=(0, 0, 0, 150))
         draw.text((x, y), stat_value, font=font_stats_value, fill=(255, 255, 255))
 
-        # Calculate position for label
+        # Calculate position for label with proper baseline alignment
         value_bbox = draw.textbbox((0, 0), stat_value, font=font_stats_value)
+        label_bbox = draw.textbbox((0, 0), stat_key, font=font_stats_label)
+        
         value_width = value_bbox[2] - value_bbox[0]
-
-        # Draw stat label with shadow - adjust for font size difference
+        value_height = value_bbox[3] - value_bbox[1]
+        label_height = label_bbox[3] - label_bbox[1]
+        
+        # Calculate baseline alignment - align bottom edges of text
+        value_baseline_y = y + value_height
+        label_baseline_y = y + (value_height - label_height)  # Align baselines properly
+        
+        # Draw stat label with shadow - properly aligned
         label_x = x + value_width + 10
-        # Offset the smaller font to align with the larger stat value font
-        label_y_offset = 3  # Adjust smaller font to align with larger font baseline
-        draw.text((label_x + 1, y + label_y_offset + 1), stat_key, font=font_stats_label, fill=(0, 0, 0, 100))
-        draw.text((label_x, y + label_y_offset), stat_key, font=font_stats_label, fill=(220, 220, 220))
+        draw.text((label_x + 1, label_baseline_y + 1), stat_key, font=font_stats_label, fill=(0, 0, 0, 100))
+        draw.text((label_x, label_baseline_y), stat_key, font=font_stats_label, fill=(220, 220, 220))
 
     # Add subtle corner decorations
-    corner_size = 30
-    corner_color = (255, 215, 0, 100)
+    corner_size = CORNER_SIZE
+    corner_color = CORNER_COLOR
 
     # Top corners
     draw.polygon([(0, 0), (corner_size, 0), (0, corner_size)], fill=corner_color)
@@ -316,21 +355,93 @@ def create_fifa_style_card(
     print(f"✅ FIFA-style card saved: {output_path}")
 
 
-# Example usage
-stats = {
-    "PTS": 12.4,
-    "REB": 4.7,
-    "AST": 3.2,
-    "PIR": 15.6,
-    "STL": 1.2,
-    "BLK": 0.8
-}
+def process_stats(stats):
+    """
+    Process and validate player statistics.
+    
+    Args:
+        stats (dict): Raw stats dictionary
+        
+    Returns:
+        dict: Processed stats ready for display
+    """
+    # Default basketball stats with fallbacks
+    stat_mapping = {
+        "PTS": "PTS",
+        "REB": "REB", 
+        "AST": "AST",
+        "PIR": "PIR",
+        "STL": "STL",
+        "BLK": "BLK"
+    }
+    
+    processed_stats = {}
+    for key, label in stat_mapping.items():
+        value = stats.get(key, 0)
+        
+        if isinstance(value, (int, float)) and value >= 0:
+            # Format to 1 decimal place if it's a float with decimals, otherwise keep as int
+            if isinstance(value, float) and value % 1 != 0:
+                processed_stats[label] = f"{value:.1f}"
+            else:
+                processed_stats[label] = str(int(value))
+        else:
+            processed_stats[label] = "0"
+    
+    return processed_stats
 
-create_fifa_style_card(
-    player_name="Vasilije Micić",
-    stats=stats,
-    image_path="player_cards/player_images/MICIC VASILIJE.webp",
-    logo_path="player_cards/team_logos/Anadolu_Efes_Istanbul/Anadolu_Efes_Istanbul_small.png",
-    output_path="player_cards/generated/micic_fifa_card_new1.png",
-    position="PG"
-)
+
+def draw_outlined_text(draw, pos, text, font, fill_color, outline_color, shadow_color):
+    """
+    Draw text with outline and shadow effects.
+    
+    Args:
+        draw: ImageDraw object
+        pos: (x, y) position tuple
+        text: Text to draw
+        font: Font to use
+        fill_color: Main text color
+        outline_color: Outline color
+        shadow_color: Shadow color
+    """
+    x, y = pos
+    # Draw shadow first (offset)
+    draw.text((x + 2, y + 2), text, font=font, fill=shadow_color)
+
+    # Draw outline (multiple directions)
+    for dx in [-1, 0, 1]:
+        for dy in [-1, 0, 1]:
+            if dx != 0 or dy != 0:
+                draw.text((x + dx, y + dy), text, font=font, fill=outline_color)
+
+    # Draw main text
+    draw.text((x, y), text, font=font, fill=fill_color)
+
+
+def main():
+    """Example usage of the card generator."""
+    # Example player stats
+    stats = {
+        "PTS": 12.4,
+        "REB": 4.7,
+        "AST": 3.2,
+        "PIR": 15.6,
+        "STL": 1.2,
+        "BLK": 0.8
+    }
+
+    try:
+        create_fifa_style_card(
+            player_name="Vasilije Micić",
+            stats=stats,
+            image_path="player_cards/player_images/MICIC VASILIJE.webp",
+            logo_path="player_cards/team_logos/Anadolu_Efes_Istanbul/Anadolu_Efes_Istanbul_small.png",
+            output_path="player_cards/generated/micic_fifa_card_new1.png",
+            position="PG"
+        )
+    except Exception as e:
+        print(f"Error creating card: {e}")
+
+
+if __name__ == "__main__":
+    main()
