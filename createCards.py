@@ -299,37 +299,58 @@ def create_fifa_style_card(
     right_col_x = 240
     stat_y = stats_start_y
     stat_spacing = 25
-
+    
+    # Calculate fixed label positions based on maximum possible value width
+    # This ensures all labels align vertically regardless of value length
+    max_value_width_left = 0
+    max_value_width_right = 0
+    
     stat_keys = list(basketball_stats.keys())
+    
+    # First pass: find maximum value width for each column
+    for i, stat_key in enumerate(stat_keys[:6]):
+        stat_value = basketball_stats[stat_key]
+        value_bbox = draw.textbbox((0, 0), stat_value, font=font_stats_value)
+        value_width = value_bbox[2] - value_bbox[0]
+        
+        if i < 3:  # Left column
+            max_value_width_left = max(max_value_width_left, value_width)
+        else:  # Right column
+            max_value_width_right = max(max_value_width_right, value_width)
+    
+    # Calculate fixed label positions
+    left_label_x = left_col_x + max_value_width_left + 10
+    right_label_x = right_col_x + max_value_width_right + 10
+
+    # Second pass: draw stats with aligned labels
     for i, stat_key in enumerate(stat_keys[:6]):
         if i < 3:
-            x = left_col_x
+            value_x = left_col_x
+            label_x = left_label_x
             y = stat_y + (i * stat_spacing)
         else:
-            x = right_col_x
+            value_x = right_col_x
+            label_x = right_label_x
             y = stat_y + ((i - 3) * stat_spacing)
 
         # Get stat value
         stat_value = basketball_stats[stat_key]
 
         # Draw stat value with shadow (bold, white)
-        draw.text((x + 1, y + 1), stat_value, font=font_stats_value, fill=(0, 0, 0, 150))
-        draw.text((x, y), stat_value, font=font_stats_value, fill=(255, 255, 255))
+        draw.text((value_x + 1, y + 1), stat_value, font=font_stats_value, fill=(0, 0, 0, 150))
+        draw.text((value_x, y), stat_value, font=font_stats_value, fill=(255, 255, 255))
 
-        # Calculate position for label with proper baseline alignment
+        # Calculate baseline alignment for label
         value_bbox = draw.textbbox((0, 0), stat_value, font=font_stats_value)
         label_bbox = draw.textbbox((0, 0), stat_key, font=font_stats_label)
         
-        value_width = value_bbox[2] - value_bbox[0]
         value_height = value_bbox[3] - value_bbox[1]
         label_height = label_bbox[3] - label_bbox[1]
         
         # Calculate baseline alignment - align bottom edges of text
-        value_baseline_y = y + value_height
         label_baseline_y = y + (value_height - label_height)  # Align baselines properly
         
-        # Draw stat label with shadow - properly aligned
-        label_x = x + value_width + 10
+        # Draw stat label with shadow - at fixed position
         draw.text((label_x + 1, label_baseline_y + 1), stat_key, font=font_stats_label, fill=(0, 0, 0, 100))
         draw.text((label_x, label_baseline_y), stat_key, font=font_stats_label, fill=(220, 220, 220))
 
