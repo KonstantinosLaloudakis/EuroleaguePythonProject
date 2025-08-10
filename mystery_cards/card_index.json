@@ -1,0 +1,143 @@
+[
+  {
+    "player": "THOMPSON, DEON",
+    "difficulty": "easy",
+    "question_card": "mystery_cards/questions/easy_1_THOMPSON_DEON_mystery.png",
+    "answer_card": "mystery_cards/answers/easy_1_THOMPSON_DEON_answer.png",
+    "stats": {
+      "PTS": 7.1,
+      "REB": 3.4,
+      "AST": 0.7,
+      "PIR": 7.3,
+      "MIN": 17.450888888888887,
+      "3P%": 0.0
+    },
+    "hints": [
+      "Plays for KK Cedevita Olimpija;ALBA Berlin;FC Bayern Munich;Crvena Zvezda Meridianbet Belgrade;Galatasaray Spor Kulubu;Zalgiris Kaunas",
+      "Season: 2023-2024",
+      "Plays Forward position"
+    ]
+  },
+  {
+    "player": "VUJANIC, MILOS",
+    "difficulty": "easy",
+    "question_card": "mystery_cards/questions/easy_2_VUJANIC_MILOS_mystery.png",
+    "answer_card": "mystery_cards/answers/easy_2_VUJANIC_MILOS_answer.png",
+    "stats": {
+      "PTS": 14.6,
+      "REB": 1.8,
+      "AST": 2.2,
+      "PIR": 12.6,
+      "MIN": 26.12542735042735,
+      "3P%": 37.3
+    },
+    "hints": [
+      "Plays for Partizan Mozzart Bet Belgrade;Fortitudo Pallacanestro Bologna 103;FC Barcelona;Panathinaikos AKTOR Athens;Anadolu Efes Istanbul",
+      "Season: 2023-2024",
+      "Plays Guard/Forward position"
+    ]
+  },
+  {
+    "player": "BROWN, LORENZO",
+    "difficulty": "easy",
+    "question_card": "mystery_cards/questions/easy_3_BROWN_LORENZO_mystery.png",
+    "answer_card": "mystery_cards/answers/easy_3_BROWN_LORENZO_answer.png",
+    "stats": {
+      "PTS": 11.7,
+      "REB": 2.8,
+      "AST": 4.7,
+      "PIR": 12.4,
+      "MIN": 25.345716945996276,
+      "3P%": 32.7
+    },
+    "hints": [
+      "Plays for Crvena Zvezda Meridianbet Belgrade;Fenerbahce Beko Istanbul;UNICS Kazan;Maccabi Playtika Tel Aviv;Panathinaikos AKTOR Athens",
+      "Season: 2023-2024",
+      "Plays Guard position"
+    ]
+  },
+  {
+    "player": "BECIROVIC, SANI",
+    "difficulty": "medium",
+    "question_card": "mystery_cards/questions/medium_1_BECIROVIC_SANI_mystery.png",
+    "answer_card": "mystery_cards/answers/medium_1_BECIROVIC_SANI_answer.png",
+    "stats": {
+      "PIR": 11.8,
+      "REB": 2.7,
+      "STL": 1.0,
+      "TOV": 2.3,
+      "AST/TO": 1.17
+    },
+    "hints": [
+      "Appeared in 77.0 games",
+      "Plays Guard/Forward position"
+    ]
+  },
+  {
+    "player": "OUATTARA, YAKUBA",
+    "difficulty": "medium",
+    "question_card": "mystery_cards/questions/medium_2_OUATTARA_YAKUBA_mystery.png",
+    "answer_card": "mystery_cards/answers/medium_2_OUATTARA_YAKUBA_answer.png",
+    "stats": {
+      "PIR": 2.9,
+      "REB": 1.5,
+      "STL": 0.3,
+      "TOV": 0.3,
+      "AST/TO": 0.67
+    },
+    "hints": [
+      "Appeared in 110.0 games",
+      "Plays Guard/Forward position"
+    ]
+  },
+  {
+    "player": "KALAITZIS, GEORGIOS",
+    "difficulty": "medium",
+    "question_card": "mystery_cards/questions/medium_3_KALAITZIS_GEORGIOS_mystery.png",
+    "answer_card": "mystery_cards/answers/medium_3_KALAITZIS_GEORGIOS_answer.png",
+    "stats": {
+      "PIR": 3.8,
+      "REB": 1.9,
+      "STL": 0.9,
+      "TOV": 0.9,
+      "AST/TO": 1.33
+    },
+    "hints": [
+      "Appeared in 70.0 games",
+      "Plays Guard/Forward position"
+    ]
+  },
+  {
+    "player": "GULER, SINAN",
+    "difficulty": "hard",
+    "question_card": "mystery_cards/questions/hard_1_GULER_SINAN_mystery.png",
+    "answer_card": "mystery_cards/answers/hard_1_GULER_SINAN_answer.png",
+    "stats": {},
+    "hints": [
+      "European professional player",
+      "Regular contributor"
+    ]
+  },
+  {
+    "player": "VORONTSEVICH, ANDREY",
+    "difficulty": "hard",
+    "question_card": "mystery_cards/questions/hard_2_VORONTSEVICH_ANDREY_mystery.png",
+    "answer_card": "mystery_cards/answers/hard_2_VORONTSEVICH_ANDREY_answer.png",
+    "stats": {},
+    "hints": [
+      "European professional player",
+      "Regular contributor"
+    ]
+  },
+  {
+    "player": "BJELICA, NEMANJA",
+    "difficulty": "hard",
+    "question_card": "mystery_cards/questions/hard_3_BJELICA_NEMANJA_mystery.png",
+    "answer_card": "mystery_cards/answers/hard_3_BJELICA_NEMANJA_answer.png",
+    "stats": {},
+    "hints": [
+      "European professional player",
+      "Regular contributor"
+    ]
+  }
+]
