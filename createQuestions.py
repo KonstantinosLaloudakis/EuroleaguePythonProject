@@ -551,42 +551,52 @@ def format_name(name):
 # Load data
 game_data_instance = game_stats.GameStats()
 box_score_data_instance = boxscore_data.BoxScoreData()
-data = box_score_data_instance.get_player_boxscore_stats_multiple_seasons(2024, 2024)
+data = box_score_data_instance.get_player_boxscore_stats_multiple_seasons(2007, 2024)
 df = pd.DataFrame(data)
 
 # Clean and convert relevant columns
 df = df[~df['Player'].str.contains('Team|Total', na=False)]  # Remove team totals
 df[['Points']] = df[['Points']].apply(pd.to_numeric, errors='coerce')
 
-# Identify games where at least 3 players from the same team scored 20+ points
-high_scorers = df[df['Points'] >= 20].groupby(['Season', 'Gamecode', 'Team'])['Player'].count().reset_index()
-games_with_3_scorers = high_scorers[high_scorers['Player'] >= 3]
+# 2. Filter for 20+ point performances immediately
+high_scorers_df = df[df['Points'] >= 20].copy()
 
-# Merge to keep only players who scored 20+ in those games
-filtered_df = df.merge(games_with_3_scorers, on=['Season', 'Gamecode', 'Team'])
-filtered_df = filtered_df[filtered_df['Points'] >= 20]
-
-# Group by game to get player trios
+duo_counts = {}
 trio_counts = {}
 
-for (season, gamecode, team), group in filtered_df.groupby(['Season', 'Gamecode', 'Team']):
-    players = sorted(group['Player_x'].tolist())  # Sort names to avoid duplicate trios
-    trios = list(combinations(players, 3))  # Get all trios
+# 3. Group by Season, Game, and Team to find groups
+for (season, gamecode, team), group in high_scorers_df.groupby(['Season', 'Gamecode', 'Team']):
+    players = sorted(group['Player'].tolist())
+    num_players = len(players)
 
-    for trio in trios:
-        key = (season, team, trio)
-        trio_counts[key] = trio_counts.get(key, 0) + 1
+    # Process Duos if at least 2 players scored 20+
+    if num_players >= 2:
+        for duo in combinations(players, 2):
+            key = (season, team, duo)
+            duo_counts[key] = duo_counts.get(key, 0) + 1
 
-# Convert to DataFrame
-trio_df = pd.DataFrame([(season, team, trio, count) for (season, team, trio), count in trio_counts.items()],
-                        columns=['Season', 'Team', 'Trio', 'Games'])
+    # Process Trios if at least 3 players scored 20+
+    if num_players >= 3:
+        for trio in combinations(players, 3):
+            key = (season, team, trio)
+            trio_counts[key] = trio_counts.get(key, 0) + 1
 
-# Sort by most frequent trios
-trio_df = trio_df.sort_values(by='Games', ascending=False)
+# 4. Convert to DataFrames and apply your specific thresholds
+# DUOS: Threshold of 5+ games
+duo_list = [(s, t, ", ".join(p), c) for (s, t, p), c in duo_counts.items()]
+duo_df = pd.DataFrame(duo_list, columns=['Season', 'Team', 'Duo', 'Games'])
+duo_df = duo_df[duo_df['Games'] >= 3].sort_values(by=['Season', 'Games'], ascending=[False, False])
 
-# Save results
-trio_df.to_json("most_frequent_20plus_trios2024.json", indent=4, orient="records")
-print("Results saved!")
+# TRIOS: Threshold of 2+ games
+trio_list = [(s, t, ", ".join(p), c) for (s, t, p), c in trio_counts.items()]
+trio_df = pd.DataFrame(trio_list, columns=['Season', 'Team', 'Trio', 'Games'])
+trio_df = trio_df[trio_df['Games'] >= 1].sort_values(by=['Season', 'Games'], ascending=[False, False])
+
+# 5. Save results
+duo_df.to_json("high_scoring_duos_2007_2024New.json", indent=4, orient="records")
+trio_df.to_json("high_scoring_trios_2007_2024New.json", indent=4, orient="records")
+
+print(f"Analysis Complete! Duos found: {len(duo_df)} | Trios found: {len(trio_df)}")
 # team_outcomes = calculate_team_outcomes(data_df)
 
 

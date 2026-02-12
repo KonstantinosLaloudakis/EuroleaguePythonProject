@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# Project Data & Results
+data/
+*.csv
+*.json
+*.png
+*.xlsx
+
+# Local config (if any)
+local_config.py
