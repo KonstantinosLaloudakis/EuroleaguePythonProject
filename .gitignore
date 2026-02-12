@@ -14,8 +14,6 @@ env/
 # Project Data & Results
 data/
 *.csv
-*.json
-*.png
 *.xlsx
 
 # Local config (if any)
