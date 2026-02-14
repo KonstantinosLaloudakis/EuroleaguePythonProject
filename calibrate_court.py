@@ -1,27 +1,26 @@
-import json
+from euroleague_api import shot_data
 import pandas as pd
+import numpy as np
 
-def calibrate():
-    with open('clutch_shots_2024_2024.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    df = pd.DataFrame(data)
+try:
+    shots = shot_data.ShotData()
+    df = shots.get_game_shot_data(2024, 1) # Game 1
     
-    # Check unique types
-    print("Unique Shot Types:", df['Type'].unique())
+    # Filter for makes
+    makes = df[df['ID_ACTION'].isin(['2FGM', '3FGM'])].copy()
     
-    # Filter for Dunk
-    dunks = df[df['Type'].str.contains('DUNK', case=False)]
-    if not dunks.empty:
-        print(f"\nAnalyzing {len(dunks)} DUNKS:")
-        print(f"Mean X: {dunks['CoordX'].mean()}")
-        print(f"Mean Y: {dunks['CoordY'].mean()}")
+    # Calculate distance from (0,0)
+    # Assuming (0,0) is hoop center?
+    makes['Distance'] = np.sqrt(makes['COORD_X']**2 + makes['COORD_Y']**2)
     
-    # Filter for Layup
-    layups = df[df['Type'].str.contains('LAYUP', case=False)]
-    if not layups.empty:
-        print(f"\nAnalyzing {len(layups)} LAYUPS:")
-        print(f"Mean X: {layups['CoordX'].mean()}")
-        print(f"Mean Y: {layups['CoordY'].mean()}")
+    print("--- 3FGM Distances ---")
+    print(makes[makes['ID_ACTION'] == '3FGM']['Distance'].describe())
 
-if __name__ == "__main__":
-    calibrate()
+    print("\n--- 2FGM Distances ---")
+    print(makes[makes['ID_ACTION'] == '3FGM']['Distance'].describe())
+    
+    # Check if this matches meters (cm)
+    # Euroleague 3pt line = 6.75m = 675cm
+    
+except Exception as e:
+    print(f"Error: {e}")

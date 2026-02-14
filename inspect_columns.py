@@ -1,22 +1,13 @@
 import pandas as pd
-from euroleague_api import play_by_play_data
-import json
+import os
 
-def analyze_columns(season=2023):
-    pbp = play_by_play_data.PlayByPlay()
-    print(f"Fetching Game 1 of Season {season} to inspect columns...")
-    try:
-        data = pbp.get_game_play_by_play_data(season, 1)
-        df = pd.DataFrame(data)
-        print("COLUMNS FOUND:")
-        for col in df.columns:
-            print(col)
-        print("UNIQUE PLAYTYPES:")
-        print(df['PLAYTYPE'].unique())
-
-        
-    except Exception as e:
-        print(f"Error: {e}")
-
-if __name__ == "__main__":
-    analyze_columns()
+df = pd.read_csv('data/pbp_2024.csv') # Read full file to get samples
+# Check RV, CM, FV, AG, BP, OF
+playtypes = ['RV', 'CM', 'FV', 'AG', 'BP', 'OF']
+for pt in playtypes:
+    print(f"\n--- {pt} ---")
+    subset = df[df['PLAYTYPE'] == pt]
+    if not subset.empty:
+        print(subset['PLAYINFO'].dropna().head(10).to_string())
+    else:
+        print("No events found")

@@ -1,0 +1,202 @@
+[
+    {
+        "PLAYER_ID":"P001887",
+        "GamesPlayed":28,
+        "FoulsDrawn":223.0,
+        "PlayerName":"LANGFORD, KEITH",
+        "TeamCode":"UNK",
+        "Season":2016,
+        "FoulsDrawnPerGame":7.9642857143,
+        "TeamName":"UNICS Kazan"
+    },
+    {
+        "PLAYER_ID":"P001922",
+        "GamesPlayed":18,
+        "FoulsDrawn":126.0,
+        "PlayerName":"MARIC, ALEKSANDAR",
+        "TeamCode":"PAR",
+        "Season":2009,
+        "FoulsDrawnPerGame":7.0,
+        "TeamName":"Partizan Mozzart Bet Belgrade"
+    },
+    {
+        "PLAYER_ID":"P003842",
+        "GamesPlayed":41,
+        "FoulsDrawn":274.0,
+        "PlayerName":"LESSORT, MATHIAS",
+        "TeamCode":"PAN",
+        "Season":2023,
+        "FoulsDrawnPerGame":6.6829268293,
+        "TeamName":"Panathinaikos AKTOR Athens"
+    },
+    {
+        "PLAYER_ID":"P012608",
+        "GamesPlayed":37,
+        "FoulsDrawn":244.0,
+        "PlayerName":"SHORTS, TJ",
+        "TeamCode":"PRS",
+        "Season":2024,
+        "FoulsDrawnPerGame":6.5945945946,
+        "TeamName":"Paris Basketball"
+    },
+    {
+        "PLAYER_ID":"P001887",
+        "GamesPlayed":25,
+        "FoulsDrawn":163.0,
+        "PlayerName":"LANGFORD, KEITH",
+        "TeamCode":"MIL",
+        "Season":2013,
+        "FoulsDrawnPerGame":6.52,
+        "TeamName":"EA7 Emporio Armani Milan"
+    },
+    {
+        "PLAYER_ID":"P004331",
+        "GamesPlayed":31,
+        "FoulsDrawn":201.0,
+        "PlayerName":"DELANEY, MALCOLM ",
+        "TeamCode":"TIV",
+        "Season":2015,
+        "FoulsDrawnPerGame":6.4838709677,
+        "TeamName":"Lokomotiv Kuban"
+    },
+    {
+        "PLAYER_ID":"P002100",
+        "GamesPlayed":27,
+        "FoulsDrawn":175.0,
+        "PlayerName":"DE COLO, NANDO",
+        "TeamCode":"CSK",
+        "Season":2015,
+        "FoulsDrawnPerGame":6.4814814815,
+        "TeamName":"CSKA Moscow"
+    },
+    {
+        "PLAYER_ID":"P004331",
+        "GamesPlayed":24,
+        "FoulsDrawn":152.0,
+        "PlayerName":"DELANEY, MALCOLM ",
+        "TeamCode":"MUN",
+        "Season":2013,
+        "FoulsDrawnPerGame":6.3333333333,
+        "TeamName":"FC Bayern Munich"
+    },
+    {
+        "PLAYER_ID":"PKVZ",
+        "GamesPlayed":34,
+        "FoulsDrawn":205.0,
+        "PlayerName":"SHVED, ALEXEY",
+        "TeamCode":"KHI",
+        "Season":2017,
+        "FoulsDrawnPerGame":6.0294117647,
+        "TeamName":"BC Khimki"
+    },
+    {
+        "PLAYER_ID":"P002100",
+        "GamesPlayed":28,
+        "FoulsDrawn":168.0,
+        "PlayerName":"DE COLO, NANDO",
+        "TeamCode":"CSK",
+        "Season":2016,
+        "FoulsDrawnPerGame":6.0,
+        "TeamName":"CSKA Moscow"
+    },
+    {
+        "PLAYER_ID":"PJUO",
+        "GamesPlayed":21,
+        "FoulsDrawn":125.0,
+        "PlayerName":"SPANOULIS, VASSILIS",
+        "TeamCode":"OLY",
+        "Season":2011,
+        "FoulsDrawnPerGame":5.9523809524,
+        "TeamName":"Olympiacos Piraeus"
+    },
+    {
+        "PLAYER_ID":"P005985",
+        "GamesPlayed":28,
+        "FoulsDrawn":166.0,
+        "PlayerName":"JAMES, MIKE",
+        "TeamCode":"CSK",
+        "Season":2019,
+        "FoulsDrawnPerGame":5.9285714286,
+        "TeamName":"CSKA Moscow"
+    },
+    {
+        "PLAYER_ID":"P007027",
+        "GamesPlayed":33,
+        "FoulsDrawn":195.0,
+        "PlayerName":"MALEDON, THEO",
+        "TeamCode":"ASV",
+        "Season":2024,
+        "FoulsDrawnPerGame":5.9090909091,
+        "TeamName":"LDLC ASVEL Villeurbanne"
+    },
+    {
+        "PLAYER_ID":"PJIS",
+        "GamesPlayed":19,
+        "FoulsDrawn":112.0,
+        "PlayerName":"DOMERCANT, HENRY",
+        "TeamCode":"UNK",
+        "Season":2011,
+        "FoulsDrawnPerGame":5.8947368421,
+        "TeamName":"UNICS Kazan"
+    },
+    {
+        "PLAYER_ID":"PAAX",
+        "GamesPlayed":19,
+        "FoulsDrawn":112.0,
+        "PlayerName":"REYES, FELIPE",
+        "TeamCode":"MAD",
+        "Season":2007,
+        "FoulsDrawnPerGame":5.8947368421,
+        "TeamName":"Real Madrid"
+    },
+    {
+        "PLAYER_ID":"PKNN",
+        "GamesPlayed":23,
+        "FoulsDrawn":135.0,
+        "PlayerName":"PEKOVIC, NIKOLA",
+        "TeamCode":"PAR",
+        "Season":2007,
+        "FoulsDrawnPerGame":5.8695652174,
+        "TeamName":"Partizan Mozzart Bet Belgrade"
+    },
+    {
+        "PLAYER_ID":"P005929",
+        "GamesPlayed":33,
+        "FoulsDrawn":192.0,
+        "PlayerName":"DONCIC, LUKA",
+        "TeamCode":"MAD",
+        "Season":2017,
+        "FoulsDrawnPerGame":5.8181818182,
+        "TeamName":"Real Madrid"
+    },
+    {
+        "PLAYER_ID":"P004418",
+        "GamesPlayed":21,
+        "FoulsDrawn":122.0,
+        "PlayerName":"McLEAN, JAMEL",
+        "TeamCode":"BER",
+        "Season":2014,
+        "FoulsDrawnPerGame":5.8095238095,
+        "TeamName":"ALBA Berlin"
+    },
+    {
+        "PLAYER_ID":"PJUO",
+        "GamesPlayed":26,
+        "FoulsDrawn":149.0,
+        "PlayerName":"SPANOULIS, VASSILIS",
+        "TeamCode":"OLY",
+        "Season":2014,
+        "FoulsDrawnPerGame":5.7307692308,
+        "TeamName":"Olympiacos Piraeus"
+    },
+    {
+        "PLAYER_ID":"P008987",
+        "GamesPlayed":34,
+        "FoulsDrawn":193.0,
+        "PlayerName":"LEDAY, ZACH",
+        "TeamCode":"MIL",
+        "Season":2024,
+        "FoulsDrawnPerGame":5.6764705882,
+        "TeamName":"EA7 Emporio Armani Milan"
+    }
+]
