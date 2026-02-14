@@ -183,14 +183,47 @@ def analyze_comebacks(df):
             
     return pd.DataFrame(comebacks)
 
+def parse_column_string(col_str):
+    """Parses a dataframe-like string into a dict {index: value}"""
+    result = {}
+    lines = col_str.strip().split('\n')
+    for line in lines:
+        parts = line.strip().split(None, 1)
+        if len(parts) >= 2:
+            idx_str = parts[0]
+            val = parts[1]
+            try:
+                idx = int(idx_str)
+                result[idx] = val
+            except ValueError:
+                continue
+    return result
+
 def load_team_names():
-    mapping_file = 'team_code_mapping.json'
-    if os.path.exists(mapping_file):
-        with open(mapping_file, 'r') as f:
-            return json.load(f)
-    else:
-        print(f"Warning: {mapping_file} not found. Using codes.")
-    return {}
+    try:
+        with open("teamNames.json", "r", encoding="utf-8") as f:
+            data = json.load(f)
+            
+        codes_map = parse_column_string(data['team1'])
+        names_map = parse_column_string(data['team2'])
+        
+        mapping = {}
+        common_indices = set(codes_map.keys()) & set(names_map.keys())
+        
+        # Use setdefault to keep the FIRST mapping (lower index)
+        for idx in sorted(common_indices):
+            code_entry = codes_map[idx].strip()
+            name_entry = names_map[idx].strip()
+            
+            sub_codes = code_entry.split(';')
+            for sc in sub_codes:
+                sc = sc.strip()
+                if sc:
+                    mapping.setdefault(sc, name_entry)
+                    
+        return mapping
+    except FileNotFoundError:
+        return {}
 
 def main():
     start_season = 2007
@@ -242,11 +275,11 @@ def main():
             plot_data = sorted_comebacks.head(15).copy()
             
             # Create a label WITHOUT Gamecode
-            # e.g. "Real Madrid (vs Olympiacos)\nSeason 2012 [Deficit: 28 pts]"
+            # e.g. "Real Madrid vs Olympiacos (2012)\nOvercame 28 pts (Down 40-68 @ Q3 - 05:00)\nFinal: 85-80"
             plot_data['Label'] = (
-                plot_data['WinnerName'] + " (vs " + plot_data['LoserName'] + ")\n" +
-                "Season " + plot_data['Season'].astype(str) + 
-                " [Deficit: " + plot_data['MaxDeficit'].astype(str) + " pts]"
+                plot_data['WinnerName'] + " vs " + plot_data['LoserName'] + " (" + plot_data['Season'].astype(str) + ")\n" +
+                "Overcame " + plot_data['MaxDeficit'].astype(str) + " pts (Down " + plot_data['DeficitScore'] + " @ " + plot_data['DeficitTime'] + ")\n" +
+                "Final: " + plot_data['FinalScore']
             )
             
             sns.barplot(data=plot_data, x='MaxDeficit', y='Label', palette='magma')
