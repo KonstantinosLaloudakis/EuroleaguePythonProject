@@ -9,9 +9,11 @@ def analyze_columns(season=2023):
         data = pbp.get_game_play_by_play_data(season, 1)
         df = pd.DataFrame(data)
         print("COLUMNS FOUND:")
-        print(df.columns.tolist())
-        print("HEAD:")
-        print(df.head(3))
+        for col in df.columns:
+            print(col)
+        print("UNIQUE PLAYTYPES:")
+        print(df['PLAYTYPE'].unique())
+
         
     except Exception as e:
         print(f"Error: {e}")
