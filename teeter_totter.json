@@ -1,0 +1,222 @@
+[
+    {
+        "Season":2025,
+        "Gamecode":268,
+        "TeamA":"RED",
+        "TeamB":"TEL",
+        "LeadChanges":28,
+        "Ties":7,
+        "FinalScore":"82-83",
+        "TeamAName":"Crvena Zvezda Meridianbet Belgrade",
+        "TeamBName":"Maccabi Playtika Tel Aviv"
+    },
+    {
+        "Season":2024,
+        "Gamecode":35,
+        "TeamA":"RED",
+        "TeamB":"BAR",
+        "LeadChanges":28,
+        "Ties":10,
+        "FinalScore":"94-98",
+        "TeamAName":"Crvena Zvezda Meridianbet Belgrade",
+        "TeamBName":"FC Barcelona"
+    },
+    {
+        "Season":2020,
+        "Gamecode":8,
+        "TeamA":"MUN",
+        "TeamB":"MIL",
+        "LeadChanges":26,
+        "Ties":12,
+        "FinalScore":"79-81",
+        "TeamAName":"FC Bayern Munich",
+        "TeamBName":"EA7 Emporio Armani Milan"
+    },
+    {
+        "Season":2023,
+        "Gamecode":53,
+        "TeamA":"PAM",
+        "TeamB":"BER",
+        "LeadChanges":25,
+        "Ties":14,
+        "FinalScore":"79-71",
+        "TeamAName":"Valencia Basket",
+        "TeamBName":"ALBA Berlin"
+    },
+    {
+        "Season":2018,
+        "Gamecode":62,
+        "TeamA":"CSK",
+        "TeamB":"ZAL",
+        "LeadChanges":25,
+        "Ties":17,
+        "FinalScore":"99-97",
+        "TeamAName":"CSKA Moscow",
+        "TeamBName":"Zalgiris Kaunas"
+    },
+    {
+        "Season":2014,
+        "Gamecode":35,
+        "TeamA":"BAS",
+        "TeamB":"GAL",
+        "LeadChanges":24,
+        "Ties":16,
+        "FinalScore":"91-90",
+        "TeamAName":"Baskonia Vitoria-Gasteiz",
+        "TeamBName":"Galatasaray Spor Kulubu"
+    },
+    {
+        "Season":2023,
+        "Gamecode":181,
+        "TeamA":"ULK",
+        "TeamB":"MUN",
+        "LeadChanges":24,
+        "Ties":16,
+        "FinalScore":"98-91",
+        "TeamAName":"Fenerbahce Beko Istanbul",
+        "TeamBName":"FC Bayern Munich"
+    },
+    {
+        "Season":2024,
+        "Gamecode":106,
+        "TeamA":"PAN",
+        "TeamB":"MCO",
+        "LeadChanges":24,
+        "Ties":13,
+        "FinalScore":"88-91",
+        "TeamAName":"Panathinaikos AKTOR Athens",
+        "TeamBName":"AS Monaco"
+    },
+    {
+        "Season":2016,
+        "Gamecode":150,
+        "TeamA":"BAM",
+        "TeamB":"MAD",
+        "LeadChanges":24,
+        "Ties":12,
+        "FinalScore":"89-91",
+        "TeamAName":"Bamberger Basketball GmbH",
+        "TeamBName":"Real Madrid"
+    },
+    {
+        "Season":2024,
+        "Gamecode":273,
+        "TeamA":"BAR",
+        "TeamB":"MUN",
+        "LeadChanges":23,
+        "Ties":9,
+        "FinalScore":"101-102",
+        "TeamAName":"FC Barcelona",
+        "TeamBName":"FC Bayern Munich"
+    },
+    {
+        "Season":2023,
+        "Gamecode":170,
+        "TeamA":"MAD",
+        "TeamB":"IST",
+        "LeadChanges":23,
+        "Ties":20,
+        "FinalScore":"102-102",
+        "TeamAName":"Real Madrid",
+        "TeamBName":"Anadolu Efes Istanbul"
+    },
+    {
+        "Season":2007,
+        "Gamecode":230,
+        "TeamA":"SIE",
+        "TeamB":"BAS",
+        "LeadChanges":23,
+        "Ties":13,
+        "FinalScore":"97-93",
+        "TeamAName":"Montepaschi Siena",
+        "TeamBName":"Baskonia Vitoria-Gasteiz"
+    },
+    {
+        "Season":2024,
+        "Gamecode":6,
+        "TeamA":"TEL",
+        "TeamB":"ASV",
+        "LeadChanges":23,
+        "Ties":8,
+        "FinalScore":"89-82",
+        "TeamAName":"Maccabi Playtika Tel Aviv",
+        "TeamBName":"LDLC ASVEL Villeurbanne"
+    },
+    {
+        "Season":2019,
+        "Gamecode":213,
+        "TeamA":"ULK",
+        "TeamB":"TEL",
+        "LeadChanges":23,
+        "Ties":15,
+        "FinalScore":"77-78",
+        "TeamAName":"Fenerbahce Beko Istanbul",
+        "TeamBName":"Maccabi Playtika Tel Aviv"
+    },
+    {
+        "Season":2025,
+        "Gamecode":173,
+        "TeamA":"ASV",
+        "TeamB":"IST",
+        "LeadChanges":23,
+        "Ties":22,
+        "FinalScore":"103-99",
+        "TeamAName":"LDLC ASVEL Villeurbanne",
+        "TeamBName":"Anadolu Efes Istanbul"
+    },
+    {
+        "Season":2011,
+        "Gamecode":45,
+        "TeamA":"CHA",
+        "TeamB":"MIL",
+        "LeadChanges":23,
+        "Ties":7,
+        "FinalScore":"76-81",
+        "TeamAName":"Spirou Charleroi",
+        "TeamBName":"EA7 Emporio Armani Milan"
+    },
+    {
+        "Season":2018,
+        "Gamecode":163,
+        "TeamA":"MUN",
+        "TeamB":"ULK",
+        "LeadChanges":23,
+        "Ties":13,
+        "FinalScore":"80-80",
+        "TeamAName":"FC Bayern Munich",
+        "TeamBName":"Fenerbahce Beko Istanbul"
+    },
+    {
+        "Season":2024,
+        "Gamecode":252,
+        "TeamA":"BER",
+        "TeamB":"BAR",
+        "LeadChanges":23,
+        "Ties":9,
+        "FinalScore":"85-99",
+        "TeamAName":"ALBA Berlin",
+        "TeamBName":"FC Barcelona"
+    },
+    {
+        "Season":2009,
+        "Gamecode":70,
+        "TeamA":"OLD",
+        "TeamB":"SOP",
+        "LeadChanges":22,
+        "Ties":10,
+        "FinalScore":"80-82",
+        "TeamAName":"Baskets Oldenburg",
+        "TeamBName":"Arka Gdynia"
+    },
+    {
+        "Season":2018,
+        "Gamecode":160,
+        "TeamA":"BAR",
+        "TeamB":"CSK",
+        "LeadChanges":22,
+        "Ties":10,
+        "FinalScore":"76-84",
+        "TeamAName":"FC Barcelona",
+        "TeamBName":"CSKA Moscow"
+    }
+]
