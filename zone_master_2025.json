@@ -1,0 +1,122 @@
+{
+    "Restricted Area": {
+        "Zone": "Restricted Area",
+        "PLAYER": "JONES, KAI",
+        "ID_PLAYER": "P014102",
+        "Points": 90,
+        "Attempt": 56,
+        "TEAM": "IST",
+        "PPS": 1.6071428571428572,
+        "PLAYER_ID": "P014102"
+    },
+    "Right Wing 3": {
+        "Zone": "Right Wing 3",
+        "PLAYER": "RHODEN, JARED",
+        "ID_PLAYER": "P014178",
+        "Points": 48,
+        "Attempt": 28,
+        "TEAM": "PRS",
+        "PPS": 1.7142857142857142,
+        "PLAYER_ID": "P014178"
+    },
+    "Mid-Range Left Baseline": {
+        "Zone": "Mid-Range Left Baseline",
+        "PLAYER": "ABALDE, ALBERTO",
+        "ID_PLAYER": "P003733",
+        "Points": 12,
+        "Attempt": 10,
+        "TEAM": "MAD",
+        "PPS": 1.2,
+        "PLAYER_ID": "P003733"
+    },
+    "Paint (Non-RA)": {
+        "Zone": "Paint (Non-RA)",
+        "PLAYER": "JESSUP, JUSTINIAN",
+        "ID_PLAYER": "P013290",
+        "Points": 58,
+        "Attempt": 40,
+        "TEAM": "MUN",
+        "PPS": 1.45,
+        "PLAYER_ID": "P013290"
+    },
+    "Top 3": {
+        "Zone": "Top 3",
+        "PLAYER": "SHIELDS, SHAVON",
+        "ID_PLAYER": "P007831",
+        "Points": 48,
+        "Attempt": 32,
+        "TEAM": "MIL",
+        "PPS": 1.5,
+        "PLAYER_ID": "P007831"
+    },
+    "Mid-Range Left Elbow": {
+        "Zone": "Mid-Range Left Elbow",
+        "PLAYER": "DORSEY, TYLER",
+        "ID_PLAYER": "P009849",
+        "Points": 16,
+        "Attempt": 13,
+        "TEAM": "OLY",
+        "PPS": 1.2307692307692308,
+        "PLAYER_ID": "P009849"
+    },
+    "Left Wing 3": {
+        "Zone": "Left Wing 3",
+        "PLAYER": "OKEKE, CHUMA",
+        "ID_PLAYER": "P014006",
+        "Points": 39,
+        "Attempt": 25,
+        "TEAM": "MAD",
+        "PPS": 1.56,
+        "PLAYER_ID": "P014006"
+    },
+    "Mid-Range Center": {
+        "Zone": "Mid-Range Center",
+        "PLAYER": "BLAKENEY, ANTONIO",
+        "ID_PLAYER": "P013402",
+        "Points": 16,
+        "Attempt": 15,
+        "TEAM": "HTA",
+        "PPS": 1.0666666666666667,
+        "PLAYER_ID": "P013402"
+    },
+    "Mid-Range Right Baseline": {
+        "Zone": "Mid-Range Right Baseline",
+        "PLAYER": "DORSEY, TYLER",
+        "ID_PLAYER": "P009849",
+        "Points": 14,
+        "Attempt": 11,
+        "TEAM": "OLY",
+        "PPS": 1.2727272727272727,
+        "PLAYER_ID": "P009849"
+    },
+    "Mid-Range Right Elbow": {
+        "Zone": "Mid-Range Right Elbow",
+        "PLAYER": "JAMES, MIKE",
+        "ID_PLAYER": "P005985",
+        "Points": 22,
+        "Attempt": 18,
+        "TEAM": "MCO",
+        "PPS": 1.2222222222222223,
+        "PLAYER_ID": "P005985"
+    },
+    "Left Corner 3": {
+        "Zone": "Left Corner 3",
+        "PLAYER": "BUTKEVICIUS, ARNAS",
+        "ID_PLAYER": "P002676",
+        "Points": 24,
+        "Attempt": 11,
+        "TEAM": "ZAL",
+        "PPS": 2.1818181818181817,
+        "PLAYER_ID": "P002676"
+    },
+    "Right Corner 3": {
+        "Zone": "Right Corner 3",
+        "PLAYER": "DOZIER, PJ",
+        "ID_PLAYER": "P012742",
+        "Points": 21,
+        "Attempt": 10,
+        "TEAM": "IST",
+        "PPS": 2.1,
+        "PLAYER_ID": "P012742"
+    }
+}

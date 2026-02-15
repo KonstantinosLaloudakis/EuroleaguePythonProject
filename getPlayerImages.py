@@ -3,7 +3,7 @@ import os
 
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 LIMIT = 100
-SEASONS = [f"E{year}" for year in range(2015, 2023)]
+SEASONS = [f"E{year}" for year in range(2007, 2016)]
 SAVE_FOLDER = "player_cards/player_images"
 
 os.makedirs(SAVE_FOLDER, exist_ok=True)

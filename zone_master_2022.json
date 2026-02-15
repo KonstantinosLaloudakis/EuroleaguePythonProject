@@ -1,0 +1,122 @@
+{
+    "Paint (Non-RA)": {
+        "Zone": "Paint (Non-RA)",
+        "PLAYER": "SEDEKERSKIS, TADAS",
+        "ID_PLAYER": "P007230",
+        "Points": 40,
+        "Attempt": 27,
+        "TEAM": "BAS",
+        "PPS": 1.4814814814814814,
+        "PLAYER_ID": "P007230"
+    },
+    "Restricted Area": {
+        "Zone": "Restricted Area",
+        "PLAYER": "ALEXANDER, KYLE",
+        "ID_PLAYER": "P011973",
+        "Points": 92,
+        "Attempt": 64,
+        "TEAM": "PAM",
+        "PPS": 1.4375,
+        "PLAYER_ID": "P011973"
+    },
+    "Right Wing 3": {
+        "Zone": "Right Wing 3",
+        "PLAYER": "GIFFEY, NIELS",
+        "ID_PLAYER": "P001557",
+        "Points": 51,
+        "Attempt": 26,
+        "TEAM": "MUN",
+        "PPS": 1.9615384615384615,
+        "PLAYER_ID": "P001557"
+    },
+    "Top 3": {
+        "Zone": "Top 3",
+        "PLAYER": "SMAILAGIC, ALEN",
+        "ID_PLAYER": "P011051",
+        "Points": 39,
+        "Attempt": 25,
+        "TEAM": "PAR",
+        "PPS": 1.56,
+        "PLAYER_ID": "P011051"
+    },
+    "Mid-Range Left Elbow": {
+        "Zone": "Mid-Range Left Elbow",
+        "PLAYER": "BROWN, LORENZO",
+        "ID_PLAYER": "P009622",
+        "Points": 24,
+        "Attempt": 19,
+        "TEAM": "TEL",
+        "PPS": 1.263157894736842,
+        "PLAYER_ID": "P009622"
+    },
+    "Left Wing 3": {
+        "Zone": "Left Wing 3",
+        "PLAYER": "DIMSA, TOMAS",
+        "ID_PLAYER": "P003211",
+        "Points": 45,
+        "Attempt": 29,
+        "TEAM": "ZAL",
+        "PPS": 1.5517241379310345,
+        "PLAYER_ID": "P003211"
+    },
+    "Left Corner 3": {
+        "Zone": "Left Corner 3",
+        "PLAYER": "GUDURIC, MARKO",
+        "ID_PLAYER": "P004004",
+        "Points": 36,
+        "Attempt": 14,
+        "TEAM": "ULK",
+        "PPS": 2.5714285714285716,
+        "PLAYER_ID": "P004004"
+    },
+    "Mid-Range Left Baseline": {
+        "Zone": "Mid-Range Left Baseline",
+        "PLAYER": "RUBIT, AUGUSTINE",
+        "ID_PLAYER": "P006477",
+        "Points": 18,
+        "Attempt": 13,
+        "TEAM": "MUN",
+        "PPS": 1.3846153846153846,
+        "PLAYER_ID": "P006477"
+    },
+    "Mid-Range Right Elbow": {
+        "Zone": "Mid-Range Right Elbow",
+        "PLAYER": "MADAR, YAM",
+        "ID_PLAYER": "P011052",
+        "Points": 12,
+        "Attempt": 10,
+        "TEAM": "PAR",
+        "PPS": 1.2,
+        "PLAYER_ID": "P011052"
+    },
+    "Mid-Range Center": {
+        "Zone": "Mid-Range Center",
+        "PLAYER": "BALDWIN IV, WADE",
+        "ID_PLAYER": "P009863",
+        "Points": 12,
+        "Attempt": 10,
+        "TEAM": "TEL",
+        "PPS": 1.2,
+        "PLAYER_ID": "P009863"
+    },
+    "Right Corner 3": {
+        "Zone": "Right Corner 3",
+        "PLAYER": "PAPANIKOLAOU, KOSTAS",
+        "ID_PLAYER": "P001255",
+        "Points": 21,
+        "Attempt": 11,
+        "TEAM": "OLY",
+        "PPS": 1.9090909090909092,
+        "PLAYER_ID": "P001255"
+    },
+    "Mid-Range Right Baseline": {
+        "Zone": "Mid-Range Right Baseline",
+        "PLAYER": "WILLIAMS, DERRICK",
+        "ID_PLAYER": "P009006",
+        "Points": 20,
+        "Attempt": 15,
+        "TEAM": "PAN",
+        "PPS": 1.3333333333333333,
+        "PLAYER_ID": "P009006"
+    }
+}

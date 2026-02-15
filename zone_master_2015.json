@@ -1,0 +1,122 @@
+{
+    "Paint (Non-RA)": {
+        "Zone": "Paint (Non-RA)",
+        "PLAYER": "ZUBKOV, ANDREY",
+        "ID_PLAYER": "P003573",
+        "Points": 40,
+        "Attempt": 29,
+        "TEAM": "TIV",
+        "PPS": 1.3793103448275863,
+        "PLAYER_ID": "P003573"
+    },
+    "Left Wing 3": {
+        "Zone": "Left Wing 3",
+        "PLAYER": "ARROYO, CARLOS",
+        "ID_PLAYER": "PBCA",
+        "Points": 51,
+        "Attempt": 32,
+        "TEAM": "BAR",
+        "PPS": 1.59375,
+        "PLAYER_ID": "PBCA"
+    },
+    "Mid-Range Right Elbow": {
+        "Zone": "Mid-Range Right Elbow",
+        "PLAYER": "DATOME, LUIGI",
+        "ID_PLAYER": "PCCD",
+        "Points": 18,
+        "Attempt": 15,
+        "TEAM": "ULK",
+        "PPS": 1.2,
+        "PLAYER_ID": "PCCD"
+    },
+    "Top 3": {
+        "Zone": "Top 3",
+        "PLAYER": "DE COLO, NANDO",
+        "ID_PLAYER": "P002100",
+        "Points": 45,
+        "Attempt": 28,
+        "TEAM": "CSK",
+        "PPS": 1.6071428571428572,
+        "PLAYER_ID": "P002100"
+    },
+    "Restricted Area": {
+        "Zone": "Restricted Area",
+        "PLAYER": "HARANGODY, LUKE ",
+        "ID_PLAYER": "P004902",
+        "Points": 64,
+        "Attempt": 46,
+        "TEAM": "DAR",
+        "PPS": 1.391304347826087,
+        "PLAYER_ID": "P004902"
+    },
+    "Right Wing 3": {
+        "Zone": "Right Wing 3",
+        "PLAYER": "BROEKHOFF, RYAN",
+        "ID_PLAYER": "P005195",
+        "Points": 57,
+        "Attempt": 32,
+        "TEAM": "TIV",
+        "PPS": 1.78125,
+        "PLAYER_ID": "P005195"
+    },
+    "Left Corner 3": {
+        "Zone": "Left Corner 3",
+        "PLAYER": "BOGDANOVIC, BOGDAN",
+        "ID_PLAYER": "P002821",
+        "Points": 24,
+        "Attempt": 11,
+        "TEAM": "ULK",
+        "PPS": 2.1818181818181817,
+        "PLAYER_ID": "P002821"
+    },
+    "Right Corner 3": {
+        "Zone": "Right Corner 3",
+        "PLAYER": "DIEBLER, JON",
+        "ID_PLAYER": "P004997",
+        "Points": 30,
+        "Attempt": 15,
+        "TEAM": "IST",
+        "PPS": 2.0,
+        "PLAYER_ID": "P004997"
+    },
+    "Mid-Range Center": {
+        "Zone": "Mid-Range Center",
+        "PLAYER": "JAMES, MIKE",
+        "ID_PLAYER": "P005985",
+        "Points": 14,
+        "Attempt": 10,
+        "TEAM": "BAS",
+        "PPS": 1.4,
+        "PLAYER_ID": "P005985"
+    },
+    "Mid-Range Right Baseline": {
+        "Zone": "Mid-Range Right Baseline",
+        "PLAYER": "DE COLO, NANDO",
+        "ID_PLAYER": "P002100",
+        "Points": 20,
+        "Attempt": 15,
+        "TEAM": "CSK",
+        "PPS": 1.3333333333333333,
+        "PLAYER_ID": "P002100"
+    },
+    "Mid-Range Left Baseline": {
+        "Zone": "Mid-Range Left Baseline",
+        "PLAYER": "DOELLMAN, JUSTIN",
+        "ID_PLAYER": "P001832",
+        "Points": 24,
+        "Attempt": 18,
+        "TEAM": "BAR",
+        "PPS": 1.3333333333333333,
+        "PLAYER_ID": "P001832"
+    },
+    "Mid-Range Left Elbow": {
+        "Zone": "Mid-Range Left Elbow",
+        "PLAYER": "ZISIS, NIKOS",
+        "ID_PLAYER": "PABN",
+        "Points": 20,
+        "Attempt": 17,
+        "TEAM": "BAM",
+        "PPS": 1.1764705882352942,
+        "PLAYER_ID": "PABN"
+    }
+}

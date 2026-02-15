@@ -1,0 +1,122 @@
+{
+    "Right Wing 3": {
+        "Zone": "Right Wing 3",
+        "PLAYER": "JONES, CHRIS",
+        "ID_PLAYER": "P010568",
+        "Points": 96,
+        "Attempt": 60,
+        "TEAM": "PAM",
+        "PPS": 1.6,
+        "PLAYER_ID": "P010568"
+    },
+    "Paint (Non-RA)": {
+        "Zone": "Paint (Non-RA)",
+        "PLAYER": "AKELE, NICOLA",
+        "ID_PLAYER": "P011816",
+        "Points": 46,
+        "Attempt": 31,
+        "TEAM": "VIR",
+        "PPS": 1.4838709677419355,
+        "PLAYER_ID": "P011816"
+    },
+    "Right Corner 3": {
+        "Zone": "Right Corner 3",
+        "PLAYER": "OBST, ANDREAS",
+        "ID_PLAYER": "P004508",
+        "Points": 84,
+        "Attempt": 48,
+        "TEAM": "MUN",
+        "PPS": 1.75,
+        "PLAYER_ID": "P004508"
+    },
+    "Left Wing 3": {
+        "Zone": "Left Wing 3",
+        "PLAYER": "PETERS, ALEC",
+        "ID_PLAYER": "P008829",
+        "Points": 116,
+        "Attempt": 74,
+        "TEAM": "OLY",
+        "PPS": 1.5675675675675675,
+        "PLAYER_ID": "P008829"
+    },
+    "Top 3": {
+        "Zone": "Top 3",
+        "PLAYER": "KAMINSKY, FRANK",
+        "ID_PLAYER": "P012743",
+        "Points": 48,
+        "Attempt": 30,
+        "TEAM": "PAR",
+        "PPS": 1.6,
+        "PLAYER_ID": "P012743"
+    },
+    "Mid-Range Left Baseline": {
+        "Zone": "Mid-Range Left Baseline",
+        "PLAYER": "GRANT, JERIAN",
+        "ID_PLAYER": "P011204",
+        "Points": 50,
+        "Attempt": 46,
+        "TEAM": "PAN",
+        "PPS": 1.0869565217391304,
+        "PLAYER_ID": "P011204"
+    },
+    "Restricted Area": {
+        "Zone": "Restricted Area",
+        "PLAYER": "JONES, KAI",
+        "ID_PLAYER": "P014102",
+        "Points": 90,
+        "Attempt": 56,
+        "TEAM": "IST",
+        "PPS": 1.6071428571428572,
+        "PLAYER_ID": "P014102"
+    },
+    "Mid-Range Center": {
+        "Zone": "Mid-Range Center",
+        "PLAYER": "NUNN, KENDRICK",
+        "ID_PLAYER": "P012774",
+        "Points": 46,
+        "Attempt": 41,
+        "TEAM": "PAN",
+        "PPS": 1.1219512195121952,
+        "PLAYER_ID": "P012774"
+    },
+    "Mid-Range Left Elbow": {
+        "Zone": "Mid-Range Left Elbow",
+        "PLAYER": "WATSON, GLYNN",
+        "ID_PLAYER": "P014013",
+        "Points": 46,
+        "Attempt": 44,
+        "TEAM": "ASV",
+        "PPS": 1.0454545454545454,
+        "PLAYER_ID": "P014013"
+    },
+    "Left Corner 3": {
+        "Zone": "Left Corner 3",
+        "PLAYER": "PETERS, ALEC",
+        "ID_PLAYER": "P008829",
+        "Points": 70,
+        "Attempt": 38,
+        "TEAM": "OLY",
+        "PPS": 1.8421052631578947,
+        "PLAYER_ID": "P008829"
+    },
+    "Mid-Range Right Elbow": {
+        "Zone": "Mid-Range Right Elbow",
+        "PLAYER": "NUNN, KENDRICK",
+        "ID_PLAYER": "P012774",
+        "Points": 40,
+        "Attempt": 32,
+        "TEAM": "PAN",
+        "PPS": 1.25,
+        "PLAYER_ID": "P012774"
+    },
+    "Mid-Range Right Baseline": {
+        "Zone": "Mid-Range Right Baseline",
+        "PLAYER": "PUNTER, KEVIN",
+        "ID_PLAYER": "P009862",
+        "Points": 46,
+        "Attempt": 42,
+        "TEAM": "PAR",
+        "PPS": 1.0952380952380953,
+        "PLAYER_ID": "P009862"
+    }
+}

@@ -1,0 +1,122 @@
+{
+    "Mid-Range Left Baseline": {
+        "Zone": "Mid-Range Left Baseline",
+        "PLAYER": "STRAZEL, MATTHEW",
+        "ID_PLAYER": "P008099",
+        "Points": 16,
+        "Attempt": 11,
+        "TEAM": "MCO",
+        "PPS": 1.4545454545454546,
+        "PLAYER_ID": "P008099"
+    },
+    "Restricted Area": {
+        "Zone": "Restricted Area",
+        "PLAYER": "PAPAGIANNIS, GEORGIOS",
+        "ID_PLAYER": "P005844",
+        "Points": 84,
+        "Attempt": 64,
+        "TEAM": "MCO",
+        "PPS": 1.3125,
+        "PLAYER_ID": "P005844"
+    },
+    "Mid-Range Center": {
+        "Zone": "Mid-Range Center",
+        "PLAYER": "PUNTER, KEVIN",
+        "ID_PLAYER": "P009862",
+        "Points": 14,
+        "Attempt": 10,
+        "TEAM": "BAR",
+        "PPS": 1.4,
+        "PLAYER_ID": "P009862"
+    },
+    "Paint (Non-RA)": {
+        "Zone": "Paint (Non-RA)",
+        "PLAYER": "DA SILVA, OSCAR",
+        "ID_PLAYER": "P011244",
+        "Points": 56,
+        "Attempt": 39,
+        "TEAM": "MUN",
+        "PPS": 1.435897435897436,
+        "PLAYER_ID": "P011244"
+    },
+    "Right Corner 3": {
+        "Zone": "Right Corner 3",
+        "PLAYER": "GIFFEY, NIELS",
+        "ID_PLAYER": "P001557",
+        "Points": 27,
+        "Attempt": 10,
+        "TEAM": "MUN",
+        "PPS": 2.7,
+        "PLAYER_ID": "P001557"
+    },
+    "Left Wing 3": {
+        "Zone": "Left Wing 3",
+        "PLAYER": "BEAUBOIS, RODRIGUE",
+        "ID_PLAYER": "P006590",
+        "Points": 66,
+        "Attempt": 42,
+        "TEAM": "IST",
+        "PPS": 1.5714285714285714,
+        "PLAYER_ID": "P006590"
+    },
+    "Right Wing 3": {
+        "Zone": "Right Wing 3",
+        "PLAYER": "GIFFEY, NIELS",
+        "ID_PLAYER": "P001557",
+        "Points": 45,
+        "Attempt": 26,
+        "TEAM": "MUN",
+        "PPS": 1.7307692307692308,
+        "PLAYER_ID": "P001557"
+    },
+    "Mid-Range Right Baseline": {
+        "Zone": "Mid-Range Right Baseline",
+        "PLAYER": "PUNTER, KEVIN",
+        "ID_PLAYER": "P009862",
+        "Points": 24,
+        "Attempt": 19,
+        "TEAM": "BAR",
+        "PPS": 1.263157894736842,
+        "PLAYER_ID": "P009862"
+    },
+    "Top 3": {
+        "Zone": "Top 3",
+        "PLAYER": "DAVIES, BRANDON",
+        "ID_PLAYER": "P007870",
+        "Points": 69,
+        "Attempt": 40,
+        "TEAM": "PAR",
+        "PPS": 1.725,
+        "PLAYER_ID": "P007870"
+    },
+    "Mid-Range Right Elbow": {
+        "Zone": "Mid-Range Right Elbow",
+        "PLAYER": "BRIZUELA, DARIO",
+        "ID_PLAYER": "P009992",
+        "Points": 12,
+        "Attempt": 10,
+        "TEAM": "BAR",
+        "PPS": 1.2,
+        "PLAYER_ID": "P009992"
+    },
+    "Mid-Range Left Elbow": {
+        "Zone": "Mid-Range Left Elbow",
+        "PLAYER": "PARKER, JABARI",
+        "ID_PLAYER": "P012745",
+        "Points": 18,
+        "Attempt": 12,
+        "TEAM": "BAR",
+        "PPS": 1.5,
+        "PLAYER_ID": "P012745"
+    },
+    "Left Corner 3": {
+        "Zone": "Left Corner 3",
+        "PLAYER": "PETERS, ALEC",
+        "ID_PLAYER": "P008829",
+        "Points": 30,
+        "Attempt": 12,
+        "TEAM": "OLY",
+        "PPS": 2.5,
+        "PLAYER_ID": "P008829"
+    }
+}

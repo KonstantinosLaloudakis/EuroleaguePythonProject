@@ -1,0 +1,122 @@
+{
+    "Mid-Range Center": {
+        "Zone": "Mid-Range Center",
+        "PLAYER": "BARAC, STANKO",
+        "ID_PLAYER": "PTGC",
+        "Points": 14,
+        "Attempt": 12,
+        "TEAM": "BAS",
+        "PPS": 1.1666666666666667,
+        "PLAYER_ID": "PTGC"
+    },
+    "Mid-Range Left Baseline": {
+        "Zone": "Mid-Range Left Baseline",
+        "PLAYER": "ELIYAHU, LIOR",
+        "ID_PLAYER": "PLGD",
+        "Points": 18,
+        "Attempt": 14,
+        "TEAM": "TEL",
+        "PPS": 1.2857142857142858,
+        "PLAYER_ID": "PLGD"
+    },
+    "Mid-Range Left Elbow": {
+        "Zone": "Mid-Range Left Elbow",
+        "PLAYER": "WASHINGTON, DARIUS",
+        "ID_PLAYER": "PLSZ",
+        "Points": 18,
+        "Attempt": 11,
+        "TEAM": "ROM",
+        "PPS": 1.6363636363636365,
+        "PLAYER_ID": "PLSZ"
+    },
+    "Restricted Area": {
+        "Zone": "Restricted Area",
+        "PLAYER": "GREGORY, KENNY",
+        "ID_PLAYER": "PKOJ",
+        "Points": 128,
+        "Attempt": 82,
+        "TEAM": "LJU",
+        "PPS": 1.5609756097560976,
+        "PLAYER_ID": "PKOJ"
+    },
+    "Right Wing 3": {
+        "Zone": "Right Wing 3",
+        "PLAYER": "MARTINEZ, RAFA",
+        "ID_PLAYER": "P001351",
+        "Points": 39,
+        "Attempt": 25,
+        "TEAM": "PAM",
+        "PPS": 1.56,
+        "PLAYER_ID": "P001351"
+    },
+    "Paint (Non-RA)": {
+        "Zone": "Paint (Non-RA)",
+        "PLAYER": "VALANCIUNAS, JONAS",
+        "ID_PLAYER": "P000898",
+        "Points": 50,
+        "Attempt": 26,
+        "TEAM": "LIE",
+        "PPS": 1.9230769230769231,
+        "PLAYER_ID": "P000898"
+    },
+    "Left Wing 3": {
+        "Zone": "Left Wing 3",
+        "PLAYER": "PNINI, GUY",
+        "ID_PLAYER": "PLKX",
+        "Points": 51,
+        "Attempt": 29,
+        "TEAM": "TEL",
+        "PPS": 1.7586206896551724,
+        "PLAYER_ID": "PLKX"
+    },
+    "Top 3": {
+        "Zone": "Top 3",
+        "PLAYER": "BLU, DAVID",
+        "ID_PLAYER": "PBES",
+        "Points": 39,
+        "Attempt": 28,
+        "TEAM": "TEL",
+        "PPS": 1.3928571428571428,
+        "PLAYER_ID": "PBES"
+    },
+    "Mid-Range Right Baseline": {
+        "Zone": "Mid-Range Right Baseline",
+        "PLAYER": "TUCKER, CLAY",
+        "ID_PLAYER": "P000749",
+        "Points": 20,
+        "Attempt": 15,
+        "TEAM": "MAD",
+        "PPS": 1.3333333333333333,
+        "PLAYER_ID": "P000749"
+    },
+    "Left Corner 3": {
+        "Zone": "Left Corner 3",
+        "PLAYER": "GECEVICIUS, MARTYNAS",
+        "ID_PLAYER": "PLTT",
+        "Points": 15,
+        "Attempt": 10,
+        "TEAM": "LIE",
+        "PPS": 1.5,
+        "PLAYER_ID": "PLTT"
+    },
+    "Right Corner 3": {
+        "Zone": "Right Corner 3",
+        "PLAYER": "RAKOCEVIC, IGOR",
+        "ID_PLAYER": "PANB",
+        "Points": 18,
+        "Attempt": 11,
+        "TEAM": "IST",
+        "PPS": 1.6363636363636365,
+        "PLAYER_ID": "PANB"
+    },
+    "Mid-Range Right Elbow": {
+        "Zone": "Mid-Range Right Elbow",
+        "PLAYER": "MAVROKEFALIDES, LOUKAS",
+        "ID_PLAYER": "PJRC",
+        "Points": 14,
+        "Attempt": 10,
+        "TEAM": "OLY",
+        "PPS": 1.4,
+        "PLAYER_ID": "PJRC"
+    }
+}

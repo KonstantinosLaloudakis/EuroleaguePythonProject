@@ -1,0 +1,122 @@
+{
+    "Restricted Area": {
+        "Zone": "Restricted Area",
+        "PLAYER": "VIDMAR, GASPER",
+        "ID_PLAYER": "PTFI",
+        "Points": 78,
+        "Attempt": 49,
+        "TEAM": "ULK",
+        "PPS": 1.5918367346938775,
+        "PLAYER_ID": "PTFI"
+    },
+    "Paint (Non-RA)": {
+        "Zone": "Paint (Non-RA)",
+        "PLAYER": "GIST, JAMES",
+        "ID_PLAYER": "P002980",
+        "Points": 100,
+        "Attempt": 54,
+        "TEAM": "PAN",
+        "PPS": 1.8518518518518519,
+        "PLAYER_ID": "P002980"
+    },
+    "Mid-Range Center": {
+        "Zone": "Mid-Range Center",
+        "PLAYER": "BROWN, DERRICK",
+        "ID_PLAYER": "P004425",
+        "Points": 22,
+        "Attempt": 18,
+        "TEAM": "TIV",
+        "PPS": 1.2222222222222223,
+        "PLAYER_ID": "P004425"
+    },
+    "Right Wing 3": {
+        "Zone": "Right Wing 3",
+        "PLAYER": "SMITH, DEVIN",
+        "ID_PLAYER": "P001274",
+        "Points": 54,
+        "Attempt": 31,
+        "TEAM": "TEL",
+        "PPS": 1.7419354838709677,
+        "PLAYER_ID": "P001274"
+    },
+    "Left Corner 3": {
+        "Zone": "Left Corner 3",
+        "PLAYER": "BRAMOS, MICHAEL",
+        "ID_PLAYER": "P002906",
+        "Points": 24,
+        "Attempt": 12,
+        "TEAM": "PAN",
+        "PPS": 2.0,
+        "PLAYER_ID": "P002906"
+    },
+    "Top 3": {
+        "Zone": "Top 3",
+        "PLAYER": "RODRIGUEZ, SERGIO",
+        "ID_PLAYER": "PCVM",
+        "Points": 54,
+        "Attempt": 40,
+        "TEAM": "MAD",
+        "PPS": 1.35,
+        "PLAYER_ID": "PCVM"
+    },
+    "Right Corner 3": {
+        "Zone": "Right Corner 3",
+        "PLAYER": "MILAKNIS, ARTURAS",
+        "ID_PLAYER": "PKPD",
+        "Points": 30,
+        "Attempt": 13,
+        "TEAM": "ZAL",
+        "PPS": 2.3076923076923075,
+        "PLAYER_ID": "PKPD"
+    },
+    "Left Wing 3": {
+        "Zone": "Left Wing 3",
+        "PLAYER": "RODRIGUEZ, SERGIO",
+        "ID_PLAYER": "PCVM",
+        "Points": 108,
+        "Attempt": 60,
+        "TEAM": "MAD",
+        "PPS": 1.8,
+        "PLAYER_ID": "PCVM"
+    },
+    "Mid-Range Left Baseline": {
+        "Zone": "Mid-Range Left Baseline",
+        "PLAYER": "MOSS, DAVID",
+        "ID_PLAYER": "P002852",
+        "Points": 14,
+        "Attempt": 11,
+        "TEAM": "MIL",
+        "PPS": 1.2727272727272727,
+        "PLAYER_ID": "P002852"
+    },
+    "Mid-Range Right Baseline": {
+        "Zone": "Mid-Range Right Baseline",
+        "PLAYER": "MIROTIC, NIKOLA",
+        "ID_PLAYER": "P000796",
+        "Points": 20,
+        "Attempt": 18,
+        "TEAM": "MAD",
+        "PPS": 1.1111111111111112,
+        "PLAYER_ID": "P000796"
+    },
+    "Mid-Range Left Elbow": {
+        "Zone": "Mid-Range Left Elbow",
+        "PLAYER": "WEEMS, SONNY",
+        "ID_PLAYER": "P003443",
+        "Points": 26,
+        "Attempt": 21,
+        "TEAM": "CSK",
+        "PPS": 1.2380952380952381,
+        "PLAYER_ID": "P003443"
+    },
+    "Mid-Range Right Elbow": {
+        "Zone": "Mid-Range Right Elbow",
+        "PLAYER": "FRIDZON, VITALY",
+        "ID_PLAYER": "PLLH",
+        "Points": 14,
+        "Attempt": 10,
+        "TEAM": "CSK",
+        "PPS": 1.4,
+        "PLAYER_ID": "PLLH"
+    }
+}

@@ -1,0 +1,122 @@
+{
+    "Mid-Range Right Elbow": {
+        "Zone": "Mid-Range Right Elbow",
+        "PLAYER": "LANGDON, TRAJAN",
+        "ID_PLAYER": "PBEB",
+        "Points": 26,
+        "Attempt": 19,
+        "TEAM": "CSK",
+        "PPS": 1.368421052631579,
+        "PLAYER_ID": "PBEB"
+    },
+    "Right Corner 3": {
+        "Zone": "Right Corner 3",
+        "PLAYER": "FRIDZON, VITALY",
+        "ID_PLAYER": "PLLH",
+        "Points": 24,
+        "Attempt": 15,
+        "TEAM": "KHI",
+        "PPS": 1.6,
+        "PLAYER_ID": "PLLH"
+    },
+    "Right Wing 3": {
+        "Zone": "Right Wing 3",
+        "PLAYER": "TELETOVIC, MIRZA",
+        "ID_PLAYER": "PJZJ",
+        "Points": 60,
+        "Attempt": 37,
+        "TEAM": "BAS",
+        "PPS": 1.6216216216216217,
+        "PLAYER_ID": "PJZJ"
+    },
+    "Mid-Range Right Baseline": {
+        "Zone": "Mid-Range Right Baseline",
+        "PLAYER": "LAVRINOVIC, DARJUS",
+        "ID_PLAYER": "PBWK",
+        "Points": 20,
+        "Attempt": 16,
+        "TEAM": "MAD",
+        "PPS": 1.25,
+        "PLAYER_ID": "PBWK"
+    },
+    "Paint (Non-RA)": {
+        "Zone": "Paint (Non-RA)",
+        "PLAYER": "WATSON, TRAVIS",
+        "ID_PLAYER": "PKNZ",
+        "Points": 84,
+        "Attempt": 43,
+        "TEAM": "ZAL",
+        "PPS": 1.9534883720930232,
+        "PLAYER_ID": "PKNZ"
+    },
+    "Restricted Area": {
+        "Zone": "Restricted Area",
+        "PLAYER": "ELIYAHU, LIOR",
+        "ID_PLAYER": "PLGD",
+        "Points": 94,
+        "Attempt": 53,
+        "TEAM": "BAS",
+        "PPS": 1.7735849056603774,
+        "PLAYER_ID": "PLGD"
+    },
+    "Mid-Range Left Baseline": {
+        "Zone": "Mid-Range Left Baseline",
+        "PLAYER": "FISCHER, D'OR",
+        "ID_PLAYER": "PKZY",
+        "Points": 28,
+        "Attempt": 21,
+        "TEAM": "TEL",
+        "PPS": 1.3333333333333333,
+        "PLAYER_ID": "PKZY"
+    },
+    "Mid-Range Center": {
+        "Zone": "Mid-Range Center",
+        "PLAYER": "FISCHER, D'OR",
+        "ID_PLAYER": "PKZY",
+        "Points": 12,
+        "Attempt": 12,
+        "TEAM": "TEL",
+        "PPS": 1.0,
+        "PLAYER_ID": "PKZY"
+    },
+    "Left Wing 3": {
+        "Zone": "Left Wing 3",
+        "PLAYER": "SISKAUSKAS, RAMUNAS",
+        "ID_PLAYER": "PJMM",
+        "Points": 51,
+        "Attempt": 27,
+        "TEAM": "CSK",
+        "PPS": 1.8888888888888888,
+        "PLAYER_ID": "PJMM"
+    },
+    "Mid-Range Left Elbow": {
+        "Zone": "Mid-Range Left Elbow",
+        "PLAYER": "BURRELL, RONNIE",
+        "ID_PLAYER": "PLGW",
+        "Points": 14,
+        "Attempt": 11,
+        "TEAM": "SOP",
+        "PPS": 1.2727272727272727,
+        "PLAYER_ID": "PLGW"
+    },
+    "Top 3": {
+        "Zone": "Top 3",
+        "PLAYER": "TELETOVIC, MIRZA",
+        "ID_PLAYER": "PJZJ",
+        "Points": 57,
+        "Attempt": 46,
+        "TEAM": "BAS",
+        "PPS": 1.2391304347826086,
+        "PLAYER_ID": "PJZJ"
+    },
+    "Left Corner 3": {
+        "Zone": "Left Corner 3",
+        "PLAYER": "McCARTY, KELLY",
+        "ID_PLAYER": "PDHI",
+        "Points": 30,
+        "Attempt": 13,
+        "TEAM": "KHI",
+        "PPS": 2.3076923076923075,
+        "PLAYER_ID": "PDHI"
+    }
+}

@@ -1,0 +1,122 @@
+{
+    "Top 3": {
+        "Zone": "Top 3",
+        "PLAYER": "TELETOVIC, MIRZA",
+        "ID_PLAYER": "PJZJ",
+        "Points": 60,
+        "Attempt": 37,
+        "TEAM": "BAS",
+        "PPS": 1.6216216216216217,
+        "PLAYER_ID": "PJZJ"
+    },
+    "Restricted Area": {
+        "Zone": "Restricted Area",
+        "PLAYER": "RAKOCEVIC, ZARKO",
+        "ID_PLAYER": "PBGI",
+        "Points": 76,
+        "Attempt": 47,
+        "TEAM": "PAR",
+        "PPS": 1.6170212765957446,
+        "PLAYER_ID": "PBGI"
+    },
+    "Mid-Range Left Baseline": {
+        "Zone": "Mid-Range Left Baseline",
+        "PLAYER": "NDONG, BONIFACE",
+        "ID_PLAYER": "PTGE",
+        "Points": 20,
+        "Attempt": 12,
+        "TEAM": "MAL",
+        "PPS": 1.6666666666666667,
+        "PLAYER_ID": "PTGE"
+    },
+    "Right Wing 3": {
+        "Zone": "Right Wing 3",
+        "PLAYER": "BASILE, GIANLUCA",
+        "ID_PLAYER": "PADS",
+        "Points": 54,
+        "Attempt": 25,
+        "TEAM": "BAR",
+        "PPS": 2.16,
+        "PLAYER_ID": "PADS"
+    },
+    "Paint (Non-RA)": {
+        "Zone": "Paint (Non-RA)",
+        "PLAYER": "PRINTEZIS, GEORGIOS",
+        "ID_PLAYER": "PAMM",
+        "Points": 88,
+        "Attempt": 44,
+        "TEAM": "OLY",
+        "PPS": 2.0,
+        "PLAYER_ID": "PAMM"
+    },
+    "Left Wing 3": {
+        "Zone": "Left Wing 3",
+        "PLAYER": "RAKOCEVIC, IGOR",
+        "ID_PLAYER": "PANB",
+        "Points": 42,
+        "Attempt": 28,
+        "TEAM": "BAS",
+        "PPS": 1.5,
+        "PLAYER_ID": "PANB"
+    },
+    "Mid-Range Center": {
+        "Zone": "Mid-Range Center",
+        "PLAYER": "EWING, DANIEL",
+        "ID_PLAYER": "P000378",
+        "Points": 14,
+        "Attempt": 11,
+        "TEAM": "SOP",
+        "PPS": 1.2727272727272727,
+        "PLAYER_ID": "P000378"
+    },
+    "Left Corner 3": {
+        "Zone": "Left Corner 3",
+        "PLAYER": "JASIKEVICIUS, SARUNAS",
+        "ID_PLAYER": "PADG",
+        "Points": 18,
+        "Attempt": 12,
+        "TEAM": "PAN",
+        "PPS": 1.5,
+        "PLAYER_ID": "PADG"
+    },
+    "Right Corner 3": {
+        "Zone": "Right Corner 3",
+        "PLAYER": "EWING, DANIEL",
+        "ID_PLAYER": "P000378",
+        "Points": 15,
+        "Attempt": 10,
+        "TEAM": "SOP",
+        "PPS": 1.5,
+        "PLAYER_ID": "P000378"
+    },
+    "Mid-Range Left Elbow": {
+        "Zone": "Mid-Range Left Elbow",
+        "PLAYER": "ARROYO, CARLOS",
+        "ID_PLAYER": "PBCA",
+        "Points": 18,
+        "Attempt": 15,
+        "TEAM": "TEL",
+        "PPS": 1.2,
+        "PLAYER_ID": "PBCA"
+    },
+    "Mid-Range Right Elbow": {
+        "Zone": "Mid-Range Right Elbow",
+        "PLAYER": "ANDERSEN, DAVID",
+        "ID_PLAYER": "PAKT",
+        "Points": 14,
+        "Attempt": 11,
+        "TEAM": "BAR",
+        "PPS": 1.2727272727272727,
+        "PLAYER_ID": "PAKT"
+    },
+    "Mid-Range Right Baseline": {
+        "Zone": "Mid-Range Right Baseline",
+        "PLAYER": "ANDERSEN, DAVID",
+        "ID_PLAYER": "PAKT",
+        "Points": 28,
+        "Attempt": 19,
+        "TEAM": "BAR",
+        "PPS": 1.4736842105263157,
+        "PLAYER_ID": "PAKT"
+    }
+}

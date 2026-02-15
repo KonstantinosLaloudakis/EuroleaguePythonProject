@@ -1,0 +1,122 @@
+{
+    "Right Wing 3": {
+        "Zone": "Right Wing 3",
+        "PLAYER": "HALL, DEVON",
+        "ID_PLAYER": "P011205",
+        "Points": 48,
+        "Attempt": 28,
+        "TEAM": "MIL",
+        "PPS": 1.7142857142857142,
+        "PLAYER_ID": "P011205"
+    },
+    "Paint (Non-RA)": {
+        "Zone": "Paint (Non-RA)",
+        "PLAYER": "MIROTIC, NIKOLA",
+        "ID_PLAYER": "P000796",
+        "Points": 54,
+        "Attempt": 43,
+        "TEAM": "MIL",
+        "PPS": 1.255813953488372,
+        "PLAYER_ID": "P000796"
+    },
+    "Right Corner 3": {
+        "Zone": "Right Corner 3",
+        "PLAYER": "ROGKAVOPOULOS, NIKOLAOS",
+        "ID_PLAYER": "P011085",
+        "Points": 30,
+        "Attempt": 12,
+        "TEAM": "BAS",
+        "PPS": 2.5,
+        "PLAYER_ID": "P011085"
+    },
+    "Left Wing 3": {
+        "Zone": "Left Wing 3",
+        "PLAYER": "ROGKAVOPOULOS, NIKOLAOS",
+        "ID_PLAYER": "P011085",
+        "Points": 45,
+        "Attempt": 27,
+        "TEAM": "BAS",
+        "PPS": 1.6666666666666667,
+        "PLAYER_ID": "P011085"
+    },
+    "Top 3": {
+        "Zone": "Top 3",
+        "PLAYER": "KAMINSKY, FRANK",
+        "ID_PLAYER": "P012743",
+        "Points": 48,
+        "Attempt": 30,
+        "TEAM": "PAR",
+        "PPS": 1.6,
+        "PLAYER_ID": "P012743"
+    },
+    "Mid-Range Left Baseline": {
+        "Zone": "Mid-Range Left Baseline",
+        "PLAYER": "JACKSON, EDWIN",
+        "ID_PLAYER": "P000229",
+        "Points": 18,
+        "Attempt": 12,
+        "TEAM": "ASV",
+        "PPS": 1.5,
+        "PLAYER_ID": "P000229"
+    },
+    "Restricted Area": {
+        "Zone": "Restricted Area",
+        "PLAYER": "PAPAGIANNIS, GEORGIOS",
+        "ID_PLAYER": "P005844",
+        "Points": 82,
+        "Attempt": 60,
+        "TEAM": "ULK",
+        "PPS": 1.3666666666666667,
+        "PLAYER_ID": "P005844"
+    },
+    "Mid-Range Center": {
+        "Zone": "Mid-Range Center",
+        "PLAYER": "BOLMARO, LEANDRO",
+        "ID_PLAYER": "P008985",
+        "Points": 20,
+        "Attempt": 16,
+        "TEAM": "MUN",
+        "PPS": 1.25,
+        "PLAYER_ID": "P008985"
+    },
+    "Mid-Range Left Elbow": {
+        "Zone": "Mid-Range Left Elbow",
+        "PLAYER": "VESELY, JAN",
+        "ID_PLAYER": "P000925",
+        "Points": 16,
+        "Attempt": 12,
+        "TEAM": "BAR",
+        "PPS": 1.3333333333333333,
+        "PLAYER_ID": "P000925"
+    },
+    "Left Corner 3": {
+        "Zone": "Left Corner 3",
+        "PLAYER": "OJELEYE, SEMI",
+        "ID_PLAYER": "P011982",
+        "Points": 30,
+        "Attempt": 13,
+        "TEAM": "PAM",
+        "PPS": 2.3076923076923075,
+        "PLAYER_ID": "P011982"
+    },
+    "Mid-Range Right Elbow": {
+        "Zone": "Mid-Range Right Elbow",
+        "PLAYER": "PUNTER, KEVIN",
+        "ID_PLAYER": "P009862",
+        "Points": 28,
+        "Attempt": 18,
+        "TEAM": "PAR",
+        "PPS": 1.5555555555555556,
+        "PLAYER_ID": "P009862"
+    },
+    "Mid-Range Right Baseline": {
+        "Zone": "Mid-Range Right Baseline",
+        "PLAYER": "BALDWIN IV, WADE",
+        "ID_PLAYER": "P009863",
+        "Points": 18,
+        "Attempt": 15,
+        "TEAM": "TEL",
+        "PPS": 1.2,
+        "PLAYER_ID": "P009863"
+    }
+}

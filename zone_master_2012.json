@@ -1,0 +1,122 @@
+{
+    "Restricted Area": {
+        "Zone": "Restricted Area",
+        "PLAYER": "ERMIS, BARIS",
+        "ID_PLAYER": "PJIR",
+        "Points": 52,
+        "Attempt": 30,
+        "TEAM": "ULK",
+        "PPS": 1.7333333333333334,
+        "PLAYER_ID": "PJIR"
+    },
+    "Right Corner 3": {
+        "Zone": "Right Corner 3",
+        "PLAYER": "TEODOSIC, MILOS",
+        "ID_PLAYER": "PJDR",
+        "Points": 27,
+        "Attempt": 12,
+        "TEAM": "CSK",
+        "PPS": 2.25,
+        "PLAYER_ID": "PJDR"
+    },
+    "Mid-Range Center": {
+        "Zone": "Mid-Range Center",
+        "PLAYER": "KRSTIC, NENAD",
+        "ID_PLAYER": "PAUO",
+        "Points": 14,
+        "Attempt": 10,
+        "TEAM": "CSK",
+        "PPS": 1.4,
+        "PLAYER_ID": "PAUO"
+    },
+    "Left Wing 3": {
+        "Zone": "Left Wing 3",
+        "PLAYER": "RIVERS, KELVIN",
+        "ID_PLAYER": "P002429",
+        "Points": 42,
+        "Attempt": 27,
+        "TEAM": "KHI",
+        "PPS": 1.5555555555555556,
+        "PLAYER_ID": "P002429"
+    },
+    "Paint (Non-RA)": {
+        "Zone": "Paint (Non-RA)",
+        "PLAYER": "JERRELLS, CURTIS",
+        "ID_PLAYER": "P003067",
+        "Points": 64,
+        "Attempt": 33,
+        "TEAM": "BES",
+        "PPS": 1.9393939393939394,
+        "PLAYER_ID": "P003067"
+    },
+    "Mid-Range Right Baseline": {
+        "Zone": "Mid-Range Right Baseline",
+        "PLAYER": "PRINTEZIS, GEORGIOS",
+        "ID_PLAYER": "PAMM",
+        "Points": 14,
+        "Attempt": 11,
+        "TEAM": "OLY",
+        "PPS": 1.2727272727272727,
+        "PLAYER_ID": "PAMM"
+    },
+    "Right Wing 3": {
+        "Zone": "Right Wing 3",
+        "PLAYER": "WOOD, DASHAUN",
+        "ID_PLAYER": "P001459",
+        "Points": 45,
+        "Attempt": 27,
+        "TEAM": "BER",
+        "PPS": 1.6666666666666667,
+        "PLAYER_ID": "P001459"
+    },
+    "Mid-Range Left Elbow": {
+        "Zone": "Mid-Range Left Elbow",
+        "PLAYER": "PLANINIC, ZORAN",
+        "ID_PLAYER": "PAFP",
+        "Points": 14,
+        "Attempt": 11,
+        "TEAM": "KHI",
+        "PPS": 1.2727272727272727,
+        "PLAYER_ID": "PAFP"
+    },
+    "Mid-Range Left Baseline": {
+        "Zone": "Mid-Range Left Baseline",
+        "PLAYER": "SAVANOVIC, DUSKO",
+        "ID_PLAYER": "PKOD",
+        "Points": 18,
+        "Attempt": 11,
+        "TEAM": "IST",
+        "PPS": 1.6363636363636365,
+        "PLAYER_ID": "PKOD"
+    },
+    "Left Corner 3": {
+        "Zone": "Left Corner 3",
+        "PLAYER": "JACOBSEN, CASEY",
+        "ID_PLAYER": "PKNK",
+        "Points": 24,
+        "Attempt": 11,
+        "TEAM": "BAM",
+        "PPS": 2.1818181818181817,
+        "PLAYER_ID": "PKNK"
+    },
+    "Mid-Range Right Elbow": {
+        "Zone": "Mid-Range Right Elbow",
+        "PLAYER": "HEURTEL, THOMAS",
+        "ID_PLAYER": "PKLT",
+        "Points": 12,
+        "Attempt": 10,
+        "TEAM": "BAS",
+        "PPS": 1.2,
+        "PLAYER_ID": "PKLT"
+    },
+    "Top 3": {
+        "Zone": "Top 3",
+        "PLAYER": "GAVEL, ANTON",
+        "ID_PLAYER": "P001252",
+        "Points": 42,
+        "Attempt": 25,
+        "TEAM": "BAM",
+        "PPS": 1.68,
+        "PLAYER_ID": "P001252"
+    }
+}

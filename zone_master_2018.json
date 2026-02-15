@@ -1,0 +1,122 @@
+{
+    "Paint (Non-RA)": {
+        "Zone": "Paint (Non-RA)",
+        "PLAYER": "REYES, FELIPE",
+        "ID_PLAYER": "PAAX",
+        "Points": 48,
+        "Attempt": 33,
+        "TEAM": "MAD",
+        "PPS": 1.4545454545454546,
+        "PLAYER_ID": "PAAX"
+    },
+    "Mid-Range Left Baseline": {
+        "Zone": "Mid-Range Left Baseline",
+        "PLAYER": "PLEISS, TIBOR",
+        "ID_PLAYER": "PLHK",
+        "Points": 16,
+        "Attempt": 12,
+        "TEAM": "IST",
+        "PPS": 1.3333333333333333,
+        "PLAYER_ID": "PLHK"
+    },
+    "Left Wing 3": {
+        "Zone": "Left Wing 3",
+        "PLAYER": "HIGGINS, CORY",
+        "ID_PLAYER": "P006450",
+        "Points": 69,
+        "Attempt": 39,
+        "TEAM": "CSK",
+        "PPS": 1.7692307692307692,
+        "PLAYER_ID": "P006450"
+    },
+    "Restricted Area": {
+        "Zone": "Restricted Area",
+        "PLAYER": "PAPAGIANNIS, GEORGIOS",
+        "ID_PLAYER": "P005844",
+        "Points": 62,
+        "Attempt": 42,
+        "TEAM": "PAN",
+        "PPS": 1.4761904761904763,
+        "PLAYER_ID": "P005844"
+    },
+    "Right Wing 3": {
+        "Zone": "Right Wing 3",
+        "PLAYER": "HEURTEL, THOMAS",
+        "ID_PLAYER": "PKLT",
+        "Points": 51,
+        "Attempt": 30,
+        "TEAM": "BAR",
+        "PPS": 1.7,
+        "PLAYER_ID": "PKLT"
+    },
+    "Mid-Range Right Elbow": {
+        "Zone": "Mid-Range Right Elbow",
+        "PLAYER": "KOPONEN, PETTERI",
+        "ID_PLAYER": "P004178",
+        "Points": 12,
+        "Attempt": 10,
+        "TEAM": "MUN",
+        "PPS": 1.2,
+        "PLAYER_ID": "P004178"
+    },
+    "Mid-Range Left Elbow": {
+        "Zone": "Mid-Range Left Elbow",
+        "PLAYER": "MICIC, VASILIJE",
+        "ID_PLAYER": "P002580",
+        "Points": 12,
+        "Attempt": 10,
+        "TEAM": "IST",
+        "PPS": 1.2,
+        "PLAYER_ID": "P002580"
+    },
+    "Mid-Range Right Baseline": {
+        "Zone": "Mid-Range Right Baseline",
+        "PLAYER": "KOPONEN, PETTERI",
+        "ID_PLAYER": "P004178",
+        "Points": 18,
+        "Attempt": 12,
+        "TEAM": "MUN",
+        "PPS": 1.5,
+        "PLAYER_ID": "P004178"
+    },
+    "Top 3": {
+        "Zone": "Top 3",
+        "PLAYER": "MILAKNIS, ARTURAS",
+        "ID_PLAYER": "PKPD",
+        "Points": 51,
+        "Attempt": 28,
+        "TEAM": "ZAL",
+        "PPS": 1.8214285714285714,
+        "PLAYER_ID": "PKPD"
+    },
+    "Mid-Range Center": {
+        "Zone": "Mid-Range Center",
+        "PLAYER": "LASME, STEPHANE",
+        "ID_PLAYER": "P001287",
+        "Points": 14,
+        "Attempt": 10,
+        "TEAM": "PAN",
+        "PPS": 1.4,
+        "PLAYER_ID": "P001287"
+    },
+    "Left Corner 3": {
+        "Zone": "Left Corner 3",
+        "PLAYER": "MELLI, NICOLO",
+        "ID_PLAYER": "P002849",
+        "Points": 24,
+        "Attempt": 11,
+        "TEAM": "ULK",
+        "PPS": 2.1818181818181817,
+        "PLAYER_ID": "P002849"
+    },
+    "Right Corner 3": {
+        "Zone": "Right Corner 3",
+        "PLAYER": "GUDURIC, MARKO",
+        "ID_PLAYER": "P004004",
+        "Points": 18,
+        "Attempt": 10,
+        "TEAM": "ULK",
+        "PPS": 1.8,
+        "PLAYER_ID": "P004004"
+    }
+}

@@ -1,0 +1,122 @@
+{
+    "Mid-Range Left Elbow": {
+        "Zone": "Mid-Range Left Elbow",
+        "PLAYER": "GOUDELOCK, ANDREW ",
+        "ID_PLAYER": "P004903",
+        "Points": 20,
+        "Attempt": 14,
+        "TEAM": "TEL",
+        "PPS": 1.4285714285714286,
+        "PLAYER_ID": "P004903"
+    },
+    "Restricted Area": {
+        "Zone": "Restricted Area",
+        "PLAYER": "TYUS, ALEX",
+        "ID_PLAYER": "P004119",
+        "Points": 146,
+        "Attempt": 117,
+        "TEAM": "GAL",
+        "PPS": 1.2478632478632479,
+        "PLAYER_ID": "P004119"
+    },
+    "Paint (Non-RA)": {
+        "Zone": "Paint (Non-RA)",
+        "PLAYER": "ZIRBES, MAIK",
+        "ID_PLAYER": "P004183",
+        "Points": 64,
+        "Attempt": 50,
+        "TEAM": "TEL",
+        "PPS": 1.28,
+        "PLAYER_ID": "P004183"
+    },
+    "Mid-Range Right Baseline": {
+        "Zone": "Mid-Range Right Baseline",
+        "PLAYER": "TEODOSIC, MILOS",
+        "ID_PLAYER": "PJDR",
+        "Points": 16,
+        "Attempt": 11,
+        "TEAM": "CSK",
+        "PPS": 1.4545454545454546,
+        "PLAYER_ID": "PJDR"
+    },
+    "Mid-Range Left Baseline": {
+        "Zone": "Mid-Range Left Baseline",
+        "PLAYER": "LARKIN, SHANE",
+        "ID_PLAYER": "P007200",
+        "Points": 14,
+        "Attempt": 10,
+        "TEAM": "BAS",
+        "PPS": 1.4,
+        "PLAYER_ID": "P007200"
+    },
+    "Top 3": {
+        "Zone": "Top 3",
+        "PLAYER": "SINGLETON, CHRIS",
+        "ID_PLAYER": "P006614",
+        "Points": 48,
+        "Attempt": 26,
+        "TEAM": "PAN",
+        "PPS": 1.8461538461538463,
+        "PLAYER_ID": "P006614"
+    },
+    "Left Wing 3": {
+        "Zone": "Left Wing 3",
+        "PLAYER": "BOGDANOVIC, BOGDAN",
+        "ID_PLAYER": "P002821",
+        "Points": 66,
+        "Attempt": 34,
+        "TEAM": "ULK",
+        "PPS": 1.9411764705882353,
+        "PLAYER_ID": "P002821"
+    },
+    "Right Wing 3": {
+        "Zone": "Right Wing 3",
+        "PLAYER": "PANGOS, KEVIN",
+        "ID_PLAYER": "P006433",
+        "Points": 66,
+        "Attempt": 39,
+        "TEAM": "ZAL",
+        "PPS": 1.6923076923076923,
+        "PLAYER_ID": "P006433"
+    },
+    "Right Corner 3": {
+        "Zone": "Right Corner 3",
+        "PLAYER": "PAUL, BRANDON",
+        "ID_PLAYER": "P004945",
+        "Points": 24,
+        "Attempt": 13,
+        "TEAM": "IST",
+        "PPS": 1.8461538461538463,
+        "PLAYER_ID": "P004945"
+    },
+    "Mid-Range Right Elbow": {
+        "Zone": "Mid-Range Right Elbow",
+        "PLAYER": "GOUDELOCK, ANDREW ",
+        "ID_PLAYER": "P004903",
+        "Points": 14,
+        "Attempt": 10,
+        "TEAM": "TEL",
+        "PPS": 1.4,
+        "PLAYER_ID": "P004903"
+    },
+    "Mid-Range Center": {
+        "Zone": "Mid-Range Center",
+        "PLAYER": "MILLER, DARIUS",
+        "ID_PLAYER": "P006421",
+        "Points": 20,
+        "Attempt": 17,
+        "TEAM": "BAM",
+        "PPS": 1.1764705882352942,
+        "PLAYER_ID": "P006421"
+    },
+    "Left Corner 3": {
+        "Zone": "Left Corner 3",
+        "PLAYER": "SANDERS, RAKIM",
+        "ID_PLAYER": "P005001",
+        "Points": 24,
+        "Attempt": 11,
+        "TEAM": "MIL",
+        "PPS": 2.1818181818181817,
+        "PLAYER_ID": "P005001"
+    }
+}

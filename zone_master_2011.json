@@ -1,0 +1,122 @@
+{
+    "Paint (Non-RA)": {
+        "Zone": "Paint (Non-RA)",
+        "PLAYER": "SLAUGHTER, MARCUS",
+        "ID_PLAYER": "P000659",
+        "Points": 40,
+        "Attempt": 22,
+        "TEAM": "BAM",
+        "PPS": 1.8181818181818181,
+        "PLAYER_ID": "P000659"
+    },
+    "Restricted Area": {
+        "Zone": "Restricted Area",
+        "PLAYER": "JAVTOKAS, ROBERTAS",
+        "ID_PLAYER": "PBVE",
+        "Points": 70,
+        "Attempt": 43,
+        "TEAM": "ZAL",
+        "PPS": 1.627906976744186,
+        "PLAYER_ID": "PBVE"
+    },
+    "Left Wing 3": {
+        "Zone": "Left Wing 3",
+        "PLAYER": "BLU, DAVID",
+        "ID_PLAYER": "PBES",
+        "Points": 48,
+        "Attempt": 30,
+        "TEAM": "TEL",
+        "PPS": 1.6,
+        "PLAYER_ID": "PBES"
+    },
+    "Mid-Range Left Baseline": {
+        "Zone": "Mid-Range Left Baseline",
+        "PLAYER": "FREELAND, JOEL",
+        "ID_PLAYER": "PLOO",
+        "Points": 18,
+        "Attempt": 12,
+        "TEAM": "MAL",
+        "PPS": 1.5,
+        "PLAYER_ID": "PLOO"
+    },
+    "Mid-Range Center": {
+        "Zone": "Mid-Range Center",
+        "PLAYER": "GORDON, JAMONT",
+        "ID_PLAYER": "P001310",
+        "Points": 12,
+        "Attempt": 11,
+        "TEAM": "CSK",
+        "PPS": 1.0909090909090908,
+        "PLAYER_ID": "P001310"
+    },
+    "Mid-Range Right Baseline": {
+        "Zone": "Mid-Range Right Baseline",
+        "PLAYER": "ZORIC, LUKA",
+        "ID_PLAYER": "PBCB",
+        "Points": 14,
+        "Attempt": 11,
+        "TEAM": "MAL",
+        "PPS": 1.2727272727272727,
+        "PLAYER_ID": "PBCB"
+    },
+    "Mid-Range Left Elbow": {
+        "Zone": "Mid-Range Left Elbow",
+        "PLAYER": "LYDAY, TERRELL",
+        "ID_PLAYER": "PCOX",
+        "Points": 12,
+        "Attempt": 11,
+        "TEAM": "UNK",
+        "PPS": 1.0909090909090908,
+        "PLAYER_ID": "PCOX"
+    },
+    "Right Wing 3": {
+        "Zone": "Right Wing 3",
+        "PLAYER": "DOMERCANT, HENRY",
+        "ID_PLAYER": "PJIS",
+        "Points": 57,
+        "Attempt": 35,
+        "TEAM": "UNK",
+        "PPS": 1.6285714285714286,
+        "PLAYER_ID": "PJIS"
+    },
+    "Left Corner 3": {
+        "Zone": "Left Corner 3",
+        "PLAYER": "GECEVICIUS, MARTYNAS",
+        "ID_PLAYER": "PLTT",
+        "Points": 15,
+        "Attempt": 12,
+        "TEAM": "OLY",
+        "PPS": 1.25,
+        "PLAYER_ID": "PLTT"
+    },
+    "Top 3": {
+        "Zone": "Top 3",
+        "PLAYER": "KAIMAKOGLOU, KOSTAS",
+        "ID_PLAYER": "PJUP",
+        "Points": 42,
+        "Attempt": 28,
+        "TEAM": "PAN",
+        "PPS": 1.5,
+        "PLAYER_ID": "PJUP"
+    },
+    "Mid-Range Right Elbow": {
+        "Zone": "Mid-Range Right Elbow",
+        "PLAYER": "ANDERSEN, DAVID",
+        "ID_PLAYER": "PAKT",
+        "Points": 18,
+        "Attempt": 15,
+        "TEAM": "SIE",
+        "PPS": 1.2,
+        "PLAYER_ID": "PAKT"
+    },
+    "Right Corner 3": {
+        "Zone": "Right Corner 3",
+        "PLAYER": "SATO, ROMAIN",
+        "ID_PLAYER": "PLMO",
+        "Points": 17,
+        "Attempt": 10,
+        "TEAM": "PAN",
+        "PPS": 1.7,
+        "PLAYER_ID": "PLMO"
+    }
+}

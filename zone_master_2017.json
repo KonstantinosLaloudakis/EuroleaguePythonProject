@@ -1,0 +1,122 @@
+{
+    "Left Wing 3": {
+        "Zone": "Left Wing 3",
+        "PLAYER": "WACZYNSKI, ADAM",
+        "ID_PLAYER": "PLDX",
+        "Points": 72,
+        "Attempt": 41,
+        "TEAM": "MAL",
+        "PPS": 1.7560975609756098,
+        "PLAYER_ID": "PLDX"
+    },
+    "Paint (Non-RA)": {
+        "Zone": "Paint (Non-RA)",
+        "PLAYER": "KALINIC, NIKOLA",
+        "ID_PLAYER": "P004866",
+        "Points": 36,
+        "Attempt": 25,
+        "TEAM": "ULK",
+        "PPS": 1.44,
+        "PLAYER_ID": "P004866"
+    },
+    "Top 3": {
+        "Zone": "Top 3",
+        "PLAYER": "DE COLO, NANDO",
+        "ID_PLAYER": "P002100",
+        "Points": 51,
+        "Attempt": 34,
+        "TEAM": "CSK",
+        "PPS": 1.5,
+        "PLAYER_ID": "P002100"
+    },
+    "Mid-Range Left Baseline": {
+        "Zone": "Mid-Range Left Baseline",
+        "PLAYER": "RADOSEVIC, LEON",
+        "ID_PLAYER": "PLEM",
+        "Points": 18,
+        "Attempt": 13,
+        "TEAM": "BAM",
+        "PPS": 1.3846153846153846,
+        "PLAYER_ID": "PLEM"
+    },
+    "Restricted Area": {
+        "Zone": "Restricted Area",
+        "PLAYER": "TYUS, ALEX",
+        "ID_PLAYER": "P004119",
+        "Points": 164,
+        "Attempt": 120,
+        "TEAM": "TEL",
+        "PPS": 1.3666666666666667,
+        "PLAYER_ID": "P004119"
+    },
+    "Right Corner 3": {
+        "Zone": "Right Corner 3",
+        "PLAYER": "NUNNALLY, JAMES",
+        "ID_PLAYER": "P007400",
+        "Points": 27,
+        "Attempt": 12,
+        "TEAM": "ULK",
+        "PPS": 2.25,
+        "PLAYER_ID": "P007400"
+    },
+    "Right Wing 3": {
+        "Zone": "Right Wing 3",
+        "PLAYER": "NUNNALLY, JAMES",
+        "ID_PLAYER": "P007400",
+        "Points": 48,
+        "Attempt": 28,
+        "TEAM": "ULK",
+        "PPS": 1.7142857142857142,
+        "PLAYER_ID": "P007400"
+    },
+    "Mid-Range Left Elbow": {
+        "Zone": "Mid-Range Left Elbow",
+        "PLAYER": "HEURTEL, THOMAS",
+        "ID_PLAYER": "PKLT",
+        "Points": 20,
+        "Attempt": 11,
+        "TEAM": "BAR",
+        "PPS": 1.8181818181818181,
+        "PLAYER_ID": "PKLT"
+    },
+    "Left Corner 3": {
+        "Zone": "Left Corner 3",
+        "PLAYER": "CAUSEUR, FABIEN",
+        "ID_PLAYER": "P001392",
+        "Points": 30,
+        "Attempt": 13,
+        "TEAM": "MAD",
+        "PPS": 2.3076923076923075,
+        "PLAYER_ID": "P001392"
+    },
+    "Mid-Range Right Elbow": {
+        "Zone": "Mid-Range Right Elbow",
+        "PLAYER": "HEURTEL, THOMAS",
+        "ID_PLAYER": "PKLT",
+        "Points": 22,
+        "Attempt": 19,
+        "TEAM": "BAR",
+        "PPS": 1.1578947368421053,
+        "PLAYER_ID": "PKLT"
+    },
+    "Mid-Range Center": {
+        "Zone": "Mid-Range Center",
+        "PLAYER": "KOPONEN, PETTERI",
+        "ID_PLAYER": "P004178",
+        "Points": 16,
+        "Attempt": 10,
+        "TEAM": "BAR",
+        "PPS": 1.6,
+        "PLAYER_ID": "P004178"
+    },
+    "Mid-Range Right Baseline": {
+        "Zone": "Mid-Range Right Baseline",
+        "PLAYER": "JANKUNAS, PAULIUS",
+        "ID_PLAYER": "PBWI",
+        "Points": 50,
+        "Attempt": 32,
+        "TEAM": "ZAL",
+        "PPS": 1.5625,
+        "PLAYER_ID": "PBWI"
+    }
+}
