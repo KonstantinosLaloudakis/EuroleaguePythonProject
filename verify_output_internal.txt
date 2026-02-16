@@ -1,0 +1,34 @@
+Loaded 31502 rows from cache.
+Columns: ['Season', 'Gamecode', 'TYPE', 'NUMBEROFPLAY', 'CODETEAM', 'PLAYER_ID', 'PLAYTYPE', 'PLAYER', 'TEAM', 'DORSAL', 'MINUTE', 'MARKERTIME', 'POINTS_A', 'POINTS_B', 'COMMENT', 'PLAYINFO', 'PERIOD', 'Lineup_BER', 'Lineup_PAN', 'GameCode', 'Lineup_MCO', 'Lineup_MIL', 'Lineup_ZAL', 'Lineup_BAR', 'Lineup_BAS', 'Lineup_PAR', 'Lineup_MUN', 'Lineup_MAD', 'Lineup_TEL', 'Lineup_ASV', 'Lineup_ULK', 'Lineup_OLY', 'Lineup_PRS', 'Lineup_RED', 'Lineup_VIR', 'Lineup_IST']
+Lineup Cols: ['Lineup_BER', 'Lineup_PAN', 'Lineup_MCO', 'Lineup_MIL', 'Lineup_ZAL', 'Lineup_BAR', 'Lineup_BAS', 'Lineup_PAR', 'Lineup_MUN', 'Lineup_MAD', 'Lineup_TEL', 'Lineup_ASV', 'Lineup_ULK', 'Lineup_OLY', 'Lineup_PRS', 'Lineup_RED', 'Lineup_VIR', 'Lineup_IST']
+Sample Lineup Value: ['MATTISSECK, JONAS', 'HERMANNSSON, MARTIN', 'OLINDE, LOUIS', 'KOUMADJE, KHALIFA', 'RAPIEQUE, ELIAS'] (Type: <class 'str'>)
+Sample MARKERTIME (valid): 09:59
+Sample MINUTE (valid): 1
+Sample POINTS_A (valid): 2.0
+Sample POINTS_B (valid): 2.0
+Processed 10 games...
+Processed 20 games...
+Processed 30 games...
+Processed 40 games...
+Processed 50 games...
+Processed 60 games...
+Analysis Complete.
+
+Total 5-Man Lineups found: 1682
+Total 2-Man Pairs found: 1500
+Total Players tracked (Anchor): 243
+
+Top 3 5-Man Lineups by Minutes:
+  ('HAYES, KEVARRIUS', 'JANTUNEN, MIKAEL', 'OUATTARA, YAKUBA', 'SHORTS, TJ', 'WARD, TYSON'): 69.08 mins, 143.0-139.0
+  ('FALL, MOUSTAPHA', 'FOURNIER, EVAN', 'PAPANIKOLAOU, KOSTAS', 'VEZENKOV, SASHA', 'WALKUP, THOMAS'): 43.45 mins, 90.0-94.0
+  ('BRYANT, ELIJAH', 'NWORA, JORDAN', 'OSMANI, ERCAN', 'POIRIER, VINCENT', 'THOMPSON, DARIUS'): 40.35 mins, 93.0-70.0
+
+Top 3 2-Man Pairs by Minutes:
+  ('JANTUNEN, MIKAEL', 'SHORTS, TJ'): 156.62 mins, 341.0-325.0
+  ('SHORTS, TJ', 'WARD, TYSON'): 151.45 mins, 324.0-316.0
+  ('CORDINIER, ISAIA', 'SHENGELIA, TORNIKE'): 149.73 mins, 320.0-326.0
+
+Top 3 Players by On-Minutes:
+  GIEDRAITIS, DOVYDAS: On: 216.20m (458.0-414.0), Off: 85.85m
+  RANDOLPH, LEVI: On: 211.23m (434.0-428.0), Off: 77.08m
+  SHENGELIA, TORNIKE: On: 198.47m (403.0-413.0), Off: 81.53m

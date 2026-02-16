@@ -1,0 +1,155 @@
+LINEUP ANOMALY REPORT
+======================================================================
+Scanning 10 files...
+
+
+======================================================================
+FILE: lineup_stats_2man_100_2024.json
+======================================================================
+  Total entries: 650
+  ANOMALIES FOUND: 4
+    [SUSPICIOUSLY HIGH MINUTES (2-man)] HERNANGOMEZ, JUANCHO, NUNN, KENDRICK
+      Min=813.4, Net=6.8
+    [SUSPICIOUSLY HIGH MINUTES (2-man)] SHORTS, TJ, WARD, TYSON
+      Min=947.8, Net=-5.8
+    [SUSPICIOUSLY HIGH MINUTES (2-man)] JANTUNEN, MIKAEL, SHORTS, TJ
+      Min=921.1, Net=-7.3
+    [SUSPICIOUSLY HIGH MINUTES (2-man)] JANTUNEN, MIKAEL, WARD, TYSON
+      Min=898.9, Net=-8.0
+
+  --- Bottom 3 Net Ratings ---
+    CLYBURN, WILL, MORGAN, MATTHEW | Net=-20.8 | Min=192.4
+    GARUBA, USMAN, HEZONJA, MARIO | Net=-20.7 | Min=172.8
+    SMAILAGIC, ALEN, ULANOVAS, EDGARAS | Net=-20.1 | Min=175.6
+  --- Top 3 Net Ratings ---
+    EDWARDS, CARSEN, GIFFEY, NIELS | Net=21.7 | Min=274.6
+    CAVALIERE, LEOPOLD, SY, BANDJA | Net=21.9 | Min=226.4
+    BOOKER, DEVIN, GIFFEY, NIELS | Net=30.3 | Min=185.5
+
+======================================================================
+FILE: lineup_stats_2man_100_2025.json
+======================================================================
+  Total entries: 505
+  STATUS: CLEAN - No anomalies detected.
+
+  --- Bottom 3 Net Ratings ---
+    SAKO, NEAL, TAYLOR, KAMERON | Net=-36.7 | Min=175.9
+    HAYES, KEVARRIUS, STRAZEL, MATTHEW | Net=-31.1 | Min=236.2
+    BRAZDEIKIS, IGNAS, TUBELIS, AZUOLAS | Net=-27.7 | Min=207.8
+  --- Top 3 Net Ratings ---
+    IZUNDU, EBUKA, NWORA, JORDAN | Net=26.1 | Min=160.3
+    OBST, ANDREAS, VOIGTMANN, JOHANNES | Net=26.9 | Min=166.0
+    CALATHES, NICK, WASHINGTON, DUANE | Net=29.2 | Min=151.2
+
+======================================================================
+FILE: lineup_stats_2man_2024.json
+======================================================================
+  Total entries: 650
+  ANOMALIES FOUND: 4
+    [SUSPICIOUSLY HIGH MINUTES (2-man)] HERNANGOMEZ, JUANCHO, NUNN, KENDRICK
+      Min=813.4, Net=5.1
+    [SUSPICIOUSLY HIGH MINUTES (2-man)] SHORTS, TJ, WARD, TYSON
+      Min=947.8, Net=-4.3
+    [SUSPICIOUSLY HIGH MINUTES (2-man)] JANTUNEN, MIKAEL, SHORTS, TJ
+      Min=921.1, Net=-5.4
+    [SUSPICIOUSLY HIGH MINUTES (2-man)] JANTUNEN, MIKAEL, WARD, TYSON
+      Min=898.9, Net=-5.8
+
+  --- Bottom 3 Net Ratings ---
+    GARUBA, USMAN, HEZONJA, MARIO | Net=-16.0 | Min=172.8
+    CLYBURN, WILL, MORGAN, MATTHEW | Net=-15.6 | Min=192.4
+    SMAILAGIC, ALEN, ULANOVAS, EDGARAS | Net=-13.9 | Min=175.6
+  --- Top 3 Net Ratings ---
+    EDWARDS, CARSEN, GIFFEY, NIELS | Net=16.6 | Min=274.6
+    CAVALIERE, LEOPOLD, SY, BANDJA | Net=16.6 | Min=226.4
+    BOOKER, DEVIN, GIFFEY, NIELS | Net=22.4 | Min=185.5
+
+======================================================================
+FILE: lineup_stats_2man_2025.json
+======================================================================
+  Total entries: 505
+  STATUS: CLEAN - No anomalies detected.
+
+  --- Bottom 3 Net Ratings ---
+    SAKO, NEAL, TAYLOR, KAMERON | Net=-27.8 | Min=175.9
+    HAYES, KEVARRIUS, STRAZEL, MATTHEW | Net=-23.9 | Min=236.2
+    BRAZDEIKIS, IGNAS, TUBELIS, AZUOLAS | Net=-21.4 | Min=207.8
+  --- Top 3 Net Ratings ---
+    IZUNDU, EBUKA, NWORA, JORDAN | Net=19.5 | Min=160.3
+    OBST, ANDREAS, VOIGTMANN, JOHANNES | Net=20.2 | Min=166.0
+    CALATHES, NICK, WASHINGTON, DUANE | Net=22.0 | Min=151.2
+
+======================================================================
+FILE: lineup_stats_5man_100_2024.json
+======================================================================
+  Total entries: 25
+  STATUS: CLEAN - No anomalies detected.
+
+  --- Bottom 3 Net Ratings ---
+    BLATT, TAMIR, HOARD, JAYLEN, JOKUBAITIS, ROKAS, RANDOLPH, LE | Net=-27.4 | Min=64.2
+    ABALDE, ALBERTO, CAMPAZZO, FACUNDO, MUSA, DZANAN, NDIAYE, EL | Net=-26.9 | Min=55.4
+    ABALDE, ALBERTO, CAMPAZZO, FACUNDO, DECK, GABRIEL, HEZONJA,  | Net=-24.2 | Min=74.8
+  --- Top 3 Net Ratings ---
+    EDWARDS, CARSEN, HARRIS, ELIAS, LUCIC, VLADIMIR, VOIGTMANN,  | Net=10.1 | Min=54.4
+    CAVALIERE, LEOPOLD, HIFI, NADIR, LO, MAODO, MALCOLM, COLLIN, | Net=13.9 | Min=78.8
+    ABRINES, ALEX, PARKER, JABARI, PUNTER, KEVIN, SATORANSKY, TO | Net=15.0 | Min=78.8
+
+======================================================================
+FILE: lineup_stats_5man_100_2025.json
+======================================================================
+  Total entries: 23
+  STATUS: CLEAN - No anomalies detected.
+
+  --- Bottom 3 Net Ratings ---
+    DIALLO, ALPHA, JAMES, MIKE, MIROTIC, NIKOLA, STRAZEL, MATTHE | Net=-32.4 | Min=62.8
+    ABASS, AWUDU, BACON, DWAYNE, KABENGELE, MFIONDU, PETRUSEV, F | Net=-21.2 | Min=69.2
+    BOOKER, DEVIN, ELLIS, QUINN, GUDURIC, MARKO, LEDAY, ZACH, SH | Net=-14.0 | Min=59.1
+  --- Top 3 Net Ratings ---
+    CORDINIER, ISAIA, LARKIN, SHANE, OSMANI, ERCAN, SMITS, ROLAN | Net=24.3 | Min=52.3
+    DORSEY, TYLER, FOURNIER, EVAN, MILUTINOV, NIKOLA, VEZENKOV,  | Net=27.6 | Min=126.7
+    CORDINIER, ISAIA, LOYD, JORDAN, OSMANI, ERCAN, SMITS, ROLAND | Net=30.8 | Min=55.0
+
+======================================================================
+FILE: lineup_stats_5man_2024.json
+======================================================================
+  Total entries: 25
+  STATUS: CLEAN - No anomalies detected.
+
+  --- Bottom 3 Net Ratings ---
+    BLATT, TAMIR, HOARD, JAYLEN, JOKUBAITIS, ROKAS, RANDOLPH, LE | Net=-20.6 | Min=64.2
+    ABALDE, ALBERTO, CAMPAZZO, FACUNDO, MUSA, DZANAN, NDIAYE, EL | Net=-18.8 | Min=55.4
+    ABALDE, ALBERTO, CAMPAZZO, FACUNDO, DECK, GABRIEL, HEZONJA,  | Net=-17.6 | Min=74.8
+  --- Top 3 Net Ratings ---
+    EDWARDS, CARSEN, HARRIS, ELIAS, LUCIC, VLADIMIR, VOIGTMANN,  | Net=7.3 | Min=54.4
+    ABRINES, ALEX, PARKER, JABARI, PUNTER, KEVIN, SATORANSKY, TO | Net=10.2 | Min=78.8
+    CAVALIERE, LEOPOLD, HIFI, NADIR, LO, MAODO, MALCOLM, COLLIN, | Net=10.7 | Min=78.8
+
+======================================================================
+FILE: lineup_stats_5man_2025.json
+======================================================================
+  Total entries: 23
+  STATUS: CLEAN - No anomalies detected.
+
+  --- Bottom 3 Net Ratings ---
+    DIALLO, ALPHA, JAMES, MIKE, MIROTIC, NIKOLA, STRAZEL, MATTHE | Net=-22.9 | Min=62.8
+    ABASS, AWUDU, BACON, DWAYNE, KABENGELE, MFIONDU, PETRUSEV, F | Net=-15.0 | Min=69.2
+    BOOKER, DEVIN, ELLIS, QUINN, GUDURIC, MARKO, LEDAY, ZACH, SH | Net=-10.2 | Min=59.1
+  --- Top 3 Net Ratings ---
+    CORDINIER, ISAIA, LARKIN, SHANE, OSMANI, ERCAN, SMITS, ROLAN | Net=16.8 | Min=52.3
+    DORSEY, TYLER, FOURNIER, EVAN, MILUTINOV, NIKOLA, VEZENKOV,  | Net=19.9 | Min=126.7
+    CORDINIER, ISAIA, LOYD, JORDAN, OSMANI, ERCAN, SMITS, ROLAND | Net=21.8 | Min=55.0
+
+======================================================================
+FILE: lineup_stats_anchor_2024.json
+======================================================================
+  Total entries: 224
+  STATUS: CLEAN - No anomalies detected.
+
+======================================================================
+FILE: lineup_stats_anchor_2025.json
+======================================================================
+  Total entries: 236
+  STATUS: CLEAN - No anomalies detected.
+
+======================================================================
+END OF REPORT
