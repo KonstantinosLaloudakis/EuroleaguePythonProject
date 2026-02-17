@@ -94,6 +94,21 @@ Quick-scoring analysis — identifies players who heat up the fastest off the be
 
 ---
 
+### The Gauntlet (`the_gauntlet.py`)
+Margin of Victory and Strength of Schedule visualization.
+- **Season Stripes** — Detailed heatmap of every game result for every team
+- **The Steamrollers** — Tracking dominant wins (15+ points)
+- **The Grinders** — Identifying teams that play the most close games (≤ 5 points)
+- **The Mountain** — Cumulative Point Differential over the season
+- **The Fortress** — Home vs. Away Point Differential scatter plot
+
+**Output:** 
+- `the_gauntlet_{year}.png`
+- `the_mountain_{year}.png`
+- `the_fortress_{year}.png`
+
+---
+
 ### The Zone Master (`the_zone_master.py`)
 Quarter-by-quarter dominance analysis — finds players who own specific periods of the game.
 
