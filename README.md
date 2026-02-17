@@ -100,12 +100,18 @@ Margin of Victory and Strength of Schedule visualization.
 - **The Steamrollers** — Tracking dominant wins (15+ points)
 - **The Grinders** — Identifying teams that play the most close games (≤ 5 points)
 - **The Mountain** — Cumulative Point Differential over the season
-- **The Fortress** — Home vs. Away Point Differential scatter plot
+- **The Fortress** — Homw vs. Away Net Rating (Advanced)
+- **The Pace Maker** — Pace vs. Offensive Efficiency (Speed vs. Skill)
+- **The Glass Cannon** — Offense vs. Defense (Net Rating Breakdown)
+- **The Bench Mob** — Scoring Depth (Starters vs. Bench Points)
 
 **Output:** 
 - `the_gauntlet_{year}.png`
 - `the_mountain_{year}.png`
 - `the_fortress_{year}.png`
+- `the_pace_maker_{year}.png`
+- `the_glass_cannon_{year}.png`
+- `the_bench_mob_{year}.png`
 
 ---
 
