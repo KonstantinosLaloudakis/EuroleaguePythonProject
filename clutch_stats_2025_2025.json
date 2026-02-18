@@ -34,15 +34,15 @@
             "Player": "EDWARDS, CARSEN",
             "Team": "VIR",
             "Season": 2025,
-            "ClutchPoints": 35,
-            "ClutchFGM": 11,
-            "ClutchFGA": 25,
+            "ClutchPoints": 37,
+            "ClutchFGM": 12,
+            "ClutchFGA": 26,
             "ClutchFTM": 9,
             "ClutchFTA": 11,
             "Clutch3PM": 4,
             "ClutchFoulsDrawn": 9,
             "ClutchTurnovers": 4,
-            "FG%": "44.0%",
+            "FG%": "46.2%",
             "FT%": "81.8%"
         },
         {
@@ -130,7 +130,7 @@
             "ClutchFTM": 8,
             "ClutchFTA": 10,
             "Clutch3PM": 3,
-            "ClutchFoulsDrawn": 4,
+            "ClutchFoulsDrawn": 5,
             "ClutchTurnovers": 1,
             "FG%": "40.0%",
             "FT%": "80.0%"
@@ -266,7 +266,7 @@
             "ClutchFTA": 4,
             "Clutch3PM": 5,
             "ClutchFoulsDrawn": 4,
-            "ClutchTurnovers": 4,
+            "ClutchTurnovers": 5,
             "FG%": "47.1%",
             "FT%": "100.0%"
         },
@@ -299,21 +299,6 @@
             "ClutchTurnovers": 1,
             "FG%": "45.5%",
             "FT%": "50.0%"
-        },
-        {
-            "Player": "MONTERO, JEAN",
-            "Team": "PAM",
-            "Season": 2025,
-            "ClutchPoints": 23,
-            "ClutchFGM": 8,
-            "ClutchFGA": 15,
-            "ClutchFTM": 4,
-            "ClutchFTA": 5,
-            "Clutch3PM": 3,
-            "ClutchFoulsDrawn": 4,
-            "ClutchTurnovers": 2,
-            "FG%": "53.3%",
-            "FT%": "80.0%"
         },
         {
             "Player": "CORDINIER, ISAIA",
@@ -351,13 +336,13 @@
             "Season": 2025,
             "ClutchPoints": 22,
             "ClutchFGM": 8,
-            "ClutchFGA": 33,
+            "ClutchFGA": 32,
             "ClutchFTM": 4,
             "ClutchFTA": 7,
             "Clutch3PM": 2,
             "ClutchFoulsDrawn": 8,
             "ClutchTurnovers": 3,
-            "FG%": "24.2%",
+            "FG%": "25.0%",
             "FT%": "57.1%"
         },
         {
@@ -451,6 +436,21 @@
             "FT%": "50.0%"
         },
         {
+            "Player": "MONTERO, JEAN",
+            "Team": "PAM",
+            "Season": 2025,
+            "ClutchPoints": 21,
+            "ClutchFGM": 7,
+            "ClutchFGA": 15,
+            "ClutchFTM": 4,
+            "ClutchFTA": 5,
+            "Clutch3PM": 3,
+            "ClutchFoulsDrawn": 4,
+            "ClutchTurnovers": 2,
+            "FG%": "46.7%",
+            "FT%": "80.0%"
+        },
+        {
             "Player": "LYLES, TREY",
             "Team": "MAD",
             "Season": 2025,
@@ -464,6 +464,21 @@
             "ClutchTurnovers": 0,
             "FG%": "77.8%",
             "FT%": "83.3%"
+        },
+        {
+            "Player": "BIBEROVIC, TARIK",
+            "Team": "ULK",
+            "Season": 2025,
+            "ClutchPoints": 20,
+            "ClutchFGM": 5,
+            "ClutchFGA": 16,
+            "ClutchFTM": 6,
+            "ClutchFTA": 6,
+            "Clutch3PM": 4,
+            "ClutchFoulsDrawn": 3,
+            "ClutchTurnovers": 3,
+            "FG%": "31.2%",
+            "FT%": "100.0%"
         },
         {
             "Player": "MONEKE, CHIMA",
@@ -496,21 +511,6 @@
             "FT%": "83.3%"
         },
         {
-            "Player": "BIBEROVIC, TARIK",
-            "Team": "ULK",
-            "Season": 2025,
-            "ClutchPoints": 19,
-            "ClutchFGM": 5,
-            "ClutchFGA": 16,
-            "ClutchFTM": 5,
-            "ClutchFTA": 5,
-            "Clutch3PM": 4,
-            "ClutchFoulsDrawn": 2,
-            "ClutchTurnovers": 3,
-            "FG%": "31.2%",
-            "FT%": "100.0%"
-        },
-        {
             "Player": "SHIELDS, SHAVON",
             "Team": "MIL",
             "Season": 2025,
@@ -523,6 +523,21 @@
             "ClutchFoulsDrawn": 4,
             "ClutchTurnovers": 4,
             "FG%": "36.4%",
+            "FT%": "100.0%"
+        },
+        {
+            "Player": "ROBINSON, JUSTIN",
+            "Team": "PRS",
+            "Season": 2025,
+            "ClutchPoints": 19,
+            "ClutchFGM": 5,
+            "ClutchFGA": 13,
+            "ClutchFTM": 7,
+            "ClutchFTA": 7,
+            "Clutch3PM": 2,
+            "ClutchFoulsDrawn": 2,
+            "ClutchTurnovers": 2,
+            "FG%": "38.5%",
             "FT%": "100.0%"
         },
         {
@@ -539,21 +554,6 @@
             "ClutchTurnovers": 2,
             "FG%": "36.8%",
             "FT%": "60.0%"
-        },
-        {
-            "Player": "ROBINSON, JUSTIN",
-            "Team": "PRS",
-            "Season": 2025,
-            "ClutchPoints": 19,
-            "ClutchFGM": 5,
-            "ClutchFGA": 13,
-            "ClutchFTM": 7,
-            "ClutchFTA": 7,
-            "Clutch3PM": 2,
-            "ClutchFoulsDrawn": 2,
-            "ClutchTurnovers": 2,
-            "FG%": "38.5%",
-            "FT%": "100.0%"
         },
         {
             "Player": "WALKER IV, LONNIE",
@@ -711,13 +711,13 @@
             "Season": 2025,
             "ClutchPoints": 16,
             "ClutchFGM": 5,
-            "ClutchFGA": 7,
+            "ClutchFGA": 8,
             "ClutchFTM": 5,
             "ClutchFTA": 8,
             "Clutch3PM": 1,
             "ClutchFoulsDrawn": 4,
             "ClutchTurnovers": 0,
-            "FG%": "71.4%",
+            "FG%": "62.5%",
             "FT%": "62.5%"
         },
         {
@@ -1106,7 +1106,7 @@
             "ClutchFTA": 2,
             "Clutch3PM": 1,
             "ClutchFoulsDrawn": 3,
-            "ClutchTurnovers": 0,
+            "ClutchTurnovers": 1,
             "FG%": "45.5%",
             "FT%": "100.0%"
         },
@@ -1271,7 +1271,7 @@
             "ClutchFTA": 4,
             "Clutch3PM": 0,
             "ClutchFoulsDrawn": 3,
-            "ClutchTurnovers": 2,
+            "ClutchTurnovers": 1,
             "FG%": "44.4%",
             "FT%": "75.0%"
         },

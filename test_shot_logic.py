@@ -55,12 +55,17 @@ def test_logic():
             
             # Score Margin
             df['ScoreMargin'] = abs(df['POINTS_A'] - df['POINTS_B'])
+            
+            # NOTE: usage of 'ScoreMargin' here is 'Post-Shot' margin.
+            # Correct logic requires 'Pre-Shot' margin (which is diff <= 5 BEFORE the shot).
+            # This script uses Shot Data only, so we lack the context to calculate Pre-Shot margin perfectly.
+            # For production use, please use 'euroleague_clutch_analysis.py' which merges PBP data.
             stats_mask = df['ScoreMargin'] <= 5
             
             final_df = df[clutch_mask & stats_mask]
             
             if not final_df.empty:
-                print(f"Game {game_code}: Found {len(final_df)} clutch shots!")
+                print(f"Game {game_code}: Found {len(final_df)} clutch shots! (Approximate - Post-Shot Logic)")
                 print("Sample:", final_df[['PLAYER', 'MINUTE', 'POINTS_A', 'POINTS_B', 'COORD_X', 'COORD_Y']].head(1).to_dict('records'))
                 break
             else:

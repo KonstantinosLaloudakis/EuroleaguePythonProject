@@ -27,7 +27,48 @@ def analyze_clutch_stats(start_season=2023, end_season=2024):
 
     print(f"Total rows fetched: {len(full_df)}")
     
+    # Ensure correct sorting for forward fill: Gamecode -> Period -> Time (desc) or PlayNumber
+    if 'NUMBEROFPLAY' in full_df.columns:
+        full_df = full_df.sort_values(['Gamecode', 'NUMBEROFPLAY'])
+    else:
+        # Fallback: assume loosely sorted or sort by Period/Time
+        # Note: Time string sort might be wrong ("10:00" vs "2:00"). 
+        # But usually API returns chronological.
+        pass
+
+    # Forward fill scores for each game to handle NaNs in non-scoring plays
+    if 'POINTS_A' in full_df.columns and 'POINTS_B' in full_df.columns:
+        full_df['POINTS_A'] = pd.to_numeric(full_df['POINTS_A'], errors='coerce')
+        full_df['POINTS_B'] = pd.to_numeric(full_df['POINTS_B'], errors='coerce')
+        
+        full_df['POINTS_A'] = full_df.groupby('Gamecode')['POINTS_A'].ffill().fillna(0)
+        full_df['POINTS_B'] = full_df.groupby('Gamecode')['POINTS_B'].ffill().fillna(0)
+    else:
+        print("Score columns not found!")
+        return
+    
     # 1. Filter for Clutch Moments
+    if 'MARKERTIME' in full_df.columns:
+         full_df['SecondsRemaining'] = full_df['MARKERTIME'].apply(get_seconds_from_time)
+    else:
+        print("MARKERTIME column not found!")
+        return
+
+    if 'PERIOD' in full_df.columns:
+        full_df['PERIOD'] = pd.to_numeric(full_df['PERIOD'], errors='coerce')
+        clutch_df = full_df[full_df['PERIOD'] >= 4].copy()
+    else:
+        print("PERIOD column not found!")
+        return
+
+    # Calculate Pre-Play Margin to determine if the situation was clutch BEFORE the event
+    # Shift scores to get the state at the start of the play
+    full_df['Prev_POINTS_A'] = full_df.groupby('Gamecode')['POINTS_A'].shift(1).fillna(0)
+    full_df['Prev_POINTS_B'] = full_df.groupby('Gamecode')['POINTS_B'].shift(1).fillna(0)
+    
+    full_df['PrePlayMargin'] = abs(full_df['Prev_POINTS_A'] - full_df['Prev_POINTS_B'])
+    
+    # 1. Filter for Clutch Moments (Time)
     if 'MARKERTIME' in full_df.columns:
          full_df['SecondsRemaining'] = full_df['MARKERTIME'].apply(get_seconds_from_time)
     else:
@@ -43,17 +84,13 @@ def analyze_clutch_stats(start_season=2023, end_season=2024):
 
     # Filter Time <= 5 mins (300 seconds)
     clutch_df = clutch_df[clutch_df['SecondsRemaining'] <= 300]
-
-    # Calculate Score Margin
-    if 'POINTS_A' in clutch_df.columns and 'POINTS_B' in clutch_df.columns:
-        clutch_df['POINTS_A'] = pd.to_numeric(clutch_df['POINTS_A'], errors='coerce').fillna(0)
-        clutch_df['POINTS_B'] = pd.to_numeric(clutch_df['POINTS_B'], errors='coerce').fillna(0)
-        
-        clutch_df['ScoreMargin'] = abs(clutch_df['POINTS_A'] - clutch_df['POINTS_B'])
-        clutch_df = clutch_df[clutch_df['ScoreMargin'] <= 5]
-    else:
-        print("Score columns not found!")
-        return
+    
+    # Filter Clutch Score <= 5 using Pre-Play Margin
+    # "Clutch" means the score *was* <= 5 when the play started.
+    clutch_df = clutch_df[clutch_df['PrePlayMargin'] <= 5]
+    
+    # Also calculate current margin just for reference or debugging
+    clutch_df['ScoreMargin'] = abs(clutch_df['POINTS_A'] - clutch_df['POINTS_B'])
         
     print(f"Found {len(clutch_df)} clutch plays.")
     

@@ -155,7 +155,9 @@ class TheGauntlet:
                         if ts.empty: continue
                             
                         # Extract Metrics
-                        fga = ts['FieldGoalsAttempted2'].values[0] + ts['FieldGoalsAttempted3'].values[0]
+                        fga2 = ts['FieldGoalsAttempted2'].values[0]
+                        fga3 = ts['FieldGoalsAttempted3'].values[0]
+                        fga = fga2 + fga3
                         fta = ts['FreeThrowsAttempted'].values[0]
                         orb = ts['OffensiveRebounds'].values[0]
                         tov = ts['Turnovers'].values[0]
@@ -170,7 +172,7 @@ class TheGauntlet:
                         # Bench Points calculation
                         team_players = df_box[df_box['Team'] == team_code]
                         starters = team_players[team_players['IsStarter'] == 1]
-                        bench = team_players[(team_players['IsStarter'] == 0) & (team_players['Player_ID'] != 'Team') & (team_players['Player_ID'] != 'Total')]
+                        bench = team_players[(team_players['IsStarter'] == 0) & (team_players['Player_ID'] != 'Total')]
                         
                         bench_points = bench['Points'].sum()
                         starter_points = starters['Points'].sum()
@@ -187,7 +189,10 @@ class TheGauntlet:
                             'points': points,
                             'bench_points': bench_points,
                             'starter_points': starter_points,
-                            'pace': poss  # Pace is approx possessions per 40m (game is 40m)
+                            'pace': poss,  # Pace is approx possessions per 40m (game is 40m),
+                            'fga': fga,
+                            'fg3a': fga3, 
+                            'fta': fta
                         })
                     
                     success = True
@@ -205,6 +210,107 @@ class TheGauntlet:
         df_advanced = pd.DataFrame(advanced_rows)
         df_advanced.to_csv(cache_file, index=False)
         return df_advanced
+        
+    def generate_clutch_gene(self, df, season):
+        """
+        The Clutch Gene: Close Game Performance (<= 5 points).
+        Uses basic game data, not advanced, but we can put it here.
+        """
+        # Filter close games
+        # Row-based df has each game twice (once per team)? 
+        # Actually df from process_season_data is game-based (one row per game).
+        # Let's use that.
+        
+        close_games = []
+        for _, row in df.iterrows():
+            margin = abs(row['homescore'] - row['awayscore'])
+            if margin <= 5:
+                # Add for Home
+                close_games.append({
+                    'team': row['homecode'],
+                    'win': 1 if row['homescore'] > row['awayscore'] else 0
+                })
+                # Add for Away
+                close_games.append({
+                    'team': row['awaycode'],
+                    'win': 1 if row['awayscore'] > row['homescore'] else 0
+                })
+                
+        df_close = pd.DataFrame(close_games)
+        
+        if df_close.empty:
+            print("No close games found yet.")
+            return
+
+        stats = df_close.groupby('team').agg(
+            games=('win', 'count'),
+            wins=('win', 'sum')
+        )
+        stats['win_pct'] = (stats['wins'] / stats['games']) * 100
+        
+        plt.figure(figsize=(12, 10))
+        
+        plt.scatter(stats['games'], stats['win_pct'], s=150, alpha=0.8, c='crimson')
+        
+        for team in stats.index:
+            plt.text(stats.loc[team, 'games']+0.1, stats.loc[team, 'win_pct'], team, fontsize=9, weight='bold')
+            
+        plt.title(f"THE CLUTCH GENE: Games Decided by ≤ 5 Pts ({season})", fontsize=20, weight='bold')
+        plt.xlabel("Close Games Played (Experience)", fontsize=14)
+        plt.ylabel("Win % in Close Games (Clutch Factor)", fontsize=14)
+        
+        plt.axhline(50, color='k', linestyle='--', alpha=0.5)
+        
+        plt.text(stats['games'].max(), 100, "ICE COLD KILLERS\n(High Volume, High Win%)", ha='right', va='top', color='green', weight='bold')
+        plt.text(stats['games'].max(), 0, "HEARTBREAKERS\n(Always Close, Always Lose)", ha='right', va='bottom', color='red', weight='bold')
+        
+        plt.grid(True, alpha=0.3)
+        plt.tight_layout()
+        plt.savefig(f"the_clutch_gene_{season}.png", dpi=300)
+        plt.close()
+
+    def generate_snipers_nest(self, df_adv, season):
+        """
+        Shooting Efficiency: TS% vs 3P Rate.
+        Requires fga, fta, fg3a, points.
+        """
+        if 'fga' not in df_adv.columns:
+            print("Sniper's Nest requires FGA/FTA data. Please re-fetch advanced stats.")
+            return
+
+        stats = df_adv.groupby('team')[['points', 'fga', 'fta', 'fg3a']].sum()
+        
+        # True Shooting % = Pts / (2 * (FGA + 0.44 * FTA))
+        stats['ts_pct'] = 100 * stats['points'] / (2 * (stats['fga'] + 0.44 * stats['fta']))
+        
+        # 3P Attempt Rate = 3PA / FGA
+        stats['3par'] = 100 * stats['fg3a'] / stats['fga']
+        
+        # PPG (for size)
+        games_played = df_adv.groupby('team')['gamecode'].count()
+        stats['ppg'] = stats['points'] / games_played
+        
+        plt.figure(figsize=(14, 10))
+        
+        x = stats['3par']
+        y = stats['ts_pct']
+        sizes = stats['ppg'] * 5 # Scale for bubble
+        teams = [get_full_team_name(t) for t in stats.index]
+        
+        plt.scatter(x, y, s=sizes, alpha=0.6, c='dodgerblue', edgecolors='k')
+        
+        for i, team in enumerate(teams):
+            plt.text(x[i], y[i], team, fontsize=8, ha='center', va='center', weight='bold')
+            
+        plt.title(f"THE SNIPER'S NEST: Shooting Efficiency ({season})", fontsize=20, weight='bold')
+        plt.xlabel("3-Point Attempt Rate (% of Shots)", fontsize=14)
+        plt.ylabel("True Shooting % (Efficiency)", fontsize=14)
+        
+        plt.grid(True, alpha=0.3)
+        plt.tight_layout()
+        plt.savefig(f"the_snipers_nest_{season}.png", dpi=300)
+        plt.close()
+
 
     def process_season_data(self, season):
         df = self.get_season_games(season)
@@ -273,6 +379,10 @@ class TheGauntlet:
         self.generate_heartbeat(df_adv, season)
         self.generate_momentum_meter(df_adv, season)
         self.generate_road_warriors(df_adv, season)
+        self.generate_snipers_nest(df_adv, season)
+        
+        # Clutch Gene uses basic data (df)
+        self.generate_clutch_gene(df, season)
 
     # ... (Keep generate_cumulative_diff_chart) ...
     def generate_cumulative_diff_chart(self, teams, rounds, margins, season):
