@@ -1,0 +1,3092 @@
+[
+    {
+        "MVP_Rank":1,
+        "PlayerName":"VEZENKOV, SASHA",
+        "TeamCode":"OLY",
+        "MVP_Score":93.8644304682,
+        "GmSc":16.1111111111,
+        "TeamWinPct":0.6666666667,
+        "ClutchPoints":26.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":2,
+        "PlayerName":"BALDWIN IV, WADE",
+        "TeamCode":"ULK",
+        "MVP_Score":80.8668837835,
+        "GmSc":11.7923076923,
+        "TeamWinPct":0.7407407407,
+        "ClutchPoints":33.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":3,
+        "PlayerName":"FRANCISCO, SYLVAIN",
+        "TeamCode":"ZAL",
+        "MVP_Score":79.1895600108,
+        "GmSc":13.5571428571,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":34.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":4,
+        "PlayerName":"NUNN, KENDRICK",
+        "TeamCode":"PAN",
+        "MVP_Score":78.0278532831,
+        "GmSc":13.2590909091,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":26.0,
+        "GP":22
+    },
+    {
+        "MVP_Rank":5,
+        "PlayerName":"JAMES, MIKE",
+        "TeamCode":"MCO",
+        "MVP_Score":76.0215916095,
+        "GmSc":13.3321428571,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":22.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":6,
+        "PlayerName":"MILUTINOV, NIKOLA",
+        "TeamCode":"OLY",
+        "MVP_Score":74.7831052131,
+        "GmSc":12.908,
+        "TeamWinPct":0.6666666667,
+        "ClutchPoints":12.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":7,
+        "PlayerName":"DORSEY, TYLER",
+        "TeamCode":"OLY",
+        "MVP_Score":73.2338786325,
+        "GmSc":10.762962963,
+        "TeamWinPct":0.6666666667,
+        "ClutchPoints":27.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":8,
+        "PlayerName":"PUNTER, KEVIN",
+        "TeamCode":"BAR",
+        "MVP_Score":72.9756952627,
+        "GmSc":11.3703703704,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":31.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":9,
+        "PlayerName":"HORTON TUCKER, TALEN",
+        "TeamCode":"ULK",
+        "MVP_Score":72.9592733516,
+        "GmSc":9.696,
+        "TeamWinPct":0.7407407407,
+        "ClutchPoints":31.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":10,
+        "PlayerName":"NWORA, JORDAN",
+        "TeamCode":"RED",
+        "MVP_Score":72.6407238623,
+        "GmSc":11.9695652174,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":26.0,
+        "GP":23
+    },
+    {
+        "MVP_Rank":11,
+        "PlayerName":"WRIGHT IV, MCKINLEY",
+        "TeamCode":"DUB",
+        "MVP_Score":71.7486082132,
+        "GmSc":11.8964285714,
+        "TeamWinPct":0.5,
+        "ClutchPoints":52.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":12,
+        "PlayerName":"BRYANT, ELIJAH",
+        "TeamCode":"HTA",
+        "MVP_Score":71.0167959651,
+        "GmSc":12.3739130435,
+        "TeamWinPct":0.5925925926,
+        "ClutchPoints":13.0,
+        "GP":23
+    },
+    {
+        "MVP_Rank":13,
+        "PlayerName":"OTURU, DAN",
+        "TeamCode":"HTA",
+        "MVP_Score":68.9020592258,
+        "GmSc":11.6333333333,
+        "TeamWinPct":0.5925925926,
+        "ClutchPoints":18.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":14,
+        "PlayerName":"MONTERO, JEAN",
+        "TeamCode":"PAM",
+        "MVP_Score":68.2240554653,
+        "GmSc":10.6739130435,
+        "TeamWinPct":0.6428571429,
+        "ClutchPoints":21.0,
+        "GP":23
+    },
+    {
+        "MVP_Rank":15,
+        "PlayerName":"HIFI, NADIR",
+        "TeamCode":"PRS",
+        "MVP_Score":67.8904251708,
+        "GmSc":12.2076923077,
+        "TeamWinPct":0.3333333333,
+        "ClutchPoints":43.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":16,
+        "PlayerName":"MONEKE, CHIMA",
+        "TeamCode":"RED",
+        "MVP_Score":66.6855182856,
+        "GmSc":11.28,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":20.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":17,
+        "PlayerName":"LYLES, TREY",
+        "TeamCode":"MAD",
+        "MVP_Score":66.2352756471,
+        "GmSc":10.6321428571,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":20.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":18,
+        "PlayerName":"SHENGELIA, TORNIKE",
+        "TeamCode":"BAR",
+        "MVP_Score":66.1962601671,
+        "GmSc":10.4708333333,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":21.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":19,
+        "PlayerName":"KABENGELE, MFIONDU",
+        "TeamCode":"DUB",
+        "MVP_Score":65.6759173959,
+        "GmSc":12.1423076923,
+        "TeamWinPct":0.5,
+        "ClutchPoints":15.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":20,
+        "PlayerName":"CAMPAZZO, FACUNDO",
+        "TeamCode":"MAD",
+        "MVP_Score":63.6159119473,
+        "GmSc":9.8071428571,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":26.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":21,
+        "PlayerName":"TAYLOR, KAMERON",
+        "TeamCode":"PAM",
+        "MVP_Score":62.9199953593,
+        "GmSc":9.7928571429,
+        "TeamWinPct":0.6428571429,
+        "ClutchPoints":10.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":22,
+        "PlayerName":"LUWAWU-CABARROT, TIMOTHE",
+        "TeamCode":"BAS",
+        "MVP_Score":62.9153493472,
+        "GmSc":12.2888888889,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":22.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":23,
+        "PlayerName":"MILLER-MCINTYRE, CODI",
+        "TeamCode":"RED",
+        "MVP_Score":62.7960598244,
+        "GmSc":10.0035714286,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":24.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":24,
+        "PlayerName":"CLYBURN, WILL",
+        "TeamCode":"BAR",
+        "MVP_Score":62.585650973,
+        "GmSc":10.1476190476,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":11.0,
+        "GP":21
+    },
+    {
+        "MVP_Rank":25,
+        "PlayerName":"THOMPSON, DARIUS",
+        "TeamCode":"PAM",
+        "MVP_Score":61.7196221964,
+        "GmSc":9.35,
+        "TeamWinPct":0.6428571429,
+        "ClutchPoints":18.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":26,
+        "PlayerName":"DIALLO, ALPHA",
+        "TeamCode":"MCO",
+        "MVP_Score":61.1181225519,
+        "GmSc":10.3178571429,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":15.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":27,
+        "PlayerName":"WRIGHT, MOSES",
+        "TeamCode":"ZAL",
+        "MVP_Score":60.7568666965,
+        "GmSc":10.5821428571,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":6.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":28,
+        "PlayerName":"PETRUSEV, FILIP",
+        "TeamCode":"DUB",
+        "MVP_Score":60.556749548,
+        "GmSc":11.2428571429,
+        "TeamWinPct":0.5,
+        "ClutchPoints":6.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":29,
+        "PlayerName":"ANGOLA, BRAIAN",
+        "TeamCode":"ASV",
+        "MVP_Score":59.5813307113,
+        "GmSc":12.86,
+        "TeamWinPct":0.25,
+        "ClutchPoints":9.0,
+        "GP":5
+    },
+    {
+        "MVP_Rank":30,
+        "PlayerName":"BLAKENEY, ANTONIO",
+        "TeamCode":"HTA",
+        "MVP_Score":59.1074207779,
+        "GmSc":8.5814814815,
+        "TeamWinPct":0.5925925926,
+        "ClutchPoints":25.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":31,
+        "PlayerName":"BUTLER, JARED",
+        "TeamCode":"RED",
+        "MVP_Score":58.9953109692,
+        "GmSc":9.0571428571,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":22.0,
+        "GP":21
+    },
+    {
+        "MVP_Rank":32,
+        "PlayerName":"SLOUKAS, KOSTAS",
+        "TeamCode":"PAN",
+        "MVP_Score":58.1043233601,
+        "GmSc":9.537037037,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":14.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":33,
+        "PlayerName":"SORKIN, ROMAN",
+        "TeamCode":"TEL",
+        "MVP_Score":57.8223720844,
+        "GmSc":10.3928571429,
+        "TeamWinPct":0.4642857143,
+        "ClutchPoints":16.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":34,
+        "PlayerName":"OBST, ANDREAS",
+        "TeamCode":"MUN",
+        "MVP_Score":57.7479527165,
+        "GmSc":9.5807692308,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":29.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":35,
+        "PlayerName":"TUBELIS, AZUOLAS",
+        "TeamCode":"ZAL",
+        "MVP_Score":57.1990702689,
+        "GmSc":9.4357142857,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":11.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":36,
+        "PlayerName":"TAVARES, WALTER",
+        "TeamCode":"MAD",
+        "MVP_Score":56.8665834707,
+        "GmSc":9.3464285714,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":6.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":37,
+        "PlayerName":"EDWARDS, CARSEN",
+        "TeamCode":"VIR",
+        "MVP_Score":56.6781353406,
+        "GmSc":8.4923076923,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":37.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":38,
+        "PlayerName":"HOARD, JAYLEN",
+        "TeamCode":"TEL",
+        "MVP_Score":56.5522173907,
+        "GmSc":10.2444444444,
+        "TeamWinPct":0.4642857143,
+        "ClutchPoints":17.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":39,
+        "PlayerName":"REUVERS, NATHAN",
+        "TeamCode":"PAM",
+        "MVP_Score":56.196210912,
+        "GmSc":7.9107142857,
+        "TeamWinPct":0.6428571429,
+        "ClutchPoints":16.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":40,
+        "PlayerName":"MALEDON, THEO",
+        "TeamCode":"MAD",
+        "MVP_Score":56.0083911669,
+        "GmSc":8.6818181818,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":14.0,
+        "GP":22
+    },
+    {
+        "MVP_Rank":41,
+        "PlayerName":"BIBEROVIC, TARIK",
+        "TeamCode":"ULK",
+        "MVP_Score":55.8599826723,
+        "GmSc":6.2037037037,
+        "TeamWinPct":0.7407407407,
+        "ClutchPoints":20.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":42,
+        "PlayerName":"SHIELDS, SHAVON",
+        "TeamCode":"MIL",
+        "MVP_Score":55.0247612472,
+        "GmSc":9.1615384615,
+        "TeamWinPct":0.5,
+        "ClutchPoints":19.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":43,
+        "PlayerName":"WILLIAMS-GOSS, NIGEL",
+        "TeamCode":"ZAL",
+        "MVP_Score":54.9437675068,
+        "GmSc":9.3058823529,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":9.0,
+        "GP":17
+    },
+    {
+        "MVP_Rank":44,
+        "PlayerName":"JONES, CHRIS",
+        "TeamCode":"HTA",
+        "MVP_Score":54.7357323974,
+        "GmSc":7.4444444444,
+        "TeamWinPct":0.5925925926,
+        "ClutchPoints":32.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":45,
+        "PlayerName":"BACON, DWAYNE",
+        "TeamCode":"DUB",
+        "MVP_Score":54.6627650673,
+        "GmSc":8.7652173913,
+        "TeamWinPct":0.5,
+        "ClutchPoints":19.0,
+        "GP":23
+    },
+    {
+        "MVP_Rank":46,
+        "PlayerName":"HEZONJA, MARIO",
+        "TeamCode":"MAD",
+        "MVP_Score":54.4633691423,
+        "GmSc":7.8678571429,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":13.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":47,
+        "PlayerName":"HALL, DEVON",
+        "TeamCode":"ULK",
+        "MVP_Score":54.2329926884,
+        "GmSc":6.4958333333,
+        "TeamWinPct":0.7407407407,
+        "ClutchPoints":11.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":48,
+        "PlayerName":"WALKER IV, LONNIE",
+        "TeamCode":"TEL",
+        "MVP_Score":54.1881046509,
+        "GmSc":9.3210526316,
+        "TeamWinPct":0.4642857143,
+        "ClutchPoints":18.0,
+        "GP":19
+    },
+    {
+        "MVP_Rank":49,
+        "PlayerName":"MIROTIC, NIKOLA",
+        "TeamCode":"MCO",
+        "MVP_Score":53.7302249816,
+        "GmSc":9.1107142857,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":3.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":50,
+        "PlayerName":"BROOKS, ARMONI",
+        "TeamCode":"MIL",
+        "MVP_Score":53.1950645318,
+        "GmSc":8.9285714286,
+        "TeamWinPct":0.5,
+        "ClutchPoints":11.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":51,
+        "PlayerName":"LEDAY, ZACH",
+        "TeamCode":"MIL",
+        "MVP_Score":53.0550733795,
+        "GmSc":9.2428571429,
+        "TeamWinPct":0.5,
+        "ClutchPoints":11.0,
+        "GP":21
+    },
+    {
+        "MVP_Rank":52,
+        "PlayerName":"FOURNIER, EVAN",
+        "TeamCode":"OLY",
+        "MVP_Score":52.8072211273,
+        "GmSc":6.025,
+        "TeamWinPct":0.6666666667,
+        "ClutchPoints":27.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":53,
+        "PlayerName":"COLSON, BONZIE",
+        "TeamCode":"ULK",
+        "MVP_Score":52.5890607254,
+        "GmSc":6.7166666667,
+        "TeamWinPct":0.7407407407,
+        "ClutchPoints":4.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":54,
+        "PlayerName":"ROBINSON, JUSTIN",
+        "TeamCode":"PRS",
+        "MVP_Score":52.5213192667,
+        "GmSc":10.096,
+        "TeamWinPct":0.3333333333,
+        "ClutchPoints":19.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":55,
+        "PlayerName":"HERNANGOMEZ, JUANCHO",
+        "TeamCode":"PAN",
+        "MVP_Score":51.9149536322,
+        "GmSc":8.425,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":8.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":56,
+        "PlayerName":"OKOBO, ELIE",
+        "TeamCode":"MCO",
+        "MVP_Score":51.7843581341,
+        "GmSc":8.2357142857,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":9.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":57,
+        "PlayerName":"MOORE, OMARI",
+        "TeamCode":"PAM",
+        "MVP_Score":51.5102243399,
+        "GmSc":6.9535714286,
+        "TeamWinPct":0.6428571429,
+        "ClutchPoints":14.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":58,
+        "PlayerName":"OSMAN, CEDI",
+        "TeamCode":"PAN",
+        "MVP_Score":51.5038336941,
+        "GmSc":8.0434782609,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":7.0,
+        "GP":23
+    },
+    {
+        "MVP_Rank":59,
+        "PlayerName":"LARKIN, SHANE",
+        "TeamCode":"IST",
+        "MVP_Score":51.4203862805,
+        "GmSc":11.1636363636,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":6.0,
+        "GP":11
+    },
+    {
+        "MVP_Rank":60,
+        "PlayerName":"THEIS, DANIEL",
+        "TeamCode":"MCO",
+        "MVP_Score":51.0473549942,
+        "GmSc":8.2074074074,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":10.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":61,
+        "PlayerName":"DE COLO, NANDO",
+        "TeamCode":"ASV",
+        "MVP_Score":50.9613459328,
+        "GmSc":10.31,
+        "TeamWinPct":0.25,
+        "ClutchPoints":25.0,
+        "GP":20
+    },
+    {
+        "MVP_Rank":62,
+        "PlayerName":"MORGAN, MATTHEW",
+        "TeamCode":"VIR",
+        "MVP_Score":50.5210327647,
+        "GmSc":8.9769230769,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":11.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":63,
+        "PlayerName":"WATSON, GLYNN",
+        "TeamCode":"ASV",
+        "MVP_Score":50.3387491684,
+        "GmSc":9.4961538462,
+        "TeamWinPct":0.25,
+        "ClutchPoints":32.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":64,
+        "PlayerName":"HALL, DONTA",
+        "TeamCode":"OLY",
+        "MVP_Score":50.1258056469,
+        "GmSc":7.2518518519,
+        "TeamWinPct":0.6666666667,
+        "ClutchPoints":2.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":65,
+        "PlayerName":"NEBO, JOSH",
+        "TeamCode":"MIL",
+        "MVP_Score":50.080997684,
+        "GmSc":9.35625,
+        "TeamWinPct":0.5,
+        "ClutchPoints":4.0,
+        "GP":16
+    },
+    {
+        "MVP_Rank":66,
+        "PlayerName":"MELLI, NICOLO",
+        "TeamCode":"ULK",
+        "MVP_Score":49.617774422,
+        "GmSc":5.7851851852,
+        "TeamWinPct":0.7407407407,
+        "ClutchPoints":8.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":67,
+        "PlayerName":"GUDURIC, MARKO",
+        "TeamCode":"MIL",
+        "MVP_Score":49.4920950036,
+        "GmSc":7.8961538462,
+        "TeamWinPct":0.5,
+        "ClutchPoints":19.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":68,
+        "PlayerName":"LUNDBERG, IFFE",
+        "TeamCode":"TEL",
+        "MVP_Score":49.3380899024,
+        "GmSc":8.41875,
+        "TeamWinPct":0.4642857143,
+        "ClutchPoints":16.0,
+        "GP":16
+    },
+    {
+        "MVP_Rank":69,
+        "PlayerName":"BROWN, STERLING",
+        "TeamCode":"PAR",
+        "MVP_Score":49.3337260174,
+        "GmSc":9.0407407407,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":22.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":70,
+        "PlayerName":"VESELY, JAN",
+        "TeamCode":"BAR",
+        "MVP_Score":49.2031736781,
+        "GmSc":6.8576923077,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":13.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":71,
+        "PlayerName":"SATORANSKY, TOMAS",
+        "TeamCode":"BAR",
+        "MVP_Score":49.1993781099,
+        "GmSc":7.0481481481,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":13.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":72,
+        "PlayerName":"BOLMARO, LEANDRO",
+        "TeamCode":"MIL",
+        "MVP_Score":49.1176415419,
+        "GmSc":8.2315789474,
+        "TeamWinPct":0.5,
+        "ClutchPoints":13.0,
+        "GP":19
+    },
+    {
+        "MVP_Rank":73,
+        "PlayerName":"WALKUP, THOMAS",
+        "TeamCode":"OLY",
+        "MVP_Score":48.9742213382,
+        "GmSc":6.175,
+        "TeamWinPct":0.6666666667,
+        "ClutchPoints":18.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":74,
+        "PlayerName":"MICIC, VASILIJE",
+        "TeamCode":"HTA",
+        "MVP_Score":48.7129109633,
+        "GmSc":7.164,
+        "TeamWinPct":0.5925925926,
+        "ClutchPoints":4.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":75,
+        "PlayerName":"WASHINGTON, DUANE",
+        "TeamCode":"PAR",
+        "MVP_Score":48.4719047022,
+        "GmSc":8.2913043478,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":31.0,
+        "GP":23
+    },
+    {
+        "MVP_Rank":76,
+        "PlayerName":"MUSA, DZANAN",
+        "TeamCode":"DUB",
+        "MVP_Score":48.0955823359,
+        "GmSc":9.0,
+        "TeamWinPct":0.5,
+        "ClutchPoints":3.0,
+        "GP":8
+    },
+    {
+        "MVP_Rank":77,
+        "PlayerName":"AVRAMOVIC, ALEKSA",
+        "TeamCode":"DUB",
+        "MVP_Score":48.0301604001,
+        "GmSc":8.84,
+        "TeamWinPct":0.5,
+        "ClutchPoints":4.0,
+        "GP":15
+    },
+    {
+        "MVP_Rank":78,
+        "PlayerName":"MOTLEY, JOHNATHAN",
+        "TeamCode":"HTA",
+        "MVP_Score":47.6362750801,
+        "GmSc":6.5481481481,
+        "TeamWinPct":0.5925925926,
+        "ClutchPoints":15.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":79,
+        "PlayerName":"IZUNDU, EBUKA",
+        "TeamCode":"RED",
+        "MVP_Score":47.4136495674,
+        "GmSc":7.196,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":12.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":80,
+        "PlayerName":"LEAF, TJ",
+        "TeamCode":"TEL",
+        "MVP_Score":47.3608271374,
+        "GmSc":8.8875,
+        "TeamWinPct":0.4642857143,
+        "ClutchPoints":4.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":81,
+        "PlayerName":"DIMITRIJEVIC, NENO",
+        "TeamCode":"MUN",
+        "MVP_Score":47.2307784445,
+        "GmSc":8.675,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":8.0,
+        "GP":8
+    },
+    {
+        "MVP_Rank":82,
+        "PlayerName":"BADIO, BRANCOU",
+        "TeamCode":"PAM",
+        "MVP_Score":46.8966847837,
+        "GmSc":6.0375,
+        "TeamWinPct":0.6428571429,
+        "ClutchPoints":6.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":83,
+        "PlayerName":"BRIZUELA, DARIO",
+        "TeamCode":"BAR",
+        "MVP_Score":46.5811664968,
+        "GmSc":5.8807692308,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":14.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":84,
+        "PlayerName":"JONES, TYRIQUE",
+        "TeamCode":"PAR",
+        "MVP_Score":45.5509338627,
+        "GmSc":9.384,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":11.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":85,
+        "PlayerName":"PRADILLA, JAIME",
+        "TeamCode":"PAM",
+        "MVP_Score":45.3280299152,
+        "GmSc":6.0035714286,
+        "TeamWinPct":0.6428571429,
+        "ClutchPoints":6.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":86,
+        "PlayerName":"OJELEYE, SEMI",
+        "TeamCode":"RED",
+        "MVP_Score":44.9534087868,
+        "GmSc":6.2821428571,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":15.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":87,
+        "PlayerName":"COSTELLO, MATTHEW",
+        "TeamCode":"PAM",
+        "MVP_Score":44.9015565748,
+        "GmSc":6.0125,
+        "TeamWinPct":0.6428571429,
+        "ClutchPoints":4.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":88,
+        "PlayerName":"ELLIS, QUINN",
+        "TeamCode":"MIL",
+        "MVP_Score":44.5060518288,
+        "GmSc":6.9230769231,
+        "TeamWinPct":0.5,
+        "ClutchPoints":18.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":89,
+        "PlayerName":"HOLMES, RICHAUN",
+        "TeamCode":"PAN",
+        "MVP_Score":44.1864913998,
+        "GmSc":6.9058823529,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":4.0,
+        "GP":17
+    },
+    {
+        "MVP_Rank":90,
+        "PlayerName":"BONGA, ISAAC",
+        "TeamCode":"PAR",
+        "MVP_Score":44.0486613122,
+        "GmSc":8.5142857143,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":17.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":91,
+        "PlayerName":"WEILER-BABB, NICK",
+        "TeamCode":"IST",
+        "MVP_Score":43.9003231069,
+        "GmSc":8.4464285714,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":21.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":92,
+        "PlayerName":"STRAZEL, MATTHEW",
+        "TeamCode":"MCO",
+        "MVP_Score":43.7566892457,
+        "GmSc":6.3785714286,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":10.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":93,
+        "PlayerName":"WARD, TYSON",
+        "TeamCode":"OLY",
+        "MVP_Score":43.5653126817,
+        "GmSc":5.5428571429,
+        "TeamWinPct":0.6666666667,
+        "ClutchPoints":2.0,
+        "GP":21
+    },
+    {
+        "MVP_Rank":94,
+        "PlayerName":"GRANT, JERIAN",
+        "TeamCode":"PAN",
+        "MVP_Score":43.4732178328,
+        "GmSc":6.45,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":4.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":95,
+        "PlayerName":"FORREST, TRENT",
+        "TeamCode":"BAS",
+        "MVP_Score":43.2966187727,
+        "GmSc":8.9473684211,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":11.0,
+        "GP":19
+    },
+    {
+        "MVP_Rank":96,
+        "PlayerName":"LEE, SABEN",
+        "TeamCode":"OLY",
+        "MVP_Score":42.8626385659,
+        "GmSc":4.8692307692,
+        "TeamWinPct":0.6666666667,
+        "ClutchPoints":9.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":97,
+        "PlayerName":"PETERS, ALEC",
+        "TeamCode":"OLY",
+        "MVP_Score":42.8074126012,
+        "GmSc":4.6259259259,
+        "TeamWinPct":0.6666666667,
+        "ClutchPoints":14.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":98,
+        "PlayerName":"SHORTS, TJ",
+        "TeamCode":"PAN",
+        "MVP_Score":42.1562060787,
+        "GmSc":5.55,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":13.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":99,
+        "PlayerName":"OKEKE, CHUMA",
+        "TeamCode":"MAD",
+        "MVP_Score":41.7436341247,
+        "GmSc":6.0925925926,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":0.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":100,
+        "PlayerName":"WILBEKIN, SCOTTIE",
+        "TeamCode":"ULK",
+        "MVP_Score":41.4050578206,
+        "GmSc":4.7166666667,
+        "TeamWinPct":0.7407407407,
+        "ClutchPoints":0.0,
+        "GP":6
+    },
+    {
+        "MVP_Rank":101,
+        "PlayerName":"MIKE, ISIAHA",
+        "TeamCode":"MUN",
+        "MVP_Score":41.1696396616,
+        "GmSc":7.0222222222,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":7.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":102,
+        "PlayerName":"OSMANI, ERCAN",
+        "TeamCode":"IST",
+        "MVP_Score":41.0783756597,
+        "GmSc":7.2555555556,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":21.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":103,
+        "PlayerName":"LO, MAODO",
+        "TeamCode":"ZAL",
+        "MVP_Score":40.9526080683,
+        "GmSc":5.5607142857,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":13.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":104,
+        "PlayerName":"JANTUNEN, MIKAEL",
+        "TeamCode":"ULK",
+        "MVP_Score":40.8640772379,
+        "GmSc":3.5086956522,
+        "TeamWinPct":0.7407407407,
+        "ClutchPoints":9.0,
+        "GP":23
+    },
+    {
+        "MVP_Rank":105,
+        "PlayerName":"HAYES, KEVARRIUS",
+        "TeamCode":"MCO",
+        "MVP_Score":40.3239987687,
+        "GmSc":6.012,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":6.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":106,
+        "PlayerName":"PAYNE, CAMERON",
+        "TeamCode":"PAR",
+        "MVP_Score":40.1686538033,
+        "GmSc":8.43,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":5.0,
+        "GP":10
+    },
+    {
+        "MVP_Rank":107,
+        "PlayerName":"LUCIC, VLADIMIR",
+        "TeamCode":"MUN",
+        "MVP_Score":40.1361888143,
+        "GmSc":7.1416666667,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":5.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":108,
+        "PlayerName":"KALINIC, NIKOLA",
+        "TeamCode":"RED",
+        "MVP_Score":40.024110797,
+        "GmSc":5.3464285714,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":9.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":109,
+        "PlayerName":"MALCOLM, COLLIN",
+        "TeamCode":"HTA",
+        "MVP_Score":40.0185390161,
+        "GmSc":5.4888888889,
+        "TeamWinPct":0.5925925926,
+        "ClutchPoints":4.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":110,
+        "PlayerName":"BLOSSOMGAME, JARON",
+        "TeamCode":"MCO",
+        "MVP_Score":40.0043160048,
+        "GmSc":5.7464285714,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":4.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":111,
+        "PlayerName":"ALSTON JR. , DERRICK",
+        "TeamCode":"VIR",
+        "MVP_Score":39.9825071313,
+        "GmSc":6.4407407407,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":14.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":112,
+        "PlayerName":"VILDOZA, LUCA",
+        "TeamCode":"VIR",
+        "MVP_Score":39.9795316651,
+        "GmSc":6.724,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":15.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":113,
+        "PlayerName":"DECK, GABRIEL",
+        "TeamCode":"MAD",
+        "MVP_Score":39.9595136757,
+        "GmSc":4.98,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":11.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":114,
+        "PlayerName":"LAPROVITTOLA, NICOLAS",
+        "TeamCode":"BAR",
+        "MVP_Score":39.7258425096,
+        "GmSc":5.0611111111,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":4.0,
+        "GP":18
+    },
+    {
+        "MVP_Rank":115,
+        "PlayerName":"DIALLO, HAMIDOU",
+        "TeamCode":"BAS",
+        "MVP_Score":39.6584364199,
+        "GmSc":7.8923076923,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":9.0,
+        "GP":13
+    },
+    {
+        "MVP_Rank":116,
+        "PlayerName":"RHODEN, JARED",
+        "TeamCode":"PRS",
+        "MVP_Score":39.3213092215,
+        "GmSc":7.9133333333,
+        "TeamWinPct":0.3333333333,
+        "ClutchPoints":6.0,
+        "GP":15
+    },
+    {
+        "MVP_Rank":117,
+        "PlayerName":"HERNANGOMEZ, WILLY",
+        "TeamCode":"BAR",
+        "MVP_Score":39.2845825312,
+        "GmSc":4.8035714286,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":6.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":118,
+        "PlayerName":"CLARK III, JIMMY",
+        "TeamCode":"TEL",
+        "MVP_Score":39.243094756,
+        "GmSc":5.775,
+        "TeamWinPct":0.4642857143,
+        "ClutchPoints":21.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":119,
+        "PlayerName":"NIANG, SALIOU",
+        "TeamCode":"VIR",
+        "MVP_Score":38.9545919334,
+        "GmSc":6.8071428571,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":10.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":120,
+        "PlayerName":"CORDINIER, ISAIA",
+        "TeamCode":"IST",
+        "MVP_Score":38.776873841,
+        "GmSc":6.75,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":22.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":121,
+        "PlayerName":"BRISSETT, O'SHAE J",
+        "TeamCode":"TEL",
+        "MVP_Score":38.710396745,
+        "GmSc":6.037037037,
+        "TeamWinPct":0.4642857143,
+        "ClutchPoints":14.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":122,
+        "PlayerName":"BOOKER, DEVIN",
+        "TeamCode":"MIL",
+        "MVP_Score":38.5467837716,
+        "GmSc":5.9296296296,
+        "TeamWinPct":0.5,
+        "ClutchPoints":6.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":123,
+        "PlayerName":"ULANOVAS, EDGARAS",
+        "TeamCode":"ZAL",
+        "MVP_Score":38.4615687446,
+        "GmSc":5.0785714286,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":13.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":124,
+        "PlayerName":"FARIED, KENNETH",
+        "TeamCode":"PAN",
+        "MVP_Score":37.5468501294,
+        "GmSc":5.3631578947,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":2.0,
+        "GP":19
+    },
+    {
+        "MVP_Rank":125,
+        "PlayerName":"PARRA, JOEL",
+        "TeamCode":"BAR",
+        "MVP_Score":37.5236248659,
+        "GmSc":4.6428571429,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":2.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":126,
+        "PlayerName":"SIMMONS, KOBI",
+        "TeamCode":"BAS",
+        "MVP_Score":37.5108700861,
+        "GmSc":7.5391304348,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":5.0,
+        "GP":23
+    },
+    {
+        "MVP_Rank":127,
+        "PlayerName":"HOWARD, MARKUS",
+        "TeamCode":"BAS",
+        "MVP_Score":37.3281126524,
+        "GmSc":6.9058823529,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":13.0,
+        "GP":17
+    },
+    {
+        "MVP_Rank":128,
+        "PlayerName":"DINWIDDIE, SPENCER",
+        "TeamCode":"MUN",
+        "MVP_Score":37.2474021934,
+        "GmSc":6.2090909091,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":7.0,
+        "GP":11
+    },
+    {
+        "MVP_Rank":129,
+        "PlayerName":"BUTKEVICIUS, ARNAS",
+        "TeamCode":"ZAL",
+        "MVP_Score":37.1066565869,
+        "GmSc":5.3625,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":3.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":130,
+        "PlayerName":"JONES, CARLIK",
+        "TeamCode":"PAR",
+        "MVP_Score":36.7754850447,
+        "GmSc":8.62,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":0.0,
+        "GP":5
+    },
+    {
+        "MVP_Rank":131,
+        "PlayerName":"DIOUF, MOUHAMET",
+        "TeamCode":"VIR",
+        "MVP_Score":36.5787158358,
+        "GmSc":6.1125,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":9.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":132,
+        "PlayerName":"FELIZ, ANDRES",
+        "TeamCode":"MAD",
+        "MVP_Score":36.3461733647,
+        "GmSc":4.2956521739,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":6.0,
+        "GP":23
+    },
+    {
+        "MVP_Rank":133,
+        "PlayerName":"PUERTO, JOSEP",
+        "TeamCode":"PAM",
+        "MVP_Score":36.28835085,
+        "GmSc":3.78,
+        "TeamWinPct":0.6428571429,
+        "ClutchPoints":6.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":134,
+        "PlayerName":"BIRCH, KHEM",
+        "TeamCode":"ULK",
+        "MVP_Score":36.2072207789,
+        "GmSc":2.762962963,
+        "TeamWinPct":0.7407407407,
+        "ClutchPoints":4.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":135,
+        "PlayerName":"BOSTON JR., BRANDON",
+        "TeamCode":"ULK",
+        "MVP_Score":36.1675924078,
+        "GmSc":2.9473684211,
+        "TeamWinPct":0.7407407407,
+        "ClutchPoints":2.0,
+        "GP":19
+    },
+    {
+        "MVP_Rank":136,
+        "PlayerName":"JESSUP, JUSTINIAN",
+        "TeamCode":"MUN",
+        "MVP_Score":36.0996315716,
+        "GmSc":6.0444444444,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":7.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":137,
+        "PlayerName":"BLATT, TAMIR",
+        "TeamCode":"TEL",
+        "MVP_Score":35.954606768,
+        "GmSc":5.7714285714,
+        "TeamWinPct":0.4642857143,
+        "ClutchPoints":6.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":138,
+        "PlayerName":"SLEVA, DUSTIN",
+        "TeamCode":"ZAL",
+        "MVP_Score":35.8100154344,
+        "GmSc":4.7964285714,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":3.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":139,
+        "PlayerName":"LOYD, JORDAN",
+        "TeamCode":"IST",
+        "MVP_Score":35.4015398357,
+        "GmSc":6.1708333333,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":16.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":140,
+        "PlayerName":"YURTSEVEN, OMER",
+        "TeamCode":"PAN",
+        "MVP_Score":35.3919894183,
+        "GmSc":4.9545454545,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":22
+    },
+    {
+        "MVP_Rank":141,
+        "PlayerName":"SAKO, NEAL",
+        "TeamCode":"PAM",
+        "MVP_Score":34.9461318512,
+        "GmSc":3.8269230769,
+        "TeamWinPct":0.6428571429,
+        "ClutchPoints":0.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":142,
+        "PlayerName":"MITOGLOU, KONSTANTINOS",
+        "TeamCode":"PAN",
+        "MVP_Score":34.8221873364,
+        "GmSc":4.2739130435,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":7.0,
+        "GP":23
+    },
+    {
+        "MVP_Rank":143,
+        "PlayerName":"ANDERSON, JUSTIN",
+        "TeamCode":"DUB",
+        "MVP_Score":34.6356948288,
+        "GmSc":4.9375,
+        "TeamWinPct":0.5,
+        "ClutchPoints":12.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":144,
+        "PlayerName":"DOZIER, PJ",
+        "TeamCode":"IST",
+        "MVP_Score":34.5016068061,
+        "GmSc":5.8764705882,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":17.0,
+        "GP":17
+    },
+    {
+        "MVP_Rank":145,
+        "PlayerName":"NEDOVIC, NEMANJA",
+        "TeamCode":"MCO",
+        "MVP_Score":34.4800228338,
+        "GmSc":4.764,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":146,
+        "PlayerName":"MOTIEJUNAS, DONATAS",
+        "TeamCode":"RED",
+        "MVP_Score":34.2080342471,
+        "GmSc":4.4461538462,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":147,
+        "PlayerName":"FERNANDO, BRUNO",
+        "TeamCode":"PAR",
+        "MVP_Score":34.1910114785,
+        "GmSc":6.2037037037,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":16.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":148,
+        "PlayerName":"OMORUYI, EUGENE",
+        "TeamCode":"BAS",
+        "MVP_Score":34.0018319992,
+        "GmSc":7.3769230769,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":2.0,
+        "GP":13
+    },
+    {
+        "MVP_Rank":149,
+        "PlayerName":"DA SILVA, OSCAR",
+        "TeamCode":"MUN",
+        "MVP_Score":33.4105779809,
+        "GmSc":5.8192307692,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":2.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":150,
+        "PlayerName":"ABALDE, ALBERTO",
+        "TeamCode":"MAD",
+        "MVP_Score":33.2740390903,
+        "GmSc":3.8384615385,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":0.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":151,
+        "PlayerName":"DOBRIC, OGNJEN",
+        "TeamCode":"RED",
+        "MVP_Score":33.1649773687,
+        "GmSc":4.18,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":4.0,
+        "GP":15
+    },
+    {
+        "MVP_Rank":152,
+        "PlayerName":"WAINRIGHT, ISH",
+        "TeamCode":"HTA",
+        "MVP_Score":33.0446185879,
+        "GmSc":3.6703703704,
+        "TeamWinPct":0.5925925926,
+        "ClutchPoints":6.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":153,
+        "PlayerName":"GARUBA, USMAN",
+        "TeamCode":"MAD",
+        "MVP_Score":32.9915292952,
+        "GmSc":3.9076923077,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":0.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":154,
+        "PlayerName":"BITIM, ONURALP",
+        "TeamCode":"ULK",
+        "MVP_Score":32.6939431288,
+        "GmSc":1.9052631579,
+        "TeamWinPct":0.7407407407,
+        "ClutchPoints":5.0,
+        "GP":19
+    },
+    {
+        "MVP_Rank":155,
+        "PlayerName":"BERTANS, DAVIS",
+        "TeamCode":"DUB",
+        "MVP_Score":32.6413107121,
+        "GmSc":4.5954545455,
+        "TeamWinPct":0.5,
+        "ClutchPoints":5.0,
+        "GP":22
+    },
+    {
+        "MVP_Rank":156,
+        "PlayerName":"SMAILAGIC, ALEN",
+        "TeamCode":"VIR",
+        "MVP_Score":32.5362481513,
+        "GmSc":5.6476190476,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":0.0,
+        "GP":21
+    },
+    {
+        "MVP_Rank":157,
+        "PlayerName":"NTILIKINA, FRANK",
+        "TeamCode":"OLY",
+        "MVP_Score":32.0892019091,
+        "GmSc":2.73125,
+        "TeamWinPct":0.6666666667,
+        "ClutchPoints":2.0,
+        "GP":16
+    },
+    {
+        "MVP_Rank":158,
+        "PlayerName":"SANTOS, MARCIO",
+        "TeamCode":"TEL",
+        "MVP_Score":31.9291646438,
+        "GmSc":4.45,
+        "TeamWinPct":0.4642857143,
+        "ClutchPoints":11.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":159,
+        "PlayerName":"MCKISSIC, SHAQUIELLE",
+        "TeamCode":"OLY",
+        "MVP_Score":31.8692630133,
+        "GmSc":2.8230769231,
+        "TeamWinPct":0.6666666667,
+        "ClutchPoints":2.0,
+        "GP":13
+    },
+    {
+        "MVP_Rank":160,
+        "PlayerName":"SEDEKERSKIS, TADAS",
+        "TeamCode":"BAS",
+        "MVP_Score":31.7228552747,
+        "GmSc":6.5615384615,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":4.0,
+        "GP":13
+    },
+    {
+        "MVP_Rank":161,
+        "PlayerName":"JOVIC, STEFAN",
+        "TeamCode":"MUN",
+        "MVP_Score":31.5551369847,
+        "GmSc":5.3631578947,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":5.0,
+        "GP":19
+    },
+    {
+        "MVP_Rank":162,
+        "PlayerName":"CABOCLO, BRUNO",
+        "TeamCode":"DUB",
+        "MVP_Score":31.4553345253,
+        "GmSc":5.34,
+        "TeamWinPct":0.5,
+        "ClutchPoints":0.0,
+        "GP":5
+    },
+    {
+        "MVP_Rank":163,
+        "PlayerName":"NDIAYE, MBAYE",
+        "TeamCode":"ASV",
+        "MVP_Score":31.3708382961,
+        "GmSc":6.625,
+        "TeamWinPct":0.25,
+        "ClutchPoints":8.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":164,
+        "PlayerName":"WILLIS, DEREK",
+        "TeamCode":"PRS",
+        "MVP_Score":31.2521300901,
+        "GmSc":6.1666666667,
+        "TeamWinPct":0.3333333333,
+        "ClutchPoints":6.0,
+        "GP":18
+    },
+    {
+        "MVP_Rank":165,
+        "PlayerName":"BIRUTIS, LAURYNAS",
+        "TeamCode":"ZAL",
+        "MVP_Score":31.0910933276,
+        "GmSc":3.9285714286,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":166,
+        "PlayerName":"KEY, BRAXTON",
+        "TeamCode":"PAM",
+        "MVP_Score":30.8559301362,
+        "GmSc":2.7333333333,
+        "TeamWinPct":0.6428571429,
+        "ClutchPoints":2.0,
+        "GP":18
+    },
+    {
+        "MVP_Rank":167,
+        "PlayerName":"POIRIER, VINCENT",
+        "TeamCode":"IST",
+        "MVP_Score":30.7219999514,
+        "GmSc":6.4,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":3.0,
+        "GP":9
+    },
+    {
+        "MVP_Rank":168,
+        "PlayerName":"JEKIRI, TONYE",
+        "TeamCode":"PAR",
+        "MVP_Score":30.4144246424,
+        "GmSc":6.5125,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":2.0,
+        "GP":8
+    },
+    {
+        "MVP_Rank":169,
+        "PlayerName":"BACOT JR., ARMANDO",
+        "TeamCode":"ULK",
+        "MVP_Score":29.9561379249,
+        "GmSc":1.5086956522,
+        "TeamWinPct":0.7407407407,
+        "ClutchPoints":0.0,
+        "GP":23
+    },
+    {
+        "MVP_Rank":170,
+        "PlayerName":"NORRIS, MILES",
+        "TeamCode":"BAR",
+        "MVP_Score":29.9087196752,
+        "GmSc":2.8740740741,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":2.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":171,
+        "PlayerName":"BROWN, LORENZO",
+        "TeamCode":"MIL",
+        "MVP_Score":29.7242931885,
+        "GmSc":4.6416666667,
+        "TeamWinPct":0.5,
+        "ClutchPoints":0.0,
+        "GP":12
+    },
+    {
+        "MVP_Rank":172,
+        "PlayerName":"KONDIC, KOSTA",
+        "TeamCode":"DUB",
+        "MVP_Score":29.6482057332,
+        "GmSc":3.8166666667,
+        "TeamWinPct":0.5,
+        "ClutchPoints":7.0,
+        "GP":12
+    },
+    {
+        "MVP_Rank":173,
+        "PlayerName":"DE LARREA, SERGIO",
+        "TeamCode":"PAM",
+        "MVP_Score":29.5320665973,
+        "GmSc":2.595,
+        "TeamWinPct":0.6428571429,
+        "ClutchPoints":0.0,
+        "GP":20
+    },
+    {
+        "MVP_Rank":174,
+        "PlayerName":"DOWTIN JR, JEFFREY",
+        "TeamCode":"TEL",
+        "MVP_Score":29.4046436774,
+        "GmSc":4.5238095238,
+        "TeamWinPct":0.4642857143,
+        "ClutchPoints":2.0,
+        "GP":21
+    },
+    {
+        "MVP_Rank":175,
+        "PlayerName":"SMITS, ROLANDS",
+        "TeamCode":"IST",
+        "MVP_Score":29.3173369559,
+        "GmSc":4.9884615385,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":15.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":176,
+        "PlayerName":"DIAKITE, MAMADI",
+        "TeamCode":"BAS",
+        "MVP_Score":29.0631641541,
+        "GmSc":5.2148148148,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":13.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":177,
+        "PlayerName":"PAJOLA, ALESSANDRO",
+        "TeamCode":"VIR",
+        "MVP_Score":29.0139416115,
+        "GmSc":4.65,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":7.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":178,
+        "PlayerName":"STEVENS, LAMAR",
+        "TeamCode":"PRS",
+        "MVP_Score":28.7926944447,
+        "GmSc":5.5461538462,
+        "TeamWinPct":0.3333333333,
+        "ClutchPoints":4.0,
+        "GP":13
+    },
+    {
+        "MVP_Rank":179,
+        "PlayerName":"JALLOW, KARIM",
+        "TeamCode":"VIR",
+        "MVP_Score":28.7842725539,
+        "GmSc":4.5851851852,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":0.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":180,
+        "PlayerName":"ELLIS, BOOGIE",
+        "TeamCode":"DUB",
+        "MVP_Score":28.7373177282,
+        "GmSc":4.475,
+        "TeamWinPct":0.5,
+        "ClutchPoints":0.0,
+        "GP":8
+    },
+    {
+        "MVP_Rank":181,
+        "PlayerName":"GABRIEL, WENYEN",
+        "TeamCode":"MUN",
+        "MVP_Score":28.7313196732,
+        "GmSc":4.1384615385,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":10.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":182,
+        "PlayerName":"HERRERA, SEBASTIAN",
+        "TeamCode":"PRS",
+        "MVP_Score":28.6785473665,
+        "GmSc":4.8444444444,
+        "TeamWinPct":0.3333333333,
+        "ClutchPoints":12.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":183,
+        "PlayerName":"SELJAAS, ZACHARY",
+        "TeamCode":"ASV",
+        "MVP_Score":28.4801495134,
+        "GmSc":5.4884615385,
+        "TeamWinPct":0.25,
+        "ClutchPoints":14.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":184,
+        "PlayerName":"RICCI, GIAMPAOLO",
+        "TeamCode":"MIL",
+        "MVP_Score":28.4707701983,
+        "GmSc":3.9821428571,
+        "TeamWinPct":0.5,
+        "ClutchPoints":0.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":185,
+        "PlayerName":"KURUCS, RODIONS",
+        "TeamCode":"BAS",
+        "MVP_Score":28.3902744549,
+        "GmSc":5.325,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":6.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":186,
+        "PlayerName":"HEURTEL, THOMAS",
+        "TeamCode":"ASV",
+        "MVP_Score":28.3660569136,
+        "GmSc":5.2764705882,
+        "TeamWinPct":0.25,
+        "ClutchPoints":15.0,
+        "GP":17
+    },
+    {
+        "MVP_Rank":187,
+        "PlayerName":"LEN, ALEX",
+        "TeamCode":"MAD",
+        "MVP_Score":28.2537416993,
+        "GmSc":2.4052631579,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":7.0,
+        "GP":19
+    },
+    {
+        "MVP_Rank":188,
+        "PlayerName":"BIRSEN, METECAN",
+        "TeamCode":"ULK",
+        "MVP_Score":28.1706159885,
+        "GmSc":1.0954545455,
+        "TeamWinPct":0.7407407407,
+        "ClutchPoints":1.0,
+        "GP":22
+    },
+    {
+        "MVP_Rank":189,
+        "PlayerName":"CALE, MYLES",
+        "TeamCode":"BAR",
+        "MVP_Score":28.0508801013,
+        "GmSc":2.5111111111,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":0.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":190,
+        "PlayerName":"FAYE, MOUHAMED",
+        "TeamCode":"PRS",
+        "MVP_Score":28.0463138796,
+        "GmSc":5.2518518519,
+        "TeamWinPct":0.3333333333,
+        "ClutchPoints":8.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":191,
+        "PlayerName":"PAPANIKOLAOU, KOSTAS",
+        "TeamCode":"OLY",
+        "MVP_Score":27.9612668208,
+        "GmSc":1.8681818182,
+        "TeamWinPct":0.6666666667,
+        "ClutchPoints":0.0,
+        "GP":22
+    },
+    {
+        "MVP_Rank":192,
+        "PlayerName":"ZAGARS, ARTURS",
+        "TeamCode":"ULK",
+        "MVP_Score":27.884922228,
+        "GmSc":1.1875,
+        "TeamWinPct":0.7407407407,
+        "ClutchPoints":0.0,
+        "GP":8
+    },
+    {
+        "MVP_Rank":193,
+        "PlayerName":"OSETKOWSKI, DYLAN",
+        "TeamCode":"PAR",
+        "MVP_Score":27.509991272,
+        "GmSc":5.337037037,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":2.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":194,
+        "PlayerName":"ROGKAVOPOULOS, NIKOLAOS",
+        "TeamCode":"PAN",
+        "MVP_Score":27.398491857,
+        "GmSc":2.548,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":5.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":195,
+        "PlayerName":"BRAZDEIKIS, IGNAS",
+        "TeamCode":"ZAL",
+        "MVP_Score":27.352121845,
+        "GmSc":2.7888888889,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":2.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":196,
+        "PlayerName":"GIEDRAITIS, DOVYDAS",
+        "TeamCode":"ZAL",
+        "MVP_Score":26.8502994868,
+        "GmSc":2.7375,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":3.0,
+        "GP":8
+    },
+    {
+        "MVP_Rank":197,
+        "PlayerName":"M'BAYE, AMATH",
+        "TeamCode":"PRS",
+        "MVP_Score":26.3710205249,
+        "GmSc":4.3037037037,
+        "TeamWinPct":0.3333333333,
+        "ClutchPoints":11.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":198,
+        "PlayerName":"MADAR, YAM",
+        "TeamCode":"HTA",
+        "MVP_Score":26.1345282933,
+        "GmSc":2.0428571429,
+        "TeamWinPct":0.5925925926,
+        "ClutchPoints":5.0,
+        "GP":14
+    },
+    {
+        "MVP_Rank":199,
+        "PlayerName":"KAMENJAS, KENAN",
+        "TeamCode":"DUB",
+        "MVP_Score":25.9254096274,
+        "GmSc":3.4384615385,
+        "TeamWinPct":0.5,
+        "ClutchPoints":0.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":200,
+        "PlayerName":"BALDWIN, KAMAR",
+        "TeamCode":"MUN",
+        "MVP_Score":25.92285737,
+        "GmSc":4.4333333333,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":0.0,
+        "GP":9
+    },
+    {
+        "MVP_Rank":201,
+        "PlayerName":"MAKOUNDOU, YOAN",
+        "TeamCode":"MCO",
+        "MVP_Score":25.6868590325,
+        "GmSc":2.9555555556,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":9
+    },
+    {
+        "MVP_Rank":202,
+        "PlayerName":"MCCORMACK, DAVID",
+        "TeamCode":"MUN",
+        "MVP_Score":25.4714718235,
+        "GmSc":3.5714285714,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":6.0,
+        "GP":21
+    },
+    {
+        "MVP_Rank":203,
+        "PlayerName":"SIRVYDIS, DEIVIDAS",
+        "TeamCode":"ZAL",
+        "MVP_Score":25.4139878793,
+        "GmSc":2.475,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":204,
+        "PlayerName":"SPAGNOLO, MATTEO",
+        "TeamCode":"BAS",
+        "MVP_Score":24.9222930184,
+        "GmSc":4.8321428571,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":0.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":205,
+        "PlayerName":"MAHMUTOGLU, MELIH",
+        "TeamCode":"ULK",
+        "MVP_Score":24.6480587943,
+        "GmSc":0.3,
+        "TeamWinPct":0.7407407407,
+        "ClutchPoints":0.0,
+        "GP":13
+    },
+    {
+        "MVP_Rank":206,
+        "PlayerName":"TRAORE, ARMEL",
+        "TeamCode":"ASV",
+        "MVP_Score":24.4414233743,
+        "GmSc":5.0923076923,
+        "TeamWinPct":0.25,
+        "ClutchPoints":6.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":207,
+        "PlayerName":"VOIGTMANN, JOHANNES",
+        "TeamCode":"MUN",
+        "MVP_Score":24.4343159863,
+        "GmSc":3.6578947368,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":4.0,
+        "GP":19
+    },
+    {
+        "MVP_Rank":208,
+        "PlayerName":"RATHAN-MAYES, XAVIER",
+        "TeamCode":"MUN",
+        "MVP_Score":24.2102989151,
+        "GmSc":2.95,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":9.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":209,
+        "PlayerName":"KEITA, SAYON",
+        "TeamCode":"BAR",
+        "MVP_Score":24.1750660529,
+        "GmSc":1.45,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":2.0,
+        "GP":8
+    },
+    {
+        "MVP_Rank":210,
+        "PlayerName":"DAVIDOVAC, DEJAN",
+        "TeamCode":"RED",
+        "MVP_Score":23.9882719888,
+        "GmSc":1.9592592593,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":4.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":211,
+        "PlayerName":"JONES, KAI",
+        "TeamCode":"IST",
+        "MVP_Score":23.5468721029,
+        "GmSc":4.7481481481,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":0.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":212,
+        "PlayerName":"ODIASE, TAI",
+        "TeamCode":"HTA",
+        "MVP_Score":23.3582322335,
+        "GmSc":1.776,
+        "TeamWinPct":0.5925925926,
+        "ClutchPoints":0.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":213,
+        "PlayerName":"DOKOSSI, ALLAN",
+        "TeamCode":"PRS",
+        "MVP_Score":23.2883116124,
+        "GmSc":4.6083333333,
+        "TeamWinPct":0.3333333333,
+        "ClutchPoints":0.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":214,
+        "PlayerName":"SAMODUROV, ALEXANDROS",
+        "TeamCode":"PAN",
+        "MVP_Score":23.2666137249,
+        "GmSc":2.0857142857,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":14
+    },
+    {
+        "MVP_Rank":215,
+        "PlayerName":"GIFFEY, NIELS",
+        "TeamCode":"MUN",
+        "MVP_Score":22.9034579775,
+        "GmSc":3.2,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":2.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":216,
+        "PlayerName":"GINAT, TOMER",
+        "TeamCode":"HTA",
+        "MVP_Score":22.8245301967,
+        "GmSc":1.5684210526,
+        "TeamWinPct":0.5925925926,
+        "ClutchPoints":1.0,
+        "GP":19
+    },
+    {
+        "MVP_Rank":217,
+        "PlayerName":"ENNIS, TYLER",
+        "TeamCode":"HTA",
+        "MVP_Score":22.7467171468,
+        "GmSc":1.335,
+        "TeamWinPct":0.5925925926,
+        "ClutchPoints":4.0,
+        "GP":20
+    },
+    {
+        "MVP_Rank":218,
+        "PlayerName":"SIMA, YANKUBA",
+        "TeamCode":"PAM",
+        "MVP_Score":22.7448551358,
+        "GmSc":0.9714285714,
+        "TeamWinPct":0.6428571429,
+        "ClutchPoints":0.0,
+        "GP":7
+    },
+    {
+        "MVP_Rank":219,
+        "PlayerName":"MORGAN, JEREMY",
+        "TeamCode":"PRS",
+        "MVP_Score":22.744351072,
+        "GmSc":4.3260869565,
+        "TeamWinPct":0.3333333333,
+        "ClutchPoints":0.0,
+        "GP":23
+    },
+    {
+        "MVP_Rank":220,
+        "PlayerName":"NOWELL, MARKQUIS",
+        "TeamCode":"BAS",
+        "MVP_Score":22.3994904309,
+        "GmSc":4.27,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":2.0,
+        "GP":20
+    },
+    {
+        "MVP_Rank":221,
+        "PlayerName":"DIBARTOLOMEO, JOHN",
+        "TeamCode":"TEL",
+        "MVP_Score":22.1762340245,
+        "GmSc":3.0090909091,
+        "TeamWinPct":0.4642857143,
+        "ClutchPoints":0.0,
+        "GP":22
+    },
+    {
+        "MVP_Rank":222,
+        "PlayerName":"ABASS, AWUDU",
+        "TeamCode":"DUB",
+        "MVP_Score":21.9562131728,
+        "GmSc":2.4178571429,
+        "TeamWinPct":0.5,
+        "ClutchPoints":0.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":223,
+        "PlayerName":"OUATTARA, YAKUBA",
+        "TeamCode":"PRS",
+        "MVP_Score":21.8733287646,
+        "GmSc":3.6708333333,
+        "TeamWinPct":0.3333333333,
+        "ClutchPoints":4.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":224,
+        "PlayerName":"FALL, YOUSSOUPHA",
+        "TeamCode":"BAR",
+        "MVP_Score":21.7048732715,
+        "GmSc":1.0782608696,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":0.0,
+        "GP":23
+    },
+    {
+        "MVP_Rank":225,
+        "PlayerName":"AKELE, NICOLA",
+        "TeamCode":"VIR",
+        "MVP_Score":21.5992249458,
+        "GmSc":3.1,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":2.0,
+        "GP":19
+    },
+    {
+        "MVP_Rank":226,
+        "PlayerName":"MARCOS, JUANI",
+        "TeamCode":"BAR",
+        "MVP_Score":21.5945298291,
+        "GmSc":0.9791666667,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":0.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":227,
+        "PlayerName":"ANTETOKOUNMPO, KOSTAS",
+        "TeamCode":"OLY",
+        "MVP_Score":21.5905721482,
+        "GmSc":0.4266666667,
+        "TeamWinPct":0.6666666667,
+        "ClutchPoints":0.0,
+        "GP":15
+    },
+    {
+        "MVP_Rank":228,
+        "PlayerName":"MILTON, SHAKE",
+        "TeamCode":"PAR",
+        "MVP_Score":21.4628917435,
+        "GmSc":3.8285714286,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":4.0,
+        "GP":14
+    },
+    {
+        "MVP_Rank":229,
+        "PlayerName":"DIOP, KHALIFA",
+        "TeamCode":"BAS",
+        "MVP_Score":21.4494196993,
+        "GmSc":4.1571428571,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":0.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":230,
+        "PlayerName":"TARPEY, TERRY",
+        "TeamCode":"MCO",
+        "MVP_Score":21.4325474864,
+        "GmSc":1.5857142857,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":3.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":231,
+        "PlayerName":"VAUTIER, BASTIEN",
+        "TeamCode":"ASV",
+        "MVP_Score":21.1896510385,
+        "GmSc":3.7857142857,
+        "TeamWinPct":0.25,
+        "ClutchPoints":14.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":232,
+        "PlayerName":"SAMANIC, LUKA",
+        "TeamCode":"BAS",
+        "MVP_Score":20.7933575736,
+        "GmSc":4.38,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":0.0,
+        "GP":5
+    },
+    {
+        "MVP_Rank":233,
+        "PlayerName":"KRAMER, DAVID",
+        "TeamCode":"MAD",
+        "MVP_Score":20.5426519192,
+        "GmSc":0.91875,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":0.0,
+        "GP":16
+    },
+    {
+        "MVP_Rank":234,
+        "PlayerName":"LLULL, SERGIO",
+        "TeamCode":"MAD",
+        "MVP_Score":20.5186267556,
+        "GmSc":0.7916666667,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":0.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":235,
+        "PlayerName":"HACKETT, DANIEL",
+        "TeamCode":"VIR",
+        "MVP_Score":20.5001073474,
+        "GmSc":2.55,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":5.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":236,
+        "PlayerName":"LOPEZ-AROSTEGUI, XABI",
+        "TeamCode":"PAM",
+        "MVP_Score":20.2765115308,
+        "GmSc":0.33,
+        "TeamWinPct":0.6428571429,
+        "ClutchPoints":0.0,
+        "GP":10
+    },
+    {
+        "MVP_Rank":237,
+        "PlayerName":"HARRISON, SHAQUILLE",
+        "TeamCode":"ASV",
+        "MVP_Score":20.2313676462,
+        "GmSc":4.0142857143,
+        "TeamWinPct":0.25,
+        "ClutchPoints":7.0,
+        "GP":21
+    },
+    {
+        "MVP_Rank":238,
+        "PlayerName":"PREPELIC, KLEMEN",
+        "TeamCode":"DUB",
+        "MVP_Score":20.2224895758,
+        "GmSc":1.8,
+        "TeamWinPct":0.5,
+        "ClutchPoints":4.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":239,
+        "PlayerName":"DOS SANTOS, YAGO",
+        "TeamCode":"RED",
+        "MVP_Score":20.1186968073,
+        "GmSc":0.85,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":4.0,
+        "GP":24
+    },
+    {
+        "MVP_Rank":240,
+        "PlayerName":"DIARRA, ALIOU",
+        "TeamCode":"VIR",
+        "MVP_Score":20.0927925552,
+        "GmSc":2.8142857143,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":0.0,
+        "GP":21
+    },
+    {
+        "MVP_Rank":241,
+        "PlayerName":"MARINKOVIC, VANJA",
+        "TeamCode":"PAR",
+        "MVP_Score":19.8292289608,
+        "GmSc":3.4210526316,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":3.0,
+        "GP":19
+    },
+    {
+        "MVP_Rank":242,
+        "PlayerName":"LARENTZAKIS, GIANNOULIS",
+        "TeamCode":"OLY",
+        "MVP_Score":19.6841330665,
+        "GmSc":-0.075,
+        "TeamWinPct":0.6666666667,
+        "ClutchPoints":0.0,
+        "GP":12
+    },
+    {
+        "MVP_Rank":243,
+        "PlayerName":"NETZIPOGLOU, OMIROS",
+        "TeamCode":"OLY",
+        "MVP_Score":19.5266416318,
+        "GmSc":-0.1181818182,
+        "TeamWinPct":0.6666666667,
+        "ClutchPoints":0.0,
+        "GP":11
+    },
+    {
+        "MVP_Rank":244,
+        "PlayerName":"RADZEVICIUS, GYTIS",
+        "TeamCode":"BAS",
+        "MVP_Score":19.4571226862,
+        "GmSc":3.5666666667,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":3.0,
+        "GP":15
+    },
+    {
+        "MVP_Rank":245,
+        "PlayerName":"RAYMAN, WILLIAM",
+        "TeamCode":"TEL",
+        "MVP_Score":19.4549518704,
+        "GmSc":2.0928571429,
+        "TeamWinPct":0.4642857143,
+        "ClutchPoints":1.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":246,
+        "PlayerName":"TOLIOPOULOS, VASSILIS",
+        "TeamCode":"PAN",
+        "MVP_Score":19.3535328354,
+        "GmSc":1.0235294118,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":17
+    },
+    {
+        "MVP_Rank":247,
+        "PlayerName":"DUNSTON, BRYANT",
+        "TeamCode":"MIL",
+        "MVP_Score":19.347559238,
+        "GmSc":1.9142857143,
+        "TeamWinPct":0.5,
+        "ClutchPoints":0.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":248,
+        "PlayerName":"MANNION, NICCOLO",
+        "TeamCode":"MIL",
+        "MVP_Score":19.1399398114,
+        "GmSc":1.7181818182,
+        "TeamWinPct":0.5,
+        "ClutchPoints":0.0,
+        "GP":22
+    },
+    {
+        "MVP_Rank":249,
+        "PlayerName":"PARKER, JABARI",
+        "TeamCode":"PAR",
+        "MVP_Score":19.0955507154,
+        "GmSc":3.0473684211,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":5.0,
+        "GP":19
+    },
+    {
+        "MVP_Rank":250,
+        "PlayerName":"HOLLATZ, JUSTUS",
+        "TeamCode":"MUN",
+        "MVP_Score":18.8232609844,
+        "GmSc":2.35,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":3.0,
+        "GP":20
+    },
+    {
+        "MVP_Rank":251,
+        "PlayerName":"NOGUES, ISAAC",
+        "TeamCode":"PAM",
+        "MVP_Score":18.5913855132,
+        "GmSc":-0.0714285714,
+        "TeamWinPct":0.6428571429,
+        "ClutchPoints":0.0,
+        "GP":14
+    },
+    {
+        "MVP_Rank":252,
+        "PlayerName":"KALAITZAKIS, PANAGIOTIS",
+        "TeamCode":"PAN",
+        "MVP_Score":18.5641935094,
+        "GmSc":0.85,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":22
+    },
+    {
+        "MVP_Rank":253,
+        "PlayerName":"SWIDER, COLE",
+        "TeamCode":"IST",
+        "MVP_Score":18.5501075152,
+        "GmSc":3.2071428571,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":0.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":254,
+        "PlayerName":"DESSERT, BRICE",
+        "TeamCode":"IST",
+        "MVP_Score":18.4790991044,
+        "GmSc":3.3642857143,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":2.0,
+        "GP":14
+    },
+    {
+        "MVP_Rank":255,
+        "PlayerName":"HOMMES, DAULTON",
+        "TeamCode":"PRS",
+        "MVP_Score":18.4641480817,
+        "GmSc":3.13125,
+        "TeamWinPct":0.3333333333,
+        "ClutchPoints":3.0,
+        "GP":16
+    },
+    {
+        "MVP_Rank":256,
+        "PlayerName":"SESTINA, NATHAN",
+        "TeamCode":"MIL",
+        "MVP_Score":18.4295720312,
+        "GmSc":1.775,
+        "TeamWinPct":0.5,
+        "ClutchPoints":0.0,
+        "GP":8
+    },
+    {
+        "MVP_Rank":257,
+        "PlayerName":"PROCIDA, GABRIELE",
+        "TeamCode":"MAD",
+        "MVP_Score":18.3952957743,
+        "GmSc":0.4714285714,
+        "TeamWinPct":0.6071428571,
+        "ClutchPoints":0.0,
+        "GP":7
+    },
+    {
+        "MVP_Rank":258,
+        "PlayerName":"MILJENOVIC, STEFAN",
+        "TeamCode":"RED",
+        "MVP_Score":18.3550489332,
+        "GmSc":0.7904761905,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":21
+    },
+    {
+        "MVP_Rank":259,
+        "PlayerName":"TIMOR, BAR",
+        "TeamCode":"HTA",
+        "MVP_Score":18.2885546171,
+        "GmSc":0.5944444444,
+        "TeamWinPct":0.5925925926,
+        "ClutchPoints":0.0,
+        "GP":18
+    },
+    {
+        "MVP_Rank":260,
+        "PlayerName":"EBOUA, PAUL",
+        "TeamCode":"ASV",
+        "MVP_Score":18.0235244638,
+        "GmSc":4.2222222222,
+        "TeamWinPct":0.25,
+        "ClutchPoints":0.0,
+        "GP":9
+    },
+    {
+        "MVP_Rank":261,
+        "PlayerName":"BEGARIN, JUHANN",
+        "TeamCode":"MCO",
+        "MVP_Score":17.6815985984,
+        "GmSc":0.6153846154,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":3.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":262,
+        "PlayerName":"MIKALAUSKAS, KAJUS",
+        "TeamCode":"ZAL",
+        "MVP_Score":17.3058355191,
+        "GmSc":0.7875,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":8
+    },
+    {
+        "MVP_Rank":263,
+        "PlayerName":"RUBSTAVICIUS, MANTAS",
+        "TeamCode":"ZAL",
+        "MVP_Score":17.0812019895,
+        "GmSc":0.592,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":264,
+        "PlayerName":"JACKSON, EDWIN",
+        "TeamCode":"ASV",
+        "MVP_Score":17.0527779044,
+        "GmSc":3.74,
+        "TeamWinPct":0.25,
+        "ClutchPoints":0.0,
+        "GP":15
+    },
+    {
+        "MVP_Rank":265,
+        "PlayerName":"CAVALIERE, LEOPOLD",
+        "TeamCode":"PRS",
+        "MVP_Score":16.8751763672,
+        "GmSc":2.7346153846,
+        "TeamWinPct":0.3333333333,
+        "ClutchPoints":4.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":266,
+        "PlayerName":"GRAHAM, DEVONTE",
+        "TeamCode":"RED",
+        "MVP_Score":16.7937628072,
+        "GmSc":0.3833333333,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":12
+    },
+    {
+        "MVP_Rank":267,
+        "PlayerName":"PALATIN, GUY",
+        "TeamCode":"HTA",
+        "MVP_Score":16.3532144653,
+        "GmSc":0.1076923077,
+        "TeamWinPct":0.5925925926,
+        "ClutchPoints":0.0,
+        "GP":13
+    },
+    {
+        "MVP_Rank":268,
+        "PlayerName":"PLAVSIC, UROS",
+        "TeamCode":"RED",
+        "MVP_Score":16.0857789943,
+        "GmSc":0.2625,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":8
+    },
+    {
+        "MVP_Rank":269,
+        "PlayerName":"LAVI, GUR",
+        "TeamCode":"TEL",
+        "MVP_Score":15.9586838235,
+        "GmSc":1.0842105263,
+        "TeamWinPct":0.4642857143,
+        "ClutchPoints":5.0,
+        "GP":19
+    },
+    {
+        "MVP_Rank":270,
+        "PlayerName":"TONUT, STEFANO",
+        "TeamCode":"MIL",
+        "MVP_Score":15.7742630803,
+        "GmSc":1.0090909091,
+        "TeamWinPct":0.5,
+        "ClutchPoints":1.0,
+        "GP":11
+    },
+    {
+        "MVP_Rank":271,
+        "PlayerName":"FRISCH, CLEMENT",
+        "TeamCode":"BAS",
+        "MVP_Score":15.7269936718,
+        "GmSc":2.5607142857,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":3.0,
+        "GP":28
+    },
+    {
+        "MVP_Rank":272,
+        "PlayerName":"CALATHES, NICK",
+        "TeamCode":"PAR",
+        "MVP_Score":15.5259018543,
+        "GmSc":2.6,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":1.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":273,
+        "PlayerName":"BEAUBOIS, RODRIGUE",
+        "TeamCode":"IST",
+        "MVP_Score":14.9966391695,
+        "GmSc":2.380952381,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":3.0,
+        "GP":21
+    },
+    {
+        "MVP_Rank":274,
+        "PlayerName":"NEDELJKOVIC, ALEKSEJ",
+        "TeamCode":"RED",
+        "MVP_Score":14.9947548036,
+        "GmSc":0.0,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":5
+    },
+    {
+        "MVP_Rank":275,
+        "PlayerName":"RADOSIC, OGNJEN",
+        "TeamCode":"RED",
+        "MVP_Score":14.9947548036,
+        "GmSc":0.0,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":6
+    },
+    {
+        "MVP_Rank":276,
+        "PlayerName":"AJINCA, MELVIN",
+        "TeamCode":"ASV",
+        "MVP_Score":14.6158453334,
+        "GmSc":2.6461538462,
+        "TeamWinPct":0.25,
+        "ClutchPoints":4.0,
+        "GP":26
+    },
+    {
+        "MVP_Rank":277,
+        "PlayerName":"SANLI, SERTAC",
+        "TeamCode":"DUB",
+        "MVP_Score":14.5963510356,
+        "GmSc":0.78,
+        "TeamWinPct":0.5,
+        "ClutchPoints":0.0,
+        "GP":10
+    },
+    {
+        "MVP_Rank":278,
+        "PlayerName":"MICHINEAU, DAVID",
+        "TeamCode":"MCO",
+        "MVP_Score":14.2791347349,
+        "GmSc":-0.0266666667,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":15
+    },
+    {
+        "MVP_Rank":279,
+        "PlayerName":"TOTE, LEONARDO",
+        "TeamCode":"MIL",
+        "MVP_Score":14.1379222166,
+        "GmSc":0.7,
+        "TeamWinPct":0.5,
+        "ClutchPoints":0.0,
+        "GP":10
+    },
+    {
+        "MVP_Rank":280,
+        "PlayerName":"GRIGONIS, MARIUS",
+        "TeamCode":"PAN",
+        "MVP_Score":14.1037555874,
+        "GmSc":-0.2764705882,
+        "TeamWinPct":0.5714285714,
+        "ClutchPoints":0.0,
+        "GP":17
+    },
+    {
+        "MVP_Rank":281,
+        "PlayerName":"PAPAGIANNIS, GEORGIOS",
+        "TeamCode":"IST",
+        "MVP_Score":13.7164771248,
+        "GmSc":2.56,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":0.0,
+        "GP":5
+    },
+    {
+        "MVP_Rank":282,
+        "PlayerName":"RYAN, MATT",
+        "TeamCode":"DUB",
+        "MVP_Score":13.6647395737,
+        "GmSc":0.5714285714,
+        "TeamWinPct":0.5,
+        "ClutchPoints":0.0,
+        "GP":7
+    },
+    {
+        "MVP_Rank":283,
+        "PlayerName":"LIGHTY, DAVID",
+        "TeamCode":"ASV",
+        "MVP_Score":13.4022997838,
+        "GmSc":2.632,
+        "TeamWinPct":0.25,
+        "ClutchPoints":3.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":284,
+        "PlayerName":"TAYLOR, BRANDON",
+        "TeamCode":"VIR",
+        "MVP_Score":13.1312380855,
+        "GmSc":1.1133333333,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":0.0,
+        "GP":15
+    },
+    {
+        "MVP_Rank":285,
+        "PlayerName":"FLACCADORI, DIEGO",
+        "TeamCode":"MIL",
+        "MVP_Score":13.1088083441,
+        "GmSc":0.3857142857,
+        "TeamWinPct":0.5,
+        "ClutchPoints":0.0,
+        "GP":14
+    },
+    {
+        "MVP_Rank":286,
+        "PlayerName":"MASSA, BODIAN",
+        "TeamCode":"ASV",
+        "MVP_Score":13.09426494,
+        "GmSc":2.4555555556,
+        "TeamWinPct":0.25,
+        "ClutchPoints":3.0,
+        "GP":27
+    },
+    {
+        "MVP_Rank":287,
+        "PlayerName":"DANGUBIC, NEMANJA",
+        "TeamCode":"DUB",
+        "MVP_Score":12.8061048834,
+        "GmSc":0.3047619048,
+        "TeamWinPct":0.5,
+        "ClutchPoints":0.0,
+        "GP":21
+    },
+    {
+        "MVP_Rank":288,
+        "PlayerName":"LAKIC, ARIJAN",
+        "TeamCode":"PAR",
+        "MVP_Score":12.7143662396,
+        "GmSc":1.75,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":5.0,
+        "GP":22
+    },
+    {
+        "MVP_Rank":289,
+        "PlayerName":"DIOP, OUSMANE",
+        "TeamCode":"MIL",
+        "MVP_Score":12.5254429126,
+        "GmSc":0.29,
+        "TeamWinPct":0.5,
+        "ClutchPoints":0.0,
+        "GP":10
+    },
+    {
+        "MVP_Rank":290,
+        "PlayerName":"BAKO, ISMAEL",
+        "TeamCode":"PRS",
+        "MVP_Score":12.0935403838,
+        "GmSc":1.9222222222,
+        "TeamWinPct":0.3333333333,
+        "ClutchPoints":0.0,
+        "GP":9
+    },
+    {
+        "MVP_Rank":291,
+        "PlayerName":"FERRARI, FRANCESCO",
+        "TeamCode":"VIR",
+        "MVP_Score":12.0036255053,
+        "GmSc":0.9333333333,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":0.0,
+        "GP":6
+    },
+    {
+        "MVP_Rank":292,
+        "PlayerName":"POKUSEVSKI, ALEKSEJ",
+        "TeamCode":"PAR",
+        "MVP_Score":11.2558611022,
+        "GmSc":1.4772727273,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":2.0,
+        "GP":22
+    },
+    {
+        "MVP_Rank":293,
+        "PlayerName":"ARMSTRONG, TARAN",
+        "TeamCode":"DUB",
+        "MVP_Score":10.9576042205,
+        "GmSc":-0.15,
+        "TeamWinPct":0.5,
+        "ClutchPoints":0.0,
+        "GP":16
+    },
+    {
+        "MVP_Rank":294,
+        "PlayerName":"AYAYI, JOEL",
+        "TeamCode":"PRS",
+        "MVP_Score":10.8008690514,
+        "GmSc":1.5571428571,
+        "TeamWinPct":0.3333333333,
+        "ClutchPoints":0.0,
+        "GP":14
+    },
+    {
+        "MVP_Rank":295,
+        "PlayerName":"OMORUYI, CLIFFORD",
+        "TeamCode":"TEL",
+        "MVP_Score":10.7803731098,
+        "GmSc":0.2111111111,
+        "TeamWinPct":0.4642857143,
+        "ClutchPoints":0.0,
+        "GP":9
+    },
+    {
+        "MVP_Rank":296,
+        "PlayerName":"HAZER, SEHMUS",
+        "TeamCode":"IST",
+        "MVP_Score":10.4300419752,
+        "GmSc":1.016,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":5.0,
+        "GP":25
+    },
+    {
+        "MVP_Rank":297,
+        "PlayerName":"CANKA, ABRAMO",
+        "TeamCode":"VIR",
+        "MVP_Score":8.5176658548,
+        "GmSc":0.0,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":0.0,
+        "GP":6
+    },
+    {
+        "MVP_Rank":298,
+        "PlayerName":"KRATZER, LEON",
+        "TeamCode":"MUN",
+        "MVP_Score":8.1340432945,
+        "GmSc":-0.1277777778,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":0.0,
+        "GP":18
+    },
+    {
+        "MVP_Rank":299,
+        "PlayerName":"ACCORSI, MATTEO",
+        "TeamCode":"VIR",
+        "MVP_Score":7.7152884403,
+        "GmSc":-0.22,
+        "TeamWinPct":0.4285714286,
+        "ClutchPoints":0.0,
+        "GP":10
+    },
+    {
+        "MVP_Rank":300,
+        "PlayerName":"YILMAZ, ERKAN",
+        "TeamCode":"IST",
+        "MVP_Score":7.5211629966,
+        "GmSc":0.8043478261,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":0.0,
+        "GP":23
+    },
+    {
+        "MVP_Rank":301,
+        "PlayerName":"SHAHRVIN, ENZO",
+        "TeamCode":"PRS",
+        "MVP_Score":6.6175535686,
+        "GmSc":0.49,
+        "TeamWinPct":0.3333333333,
+        "ClutchPoints":0.0,
+        "GP":10
+    },
+    {
+        "MVP_Rank":302,
+        "PlayerName":"MUTAF, DAVID",
+        "TeamCode":"IST",
+        "MVP_Score":6.1476670616,
+        "GmSc":0.45625,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":0.0,
+        "GP":16
+    },
+    {
+        "MVP_Rank":303,
+        "PlayerName":"VILLAR, RAFA",
+        "TeamCode":"BAS",
+        "MVP_Score":5.0165538368,
+        "GmSc":0.1954545455,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":0.0,
+        "GP":22
+    },
+    {
+        "MVP_Rank":304,
+        "PlayerName":"NGOUAMA, MEHDY",
+        "TeamCode":"ASV",
+        "MVP_Score":4.9042028961,
+        "GmSc":0.7769230769,
+        "TeamWinPct":0.25,
+        "ClutchPoints":0.0,
+        "GP":13
+    },
+    {
+        "MVP_Rank":305,
+        "PlayerName":"BOSNJAKOVIC, MITAR",
+        "TeamCode":"PAR",
+        "MVP_Score":4.2086759312,
+        "GmSc":0.0157894737,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":0.0,
+        "GP":19
+    },
+    {
+        "MVP_Rank":306,
+        "PlayerName":"MUURINEN, MIIKKA",
+        "TeamCode":"PAR",
+        "MVP_Score":4.0579183049,
+        "GmSc":-0.03125,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":0.0,
+        "GP":16
+    },
+    {
+        "MVP_Rank":307,
+        "PlayerName":"JOKSIMOVIC, STEFAN",
+        "TeamCode":"BAS",
+        "MVP_Score":3.5916594525,
+        "GmSc":-0.19,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":0.0,
+        "GP":10
+    },
+    {
+        "MVP_Rank":308,
+        "PlayerName":"ATAMNA, ADAM",
+        "TeamCode":"ASV",
+        "MVP_Score":3.3741635689,
+        "GmSc":0.445,
+        "TeamWinPct":0.25,
+        "ClutchPoints":0.0,
+        "GP":20
+    },
+    {
+        "MVP_Rank":309,
+        "PlayerName":"MIJAILOVIC, UROS",
+        "TeamCode":"PAR",
+        "MVP_Score":2.9110512129,
+        "GmSc":-0.34,
+        "TeamWinPct":0.3214285714,
+        "ClutchPoints":0.0,
+        "GP":10
+    }
+]
