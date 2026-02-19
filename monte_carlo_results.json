@@ -1,0 +1,182 @@
+[
+    {
+        "Team": "ULK",
+        "Top4_Pct": 97.4,
+        "Top6_Pct": 99.4,
+        "Top10_Pct": 100.0,
+        "Sort_Metric": 9945,
+        "Avg_Wins": 26.6,
+        "Current_Wins": 20
+    },
+    {
+        "Team": "OLY",
+        "Top4_Pct": 92.0,
+        "Top6_Pct": 98.3,
+        "Top10_Pct": 100.0,
+        "Sort_Metric": 9831,
+        "Avg_Wins": 24.8,
+        "Current_Wins": 18
+    },
+    {
+        "Team": "PAM",
+        "Top4_Pct": 67.7,
+        "Top6_Pct": 88.8,
+        "Top10_Pct": 99.6,
+        "Sort_Metric": 8876,
+        "Avg_Wins": 23.8,
+        "Current_Wins": 18
+    },
+    {
+        "Team": "MAD",
+        "Top4_Pct": 47.1,
+        "Top6_Pct": 78.9,
+        "Top10_Pct": 99.4,
+        "Sort_Metric": 7888,
+        "Avg_Wins": 22.9,
+        "Current_Wins": 17
+    },
+    {
+        "Team": "ZAL",
+        "Top4_Pct": 40.6,
+        "Top6_Pct": 70.4,
+        "Top10_Pct": 97.4,
+        "Sort_Metric": 7035,
+        "Avg_Wins": 22.4,
+        "Current_Wins": 16
+    },
+    {
+        "Team": "MCO",
+        "Top4_Pct": 16.7,
+        "Top6_Pct": 44.4,
+        "Top10_Pct": 91.9,
+        "Sort_Metric": 4436,
+        "Avg_Wins": 21.5,
+        "Current_Wins": 16
+    },
+    {
+        "Team": "RED",
+        "Top4_Pct": 14.3,
+        "Top6_Pct": 40.6,
+        "Top10_Pct": 91.8,
+        "Sort_Metric": 4055,
+        "Avg_Wins": 21.9,
+        "Current_Wins": 16
+    },
+    {
+        "Team": "BAR",
+        "Top4_Pct": 14.0,
+        "Top6_Pct": 36.7,
+        "Top10_Pct": 87.4,
+        "Sort_Metric": 3672,
+        "Avg_Wins": 21.9,
+        "Current_Wins": 17
+    },
+    {
+        "Team": "HTA",
+        "Top4_Pct": 4.6,
+        "Top6_Pct": 16.8,
+        "Top10_Pct": 72.9,
+        "Sort_Metric": 1679,
+        "Avg_Wins": 20.6,
+        "Current_Wins": 16
+    },
+    {
+        "Team": "DUB",
+        "Top4_Pct": 2.8,
+        "Top6_Pct": 13.6,
+        "Top10_Pct": 76.4,
+        "Sort_Metric": 1365,
+        "Avg_Wins": 20.7,
+        "Current_Wins": 14
+    },
+    {
+        "Team": "PAN",
+        "Top4_Pct": 2.6,
+        "Top6_Pct": 11.3,
+        "Top10_Pct": 63.3,
+        "Sort_Metric": 1126,
+        "Avg_Wins": 20.5,
+        "Current_Wins": 16
+    },
+    {
+        "Team": "MIL",
+        "Top4_Pct": 0.1,
+        "Top6_Pct": 0.8,
+        "Top10_Pct": 13.9,
+        "Sort_Metric": 75,
+        "Avg_Wins": 18.6,
+        "Current_Wins": 14
+    },
+    {
+        "Team": "TEL",
+        "Top4_Pct": 0.0,
+        "Top6_Pct": 0.2,
+        "Top10_Pct": 5.3,
+        "Sort_Metric": 17,
+        "Avg_Wins": 17.8,
+        "Current_Wins": 13
+    },
+    {
+        "Team": "MUN",
+        "Top4_Pct": 0.0,
+        "Top6_Pct": 0.0,
+        "Top10_Pct": 0.4,
+        "Sort_Metric": 0,
+        "Avg_Wins": 16.3,
+        "Current_Wins": 12
+    },
+    {
+        "Team": "VIR",
+        "Top4_Pct": 0.0,
+        "Top6_Pct": 0.0,
+        "Top10_Pct": 0.2,
+        "Sort_Metric": 0,
+        "Avg_Wins": 15.8,
+        "Current_Wins": 12
+    },
+    {
+        "Team": "ASV",
+        "Top4_Pct": 0.0,
+        "Top6_Pct": 0.0,
+        "Top10_Pct": 0.0,
+        "Sort_Metric": 0,
+        "Avg_Wins": 9.5,
+        "Current_Wins": 7
+    },
+    {
+        "Team": "BAS",
+        "Top4_Pct": 0.0,
+        "Top6_Pct": 0.0,
+        "Top10_Pct": 0.0,
+        "Sort_Metric": 0,
+        "Avg_Wins": 13.1,
+        "Current_Wins": 9
+    },
+    {
+        "Team": "IST",
+        "Top4_Pct": 0.0,
+        "Top6_Pct": 0.0,
+        "Top10_Pct": 0.0,
+        "Sort_Metric": 0,
+        "Avg_Wins": 13.4,
+        "Current_Wins": 9
+    },
+    {
+        "Team": "PAR",
+        "Top4_Pct": 0.0,
+        "Top6_Pct": 0.0,
+        "Top10_Pct": 0.0,
+        "Sort_Metric": 0,
+        "Avg_Wins": 12.7,
+        "Current_Wins": 9
+    },
+    {
+        "Team": "PRS",
+        "Top4_Pct": 0.0,
+        "Top6_Pct": 0.0,
+        "Top10_Pct": 0.0,
+        "Sort_Metric": 0,
+        "Avg_Wins": 13.3,
+        "Current_Wins": 9
+    }
+]
