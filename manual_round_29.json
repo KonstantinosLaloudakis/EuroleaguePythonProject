@@ -1,62 +1,42 @@
 [
     {
-        "GameCode": "E2025_283",
         "LocalTeam": "ZAL",
-        "RoadTeam": "OLY",
-        "Winner": "UNKNOWN"
+        "RoadTeam": "OLY"
     },
     {
-        "GameCode": "E2025_287",
         "LocalTeam": "DUB",
-        "RoadTeam": "ASV",
-        "Winner": "UNKNOWN"
+        "RoadTeam": "ASV"
     },
     {
-        "GameCode": "E2025_281",
         "LocalTeam": "ULK",
-        "RoadTeam": "PAR",
-        "Winner": "UNKNOWN"
+        "RoadTeam": "PAR"
     },
     {
-        "GameCode": "E2025_282",
         "LocalTeam": "VIR",
-        "RoadTeam": "BAR",
-        "Winner": "UNKNOWN"
+        "RoadTeam": "BAR"
     },
     {
-        "GameCode": "E2025_284",
         "LocalTeam": "MCO",
-        "RoadTeam": "TEL",
-        "Winner": "UNKNOWN"
+        "RoadTeam": "TEL"
     },
     {
-        "GameCode": "E2025_289",
         "LocalTeam": "PAN",
-        "RoadTeam": "PRS",
-        "Winner": "UNKNOWN"
+        "RoadTeam": "PRS"
     },
     {
-        "GameCode": "E2025_286",
         "LocalTeam": "RED",
-        "RoadTeam": "IST",
-        "Winner": "UNKNOWN"
+        "RoadTeam": "IST"
     },
     {
-        "GameCode": "E2025_285",
         "LocalTeam": "BAS",
-        "RoadTeam": "PAM",
-        "Winner": "UNKNOWN"
+        "RoadTeam": "PAM"
     },
     {
-        "GameCode": "E2025_290",
         "LocalTeam": "MAD",
-        "RoadTeam": "MUN",
-        "Winner": "UNKNOWN"
+        "RoadTeam": "MUN"
     },
     {
-        "GameCode": "E2025_288",
         "LocalTeam": "HTA",
-        "RoadTeam": "MIL",
-        "Winner": "UNKNOWN"
+        "RoadTeam": "MIL"
     }
 ]
