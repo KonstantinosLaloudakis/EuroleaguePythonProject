@@ -126,6 +126,10 @@ def parse_game_data():
     df_results = pd.DataFrame(game_results)
     print(df_results.head(3))
     
+    # Save Game Results for Oracle (Matchup Predictor)
+    df_results.to_json('mvp_game_results.json', orient='records', indent=4)
+    print("Saved mvp_game_results.json")
+    
     # Compute Standings
     standings = {}
     
