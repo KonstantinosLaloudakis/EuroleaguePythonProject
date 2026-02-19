@@ -3,6 +3,15 @@ import json
 import numpy as np
 
 def verify_oracle():
+    # 0. Load Round Map
+    try:
+        with open('game_code_to_round.json', 'r') as f:
+            round_map = json.load(f)
+        print(f"Loaded Round Map for {len(round_map)} games.")
+    except FileNotFoundError:
+        print("Error: game_code_to_round.json not found. Run parse_schedule_xml.py first.")
+        return
+
     # 1. Load Data
     try:
         df = pd.read_json('mvp_game_results.json')
@@ -18,6 +27,7 @@ def verify_oracle():
 
     # 2. Calculate Global Stats (HCA & Ratings)
     # Note: Using End-of-Season ratings to predict past games (Hindsight Analysis)
+    # This checks if the formula ITSELF is valid given true team strengths.
     avg_local = played['LocalScore'].mean()
     avg_road = played['RoadScore'].mean()
     hca = avg_local - avg_road
@@ -55,6 +65,15 @@ def verify_oracle():
     upsets = []
 
     for _, row in played.iterrows():
+        game_code = str(row['GameCode'])
+        
+        # Determine Round
+        if game_code in round_map:
+            round_num = round_map[game_code]
+        else:
+            # Fallback (should not happen if map is complete)
+            round_num = ((int(game_code) - 1) // 9) + 1
+            
         local = row['LocalTeam']
         road = row['RoadTeam']
         actual_margin = row['LocalScore'] - row['RoadScore']
@@ -75,19 +94,14 @@ def verify_oracle():
         error = abs(predicted_margin - actual_margin)
         margin_errors.append(error)
         
-        # Upset Score (Signed deviation relative to prediction)
-        # If Pred +10 (Home big fav) and Actual -10 (Away big win), Diff = -20
-        # If Pred -5 (Away fav) and Actual +5 (Home win), Diff = +10
-        # We want "Ranking Deviation".
-        # Let's simply track "Margin Deviation" = Actual - Predicted
         deviation = actual_margin - predicted_margin
         
-        # An "Upset" is when the deviation is large and goes AGAINST the prediction
-        # i.e., Pred > 0 but Actual < 0 (Home Upset) or Pred < 0 but Actual > 0 (Away Upset)
-        is_upset = (predicted_margin > 0 and actual_margin < 0) or (predicted_margin < 0 and actual_margin > 0)
+        # Upset: Pred Winner lost
+        is_upset = (predicted_winner != actual_winner)
         
         game_info = {
             'GameCode': row['GameCode'],
+            'Round': round_num,
             'Matchup': f"{local} vs {road}",
             'PredictedMargin': round(predicted_margin, 2),
             'ActualMargin': float(actual_margin),
@@ -114,7 +128,7 @@ def verify_oracle():
 
     print("\n--- TOP 5 BIGGEST UPSETS (CHAOS GAMES) ---")
     for i, g in enumerate(top_upsets):
-        print(f"{i+1}. {g['Matchup']} | Pred: {g['PredictedWinner']} +{abs(g['PredictedMargin'])} | Actual: {g['Winner']} +{abs(g['ActualMargin'])} | Swing: {g['Error']} pts")
+        print(f"{i+1}. {g['Matchup']} (Rd {g['Round']}) | Pred: {g['PredictedWinner']} +{abs(g['PredictedMargin'])} | Actual: {g['Winner']} +{abs(g['ActualMargin'])} | Swing: {g['Error']} pts")
 
     # Save Report
     report = {
@@ -128,13 +142,64 @@ def verify_oracle():
         json.dump(report, f, indent=4)
     print("\nReport saved to oracle_verification_report.json")
 
-    # 5. Visualization (Added)
+    # Save Full Game History (User Request)
+    with open('oracle_games_history.json', 'w') as f:
+        json.dump(upsets, f, indent=4)
+    print("Full history saved to oracle_games_history.json")
+
+    # 5. Predicted Rankings (User Request)
+    # Aggregating predicted wins
+    pred_standings = {t: {'PredW': 0, 'PredL': 0, 'ActW': 0, 'ActL': 0} for t in team_stats.keys()}
+    
+    for g in upsets:
+        pw = g['PredictedWinner']
+        aw = g['Winner']
+        
+        # Infer loser (Matchup is "Local vs Road")
+        # simple parse
+        teams_in_game = g['Matchup'].split(' vs ')
+        if len(teams_in_game) != 2: continue # Should not happen
+        
+        t1, t2 = teams_in_game
+        pl = t2 if pw == t1 else t1
+        al = t2 if aw == t1 else t1
+        
+        if pw in pred_standings: pred_standings[pw]['PredW'] += 1
+        if pl in pred_standings: pred_standings[pl]['PredL'] += 1
+        
+        if aw in pred_standings: pred_standings[aw]['ActW'] += 1
+        if al in pred_standings: pred_standings[al]['ActL'] += 1
+
+    # Convert to list and sort
+    ranking_list = []
+    for t, s in pred_standings.items():
+        ranking_list.append({
+            'Team': t,
+            'PredictedW': s['PredW'],
+            'PredictedL': s['PredL'],
+            'ActualW': s['ActW'],
+            'ActualL': s['ActL'],
+            'Delta': s['ActW'] - s['PredW'] # Positive = Team overperformed Oracle
+        })
+    
+    # Sort by Predicted Wins
+    ranking_list.sort(key=lambda x: x['PredictedW'], reverse=True)
+    
+    # Save
+    with open('oracle_predicted_standings.json', 'w') as f:
+        json.dump(ranking_list, f, indent=4)
+    print("Predicted Standings saved to oracle_predicted_standings.json")
+
+    # 6. Visualization
     import matplotlib.pyplot as plt
     
     # A. Accuracy by Round
-    # Assuming 9 games per round, sorted by GameCode
     df_ver = pd.DataFrame(upsets)
-    df_ver['Round'] = ((df_ver['GameCode'] - 1) // 9) + 1
+    
+    # Group by Round (using Official Round)
+    round_counts = df_ver['Round'].value_counts().sort_index()
+    print("\n--- Games Verified Per Round ---")
+    print(round_counts)
     
     round_acc = df_ver.groupby('Round').apply(lambda x: (x['PredictedWinner'] == x['Winner']).mean() * 100)
     
@@ -143,7 +208,7 @@ def verify_oracle():
     # Plot 1: Accuracy Trend
     ax1.plot(round_acc.index, round_acc.values, marker='o', linestyle='-', color='#1d428a', linewidth=2)
     ax1.axhline(y=accuracy, color='green', linestyle='--', label=f'Avg Accuracy ({accuracy:.1f}%)')
-    ax1.set_title("Oracle Accuracy by Round", fontsize=14, fontweight='bold')
+    ax1.set_title("Oracle Accuracy by Round (Official Schedule)", fontsize=14, fontweight='bold')
     ax1.set_ylabel("Accuracy (%)")
     ax1.set_xlabel("Round")
     ax1.set_ylim(0, 100)

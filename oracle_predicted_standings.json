@@ -1,0 +1,162 @@
+[
+    {
+        "Team": "OLY",
+        "PredictedW": 25,
+        "PredictedL": 2,
+        "ActualW": 18,
+        "ActualL": 9,
+        "Delta": -7
+    },
+    {
+        "Team": "ZAL",
+        "PredictedW": 24,
+        "PredictedL": 4,
+        "ActualW": 16,
+        "ActualL": 12,
+        "Delta": -8
+    },
+    {
+        "Team": "MAD",
+        "PredictedW": 22,
+        "PredictedL": 6,
+        "ActualW": 17,
+        "ActualL": 11,
+        "Delta": -5
+    },
+    {
+        "Team": "MCO",
+        "PredictedW": 22,
+        "PredictedL": 6,
+        "ActualW": 16,
+        "ActualL": 12,
+        "Delta": -6
+    },
+    {
+        "Team": "PAN",
+        "PredictedW": 21,
+        "PredictedL": 7,
+        "ActualW": 16,
+        "ActualL": 12,
+        "Delta": -5
+    },
+    {
+        "Team": "HTA",
+        "PredictedW": 20,
+        "PredictedL": 7,
+        "ActualW": 16,
+        "ActualL": 11,
+        "Delta": -4
+    },
+    {
+        "Team": "ULK",
+        "PredictedW": 20,
+        "PredictedL": 7,
+        "ActualW": 20,
+        "ActualL": 7,
+        "Delta": 0
+    },
+    {
+        "Team": "PAM",
+        "PredictedW": 20,
+        "PredictedL": 8,
+        "ActualW": 18,
+        "ActualL": 10,
+        "Delta": -2
+    },
+    {
+        "Team": "RED",
+        "PredictedW": 18,
+        "PredictedL": 10,
+        "ActualW": 16,
+        "ActualL": 12,
+        "Delta": -2
+    },
+    {
+        "Team": "BAR",
+        "PredictedW": 18,
+        "PredictedL": 10,
+        "ActualW": 17,
+        "ActualL": 11,
+        "Delta": -1
+    },
+    {
+        "Team": "DUB",
+        "PredictedW": 13,
+        "PredictedL": 15,
+        "ActualW": 14,
+        "ActualL": 14,
+        "Delta": 1
+    },
+    {
+        "Team": "MIL",
+        "PredictedW": 11,
+        "PredictedL": 17,
+        "ActualW": 14,
+        "ActualL": 14,
+        "Delta": 3
+    },
+    {
+        "Team": "IST",
+        "PredictedW": 8,
+        "PredictedL": 20,
+        "ActualW": 9,
+        "ActualL": 19,
+        "Delta": 1
+    },
+    {
+        "Team": "MUN",
+        "PredictedW": 8,
+        "PredictedL": 20,
+        "ActualW": 12,
+        "ActualL": 16,
+        "Delta": 4
+    },
+    {
+        "Team": "TEL",
+        "PredictedW": 7,
+        "PredictedL": 21,
+        "ActualW": 13,
+        "ActualL": 15,
+        "Delta": 6
+    },
+    {
+        "Team": "VIR",
+        "PredictedW": 7,
+        "PredictedL": 21,
+        "ActualW": 12,
+        "ActualL": 16,
+        "Delta": 5
+    },
+    {
+        "Team": "PRS",
+        "PredictedW": 7,
+        "PredictedL": 20,
+        "ActualW": 9,
+        "ActualL": 18,
+        "Delta": 2
+    },
+    {
+        "Team": "BAS",
+        "PredictedW": 5,
+        "PredictedL": 23,
+        "ActualW": 9,
+        "ActualL": 19,
+        "Delta": 4
+    },
+    {
+        "Team": "ASV",
+        "PredictedW": 2,
+        "PredictedL": 26,
+        "ActualW": 7,
+        "ActualL": 21,
+        "Delta": 5
+    },
+    {
+        "Team": "PAR",
+        "PredictedW": 0,
+        "PredictedL": 28,
+        "ActualW": 9,
+        "ActualL": 19,
+        "Delta": 9
+    }
+]

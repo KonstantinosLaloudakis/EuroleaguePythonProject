@@ -5,6 +5,7 @@
     "TopUpsets": [
         {
             "GameCode": 160,
+            "Round": 16,
             "Matchup": "ZAL vs IST",
             "PredictedMargin": 12.41,
             "ActualMargin": -23.0,
@@ -16,6 +17,7 @@
         },
         {
             "GameCode": 33,
+            "Round": 4,
             "Matchup": "ULK vs DUB",
             "PredictedMargin": 6.71,
             "ActualMargin": -24.0,
@@ -27,6 +29,7 @@
         },
         {
             "GameCode": 135,
+            "Round": 14,
             "Matchup": "ZAL vs TEL",
             "PredictedMargin": 11.27,
             "ActualMargin": -18.0,
@@ -38,6 +41,7 @@
         },
         {
             "GameCode": 243,
+            "Round": 25,
             "Matchup": "HTA vs MUN",
             "PredictedMargin": 9.24,
             "ActualMargin": -15.0,
@@ -49,6 +53,7 @@
         },
         {
             "GameCode": 265,
+            "Round": 27,
             "Matchup": "PAR vs PAN",
             "PredictedMargin": -6.23,
             "ActualMargin": 16.0,
@@ -57,61 +62,6 @@
             "IsUpset": true,
             "Winner": "PAR",
             "PredictedWinner": "PAN"
-        },
-        {
-            "GameCode": 21,
-            "Matchup": "HTA vs TEL",
-            "PredictedMargin": 8.84,
-            "ActualMargin": -13.0,
-            "Deviation": -21.84,
-            "Error": 21.84,
-            "IsUpset": true,
-            "Winner": "TEL",
-            "PredictedWinner": "HTA"
-        },
-        {
-            "GameCode": 251,
-            "Matchup": "IST vs PAM",
-            "PredictedMargin": -4.48,
-            "ActualMargin": 17.0,
-            "Deviation": 21.48,
-            "Error": 21.48,
-            "IsUpset": true,
-            "Winner": "IST",
-            "PredictedWinner": "PAM"
-        },
-        {
-            "GameCode": 234,
-            "Matchup": "PRS vs DUB",
-            "PredictedMargin": 0.71,
-            "ActualMargin": -20.0,
-            "Deviation": -20.71,
-            "Error": 20.71,
-            "IsUpset": true,
-            "Winner": "DUB",
-            "PredictedWinner": "PRS"
-        },
-        {
-            "GameCode": 44,
-            "Matchup": "ZAL vs MIL",
-            "PredictedMargin": 9.63,
-            "ActualMargin": -11.0,
-            "Deviation": -20.63,
-            "Error": 20.63,
-            "IsUpset": true,
-            "Winner": "MIL",
-            "PredictedWinner": "ZAL"
-        },
-        {
-            "GameCode": 278,
-            "Matchup": "MIL vs DUB",
-            "PredictedMargin": 2.59,
-            "ActualMargin": -18.0,
-            "Deviation": -20.59,
-            "Error": 20.59,
-            "IsUpset": true,
-            "Winner": "DUB",
-            "PredictedWinner": "MIL"
         }
     ]
 }
