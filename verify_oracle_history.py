@@ -109,14 +109,11 @@ def verify_oracle():
     print(f"Mean Margin Error: {mae:.2f} pts")
     
     # Sort by Error (Biggest Surprises)
-    # Or Sort by Deviation magnitude?
-    # Usually "Biggest Upset" = Predicted Winner Lost.
-    # Let's filter for failed predictions and sort by Error.
     failed_preds = [g for g in upsets if g['IsUpset']]
-    top_upsets = sorted(failed_preds, key=lambda x: x['Error'], reverse=True)[:10]
+    top_upsets = sorted(failed_preds, key=lambda x: x['Error'], reverse=True)[:5]
 
     print("\n--- TOP 5 BIGGEST UPSETS (CHAOS GAMES) ---")
-    for i, g in enumerate(top_upsets[:5]):
+    for i, g in enumerate(top_upsets):
         print(f"{i+1}. {g['Matchup']} | Pred: {g['PredictedWinner']} +{abs(g['PredictedMargin'])} | Actual: {g['Winner']} +{abs(g['ActualMargin'])} | Swing: {g['Error']} pts")
 
     # Save Report
@@ -131,8 +128,42 @@ def verify_oracle():
         json.dump(report, f, indent=4)
     print("\nReport saved to oracle_verification_report.json")
 
-    # Optional: Plot
-    # We can plot Accuracy over time? (Would require iterative calc, skipping for now)
+    # 5. Visualization (Added)
+    import matplotlib.pyplot as plt
+    
+    # A. Accuracy by Round
+    # Assuming 9 games per round, sorted by GameCode
+    df_ver = pd.DataFrame(upsets)
+    df_ver['Round'] = ((df_ver['GameCode'] - 1) // 9) + 1
+    
+    round_acc = df_ver.groupby('Round').apply(lambda x: (x['PredictedWinner'] == x['Winner']).mean() * 100)
+    
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 10))
+    
+    # Plot 1: Accuracy Trend
+    ax1.plot(round_acc.index, round_acc.values, marker='o', linestyle='-', color='#1d428a', linewidth=2)
+    ax1.axhline(y=accuracy, color='green', linestyle='--', label=f'Avg Accuracy ({accuracy:.1f}%)')
+    ax1.set_title("Oracle Accuracy by Round", fontsize=14, fontweight='bold')
+    ax1.set_ylabel("Accuracy (%)")
+    ax1.set_xlabel("Round")
+    ax1.set_ylim(0, 100)
+    ax1.grid(True, alpha=0.3)
+    ax1.legend()
+    
+    # Plot 2: Top 5 Upsets (Bar Chart)
+    upset_labels = [f"{g['Matchup']}\n(Swing: {g['Error']}pts)" for g in top_upsets]
+    upset_values = [g['Error'] for g in top_upsets]
+    
+    colors = ['#ff4b4b', '#ff7676', '#ff9e9e', '#ffc2c2', '#ffe6e6']
+    ax2.barh(upset_labels, upset_values, color=colors)
+    ax2.invert_yaxis() # Top upset at top
+    ax2.set_title("Top 5 'Chaos Games' (Biggest Prediction Misses)", fontsize=14, fontweight='bold')
+    ax2.set_xlabel("Margin Swing (Points)")
+    
+    plt.tight_layout()
+    outfile = "oracle_performance_analysis.png"
+    plt.savefig(outfile, dpi=150)
+    print(f"Visualization saved to {outfile}")
 
 if __name__ == "__main__":
     verify_oracle()
