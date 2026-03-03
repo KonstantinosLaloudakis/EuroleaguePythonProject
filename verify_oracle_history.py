@@ -124,9 +124,16 @@ def verify_oracle():
         l_form = l_stat['Form']
         r_form = r_stat['Form']
         
-        l_power = (l_adj * 0.70) + (l_loc * 0.10) + (l_form * 0.20)
-        r_power = (r_adj * 0.70) + (r_loc * 0.10) + (r_form * 0.20)
-        new_margin = (l_power - r_power) + (hca * 0.5)
+        l_power = (l_adj * 0.85) + (l_loc * 0.10) + (l_form * 0.05)
+        r_power = (r_adj * 0.85) + (r_loc * 0.10) + (r_form * 0.05)
+        
+        # Per-team HCA blend
+        l_overall = l_stat['Net']
+        team_hca = l_stat['HomeNet'] - l_overall
+        hca_alpha = 0.3
+        blended_hca = (hca * (1 - hca_alpha) + team_hca * hca_alpha) * 0.5
+        
+        new_margin = (l_power - r_power) + blended_hca
         new_winner = local if new_margin > 0 else road
         
         # Accuracy

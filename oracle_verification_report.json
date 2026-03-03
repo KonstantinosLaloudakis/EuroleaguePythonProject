@@ -1,29 +1,16 @@
 {
     "OldAccuracy": 67.70833333333334,
-    "NewAccuracy": 65.97222222222221,
+    "NewAccuracy": 70.13888888888889,
     "OldMAE": 8.82585009578544,
-    "NewMAE": 8.931700931013431,
+    "NewMAE": 8.813722949603877,
     "TotalGames": 288,
     "TopUpsets": [
-        {
-            "GameCode": 247,
-            "Round": 25,
-            "Matchup": "MCO vs VIR",
-            "OldMargin": 10.69,
-            "NewMargin": 9.84,
-            "ActualMargin": -2.0,
-            "OldCorrect": false,
-            "NewCorrect": false,
-            "IsUpset": true,
-            "Winner": "VIR",
-            "PredictedWinner": "MCO"
-        },
         {
             "GameCode": 34,
             "Round": 4,
             "Matchup": "OLY vs IST",
             "OldMargin": 12.99,
-            "NewMargin": 9.66,
+            "NewMargin": 10.98,
             "ActualMargin": -4.0,
             "OldCorrect": false,
             "NewCorrect": false,
@@ -32,24 +19,11 @@
             "PredictedWinner": "OLY"
         },
         {
-            "GameCode": 215,
-            "Round": 22,
-            "Matchup": "DUB vs VIR",
-            "OldMargin": 6.55,
-            "NewMargin": 9.5,
-            "ActualMargin": -8.0,
-            "OldCorrect": false,
-            "NewCorrect": false,
-            "IsUpset": true,
-            "Winner": "VIR",
-            "PredictedWinner": "DUB"
-        },
-        {
             "GameCode": 160,
             "Round": 16,
             "Matchup": "ZAL vs IST",
             "OldMargin": 12.59,
-            "NewMargin": 8.56,
+            "NewMargin": 10.52,
             "ActualMargin": -23.0,
             "OldCorrect": false,
             "NewCorrect": false,
@@ -58,17 +32,43 @@
             "PredictedWinner": "ZAL"
         },
         {
-            "GameCode": 248,
+            "GameCode": 247,
             "Round": 25,
-            "Matchup": "BAS vs ZAL",
-            "OldMargin": -7.35,
-            "NewMargin": -8.11,
-            "ActualMargin": 11.0,
+            "Matchup": "MCO vs VIR",
+            "OldMargin": 10.69,
+            "NewMargin": 9.77,
+            "ActualMargin": -2.0,
             "OldCorrect": false,
             "NewCorrect": false,
             "IsUpset": true,
-            "Winner": "BAS",
+            "Winner": "VIR",
+            "PredictedWinner": "MCO"
+        },
+        {
+            "GameCode": 135,
+            "Round": 14,
+            "Matchup": "ZAL vs TEL",
+            "OldMargin": 10.96,
+            "NewMargin": 8.93,
+            "ActualMargin": -18.0,
+            "OldCorrect": false,
+            "NewCorrect": false,
+            "IsUpset": true,
+            "Winner": "TEL",
             "PredictedWinner": "ZAL"
+        },
+        {
+            "GameCode": 97,
+            "Round": 10,
+            "Matchup": "PAR vs MCO",
+            "OldMargin": -9.0,
+            "NewMargin": -8.49,
+            "ActualMargin": 2.0,
+            "OldCorrect": false,
+            "NewCorrect": false,
+            "IsUpset": true,
+            "Winner": "PAR",
+            "PredictedWinner": "MCO"
         }
     ]
 }

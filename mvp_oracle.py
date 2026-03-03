@@ -252,26 +252,32 @@ def run_oracle(target_round=None):
         l_home_pct = (l_form['HomeW'] / l_form['HomeG']) * 100 if l_form['HomeG'] > 0 else 0
         r_road_pct = (r_form['RoadW'] / r_form['RoadG']) * 100 if r_form['RoadG'] > 0 else 0
         
-        # === 3-FACTOR PREDICTION MODEL ===
-        # Weights optimized via incremental backtest (70/10/20 > 50/20/30)
-        # Factor 1: KenPom Adjusted Net Rating (70%) — strongest single predictor
+        # === OPTIMIZED PREDICTION MODEL ===
+        # Weights: 85/5/10 + per-team HCA blend (optimized via incremental backtest)
+        # Factor 1: KenPom Adjusted Net Rating (85%) — strongest single predictor
         l_adj = adj_net_lookup.get(local, l_stat['Net'])
         r_adj = adj_net_lookup.get(road, r_stat['Net'])
         
-        # Factor 2: True Home/Away Location Split (10%)
+        # Factor 2: True Home/Away Location Split (5%)
         l_loc = l_stat['HomeNet']   # Local team's home performance
         r_loc = r_stat['AwayNet']   # Road team's away performance
         
-        # Factor 3: Recent Form / Momentum (20%)
+        # Factor 3: Recent Form / Momentum (10%)
         l_form_val = l_stat['Form']
         r_form_val = r_stat['Form']
         
         # Blended Power Rating
-        l_power = (l_adj * 0.70) + (l_loc * 0.10) + (l_form_val * 0.20)
-        r_power = (r_adj * 0.70) + (r_loc * 0.10) + (r_form_val * 0.20)
+        l_power = (l_adj * 0.85) + (l_loc * 0.05) + (l_form_val * 0.10)
+        r_power = (r_adj * 0.85) + (r_loc * 0.05) + (r_form_val * 0.10)
         
-        # Predicted margin with reduced HCA (since Adj Net is global)
-        margin = (l_power - r_power) + (hca * 0.5)
+        # Per-team HCA: blend global HCA with team-specific home boost
+        # team_hca = how much better team plays at home vs their average
+        l_net_overall = l_stat['Net']
+        team_hca = l_stat['HomeNet'] - l_net_overall
+        hca_alpha = 0.3  # 30% team-specific, 70% global
+        blended_hca = (hca * (1 - hca_alpha) + team_hca * hca_alpha) * 0.5
+        
+        margin = (l_power - r_power) + blended_hca
         
         winner = local if margin > 0 else road
         
