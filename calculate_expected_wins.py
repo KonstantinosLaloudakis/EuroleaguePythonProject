@@ -257,12 +257,14 @@ def calculate_expected_wins():
         texts.append(ax.text(xw, aw, name, fontsize=7.5, color='#e6edf3', 
                              fontweight='bold', ha='center', va='center'))
     
-    # Auto-resolve label overlaps
+    # Auto-resolve label overlaps (tuned for tight bottom-5 cluster)
     adjust_text(texts, ax=ax, 
-                arrowprops=dict(arrowstyle='-', color='#8b949e', alpha=0.4, lw=0.5),
-                force_text=(0.8, 1.0),
-                force_points=(0.3, 0.5),
-                expand=(1.5, 1.5))
+                arrowprops=dict(arrowstyle='-', color='#8b949e', alpha=0.5, lw=0.7),
+                force_text=(1.5, 2.0),
+                force_points=(0.5, 1.0),
+                expand=(2.0, 2.0),
+                ensure_inside_axes=True,
+                time_lim=5)
     
     # Labels and title
     ax.set_xlabel('Expected Wins (xW)', fontsize=13, color='#e6edf3', fontweight='bold')
