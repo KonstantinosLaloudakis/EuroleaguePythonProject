@@ -8,6 +8,7 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 import matplotlib.image as mpimg
 from PIL import Image
 import os
+import pickle
 
 def run_oracle(target_round=None):
     # 1. Load Data
@@ -120,6 +121,18 @@ def run_oracle(target_round=None):
         print(f"Loaded Elo Ratings for {len(elo_lookup)} teams.")
     else:
         print("Warning: elo_ratings.json not found. Elo factor disabled.")
+
+    # 3.3 Load Trained Logistic Regression Model (for calibrated probabilities)
+    lr_model = None
+    lr_scaler = None
+    if os.path.exists('oracle_lr_model.pkl'):
+        with open('oracle_lr_model.pkl', 'rb') as f:
+            lr_data = pickle.load(f)
+        lr_model = lr_data['model']
+        lr_scaler = lr_data['scaler']
+        print("Loaded trained LR model for calibrated probabilities.")
+    else:
+        print("Warning: oracle_lr_model.pkl not found. Using hand-tuned logistic.")
 
     # 3.5 Calculate League Rankings
     # Sort by ORTG (Desc) and DRTG (Asc)
@@ -289,8 +302,26 @@ def run_oracle(target_round=None):
         
         winner = local if margin > 0 else road
         
-        # Logistic confidence (proper probability calibration)
-        win_prob = 1 / (1 + np.exp(-margin / 6)) * 100
+        # Win probability: use trained LR model if available, else hand-tuned
+        if lr_model is not None and lr_scaler is not None:
+            # Build feature vector matching training features
+            l_form_val = l_stat['Form']
+            r_form_val = r_stat['Form']
+            form_diff = l_form_val - r_form_val
+            l_sos = sos_lookup.get(local, 0.5)
+            r_sos = sos_lookup.get(road, 0.5)
+            sos_diff = l_sos - r_sos
+            l_home_net = l_stat['HomeNet']
+            r_away_net = r_stat['AwayNet']
+            
+            feat = np.array([[adj_diff, elo_margin, l_home_net, r_away_net, 
+                              form_diff, sos_diff, team_hca]])
+            feat_s = lr_scaler.transform(feat)
+            win_prob = lr_model.predict_proba(feat_s)[0][1] * 100  # P(home wins)
+            if winner != local:
+                win_prob = 100 - win_prob  # Flip to winner's perspective
+        else:
+            win_prob = 1 / (1 + np.exp(-margin / 6)) * 100
         
         # === X-FACTOR INSIGHTS ===
         # Now data-driven with SOS context
