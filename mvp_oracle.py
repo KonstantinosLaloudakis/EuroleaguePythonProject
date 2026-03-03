@@ -110,6 +110,17 @@ def run_oracle(target_round=None):
     else:
         print("Warning: adjusted_ratings.json not found. Falling back to raw ratings.")
 
+    # 3.2 Load Rolling Elo Ratings
+    elo_lookup = {}
+    if os.path.exists('elo_ratings.json'):
+        with open('elo_ratings.json', 'r') as f:
+            elo_data = json.load(f)
+        for entry in elo_data:
+            elo_lookup[entry['Team']] = entry['Elo']
+        print(f"Loaded Elo Ratings for {len(elo_lookup)} teams.")
+    else:
+        print("Warning: elo_ratings.json not found. Elo factor disabled.")
+
     # 3.5 Calculate League Rankings
     # Sort by ORTG (Desc) and DRTG (Asc)
     sorted_ortg = sorted(team_stats.items(), key=lambda x: x[1]['ORTG'], reverse=True)
@@ -252,31 +263,29 @@ def run_oracle(target_round=None):
         r_road_pct = (r_form['RoadW'] / r_form['RoadG']) * 100 if r_form['RoadG'] > 0 else 0
         
         # === OPTIMIZED PREDICTION MODEL ===
-        # Weights: 85/5/10 + per-team HCA blend (optimized via incremental backtest)
-        # Factor 1: KenPom Adjusted Net Rating (85%) — strongest single predictor
+        # 25% Elo + 75% Adj Net + per-team HCA (optimized via incremental backtest)
+        # Elo tracks real-time team quality; Adj Net corrects for opponent quality
+        
+        # Factor 1: KenPom Adjusted Net Rating (75%)
         l_adj = adj_net_lookup.get(local, l_stat['Net'])
         r_adj = adj_net_lookup.get(road, r_stat['Net'])
         
-        # Factor 2: True Home/Away Location Split (5%)
-        l_loc = l_stat['HomeNet']   # Local team's home performance
-        r_loc = r_stat['AwayNet']   # Road team's away performance
+        # Factor 2: Rolling Elo Rating (25%) — converted to points scale
+        l_elo = elo_lookup.get(local, 1500)
+        r_elo = elo_lookup.get(road, 1500)
+        elo_margin = (l_elo - r_elo + 50) / 25  # +50 for Elo HCA, /25 to convert to pts
         
-        # Factor 3: Recent Form / Momentum (10%)
-        l_form_val = l_stat['Form']
-        r_form_val = r_stat['Form']
-        
-        # Blended Power Rating
-        l_power = (l_adj * 0.85) + (l_loc * 0.05) + (l_form_val * 0.10)
-        r_power = (r_adj * 0.85) + (r_loc * 0.05) + (r_form_val * 0.10)
+        # Blended prediction: 75% Adj Net diff + 25% Elo margin
+        adj_diff = l_adj - r_adj
+        margin_raw = (adj_diff * 0.75) + (elo_margin * 0.25)
         
         # Per-team HCA: blend global HCA with team-specific home boost
-        # team_hca = how much better team plays at home vs their average
         l_net_overall = l_stat['Net']
         team_hca = l_stat['HomeNet'] - l_net_overall
         hca_alpha = 0.3  # 30% team-specific, 70% global
         blended_hca = (hca * (1 - hca_alpha) + team_hca * hca_alpha) * 0.5
         
-        margin = (l_power - r_power) + blended_hca
+        margin = margin_raw + blended_hca
         
         winner = local if margin > 0 else road
         
@@ -322,7 +331,9 @@ def run_oracle(target_round=None):
                 insight = f"⚖️ Evenly matched (Adj Net gap: {gap:.1f})"
         
         # Build insight block
-        line2 = f"Adj Net: {l_adj:+.1f} v {r_adj:+.1f}  |  Form: {l_form_val:+.1f} v {r_form_val:+.1f}"
+        l_form_val = l_stat['Form']
+        r_form_val = r_stat['Form']
+        line2 = f"Adj Net: {l_adj:+.1f} v {r_adj:+.1f}  |  Elo: {l_elo:.0f} v {r_elo:.0f}"
         
         l_l5 = l_form.get('Last5', [])
         r_l5 = r_form.get('Last5', [])
