@@ -1,0 +1,111 @@
+"""
+True Plus-Minus (TPM) Calculator — 2025-26 Season Only
+Measures the actual point differential when a player is on the floor,
+normalized per 40 minutes, ignoring traditional box score stats.
+"""
+
+import json
+import pandas as pd
+import numpy as np
+import os
+
+def calculate_tpm_2025():
+    with open('mvp_all_game_stats_2025.json', 'r') as f:
+        games = json.load(f)
+        
+    # Load opponent quality adjustments for more advanced TPM later if needed
+    adj_net = {}
+    if os.path.exists('adjusted_ratings.json'):
+        with open('adjusted_ratings.json', 'r') as f:
+            for e in json.load(f):
+                adj_net[e['Team']] = e['Adj_Net']
+                
+    player_data = {}
+    
+    for game in games:
+        for is_local, team_key in [(True, 'local.players'), (False, 'road.players')]:
+            players = game.get(team_key, [])
+            for p_entry in players:
+                stats = p_entry.get('stats', {})
+                info = p_entry.get('player', {})
+                p_code = info.get('person', {}).get('code')
+                
+                if not p_code:
+                    continue
+                    
+                p_name = info.get('person', {}).get('name')
+                t_code = info.get('club', {}).get('code', 'UNKNOWN')
+                
+                if p_code not in player_data:
+                    player_data[p_code] = {
+                        'name': p_name,
+                        'team': t_code,
+                        'GP': 0,
+                        'mins': 0.0,
+                        'raw_pm': 0,  # Raw Plus-Minus
+                    }
+                
+                pd_entry = player_data[p_code]
+                
+                # Parse minutes
+                time_played = stats.get('timePlayed', 0.0)
+                if not time_played or time_played == 0:
+                     continue # DNP
+                     
+                pd_entry['GP'] += 1
+                pd_entry['mins'] += float(time_played) / 60.0
+                
+                # Raw Plus-Minus 
+                pm = stats.get('plusMinus', 0.0)
+                pd_entry['raw_pm'] += pm
+
+    # Convert to DataFrame
+    rows = []
+    for code, d in player_data.items():
+        if d['GP'] >= 10 and d['mins'] >= 10: 
+            avg_mins = d['mins'] / d['GP']
+            if avg_mins >= 10.0: # Minimum 10 minutes per game
+                # TPM calculation: Plus-Minus per 40 minutes
+                tpm_40 = (d['raw_pm'] / d['mins']) * 40
+                
+                rows.append({
+                    'player.code': code,
+                    'player.name': d['name'],
+                    'player.team.code': d['team'],
+                    'gamesPlayed': d['GP'],
+                    'mins_played': avg_mins,
+                    'Total_PM': d['raw_pm'],
+                    'TPM_40': tpm_40
+                })
+                
+    df = pd.DataFrame(rows)
+    print(f"Processed {len(df)} players with >10 GP and >10 MPG")
+    
+    # Sort and rank
+    df = df.sort_values('TPM_40', ascending=False).reset_index(drop=True)
+    df['TPM_Rank'] = df.index + 1
+    
+    # === PRINT RESULTS ===
+    print(f"\n{'='*75}")
+    print(f"  TRUE PLUS-MINUS (TPM) per 40 mins — Euroleague 2025-26")
+    print(f"{'='*75}")
+    print(f"  {'Rank':<4} {'Player':<25} {'Team':<5} {'TPM/40':>8} {'Total PM':>8}")
+    print(f"  {'-'*65}")
+    
+    for _, row in df.head(20).iterrows():
+        print(f"  {row['TPM_Rank']:<4} {row['player.name']:<25} {row['player.team.code']:<5} "
+              f"{row['TPM_40']:>8.1f} {row['Total_PM']:>8.0f}")
+              
+    # Look at worst TPM
+    print(f"\n  --- WORST TPM (Team bleeds points when they play) ---")
+    worst = df.tail(5)
+    for _, row in worst.iterrows():
+         print(f"  {row['TPM_Rank']:<4} {row['player.name']:<25} ({row['player.team.code']}) | TPM/40: {row['TPM_40']:.1f}")
+
+    # Save results
+    df.to_json('tpm_ratings.json', orient='records', indent=4)
+    print(f"\n  Saved full rankings to tpm_ratings.json")
+
+
+if __name__ == '__main__':
+    calculate_tpm_2025()

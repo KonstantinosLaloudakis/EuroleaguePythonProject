@@ -1,55 +1,112 @@
 """
-Weighted Impact Rating (WIR) Calculator.
+Weighted Impact Rating (WIR) Calculator — 2025-26 Season Only
 Replaces Euroleague's flawed PIR metric with an efficiency-adjusted, 
-per-minute normalized impact score.
+per-minute normalized impact score. Uses local game-by-game data.
 """
 
+import json
 import pandas as pd
 import numpy as np
 
-def mmss_to_minutes(mmss):
-    """Convert 'MM:SS' string to decimal minutes."""
-    if pd.isna(mmss):
-        return 0.0
-    try:
-        parts = str(mmss).split(':')
-        if len(parts) == 2:
-            return int(parts[0]) + int(parts[1]) / 60.0
-        return float(mmss)
-    except:
-        return 0.0
-
-
-def calculate_wir():
-    # Load player stats (these are already PerGame averages from the API)
-    df = pd.read_csv('player_stats_E2025.csv')
+def calculate_wir_2025():
+    with open('mvp_all_game_stats_2025.json', 'r') as f:
+        games = json.load(f)
+        
+    player_data = {}
     
-    # Filter players with at least 10 games played and 10 mins/game
-    df['mins_played'] = df['minutesPlayed'].apply(mmss_to_minutes)
-    df = df[(df['gamesPlayed'] >= 10) & (df['mins_played'] >= 10.0)].copy()
+    for game in games:
+        for team_key in ['local.players', 'road.players']:
+            players = game.get(team_key, [])
+            for p_entry in players:
+                stats = p_entry.get('stats', {})
+                info = p_entry.get('player', {})
+                p_code = info.get('person', {}).get('code')
+                
+                if not p_code:
+                    continue
+                    
+                p_name = info.get('person', {}).get('name')
+                t_code = info.get('club', {}).get('code', 'UNKNOWN')
+                
+                if p_code not in player_data:
+                    player_data[p_code] = {
+                        'name': p_name,
+                        'team': t_code,
+                        'GP': 0,
+                        'mins': 0.0,
+                        'pts': 0, 'ast': 0, 'orb': 0, 'drb': 0, 'trb': 0,
+                        'stl': 0, 'blk': 0, 'tov': 0,
+                        'fga': 0, 'fgm': 0, 'fta': 0, 'ftm': 0,
+                        'pir': 0
+                    }
+                
+                pd_entry = player_data[p_code]
+                
+                # Parse minutes
+                time_played = stats.get('timePlayed', 0.0)
+                if not time_played or time_played == 0:
+                    continue # DNP
+                    
+                pd_entry['GP'] += 1
+                pd_entry['mins'] += float(time_played) / 60.0
+                pd_entry['pts'] += stats.get('points', 0)
+                pd_entry['ast'] += stats.get('assistances', 0)
+                pd_entry['orb'] += stats.get('offensiveRebounds', 0)
+                pd_entry['drb'] += stats.get('defensiveRebounds', 0)
+                pd_entry['trb'] += stats.get('totalRebounds', 0)
+                pd_entry['stl'] += stats.get('steals', 0)
+                pd_entry['blk'] += stats.get('blocksFavour', 0)
+                pd_entry['tov'] += stats.get('turnovers', 0)
+                pd_entry['pir'] += stats.get('valuation', 0)
+                
+                pd_entry['fga'] += stats.get('fieldGoalsAttemptedTotal', 0)
+                pd_entry['fgm'] += stats.get('fieldGoalsMadeTotal', 0)
+                pd_entry['fta'] += stats.get('freeThrowsAttempted', 0)
+                pd_entry['ftm'] += stats.get('freeThrowsMade', 0)
+
+    # Convert to DataFrame
+    rows = []
+    for code, d in player_data.items():
+        if d['GP'] >= 10 and d['mins'] >= 10: # Minimum 10 games, 10 minutes total (will filter more later)
+            avg_mins = d['mins'] / d['GP']
+            if avg_mins >= 10.0: # Minimum 10 minutes per game
+                rows.append({
+                    'player.code': code,
+                    'player.name': d['name'],
+                    'player.team.code': d['team'],
+                    'player.team.name': d['team'],
+                    'gamesPlayed': d['GP'],
+                    'mins_played': avg_mins,
+                    'pointsScored': d['pts'] / d['GP'],
+                    'assists': d['ast'] / d['GP'],
+                    'offensiveRebounds': d['orb'] / d['GP'],
+                    'defensiveRebounds': d['drb'] / d['GP'],
+                    'totalRebounds': d['trb'] / d['GP'],
+                    'steals': d['stl'] / d['GP'],
+                    'blocks': d['blk'] / d['GP'],
+                    'turnovers': d['tov'] / d['GP'],
+                    'fga': d['fga'] / d['GP'],
+                    'fgm': d['fgm'] / d['GP'],
+                    'fta': d['fta'] / d['GP'],
+                    'ftm': d['ftm'] / d['GP'],
+                    'pir': d['pir'] / d['GP']
+                })
+                
+    df = pd.DataFrame(rows)
+    print(f"Processed {len(df)} players with >10 GP and >10 MPG")
     
-    # Calculate WIR per game
-    pts = df['pointsScored']
-    ast = df['assists']
-    orb = df['offensiveRebounds']
-    drb = df['defensiveRebounds']
-    stl = df['steals']
-    blk = df['blocks']
-    tov = df['turnovers']
-    fga = df['twoPointersAttempted'] + df['threePointersAttempted']
-    fgm = df['twoPointersMade'] + df['threePointersMade']
-    fg_miss = fga - fgm
-    ft_miss = df['freeThrowsAttempted'] - df['freeThrowsMade']
+    fg_miss = df['fga'] - df['fgm']
+    ft_miss = df['fta'] - df['ftm']
     
     # WIR Formula (Efficiency-weighted)
     df['WIR'] = (
-        (pts * 0.8) + 
-        (ast * 1.5) + 
-        (orb * 1.2) + 
-        (drb * 0.4) + 
-        (stl * 1.8) + 
-        (blk * 1.2) - 
-        (tov * 1.5) - 
+        (df['pointsScored'] * 0.8) + 
+        (df['assists'] * 1.5) + 
+        (df['offensiveRebounds'] * 1.2) + 
+        (df['defensiveRebounds'] * 0.4) + 
+        (df['steals'] * 1.8) + 
+        (df['blocks'] * 1.2) - 
+        (df['turnovers'] * 1.5) - 
         (fg_miss * 0.5) - 
         (ft_miss * 0.5)
     )
@@ -59,8 +116,8 @@ def calculate_wir():
     df['PIR_40'] = (df['pir'] / df['mins_played']) * 40
     
     # Calculate True Shooting Percentage for context
-    ts_att = fga + 0.44 * df['freeThrowsAttempted']
-    df['TS%'] = np.where(ts_att > 0, (pts / (2 * ts_att)) * 100, 0)
+    ts_att = df['fga'] + 0.44 * df['fta']
+    df['TS%'] = np.where(ts_att > 0, (df['pointsScored'] / (2 * ts_att)) * 100, 0)
     
     # Sort and rank
     df = df.sort_values('WIR_40', ascending=False).reset_index(drop=True)
@@ -94,7 +151,7 @@ def calculate_wir():
         print(f"  {row['player.name']:<20} ({row['player.team.code']}) | WIR Rank: #{int(row['WIR_Rank'])} | PIR Rank: #{int(row['PIR_Rank'])} | WIR/40: {row['WIR_40']:.1f}")
         
     # Save results
-    cols_to_save = ['player.name', 'player.team.name', 'gamesPlayed', 'mins_played', 
+    cols_to_save = ['player.code', 'player.name', 'player.team.name', 'player.team.code', 'gamesPlayed', 'mins_played', 
                     'pointsScored', 'assists', 'totalRebounds', 'TS%', 
                     'pir', 'PIR_40', 'WIR', 'WIR_40', 'WIR_Rank', 'PIR_Rank', 'Rank_Diff']
     
@@ -103,4 +160,4 @@ def calculate_wir():
 
 
 if __name__ == '__main__':
-    calculate_wir()
+    calculate_wir_2025()

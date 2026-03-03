@@ -120,6 +120,15 @@ Quarter-by-quarter dominance analysis — finds players who own specific periods
 
 **Output:** `zone_master.png`
 
+### Advanced Impact Metrics (WIR, TPM, WPA)
+A suite of modern basketball metrics designed to address the flaws of traditional box score stats like PIR.
+
+- **Weighted Impact Rating (WIR):** An efficiency-weighted formula that heavily rewards playmaking (1.5x) and high-value defensive events (1.8x steals, 1.2x blocks) while penalizing inefficiency (missed shots) and down-weighting simple volume scoring and uncontested defensive rebounds.
+- **True Plus-Minus (TPM):** Measures a team's actual point differential while a specific player is on the floor, normalized per 40 minutes, completely independent of individual box score stats.
+- **Action Win Probability Added (WPA):** Evaluates 160,000+ play-by-play events to calculate the exact Win Probability shift (accounting for score margin and time remaining) caused by a player's direct actions. High-leverage clutch plays are rewarded massively compared to garbage-time points.
+
+**Output examples:** `wir_dumbbell.png`, `tpm_vs_wir_quadrants.png`, `wpa_leaders.png`
+
 ---
 
 ### Clutch Analysis Suite
