@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import argparse
 import sys
 import json
+import numpy as np
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 import matplotlib.image as mpimg
 from PIL import Image
@@ -29,8 +30,7 @@ def run_oracle(target_round=None):
     hca = avg_local - avg_road
     print(f"Global Home Court Advantage (HCA): +{hca:.1f} pts")
 
-    # 3. Calculate Team Ratings (ORTG/DRTG)
-    # We need aggregated points for/against per team
+    # 3. Calculate Team Ratings (ORTG/DRTG) with Home/Away Splits
     teams = {}
     
     for _, row in played.iterrows():
@@ -39,16 +39,34 @@ def run_oracle(target_round=None):
         l_pts = row['LocalScore']
         r_pts = row['RoadScore']
         
-        if local not in teams: teams[local] = {'PTS': 0, 'PA': 0, 'GP': 0}
-        if road not in teams: teams[road] = {'PTS': 0, 'PA': 0, 'GP': 0}
+        if local not in teams: teams[local] = {
+            'PTS': 0, 'PA': 0, 'GP': 0,
+            'HomePTS': 0, 'HomePA': 0, 'HomeGP': 0,
+            'AwayPTS': 0, 'AwayPA': 0, 'AwayGP': 0,
+            'GameMargins': []
+        }
+        if road not in teams: teams[road] = {
+            'PTS': 0, 'PA': 0, 'GP': 0,
+            'HomePTS': 0, 'HomePA': 0, 'HomeGP': 0,
+            'AwayPTS': 0, 'AwayPA': 0, 'AwayGP': 0,
+            'GameMargins': []
+        }
         
         teams[local]['PTS'] += l_pts
         teams[local]['PA'] += r_pts
         teams[local]['GP'] += 1
+        teams[local]['HomePTS'] += l_pts
+        teams[local]['HomePA'] += r_pts
+        teams[local]['HomeGP'] += 1
+        teams[local]['GameMargins'].append(l_pts - r_pts)
         
         teams[road]['PTS'] += r_pts
         teams[road]['PA'] += l_pts
         teams[road]['GP'] += 1
+        teams[road]['AwayPTS'] += r_pts
+        teams[road]['AwayPA'] += l_pts
+        teams[road]['AwayGP'] += 1
+        teams[road]['GameMargins'].append(r_pts - l_pts)
         
     team_names = {
         'OLY': 'Olympiacos', 'ULK': 'Fenerbahce', 'PAN': 'Panathinaikos',
@@ -57,19 +75,40 @@ def run_oracle(target_round=None):
         'HTA': 'Hapoel Tel Aviv', 'PAR': 'Partizan', 'RED': 'Crvena Zvezda',
         'TEL': 'Maccabi', 'BAS': 'Baskonia', 'MUN': 'Bayern',
         'VIR': 'Virtus Bologna', 'PAM': 'Valencia', 'ASV': 'ASVEL',
-        'PRS': 'Paris Basketball', 'BER': 'ALBA Berlin'
+        'PRS': 'Paris Basketball', 'BER': 'ALBA Berlin',
+        'MIL': 'EA7 Milan'
     }
 
     team_stats = {}
     for t, s in teams.items():
         if s['GP'] > 0:
+            home_net = (s['HomePTS'] - s['HomePA']) / s['HomeGP'] if s['HomeGP'] > 0 else 0
+            away_net = (s['AwayPTS'] - s['AwayPA']) / s['AwayGP'] if s['AwayGP'] > 0 else 0
+            form_margins = s['GameMargins'][-5:] if len(s['GameMargins']) >= 5 else s['GameMargins']
+            form = sum(form_margins) / len(form_margins) if form_margins else 0
             team_stats[t] = {
                 'ORTG': s['PTS'] / s['GP'],
                 'DRTG': s['PA'] / s['GP'],
-                'Net': (s['PTS'] - s['PA']) / s['GP']
+                'Net': (s['PTS'] - s['PA']) / s['GP'],
+                'HomeNet': home_net,
+                'AwayNet': away_net,
+                'Form': form
             }
         else:
-             team_stats[t] = {'ORTG': 80, 'DRTG': 80, 'Net': 0}
+             team_stats[t] = {'ORTG': 80, 'DRTG': 80, 'Net': 0, 'HomeNet': 0, 'AwayNet': 0, 'Form': 0}
+
+    # 3.1 Load KenPom Adjusted Net Ratings
+    adj_net_lookup = {}
+    sos_lookup = {}
+    if os.path.exists('adjusted_ratings.json'):
+        with open('adjusted_ratings.json', 'r') as f:
+            adj_data = json.load(f)
+        for entry in adj_data:
+            adj_net_lookup[entry['Team']] = entry['Adj_Net']
+            sos_lookup[entry['Team']] = entry.get('SOS_WinPct', 0.5)
+        print(f"Loaded KenPom Adjusted Net Ratings for {len(adj_net_lookup)} teams.")
+    else:
+        print("Warning: adjusted_ratings.json not found. Falling back to raw ratings.")
 
     # 3.5 Calculate League Rankings
     # Sort by ORTG (Desc) and DRTG (Asc)
@@ -180,20 +219,16 @@ def run_oracle(target_round=None):
 
     print(f"Predicting {len(round_games)} games for Round {target_round}...")
     
-    # Load Advanced Stats
+    # Load Advanced Stats (optional, for X-Factor insights)
     adv_stats = {}
     try:
         with open('C:/Users/klalo/PycharmProjects/pythonProject/team_advanced_stats.json', 'r') as f:
             adv_stats = json.load(f)
-        print("Advanced Stats loaded for X-Factor analysis.")
-    except Exception as e:
-        print(f"Warning: Could not load team_advanced_stats.json. Error: {e}")
-        print("X-Factors disabled.")
+    except:
+        pass
     
-    # 5. Predict Matches
+    # 5. Predict Matches using 3-Factor Model
     predictions = []
-    
-    expansion_teams = ['HTA', 'DUB', 'PRS', 'PAM'] 
     
     for _, row in round_games.iterrows():
         local = row['LocalTeam']
@@ -202,11 +237,11 @@ def run_oracle(target_round=None):
         local_name = team_names.get(local, local)
         road_name = team_names.get(road, road)
 
-        l_stat = team_stats.get(local, {'ORTG': 80, 'DRTG': 80, 'Net': 0})
-        r_stat = team_stats.get(road, {'ORTG': 80, 'DRTG': 80, 'Net': 0})
+        l_stat = team_stats.get(local, {'ORTG': 80, 'DRTG': 80, 'Net': 0, 'HomeNet': 0, 'AwayNet': 0, 'Form': 0})
+        r_stat = team_stats.get(road, {'ORTG': 80, 'DRTG': 80, 'Net': 0, 'HomeNet': 0, 'AwayNet': 0, 'Form': 0})
         
-        l_form = team_form.get(local, {'Streak': 0, 'HomeW': 0, 'HomeG': 1})
-        r_form = team_form.get(road, {'Streak': 0, 'RoadW': 0, 'RoadG': 1})
+        l_form = team_form.get(local, {'Streak': 0, 'HomeW': 0, 'HomeG': 1, 'Last5': [], 'RoadW': 0, 'RoadG': 1})
+        r_form = team_form.get(road, {'Streak': 0, 'RoadW': 0, 'RoadG': 1, 'Last5': [], 'HomeW': 0, 'HomeG': 1})
         
         # Rankings
         l_o_rank = ortg_rank.get(local, 99)
@@ -217,100 +252,88 @@ def run_oracle(target_round=None):
         l_home_pct = (l_form['HomeW'] / l_form['HomeG']) * 100 if l_form['HomeG'] > 0 else 0
         r_road_pct = (r_form['RoadW'] / r_form['RoadG']) * 100 if r_form['RoadG'] > 0 else 0
         
-        # Data-Stat Pack Logic
-        # Line 1: The Tactical Matchup (Offense vs Defense)
-        # We prioritize the "Clash": Local Offense vs Road Defense, or vice versa?
-        # Let's show both Ranks: "Off: #3 vs #12 | Def: #5 vs #10"
-        # Or simpler: "Matchup: Off #2 (118.5) vs Def #15 (112.3)"
+        # === 3-FACTOR PREDICTION MODEL ===
+        # Weights optimized via incremental backtest (70/10/20 > 50/20/30)
+        # Factor 1: KenPom Adjusted Net Rating (70%) — strongest single predictor
+        l_adj = adj_net_lookup.get(local, l_stat['Net'])
+        r_adj = adj_net_lookup.get(road, r_stat['Net'])
         
-        # We'll emphasize the biggest advantage.
-        l_net = l_stat['Net']
-        r_net = r_stat['Net']
+        # Factor 2: True Home/Away Location Split (10%)
+        l_loc = l_stat['HomeNet']   # Local team's home performance
+        r_loc = r_stat['AwayNet']   # Road team's away performance
         
-        # Advanced Stats
-        l_adv = adv_stats.get(local, {'TRB': 35, 'ORB': 10, '3PM': 9, '3P%': 35, 'TOV': 12})
-        r_adv = adv_stats.get(road, {'TRB': 35, 'ORB': 10, '3PM': 9, '3P%': 35, 'TOV': 12})
+        # Factor 3: Recent Form / Momentum (20%)
+        l_form_val = l_stat['Form']
+        r_form_val = r_stat['Form']
         
-        # Diffs
-        reb_diff = l_adv['TRB'] - r_adv['TRB']
-        three_diff = l_adv['3P%'] - r_adv['3P%']
-        orb_diff = l_adv['ORB'] - r_adv['ORB']
-        tov_diff = l_adv['TOV'] - r_adv['TOV'] # smaller is better
-
-        # X-Factor Logic (Priority Waterfall)
+        # Blended Power Rating
+        l_power = (l_adj * 0.70) + (l_loc * 0.10) + (l_form_val * 0.20)
+        r_power = (r_adj * 0.70) + (r_loc * 0.10) + (r_form_val * 0.20)
+        
+        # Predicted margin with reduced HCA (since Adj Net is global)
+        margin = (l_power - r_power) + (hca * 0.5)
+        
+        winner = local if margin > 0 else road
+        
+        # Logistic confidence (proper probability calibration)
+        win_prob = 1 / (1 + np.exp(-margin / 6)) * 100
+        
+        # === X-FACTOR INSIGHTS ===
+        # Now data-driven with SOS context
         insight = ""
+        l_sos = sos_lookup.get(local, 0.5)
+        r_sos = sos_lookup.get(road, 0.5)
         
-        # 1. Hot Streaks (>=5) - Supreme Priority
-        if l_form['Streak'] >= 5: insight = f"HOT: {local_name} Won {l_form['Streak']} Straight"
-        elif r_form['Streak'] >= 5: insight = f"HOT: {road_name} Won {r_form['Streak']} Straight"
-        elif l_form['Streak'] <= -5: insight = f"COLD: {local_name} Lost {abs(l_form['Streak'])} Straight"
+        # 1. Hot Streaks (>=5)
+        if l_form['Streak'] >= 5: insight = f"🔥 {local_name} Won {l_form['Streak']} Straight"
+        elif r_form['Streak'] >= 5: insight = f"🔥 {road_name} Won {r_form['Streak']} Straight"
+        elif l_form['Streak'] <= -5: insight = f"❄️ {local_name} Lost {abs(l_form['Streak'])} Straight"
+        elif r_form['Streak'] <= -5: insight = f"❄️ {road_name} Lost {abs(r_form['Streak'])} Straight"
         
-        # 2. Rebounding Dominance (>4.5)
-        elif abs(reb_diff) > 4.5:
-            team = local_name if reb_diff > 0 else road_name
-            insight = f"GLASS: {team} +{abs(reb_diff):.1f} RPG Adv"
-            
-        # 3. 3-Point Snipers (>5%)
-        elif abs(three_diff) > 5.0:
-            team = local_name if three_diff > 0 else road_name
-            insight = f"SNIPERS: {team} +{abs(three_diff):.1f}% 3PT Adv"
-        
-        # 4. Offensive Rebounds (>2.5)
-        elif abs(orb_diff) > 2.5:
-            team = local_name if orb_diff > 0 else road_name
-            insight = f"SCRAPPERS: {team} +{abs(orb_diff):.1f} ORB Adv"
-            
-        # 5. Ball Security (>2.5 TOV diff)
-        elif abs(tov_diff) > 2.5:
-             # Negative TOV diff means Local has fewer TOV (Better)
-            team = local_name if tov_diff < 0 else road_name 
-            insight = f"SECURITY: {team} {abs(tov_diff):.1f} Fewer TOV"
-            
-        # 6. Venue Fortress (>85% Home)
+        # 2. Venue Fortress (>85% Home)
         elif l_home_pct >= 85:
-             insight = f"FORTRESS: {local_name} {l_home_pct:.0f}% at Home"
+             insight = f"🏟️ FORTRESS: {local_name} {l_home_pct:.0f}% at Home"
              
-        # 7. Road Warriors (>60% Road)
-        elif r_road_pct >= 60:
-             insight = f"ROAD WARRIORS: {road_name} {r_road_pct:.0f}% Away"
-             
-        # 8. Rank Clash (Top 4 Off vs Top 4 Def)
+        # 3. Road Warriors (>55% Road)
+        elif r_road_pct >= 55:
+             insight = f"✈️ {road_name} {r_road_pct:.0f}% Away Win Rate"
+        
+        # 4. SOS mismatch (one team's SOS >> other's)
+        elif abs(l_sos - r_sos) > 0.08:
+            harder = local_name if l_sos > r_sos else road_name
+            insight = f"📊 {harder} has faced tougher schedule"
+        
+        # 5. Rank Clash
         elif l_o_rank <= 4 and r_d_rank <= 4:
-             insight = f"CLASH: Top 4 Offense vs Defense"
+             insight = f"⚔️ Top 4 Offense vs Top 4 Defense"
              
-        # Default
+        # Default: Adj Net gap
         else:
-             insight = f"TACTICAL: Off #{l_o_rank} vs Def #{r_d_rank}"
+            gap = abs(l_adj - r_adj)
+            if gap > 5:
+                stronger = local_name if l_adj > r_adj else road_name
+                insight = f"📈 {stronger} +{gap:.1f} Adj Net advantage"
+            else:
+                insight = f"⚖️ Evenly matched (Adj Net gap: {gap:.1f})"
         
-        # COMBINE EVERYTHING (3 Lines)
-        # Line 1: X-Factor (The Headline)
-        # Line 2: Ranks
-        # Line 3: Trends
+        # Build insight block
+        line2 = f"Adj Net: {l_adj:+.1f} v {r_adj:+.1f}  |  Form: {l_form_val:+.1f} v {r_form_val:+.1f}"
         
-        # Ranks again
-        line2 = f"OFF #{l_o_rank} v #{r_o_rank}  |  DEF #{l_d_rank} v #{r_d_rank}"
-        
-        l_l5 = l_form['Last5'] # list of 'W','L'
-        r_l5 = r_form['Last5']
+        l_l5 = l_form.get('Last5', [])
+        r_l5 = r_form.get('Last5', [])
         l_l5_w = l_l5.count('W')
         r_l5_w = r_l5.count('W')
         
-        line3 = f"L5: {l_l5_w}-{(5-l_l5_w)} v {r_l5_w}-{(5-r_l5_w)}  |  H: {l_form['HomeW']}-{l_form['HomeG']-l_form['HomeW']} v A: {r_form['RoadW']}-{r_form['RoadG']-r_form['RoadW']}"
+        line3 = f"L5: {l_l5_w}-{(5-l_l5_w)} v {r_l5_w}-{(5-r_l5_w)}  |  H: {l_form['HomeW']}-{l_form['HomeG']-l_form['HomeW']} v A: {r_form.get('RoadW',0)}-{r_form.get('RoadG',0)-r_form.get('RoadW',0)}"
         
-        # New Insight Block
         final_insight = f"{insight}\n{line2}\n{line3}"
-             
-        margin = (l_stat['Net'] - r_stat['Net']) + hca
-        
-        winner = local if margin > 0 else road
-        conf = min(abs(margin) * 2 + 50, 99) # 1 pt = 52%, 10 pt = 70%
         
         predictions.append({
             'Local': local,
             'Road': road,
             'Margin': margin,
             'Winner': winner,
-            'Conf': conf,
+            'Conf': win_prob,
             'Insight': final_insight
         })
 
@@ -349,8 +372,7 @@ def run_oracle(target_round=None):
         road_name = team_names.get(road, road)
         
         margin = pred['Margin']
-        win_prob = 50 + (abs(margin) * 2.5) 
-        if win_prob > 95: win_prob = 95
+        win_prob = pred['Conf']  # Already calibrated by logistic function
         
         # Card BG
         ax.set_facecolor('#f8f9fa')

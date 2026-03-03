@@ -19,15 +19,12 @@ def verify_oracle():
         print(f"Error loading mvp_game_results.json: {e}")
         return
 
-    # Filter for played games
     played = df[(df['LocalScore'] > 0) & (df['RoadScore'] > 0)].copy()
     if played.empty:
         print("No played games found.")
         return
 
-    # 2. Calculate Global Stats (HCA & Ratings)
-    # Note: Using End-of-Season ratings to predict past games (Hindsight Analysis)
-    # This checks if the formula ITSELF is valid given true team strengths.
+    # 2. Calculate Stats
     avg_local = played['LocalScore'].mean()
     avg_road = played['RoadScore'].mean()
     hca = avg_local - avg_road
@@ -38,40 +35,73 @@ def verify_oracle():
         local, road = row['LocalTeam'], row['RoadTeam']
         l_pts, r_pts = row['LocalScore'], row['RoadScore']
         
-        if local not in teams: teams[local] = {'PTS': 0, 'PA': 0, 'GP': 0}
-        if road not in teams: teams[road] = {'PTS': 0, 'PA': 0, 'GP': 0}
+        for t in (local, road):
+            if t not in teams:
+                teams[t] = {
+                    'PTS': 0, 'PA': 0, 'GP': 0,
+                    'HomePTS': 0, 'HomePA': 0, 'HomeGP': 0,
+                    'AwayPTS': 0, 'AwayPA': 0, 'AwayGP': 0,
+                    'GameMargins': []
+                }
         
         teams[local]['PTS'] += l_pts
         teams[local]['PA'] += r_pts
         teams[local]['GP'] += 1
+        teams[local]['HomePTS'] += l_pts
+        teams[local]['HomePA'] += r_pts
+        teams[local]['HomeGP'] += 1
+        teams[local]['GameMargins'].append(l_pts - r_pts)
         
         teams[road]['PTS'] += r_pts
         teams[road]['PA'] += l_pts
         teams[road]['GP'] += 1
+        teams[road]['AwayPTS'] += r_pts
+        teams[road]['AwayPA'] += l_pts
+        teams[road]['AwayGP'] += 1
+        teams[road]['GameMargins'].append(r_pts - l_pts)
 
+    # Build team stats
     team_stats = {}
     for t, s in teams.items():
         if s['GP'] > 0:
+            home_net = (s['HomePTS'] - s['HomePA']) / s['HomeGP'] if s['HomeGP'] > 0 else 0
+            away_net = (s['AwayPTS'] - s['AwayPA']) / s['AwayGP'] if s['AwayGP'] > 0 else 0
+            form_margins = s['GameMargins'][-5:] if len(s['GameMargins']) >= 5 else s['GameMargins']
+            form = sum(form_margins) / len(form_margins) if form_margins else 0
             team_stats[t] = {
-                'Net': (s['PTS'] - s['PA']) / s['GP']
+                'Net': (s['PTS'] - s['PA']) / s['GP'],
+                'HomeNet': home_net,
+                'AwayNet': away_net,
+                'Form': form
             }
         else:
-            team_stats[t] = {'Net': 0}
+            team_stats[t] = {'Net': 0, 'HomeNet': 0, 'AwayNet': 0, 'Form': 0}
 
-    # 3. Simulate Predictions
-    correct = 0
+    # Load KenPom Adjusted Ratings
+    adj_net_lookup = {}
+    import os
+    if os.path.exists('adjusted_ratings.json'):
+        import json as json2
+        with open('adjusted_ratings.json', 'r') as f:
+            adj_data = json2.load(f)
+        for entry in adj_data:
+            adj_net_lookup[entry['Team']] = entry['Adj_Net']
+        print(f"Loaded KenPom Adjusted Net Ratings for {len(adj_net_lookup)} teams.")
+
+    # 3. A/B Test: Old Oracle vs New Oracle
+    old_correct = 0
+    new_correct = 0
     total = 0
-    margin_errors = []
+    old_margin_errors = []
+    new_margin_errors = []
     upsets = []
 
     for _, row in played.iterrows():
         game_code = str(row['GameCode'])
         
-        # Determine Round
         if game_code in round_map:
             round_num = round_map[game_code]
         else:
-            # Fallback (should not happen if map is complete)
             round_num = ((int(game_code) - 1) // 9) + 1
             
         local = row['LocalTeam']
@@ -79,62 +109,93 @@ def verify_oracle():
         actual_margin = row['LocalScore'] - row['RoadScore']
         actual_winner = row['Winner']
 
-        # Oracle Logic
-        l_net = team_stats.get(local, {'Net': 0})['Net']
-        r_net = team_stats.get(road, {'Net': 0})['Net']
+        l_stat = team_stats.get(local, {'Net': 0, 'HomeNet': 0, 'AwayNet': 0, 'Form': 0})
+        r_stat = team_stats.get(road, {'Net': 0, 'HomeNet': 0, 'AwayNet': 0, 'Form': 0})
+
+        # === OLD MODEL: Raw Net + HCA ===
+        old_margin = (l_stat['Net'] - r_stat['Net']) + hca
+        old_winner = local if old_margin > 0 else road
         
-        predicted_margin = (l_net - r_net) + hca
-        predicted_winner = local if predicted_margin > 0 else road
+        # === NEW MODEL: 3-Factor ===
+        l_adj = adj_net_lookup.get(local, l_stat['Net'])
+        r_adj = adj_net_lookup.get(road, r_stat['Net'])
+        l_loc = l_stat['HomeNet']
+        r_loc = r_stat['AwayNet']
+        l_form = l_stat['Form']
+        r_form = r_stat['Form']
+        
+        l_power = (l_adj * 0.70) + (l_loc * 0.10) + (l_form * 0.20)
+        r_power = (r_adj * 0.70) + (r_loc * 0.10) + (r_form * 0.20)
+        new_margin = (l_power - r_power) + (hca * 0.5)
+        new_winner = local if new_margin > 0 else road
         
         # Accuracy
-        if predicted_winner == actual_winner:
-            correct += 1
+        if old_winner == actual_winner: old_correct += 1
+        if new_winner == actual_winner: new_correct += 1
         
-        # Error
-        error = abs(predicted_margin - actual_margin)
-        margin_errors.append(error)
+        old_margin_errors.append(abs(old_margin - actual_margin))
+        new_margin_errors.append(abs(new_margin - actual_margin))
         
-        deviation = actual_margin - predicted_margin
-        
-        # Upset: Pred Winner lost
-        is_upset = (predicted_winner != actual_winner)
+        is_upset = (new_winner != actual_winner)
         
         game_info = {
             'GameCode': row['GameCode'],
             'Round': round_num,
             'Matchup': f"{local} vs {road}",
-            'PredictedMargin': round(predicted_margin, 2),
+            'OldMargin': round(old_margin, 2),
+            'NewMargin': round(new_margin, 2),
             'ActualMargin': float(actual_margin),
-            'Deviation': round(deviation, 2),
-            'Error': round(error, 2),
+            'OldCorrect': old_winner == actual_winner,
+            'NewCorrect': new_winner == actual_winner,
             'IsUpset': bool(is_upset),
             'Winner': actual_winner,
-            'PredictedWinner': predicted_winner
+            'PredictedWinner': new_winner
         }
         upsets.append(game_info)
         total += 1
 
-    # 4. Results
-    accuracy = (correct / total) * 100
-    mae = np.mean(margin_errors)
+    # 4. Results: A/B Comparison
+    old_acc = (old_correct / total) * 100
+    new_acc = (new_correct / total) * 100
+    old_mae = np.mean(old_margin_errors)
+    new_mae = np.mean(new_margin_errors)
     
-    print(f"Total Games Verified: {total}")
-    print(f"Oracle Accuracy: {accuracy:.1f}% ({correct}/{total})")
-    print(f"Mean Margin Error: {mae:.2f} pts")
+    print(f"\n{'='*55}")
+    print(f"  A/B COMPARISON: Old Oracle vs New Oracle (3-Factor)")
+    print(f"{'='*55}")
+    print(f"  Total Games: {total}")
+    print(f"")
+    print(f"  {'Metric':<20} {'Old Oracle':>12} {'New Oracle':>12} {'Delta':>8}")
+    print(f"  {'-'*52}")
+    print(f"  {'Accuracy':<20} {old_acc:>11.1f}% {new_acc:>11.1f}% {new_acc-old_acc:>+7.1f}%")
+    print(f"  {'MAE (pts)':<20} {old_mae:>12.2f} {new_mae:>12.2f} {new_mae-old_mae:>+8.2f}")
+    print(f"  {'Correct Picks':<20} {old_correct:>12} {new_correct:>12} {new_correct-old_correct:>+8}")
+    print(f"{'='*55}")
     
-    # Sort by Error (Biggest Surprises)
-    failed_preds = [g for g in upsets if g['IsUpset']]
-    top_upsets = sorted(failed_preds, key=lambda x: x['Error'], reverse=True)[:5]
+    # Games where models disagree
+    disagree = [g for g in upsets if g['OldCorrect'] != g['NewCorrect']]
+    new_wins = [g for g in disagree if g['NewCorrect'] and not g['OldCorrect']]
+    old_wins = [g for g in disagree if g['OldCorrect'] and not g['NewCorrect']]
+    
+    print(f"\n  Models disagreed on: {len(disagree)} games")
+    print(f"  New model correct (old wrong): {len(new_wins)}")
+    print(f"  Old model correct (new wrong): {len(old_wins)}")
 
-    print("\n--- TOP 5 BIGGEST UPSETS (CHAOS GAMES) ---")
+    # Top 5 upsets
+    failed_preds = [g for g in upsets if g['IsUpset']]
+    top_upsets = sorted(failed_preds, key=lambda x: abs(x['NewMargin']), reverse=True)[:5]
+
+    print("\n--- TOP 5 BIGGEST UPSETS (NEW MODEL) ---")
     for i, g in enumerate(top_upsets):
-        print(f"{i+1}. {g['Matchup']} (Rd {g['Round']}) | Pred: {g['PredictedWinner']} +{abs(g['PredictedMargin'])} | Actual: {g['Winner']} +{abs(g['ActualMargin'])} | Swing: {g['Error']} pts")
+        print(f"{i+1}. {g['Matchup']} (Rd {g['Round']}) | Pred: {g['PredictedWinner']} +{abs(g['NewMargin']):.1f} | Actual: {g['Winner']} +{abs(g['ActualMargin'])}")
 
     # Save Report
     report = {
-        'Accuracy': accuracy,
+        'OldAccuracy': old_acc,
+        'NewAccuracy': new_acc,
+        'OldMAE': old_mae,
+        'NewMAE': new_mae,
         'TotalGames': total,
-        'MAE': mae,
         'TopUpsets': top_upsets
     }
     
@@ -142,7 +203,6 @@ def verify_oracle():
         json.dump(report, f, indent=4)
     print("\nReport saved to oracle_verification_report.json")
 
-    # Save Full Game History (User Request)
     with open('oracle_games_history.json', 'w') as f:
         json.dump(upsets, f, indent=4)
     print("Full history saved to oracle_games_history.json")
@@ -193,22 +253,21 @@ def verify_oracle():
     # 6. Visualization
     import matplotlib.pyplot as plt
     
-    # A. Accuracy by Round
+    # A. Accuracy by Round (both models)
     df_ver = pd.DataFrame(upsets)
     
-    # Group by Round (using Official Round)
     round_counts = df_ver['Round'].value_counts().sort_index()
-    print("\n--- Games Verified Per Round ---")
-    print(round_counts)
     
-    round_acc = df_ver.groupby('Round').apply(lambda x: (x['PredictedWinner'] == x['Winner']).mean() * 100)
+    old_round_acc = df_ver.groupby('Round').apply(lambda x: x['OldCorrect'].mean() * 100)
+    new_round_acc = df_ver.groupby('Round').apply(lambda x: x['NewCorrect'].mean() * 100)
     
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 10))
     
-    # Plot 1: Accuracy Trend
-    ax1.plot(round_acc.index, round_acc.values, marker='o', linestyle='-', color='#1d428a', linewidth=2)
-    ax1.axhline(y=accuracy, color='green', linestyle='--', label=f'Avg Accuracy ({accuracy:.1f}%)')
-    ax1.set_title("Oracle Accuracy by Round (Official Schedule)", fontsize=14, fontweight='bold')
+    # Plot 1: Accuracy Trend (both models)
+    ax1.plot(old_round_acc.index, old_round_acc.values, marker='s', linestyle='--', color='#94a3b8', linewidth=1.5, label=f'Old Oracle ({old_acc:.1f}%)', alpha=0.6)
+    ax1.plot(new_round_acc.index, new_round_acc.values, marker='o', linestyle='-', color='#1d428a', linewidth=2, label=f'New Oracle ({new_acc:.1f}%)')
+    ax1.axhline(y=new_acc, color='green', linestyle='--', alpha=0.4)
+    ax1.set_title("Oracle Accuracy by Round (Old vs New)", fontsize=14, fontweight='bold')
     ax1.set_ylabel("Accuracy (%)")
     ax1.set_xlabel("Round")
     ax1.set_ylim(0, 100)
@@ -216,14 +275,14 @@ def verify_oracle():
     ax1.legend()
     
     # Plot 2: Top 5 Upsets (Bar Chart)
-    upset_labels = [f"{g['Matchup']}\n(Swing: {g['Error']}pts)" for g in top_upsets]
-    upset_values = [g['Error'] for g in top_upsets]
+    upset_labels = [f"{g['Matchup']}\n(Margin: {abs(g['NewMargin']):.1f}pts)" for g in top_upsets]
+    upset_values = [abs(g['NewMargin']) for g in top_upsets]
     
     colors = ['#ff4b4b', '#ff7676', '#ff9e9e', '#ffc2c2', '#ffe6e6']
     ax2.barh(upset_labels, upset_values, color=colors)
-    ax2.invert_yaxis() # Top upset at top
-    ax2.set_title("Top 5 'Chaos Games' (Biggest Prediction Misses)", fontsize=14, fontweight='bold')
-    ax2.set_xlabel("Margin Swing (Points)")
+    ax2.invert_yaxis()
+    ax2.set_title("Top 5 'Chaos Games' (Biggest New Oracle Misses)", fontsize=14, fontweight='bold')
+    ax2.set_xlabel("Predicted Margin (Points)")
     
     plt.tight_layout()
     outfile = "oracle_performance_analysis.png"
