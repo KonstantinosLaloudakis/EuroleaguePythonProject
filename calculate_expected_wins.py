@@ -11,6 +11,7 @@ import json
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+from adjustText import adjust_text
 import os
 
 
@@ -226,7 +227,8 @@ def calculate_expected_wins():
     ax.text(min_w + 3, max_w - 2, 'LUCKY\n(record flatters them)', 
             fontsize=10, color='#39d35360', ha='center', fontstyle='italic')
     
-    # Plot teams
+    # Plot teams and collect labels
+    texts = []
     for code, t in sorted_teams:
         xw = t['xW']
         aw = t['actual_wins']
@@ -246,15 +248,17 @@ def calculate_expected_wins():
         ax.scatter(xw, aw, s=size, c=color, edgecolors=edge, 
                    linewidths=2.5, zorder=5, alpha=0.9)
         
-        # Label
+        # Collect label for adjustText
         name = team_names.get(code, code)
-        # Offset label based on luck to avoid overlaps
-        offset_y = 8 if luck > 0 else -12
-            
-        ax.annotate(name, (xw, aw), 
-                    xytext=(5, offset_y), textcoords='offset points',
-                    fontsize=7.5, color='#e6edf3', fontweight='bold',
-                    ha='left', va='center')
+        texts.append(ax.text(xw, aw, name, fontsize=7.5, color='#e6edf3', 
+                             fontweight='bold', ha='center', va='center'))
+    
+    # Auto-resolve label overlaps
+    adjust_text(texts, ax=ax, 
+                arrowprops=dict(arrowstyle='-', color='#8b949e', alpha=0.4, lw=0.5),
+                force_text=(0.8, 1.0),
+                force_points=(0.3, 0.5),
+                expand=(1.5, 1.5))
     
     # Labels and title
     ax.set_xlabel('Expected Wins (xW)', fontsize=13, color='#e6edf3', fontweight='bold')
