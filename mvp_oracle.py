@@ -192,7 +192,6 @@ def run_oracle(target_round=None):
             
     # Try to load manual schedule if available
     manual_file = f'manual_round_{target_round}.json'
-    import os
     if os.path.exists(manual_file):
         print(f"Loading manual schedule from {manual_file}...")
         try:
