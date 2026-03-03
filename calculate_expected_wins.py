@@ -211,15 +211,19 @@ def calculate_expected_wins():
     ax.set_facecolor('#161b22')
     
     # Diagonal line (Actual = xW)
-    max_w = max(t['actual_wins'] for _, t in sorted_teams) + 2
-    min_w = min(t['xW'] for _, t in sorted_teams) - 1
+    max_w = max(max(t['actual_wins'] for _, t in sorted_teams), 
+                max(t['xW'] for _, t in sorted_teams)) + 2
+    min_w = min(min(t['actual_wins'] for _, t in sorted_teams),
+                min(t['xW'] for _, t in sorted_teams)) - 2
     ax.plot([min_w, max_w], [min_w, max_w], '--', color='#30363d', linewidth=2, zorder=1)
     
-    # Fill regions
+    # Fill regions — extend to full axis range so no dots are outside
     ax.fill_between([min_w, max_w], [min_w, max_w], [max_w, max_w], 
                      alpha=0.08, color='#39d353', zorder=0)  # Lucky region (above)
     ax.fill_between([min_w, max_w], [min_w, min_w], [min_w, max_w], 
                      alpha=0.08, color='#f85149', zorder=0)  # Unlucky region (below)
+    ax.set_xlim(min_w, max_w)
+    ax.set_ylim(min_w, max_w)
     
     # Region labels
     ax.text(max_w - 3, min_w + 1.5, 'UNLUCKY\n(deserves more wins)', 
