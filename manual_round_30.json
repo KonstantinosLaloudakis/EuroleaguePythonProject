@@ -1,0 +1,82 @@
+[
+    {
+        "GameCode": 298,
+        "LocalTeam": "BAS",
+        "RoadTeam": "PRS",
+        "LocalScore": 0,
+        "RoadScore": 0,
+        "Winner": "UNKNOWN"
+    },
+    {
+        "GameCode": 293,
+        "LocalTeam": "TEL",
+        "RoadTeam": "HTA",
+        "LocalScore": 0,
+        "RoadScore": 0,
+        "Winner": "UNKNOWN"
+    },
+    {
+        "GameCode": 299,
+        "LocalTeam": "RED",
+        "RoadTeam": "MUN",
+        "LocalScore": 0,
+        "RoadScore": 0,
+        "Winner": "UNKNOWN"
+    },
+    {
+        "GameCode": 295,
+        "LocalTeam": "MAD",
+        "RoadTeam": "VIR",
+        "LocalScore": 0,
+        "RoadScore": 0,
+        "Winner": "UNKNOWN"
+    },
+    {
+        "GameCode": 296,
+        "LocalTeam": "PAM",
+        "RoadTeam": "ZAL",
+        "LocalScore": 0,
+        "RoadScore": 0,
+        "Winner": "UNKNOWN"
+    },
+    {
+        "GameCode": 292,
+        "LocalTeam": "ULK",
+        "RoadTeam": "MCO",
+        "LocalScore": 0,
+        "RoadScore": 0,
+        "Winner": "UNKNOWN"
+    },
+    {
+        "GameCode": 294,
+        "LocalTeam": "PAR",
+        "RoadTeam": "DUB",
+        "LocalScore": 0,
+        "RoadScore": 0,
+        "Winner": "UNKNOWN"
+    },
+    {
+        "GameCode": 297,
+        "LocalTeam": "IST",
+        "RoadTeam": "ASV",
+        "LocalScore": 0,
+        "RoadScore": 0,
+        "Winner": "UNKNOWN"
+    },
+    {
+        "GameCode": 300,
+        "LocalTeam": "OLY",
+        "RoadTeam": "PAN",
+        "LocalScore": 0,
+        "RoadScore": 0,
+        "Winner": "UNKNOWN"
+    },
+    {
+        "GameCode": 291,
+        "LocalTeam": "MIL",
+        "RoadTeam": "BAR",
+        "LocalScore": 0,
+        "RoadScore": 0,
+        "Winner": "UNKNOWN"
+    }
+]
