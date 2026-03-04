@@ -1,0 +1,858 @@
+{
+    "team": "MCO",
+    "edges": [
+        {
+            "Passer": "JAMES, MIKE",
+            "Scorer": "THEIS, DANIEL",
+            "Assists": 43,
+            "AvgXFG": 64.9,
+            "ThreePT": 4,
+            "TwoPT": 37,
+            "FT": 2
+        },
+        {
+            "Passer": "JAMES, MIKE",
+            "Scorer": "BLOSSOMGAME, JARON",
+            "Assists": 32,
+            "AvgXFG": 59.9,
+            "ThreePT": 12,
+            "TwoPT": 14,
+            "FT": 6
+        },
+        {
+            "Passer": "OKOBO, ELIE",
+            "Scorer": "THEIS, DANIEL",
+            "Assists": 29,
+            "AvgXFG": 66.4,
+            "ThreePT": 6,
+            "TwoPT": 18,
+            "FT": 5
+        },
+        {
+            "Passer": "JAMES, MIKE",
+            "Scorer": "DIALLO, ALPHA",
+            "Assists": 28,
+            "AvgXFG": 54.6,
+            "ThreePT": 12,
+            "TwoPT": 13,
+            "FT": 3
+        },
+        {
+            "Passer": "OKOBO, ELIE",
+            "Scorer": "DIALLO, ALPHA",
+            "Assists": 19,
+            "AvgXFG": 46.9,
+            "ThreePT": 8,
+            "TwoPT": 9,
+            "FT": 2
+        },
+        {
+            "Passer": "JAMES, MIKE",
+            "Scorer": "HAYES, KEVARRIUS",
+            "Assists": 18,
+            "AvgXFG": 61.4,
+            "ThreePT": 0,
+            "TwoPT": 16,
+            "FT": 2
+        },
+        {
+            "Passer": "STRAZEL, MATTHEW",
+            "Scorer": "MIROTIC, NIKOLA",
+            "Assists": 17,
+            "AvgXFG": 43.0,
+            "ThreePT": 11,
+            "TwoPT": 4,
+            "FT": 2
+        },
+        {
+            "Passer": "JAMES, MIKE",
+            "Scorer": "MIROTIC, NIKOLA",
+            "Assists": 17,
+            "AvgXFG": 42.5,
+            "ThreePT": 11,
+            "TwoPT": 5,
+            "FT": 1
+        },
+        {
+            "Passer": "OKOBO, ELIE",
+            "Scorer": "MIROTIC, NIKOLA",
+            "Assists": 15,
+            "AvgXFG": 46.5,
+            "ThreePT": 7,
+            "TwoPT": 8,
+            "FT": 0
+        },
+        {
+            "Passer": "OKOBO, ELIE",
+            "Scorer": "BLOSSOMGAME, JARON",
+            "Assists": 15,
+            "AvgXFG": 65.5,
+            "ThreePT": 3,
+            "TwoPT": 11,
+            "FT": 1
+        },
+        {
+            "Passer": "JAMES, MIKE",
+            "Scorer": "OKOBO, ELIE",
+            "Assists": 14,
+            "AvgXFG": 39.3,
+            "ThreePT": 10,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "JAMES, MIKE",
+            "Scorer": "STRAZEL, MATTHEW",
+            "Assists": 14,
+            "AvgXFG": 44.0,
+            "ThreePT": 8,
+            "TwoPT": 5,
+            "FT": 1
+        },
+        {
+            "Passer": "OKOBO, ELIE",
+            "Scorer": "HAYES, KEVARRIUS",
+            "Assists": 13,
+            "AvgXFG": 58.5,
+            "ThreePT": 0,
+            "TwoPT": 13,
+            "FT": 0
+        },
+        {
+            "Passer": "MIROTIC, NIKOLA",
+            "Scorer": "DIALLO, ALPHA",
+            "Assists": 13,
+            "AvgXFG": 54.1,
+            "ThreePT": 5,
+            "TwoPT": 7,
+            "FT": 1
+        },
+        {
+            "Passer": "STRAZEL, MATTHEW",
+            "Scorer": "DIALLO, ALPHA",
+            "Assists": 11,
+            "AvgXFG": 62.3,
+            "ThreePT": 2,
+            "TwoPT": 8,
+            "FT": 1
+        },
+        {
+            "Passer": "STRAZEL, MATTHEW",
+            "Scorer": "HAYES, KEVARRIUS",
+            "Assists": 11,
+            "AvgXFG": 58.1,
+            "ThreePT": 0,
+            "TwoPT": 9,
+            "FT": 2
+        },
+        {
+            "Passer": "STRAZEL, MATTHEW",
+            "Scorer": "NEDOVIC, NEMANJA",
+            "Assists": 11,
+            "AvgXFG": 36.8,
+            "ThreePT": 9,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "DIALLO, ALPHA",
+            "Scorer": "BLOSSOMGAME, JARON",
+            "Assists": 10,
+            "AvgXFG": 56.3,
+            "ThreePT": 3,
+            "TwoPT": 4,
+            "FT": 3
+        },
+        {
+            "Passer": "STRAZEL, MATTHEW",
+            "Scorer": "JAMES, MIKE",
+            "Assists": 9,
+            "AvgXFG": 46.4,
+            "ThreePT": 6,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "DIALLO, ALPHA",
+            "Scorer": "THEIS, DANIEL",
+            "Assists": 9,
+            "AvgXFG": 63.5,
+            "ThreePT": 0,
+            "TwoPT": 8,
+            "FT": 1
+        },
+        {
+            "Passer": "THEIS, DANIEL",
+            "Scorer": "DIALLO, ALPHA",
+            "Assists": 9,
+            "AvgXFG": 62.3,
+            "ThreePT": 1,
+            "TwoPT": 7,
+            "FT": 1
+        },
+        {
+            "Passer": "OKOBO, ELIE",
+            "Scorer": "JAMES, MIKE",
+            "Assists": 9,
+            "AvgXFG": 44.4,
+            "ThreePT": 0,
+            "TwoPT": 8,
+            "FT": 1
+        },
+        {
+            "Passer": "DIALLO, ALPHA",
+            "Scorer": "MIROTIC, NIKOLA",
+            "Assists": 8,
+            "AvgXFG": 48.8,
+            "ThreePT": 1,
+            "TwoPT": 6,
+            "FT": 1
+        },
+        {
+            "Passer": "OKOBO, ELIE",
+            "Scorer": "STRAZEL, MATTHEW",
+            "Assists": 7,
+            "AvgXFG": 36.1,
+            "ThreePT": 7,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "BLOSSOMGAME, JARON",
+            "Scorer": "DIALLO, ALPHA",
+            "Assists": 7,
+            "AvgXFG": 66.2,
+            "ThreePT": 1,
+            "TwoPT": 5,
+            "FT": 1
+        },
+        {
+            "Passer": "JAMES, MIKE",
+            "Scorer": "NEDOVIC, NEMANJA",
+            "Assists": 7,
+            "AvgXFG": 42.0,
+            "ThreePT": 4,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "STRAZEL, MATTHEW",
+            "Scorer": "BLOSSOMGAME, JARON",
+            "Assists": 7,
+            "AvgXFG": 57.6,
+            "ThreePT": 3,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "STRAZEL, MATTHEW",
+            "Scorer": "OKOBO, ELIE",
+            "Assists": 7,
+            "AvgXFG": 44.5,
+            "ThreePT": 2,
+            "TwoPT": 4,
+            "FT": 1
+        },
+        {
+            "Passer": "OKOBO, ELIE",
+            "Scorer": "NEDOVIC, NEMANJA",
+            "Assists": 6,
+            "AvgXFG": 42.5,
+            "ThreePT": 3,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "NEDOVIC, NEMANJA",
+            "Scorer": "BLOSSOMGAME, JARON",
+            "Assists": 6,
+            "AvgXFG": 64.0,
+            "ThreePT": 1,
+            "TwoPT": 4,
+            "FT": 1
+        },
+        {
+            "Passer": "NEDOVIC, NEMANJA",
+            "Scorer": "MIROTIC, NIKOLA",
+            "Assists": 6,
+            "AvgXFG": 60.0,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 3
+        },
+        {
+            "Passer": "HAYES, KEVARRIUS",
+            "Scorer": "MIROTIC, NIKOLA",
+            "Assists": 6,
+            "AvgXFG": 55.2,
+            "ThreePT": 2,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "MIROTIC, NIKOLA",
+            "Scorer": "STRAZEL, MATTHEW",
+            "Assists": 5,
+            "AvgXFG": 42.0,
+            "ThreePT": 4,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "STRAZEL, MATTHEW",
+            "Scorer": "THEIS, DANIEL",
+            "Assists": 5,
+            "AvgXFG": 63.4,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 2
+        },
+        {
+            "Passer": "BLOSSOMGAME, JARON",
+            "Scorer": "THEIS, DANIEL",
+            "Assists": 5,
+            "AvgXFG": 66.7,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 2
+        },
+        {
+            "Passer": "STRAZEL, MATTHEW",
+            "Scorer": "TARPEY, TERRY",
+            "Assists": 5,
+            "AvgXFG": 43.2,
+            "ThreePT": 4,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "THEIS, DANIEL",
+            "Scorer": "MIROTIC, NIKOLA",
+            "Assists": 4,
+            "AvgXFG": 46.2,
+            "ThreePT": 0,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "DIALLO, ALPHA",
+            "Scorer": "JAMES, MIKE",
+            "Assists": 4,
+            "AvgXFG": 37.4,
+            "ThreePT": 3,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MIROTIC, NIKOLA",
+            "Scorer": "TARPEY, TERRY",
+            "Assists": 4,
+            "AvgXFG": 56.7,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 2
+        },
+        {
+            "Passer": "MIROTIC, NIKOLA",
+            "Scorer": "JAMES, MIKE",
+            "Assists": 4,
+            "AvgXFG": 36.3,
+            "ThreePT": 3,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MIROTIC, NIKOLA",
+            "Scorer": "HAYES, KEVARRIUS",
+            "Assists": 4,
+            "AvgXFG": 48.9,
+            "ThreePT": 0,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "DIALLO, ALPHA",
+            "Scorer": "HAYES, KEVARRIUS",
+            "Assists": 4,
+            "AvgXFG": 48.9,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "DIALLO, ALPHA",
+            "Scorer": "OKOBO, ELIE",
+            "Assists": 4,
+            "AvgXFG": 47.8,
+            "ThreePT": 1,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "STRAZEL, MATTHEW",
+            "Scorer": "MAKOUNDOU, YOAN",
+            "Assists": 4,
+            "AvgXFG": 90.1,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "NEDOVIC, NEMANJA",
+            "Scorer": "HAYES, KEVARRIUS",
+            "Assists": 4,
+            "AvgXFG": 77.3,
+            "ThreePT": 0,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "OKOBO, ELIE",
+            "Scorer": "BEGARIN, JUHANN",
+            "Assists": 4,
+            "AvgXFG": 42.3,
+            "ThreePT": 3,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MIROTIC, NIKOLA",
+            "Scorer": "OKOBO, ELIE",
+            "Assists": 3,
+            "AvgXFG": 35.0,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "THEIS, DANIEL",
+            "Scorer": "BLOSSOMGAME, JARON",
+            "Assists": 3,
+            "AvgXFG": 68.2,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "MIROTIC, NIKOLA",
+            "Scorer": "THEIS, DANIEL",
+            "Assists": 3,
+            "AvgXFG": 59.5,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "NEDOVIC, NEMANJA",
+            "Scorer": "THEIS, DANIEL",
+            "Assists": 3,
+            "AvgXFG": 67.6,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "NEDOVIC, NEMANJA",
+            "Scorer": "OKOBO, ELIE",
+            "Assists": 3,
+            "AvgXFG": 36.6,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "TARPEY, TERRY",
+            "Scorer": "MIROTIC, NIKOLA",
+            "Assists": 3,
+            "AvgXFG": 53.8,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "JAMES, MIKE",
+            "Scorer": "TARPEY, TERRY",
+            "Assists": 3,
+            "AvgXFG": 52.2,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "HAYES, KEVARRIUS",
+            "Scorer": "DIALLO, ALPHA",
+            "Assists": 3,
+            "AvgXFG": 62.7,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "JAMES, MIKE",
+            "Scorer": "BEGARIN, JUHANN",
+            "Assists": 3,
+            "AvgXFG": 48.4,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "BLOSSOMGAME, JARON",
+            "Scorer": "OKOBO, ELIE",
+            "Assists": 2,
+            "AvgXFG": 79.5,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "THEIS, DANIEL",
+            "Scorer": "JAMES, MIKE",
+            "Assists": 2,
+            "AvgXFG": 35.1,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "NEDOVIC, NEMANJA",
+            "Scorer": "JAMES, MIKE",
+            "Assists": 2,
+            "AvgXFG": 38.2,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "NEDOVIC, NEMANJA",
+            "Scorer": "STRAZEL, MATTHEW",
+            "Assists": 2,
+            "AvgXFG": 37.4,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "THEIS, DANIEL",
+            "Scorer": "OKOBO, ELIE",
+            "Assists": 2,
+            "AvgXFG": 48.4,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "TARPEY, TERRY",
+            "Scorer": "NEDOVIC, NEMANJA",
+            "Assists": 2,
+            "AvgXFG": 37.6,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "BLOSSOMGAME, JARON",
+            "Scorer": "HAYES, KEVARRIUS",
+            "Assists": 2,
+            "AvgXFG": 57.9,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "TARPEY, TERRY",
+            "Scorer": "MAKOUNDOU, YOAN",
+            "Assists": 2,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 2
+        },
+        {
+            "Passer": "JAMES, MIKE",
+            "Scorer": "MAKOUNDOU, YOAN",
+            "Assists": 2,
+            "AvgXFG": 42.3,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "HAYES, KEVARRIUS",
+            "Scorer": "NEDOVIC, NEMANJA",
+            "Assists": 2,
+            "AvgXFG": 49.6,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "THEIS, DANIEL",
+            "Scorer": "NEDOVIC, NEMANJA",
+            "Assists": 2,
+            "AvgXFG": 65.1,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "NEDOVIC, NEMANJA",
+            "Scorer": "BEGARIN, JUHANN",
+            "Assists": 2,
+            "AvgXFG": 58.6,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 1
+        },
+        {
+            "Passer": "TARPEY, TERRY",
+            "Scorer": "DIALLO, ALPHA",
+            "Assists": 2,
+            "AvgXFG": 35.3,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "HAYES, KEVARRIUS",
+            "Scorer": "BLOSSOMGAME, JARON",
+            "Assists": 1,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "HAYES, KEVARRIUS",
+            "Scorer": "STRAZEL, MATTHEW",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "DIALLO, ALPHA",
+            "Scorer": "NEDOVIC, NEMANJA",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "MIROTIC, NIKOLA",
+            "Scorer": "NEDOVIC, NEMANJA",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "NEDOVIC, NEMANJA",
+            "Scorer": "MAKOUNDOU, YOAN",
+            "Assists": 1,
+            "AvgXFG": 95.2,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MICHINEAU, DAVID",
+            "Scorer": "MAKOUNDOU, YOAN",
+            "Assists": 1,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "MICHINEAU, DAVID",
+            "Scorer": "JAMES, MIKE",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "DIALLO, ALPHA",
+            "Scorer": "MAKOUNDOU, YOAN",
+            "Assists": 1,
+            "AvgXFG": 55.5,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "BLOSSOMGAME, JARON",
+            "Scorer": "NEDOVIC, NEMANJA",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "BEGARIN, JUHANN",
+            "Scorer": "BLOSSOMGAME, JARON",
+            "Assists": 1,
+            "AvgXFG": 77.1,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "TARPEY, TERRY",
+            "Scorer": "HAYES, KEVARRIUS",
+            "Assists": 1,
+            "AvgXFG": 39.8,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "BLOSSOMGAME, JARON",
+            "Scorer": "STRAZEL, MATTHEW",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "THEIS, DANIEL",
+            "Scorer": "STRAZEL, MATTHEW",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "HAYES, KEVARRIUS",
+            "Scorer": "OKOBO, ELIE",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "NEDOVIC, NEMANJA",
+            "Scorer": "DIALLO, ALPHA",
+            "Assists": 1,
+            "AvgXFG": 95.2,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "TARPEY, TERRY",
+            "Scorer": "OKOBO, ELIE",
+            "Assists": 1,
+            "AvgXFG": 55.5,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "BLOSSOMGAME, JARON",
+            "Scorer": "TARPEY, TERRY",
+            "Assists": 1,
+            "AvgXFG": 42.3,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        }
+    ],
+    "passer_stats": {
+        "JAMES, MIKE": {
+            "total_assists": 181,
+            "weighted_xfg": 54.8
+        },
+        "OKOBO, ELIE": {
+            "total_assists": 117,
+            "weighted_xfg": 54.1
+        },
+        "STRAZEL, MATTHEW": {
+            "total_assists": 87,
+            "weighted_xfg": 51.6
+        },
+        "MIROTIC, NIKOLA": {
+            "total_assists": 37,
+            "weighted_xfg": 48.6
+        },
+        "DIALLO, ALPHA": {
+            "total_assists": 41,
+            "weighted_xfg": 52.5
+        },
+        "THEIS, DANIEL": {
+            "total_assists": 23,
+            "weighted_xfg": 55.8
+        },
+        "BLOSSOMGAME, JARON": {
+            "total_assists": 19,
+            "weighted_xfg": 62.3
+        },
+        "NEDOVIC, NEMANJA": {
+            "total_assists": 30,
+            "weighted_xfg": 60.8
+        },
+        "HAYES, KEVARRIUS": {
+            "total_assists": 14,
+            "weighted_xfg": 53.7
+        },
+        "TARPEY, TERRY": {
+            "total_assists": 11,
+            "weighted_xfg": 50.2
+        },
+        "MICHINEAU, DAVID": {
+            "total_assists": 2,
+            "weighted_xfg": 55.0
+        },
+        "BEGARIN, JUHANN": {
+            "total_assists": 1,
+            "weighted_xfg": 77.1
+        }
+    },
+    "scorer_stats": {
+        "THEIS, DANIEL": {
+            "total_assisted": 97
+        },
+        "BLOSSOMGAME, JARON": {
+            "total_assisted": 75
+        },
+        "DIALLO, ALPHA": {
+            "total_assisted": 93
+        },
+        "HAYES, KEVARRIUS": {
+            "total_assisted": 57
+        },
+        "MIROTIC, NIKOLA": {
+            "total_assisted": 76
+        },
+        "OKOBO, ELIE": {
+            "total_assisted": 37
+        },
+        "STRAZEL, MATTHEW": {
+            "total_assisted": 31
+        },
+        "NEDOVIC, NEMANJA": {
+            "total_assisted": 33
+        },
+        "JAMES, MIKE": {
+            "total_assisted": 31
+        },
+        "TARPEY, TERRY": {
+            "total_assisted": 13
+        },
+        "MAKOUNDOU, YOAN": {
+            "total_assisted": 11
+        },
+        "BEGARIN, JUHANN": {
+            "total_assisted": 9
+        }
+    }
+}

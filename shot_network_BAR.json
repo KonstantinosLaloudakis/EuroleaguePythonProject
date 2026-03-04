@@ -1,0 +1,1214 @@
+{
+    "team": "BAR",
+    "edges": [
+        {
+            "Passer": "SATORANSKY, TOMAS",
+            "Scorer": "VESELY, JAN",
+            "Assists": 27,
+            "AvgXFG": 61.9,
+            "ThreePT": 2,
+            "TwoPT": 23,
+            "FT": 2
+        },
+        {
+            "Passer": "SATORANSKY, TOMAS",
+            "Scorer": "PUNTER, KEVIN",
+            "Assists": 20,
+            "AvgXFG": 41.7,
+            "ThreePT": 12,
+            "TwoPT": 7,
+            "FT": 1
+        },
+        {
+            "Passer": "SATORANSKY, TOMAS",
+            "Scorer": "SHENGELIA, TORNIKE",
+            "Assists": 17,
+            "AvgXFG": 54.6,
+            "ThreePT": 7,
+            "TwoPT": 10,
+            "FT": 0
+        },
+        {
+            "Passer": "SHENGELIA, TORNIKE",
+            "Scorer": "VESELY, JAN",
+            "Assists": 16,
+            "AvgXFG": 56.8,
+            "ThreePT": 0,
+            "TwoPT": 14,
+            "FT": 2
+        },
+        {
+            "Passer": "PUNTER, KEVIN",
+            "Scorer": "VESELY, JAN",
+            "Assists": 15,
+            "AvgXFG": 57.6,
+            "ThreePT": 1,
+            "TwoPT": 13,
+            "FT": 1
+        },
+        {
+            "Passer": "PUNTER, KEVIN",
+            "Scorer": "SHENGELIA, TORNIKE",
+            "Assists": 15,
+            "AvgXFG": 52.1,
+            "ThreePT": 5,
+            "TwoPT": 8,
+            "FT": 2
+        },
+        {
+            "Passer": "LAPROVITTOLA, NICOLAS",
+            "Scorer": "VESELY, JAN",
+            "Assists": 12,
+            "AvgXFG": 53.4,
+            "ThreePT": 0,
+            "TwoPT": 12,
+            "FT": 0
+        },
+        {
+            "Passer": "SATORANSKY, TOMAS",
+            "Scorer": "CLYBURN, WILL",
+            "Assists": 11,
+            "AvgXFG": 45.5,
+            "ThreePT": 5,
+            "TwoPT": 6,
+            "FT": 0
+        },
+        {
+            "Passer": "PUNTER, KEVIN",
+            "Scorer": "CLYBURN, WILL",
+            "Assists": 11,
+            "AvgXFG": 42.7,
+            "ThreePT": 8,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "LAPROVITTOLA, NICOLAS",
+            "Scorer": "PUNTER, KEVIN",
+            "Assists": 11,
+            "AvgXFG": 39.7,
+            "ThreePT": 8,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "SHENGELIA, TORNIKE",
+            "Scorer": "SATORANSKY, TOMAS",
+            "Assists": 10,
+            "AvgXFG": 41.8,
+            "ThreePT": 8,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "SATORANSKY, TOMAS",
+            "Scorer": "HERNANGOMEZ, WILLY",
+            "Assists": 10,
+            "AvgXFG": 46.7,
+            "ThreePT": 1,
+            "TwoPT": 8,
+            "FT": 1
+        },
+        {
+            "Passer": "LAPROVITTOLA, NICOLAS",
+            "Scorer": "HERNANGOMEZ, WILLY",
+            "Assists": 10,
+            "AvgXFG": 55.4,
+            "ThreePT": 0,
+            "TwoPT": 8,
+            "FT": 2
+        },
+        {
+            "Passer": "SATORANSKY, TOMAS",
+            "Scorer": "PARRA, JOEL",
+            "Assists": 9,
+            "AvgXFG": 54.3,
+            "ThreePT": 1,
+            "TwoPT": 6,
+            "FT": 2
+        },
+        {
+            "Passer": "MARCOS, JUANI",
+            "Scorer": "BRIZUELA, DARIO",
+            "Assists": 9,
+            "AvgXFG": 43.7,
+            "ThreePT": 6,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "SATORANSKY, TOMAS",
+            "Scorer": "NORRIS, MILES",
+            "Assists": 9,
+            "AvgXFG": 46.5,
+            "ThreePT": 7,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "PUNTER, KEVIN",
+            "Scorer": "SATORANSKY, TOMAS",
+            "Assists": 8,
+            "AvgXFG": 41.4,
+            "ThreePT": 5,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "SHENGELIA, TORNIKE",
+            "Scorer": "HERNANGOMEZ, WILLY",
+            "Assists": 8,
+            "AvgXFG": 66.1,
+            "ThreePT": 0,
+            "TwoPT": 5,
+            "FT": 3
+        },
+        {
+            "Passer": "SHENGELIA, TORNIKE",
+            "Scorer": "PUNTER, KEVIN",
+            "Assists": 7,
+            "AvgXFG": 34.6,
+            "ThreePT": 6,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "VESELY, JAN",
+            "Scorer": "CLYBURN, WILL",
+            "Assists": 7,
+            "AvgXFG": 41.7,
+            "ThreePT": 6,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "LAPROVITTOLA, NICOLAS",
+            "Scorer": "SHENGELIA, TORNIKE",
+            "Assists": 7,
+            "AvgXFG": 60.1,
+            "ThreePT": 2,
+            "TwoPT": 3,
+            "FT": 2
+        },
+        {
+            "Passer": "VESELY, JAN",
+            "Scorer": "SHENGELIA, TORNIKE",
+            "Assists": 7,
+            "AvgXFG": 54.4,
+            "ThreePT": 2,
+            "TwoPT": 4,
+            "FT": 1
+        },
+        {
+            "Passer": "PUNTER, KEVIN",
+            "Scorer": "BRIZUELA, DARIO",
+            "Assists": 7,
+            "AvgXFG": 41.7,
+            "ThreePT": 3,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "PUNTER, KEVIN",
+            "Scorer": "HERNANGOMEZ, WILLY",
+            "Assists": 6,
+            "AvgXFG": 64.3,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 3
+        },
+        {
+            "Passer": "LAPROVITTOLA, NICOLAS",
+            "Scorer": "PARRA, JOEL",
+            "Assists": 6,
+            "AvgXFG": 41.4,
+            "ThreePT": 3,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "CLYBURN, WILL",
+            "Scorer": "VESELY, JAN",
+            "Assists": 6,
+            "AvgXFG": 62.1,
+            "ThreePT": 1,
+            "TwoPT": 4,
+            "FT": 1
+        },
+        {
+            "Passer": "BRIZUELA, DARIO",
+            "Scorer": "VESELY, JAN",
+            "Assists": 6,
+            "AvgXFG": 46.7,
+            "ThreePT": 1,
+            "TwoPT": 5,
+            "FT": 0
+        },
+        {
+            "Passer": "SHENGELIA, TORNIKE",
+            "Scorer": "CLYBURN, WILL",
+            "Assists": 6,
+            "AvgXFG": 63.0,
+            "ThreePT": 2,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "PARRA, JOEL",
+            "Scorer": "HERNANGOMEZ, WILLY",
+            "Assists": 6,
+            "AvgXFG": 56.0,
+            "ThreePT": 0,
+            "TwoPT": 5,
+            "FT": 1
+        },
+        {
+            "Passer": "VESELY, JAN",
+            "Scorer": "PARRA, JOEL",
+            "Assists": 6,
+            "AvgXFG": 52.0,
+            "ThreePT": 2,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "BRIZUELA, DARIO",
+            "Scorer": "PARRA, JOEL",
+            "Assists": 6,
+            "AvgXFG": 53.2,
+            "ThreePT": 1,
+            "TwoPT": 5,
+            "FT": 0
+        },
+        {
+            "Passer": "LAPROVITTOLA, NICOLAS",
+            "Scorer": "BRIZUELA, DARIO",
+            "Assists": 5,
+            "AvgXFG": 50.5,
+            "ThreePT": 2,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "CLYBURN, WILL",
+            "Scorer": "PARRA, JOEL",
+            "Assists": 5,
+            "AvgXFG": 48.3,
+            "ThreePT": 2,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "CLYBURN, WILL",
+            "Scorer": "HERNANGOMEZ, WILLY",
+            "Assists": 5,
+            "AvgXFG": 62.4,
+            "ThreePT": 0,
+            "TwoPT": 4,
+            "FT": 1
+        },
+        {
+            "Passer": "VESELY, JAN",
+            "Scorer": "PUNTER, KEVIN",
+            "Assists": 5,
+            "AvgXFG": 39.7,
+            "ThreePT": 3,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "PUNTER, KEVIN",
+            "Scorer": "PARRA, JOEL",
+            "Assists": 5,
+            "AvgXFG": 68.7,
+            "ThreePT": 0,
+            "TwoPT": 5,
+            "FT": 0
+        },
+        {
+            "Passer": "SATORANSKY, TOMAS",
+            "Scorer": "BRIZUELA, DARIO",
+            "Assists": 5,
+            "AvgXFG": 36.7,
+            "ThreePT": 3,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "PUNTER, KEVIN",
+            "Scorer": "NORRIS, MILES",
+            "Assists": 5,
+            "AvgXFG": 50.1,
+            "ThreePT": 4,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "LAPROVITTOLA, NICOLAS",
+            "Scorer": "SATORANSKY, TOMAS",
+            "Assists": 4,
+            "AvgXFG": 51.4,
+            "ThreePT": 3,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "LAPROVITTOLA, NICOLAS",
+            "Scorer": "NORRIS, MILES",
+            "Assists": 4,
+            "AvgXFG": 49.3,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 1
+        },
+        {
+            "Passer": "CLYBURN, WILL",
+            "Scorer": "PUNTER, KEVIN",
+            "Assists": 4,
+            "AvgXFG": 46.4,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "LAPROVITTOLA, NICOLAS",
+            "Scorer": "CLYBURN, WILL",
+            "Assists": 4,
+            "AvgXFG": 51.8,
+            "ThreePT": 2,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "PUNTER, KEVIN",
+            "Scorer": "LAPROVITTOLA, NICOLAS",
+            "Assists": 4,
+            "AvgXFG": 45.1,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "BRIZUELA, DARIO",
+            "Scorer": "SHENGELIA, TORNIKE",
+            "Assists": 4,
+            "AvgXFG": 54.1,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "VESELY, JAN",
+            "Scorer": "SATORANSKY, TOMAS",
+            "Assists": 4,
+            "AvgXFG": 43.5,
+            "ThreePT": 3,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "PARRA, JOEL",
+            "Scorer": "SHENGELIA, TORNIKE",
+            "Assists": 4,
+            "AvgXFG": 60.2,
+            "ThreePT": 0,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "MARCOS, JUANI",
+            "Scorer": "PARRA, JOEL",
+            "Assists": 4,
+            "AvgXFG": 37.6,
+            "ThreePT": 4,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "CALE, MYLES",
+            "Scorer": "HERNANGOMEZ, WILLY",
+            "Assists": 4,
+            "AvgXFG": 74.4,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 2
+        },
+        {
+            "Passer": "LAPROVITTOLA, NICOLAS",
+            "Scorer": "CALE, MYLES",
+            "Assists": 3,
+            "AvgXFG": 41.3,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "HERNANGOMEZ, WILLY",
+            "Scorer": "SHENGELIA, TORNIKE",
+            "Assists": 3,
+            "AvgXFG": 62.2,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "CLYBURN, WILL",
+            "Scorer": "LAPROVITTOLA, NICOLAS",
+            "Assists": 3,
+            "AvgXFG": 35.3,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "CALE, MYLES",
+            "Scorer": "BRIZUELA, DARIO",
+            "Assists": 3,
+            "AvgXFG": 36.8,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "NORRIS, MILES",
+            "Scorer": "CALE, MYLES",
+            "Assists": 3,
+            "AvgXFG": 38.3,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "BRIZUELA, DARIO",
+            "Scorer": "SATORANSKY, TOMAS",
+            "Assists": 3,
+            "AvgXFG": 43.7,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "BRIZUELA, DARIO",
+            "Scorer": "MARCOS, JUANI",
+            "Assists": 3,
+            "AvgXFG": 41.8,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "CALE, MYLES",
+            "Scorer": "NORRIS, MILES",
+            "Assists": 3,
+            "AvgXFG": 58.4,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "PARRA, JOEL",
+            "Scorer": "SATORANSKY, TOMAS",
+            "Assists": 3,
+            "AvgXFG": 36.6,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "SHENGELIA, TORNIKE",
+            "Scorer": "MARCOS, JUANI",
+            "Assists": 3,
+            "AvgXFG": 35.2,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "SHENGELIA, TORNIKE",
+            "Scorer": "BRIZUELA, DARIO",
+            "Assists": 3,
+            "AvgXFG": 37.3,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "MARCOS, JUANI",
+            "Scorer": "SHENGELIA, TORNIKE",
+            "Assists": 3,
+            "AvgXFG": 59.0,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "PARRA, JOEL",
+            "Scorer": "BRIZUELA, DARIO",
+            "Assists": 3,
+            "AvgXFG": 48.5,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "CLYBURN, WILL",
+            "Scorer": "BRIZUELA, DARIO",
+            "Assists": 3,
+            "AvgXFG": 64.8,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "SHENGELIA, TORNIKE",
+            "Scorer": "LAPROVITTOLA, NICOLAS",
+            "Assists": 3,
+            "AvgXFG": 48.4,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "LAPROVITTOLA, NICOLAS",
+            "Scorer": "FALL, YOUSSOUPHA",
+            "Assists": 3,
+            "AvgXFG": 47.2,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "SHENGELIA, TORNIKE",
+            "Scorer": "FALL, YOUSSOUPHA",
+            "Assists": 3,
+            "AvgXFG": 51.6,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "BRIZUELA, DARIO",
+            "Scorer": "NORRIS, MILES",
+            "Assists": 2,
+            "AvgXFG": 45.4,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "CALE, MYLES",
+            "Scorer": "PUNTER, KEVIN",
+            "Assists": 2,
+            "AvgXFG": 49.6,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "SATORANSKY, TOMAS",
+            "Scorer": "CALE, MYLES",
+            "Assists": 2,
+            "AvgXFG": 51.7,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "VESELY, JAN",
+            "Scorer": "CALE, MYLES",
+            "Assists": 2,
+            "AvgXFG": 37.6,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "SHENGELIA, TORNIKE",
+            "Scorer": "CALE, MYLES",
+            "Assists": 2,
+            "AvgXFG": 37.5,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "VESELY, JAN",
+            "Scorer": "BRIZUELA, DARIO",
+            "Assists": 2,
+            "AvgXFG": 35.1,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "NORRIS, MILES",
+            "Scorer": "PARRA, JOEL",
+            "Assists": 2,
+            "AvgXFG": 37.6,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "MARCOS, JUANI",
+            "Scorer": "PUNTER, KEVIN",
+            "Assists": 2,
+            "AvgXFG": 36.7,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "PARRA, JOEL",
+            "Scorer": "VESELY, JAN",
+            "Assists": 2,
+            "AvgXFG": 72.4,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "HERNANGOMEZ, WILLY",
+            "Scorer": "CALE, MYLES",
+            "Assists": 2,
+            "AvgXFG": 58.2,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "BRIZUELA, DARIO",
+            "Scorer": "PUNTER, KEVIN",
+            "Assists": 2,
+            "AvgXFG": 38.3,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "HERNANGOMEZ, WILLY",
+            "Scorer": "PUNTER, KEVIN",
+            "Assists": 2,
+            "AvgXFG": 35.3,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "SATORANSKY, TOMAS",
+            "Scorer": "FALL, YOUSSOUPHA",
+            "Assists": 2,
+            "AvgXFG": 72.4,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "VESELY, JAN",
+            "Scorer": "LAPROVITTOLA, NICOLAS",
+            "Assists": 2,
+            "AvgXFG": 45.2,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "PARRA, JOEL",
+            "Scorer": "FALL, YOUSSOUPHA",
+            "Assists": 1,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "BRIZUELA, DARIO",
+            "Scorer": "FALL, YOUSSOUPHA",
+            "Assists": 1,
+            "AvgXFG": 60.7,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "CALE, MYLES",
+            "Scorer": "PARRA, JOEL",
+            "Assists": 1,
+            "AvgXFG": 39.8,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "CALE, MYLES",
+            "Scorer": "SATORANSKY, TOMAS",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "SATORANSKY, TOMAS",
+            "Scorer": "KEITA, SAYON",
+            "Assists": 1,
+            "AvgXFG": 85.7,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "SHENGELIA, TORNIKE",
+            "Scorer": "KEITA, SAYON",
+            "Assists": 1,
+            "AvgXFG": 85.7,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "BRIZUELA, DARIO",
+            "Scorer": "CALE, MYLES",
+            "Assists": 1,
+            "AvgXFG": 40.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "BRIZUELA, DARIO",
+            "Scorer": "HERNANGOMEZ, WILLY",
+            "Assists": 1,
+            "AvgXFG": 60.7,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "VESELY, JAN",
+            "Scorer": "MARCOS, JUANI",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "CALE, MYLES",
+            "Scorer": "LAPROVITTOLA, NICOLAS",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "PARRA, JOEL",
+            "Scorer": "CALE, MYLES",
+            "Assists": 1,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "SHENGELIA, TORNIKE",
+            "Scorer": "PARRA, JOEL",
+            "Assists": 1,
+            "AvgXFG": 39.8,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "CALE, MYLES",
+            "Scorer": "SHENGELIA, TORNIKE",
+            "Assists": 1,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "CALE, MYLES",
+            "Scorer": "VESELY, JAN",
+            "Assists": 1,
+            "AvgXFG": 95.2,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "SATORANSKY, TOMAS",
+            "Scorer": "LAPROVITTOLA, NICOLAS",
+            "Assists": 1,
+            "AvgXFG": 40.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "PARRA, JOEL",
+            "Scorer": "MARCOS, JUANI",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "MARCOS, JUANI",
+            "Scorer": "VESELY, JAN",
+            "Assists": 1,
+            "AvgXFG": 40.2,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "SHENGELIA, TORNIKE",
+            "Scorer": "NORRIS, MILES",
+            "Assists": 1,
+            "AvgXFG": 95.2,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "CLYBURN, WILL",
+            "Scorer": "SATORANSKY, TOMAS",
+            "Assists": 1,
+            "AvgXFG": 40.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "MARCOS, JUANI",
+            "Scorer": "CLYBURN, WILL",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "PARRA, JOEL",
+            "Scorer": "CLYBURN, WILL",
+            "Assists": 1,
+            "AvgXFG": 55.5,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "BRIZUELA, DARIO",
+            "Scorer": "KEITA, SAYON",
+            "Assists": 1,
+            "AvgXFG": 95.2,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MARCOS, JUANI",
+            "Scorer": "CALE, MYLES",
+            "Assists": 1,
+            "AvgXFG": 40.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "LAPROVITTOLA, NICOLAS",
+            "Scorer": "KEITA, SAYON",
+            "Assists": 1,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "KEITA, SAYON",
+            "Scorer": "PARRA, JOEL",
+            "Assists": 1,
+            "AvgXFG": 41.9,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "PUNTER, KEVIN",
+            "Scorer": "KEITA, SAYON",
+            "Assists": 1,
+            "AvgXFG": 95.2,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "PARRA, JOEL",
+            "Scorer": "LAPROVITTOLA, NICOLAS",
+            "Assists": 1,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "PUNTER, KEVIN",
+            "Scorer": "MARCOS, JUANI",
+            "Assists": 1,
+            "AvgXFG": 40.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "MARCOS, JUANI",
+            "Scorer": "HERNANGOMEZ, WILLY",
+            "Assists": 1,
+            "AvgXFG": 49.7,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "NORRIS, MILES",
+            "Scorer": "BRIZUELA, DARIO",
+            "Assists": 1,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "PUNTER, KEVIN",
+            "Scorer": "CALE, MYLES",
+            "Assists": 1,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "LAPROVITTOLA, NICOLAS",
+            "Scorer": "MARCOS, JUANI",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "HERNANGOMEZ, WILLY",
+            "Scorer": "PARRA, JOEL",
+            "Assists": 1,
+            "AvgXFG": 55.5,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "NORRIS, MILES",
+            "Scorer": "LAPROVITTOLA, NICOLAS",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "HERNANGOMEZ, WILLY",
+            "Scorer": "BRIZUELA, DARIO",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "PARRA, JOEL",
+            "Scorer": "PUNTER, KEVIN",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "HERNANGOMEZ, WILLY",
+            "Scorer": "SATORANSKY, TOMAS",
+            "Assists": 1,
+            "AvgXFG": 41.9,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "CLYBURN, WILL",
+            "Scorer": "SHENGELIA, TORNIKE",
+            "Assists": 1,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "BRIZUELA, DARIO",
+            "Scorer": "CLYBURN, WILL",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "CLYBURN, WILL",
+            "Scorer": "NORRIS, MILES",
+            "Assists": 1,
+            "AvgXFG": 76.6,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "HERNANGOMEZ, WILLY",
+            "Scorer": "NORRIS, MILES",
+            "Assists": 1,
+            "AvgXFG": 91.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "CALE, MYLES",
+            "Scorer": "CLYBURN, WILL",
+            "Assists": 1,
+            "AvgXFG": 39.8,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "PUNTER, KEVIN",
+            "Scorer": "FALL, YOUSSOUPHA",
+            "Assists": 1,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "FALL, YOUSSOUPHA",
+            "Scorer": "SHENGELIA, TORNIKE",
+            "Assists": 1,
+            "AvgXFG": 49.7,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        }
+    ],
+    "passer_stats": {
+        "SATORANSKY, TOMAS": {
+            "total_assists": 114,
+            "weighted_xfg": 51.5
+        },
+        "SHENGELIA, TORNIKE": {
+            "total_assists": 64,
+            "weighted_xfg": 51.4
+        },
+        "PUNTER, KEVIN": {
+            "total_assists": 80,
+            "weighted_xfg": 52.2
+        },
+        "LAPROVITTOLA, NICOLAS": {
+            "total_assists": 71,
+            "weighted_xfg": 49.8
+        },
+        "MARCOS, JUANI": {
+            "total_assists": 22,
+            "weighted_xfg": 43.6
+        },
+        "VESELY, JAN": {
+            "total_assists": 36,
+            "weighted_xfg": 45.2
+        },
+        "CLYBURN, WILL": {
+            "total_assists": 29,
+            "weighted_xfg": 54.9
+        },
+        "BRIZUELA, DARIO": {
+            "total_assists": 31,
+            "weighted_xfg": 49.4
+        },
+        "PARRA, JOEL": {
+            "total_assists": 24,
+            "weighted_xfg": 54.4
+        },
+        "CALE, MYLES": {
+            "total_assists": 18,
+            "weighted_xfg": 55.7
+        },
+        "HERNANGOMEZ, WILLY": {
+            "total_assists": 11,
+            "weighted_xfg": 54.4
+        },
+        "NORRIS, MILES": {
+            "total_assists": 7,
+            "weighted_xfg": 41.3
+        },
+        "KEITA, SAYON": {
+            "total_assists": 1,
+            "weighted_xfg": 41.9
+        },
+        "FALL, YOUSSOUPHA": {
+            "total_assists": 1,
+            "weighted_xfg": 49.7
+        }
+    },
+    "scorer_stats": {
+        "VESELY, JAN": {
+            "total_assisted": 86
+        },
+        "PUNTER, KEVIN": {
+            "total_assisted": 56
+        },
+        "SHENGELIA, TORNIKE": {
+            "total_assisted": 63
+        },
+        "CLYBURN, WILL": {
+            "total_assisted": 43
+        },
+        "SATORANSKY, TOMAS": {
+            "total_assisted": 35
+        },
+        "HERNANGOMEZ, WILLY": {
+            "total_assisted": 51
+        },
+        "PARRA, JOEL": {
+            "total_assisted": 47
+        },
+        "BRIZUELA, DARIO": {
+            "total_assisted": 42
+        },
+        "NORRIS, MILES": {
+            "total_assisted": 26
+        },
+        "LAPROVITTOLA, NICOLAS": {
+            "total_assisted": 16
+        },
+        "CALE, MYLES": {
+            "total_assisted": 18
+        },
+        "MARCOS, JUANI": {
+            "total_assisted": 10
+        },
+        "FALL, YOUSSOUPHA": {
+            "total_assisted": 11
+        },
+        "KEITA, SAYON": {
+            "total_assisted": 5
+        }
+    }
+}

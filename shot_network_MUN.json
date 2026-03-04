@@ -1,0 +1,1525 @@
+{
+    "team": "MUN",
+    "edges": [
+        {
+            "Passer": "JOVIC, STEFAN",
+            "Scorer": "MIKE, ISIAHA",
+            "Assists": 14,
+            "AvgXFG": 37.6,
+            "ThreePT": 11,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "JOVIC, STEFAN",
+            "Scorer": "LUCIC, VLADIMIR",
+            "Assists": 14,
+            "AvgXFG": 56.8,
+            "ThreePT": 3,
+            "TwoPT": 7,
+            "FT": 4
+        },
+        {
+            "Passer": "DIMITRIJEVIC, NENO",
+            "Scorer": "OBST, ANDREAS",
+            "Assists": 12,
+            "AvgXFG": 38.4,
+            "ThreePT": 9,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "JOVIC, STEFAN",
+            "Scorer": "OBST, ANDREAS",
+            "Assists": 11,
+            "AvgXFG": 39.9,
+            "ThreePT": 9,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "JESSUP, JUSTINIAN",
+            "Scorer": "GABRIEL, WENYEN",
+            "Assists": 11,
+            "AvgXFG": 68.2,
+            "ThreePT": 0,
+            "TwoPT": 10,
+            "FT": 1
+        },
+        {
+            "Passer": "VOIGTMANN, JOHANNES",
+            "Scorer": "LUCIC, VLADIMIR",
+            "Assists": 10,
+            "AvgXFG": 56.8,
+            "ThreePT": 6,
+            "TwoPT": 2,
+            "FT": 2
+        },
+        {
+            "Passer": "JOVIC, STEFAN",
+            "Scorer": "GABRIEL, WENYEN",
+            "Assists": 9,
+            "AvgXFG": 78.1,
+            "ThreePT": 0,
+            "TwoPT": 8,
+            "FT": 1
+        },
+        {
+            "Passer": "JOVIC, STEFAN",
+            "Scorer": "DA SILVA, OSCAR",
+            "Assists": 9,
+            "AvgXFG": 52.0,
+            "ThreePT": 1,
+            "TwoPT": 8,
+            "FT": 0
+        },
+        {
+            "Passer": "HOLLATZ, JUSTUS",
+            "Scorer": "OBST, ANDREAS",
+            "Assists": 9,
+            "AvgXFG": 37.0,
+            "ThreePT": 6,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "RATHAN-MAYES, XAVIER",
+            "Scorer": "MIKE, ISIAHA",
+            "Assists": 8,
+            "AvgXFG": 56.3,
+            "ThreePT": 3,
+            "TwoPT": 4,
+            "FT": 1
+        },
+        {
+            "Passer": "MIKE, ISIAHA",
+            "Scorer": "LUCIC, VLADIMIR",
+            "Assists": 8,
+            "AvgXFG": 53.8,
+            "ThreePT": 3,
+            "TwoPT": 5,
+            "FT": 0
+        },
+        {
+            "Passer": "JESSUP, JUSTINIAN",
+            "Scorer": "OBST, ANDREAS",
+            "Assists": 8,
+            "AvgXFG": 37.1,
+            "ThreePT": 7,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MIKE, ISIAHA",
+            "Scorer": "OBST, ANDREAS",
+            "Assists": 8,
+            "AvgXFG": 37.8,
+            "ThreePT": 7,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "RATHAN-MAYES, XAVIER",
+            "Scorer": "JESSUP, JUSTINIAN",
+            "Assists": 8,
+            "AvgXFG": 40.0,
+            "ThreePT": 5,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "JOVIC, STEFAN",
+            "Scorer": "JESSUP, JUSTINIAN",
+            "Assists": 7,
+            "AvgXFG": 45.9,
+            "ThreePT": 4,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "JESSUP, JUSTINIAN",
+            "Scorer": "MCCORMACK, DAVID",
+            "Assists": 7,
+            "AvgXFG": 71.7,
+            "ThreePT": 0,
+            "TwoPT": 7,
+            "FT": 0
+        },
+        {
+            "Passer": "GABRIEL, WENYEN",
+            "Scorer": "LUCIC, VLADIMIR",
+            "Assists": 7,
+            "AvgXFG": 62.0,
+            "ThreePT": 3,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "LUCIC, VLADIMIR",
+            "Scorer": "MIKE, ISIAHA",
+            "Assists": 7,
+            "AvgXFG": 66.4,
+            "ThreePT": 2,
+            "TwoPT": 4,
+            "FT": 1
+        },
+        {
+            "Passer": "MIKE, ISIAHA",
+            "Scorer": "JESSUP, JUSTINIAN",
+            "Assists": 7,
+            "AvgXFG": 40.7,
+            "ThreePT": 4,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "DA SILVA, OSCAR",
+            "Scorer": "MCCORMACK, DAVID",
+            "Assists": 7,
+            "AvgXFG": 59.0,
+            "ThreePT": 0,
+            "TwoPT": 6,
+            "FT": 1
+        },
+        {
+            "Passer": "MIKE, ISIAHA",
+            "Scorer": "DA SILVA, OSCAR",
+            "Assists": 6,
+            "AvgXFG": 58.7,
+            "ThreePT": 0,
+            "TwoPT": 4,
+            "FT": 2
+        },
+        {
+            "Passer": "OBST, ANDREAS",
+            "Scorer": "MCCORMACK, DAVID",
+            "Assists": 6,
+            "AvgXFG": 65.0,
+            "ThreePT": 0,
+            "TwoPT": 6,
+            "FT": 0
+        },
+        {
+            "Passer": "LUCIC, VLADIMIR",
+            "Scorer": "GABRIEL, WENYEN",
+            "Assists": 6,
+            "AvgXFG": 52.8,
+            "ThreePT": 1,
+            "TwoPT": 5,
+            "FT": 0
+        },
+        {
+            "Passer": "LUCIC, VLADIMIR",
+            "Scorer": "DA SILVA, OSCAR",
+            "Assists": 6,
+            "AvgXFG": 50.3,
+            "ThreePT": 0,
+            "TwoPT": 6,
+            "FT": 0
+        },
+        {
+            "Passer": "OBST, ANDREAS",
+            "Scorer": "MIKE, ISIAHA",
+            "Assists": 6,
+            "AvgXFG": 42.7,
+            "ThreePT": 4,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "DINWIDDIE, SPENCER",
+            "Scorer": "DA SILVA, OSCAR",
+            "Assists": 6,
+            "AvgXFG": 58.6,
+            "ThreePT": 1,
+            "TwoPT": 5,
+            "FT": 0
+        },
+        {
+            "Passer": "DIMITRIJEVIC, NENO",
+            "Scorer": "GABRIEL, WENYEN",
+            "Assists": 6,
+            "AvgXFG": 78.7,
+            "ThreePT": 0,
+            "TwoPT": 6,
+            "FT": 0
+        },
+        {
+            "Passer": "RATHAN-MAYES, XAVIER",
+            "Scorer": "GABRIEL, WENYEN",
+            "Assists": 5,
+            "AvgXFG": 83.6,
+            "ThreePT": 0,
+            "TwoPT": 4,
+            "FT": 1
+        },
+        {
+            "Passer": "BALDWIN, KAMAR",
+            "Scorer": "OBST, ANDREAS",
+            "Assists": 5,
+            "AvgXFG": 45.1,
+            "ThreePT": 4,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "HOLLATZ, JUSTUS",
+            "Scorer": "GABRIEL, WENYEN",
+            "Assists": 5,
+            "AvgXFG": 46.1,
+            "ThreePT": 1,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "LUCIC, VLADIMIR",
+            "Scorer": "OBST, ANDREAS",
+            "Assists": 5,
+            "AvgXFG": 41.3,
+            "ThreePT": 3,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "DINWIDDIE, SPENCER",
+            "Scorer": "GABRIEL, WENYEN",
+            "Assists": 5,
+            "AvgXFG": 87.0,
+            "ThreePT": 0,
+            "TwoPT": 5,
+            "FT": 0
+        },
+        {
+            "Passer": "DINWIDDIE, SPENCER",
+            "Scorer": "MIKE, ISIAHA",
+            "Assists": 5,
+            "AvgXFG": 38.1,
+            "ThreePT": 5,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "JOVIC, STEFAN",
+            "Scorer": "GIFFEY, NIELS",
+            "Assists": 5,
+            "AvgXFG": 44.4,
+            "ThreePT": 2,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "DIMITRIJEVIC, NENO",
+            "Scorer": "MIKE, ISIAHA",
+            "Assists": 5,
+            "AvgXFG": 56.9,
+            "ThreePT": 2,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "VOIGTMANN, JOHANNES",
+            "Scorer": "JESSUP, JUSTINIAN",
+            "Assists": 5,
+            "AvgXFG": 54.9,
+            "ThreePT": 2,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "RATHAN-MAYES, XAVIER",
+            "Scorer": "JOVIC, STEFAN",
+            "Assists": 4,
+            "AvgXFG": 41.3,
+            "ThreePT": 2,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "GIFFEY, NIELS",
+            "Scorer": "MCCORMACK, DAVID",
+            "Assists": 4,
+            "AvgXFG": 64.0,
+            "ThreePT": 0,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "GIFFEY, NIELS",
+            "Scorer": "JESSUP, JUSTINIAN",
+            "Assists": 4,
+            "AvgXFG": 37.9,
+            "ThreePT": 3,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MIKE, ISIAHA",
+            "Scorer": "MCCORMACK, DAVID",
+            "Assists": 4,
+            "AvgXFG": 57.3,
+            "ThreePT": 0,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "JOVIC, STEFAN",
+            "Scorer": "MCCORMACK, DAVID",
+            "Assists": 4,
+            "AvgXFG": 81.5,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "BALDWIN, KAMAR",
+            "Scorer": "MIKE, ISIAHA",
+            "Assists": 4,
+            "AvgXFG": 76.3,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "OBST, ANDREAS",
+            "Scorer": "GABRIEL, WENYEN",
+            "Assists": 4,
+            "AvgXFG": 68.5,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "OBST, ANDREAS",
+            "Scorer": "JOVIC, STEFAN",
+            "Assists": 4,
+            "AvgXFG": 48.2,
+            "ThreePT": 2,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "OBST, ANDREAS",
+            "Scorer": "VOIGTMANN, JOHANNES",
+            "Assists": 4,
+            "AvgXFG": 46.0,
+            "ThreePT": 2,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "VOIGTMANN, JOHANNES",
+            "Scorer": "MIKE, ISIAHA",
+            "Assists": 4,
+            "AvgXFG": 47.4,
+            "ThreePT": 2,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "JOVIC, STEFAN",
+            "Scorer": "VOIGTMANN, JOHANNES",
+            "Assists": 4,
+            "AvgXFG": 53.8,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "DINWIDDIE, SPENCER",
+            "Scorer": "JESSUP, JUSTINIAN",
+            "Assists": 4,
+            "AvgXFG": 44.5,
+            "ThreePT": 2,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "OBST, ANDREAS",
+            "Scorer": "LUCIC, VLADIMIR",
+            "Assists": 4,
+            "AvgXFG": 48.9,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "DA SILVA, OSCAR",
+            "Scorer": "OBST, ANDREAS",
+            "Assists": 4,
+            "AvgXFG": 40.2,
+            "ThreePT": 3,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "VOIGTMANN, JOHANNES",
+            "Scorer": "OBST, ANDREAS",
+            "Assists": 4,
+            "AvgXFG": 46.3,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "DINWIDDIE, SPENCER",
+            "Scorer": "VOIGTMANN, JOHANNES",
+            "Assists": 4,
+            "AvgXFG": 48.0,
+            "ThreePT": 3,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "HOLLATZ, JUSTUS",
+            "Scorer": "DA SILVA, OSCAR",
+            "Assists": 4,
+            "AvgXFG": 63.8,
+            "ThreePT": 0,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "DIMITRIJEVIC, NENO",
+            "Scorer": "JESSUP, JUSTINIAN",
+            "Assists": 4,
+            "AvgXFG": 50.2,
+            "ThreePT": 3,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "DIMITRIJEVIC, NENO",
+            "Scorer": "GIFFEY, NIELS",
+            "Assists": 4,
+            "AvgXFG": 61.3,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 2
+        },
+        {
+            "Passer": "HOLLATZ, JUSTUS",
+            "Scorer": "GIFFEY, NIELS",
+            "Assists": 4,
+            "AvgXFG": 40.3,
+            "ThreePT": 3,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "LUCIC, VLADIMIR",
+            "Scorer": "JOVIC, STEFAN",
+            "Assists": 3,
+            "AvgXFG": 54.8,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "BALDWIN, KAMAR",
+            "Scorer": "GABRIEL, WENYEN",
+            "Assists": 3,
+            "AvgXFG": 58.2,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "GABRIEL, WENYEN",
+            "Scorer": "GIFFEY, NIELS",
+            "Assists": 3,
+            "AvgXFG": 37.4,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "BALDWIN, KAMAR",
+            "Scorer": "DA SILVA, OSCAR",
+            "Assists": 3,
+            "AvgXFG": 52.4,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "RATHAN-MAYES, XAVIER",
+            "Scorer": "MCCORMACK, DAVID",
+            "Assists": 3,
+            "AvgXFG": 62.0,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "RATHAN-MAYES, XAVIER",
+            "Scorer": "DA SILVA, OSCAR",
+            "Assists": 3,
+            "AvgXFG": 48.8,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "RATHAN-MAYES, XAVIER",
+            "Scorer": "GIFFEY, NIELS",
+            "Assists": 3,
+            "AvgXFG": 48.3,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "MIKE, ISIAHA",
+            "Scorer": "GABRIEL, WENYEN",
+            "Assists": 3,
+            "AvgXFG": 79.8,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "DA SILVA, OSCAR",
+            "Scorer": "LUCIC, VLADIMIR",
+            "Assists": 3,
+            "AvgXFG": 47.7,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "OBST, ANDREAS",
+            "Scorer": "DA SILVA, OSCAR",
+            "Assists": 3,
+            "AvgXFG": 62.9,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "VOIGTMANN, JOHANNES",
+            "Scorer": "DINWIDDIE, SPENCER",
+            "Assists": 3,
+            "AvgXFG": 43.4,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "JESSUP, JUSTINIAN",
+            "Scorer": "VOIGTMANN, JOHANNES",
+            "Assists": 3,
+            "AvgXFG": 59.1,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "DINWIDDIE, SPENCER",
+            "Scorer": "OBST, ANDREAS",
+            "Assists": 3,
+            "AvgXFG": 35.2,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "HOLLATZ, JUSTUS",
+            "Scorer": "JESSUP, JUSTINIAN",
+            "Assists": 3,
+            "AvgXFG": 40.5,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "VOIGTMANN, JOHANNES",
+            "Scorer": "DA SILVA, OSCAR",
+            "Assists": 3,
+            "AvgXFG": 61.8,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "LUCIC, VLADIMIR",
+            "Scorer": "MCCORMACK, DAVID",
+            "Assists": 3,
+            "AvgXFG": 53.8,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "HOLLATZ, JUSTUS",
+            "Scorer": "MCCORMACK, DAVID",
+            "Assists": 3,
+            "AvgXFG": 65.5,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "DIMITRIJEVIC, NENO",
+            "Scorer": "LUCIC, VLADIMIR",
+            "Assists": 3,
+            "AvgXFG": 67.6,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "DIMITRIJEVIC, NENO",
+            "Scorer": "VOIGTMANN, JOHANNES",
+            "Assists": 3,
+            "AvgXFG": 35.0,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "GABRIEL, WENYEN",
+            "Scorer": "MIKE, ISIAHA",
+            "Assists": 3,
+            "AvgXFG": 51.5,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "GIFFEY, NIELS",
+            "Scorer": "GABRIEL, WENYEN",
+            "Assists": 2,
+            "AvgXFG": 77.9,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "RATHAN-MAYES, XAVIER",
+            "Scorer": "BALDWIN, KAMAR",
+            "Assists": 2,
+            "AvgXFG": 41.9,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "MIKE, ISIAHA",
+            "Scorer": "RATHAN-MAYES, XAVIER",
+            "Assists": 2,
+            "AvgXFG": 55.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "OBST, ANDREAS",
+            "Scorer": "GIFFEY, NIELS",
+            "Assists": 2,
+            "AvgXFG": 37.6,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "OBST, ANDREAS",
+            "Scorer": "HOLLATZ, JUSTUS",
+            "Assists": 2,
+            "AvgXFG": 47.9,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "BALDWIN, KAMAR",
+            "Scorer": "LUCIC, VLADIMIR",
+            "Assists": 2,
+            "AvgXFG": 68.7,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "KRATZER, LEON",
+            "Scorer": "GIFFEY, NIELS",
+            "Assists": 2,
+            "AvgXFG": 37.1,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "JESSUP, JUSTINIAN",
+            "Scorer": "MIKE, ISIAHA",
+            "Assists": 2,
+            "AvgXFG": 38.8,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "GIFFEY, NIELS",
+            "Scorer": "OBST, ANDREAS",
+            "Assists": 2,
+            "AvgXFG": 37.5,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "RATHAN-MAYES, XAVIER",
+            "Scorer": "LUCIC, VLADIMIR",
+            "Assists": 2,
+            "AvgXFG": 76.6,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "BALDWIN, KAMAR",
+            "Scorer": "JESSUP, JUSTINIAN",
+            "Assists": 2,
+            "AvgXFG": 52.0,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "GABRIEL, WENYEN",
+            "Scorer": "DA SILVA, OSCAR",
+            "Assists": 2,
+            "AvgXFG": 49.7,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "JESSUP, JUSTINIAN",
+            "Scorer": "DA SILVA, OSCAR",
+            "Assists": 2,
+            "AvgXFG": 55.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "DINWIDDIE, SPENCER",
+            "Scorer": "LUCIC, VLADIMIR",
+            "Assists": 2,
+            "AvgXFG": 36.9,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MCCORMACK, DAVID",
+            "Scorer": "JOVIC, STEFAN",
+            "Assists": 2,
+            "AvgXFG": 35.3,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "HOLLATZ, JUSTUS",
+            "Scorer": "DINWIDDIE, SPENCER",
+            "Assists": 2,
+            "AvgXFG": 58.3,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "DINWIDDIE, SPENCER",
+            "Scorer": "JOVIC, STEFAN",
+            "Assists": 2,
+            "AvgXFG": 35.3,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "LUCIC, VLADIMIR",
+            "Scorer": "JESSUP, JUSTINIAN",
+            "Assists": 2,
+            "AvgXFG": 52.6,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "MIKE, ISIAHA",
+            "Scorer": "JOVIC, STEFAN",
+            "Assists": 2,
+            "AvgXFG": 52.0,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "JESSUP, JUSTINIAN",
+            "Scorer": "GIFFEY, NIELS",
+            "Assists": 2,
+            "AvgXFG": 65.1,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "OBST, ANDREAS",
+            "Scorer": "DINWIDDIE, SPENCER",
+            "Assists": 2,
+            "AvgXFG": 37.3,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "VOIGTMANN, JOHANNES",
+            "Scorer": "JOVIC, STEFAN",
+            "Assists": 2,
+            "AvgXFG": 47.8,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "HOLLATZ, JUSTUS",
+            "Scorer": "LUCIC, VLADIMIR",
+            "Assists": 2,
+            "AvgXFG": 50.4,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MCCORMACK, DAVID",
+            "Scorer": "LUCIC, VLADIMIR",
+            "Assists": 2,
+            "AvgXFG": 62.3,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "RATHAN-MAYES, XAVIER",
+            "Scorer": "OBST, ANDREAS",
+            "Assists": 2,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 2
+        },
+        {
+            "Passer": "DIMITRIJEVIC, NENO",
+            "Scorer": "MCCORMACK, DAVID",
+            "Assists": 2,
+            "AvgXFG": 67.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 1
+        },
+        {
+            "Passer": "HOLLATZ, JUSTUS",
+            "Scorer": "MIKE, ISIAHA",
+            "Assists": 2,
+            "AvgXFG": 37.6,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "OBST, ANDREAS",
+            "Scorer": "JESSUP, JUSTINIAN",
+            "Assists": 2,
+            "AvgXFG": 37.5,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "VOIGTMANN, JOHANNES",
+            "Scorer": "GABRIEL, WENYEN",
+            "Assists": 2,
+            "AvgXFG": 67.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 1
+        },
+        {
+            "Passer": "LUCIC, VLADIMIR",
+            "Scorer": "DIMITRIJEVIC, NENO",
+            "Assists": 2,
+            "AvgXFG": 35.3,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "MIKE, ISIAHA",
+            "Scorer": "GIFFEY, NIELS",
+            "Assists": 2,
+            "AvgXFG": 37.5,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "GABRIEL, WENYEN",
+            "Scorer": "JESSUP, JUSTINIAN",
+            "Assists": 2,
+            "AvgXFG": 55.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "BALDWIN, KAMAR",
+            "Scorer": "RATHAN-MAYES, XAVIER",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "BALDWIN, KAMAR",
+            "Scorer": "GIFFEY, NIELS",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "DA SILVA, OSCAR",
+            "Scorer": "BALDWIN, KAMAR",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "OBST, ANDREAS",
+            "Scorer": "KRATZER, LEON",
+            "Assists": 1,
+            "AvgXFG": 39.6,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "DA SILVA, OSCAR",
+            "Scorer": "HOLLATZ, JUSTUS",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "BALDWIN, KAMAR",
+            "Scorer": "MCCORMACK, DAVID",
+            "Assists": 1,
+            "AvgXFG": 95.2,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MCCORMACK, DAVID",
+            "Scorer": "OBST, ANDREAS",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "MCCORMACK, DAVID",
+            "Scorer": "BALDWIN, KAMAR",
+            "Assists": 1,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "OBST, ANDREAS",
+            "Scorer": "BALDWIN, KAMAR",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "HOLLATZ, JUSTUS",
+            "Scorer": "BALDWIN, KAMAR",
+            "Assists": 1,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "KRATZER, LEON",
+            "Scorer": "MIKE, ISIAHA",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "DA SILVA, OSCAR",
+            "Scorer": "JESSUP, JUSTINIAN",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "JESSUP, JUSTINIAN",
+            "Scorer": "BALDWIN, KAMAR",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "DA SILVA, OSCAR",
+            "Scorer": "MIKE, ISIAHA",
+            "Assists": 1,
+            "AvgXFG": 95.2,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "GIFFEY, NIELS",
+            "Scorer": "DINWIDDIE, SPENCER",
+            "Assists": 1,
+            "AvgXFG": 40.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "HOLLATZ, JUSTUS",
+            "Scorer": "VOIGTMANN, JOHANNES",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "JOVIC, STEFAN",
+            "Scorer": "RATHAN-MAYES, XAVIER",
+            "Assists": 1,
+            "AvgXFG": 41.5,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "LUCIC, VLADIMIR",
+            "Scorer": "VOIGTMANN, JOHANNES",
+            "Assists": 1,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "LUCIC, VLADIMIR",
+            "Scorer": "DINWIDDIE, SPENCER",
+            "Assists": 1,
+            "AvgXFG": 41.9,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "DA SILVA, OSCAR",
+            "Scorer": "VOIGTMANN, JOHANNES",
+            "Assists": 1,
+            "AvgXFG": 76.6,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "GIFFEY, NIELS",
+            "Scorer": "MIKE, ISIAHA",
+            "Assists": 1,
+            "AvgXFG": 55.5,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "JOVIC, STEFAN",
+            "Scorer": "DINWIDDIE, SPENCER",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "DINWIDDIE, SPENCER",
+            "Scorer": "MCCORMACK, DAVID",
+            "Assists": 1,
+            "AvgXFG": 39.8,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MIKE, ISIAHA",
+            "Scorer": "HOLLATZ, JUSTUS",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "GIFFEY, NIELS",
+            "Scorer": "DA SILVA, OSCAR",
+            "Assists": 1,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "GIFFEY, NIELS",
+            "Scorer": "LUCIC, VLADIMIR",
+            "Assists": 1,
+            "AvgXFG": 60.7,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MCCORMACK, DAVID",
+            "Scorer": "DA SILVA, OSCAR",
+            "Assists": 1,
+            "AvgXFG": 60.7,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MCCORMACK, DAVID",
+            "Scorer": "GIFFEY, NIELS",
+            "Assists": 1,
+            "AvgXFG": 55.5,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "GIFFEY, NIELS",
+            "Scorer": "VOIGTMANN, JOHANNES",
+            "Assists": 1,
+            "AvgXFG": 41.9,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "OBST, ANDREAS",
+            "Scorer": "DIMITRIJEVIC, NENO",
+            "Assists": 1,
+            "AvgXFG": 39.8,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "GIFFEY, NIELS",
+            "Scorer": "RATHAN-MAYES, XAVIER",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "GABRIEL, WENYEN",
+            "Scorer": "OBST, ANDREAS",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "GABRIEL, WENYEN",
+            "Scorer": "DIMITRIJEVIC, NENO",
+            "Assists": 1,
+            "AvgXFG": 41.9,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "JESSUP, JUSTINIAN",
+            "Scorer": "HOLLATZ, JUSTUS",
+            "Assists": 1,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "VOIGTMANN, JOHANNES",
+            "Scorer": "MCCORMACK, DAVID",
+            "Assists": 1,
+            "AvgXFG": 60.7,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "JESSUP, JUSTINIAN",
+            "Scorer": "DIMITRIJEVIC, NENO",
+            "Assists": 1,
+            "AvgXFG": 42.3,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "HOLLATZ, JUSTUS",
+            "Scorer": "KRATZER, LEON",
+            "Assists": 1,
+            "AvgXFG": 39.6,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "RATHAN-MAYES, XAVIER",
+            "Scorer": "VOIGTMANN, JOHANNES",
+            "Assists": 1,
+            "AvgXFG": 39.2,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "GIFFEY, NIELS",
+            "Scorer": "HOLLATZ, JUSTUS",
+            "Assists": 1,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "GABRIEL, WENYEN",
+            "Scorer": "JOVIC, STEFAN",
+            "Assists": 1,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "DA SILVA, OSCAR",
+            "Scorer": "GABRIEL, WENYEN",
+            "Assists": 1,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "DIMITRIJEVIC, NENO",
+            "Scorer": "RATHAN-MAYES, XAVIER",
+            "Assists": 1,
+            "AvgXFG": 49.7,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MIKE, ISIAHA",
+            "Scorer": "DIMITRIJEVIC, NENO",
+            "Assists": 1,
+            "AvgXFG": 55.5,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "OBST, ANDREAS",
+            "Scorer": "RATHAN-MAYES, XAVIER",
+            "Assists": 1,
+            "AvgXFG": 49.7,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "GABRIEL, WENYEN",
+            "Scorer": "RATHAN-MAYES, XAVIER",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "DIMITRIJEVIC, NENO",
+            "Scorer": "HOLLATZ, JUSTUS",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "JESSUP, JUSTINIAN",
+            "Scorer": "RATHAN-MAYES, XAVIER",
+            "Assists": 1,
+            "AvgXFG": 41.2,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "DA SILVA, OSCAR",
+            "Scorer": "RATHAN-MAYES, XAVIER",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        }
+    ],
+    "passer_stats": {
+        "JOVIC, STEFAN": {
+            "total_assists": 79,
+            "weighted_xfg": 51.8
+        },
+        "DIMITRIJEVIC, NENO": {
+            "total_assists": 41,
+            "weighted_xfg": 53.5
+        },
+        "JESSUP, JUSTINIAN": {
+            "total_assists": 39,
+            "weighted_xfg": 57.1
+        },
+        "VOIGTMANN, JOHANNES": {
+            "total_assists": 34,
+            "weighted_xfg": 53.7
+        },
+        "HOLLATZ, JUSTUS": {
+            "total_assists": 37,
+            "weighted_xfg": 47.0
+        },
+        "RATHAN-MAYES, XAVIER": {
+            "total_assists": 41,
+            "weighted_xfg": 55.1
+        },
+        "MIKE, ISIAHA": {
+            "total_assists": 44,
+            "weighted_xfg": 50.4
+        },
+        "GABRIEL, WENYEN": {
+            "total_assists": 21,
+            "weighted_xfg": 51.7
+        },
+        "LUCIC, VLADIMIR": {
+            "total_assists": 36,
+            "weighted_xfg": 52.7
+        },
+        "DA SILVA, OSCAR": {
+            "total_assists": 21,
+            "weighted_xfg": 52.1
+        },
+        "OBST, ANDREAS": {
+            "total_assists": 43,
+            "weighted_xfg": 50.4
+        },
+        "DINWIDDIE, SPENCER": {
+            "total_assists": 32,
+            "weighted_xfg": 51.2
+        },
+        "BALDWIN, KAMAR": {
+            "total_assists": 22,
+            "weighted_xfg": 57.7
+        },
+        "GIFFEY, NIELS": {
+            "total_assists": 19,
+            "weighted_xfg": 53.2
+        },
+        "KRATZER, LEON": {
+            "total_assists": 3,
+            "weighted_xfg": 36.5
+        },
+        "MCCORMACK, DAVID": {
+            "total_assists": 8,
+            "weighted_xfg": 51.3
+        }
+    },
+    "scorer_stats": {
+        "MIKE, ISIAHA": {
+            "total_assisted": 63
+        },
+        "LUCIC, VLADIMIR": {
+            "total_assisted": 60
+        },
+        "OBST, ANDREAS": {
+            "total_assisted": 75
+        },
+        "GABRIEL, WENYEN": {
+            "total_assisted": 62
+        },
+        "DA SILVA, OSCAR": {
+            "total_assisted": 49
+        },
+        "JESSUP, JUSTINIAN": {
+            "total_assisted": 51
+        },
+        "MCCORMACK, DAVID": {
+            "total_assisted": 46
+        },
+        "GIFFEY, NIELS": {
+            "total_assisted": 29
+        },
+        "JOVIC, STEFAN": {
+            "total_assisted": 20
+        },
+        "VOIGTMANN, JOHANNES": {
+            "total_assisted": 23
+        },
+        "DINWIDDIE, SPENCER": {
+            "total_assisted": 10
+        },
+        "BALDWIN, KAMAR": {
+            "total_assisted": 7
+        },
+        "RATHAN-MAYES, XAVIER": {
+            "total_assisted": 10
+        },
+        "HOLLATZ, JUSTUS": {
+            "total_assisted": 7
+        },
+        "DIMITRIJEVIC, NENO": {
+            "total_assisted": 6
+        },
+        "KRATZER, LEON": {
+            "total_assisted": 2
+        }
+    }
+}

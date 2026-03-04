@@ -1,0 +1,1322 @@
+{
+    "team": "PAM",
+    "edges": [
+        {
+            "Passer": "MONTERO, JEAN",
+            "Scorer": "REUVERS, NATHAN",
+            "Assists": 30,
+            "AvgXFG": 64.3,
+            "ThreePT": 6,
+            "TwoPT": 17,
+            "FT": 7
+        },
+        {
+            "Passer": "THOMPSON, DARIUS",
+            "Scorer": "REUVERS, NATHAN",
+            "Assists": 22,
+            "AvgXFG": 53.3,
+            "ThreePT": 11,
+            "TwoPT": 8,
+            "FT": 3
+        },
+        {
+            "Passer": "MOORE, OMARI",
+            "Scorer": "COSTELLO, MATTHEW",
+            "Assists": 17,
+            "AvgXFG": 53.5,
+            "ThreePT": 8,
+            "TwoPT": 6,
+            "FT": 3
+        },
+        {
+            "Passer": "TAYLOR, KAMERON",
+            "Scorer": "REUVERS, NATHAN",
+            "Assists": 15,
+            "AvgXFG": 56.2,
+            "ThreePT": 6,
+            "TwoPT": 5,
+            "FT": 4
+        },
+        {
+            "Passer": "MONTERO, JEAN",
+            "Scorer": "COSTELLO, MATTHEW",
+            "Assists": 15,
+            "AvgXFG": 42.3,
+            "ThreePT": 12,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "THOMPSON, DARIUS",
+            "Scorer": "PRADILLA, JAIME",
+            "Assists": 14,
+            "AvgXFG": 53.4,
+            "ThreePT": 4,
+            "TwoPT": 9,
+            "FT": 1
+        },
+        {
+            "Passer": "MOORE, OMARI",
+            "Scorer": "REUVERS, NATHAN",
+            "Assists": 12,
+            "AvgXFG": 54.1,
+            "ThreePT": 4,
+            "TwoPT": 6,
+            "FT": 2
+        },
+        {
+            "Passer": "THOMPSON, DARIUS",
+            "Scorer": "COSTELLO, MATTHEW",
+            "Assists": 12,
+            "AvgXFG": 54.6,
+            "ThreePT": 5,
+            "TwoPT": 7,
+            "FT": 0
+        },
+        {
+            "Passer": "PRADILLA, JAIME",
+            "Scorer": "THOMPSON, DARIUS",
+            "Assists": 12,
+            "AvgXFG": 42.0,
+            "ThreePT": 7,
+            "TwoPT": 4,
+            "FT": 1
+        },
+        {
+            "Passer": "MOORE, OMARI",
+            "Scorer": "TAYLOR, KAMERON",
+            "Assists": 12,
+            "AvgXFG": 47.4,
+            "ThreePT": 8,
+            "TwoPT": 2,
+            "FT": 2
+        },
+        {
+            "Passer": "MONTERO, JEAN",
+            "Scorer": "SAKO, NEAL",
+            "Assists": 12,
+            "AvgXFG": 70.1,
+            "ThreePT": 0,
+            "TwoPT": 9,
+            "FT": 3
+        },
+        {
+            "Passer": "MONTERO, JEAN",
+            "Scorer": "TAYLOR, KAMERON",
+            "Assists": 12,
+            "AvgXFG": 43.3,
+            "ThreePT": 8,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "PRADILLA, JAIME",
+            "Scorer": "BADIO, BRANCOU",
+            "Assists": 11,
+            "AvgXFG": 44.3,
+            "ThreePT": 9,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "THOMPSON, DARIUS",
+            "Scorer": "TAYLOR, KAMERON",
+            "Assists": 11,
+            "AvgXFG": 43.2,
+            "ThreePT": 8,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "THOMPSON, DARIUS",
+            "Scorer": "SAKO, NEAL",
+            "Assists": 10,
+            "AvgXFG": 78.7,
+            "ThreePT": 0,
+            "TwoPT": 8,
+            "FT": 2
+        },
+        {
+            "Passer": "BADIO, BRANCOU",
+            "Scorer": "REUVERS, NATHAN",
+            "Assists": 10,
+            "AvgXFG": 65.1,
+            "ThreePT": 3,
+            "TwoPT": 6,
+            "FT": 1
+        },
+        {
+            "Passer": "PRADILLA, JAIME",
+            "Scorer": "TAYLOR, KAMERON",
+            "Assists": 10,
+            "AvgXFG": 55.2,
+            "ThreePT": 5,
+            "TwoPT": 4,
+            "FT": 1
+        },
+        {
+            "Passer": "MOORE, OMARI",
+            "Scorer": "PUERTO, JOSEP",
+            "Assists": 9,
+            "AvgXFG": 52.8,
+            "ThreePT": 5,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "MOORE, OMARI",
+            "Scorer": "THOMPSON, DARIUS",
+            "Assists": 9,
+            "AvgXFG": 42.6,
+            "ThreePT": 5,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "MOORE, OMARI",
+            "Scorer": "SAKO, NEAL",
+            "Assists": 9,
+            "AvgXFG": 63.1,
+            "ThreePT": 0,
+            "TwoPT": 9,
+            "FT": 0
+        },
+        {
+            "Passer": "MONTERO, JEAN",
+            "Scorer": "PRADILLA, JAIME",
+            "Assists": 9,
+            "AvgXFG": 53.1,
+            "ThreePT": 5,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "MOORE, OMARI",
+            "Scorer": "PRADILLA, JAIME",
+            "Assists": 8,
+            "AvgXFG": 58.8,
+            "ThreePT": 2,
+            "TwoPT": 6,
+            "FT": 0
+        },
+        {
+            "Passer": "THOMPSON, DARIUS",
+            "Scorer": "BADIO, BRANCOU",
+            "Assists": 8,
+            "AvgXFG": 45.4,
+            "ThreePT": 6,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "THOMPSON, DARIUS",
+            "Scorer": "MOORE, OMARI",
+            "Assists": 7,
+            "AvgXFG": 72.9,
+            "ThreePT": 1,
+            "TwoPT": 6,
+            "FT": 0
+        },
+        {
+            "Passer": "DE LARREA, SERGIO",
+            "Scorer": "COSTELLO, MATTHEW",
+            "Assists": 7,
+            "AvgXFG": 53.8,
+            "ThreePT": 3,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "DE LARREA, SERGIO",
+            "Scorer": "PRADILLA, JAIME",
+            "Assists": 7,
+            "AvgXFG": 55.8,
+            "ThreePT": 3,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "DE LARREA, SERGIO",
+            "Scorer": "REUVERS, NATHAN",
+            "Assists": 7,
+            "AvgXFG": 58.0,
+            "ThreePT": 2,
+            "TwoPT": 4,
+            "FT": 1
+        },
+        {
+            "Passer": "DE LARREA, SERGIO",
+            "Scorer": "SAKO, NEAL",
+            "Assists": 7,
+            "AvgXFG": 68.4,
+            "ThreePT": 0,
+            "TwoPT": 6,
+            "FT": 1
+        },
+        {
+            "Passer": "BADIO, BRANCOU",
+            "Scorer": "TAYLOR, KAMERON",
+            "Assists": 7,
+            "AvgXFG": 45.7,
+            "ThreePT": 5,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "TAYLOR, KAMERON",
+            "Scorer": "PRADILLA, JAIME",
+            "Assists": 7,
+            "AvgXFG": 70.7,
+            "ThreePT": 1,
+            "TwoPT": 4,
+            "FT": 2
+        },
+        {
+            "Passer": "MONTERO, JEAN",
+            "Scorer": "PUERTO, JOSEP",
+            "Assists": 7,
+            "AvgXFG": 45.2,
+            "ThreePT": 5,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "MONTERO, JEAN",
+            "Scorer": "MOORE, OMARI",
+            "Assists": 7,
+            "AvgXFG": 49.5,
+            "ThreePT": 4,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "THOMPSON, DARIUS",
+            "Scorer": "PUERTO, JOSEP",
+            "Assists": 6,
+            "AvgXFG": 42.3,
+            "ThreePT": 3,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "TAYLOR, KAMERON",
+            "Scorer": "BADIO, BRANCOU",
+            "Assists": 6,
+            "AvgXFG": 50.1,
+            "ThreePT": 1,
+            "TwoPT": 4,
+            "FT": 1
+        },
+        {
+            "Passer": "MOORE, OMARI",
+            "Scorer": "MONTERO, JEAN",
+            "Assists": 6,
+            "AvgXFG": 48.1,
+            "ThreePT": 2,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "THOMPSON, DARIUS",
+            "Scorer": "MONTERO, JEAN",
+            "Assists": 6,
+            "AvgXFG": 48.5,
+            "ThreePT": 4,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "MONTERO, JEAN",
+            "Scorer": "THOMPSON, DARIUS",
+            "Assists": 6,
+            "AvgXFG": 48.5,
+            "ThreePT": 3,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "PRADILLA, JAIME",
+            "Scorer": "MONTERO, JEAN",
+            "Assists": 6,
+            "AvgXFG": 49.5,
+            "ThreePT": 3,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "BADIO, BRANCOU",
+            "Scorer": "THOMPSON, DARIUS",
+            "Assists": 5,
+            "AvgXFG": 40.9,
+            "ThreePT": 4,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "BADIO, BRANCOU",
+            "Scorer": "PRADILLA, JAIME",
+            "Assists": 5,
+            "AvgXFG": 49.9,
+            "ThreePT": 1,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "MONTERO, JEAN",
+            "Scorer": "KEY, BRAXTON",
+            "Assists": 5,
+            "AvgXFG": 55.3,
+            "ThreePT": 1,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "PRADILLA, JAIME",
+            "Scorer": "REUVERS, NATHAN",
+            "Assists": 4,
+            "AvgXFG": 80.1,
+            "ThreePT": 1,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "COSTELLO, MATTHEW",
+            "Scorer": "PRADILLA, JAIME",
+            "Assists": 4,
+            "AvgXFG": 67.9,
+            "ThreePT": 1,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "DE LARREA, SERGIO",
+            "Scorer": "PUERTO, JOSEP",
+            "Assists": 4,
+            "AvgXFG": 44.4,
+            "ThreePT": 3,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "PRADILLA, JAIME",
+            "Scorer": "COSTELLO, MATTHEW",
+            "Assists": 4,
+            "AvgXFG": 58.3,
+            "ThreePT": 2,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "DE LARREA, SERGIO",
+            "Scorer": "TAYLOR, KAMERON",
+            "Assists": 4,
+            "AvgXFG": 66.5,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "SAKO, NEAL",
+            "Scorer": "THOMPSON, DARIUS",
+            "Assists": 4,
+            "AvgXFG": 39.7,
+            "ThreePT": 3,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "SAKO, NEAL",
+            "Scorer": "COSTELLO, MATTHEW",
+            "Assists": 4,
+            "AvgXFG": 39.6,
+            "ThreePT": 3,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "THOMPSON, DARIUS",
+            "Scorer": "KEY, BRAXTON",
+            "Assists": 4,
+            "AvgXFG": 57.4,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "KEY, BRAXTON",
+            "Scorer": "TAYLOR, KAMERON",
+            "Assists": 4,
+            "AvgXFG": 52.3,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "BADIO, BRANCOU",
+            "Scorer": "KEY, BRAXTON",
+            "Assists": 4,
+            "AvgXFG": 45.2,
+            "ThreePT": 2,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "KEY, BRAXTON",
+            "Scorer": "REUVERS, NATHAN",
+            "Assists": 4,
+            "AvgXFG": 57.9,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 2
+        },
+        {
+            "Passer": "PRADILLA, JAIME",
+            "Scorer": "DE LARREA, SERGIO",
+            "Assists": 3,
+            "AvgXFG": 39.8,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "DE LARREA, SERGIO",
+            "Scorer": "MOORE, OMARI",
+            "Assists": 3,
+            "AvgXFG": 36.8,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "COSTELLO, MATTHEW",
+            "Scorer": "PUERTO, JOSEP",
+            "Assists": 3,
+            "AvgXFG": 36.8,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "COSTELLO, MATTHEW",
+            "Scorer": "BADIO, BRANCOU",
+            "Assists": 3,
+            "AvgXFG": 48.4,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "COSTELLO, MATTHEW",
+            "Scorer": "REUVERS, NATHAN",
+            "Assists": 3,
+            "AvgXFG": 59.5,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "TAYLOR, KAMERON",
+            "Scorer": "THOMPSON, DARIUS",
+            "Assists": 3,
+            "AvgXFG": 60.2,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "PRADILLA, JAIME",
+            "Scorer": "PUERTO, JOSEP",
+            "Assists": 3,
+            "AvgXFG": 39.6,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "PUERTO, JOSEP",
+            "Scorer": "BADIO, BRANCOU",
+            "Assists": 3,
+            "AvgXFG": 39.1,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "SAKO, NEAL",
+            "Scorer": "PRADILLA, JAIME",
+            "Assists": 3,
+            "AvgXFG": 53.0,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "PUERTO, JOSEP",
+            "Scorer": "REUVERS, NATHAN",
+            "Assists": 3,
+            "AvgXFG": 63.7,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "BADIO, BRANCOU",
+            "Scorer": "PUERTO, JOSEP",
+            "Assists": 3,
+            "AvgXFG": 42.4,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "KEY, BRAXTON",
+            "Scorer": "MOORE, OMARI",
+            "Assists": 3,
+            "AvgXFG": 51.3,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "TAYLOR, KAMERON",
+            "Scorer": "SAKO, NEAL",
+            "Assists": 3,
+            "AvgXFG": 95.2,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "PRADILLA, JAIME",
+            "Scorer": "SAKO, NEAL",
+            "Assists": 3,
+            "AvgXFG": 73.3,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "COSTELLO, MATTHEW",
+            "Scorer": "MOORE, OMARI",
+            "Assists": 2,
+            "AvgXFG": 40.8,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "THOMPSON, DARIUS",
+            "Scorer": "SESTINA, NATHAN",
+            "Assists": 2,
+            "AvgXFG": 40.0,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "PRADILLA, JAIME",
+            "Scorer": "MOORE, OMARI",
+            "Assists": 2,
+            "AvgXFG": 37.5,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "LOPEZ-AROSTEGUI, XABI",
+            "Scorer": "REUVERS, NATHAN",
+            "Assists": 2,
+            "AvgXFG": 39.8,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "COSTELLO, MATTHEW",
+            "Scorer": "SAKO, NEAL",
+            "Assists": 2,
+            "AvgXFG": 72.4,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "LOPEZ-AROSTEGUI, XABI",
+            "Scorer": "MONTERO, JEAN",
+            "Assists": 2,
+            "AvgXFG": 69.5,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 1
+        },
+        {
+            "Passer": "DE LARREA, SERGIO",
+            "Scorer": "MONTERO, JEAN",
+            "Assists": 2,
+            "AvgXFG": 38.6,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "NOGUES, ISAAC",
+            "Scorer": "PRADILLA, JAIME",
+            "Assists": 2,
+            "AvgXFG": 65.3,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 1
+        },
+        {
+            "Passer": "COSTELLO, MATTHEW",
+            "Scorer": "THOMPSON, DARIUS",
+            "Assists": 2,
+            "AvgXFG": 68.3,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "COSTELLO, MATTHEW",
+            "Scorer": "TAYLOR, KAMERON",
+            "Assists": 2,
+            "AvgXFG": 65.1,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "TAYLOR, KAMERON",
+            "Scorer": "COSTELLO, MATTHEW",
+            "Assists": 2,
+            "AvgXFG": 37.7,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MOORE, OMARI",
+            "Scorer": "BADIO, BRANCOU",
+            "Assists": 2,
+            "AvgXFG": 40.9,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "PUERTO, JOSEP",
+            "Scorer": "THOMPSON, DARIUS",
+            "Assists": 2,
+            "AvgXFG": 55.1,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "TAYLOR, KAMERON",
+            "Scorer": "MOORE, OMARI",
+            "Assists": 2,
+            "AvgXFG": 50.4,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MONTERO, JEAN",
+            "Scorer": "SIMA, YANKUBA",
+            "Assists": 2,
+            "AvgXFG": 55.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "REUVERS, NATHAN",
+            "Scorer": "BADIO, BRANCOU",
+            "Assists": 2,
+            "AvgXFG": 36.7,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "REUVERS, NATHAN",
+            "Scorer": "PUERTO, JOSEP",
+            "Assists": 2,
+            "AvgXFG": 38.6,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "PUERTO, JOSEP",
+            "Scorer": "MONTERO, JEAN",
+            "Assists": 2,
+            "AvgXFG": 51.8,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "MOORE, OMARI",
+            "Scorer": "KEY, BRAXTON",
+            "Assists": 2,
+            "AvgXFG": 55.1,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "MONTERO, JEAN",
+            "Scorer": "BADIO, BRANCOU",
+            "Assists": 2,
+            "AvgXFG": 65.1,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "KEY, BRAXTON",
+            "Scorer": "MONTERO, JEAN",
+            "Assists": 2,
+            "AvgXFG": 35.0,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "BADIO, BRANCOU",
+            "Scorer": "MONTERO, JEAN",
+            "Assists": 2,
+            "AvgXFG": 49.5,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "TAYLOR, KAMERON",
+            "Scorer": "KEY, BRAXTON",
+            "Assists": 2,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 2
+        },
+        {
+            "Passer": "PUERTO, JOSEP",
+            "Scorer": "KEY, BRAXTON",
+            "Assists": 2,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 2
+        },
+        {
+            "Passer": "SAKO, NEAL",
+            "Scorer": "TAYLOR, KAMERON",
+            "Assists": 2,
+            "AvgXFG": 65.3,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 1
+        },
+        {
+            "Passer": "MONTERO, JEAN",
+            "Scorer": "LOPEZ-AROSTEGUI, XABI",
+            "Assists": 2,
+            "AvgXFG": 38.8,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "BADIO, BRANCOU",
+            "Scorer": "COSTELLO, MATTHEW",
+            "Assists": 2,
+            "AvgXFG": 50.4,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "COSTELLO, MATTHEW",
+            "Scorer": "KEY, BRAXTON",
+            "Assists": 2,
+            "AvgXFG": 49.7,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "DE LARREA, SERGIO",
+            "Scorer": "IROEGBU, IKE",
+            "Assists": 1,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "SESTINA, NATHAN",
+            "Scorer": "PUERTO, JOSEP",
+            "Assists": 1,
+            "AvgXFG": 60.7,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "SESTINA, NATHAN",
+            "Scorer": "IROEGBU, IKE",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "SESTINA, NATHAN",
+            "Scorer": "MOORE, OMARI",
+            "Assists": 1,
+            "AvgXFG": 76.6,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "REUVERS, NATHAN",
+            "Scorer": "DE LARREA, SERGIO",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "IROEGBU, IKE",
+            "Scorer": "DE LARREA, SERGIO",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "REUVERS, NATHAN",
+            "Scorer": "THOMPSON, DARIUS",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "PUERTO, JOSEP",
+            "Scorer": "SAKO, NEAL",
+            "Assists": 1,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "DE LARREA, SERGIO",
+            "Scorer": "BADIO, BRANCOU",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "SAKO, NEAL",
+            "Scorer": "MOORE, OMARI",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "NOGUES, ISAAC",
+            "Scorer": "TAYLOR, KAMERON",
+            "Assists": 1,
+            "AvgXFG": 41.2,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "LOPEZ-AROSTEGUI, XABI",
+            "Scorer": "BADIO, BRANCOU",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "LOPEZ-AROSTEGUI, XABI",
+            "Scorer": "PRADILLA, JAIME",
+            "Assists": 1,
+            "AvgXFG": 41.9,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "PRADILLA, JAIME",
+            "Scorer": "SIMA, YANKUBA",
+            "Assists": 1,
+            "AvgXFG": 95.2,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "BADIO, BRANCOU",
+            "Scorer": "SIMA, YANKUBA",
+            "Assists": 1,
+            "AvgXFG": 95.2,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "SIMA, YANKUBA",
+            "Scorer": "BADIO, BRANCOU",
+            "Assists": 1,
+            "AvgXFG": 41.9,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "PUERTO, JOSEP",
+            "Scorer": "SIMA, YANKUBA",
+            "Assists": 1,
+            "AvgXFG": 60.7,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "KEY, BRAXTON",
+            "Scorer": "SAKO, NEAL",
+            "Assists": 1,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "COSTELLO, MATTHEW",
+            "Scorer": "MONTERO, JEAN",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "KEY, BRAXTON",
+            "Scorer": "BADIO, BRANCOU",
+            "Assists": 1,
+            "AvgXFG": 40.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "DE LARREA, SERGIO",
+            "Scorer": "SIMA, YANKUBA",
+            "Assists": 1,
+            "AvgXFG": 60.7,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "TAYLOR, KAMERON",
+            "Scorer": "SIMA, YANKUBA",
+            "Assists": 1,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "MOORE, OMARI",
+            "Scorer": "DE LARREA, SERGIO",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "KEY, BRAXTON",
+            "Scorer": "PUERTO, JOSEP",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "MOORE, OMARI",
+            "Scorer": "LOPEZ-AROSTEGUI, XABI",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "REUVERS, NATHAN",
+            "Scorer": "TAYLOR, KAMERON",
+            "Assists": 1,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "REUVERS, NATHAN",
+            "Scorer": "MONTERO, JEAN",
+            "Assists": 1,
+            "AvgXFG": 55.5,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "KEY, BRAXTON",
+            "Scorer": "COSTELLO, MATTHEW",
+            "Assists": 1,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "BADIO, BRANCOU",
+            "Scorer": "DE LARREA, SERGIO",
+            "Assists": 1,
+            "AvgXFG": 76.6,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "REUVERS, NATHAN",
+            "Scorer": "KEY, BRAXTON",
+            "Assists": 1,
+            "AvgXFG": 55.5,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "LOPEZ-AROSTEGUI, XABI",
+            "Scorer": "MOORE, OMARI",
+            "Assists": 1,
+            "AvgXFG": 40.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "TAYLOR, KAMERON",
+            "Scorer": "PUERTO, JOSEP",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "BADIO, BRANCOU",
+            "Scorer": "SAKO, NEAL",
+            "Assists": 1,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "SAKO, NEAL",
+            "Scorer": "KEY, BRAXTON",
+            "Assists": 1,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "DE LARREA, SERGIO",
+            "Scorer": "KEY, BRAXTON",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "KEY, BRAXTON",
+            "Scorer": "THOMPSON, DARIUS",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "DE LARREA, SERGIO",
+            "Scorer": "LOPEZ-AROSTEGUI, XABI",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "BADIO, BRANCOU",
+            "Scorer": "MOORE, OMARI",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "BADIO, BRANCOU",
+            "Scorer": "LOPEZ-AROSTEGUI, XABI",
+            "Assists": 1,
+            "AvgXFG": 75.0,
+            "ThreePT": 0,
+            "TwoPT": 0,
+            "FT": 1
+        }
+    ],
+    "passer_stats": {
+        "MONTERO, JEAN": {
+            "total_assists": 109,
+            "weighted_xfg": 54.6
+        },
+        "THOMPSON, DARIUS": {
+            "total_assists": 102,
+            "weighted_xfg": 54.6
+        },
+        "MOORE, OMARI": {
+            "total_assists": 88,
+            "weighted_xfg": 52.0
+        },
+        "TAYLOR, KAMERON": {
+            "total_assists": 42,
+            "weighted_xfg": 60.2
+        },
+        "PRADILLA, JAIME": {
+            "total_assists": 59,
+            "weighted_xfg": 51.2
+        },
+        "BADIO, BRANCOU": {
+            "total_assists": 43,
+            "weighted_xfg": 53.0
+        },
+        "DE LARREA, SERGIO": {
+            "total_assists": 46,
+            "weighted_xfg": 54.9
+        },
+        "COSTELLO, MATTHEW": {
+            "total_assists": 24,
+            "weighted_xfg": 55.6
+        },
+        "SAKO, NEAL": {
+            "total_assists": 15,
+            "weighted_xfg": 47.8
+        },
+        "KEY, BRAXTON": {
+            "total_assists": 18,
+            "weighted_xfg": 51.4
+        },
+        "PUERTO, JOSEP": {
+            "total_assists": 14,
+            "weighted_xfg": 57.7
+        },
+        "LOPEZ-AROSTEGUI, XABI": {
+            "total_assists": 7,
+            "weighted_xfg": 47.9
+        },
+        "NOGUES, ISAAC": {
+            "total_assists": 3,
+            "weighted_xfg": 57.3
+        },
+        "REUVERS, NATHAN": {
+            "total_assists": 9,
+            "weighted_xfg": 45.2
+        },
+        "SESTINA, NATHAN": {
+            "total_assists": 3,
+            "weighted_xfg": 57.4
+        },
+        "IROEGBU, IKE": {
+            "total_assists": 1,
+            "weighted_xfg": 35.3
+        },
+        "SIMA, YANKUBA": {
+            "total_assists": 1,
+            "weighted_xfg": 41.9
+        }
+    },
+    "scorer_stats": {
+        "REUVERS, NATHAN": {
+            "total_assisted": 112
+        },
+        "COSTELLO, MATTHEW": {
+            "total_assisted": 64
+        },
+        "PRADILLA, JAIME": {
+            "total_assisted": 60
+        },
+        "THOMPSON, DARIUS": {
+            "total_assisted": 45
+        },
+        "TAYLOR, KAMERON": {
+            "total_assisted": 66
+        },
+        "SAKO, NEAL": {
+            "total_assisted": 49
+        },
+        "BADIO, BRANCOU": {
+            "total_assisted": 41
+        },
+        "PUERTO, JOSEP": {
+            "total_assisted": 40
+        },
+        "MOORE, OMARI": {
+            "total_assisted": 30
+        },
+        "MONTERO, JEAN": {
+            "total_assisted": 30
+        },
+        "KEY, BRAXTON": {
+            "total_assisted": 24
+        },
+        "DE LARREA, SERGIO": {
+            "total_assisted": 7
+        },
+        "SESTINA, NATHAN": {
+            "total_assisted": 2
+        },
+        "SIMA, YANKUBA": {
+            "total_assisted": 7
+        },
+        "LOPEZ-AROSTEGUI, XABI": {
+            "total_assisted": 5
+        },
+        "IROEGBU, IKE": {
+            "total_assisted": 2
+        }
+    }
+}

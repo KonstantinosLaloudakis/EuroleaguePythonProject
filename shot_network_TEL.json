@@ -1,0 +1,1173 @@
+{
+    "team": "TEL",
+    "edges": [
+        {
+            "Passer": "BLATT, TAMIR",
+            "Scorer": "HOARD, JAYLEN",
+            "Assists": 39,
+            "AvgXFG": 70.9,
+            "ThreePT": 2,
+            "TwoPT": 27,
+            "FT": 10
+        },
+        {
+            "Passer": "BLATT, TAMIR",
+            "Scorer": "SORKIN, ROMAN",
+            "Assists": 38,
+            "AvgXFG": 61.4,
+            "ThreePT": 4,
+            "TwoPT": 31,
+            "FT": 3
+        },
+        {
+            "Passer": "BLATT, TAMIR",
+            "Scorer": "SANTOS, MARCIO",
+            "Assists": 22,
+            "AvgXFG": 63.7,
+            "ThreePT": 4,
+            "TwoPT": 12,
+            "FT": 6
+        },
+        {
+            "Passer": "CLARK III, JIMMY",
+            "Scorer": "SORKIN, ROMAN",
+            "Assists": 19,
+            "AvgXFG": 55.7,
+            "ThreePT": 6,
+            "TwoPT": 13,
+            "FT": 0
+        },
+        {
+            "Passer": "CLARK III, JIMMY",
+            "Scorer": "HOARD, JAYLEN",
+            "Assists": 18,
+            "AvgXFG": 63.2,
+            "ThreePT": 1,
+            "TwoPT": 15,
+            "FT": 2
+        },
+        {
+            "Passer": "CLARK III, JIMMY",
+            "Scorer": "SANTOS, MARCIO",
+            "Assists": 17,
+            "AvgXFG": 55.6,
+            "ThreePT": 5,
+            "TwoPT": 6,
+            "FT": 6
+        },
+        {
+            "Passer": "CLARK III, JIMMY",
+            "Scorer": "LEAF, TJ",
+            "Assists": 15,
+            "AvgXFG": 64.3,
+            "ThreePT": 1,
+            "TwoPT": 11,
+            "FT": 3
+        },
+        {
+            "Passer": "WALKER IV, LONNIE",
+            "Scorer": "SORKIN, ROMAN",
+            "Assists": 14,
+            "AvgXFG": 61.7,
+            "ThreePT": 3,
+            "TwoPT": 9,
+            "FT": 2
+        },
+        {
+            "Passer": "LUNDBERG, IFFE",
+            "Scorer": "SORKIN, ROMAN",
+            "Assists": 14,
+            "AvgXFG": 60.9,
+            "ThreePT": 3,
+            "TwoPT": 10,
+            "FT": 1
+        },
+        {
+            "Passer": "BLATT, TAMIR",
+            "Scorer": "LEAF, TJ",
+            "Assists": 12,
+            "AvgXFG": 58.1,
+            "ThreePT": 0,
+            "TwoPT": 12,
+            "FT": 0
+        },
+        {
+            "Passer": "WALKER IV, LONNIE",
+            "Scorer": "HOARD, JAYLEN",
+            "Assists": 12,
+            "AvgXFG": 64.0,
+            "ThreePT": 2,
+            "TwoPT": 9,
+            "FT": 1
+        },
+        {
+            "Passer": "SORKIN, ROMAN",
+            "Scorer": "HOARD, JAYLEN",
+            "Assists": 12,
+            "AvgXFG": 69.3,
+            "ThreePT": 1,
+            "TwoPT": 9,
+            "FT": 2
+        },
+        {
+            "Passer": "CLARK III, JIMMY",
+            "Scorer": "WALKER IV, LONNIE",
+            "Assists": 11,
+            "AvgXFG": 40.1,
+            "ThreePT": 9,
+            "TwoPT": 1,
+            "FT": 1
+        },
+        {
+            "Passer": "HOARD, JAYLEN",
+            "Scorer": "SORKIN, ROMAN",
+            "Assists": 9,
+            "AvgXFG": 63.2,
+            "ThreePT": 3,
+            "TwoPT": 4,
+            "FT": 2
+        },
+        {
+            "Passer": "CLARK III, JIMMY",
+            "Scorer": "DIBARTOLOMEO, JOHN",
+            "Assists": 8,
+            "AvgXFG": 36.4,
+            "ThreePT": 8,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "LUNDBERG, IFFE",
+            "Scorer": "SANTOS, MARCIO",
+            "Assists": 8,
+            "AvgXFG": 56.5,
+            "ThreePT": 2,
+            "TwoPT": 4,
+            "FT": 2
+        },
+        {
+            "Passer": "LUNDBERG, IFFE",
+            "Scorer": "HOARD, JAYLEN",
+            "Assists": 8,
+            "AvgXFG": 55.1,
+            "ThreePT": 1,
+            "TwoPT": 7,
+            "FT": 0
+        },
+        {
+            "Passer": "DOWTIN JR, JEFFREY",
+            "Scorer": "LEAF, TJ",
+            "Assists": 7,
+            "AvgXFG": 60.3,
+            "ThreePT": 2,
+            "TwoPT": 5,
+            "FT": 0
+        },
+        {
+            "Passer": "LEAF, TJ",
+            "Scorer": "HOARD, JAYLEN",
+            "Assists": 7,
+            "AvgXFG": 64.1,
+            "ThreePT": 1,
+            "TwoPT": 3,
+            "FT": 3
+        },
+        {
+            "Passer": "CLARK III, JIMMY",
+            "Scorer": "BRISSETT, O'SHAE J",
+            "Assists": 7,
+            "AvgXFG": 64.0,
+            "ThreePT": 2,
+            "TwoPT": 3,
+            "FT": 2
+        },
+        {
+            "Passer": "BLATT, TAMIR",
+            "Scorer": "WALKER IV, LONNIE",
+            "Assists": 7,
+            "AvgXFG": 57.9,
+            "ThreePT": 3,
+            "TwoPT": 2,
+            "FT": 2
+        },
+        {
+            "Passer": "DOWTIN JR, JEFFREY",
+            "Scorer": "SANTOS, MARCIO",
+            "Assists": 6,
+            "AvgXFG": 55.8,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 3
+        },
+        {
+            "Passer": "DOWTIN JR, JEFFREY",
+            "Scorer": "BRISSETT, O'SHAE J",
+            "Assists": 6,
+            "AvgXFG": 54.1,
+            "ThreePT": 3,
+            "TwoPT": 2,
+            "FT": 1
+        },
+        {
+            "Passer": "BLATT, TAMIR",
+            "Scorer": "BRISSETT, O'SHAE J",
+            "Assists": 6,
+            "AvgXFG": 52.9,
+            "ThreePT": 2,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "SORKIN, ROMAN",
+            "Scorer": "LEAF, TJ",
+            "Assists": 6,
+            "AvgXFG": 61.4,
+            "ThreePT": 2,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "BRISSETT, O'SHAE J",
+            "Scorer": "BLATT, TAMIR",
+            "Assists": 5,
+            "AvgXFG": 36.5,
+            "ThreePT": 4,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "WALKER IV, LONNIE",
+            "Scorer": "BRISSETT, O'SHAE J",
+            "Assists": 5,
+            "AvgXFG": 64.2,
+            "ThreePT": 1,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "DIBARTOLOMEO, JOHN",
+            "Scorer": "SORKIN, ROMAN",
+            "Assists": 5,
+            "AvgXFG": 61.0,
+            "ThreePT": 1,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "HOARD, JAYLEN",
+            "Scorer": "BRISSETT, O'SHAE J",
+            "Assists": 5,
+            "AvgXFG": 40.2,
+            "ThreePT": 4,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "SORKIN, ROMAN",
+            "Scorer": "BRISSETT, O'SHAE J",
+            "Assists": 5,
+            "AvgXFG": 47.4,
+            "ThreePT": 3,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "SORKIN, ROMAN",
+            "Scorer": "BLATT, TAMIR",
+            "Assists": 5,
+            "AvgXFG": 35.0,
+            "ThreePT": 5,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "DOWTIN JR, JEFFREY",
+            "Scorer": "SORKIN, ROMAN",
+            "Assists": 5,
+            "AvgXFG": 72.2,
+            "ThreePT": 1,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "LUNDBERG, IFFE",
+            "Scorer": "BRISSETT, O'SHAE J",
+            "Assists": 5,
+            "AvgXFG": 68.2,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 2
+        },
+        {
+            "Passer": "LUNDBERG, IFFE",
+            "Scorer": "BLATT, TAMIR",
+            "Assists": 5,
+            "AvgXFG": 35.1,
+            "ThreePT": 5,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "LUNDBERG, IFFE",
+            "Scorer": "RAYMAN, WILLIAM",
+            "Assists": 5,
+            "AvgXFG": 37.4,
+            "ThreePT": 5,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "DOWTIN JR, JEFFREY",
+            "Scorer": "HOARD, JAYLEN",
+            "Assists": 4,
+            "AvgXFG": 41.5,
+            "ThreePT": 3,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "HOARD, JAYLEN",
+            "Scorer": "BLATT, TAMIR",
+            "Assists": 4,
+            "AvgXFG": 35.0,
+            "ThreePT": 4,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "CLARK III, JIMMY",
+            "Scorer": "RAYMAN, WILLIAM",
+            "Assists": 4,
+            "AvgXFG": 43.9,
+            "ThreePT": 3,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "SANTOS, MARCIO",
+            "Scorer": "HOARD, JAYLEN",
+            "Assists": 4,
+            "AvgXFG": 62.2,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 2
+        },
+        {
+            "Passer": "SORKIN, ROMAN",
+            "Scorer": "WALKER IV, LONNIE",
+            "Assists": 4,
+            "AvgXFG": 56.5,
+            "ThreePT": 2,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "LEAF, TJ",
+            "Scorer": "SORKIN, ROMAN",
+            "Assists": 4,
+            "AvgXFG": 64.7,
+            "ThreePT": 0,
+            "TwoPT": 4,
+            "FT": 0
+        },
+        {
+            "Passer": "LEAF, TJ",
+            "Scorer": "SANTOS, MARCIO",
+            "Assists": 4,
+            "AvgXFG": 47.0,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 1
+        },
+        {
+            "Passer": "SORKIN, ROMAN",
+            "Scorer": "LAVI, GUR",
+            "Assists": 4,
+            "AvgXFG": 78.7,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "BLATT, TAMIR",
+            "Scorer": "LAVI, GUR",
+            "Assists": 4,
+            "AvgXFG": 50.2,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 1
+        },
+        {
+            "Passer": "SORKIN, ROMAN",
+            "Scorer": "DOWTIN JR, JEFFREY",
+            "Assists": 4,
+            "AvgXFG": 45.3,
+            "ThreePT": 2,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "SANTOS, MARCIO",
+            "Scorer": "BRISSETT, O'SHAE J",
+            "Assists": 4,
+            "AvgXFG": 46.8,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "WALKER IV, LONNIE",
+            "Scorer": "SANTOS, MARCIO",
+            "Assists": 4,
+            "AvgXFG": 40.4,
+            "ThreePT": 1,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "HOARD, JAYLEN",
+            "Scorer": "CLARK III, JIMMY",
+            "Assists": 4,
+            "AvgXFG": 40.2,
+            "ThreePT": 3,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "DIBARTOLOMEO, JOHN",
+            "Scorer": "HOARD, JAYLEN",
+            "Assists": 4,
+            "AvgXFG": 59.0,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 1
+        },
+        {
+            "Passer": "HOARD, JAYLEN",
+            "Scorer": "DOWTIN JR, JEFFREY",
+            "Assists": 3,
+            "AvgXFG": 36.7,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "DOWTIN JR, JEFFREY",
+            "Scorer": "WALKER IV, LONNIE",
+            "Assists": 3,
+            "AvgXFG": 50.8,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 1
+        },
+        {
+            "Passer": "SANTOS, MARCIO",
+            "Scorer": "WALKER IV, LONNIE",
+            "Assists": 3,
+            "AvgXFG": 50.7,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 1
+        },
+        {
+            "Passer": "CLARK III, JIMMY",
+            "Scorer": "DOWTIN JR, JEFFREY",
+            "Assists": 3,
+            "AvgXFG": 40.1,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "HOARD, JAYLEN",
+            "Scorer": "WALKER IV, LONNIE",
+            "Assists": 3,
+            "AvgXFG": 35.0,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "BRISSETT, O'SHAE J",
+            "Scorer": "SANTOS, MARCIO",
+            "Assists": 3,
+            "AvgXFG": 58.9,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "DIBARTOLOMEO, JOHN",
+            "Scorer": "LEAF, TJ",
+            "Assists": 3,
+            "AvgXFG": 60.9,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "SORKIN, ROMAN",
+            "Scorer": "CLARK III, JIMMY",
+            "Assists": 3,
+            "AvgXFG": 24.6,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "WALKER IV, LONNIE",
+            "Scorer": "BLATT, TAMIR",
+            "Assists": 3,
+            "AvgXFG": 35.1,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "BLATT, TAMIR",
+            "Scorer": "CLARK III, JIMMY",
+            "Assists": 3,
+            "AvgXFG": 37.4,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "BRISSETT, O'SHAE J",
+            "Scorer": "SORKIN, ROMAN",
+            "Assists": 3,
+            "AvgXFG": 95.2,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "LUNDBERG, IFFE",
+            "Scorer": "LEAF, TJ",
+            "Assists": 3,
+            "AvgXFG": 61.8,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "BLATT, TAMIR",
+            "Scorer": "LUNDBERG, IFFE",
+            "Assists": 3,
+            "AvgXFG": 43.4,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "CLARK III, JIMMY",
+            "Scorer": "LUNDBERG, IFFE",
+            "Assists": 3,
+            "AvgXFG": 48.7,
+            "ThreePT": 1,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "SANTOS, MARCIO",
+            "Scorer": "LEAF, TJ",
+            "Assists": 3,
+            "AvgXFG": 59.3,
+            "ThreePT": 0,
+            "TwoPT": 3,
+            "FT": 0
+        },
+        {
+            "Passer": "SORKIN, ROMAN",
+            "Scorer": "DIBARTOLOMEO, JOHN",
+            "Assists": 3,
+            "AvgXFG": 35.2,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "LUNDBERG, IFFE",
+            "Scorer": "CLARK III, JIMMY",
+            "Assists": 3,
+            "AvgXFG": 48.9,
+            "ThreePT": 2,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "BRISSETT, O'SHAE J",
+            "Scorer": "LUNDBERG, IFFE",
+            "Assists": 3,
+            "AvgXFG": 35.0,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "RAYMAN, WILLIAM",
+            "Scorer": "LUNDBERG, IFFE",
+            "Assists": 3,
+            "AvgXFG": 37.5,
+            "ThreePT": 3,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "LEAF, TJ",
+            "Scorer": "DIBARTOLOMEO, JOHN",
+            "Assists": 2,
+            "AvgXFG": 40.2,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "DIBARTOLOMEO, JOHN",
+            "Scorer": "SANTOS, MARCIO",
+            "Assists": 2,
+            "AvgXFG": 77.9,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "BRISSETT, O'SHAE J",
+            "Scorer": "CLARK III, JIMMY",
+            "Assists": 2,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "SANTOS, MARCIO",
+            "Scorer": "SORKIN, ROMAN",
+            "Assists": 2,
+            "AvgXFG": 55.5,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "HOARD, JAYLEN",
+            "Scorer": "SANTOS, MARCIO",
+            "Assists": 2,
+            "AvgXFG": 49.5,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "WALKER IV, LONNIE",
+            "Scorer": "CLARK III, JIMMY",
+            "Assists": 2,
+            "AvgXFG": 37.4,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "DOWTIN JR, JEFFREY",
+            "Scorer": "CLARK III, JIMMY",
+            "Assists": 2,
+            "AvgXFG": 65.2,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "DIBARTOLOMEO, JOHN",
+            "Scorer": "BRISSETT, O'SHAE J",
+            "Assists": 2,
+            "AvgXFG": 55.1,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 1
+        },
+        {
+            "Passer": "BRISSETT, O'SHAE J",
+            "Scorer": "HOARD, JAYLEN",
+            "Assists": 2,
+            "AvgXFG": 47.9,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "DOWTIN JR, JEFFREY",
+            "Scorer": "BLATT, TAMIR",
+            "Assists": 2,
+            "AvgXFG": 35.3,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "CLARK III, JIMMY",
+            "Scorer": "LAVI, GUR",
+            "Assists": 2,
+            "AvgXFG": 51.3,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "DIBARTOLOMEO, JOHN",
+            "Scorer": "LAVI, GUR",
+            "Assists": 2,
+            "AvgXFG": 75.3,
+            "ThreePT": 0,
+            "TwoPT": 2,
+            "FT": 0
+        },
+        {
+            "Passer": "BLATT, TAMIR",
+            "Scorer": "RAYMAN, WILLIAM",
+            "Assists": 2,
+            "AvgXFG": 35.0,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "LEAF, TJ",
+            "Scorer": "DOWTIN JR, JEFFREY",
+            "Assists": 2,
+            "AvgXFG": 67.6,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "SORKIN, ROMAN",
+            "Scorer": "SANTOS, MARCIO",
+            "Assists": 2,
+            "AvgXFG": 45.2,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "LEAF, TJ",
+            "Scorer": "LUNDBERG, IFFE",
+            "Assists": 2,
+            "AvgXFG": 35.1,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "LUNDBERG, IFFE",
+            "Scorer": "WALKER IV, LONNIE",
+            "Assists": 2,
+            "AvgXFG": 35.3,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "HOARD, JAYLEN",
+            "Scorer": "LUNDBERG, IFFE",
+            "Assists": 2,
+            "AvgXFG": 35.0,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "LEAF, TJ",
+            "Scorer": "BRISSETT, O'SHAE J",
+            "Assists": 2,
+            "AvgXFG": 38.6,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "LUNDBERG, IFFE",
+            "Scorer": "DOWTIN JR, JEFFREY",
+            "Assists": 2,
+            "AvgXFG": 41.9,
+            "ThreePT": 2,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "SORKIN, ROMAN",
+            "Scorer": "LUNDBERG, IFFE",
+            "Assists": 2,
+            "AvgXFG": 38.4,
+            "ThreePT": 1,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "BLATT, TAMIR",
+            "Scorer": "TRIFUNOVIC, UROS",
+            "Assists": 1,
+            "AvgXFG": 55.5,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "DIBARTOLOMEO, JOHN",
+            "Scorer": "BLATT, TAMIR",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "WALKER IV, LONNIE",
+            "Scorer": "DOWTIN JR, JEFFREY",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "RAYMAN, WILLIAM",
+            "Scorer": "DOWTIN JR, JEFFREY",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "CLARK III, JIMMY",
+            "Scorer": "BLATT, TAMIR",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "SANTOS, MARCIO",
+            "Scorer": "DOWTIN JR, JEFFREY",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "GUR, LAVI",
+            "Scorer": "BLATT, TAMIR",
+            "Assists": 1,
+            "AvgXFG": 41.9,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "DIBARTOLOMEO, JOHN",
+            "Scorer": "DOWTIN JR, JEFFREY",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "WALKER IV, LONNIE",
+            "Scorer": "LEAF, TJ",
+            "Assists": 1,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "LAVI, GUR",
+            "Scorer": "HOARD, JAYLEN",
+            "Assists": 1,
+            "AvgXFG": 76.6,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "DIBARTOLOMEO, JOHN",
+            "Scorer": "RAYMAN, WILLIAM",
+            "Assists": 1,
+            "AvgXFG": 63.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "WALKER IV, LONNIE",
+            "Scorer": "LAVI, GUR",
+            "Assists": 1,
+            "AvgXFG": 55.5,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "LAVI, GUR",
+            "Scorer": "SORKIN, ROMAN",
+            "Assists": 1,
+            "AvgXFG": 41.9,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "SANTOS, MARCIO",
+            "Scorer": "BLATT, TAMIR",
+            "Assists": 1,
+            "AvgXFG": 39.7,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "LEAF, TJ",
+            "Scorer": "RAYMAN, WILLIAM",
+            "Assists": 1,
+            "AvgXFG": 74.9,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "BLATT, TAMIR",
+            "Scorer": "DIBARTOLOMEO, JOHN",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "WALKER IV, LONNIE",
+            "Scorer": "RAYMAN, WILLIAM",
+            "Assists": 1,
+            "AvgXFG": 40.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "LUNDBERG, IFFE",
+            "Scorer": "LAVI, GUR",
+            "Assists": 1,
+            "AvgXFG": 60.7,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "LAVI, GUR",
+            "Scorer": "RAYMAN, WILLIAM",
+            "Assists": 1,
+            "AvgXFG": 40.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "LUNDBERG, IFFE",
+            "Scorer": "DIBARTOLOMEO, JOHN",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "LEAF, TJ",
+            "Scorer": "CLARK III, JIMMY",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "HOARD, JAYLEN",
+            "Scorer": "LEAF, TJ",
+            "Assists": 1,
+            "AvgXFG": 39.2,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "LEAF, TJ",
+            "Scorer": "BLATT, TAMIR",
+            "Assists": 1,
+            "AvgXFG": 35.3,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "BRISSETT, O'SHAE J",
+            "Scorer": "RAYMAN, WILLIAM",
+            "Assists": 1,
+            "AvgXFG": 40.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "SORKIN, ROMAN",
+            "Scorer": "RAYMAN, WILLIAM",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "HOARD, JAYLEN",
+            "Scorer": "RAYMAN, WILLIAM",
+            "Assists": 1,
+            "AvgXFG": 35.0,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "SANTOS, MARCIO",
+            "Scorer": "CLARK III, JIMMY",
+            "Assists": 1,
+            "AvgXFG": 41.9,
+            "ThreePT": 1,
+            "TwoPT": 0,
+            "FT": 0
+        },
+        {
+            "Passer": "SANTOS, MARCIO",
+            "Scorer": "LAVI, GUR",
+            "Assists": 1,
+            "AvgXFG": 55.5,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        },
+        {
+            "Passer": "HANKINS, ZACHARY",
+            "Scorer": "HOARD, JAYLEN",
+            "Assists": 1,
+            "AvgXFG": 41.5,
+            "ThreePT": 0,
+            "TwoPT": 1,
+            "FT": 0
+        }
+    ],
+    "passer_stats": {
+        "BLATT, TAMIR": {
+            "total_assists": 138,
+            "weighted_xfg": 61.8
+        },
+        "CLARK III, JIMMY": {
+            "total_assists": 108,
+            "weighted_xfg": 54.3
+        },
+        "WALKER IV, LONNIE": {
+            "total_assists": 44,
+            "weighted_xfg": 56.6
+        },
+        "LUNDBERG, IFFE": {
+            "total_assists": 57,
+            "weighted_xfg": 53.2
+        },
+        "SORKIN, ROMAN": {
+            "total_assists": 51,
+            "weighted_xfg": 53.2
+        },
+        "HOARD, JAYLEN": {
+            "total_assists": 34,
+            "weighted_xfg": 45.0
+        },
+        "DOWTIN JR, JEFFREY": {
+            "total_assists": 35,
+            "weighted_xfg": 56.1
+        },
+        "LEAF, TJ": {
+            "total_assists": 26,
+            "weighted_xfg": 54.0
+        },
+        "BRISSETT, O'SHAE J": {
+            "total_assists": 19,
+            "weighted_xfg": 53.3
+        },
+        "DIBARTOLOMEO, JOHN": {
+            "total_assists": 21,
+            "weighted_xfg": 60.7
+        },
+        "SANTOS, MARCIO": {
+            "total_assists": 20,
+            "weighted_xfg": 52.5
+        },
+        "RAYMAN, WILLIAM": {
+            "total_assists": 4,
+            "weighted_xfg": 37.0
+        },
+        "GUR, LAVI": {
+            "total_assists": 1,
+            "weighted_xfg": 41.9
+        },
+        "LAVI, GUR": {
+            "total_assists": 3,
+            "weighted_xfg": 52.8
+        },
+        "HANKINS, ZACHARY": {
+            "total_assists": 1,
+            "weighted_xfg": 41.5
+        }
+    },
+    "scorer_stats": {
+        "HOARD, JAYLEN": {
+            "total_assisted": 112
+        },
+        "SORKIN, ROMAN": {
+            "total_assisted": 114
+        },
+        "SANTOS, MARCIO": {
+            "total_assisted": 70
+        },
+        "LEAF, TJ": {
+            "total_assisted": 51
+        },
+        "WALKER IV, LONNIE": {
+            "total_assisted": 33
+        },
+        "DIBARTOLOMEO, JOHN": {
+            "total_assisted": 15
+        },
+        "BRISSETT, O'SHAE J": {
+            "total_assisted": 47
+        },
+        "BLATT, TAMIR": {
+            "total_assisted": 29
+        },
+        "RAYMAN, WILLIAM": {
+            "total_assisted": 18
+        },
+        "LAVI, GUR": {
+            "total_assisted": 15
+        },
+        "DOWTIN JR, JEFFREY": {
+            "total_assisted": 18
+        },
+        "CLARK III, JIMMY": {
+            "total_assisted": 21
+        },
+        "LUNDBERG, IFFE": {
+            "total_assisted": 18
+        },
+        "TRIFUNOVIC, UROS": {
+            "total_assisted": 1
+        }
+    }
+}
