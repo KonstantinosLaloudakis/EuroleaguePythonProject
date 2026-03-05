@@ -1,0 +1,698 @@
+{
+    "team": "PAN",
+    "duos": [
+        {
+            "Player1": "OSMAN, CEDI",
+            "Player2": "TOLIOPOULOS, VASSILIS",
+            "PlusMinus": 31,
+            "Stints": 13,
+            "AvgPM": 2.38
+        },
+        {
+            "Player1": "OSMAN, CEDI",
+            "Player2": "SAMODUROV, ALEXANDROS",
+            "PlusMinus": 21,
+            "Stints": 10,
+            "AvgPM": 2.1
+        },
+        {
+            "Player1": "HOLMES, RICHAUN",
+            "Player2": "SAMODUROV, ALEXANDROS",
+            "PlusMinus": 20,
+            "Stints": 10,
+            "AvgPM": 2.0
+        },
+        {
+            "Player1": "FARIED, KENNETH",
+            "Player2": "TOLIOPOULOS, VASSILIS",
+            "PlusMinus": 21,
+            "Stints": 11,
+            "AvgPM": 1.91
+        },
+        {
+            "Player1": "ROGKAVOPOULOS, NIKOLAOS",
+            "Player2": "TOLIOPOULOS, VASSILIS",
+            "PlusMinus": 15,
+            "Stints": 8,
+            "AvgPM": 1.88
+        },
+        {
+            "Player1": "HERNANGOMEZ, JUANCHO",
+            "Player2": "TOLIOPOULOS, VASSILIS",
+            "PlusMinus": 24,
+            "Stints": 15,
+            "AvgPM": 1.6
+        },
+        {
+            "Player1": "KALAITZAKIS, PANAGIOTIS",
+            "Player2": "ROGKAVOPOULOS, NIKOLAOS",
+            "PlusMinus": 14,
+            "Stints": 9,
+            "AvgPM": 1.56
+        },
+        {
+            "Player1": "SLOUKAS, KOSTAS",
+            "Player2": "TOLIOPOULOS, VASSILIS",
+            "PlusMinus": 24,
+            "Stints": 16,
+            "AvgPM": 1.5
+        },
+        {
+            "Player1": "MITOGLOU, KONSTANTINOS",
+            "Player2": "TOLIOPOULOS, VASSILIS",
+            "PlusMinus": 10,
+            "Stints": 7,
+            "AvgPM": 1.43
+        },
+        {
+            "Player1": "OSMAN, CEDI",
+            "Player2": "ROGKAVOPOULOS, NIKOLAOS",
+            "PlusMinus": 17,
+            "Stints": 13,
+            "AvgPM": 1.31
+        },
+        {
+            "Player1": "MITOGLOU, KONSTANTINOS",
+            "Player2": "SAMODUROV, ALEXANDROS",
+            "PlusMinus": 8,
+            "Stints": 7,
+            "AvgPM": 1.14
+        },
+        {
+            "Player1": "FARIED, KENNETH",
+            "Player2": "SLOUKAS, KOSTAS",
+            "PlusMinus": 51,
+            "Stints": 48,
+            "AvgPM": 1.06
+        },
+        {
+            "Player1": "HOLMES, RICHAUN",
+            "Player2": "OSMAN, CEDI",
+            "PlusMinus": 55,
+            "Stints": 53,
+            "AvgPM": 1.04
+        },
+        {
+            "Player1": "KALAITZAKIS, PANAGIOTIS",
+            "Player2": "OSMAN, CEDI",
+            "PlusMinus": 30,
+            "Stints": 31,
+            "AvgPM": 0.97
+        },
+        {
+            "Player1": "FARIED, KENNETH",
+            "Player2": "ROGKAVOPOULOS, NIKOLAOS",
+            "PlusMinus": 20,
+            "Stints": 25,
+            "AvgPM": 0.8
+        },
+        {
+            "Player1": "SAMODUROV, ALEXANDROS",
+            "Player2": "SHORTS, TJ",
+            "PlusMinus": 7,
+            "Stints": 9,
+            "AvgPM": 0.78
+        },
+        {
+            "Player1": "SAMODUROV, ALEXANDROS",
+            "Player2": "SLOUKAS, KOSTAS",
+            "PlusMinus": 18,
+            "Stints": 23,
+            "AvgPM": 0.78
+        },
+        {
+            "Player1": "KALAITZAKIS, PANAGIOTIS",
+            "Player2": "MITOGLOU, KONSTANTINOS",
+            "PlusMinus": 17,
+            "Stints": 24,
+            "AvgPM": 0.71
+        },
+        {
+            "Player1": "OSMAN, CEDI",
+            "Player2": "SLOUKAS, KOSTAS",
+            "PlusMinus": 62,
+            "Stints": 91,
+            "AvgPM": 0.68
+        },
+        {
+            "Player1": "FARIED, KENNETH",
+            "Player2": "OSMAN, CEDI",
+            "PlusMinus": 28,
+            "Stints": 41,
+            "AvgPM": 0.68
+        },
+        {
+            "Player1": "FARIED, KENNETH",
+            "Player2": "MITOGLOU, KONSTANTINOS",
+            "PlusMinus": 14,
+            "Stints": 22,
+            "AvgPM": 0.64
+        },
+        {
+            "Player1": "HOLMES, RICHAUN",
+            "Player2": "ROGKAVOPOULOS, NIKOLAOS",
+            "PlusMinus": 13,
+            "Stints": 21,
+            "AvgPM": 0.62
+        },
+        {
+            "Player1": "HOLMES, RICHAUN",
+            "Player2": "SHORTS, TJ",
+            "PlusMinus": 13,
+            "Stints": 22,
+            "AvgPM": 0.59
+        },
+        {
+            "Player1": "GRANT, JERIAN",
+            "Player2": "ROGKAVOPOULOS, NIKOLAOS",
+            "PlusMinus": 35,
+            "Stints": 60,
+            "AvgPM": 0.58
+        },
+        {
+            "Player1": "HERNANGOMEZ, JUANCHO",
+            "Player2": "KALAITZAKIS, PANAGIOTIS",
+            "PlusMinus": 20,
+            "Stints": 37,
+            "AvgPM": 0.54
+        },
+        {
+            "Player1": "HOLMES, RICHAUN",
+            "Player2": "SLOUKAS, KOSTAS",
+            "PlusMinus": 26,
+            "Stints": 49,
+            "AvgPM": 0.53
+        },
+        {
+            "Player1": "GRANT, JERIAN",
+            "Player2": "HOLMES, RICHAUN",
+            "PlusMinus": 33,
+            "Stints": 64,
+            "AvgPM": 0.52
+        },
+        {
+            "Player1": "ROGKAVOPOULOS, NIKOLAOS",
+            "Player2": "SLOUKAS, KOSTAS",
+            "PlusMinus": 24,
+            "Stints": 47,
+            "AvgPM": 0.51
+        },
+        {
+            "Player1": "GRANT, JERIAN",
+            "Player2": "SAMODUROV, ALEXANDROS",
+            "PlusMinus": 10,
+            "Stints": 20,
+            "AvgPM": 0.5
+        },
+        {
+            "Player1": "HERNANGOMEZ, JUANCHO",
+            "Player2": "ROGKAVOPOULOS, NIKOLAOS",
+            "PlusMinus": 21,
+            "Stints": 45,
+            "AvgPM": 0.47
+        },
+        {
+            "Player1": "KALAITZAKIS, PANAGIOTIS",
+            "Player2": "NUNN, KENDRICK",
+            "PlusMinus": 16,
+            "Stints": 36,
+            "AvgPM": 0.44
+        },
+        {
+            "Player1": "KALAITZAKIS, PANAGIOTIS",
+            "Player2": "YURTSEVEN, OMER",
+            "PlusMinus": 4,
+            "Stints": 9,
+            "AvgPM": 0.44
+        },
+        {
+            "Player1": "KALAITZAKIS, PANAGIOTIS",
+            "Player2": "SLOUKAS, KOSTAS",
+            "PlusMinus": 6,
+            "Stints": 14,
+            "AvgPM": 0.43
+        },
+        {
+            "Player1": "GRANT, JERIAN",
+            "Player2": "TOLIOPOULOS, VASSILIS",
+            "PlusMinus": 3,
+            "Stints": 7,
+            "AvgPM": 0.43
+        },
+        {
+            "Player1": "HOLMES, RICHAUN",
+            "Player2": "NUNN, KENDRICK",
+            "PlusMinus": 15,
+            "Stints": 36,
+            "AvgPM": 0.42
+        },
+        {
+            "Player1": "SAMODUROV, ALEXANDROS",
+            "Player2": "YURTSEVEN, OMER",
+            "PlusMinus": 2,
+            "Stints": 5,
+            "AvgPM": 0.4
+        },
+        {
+            "Player1": "NUNN, KENDRICK",
+            "Player2": "ROGKAVOPOULOS, NIKOLAOS",
+            "PlusMinus": 21,
+            "Stints": 53,
+            "AvgPM": 0.4
+        },
+        {
+            "Player1": "HOLMES, RICHAUN",
+            "Player2": "MITOGLOU, KONSTANTINOS",
+            "PlusMinus": 9,
+            "Stints": 23,
+            "AvgPM": 0.39
+        },
+        {
+            "Player1": "GRANT, JERIAN",
+            "Player2": "SLOUKAS, KOSTAS",
+            "PlusMinus": 45,
+            "Stints": 120,
+            "AvgPM": 0.38
+        },
+        {
+            "Player1": "MITOGLOU, KONSTANTINOS",
+            "Player2": "OSMAN, CEDI",
+            "PlusMinus": 25,
+            "Stints": 66,
+            "AvgPM": 0.38
+        },
+        {
+            "Player1": "HOLMES, RICHAUN",
+            "Player2": "TOLIOPOULOS, VASSILIS",
+            "PlusMinus": 4,
+            "Stints": 12,
+            "AvgPM": 0.33
+        },
+        {
+            "Player1": "NUNN, KENDRICK",
+            "Player2": "SAMODUROV, ALEXANDROS",
+            "PlusMinus": 4,
+            "Stints": 13,
+            "AvgPM": 0.31
+        },
+        {
+            "Player1": "HERNANGOMEZ, JUANCHO",
+            "Player2": "HOLMES, RICHAUN",
+            "PlusMinus": 14,
+            "Stints": 58,
+            "AvgPM": 0.24
+        },
+        {
+            "Player1": "MITOGLOU, KONSTANTINOS",
+            "Player2": "ROGKAVOPOULOS, NIKOLAOS",
+            "PlusMinus": 6,
+            "Stints": 26,
+            "AvgPM": 0.23
+        },
+        {
+            "Player1": "FARIED, KENNETH",
+            "Player2": "KALAITZAKIS, PANAGIOTIS",
+            "PlusMinus": 4,
+            "Stints": 20,
+            "AvgPM": 0.2
+        },
+        {
+            "Player1": "GRANT, JERIAN",
+            "Player2": "KALAITZAKIS, PANAGIOTIS",
+            "PlusMinus": 10,
+            "Stints": 51,
+            "AvgPM": 0.2
+        },
+        {
+            "Player1": "MITOGLOU, KONSTANTINOS",
+            "Player2": "SLOUKAS, KOSTAS",
+            "PlusMinus": 13,
+            "Stints": 80,
+            "AvgPM": 0.16
+        },
+        {
+            "Player1": "HERNANGOMEZ, JUANCHO",
+            "Player2": "SLOUKAS, KOSTAS",
+            "PlusMinus": 17,
+            "Stints": 115,
+            "AvgPM": 0.15
+        },
+        {
+            "Player1": "FARIED, KENNETH",
+            "Player2": "GRANT, JERIAN",
+            "PlusMinus": 9,
+            "Stints": 66,
+            "AvgPM": 0.14
+        },
+        {
+            "Player1": "ROGKAVOPOULOS, NIKOLAOS",
+            "Player2": "YURTSEVEN, OMER",
+            "PlusMinus": 2,
+            "Stints": 24,
+            "AvgPM": 0.08
+        },
+        {
+            "Player1": "MITOGLOU, KONSTANTINOS",
+            "Player2": "NUNN, KENDRICK",
+            "PlusMinus": 6,
+            "Stints": 92,
+            "AvgPM": 0.07
+        },
+        {
+            "Player1": "NUNN, KENDRICK",
+            "Player2": "OSMAN, CEDI",
+            "PlusMinus": 2,
+            "Stints": 115,
+            "AvgPM": 0.02
+        },
+        {
+            "Player1": "HOLMES, RICHAUN",
+            "Player2": "KALAITZAKIS, PANAGIOTIS",
+            "PlusMinus": 0,
+            "Stints": 15,
+            "AvgPM": 0.0
+        },
+        {
+            "Player1": "GRANT, JERIAN",
+            "Player2": "OSMAN, CEDI",
+            "PlusMinus": -5,
+            "Stints": 123,
+            "AvgPM": -0.04
+        },
+        {
+            "Player1": "FARIED, KENNETH",
+            "Player2": "HERNANGOMEZ, JUANCHO",
+            "PlusMinus": -2,
+            "Stints": 51,
+            "AvgPM": -0.04
+        },
+        {
+            "Player1": "NUNN, KENDRICK",
+            "Player2": "SLOUKAS, KOSTAS",
+            "PlusMinus": -6,
+            "Stints": 111,
+            "AvgPM": -0.05
+        },
+        {
+            "Player1": "ROGKAVOPOULOS, NIKOLAOS",
+            "Player2": "SAMODUROV, ALEXANDROS",
+            "PlusMinus": -1,
+            "Stints": 12,
+            "AvgPM": -0.08
+        },
+        {
+            "Player1": "SHORTS, TJ",
+            "Player2": "SLOUKAS, KOSTAS",
+            "PlusMinus": -5,
+            "Stints": 44,
+            "AvgPM": -0.11
+        },
+        {
+            "Player1": "OSMAN, CEDI",
+            "Player2": "SHORTS, TJ",
+            "PlusMinus": -6,
+            "Stints": 49,
+            "AvgPM": -0.12
+        },
+        {
+            "Player1": "FARIED, KENNETH",
+            "Player2": "NUNN, KENDRICK",
+            "PlusMinus": -8,
+            "Stints": 60,
+            "AvgPM": -0.13
+        },
+        {
+            "Player1": "HERNANGOMEZ, JUANCHO",
+            "Player2": "OSMAN, CEDI",
+            "PlusMinus": -19,
+            "Stints": 124,
+            "AvgPM": -0.15
+        },
+        {
+            "Player1": "GRIGONIS, MARIUS",
+            "Player2": "HOLMES, RICHAUN",
+            "PlusMinus": -1,
+            "Stints": 6,
+            "AvgPM": -0.17
+        },
+        {
+            "Player1": "NUNN, KENDRICK",
+            "Player2": "SHORTS, TJ",
+            "PlusMinus": -12,
+            "Stints": 61,
+            "AvgPM": -0.2
+        },
+        {
+            "Player1": "MITOGLOU, KONSTANTINOS",
+            "Player2": "YURTSEVEN, OMER",
+            "PlusMinus": -4,
+            "Stints": 19,
+            "AvgPM": -0.21
+        },
+        {
+            "Player1": "GRANT, JERIAN",
+            "Player2": "MITOGLOU, KONSTANTINOS",
+            "PlusMinus": -21,
+            "Stints": 86,
+            "AvgPM": -0.24
+        },
+        {
+            "Player1": "GRANT, JERIAN",
+            "Player2": "NUNN, KENDRICK",
+            "PlusMinus": -39,
+            "Stints": 151,
+            "AvgPM": -0.26
+        },
+        {
+            "Player1": "SAMODUROV, ALEXANDROS",
+            "Player2": "TOLIOPOULOS, VASSILIS",
+            "PlusMinus": -3,
+            "Stints": 8,
+            "AvgPM": -0.38
+        },
+        {
+            "Player1": "GRANT, JERIAN",
+            "Player2": "HERNANGOMEZ, JUANCHO",
+            "PlusMinus": -71,
+            "Stints": 172,
+            "AvgPM": -0.41
+        },
+        {
+            "Player1": "HERNANGOMEZ, JUANCHO",
+            "Player2": "MITOGLOU, KONSTANTINOS",
+            "PlusMinus": -26,
+            "Stints": 60,
+            "AvgPM": -0.43
+        },
+        {
+            "Player1": "HERNANGOMEZ, JUANCHO",
+            "Player2": "NUNN, KENDRICK",
+            "PlusMinus": -67,
+            "Stints": 149,
+            "AvgPM": -0.45
+        },
+        {
+            "Player1": "GRANT, JERIAN",
+            "Player2": "YURTSEVEN, OMER",
+            "PlusMinus": -33,
+            "Stints": 64,
+            "AvgPM": -0.52
+        },
+        {
+            "Player1": "ROGKAVOPOULOS, NIKOLAOS",
+            "Player2": "SHORTS, TJ",
+            "PlusMinus": -14,
+            "Stints": 26,
+            "AvgPM": -0.54
+        },
+        {
+            "Player1": "NUNN, KENDRICK",
+            "Player2": "YURTSEVEN, OMER",
+            "PlusMinus": -40,
+            "Stints": 70,
+            "AvgPM": -0.57
+        },
+        {
+            "Player1": "SLOUKAS, KOSTAS",
+            "Player2": "YURTSEVEN, OMER",
+            "PlusMinus": -32,
+            "Stints": 56,
+            "AvgPM": -0.57
+        },
+        {
+            "Player1": "HERNANGOMEZ, JUANCHO",
+            "Player2": "SHORTS, TJ",
+            "PlusMinus": -54,
+            "Stints": 77,
+            "AvgPM": -0.7
+        },
+        {
+            "Player1": "GRIGONIS, MARIUS",
+            "Player2": "MITOGLOU, KONSTANTINOS",
+            "PlusMinus": -10,
+            "Stints": 14,
+            "AvgPM": -0.71
+        },
+        {
+            "Player1": "SHORTS, TJ",
+            "Player2": "YURTSEVEN, OMER",
+            "PlusMinus": -25,
+            "Stints": 33,
+            "AvgPM": -0.76
+        },
+        {
+            "Player1": "FARIED, KENNETH",
+            "Player2": "SHORTS, TJ",
+            "PlusMinus": -21,
+            "Stints": 27,
+            "AvgPM": -0.78
+        },
+        {
+            "Player1": "FARIED, KENNETH",
+            "Player2": "GRIGONIS, MARIUS",
+            "PlusMinus": -5,
+            "Stints": 6,
+            "AvgPM": -0.83
+        },
+        {
+            "Player1": "MITOGLOU, KONSTANTINOS",
+            "Player2": "SHORTS, TJ",
+            "PlusMinus": -34,
+            "Stints": 40,
+            "AvgPM": -0.85
+        },
+        {
+            "Player1": "FARIED, KENNETH",
+            "Player2": "SAMODUROV, ALEXANDROS",
+            "PlusMinus": -10,
+            "Stints": 11,
+            "AvgPM": -0.91
+        },
+        {
+            "Player1": "GRIGONIS, MARIUS",
+            "Player2": "HERNANGOMEZ, JUANCHO",
+            "PlusMinus": -12,
+            "Stints": 13,
+            "AvgPM": -0.92
+        },
+        {
+            "Player1": "OSMAN, CEDI",
+            "Player2": "YURTSEVEN, OMER",
+            "PlusMinus": -42,
+            "Stints": 42,
+            "AvgPM": -1.0
+        },
+        {
+            "Player1": "HERNANGOMEZ, JUANCHO",
+            "Player2": "YURTSEVEN, OMER",
+            "PlusMinus": -58,
+            "Stints": 54,
+            "AvgPM": -1.07
+        },
+        {
+            "Player1": "GRANT, JERIAN",
+            "Player2": "SHORTS, TJ",
+            "PlusMinus": -66,
+            "Stints": 61,
+            "AvgPM": -1.08
+        },
+        {
+            "Player1": "GRANT, JERIAN",
+            "Player2": "GRIGONIS, MARIUS",
+            "PlusMinus": -18,
+            "Stints": 15,
+            "AvgPM": -1.2
+        },
+        {
+            "Player1": "KOUZELOGLOU, IOANNIS",
+            "Player2": "OSMAN, CEDI",
+            "PlusMinus": -9,
+            "Stints": 6,
+            "AvgPM": -1.5
+        },
+        {
+            "Player1": "GRIGONIS, MARIUS",
+            "Player2": "SHORTS, TJ",
+            "PlusMinus": -15,
+            "Stints": 10,
+            "AvgPM": -1.5
+        },
+        {
+            "Player1": "GRIGONIS, MARIUS",
+            "Player2": "NUNN, KENDRICK",
+            "PlusMinus": -24,
+            "Stints": 16,
+            "AvgPM": -1.5
+        },
+        {
+            "Player1": "GRIGONIS, MARIUS",
+            "Player2": "SLOUKAS, KOSTAS",
+            "PlusMinus": -26,
+            "Stints": 17,
+            "AvgPM": -1.53
+        },
+        {
+            "Player1": "KALAITZAKIS, PANAGIOTIS",
+            "Player2": "SAMODUROV, ALEXANDROS",
+            "PlusMinus": -8,
+            "Stints": 5,
+            "AvgPM": -1.6
+        },
+        {
+            "Player1": "GRIGONIS, MARIUS",
+            "Player2": "YURTSEVEN, OMER",
+            "PlusMinus": -13,
+            "Stints": 8,
+            "AvgPM": -1.62
+        },
+        {
+            "Player1": "GRIGONIS, MARIUS",
+            "Player2": "OSMAN, CEDI",
+            "PlusMinus": -14,
+            "Stints": 7,
+            "AvgPM": -2.0
+        },
+        {
+            "Player1": "GRIGONIS, MARIUS",
+            "Player2": "SAMODUROV, ALEXANDROS",
+            "PlusMinus": -12,
+            "Stints": 6,
+            "AvgPM": -2.0
+        },
+        {
+            "Player1": "GRIGONIS, MARIUS",
+            "Player2": "ROGKAVOPOULOS, NIKOLAOS",
+            "PlusMinus": -14,
+            "Stints": 6,
+            "AvgPM": -2.33
+        },
+        {
+            "Player1": "KOUZELOGLOU, IOANNIS",
+            "Player2": "SHORTS, TJ",
+            "PlusMinus": -14,
+            "Stints": 6,
+            "AvgPM": -2.33
+        },
+        {
+            "Player1": "KOUZELOGLOU, IOANNIS",
+            "Player2": "SLOUKAS, KOSTAS",
+            "PlusMinus": -13,
+            "Stints": 5,
+            "AvgPM": -2.6
+        },
+        {
+            "Player1": "KOUZELOGLOU, IOANNIS",
+            "Player2": "ROGKAVOPOULOS, NIKOLAOS",
+            "PlusMinus": -15,
+            "Stints": 5,
+            "AvgPM": -3.0
+        },
+        {
+            "Player1": "GRIGONIS, MARIUS",
+            "Player2": "KOUZELOGLOU, IOANNIS",
+            "PlusMinus": -22,
+            "Stints": 6,
+            "AvgPM": -3.67
+        }
+    ]
+}

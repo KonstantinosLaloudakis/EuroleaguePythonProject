@@ -1,0 +1,621 @@
+{
+    "team": "OLY",
+    "duos": [
+        {
+            "Player1": "JONES, TYRIQUE",
+            "Player2": "WALKUP, THOMAS",
+            "PlusMinus": 43,
+            "Stints": 12,
+            "AvgPM": 3.58
+        },
+        {
+            "Player1": "FOURNIER, EVAN",
+            "Player2": "JOSEPH, CORY",
+            "PlusMinus": 27,
+            "Stints": 9,
+            "AvgPM": 3.0
+        },
+        {
+            "Player1": "JONES, TYRIQUE",
+            "Player2": "VEZENKOV, SASHA",
+            "PlusMinus": 40,
+            "Stints": 14,
+            "AvgPM": 2.86
+        },
+        {
+            "Player1": "DORSEY, TYLER",
+            "Player2": "MCKISSIC, SHAQUIELLE",
+            "PlusMinus": 45,
+            "Stints": 17,
+            "AvgPM": 2.65
+        },
+        {
+            "Player1": "DORSEY, TYLER",
+            "Player2": "JONES, TYRIQUE",
+            "PlusMinus": 42,
+            "Stints": 17,
+            "AvgPM": 2.47
+        },
+        {
+            "Player1": "JOSEPH, CORY",
+            "Player2": "PETERS, ALEC",
+            "PlusMinus": 17,
+            "Stints": 8,
+            "AvgPM": 2.12
+        },
+        {
+            "Player1": "FOURNIER, EVAN",
+            "Player2": "JONES, TYRIQUE",
+            "PlusMinus": 40,
+            "Stints": 19,
+            "AvgPM": 2.11
+        },
+        {
+            "Player1": "WALKUP, THOMAS",
+            "Player2": "WARD, TYSON",
+            "PlusMinus": 52,
+            "Stints": 29,
+            "AvgPM": 1.79
+        },
+        {
+            "Player1": "FOURNIER, EVAN",
+            "Player2": "MCKISSIC, SHAQUIELLE",
+            "PlusMinus": 48,
+            "Stints": 30,
+            "AvgPM": 1.6
+        },
+        {
+            "Player1": "MCKISSIC, SHAQUIELLE",
+            "Player2": "WALKUP, THOMAS",
+            "PlusMinus": 37,
+            "Stints": 25,
+            "AvgPM": 1.48
+        },
+        {
+            "Player1": "MCKISSIC, SHAQUIELLE",
+            "Player2": "MILUTINOV, NIKOLA",
+            "PlusMinus": 25,
+            "Stints": 17,
+            "AvgPM": 1.47
+        },
+        {
+            "Player1": "MCKISSIC, SHAQUIELLE",
+            "Player2": "NTILIKINA, FRANK",
+            "PlusMinus": 13,
+            "Stints": 9,
+            "AvgPM": 1.44
+        },
+        {
+            "Player1": "JOSEPH, CORY",
+            "Player2": "MCKISSIC, SHAQUIELLE",
+            "PlusMinus": 13,
+            "Stints": 9,
+            "AvgPM": 1.44
+        },
+        {
+            "Player1": "MCKISSIC, SHAQUIELLE",
+            "Player2": "PETERS, ALEC",
+            "PlusMinus": 50,
+            "Stints": 35,
+            "AvgPM": 1.43
+        },
+        {
+            "Player1": "FOURNIER, EVAN",
+            "Player2": "WARD, TYSON",
+            "PlusMinus": 37,
+            "Stints": 29,
+            "AvgPM": 1.28
+        },
+        {
+            "Player1": "JONES, TYRIQUE",
+            "Player2": "MCKISSIC, SHAQUIELLE",
+            "PlusMinus": 11,
+            "Stints": 9,
+            "AvgPM": 1.22
+        },
+        {
+            "Player1": "JONES, TYRIQUE",
+            "Player2": "PETERS, ALEC",
+            "PlusMinus": 17,
+            "Stints": 14,
+            "AvgPM": 1.21
+        },
+        {
+            "Player1": "HALL, DONTA",
+            "Player2": "WARD, TYSON",
+            "PlusMinus": 52,
+            "Stints": 44,
+            "AvgPM": 1.18
+        },
+        {
+            "Player1": "VEZENKOV, SASHA",
+            "Player2": "WARD, TYSON",
+            "PlusMinus": 42,
+            "Stints": 36,
+            "AvgPM": 1.17
+        },
+        {
+            "Player1": "JONES, TYRIQUE",
+            "Player2": "JOSEPH, CORY",
+            "PlusMinus": 11,
+            "Stints": 10,
+            "AvgPM": 1.1
+        },
+        {
+            "Player1": "HALL, DONTA",
+            "Player2": "MCKISSIC, SHAQUIELLE",
+            "PlusMinus": 24,
+            "Stints": 29,
+            "AvgPM": 0.83
+        },
+        {
+            "Player1": "FOURNIER, EVAN",
+            "Player2": "PETERS, ALEC",
+            "PlusMinus": 60,
+            "Stints": 74,
+            "AvgPM": 0.81
+        },
+        {
+            "Player1": "DORSEY, TYLER",
+            "Player2": "WARD, TYSON",
+            "PlusMinus": 24,
+            "Stints": 32,
+            "AvgPM": 0.75
+        },
+        {
+            "Player1": "MORRIS, MONTE",
+            "Player2": "PETERS, ALEC",
+            "PlusMinus": 6,
+            "Stints": 10,
+            "AvgPM": 0.6
+        },
+        {
+            "Player1": "JONES, TYRIQUE",
+            "Player2": "WARD, TYSON",
+            "PlusMinus": 6,
+            "Stints": 10,
+            "AvgPM": 0.6
+        },
+        {
+            "Player1": "NTILIKINA, FRANK",
+            "Player2": "PETERS, ALEC",
+            "PlusMinus": 16,
+            "Stints": 30,
+            "AvgPM": 0.53
+        },
+        {
+            "Player1": "NTILIKINA, FRANK",
+            "Player2": "WARD, TYSON",
+            "PlusMinus": 12,
+            "Stints": 23,
+            "AvgPM": 0.52
+        },
+        {
+            "Player1": "MCKISSIC, SHAQUIELLE",
+            "Player2": "VEZENKOV, SASHA",
+            "PlusMinus": 12,
+            "Stints": 24,
+            "AvgPM": 0.5
+        },
+        {
+            "Player1": "FOURNIER, EVAN",
+            "Player2": "HALL, DONTA",
+            "PlusMinus": 29,
+            "Stints": 60,
+            "AvgPM": 0.48
+        },
+        {
+            "Player1": "HALL, DONTA",
+            "Player2": "NTILIKINA, FRANK",
+            "PlusMinus": 15,
+            "Stints": 36,
+            "AvgPM": 0.42
+        },
+        {
+            "Player1": "MILUTINOV, NIKOLA",
+            "Player2": "PETERS, ALEC",
+            "PlusMinus": 14,
+            "Stints": 33,
+            "AvgPM": 0.42
+        },
+        {
+            "Player1": "ANTETOKOUNMPO, KOSTAS",
+            "Player2": "FOURNIER, EVAN",
+            "PlusMinus": 2,
+            "Stints": 6,
+            "AvgPM": 0.33
+        },
+        {
+            "Player1": "JOSEPH, CORY",
+            "Player2": "VEZENKOV, SASHA",
+            "PlusMinus": 2,
+            "Stints": 7,
+            "AvgPM": 0.29
+        },
+        {
+            "Player1": "DORSEY, TYLER",
+            "Player2": "WALKUP, THOMAS",
+            "PlusMinus": 19,
+            "Stints": 69,
+            "AvgPM": 0.28
+        },
+        {
+            "Player1": "DORSEY, TYLER",
+            "Player2": "MORRIS, MONTE",
+            "PlusMinus": 3,
+            "Stints": 11,
+            "AvgPM": 0.27
+        },
+        {
+            "Player1": "VEZENKOV, SASHA",
+            "Player2": "WALKUP, THOMAS",
+            "PlusMinus": 14,
+            "Stints": 64,
+            "AvgPM": 0.22
+        },
+        {
+            "Player1": "PETERS, ALEC",
+            "Player2": "WALKUP, THOMAS",
+            "PlusMinus": 10,
+            "Stints": 49,
+            "AvgPM": 0.2
+        },
+        {
+            "Player1": "DORSEY, TYLER",
+            "Player2": "VEZENKOV, SASHA",
+            "PlusMinus": 16,
+            "Stints": 95,
+            "AvgPM": 0.17
+        },
+        {
+            "Player1": "NTILIKINA, FRANK",
+            "Player2": "PAPANIKOLAOU, KOSTAS",
+            "PlusMinus": 1,
+            "Stints": 14,
+            "AvgPM": 0.07
+        },
+        {
+            "Player1": "PETERS, ALEC",
+            "Player2": "WARD, TYSON",
+            "PlusMinus": 1,
+            "Stints": 48,
+            "AvgPM": 0.02
+        },
+        {
+            "Player1": "DORSEY, TYLER",
+            "Player2": "MILUTINOV, NIKOLA",
+            "PlusMinus": 0,
+            "Stints": 57,
+            "AvgPM": 0.0
+        },
+        {
+            "Player1": "FOURNIER, EVAN",
+            "Player2": "NTILIKINA, FRANK",
+            "PlusMinus": -1,
+            "Stints": 42,
+            "AvgPM": -0.02
+        },
+        {
+            "Player1": "MILUTINOV, NIKOLA",
+            "Player2": "WALKUP, THOMAS",
+            "PlusMinus": -2,
+            "Stints": 50,
+            "AvgPM": -0.04
+        },
+        {
+            "Player1": "HALL, DONTA",
+            "Player2": "PETERS, ALEC",
+            "PlusMinus": -3,
+            "Stints": 65,
+            "AvgPM": -0.05
+        },
+        {
+            "Player1": "FOURNIER, EVAN",
+            "Player2": "WALKUP, THOMAS",
+            "PlusMinus": -5,
+            "Stints": 68,
+            "AvgPM": -0.07
+        },
+        {
+            "Player1": "DORSEY, TYLER",
+            "Player2": "JOSEPH, CORY",
+            "PlusMinus": -1,
+            "Stints": 8,
+            "AvgPM": -0.12
+        },
+        {
+            "Player1": "HALL, DONTA",
+            "Player2": "VEZENKOV, SASHA",
+            "PlusMinus": -9,
+            "Stints": 55,
+            "AvgPM": -0.16
+        },
+        {
+            "Player1": "ANTETOKOUNMPO, KOSTAS",
+            "Player2": "PETERS, ALEC",
+            "PlusMinus": -1,
+            "Stints": 6,
+            "AvgPM": -0.17
+        },
+        {
+            "Player1": "DORSEY, TYLER",
+            "Player2": "PAPANIKOLAOU, KOSTAS",
+            "PlusMinus": -6,
+            "Stints": 32,
+            "AvgPM": -0.19
+        },
+        {
+            "Player1": "HALL, DONTA",
+            "Player2": "WALKUP, THOMAS",
+            "PlusMinus": -8,
+            "Stints": 42,
+            "AvgPM": -0.19
+        },
+        {
+            "Player1": "DORSEY, TYLER",
+            "Player2": "PETERS, ALEC",
+            "PlusMinus": -13,
+            "Stints": 59,
+            "AvgPM": -0.22
+        },
+        {
+            "Player1": "PAPANIKOLAOU, KOSTAS",
+            "Player2": "WARD, TYSON",
+            "PlusMinus": -3,
+            "Stints": 12,
+            "AvgPM": -0.25
+        },
+        {
+            "Player1": "MILUTINOV, NIKOLA",
+            "Player2": "NTILIKINA, FRANK",
+            "PlusMinus": -6,
+            "Stints": 19,
+            "AvgPM": -0.32
+        },
+        {
+            "Player1": "DORSEY, TYLER",
+            "Player2": "NTILIKINA, FRANK",
+            "PlusMinus": -10,
+            "Stints": 31,
+            "AvgPM": -0.32
+        },
+        {
+            "Player1": "DORSEY, TYLER",
+            "Player2": "FOURNIER, EVAN",
+            "PlusMinus": -26,
+            "Stints": 73,
+            "AvgPM": -0.36
+        },
+        {
+            "Player1": "NTILIKINA, FRANK",
+            "Player2": "VEZENKOV, SASHA",
+            "PlusMinus": -13,
+            "Stints": 34,
+            "AvgPM": -0.38
+        },
+        {
+            "Player1": "PAPANIKOLAOU, KOSTAS",
+            "Player2": "PETERS, ALEC",
+            "PlusMinus": -10,
+            "Stints": 24,
+            "AvgPM": -0.42
+        },
+        {
+            "Player1": "DORSEY, TYLER",
+            "Player2": "HALL, DONTA",
+            "PlusMinus": -26,
+            "Stints": 58,
+            "AvgPM": -0.45
+        },
+        {
+            "Player1": "MILUTINOV, NIKOLA",
+            "Player2": "MORRIS, MONTE",
+            "PlusMinus": -3,
+            "Stints": 6,
+            "AvgPM": -0.5
+        },
+        {
+            "Player1": "MORRIS, MONTE",
+            "Player2": "PAPANIKOLAOU, KOSTAS",
+            "PlusMinus": -3,
+            "Stints": 6,
+            "AvgPM": -0.5
+        },
+        {
+            "Player1": "FOURNIER, EVAN",
+            "Player2": "VEZENKOV, SASHA",
+            "PlusMinus": -41,
+            "Stints": 82,
+            "AvgPM": -0.5
+        },
+        {
+            "Player1": "MILUTINOV, NIKOLA",
+            "Player2": "WARD, TYSON",
+            "PlusMinus": -10,
+            "Stints": 19,
+            "AvgPM": -0.53
+        },
+        {
+            "Player1": "FOURNIER, EVAN",
+            "Player2": "MILUTINOV, NIKOLA",
+            "PlusMinus": -34,
+            "Stints": 59,
+            "AvgPM": -0.58
+        },
+        {
+            "Player1": "ANTETOKOUNMPO, KOSTAS",
+            "Player2": "LEE, SABEN",
+            "PlusMinus": -3,
+            "Stints": 5,
+            "AvgPM": -0.6
+        },
+        {
+            "Player1": "MILUTINOV, NIKOLA",
+            "Player2": "VEZENKOV, SASHA",
+            "PlusMinus": -34,
+            "Stints": 56,
+            "AvgPM": -0.61
+        },
+        {
+            "Player1": "PAPANIKOLAOU, KOSTAS",
+            "Player2": "VEZENKOV, SASHA",
+            "PlusMinus": -25,
+            "Stints": 37,
+            "AvgPM": -0.68
+        },
+        {
+            "Player1": "FOURNIER, EVAN",
+            "Player2": "MORRIS, MONTE",
+            "PlusMinus": -13,
+            "Stints": 18,
+            "AvgPM": -0.72
+        },
+        {
+            "Player1": "PAPANIKOLAOU, KOSTAS",
+            "Player2": "WALKUP, THOMAS",
+            "PlusMinus": -16,
+            "Stints": 21,
+            "AvgPM": -0.76
+        },
+        {
+            "Player1": "FOURNIER, EVAN",
+            "Player2": "PAPANIKOLAOU, KOSTAS",
+            "PlusMinus": -19,
+            "Stints": 25,
+            "AvgPM": -0.76
+        },
+        {
+            "Player1": "MCKISSIC, SHAQUIELLE",
+            "Player2": "WARD, TYSON",
+            "PlusMinus": -14,
+            "Stints": 18,
+            "AvgPM": -0.78
+        },
+        {
+            "Player1": "MILUTINOV, NIKOLA",
+            "Player2": "PAPANIKOLAOU, KOSTAS",
+            "PlusMinus": -15,
+            "Stints": 18,
+            "AvgPM": -0.83
+        },
+        {
+            "Player1": "LEE, SABEN",
+            "Player2": "PAPANIKOLAOU, KOSTAS",
+            "PlusMinus": -21,
+            "Stints": 22,
+            "AvgPM": -0.95
+        },
+        {
+            "Player1": "PETERS, ALEC",
+            "Player2": "VEZENKOV, SASHA",
+            "PlusMinus": -13,
+            "Stints": 13,
+            "AvgPM": -1.0
+        },
+        {
+            "Player1": "HALL, DONTA",
+            "Player2": "NETZIPOGLOU, OMIROS",
+            "PlusMinus": -5,
+            "Stints": 5,
+            "AvgPM": -1.0
+        },
+        {
+            "Player1": "HALL, DONTA",
+            "Player2": "LARENTZAKIS, GIANNOULIS",
+            "PlusMinus": -8,
+            "Stints": 7,
+            "AvgPM": -1.14
+        },
+        {
+            "Player1": "DORSEY, TYLER",
+            "Player2": "LEE, SABEN",
+            "PlusMinus": -25,
+            "Stints": 22,
+            "AvgPM": -1.14
+        },
+        {
+            "Player1": "HALL, DONTA",
+            "Player2": "MORRIS, MONTE",
+            "PlusMinus": -12,
+            "Stints": 10,
+            "AvgPM": -1.2
+        },
+        {
+            "Player1": "LARENTZAKIS, GIANNOULIS",
+            "Player2": "PETERS, ALEC",
+            "PlusMinus": -10,
+            "Stints": 8,
+            "AvgPM": -1.25
+        },
+        {
+            "Player1": "HALL, DONTA",
+            "Player2": "PAPANIKOLAOU, KOSTAS",
+            "PlusMinus": -42,
+            "Stints": 33,
+            "AvgPM": -1.27
+        },
+        {
+            "Player1": "LEE, SABEN",
+            "Player2": "VEZENKOV, SASHA",
+            "PlusMinus": -32,
+            "Stints": 22,
+            "AvgPM": -1.45
+        },
+        {
+            "Player1": "FOURNIER, EVAN",
+            "Player2": "LEE, SABEN",
+            "PlusMinus": -15,
+            "Stints": 10,
+            "AvgPM": -1.5
+        },
+        {
+            "Player1": "HALL, DONTA",
+            "Player2": "LEE, SABEN",
+            "PlusMinus": -41,
+            "Stints": 25,
+            "AvgPM": -1.64
+        },
+        {
+            "Player1": "LEE, SABEN",
+            "Player2": "PETERS, ALEC",
+            "PlusMinus": -31,
+            "Stints": 17,
+            "AvgPM": -1.82
+        },
+        {
+            "Player1": "MORRIS, MONTE",
+            "Player2": "VEZENKOV, SASHA",
+            "PlusMinus": -15,
+            "Stints": 8,
+            "AvgPM": -1.88
+        },
+        {
+            "Player1": "LEE, SABEN",
+            "Player2": "WARD, TYSON",
+            "PlusMinus": -31,
+            "Stints": 13,
+            "AvgPM": -2.38
+        },
+        {
+            "Player1": "LEE, SABEN",
+            "Player2": "MILUTINOV, NIKOLA",
+            "PlusMinus": -19,
+            "Stints": 8,
+            "AvgPM": -2.38
+        },
+        {
+            "Player1": "LARENTZAKIS, GIANNOULIS",
+            "Player2": "LEE, SABEN",
+            "PlusMinus": -15,
+            "Stints": 5,
+            "AvgPM": -3.0
+        },
+        {
+            "Player1": "NETZIPOGLOU, OMIROS",
+            "Player2": "PETERS, ALEC",
+            "PlusMinus": -16,
+            "Stints": 5,
+            "AvgPM": -3.2
+        }
+    ]
+}
