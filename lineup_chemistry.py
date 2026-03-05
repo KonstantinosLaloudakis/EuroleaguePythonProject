@@ -172,7 +172,7 @@ def visualize_matrix(team_code, df):
     for _, r in df.iterrows():
         for p in [r['Player1'], r['Player2']]:
             player_stints[p] = player_stints.get(p, 0) + r['Stints']
-    top_players = sorted(player_stints, key=lambda x: -player_stints[x])[:10]
+    top_players = sorted(player_stints, key=lambda x: -player_stints[x])[:12]
 
     n = len(top_players)
     matrix = np.full((n, n), np.nan)
