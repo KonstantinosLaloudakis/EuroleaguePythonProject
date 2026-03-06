@@ -212,6 +212,8 @@ def replay_game(pbp_file, gamecode, home_team=None):
     })
 
     wp_df = pd.DataFrame(wp_data)
+    # Sort by elapsed time to prevent backward jumps in the graph
+    wp_df = wp_df.sort_values('elapsed').reset_index(drop=True)
     print(f"  Total score changes: {len(wp_df)}")
     print(f"  Final Score: {home_team} {final_home} - {final_away} {away_team}")
 
@@ -327,13 +329,20 @@ def generate_html(wp_df, key_plays, home_team, away_team, gamecode):
     elapsed_min = wp_df['elapsed'] / 60
     wp_pct = wp_df['wp'] * 100
 
+    # Helper to format seconds as MM:SS
+    def fmt_time(secs):
+        m, s = divmod(int(secs), 60)
+        return f"{m}:{s:02d}"
+
     # Hover text
     hover_text = []
     for _, row in wp_df.iterrows():
+        secs = row['seconds_remaining']
+        time_str = fmt_time(secs) if secs > 0 else 'Final'
         txt = (f"<b>{row['play_desc']}</b><br>"
                f"Score: {int(row['score_home'])}-{int(row['score_away'])}<br>"
                f"WP: {row['wp']*100:.1f}%<br>"
-               f"Q{int(row['period'])}")
+               f"Q{int(row['period'])} — {time_str} remaining")
         hover_text.append(txt)
 
     fig = go.Figure()
@@ -365,18 +374,20 @@ def generate_html(wp_df, key_plays, home_team, away_team, gamecode):
     # Key plays as markers
     for _, play in key_plays.iterrows():
         shift = play['wp_shift'] * 100
+        actual_wp = play['wp'] * 100
         if abs(shift) >= 3:
             color = '#22c55e' if shift > 0 else '#ef4444'
+            player_short = play['player'].split(',')[0] if play['player'] else ''
             fig.add_trace(go.Scatter(
                 x=[play['elapsed']/60],
-                y=[play['wp']*100],
+                y=[actual_wp],
                 mode='markers+text',
                 marker=dict(size=10, color=color, symbol='circle'),
-                text=[f"{play['player'].split(',')[0] if play['player'] else ''} ({shift:+.1f}%)"],
+                text=[f"{player_short} — WP: {actual_wp:.1f}% ({shift:+.1f}%)"],
                 textposition='top center',
                 textfont=dict(size=9, color=color),
                 showlegend=False,
-                hovertext=f"<b>{play['play_desc']}</b><br>WP Shift: {shift:+.1f}%<br>Score: {int(play['score_home'])}-{int(play['score_away'])}",
+                hovertext=f"<b>{play['play_desc']}</b><br>Win Prob: {actual_wp:.1f}%<br>WP Shift: {shift:+.1f}%<br>Score: {int(play['score_home'])}-{int(play['score_away'])}<br>Q{int(play['period'])} — {fmt_time(play['seconds_remaining'])} remaining",
                 hoverinfo='text',
             ))
 
