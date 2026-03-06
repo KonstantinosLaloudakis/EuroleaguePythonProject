@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euroleague Win Probability Replay</title>
+    <meta name="description"
+        content="Interactive Win Probability Replay for every Euroleague game from 2007-08 to 2025-26. Relive the biggest moments with data.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>🏀 Euroleague Win Probability Replay</h1>
+        <p class="subtitle">Relive every game from 2007-08 to 2025-26 — one play at a time</p>
+    </header>
+
+    <main>
+        <div class="controls">
+            <div class="control-group">
+                <label for="season-select">Season</label>
+                <select id="season-select" disabled>
+                    <option value="">Loading seasons...</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="team-filter">Team Filter</label>
+                <select id="team-filter" disabled>
+                    <option value="">All Teams</option>
+                </select>
+            </div>
+            <div class="control-group control-group-wide">
+                <label for="game-select">Game</label>
+                <select id="game-select" disabled>
+                    <option value="">Select a season first</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="chart-container">
+            <div id="wp-chart"></div>
+            <div id="placeholder">
+                <div class="placeholder-icon">📈</div>
+                <p>Select a season and game above to see the Win Probability Replay</p>
+            </div>
+        </div>
+
+        <div id="key-plays" class="hidden">
+            <h2>⚡ Biggest Momentum Swings</h2>
+            <div id="key-plays-list"></div>
+        </div>
+
+        <div id="game-summary" class="hidden">
+            <div id="summary-content"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Data from Euroleague API · Win Probability Model: Logistic(margin, time) · Built with Plotly.js</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
