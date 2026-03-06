@@ -145,6 +145,14 @@ def process_season(year):
 
         try:
             timeline, team_a, team_b, score_a, score_b = process_game(game, teams)
+            
+            # Extract Round
+            round_val = game['Round'].dropna().iloc[0] if not game['Round'].dropna().empty else "Unknown"
+            
+            # Extract Full Team Names
+            ta_name = game[game['CODETEAM'] == team_a]['TEAM'].dropna().iloc[0] if not game[game['CODETEAM'] == team_a]['TEAM'].dropna().empty else team_a
+            tb_name = game[game['CODETEAM'] == team_b]['TEAM'].dropna().iloc[0] if not game[game['CODETEAM'] == team_b]['TEAM'].dropna().empty else team_b
+
         except Exception as e:
             print(f"    Error on gamecode {gc}: {e}")
             continue
@@ -160,8 +168,11 @@ def process_season(year):
 
         games_index.append({
             'gc': int(gc),
+            'rnd': int(round_val) if str(round_val).isdigit() else str(round_val),
             'ta': team_a,
+            'ta_name': str(ta_name),
             'tb': team_b,
+            'tb_name': str(tb_name),
             'sa': int(score_a),
             'sb': int(score_b),
         })

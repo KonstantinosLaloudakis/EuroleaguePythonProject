@@ -56,16 +56,21 @@ seasonSelect.addEventListener('change', async () => {
         const resp = await fetch(`${DATA_BASE}/${season}/games.json`);
         currentGames = await resp.json();
 
-        // Populate team filter
-        const allTeams = new Set();
-        currentGames.forEach(g => { allTeams.add(g.ta); allTeams.add(g.tb); });
-        const sortedTeams = [...allTeams].sort();
+        // Populate team filter with full names but keep codes as values
+        const teamMap = new Map();
+        currentGames.forEach(g => {
+            teamMap.set(g.ta, g.ta_name);
+            teamMap.set(g.tb, g.tb_name);
+        });
+
+        // Sort by full name
+        const sortedTeams = Array.from(teamMap.keys()).sort((a, b) => teamMap.get(a).localeCompare(teamMap.get(b)));
 
         teamFilter.innerHTML = '<option value="">All Teams</option>';
-        sortedTeams.forEach(t => {
+        sortedTeams.forEach(code => {
             const opt = document.createElement('option');
-            opt.value = t;
-            opt.textContent = t;
+            opt.value = code;
+            opt.textContent = `${teamMap.get(code)} (${code})`;
             teamFilter.appendChild(opt);
         });
         teamFilter.disabled = false;
@@ -92,10 +97,16 @@ function populateGames() {
     games.forEach(g => {
         const opt = document.createElement('option');
         opt.value = g.gc;
+        opt.dataset.taName = g.ta_name;
+        opt.dataset.tbName = g.tb_name;
         const winner = g.sa > g.sb ? g.ta : g.tb;
-        const marker = winner === g.ta ? '✦' : '';
-        const marker2 = winner === g.tb ? '✦' : '';
-        opt.textContent = `${marker}${g.ta} ${g.sa} - ${g.sb} ${g.tb}${marker2}`;
+        const marker = winner === g.ta ? '✦ ' : '';
+        const marker2 = winner === g.tb ? ' ✦' : '';
+
+        let roundStr = g.rnd;
+        if (typeof roundStr === 'number') roundStr = `Round ${roundStr}`;
+
+        opt.textContent = `[${roundStr}] ${marker}${g.ta_name} ${g.sa} - ${g.sb} ${g.tb_name}${marker2}`;
         gameSelect.appendChild(opt);
     });
     gameSelect.disabled = false;
@@ -112,15 +123,20 @@ gameSelect.addEventListener('change', async () => {
     try {
         const resp = await fetch(`${DATA_BASE}/${season}/${gc}.json`);
         const data = await resp.json();
-        renderChart(data);
+        const option = gameSelect.options[gameSelect.selectedIndex];
+        renderChart(data, option.dataset.taName, option.dataset.tbName);
     } catch (err) {
         console.error('Failed to load game data:', err);
     }
 });
 
 // ── Render Chart ─────────────────────────────────────────
-function renderChart(data) {
+function renderChart(data, taName, tbName) {
     const { ta, tb, timeline } = data;
+
+    // Fallback if full names aren't provided
+    taName = taName || ta;
+    tbName = tbName || tb;
 
     // Prepend tip-off
     const full = [{ e: 0, s: 2400, a: 0, b: 0, w: 0.5, p: 1, d: 'Tip-Off' }, ...timeline];
@@ -138,8 +154,8 @@ function renderChart(data) {
     // Hover text
     const hoverText = full.map(p =>
         `<b>${p.d}</b><br>` +
-        `Score: ${ta} ${p.a} - ${p.b} ${tb}<br>` +
-        `WP (${ta}): ${(p.w * 100).toFixed(1)}%<br>` +
+        `Score: ${taName} ${p.a} - ${p.b} ${tbName}<br>` +
+        `WP (${taName}): ${(p.w * 100).toFixed(1)}%<br>` +
         `Q${p.p} — ${fmtTime(p.s)} remaining`
     );
 
@@ -189,17 +205,24 @@ function renderChart(data) {
             mode: 'markers',
             marker: { size: 9, color, symbol: 'circle', line: { color: 'white', width: 1 } },
             showlegend: false,
-            hovertext: `<b>${kp.d}</b><br>WP: ${(kp.w * 100).toFixed(1)}%<br>Shift: ${kp.shift > 0 ? '+' : ''}${kp.shift.toFixed(1)}%<br>Score: ${ta} ${kp.a} - ${kp.b} ${tb}<br>Q${kp.p} — ${fmtTime(kp.s)} remaining`,
+            hovertext: `<b>${kp.d}</b><br>WP: ${(kp.w * 100).toFixed(1)}%<br>Shift: ${kp.shift > 0 ? '+' : ''}${kp.shift.toFixed(1)}%<br>Score: ${taName} ${kp.a} - ${kp.b} ${tbName}<br>Q${kp.p} — ${fmtTime(kp.s)} remaining`,
             hoverinfo: 'text',
         });
     });
 
     const finalScore = full[full.length - 1];
-    const winner = finalScore.a > finalScore.b ? ta : tb;
+    const winnerName = finalScore.a > finalScore.b ? taName : tbName;
+    const minWP = Math.min(...wpPct);
+    const maxWP = Math.max(...wpPct);
+    summaryContent.innerHTML = `
+        <strong>${winnerName} wins ${finalScore.a}-${finalScore.b}</strong> ·
+        ${taName} WP range: ${minWP.toFixed(1)}% — ${maxWP.toFixed(1)}% ·
+        ${full.length - 2} scoring plays
+    `;
 
     const layout = {
         title: {
-            text: `${ta} ${finalScore.a} - ${finalScore.b} ${tb}`,
+            text: `${taName} ${finalScore.a} - ${finalScore.b} ${tbName}`,
             font: { size: 22, color: 'white', family: 'Outfit, sans-serif' },
             x: 0.5, xanchor: 'center',
         },
@@ -268,22 +291,17 @@ function renderChart(data) {
         card.className = `key-play-card ${cls}`;
         card.innerHTML = `
             <div class="key-play-desc">${kp.d}</div>
-            <div class="key-play-meta">Q${kp.p} · ${fmtTime(kp.s)} · Score: ${ta} ${kp.a}-${kp.b} ${tb}</div>
+            <div class="key-play-meta">Q${kp.p} · ${fmtTime(kp.s)} · Score: ${taName} ${kp.a}-${kp.b} ${tbName}</div>
             <div class="key-play-shift ${cls}">WP: ${(kp.w * 100).toFixed(1)}% (${kp.shift > 0 ? '+' : ''}${kp.shift.toFixed(1)}%)</div>
         `;
         keyPlaysList.appendChild(card);
     });
     keyPlaysSection.classList.remove('hidden');
 
-    // ── Game Summary ────────────────────────────────────
-    const minWP = Math.min(...wpPct);
-    const maxWP = Math.max(...wpPct);
-    summaryContent.innerHTML = `
-        <strong>${winner} wins ${finalScore.a}-${finalScore.b}</strong> ·
-        ${ta} WP range: ${minWP.toFixed(1)}% — ${maxWP.toFixed(1)}% ·
-        ${full.length - 2} scoring plays
-    `;
+
     gameSummary.classList.remove('hidden');
+
+
 }
 
 // ── Reset ────────────────────────────────────────────────
