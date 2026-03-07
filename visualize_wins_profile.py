@@ -42,13 +42,22 @@ def get_sos_label(team_code, sos_data):
 def create_wins_profile():
     print("Generating Expected Wins Profile Matrix...")
     
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    
     # Load Monte Carlo results
-    with open('monte_carlo_results.json', 'r') as f:
+    mc_file = f'monte_carlo_results{round_suffix}.json'
+    if not os.path.exists(mc_file): 
+        mc_file = 'monte_carlo_results.json'
+    with open(mc_file, 'r') as f:
         mc_data = json.load(f)
     
     # Load SOS data
     try:
-        with open('adjusted_ratings.json', 'r') as f:
+        sos_file = f'adjusted_ratings{round_suffix}.json'
+        if not os.path.exists(sos_file):
+            sos_file = 'adjusted_ratings.json'
+        with open(sos_file, 'r') as f:
             sos_data = json.load(f)
     except:
         sos_data = []
@@ -221,8 +230,12 @@ def create_wins_profile():
     ax.set_ylim(-0.02, 1.0)
     
     plt.tight_layout()
-    plt.savefig('wins_profile_matrix.png', dpi=200, bbox_inches='tight', facecolor='#0f172a')
-    print("Chart saved to wins_profile_matrix.png!")
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'wins_profile_matrix{round_suffix}.png'
+    
+    plt.savefig(outfile, dpi=200, bbox_inches='tight', facecolor='#0f172a')
+    print(f"Chart saved to {outfile}!")
 
 
 if __name__ == '__main__':

@@ -35,8 +35,12 @@ def calculate_expected_wins():
     
     # Load adjusted ratings for opponent-quality weighting
     adj_net = {}
-    if os.path.exists('adjusted_ratings.json'):
-        with open('adjusted_ratings.json', 'r') as f:
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    in_file = f'adjusted_ratings{round_suffix}.json'
+    if not os.path.exists(in_file):
+        in_file = 'adjusted_ratings.json'
+    if os.path.exists(in_file):
+        with open(in_file, 'r') as f:
             for e in json.load(f):
                 adj_net[e['Team']] = e['Adj_Net']
     

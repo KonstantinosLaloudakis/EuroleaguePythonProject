@@ -155,8 +155,11 @@ def calculate_wir_2025():
                     'pointsScored', 'assists', 'totalRebounds', 'TS%', 
                     'pir', 'PIR_40', 'WIR', 'WIR_40', 'WIR_Rank', 'PIR_Rank', 'Rank_Diff']
     
-    df[cols_to_save].to_json('wir_ratings.json', orient='records', indent=4)
-    print(f"\n  Saved full rankings to wir_ratings.json")
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'wir_ratings{round_suffix}.json'
+    df[cols_to_save].to_json(outfile, orient='records', indent=4)
+    print(f"\n  Saved full rankings to {outfile}")
 
 
 if __name__ == '__main__':

@@ -50,8 +50,11 @@ def create_wpa_chart():
              ha='center', fontsize=9, color='#8b949e', style='italic')
              
     plt.tight_layout()
-    plt.savefig('wpa_leaders.png', dpi=150, facecolor=fig.get_facecolor(), bbox_inches='tight')
-    print("Saved wpa_leaders.png")
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'wpa_leaders{round_suffix}.png'
+    plt.savefig(outfile, dpi=150, facecolor=fig.get_facecolor(), bbox_inches='tight')
+    print(f"Saved {outfile}")
 
 if __name__ == '__main__':
     create_wpa_chart()

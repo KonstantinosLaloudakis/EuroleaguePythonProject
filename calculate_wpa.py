@@ -124,8 +124,11 @@ def calculate_action_wpa():
         print(f"  {row['WPA_Rank']:<4} {row['Player']:<25} {row['Team']:<5} {row['Action_WPA']:>9.1f}%")
         
     # Save to JSON
-    res_df.to_json('wpa_ratings.json', orient='records', indent=4)
-    print("\nSaved Action WPA to wpa_ratings.json")
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'wpa_ratings{round_suffix}.json'
+    res_df.to_json(outfile, orient='records', indent=4)
+    print(f"\nSaved Action WPA to {outfile}")
 
 if __name__ == '__main__':
     calculate_action_wpa()

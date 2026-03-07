@@ -32,7 +32,12 @@ def calculate_clutch_games():
     Uses the seed distribution to measure: 
     how much does this game shift seeding probabilities for BOTH teams?
     """
-    with open('monte_carlo_results.json', 'r') as f:
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    in_file = f'monte_carlo_results{round_suffix}.json'
+    if not os.path.exists(in_file):
+        in_file = 'monte_carlo_results.json'
+    with open(in_file, 'r') as f:
         mc_data = json.load(f)
     
     # Build lookup
@@ -278,8 +283,12 @@ def create_clutch_chart():
     ax.set_ylim(-0.02, 1)
     
     plt.tight_layout()
-    plt.savefig('clutch_matchups.png', dpi=200, bbox_inches='tight', facecolor='#0f172a')
-    print("Chart saved to clutch_matchups.png!")
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'clutch_matchups{round_suffix}.png'
+    
+    plt.savefig(outfile, dpi=200, bbox_inches='tight', facecolor='#0f172a')
+    print(f"Chart saved to {outfile}!")
 
 
 if __name__ == '__main__':

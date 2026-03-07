@@ -31,7 +31,13 @@ CODE_TO_FULL_NAME = {
 def create_sos_table():
     print("Generating Remaining SOS Table...")
     
-    with open('adjusted_ratings.json', 'r') as f:
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    in_file = f'adjusted_ratings{round_suffix}.json'
+    if not os.path.exists(in_file):
+        in_file = 'adjusted_ratings.json'
+        
+    with open(in_file, 'r') as f:
         data = json.load(f)
     
     # Use pre-calculated location-aware SOS from adjusted_ratings.json
@@ -55,11 +61,19 @@ def create_sos_table():
     ax.set_facecolor('#0f172a')
     ax.axis('off')
     
+    # Calculate max games played to dynamically determine remaining rounds
+    max_gp = max(team.get('Wins', 0) + team.get('Losses', 0) for team in data) if data else 0
+    next_round = min(max_gp + 1, 38)
+    if next_round <= 38:
+        round_text = f"Remaining Games (Rounds {next_round}-38)"
+    else:
+        round_text = "End of Regular Season"
+        
     # Title
     ax.text(0.5, 0.97, "REMAINING STRENGTH OF SCHEDULE",
             ha='center', va='center', fontsize=26, color='#fbbf24',
             fontweight='bold', fontname='Impact')
-    ax.text(0.5, 0.94, "Average Opponent Win%  •  Remaining Games (Rounds 29-34)",
+    ax.text(0.5, 0.94, f"Average Opponent Win%  •  {round_text}",
             ha='center', va='center', fontsize=13, color='#94a3b8', style='italic')
     
     # Column X positions
@@ -160,9 +174,13 @@ def create_sos_table():
     ax.set_ylim(-0.02, 1.0)
     
     # Save
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'remaining_sos{round_suffix}.png'
+    
     plt.tight_layout()
-    plt.savefig('remaining_sos.png', dpi=200, bbox_inches='tight', facecolor='#0f172a')
-    print("Table saved to remaining_sos.png!")
+    plt.savefig(outfile, dpi=200, bbox_inches='tight', facecolor='#0f172a')
+    print(f"Table saved to {outfile}!")
 
 
 if __name__ == '__main__':

@@ -101,8 +101,12 @@ def run_oracle(target_round=None):
     # 3.1 Load KenPom Adjusted Net Ratings
     adj_net_lookup = {}
     sos_lookup = {}
-    if os.path.exists('adjusted_ratings.json'):
-        with open('adjusted_ratings.json', 'r') as f:
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    in_file = f'adjusted_ratings{round_suffix}.json'
+    if not os.path.exists(in_file):
+        in_file = 'adjusted_ratings.json'
+    if os.path.exists(in_file):
+        with open(in_file, 'r') as f:
             adj_data = json.load(f)
         for entry in adj_data:
             adj_net_lookup[entry['Team']] = entry['Adj_Net']

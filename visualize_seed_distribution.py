@@ -29,7 +29,12 @@ CODE_TO_SHORT = {
 def create_seed_heatmap():
     print("Generating Seed Distribution Heatmap...")
     
-    with open('monte_carlo_results.json', 'r') as f:
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    in_file = f'monte_carlo_results{round_suffix}.json'
+    if not os.path.exists(in_file):
+        in_file = 'monte_carlo_results.json'
+    with open(in_file, 'r') as f:
         mc_data = json.load(f)
     
     # Sort by average expected position (weighted from seed dist)
@@ -170,9 +175,13 @@ def create_seed_heatmap():
     ax.set_ylim(0, 1)
     ax.axis('off')
     
-    plt.savefig('seed_distribution.png', dpi=200, bbox_inches='tight',
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'seed_distribution{round_suffix}.png'
+
+    plt.savefig(outfile, dpi=200, bbox_inches='tight',
                 facecolor='#0f172a')
-    print("Chart saved to seed_distribution.png!")
+    print(f"Chart saved to {outfile}!")
 
 
 if __name__ == '__main__':

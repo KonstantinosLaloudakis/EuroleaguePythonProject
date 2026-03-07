@@ -364,10 +364,14 @@ def main():
         })
     
     # Save to JSON
-    with open('adjusted_ratings.json', 'w') as f:
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'adjusted_ratings{round_suffix}.json'
+    
+    with open(outfile, 'w') as f:
         json.dump(output_data, f, indent=4)
     
-    print(f"\nSaved adjusted ratings to adjusted_ratings.json")
+    print(f"\nSaved adjusted ratings to {outfile}")
     
     return output_data
 

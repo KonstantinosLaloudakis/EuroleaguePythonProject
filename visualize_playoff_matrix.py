@@ -6,7 +6,13 @@ from chart_utils import add_logo
 def create_playoff_matrix():
     print("Generating Playoff Matrix Visualization...")
     
-    with open('monte_carlo_results.json', 'r') as f:
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    in_file = f'monte_carlo_results{round_suffix}.json'
+    if not os.path.exists(in_file):
+        in_file = 'monte_carlo_results.json'
+        
+    with open(in_file, 'r') as f:
         data = json.load(f)
         
     # Data is sorted in JSON
@@ -112,9 +118,13 @@ def create_playoff_matrix():
     ax.set_ylim(-0.02, 1)
     
     # Save Output
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'playoff_matrix{round_suffix}.png'
+    
     plt.tight_layout()
-    plt.savefig('playoff_matrix.png', dpi=200, bbox_inches='tight', facecolor='#0f172a')
-    print("Poster saved to playoff_matrix.png!")
+    plt.savefig(outfile, dpi=200, bbox_inches='tight', facecolor='#0f172a')
+    print(f"Poster saved to {outfile}!")
 
 if __name__ == "__main__":
     create_playoff_matrix()

@@ -92,7 +92,9 @@ def create_wir_visualization():
              
     plt.tight_layout()
     plt.subplots_adjust(bottom=0.07)
-    outfile = 'wir_vs_pir.png'
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'wir_vs_pir{round_suffix}.png'
     plt.savefig(outfile, dpi=150, facecolor=fig.get_facecolor())
     print(f"Visualization saved to {outfile}")
 

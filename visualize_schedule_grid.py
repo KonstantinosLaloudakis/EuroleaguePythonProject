@@ -65,7 +65,12 @@ def create_schedule_grid():
     print("Generating Remaining Schedule Grid...")
     
     # Load adjusted ratings for team strength
-    with open('adjusted_ratings.json', 'r') as f:
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    in_file = f'adjusted_ratings{round_suffix}.json'
+    if not os.path.exists(in_file):
+        in_file = 'adjusted_ratings.json'
+    with open(in_file, 'r') as f:
         adj_data = json.load(f)
     
     adj_net_lookup = {t['Team']: t['Adj_Net'] for t in adj_data}
@@ -297,8 +302,12 @@ def create_schedule_grid():
     ax.set_ylim(-0.02, 1)
     
     plt.tight_layout()
-    plt.savefig('schedule_grid.png', dpi=200, bbox_inches='tight', facecolor='#0f172a')
-    print("Chart saved to schedule_grid.png!")
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'schedule_grid{round_suffix}.png'
+    
+    plt.savefig(outfile, dpi=200, bbox_inches='tight', facecolor='#0f172a')
+    print(f"Chart saved to {outfile}!")
 
 
 if __name__ == '__main__':

@@ -147,7 +147,12 @@ def create_round_preview():
     # Load adjusted ratings
     adj_ratings = {}
     try:
-        with open('adjusted_ratings.json', 'r') as f:
+        import os
+        round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+        in_file = f'adjusted_ratings{round_suffix}.json'
+        if not os.path.exists(in_file):
+            in_file = 'adjusted_ratings.json'
+        with open(in_file, 'r') as f:
             for t in json.load(f):
                 adj_ratings[t['Team']] = t
     except:
@@ -156,7 +161,12 @@ def create_round_preview():
     # Load Monte Carlo results for context
     mc_lookup = {}
     try:
-        with open('monte_carlo_results.json', 'r') as f:
+        import os
+        round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+        in_file = f'monte_carlo_results{round_suffix}.json'
+        if not os.path.exists(in_file):
+            in_file = 'monte_carlo_results.json'
+        with open(in_file, 'r') as f:
             for t in json.load(f):
                 mc_lookup[t['Team']] = t
     except:
@@ -326,8 +336,12 @@ def create_round_preview():
     ax.set_ylim(-0.02, 1)
     
     plt.tight_layout()
-    plt.savefig(f'round_preview.png', dpi=200, bbox_inches='tight', facecolor='#0f172a')
-    print(f"Card saved to round_preview.png!")
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'round_preview{round_suffix}.png'
+    
+    plt.savefig(outfile, dpi=200, bbox_inches='tight', facecolor='#0f172a')
+    print(f"Card saved to {outfile}!")
 
 
 if __name__ == '__main__':

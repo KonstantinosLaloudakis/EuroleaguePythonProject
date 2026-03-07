@@ -15,8 +15,12 @@ def calculate_tpm_2025():
         
     # Load opponent quality adjustments for more advanced TPM later if needed
     adj_net = {}
-    if os.path.exists('adjusted_ratings.json'):
-        with open('adjusted_ratings.json', 'r') as f:
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    in_file = f'adjusted_ratings{round_suffix}.json'
+    if not os.path.exists(in_file):
+        in_file = 'adjusted_ratings.json'
+    if os.path.exists(in_file):
+        with open(in_file, 'r') as f:
             for e in json.load(f):
                 adj_net[e['Team']] = e['Adj_Net']
                 
@@ -103,8 +107,10 @@ def calculate_tpm_2025():
          print(f"  {row['TPM_Rank']:<4} {row['player.name']:<25} ({row['player.team.code']}) | TPM/40: {row['TPM_40']:.1f}")
 
     # Save results
-    df.to_json('tpm_ratings.json', orient='records', indent=4)
-    print(f"\n  Saved full rankings to tpm_ratings.json")
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'tpm_ratings{round_suffix}.json'
+    df.to_json(outfile, orient='records', indent=4)
+    print(f"\n  Saved full rankings to {outfile}")
 
 
 if __name__ == '__main__':

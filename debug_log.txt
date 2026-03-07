@@ -1,0 +1,381 @@
+============================================================
+🏀 EUROLEAGUE ADJUSTED NET RATINGS ENGINE (KenPom Style)
+============================================================
+Loaded 296 played games.
+League Average PPG: 85.8
+Teams found: 20
+
+Running 20 convergence iterations...
+  Iteration 1: max change = 0.8874
+  Iteration 2: max change = 0.1000
+  Iteration 3: max change = 0.0138
+  Iteration 20: max change = 0.0010
+
+Schedule: 296 played, 84 remaining (out of 380 total)
+
+================================================================================
+Rank  Team   W-L       Adj Off  Adj Def  Adj Net  Raw Net  Rem SOS
+--------------------------------------------------------------------------------
+1     OLY    19-10        89.9     84.5     +5.4     +5.9   48.84% (4H/5A)
+2     ZAL    17-13        88.7     83.7     +5.1     +5.1   45.45% (5H/3A)
+3     PAM    20-10        91.1     86.2     +4.8     +5.1   59.48% (4H/4A)
+4     MAD    19-11        87.1     83.0     +4.1     +4.7   57.76% (4H/4A)
+5     MCO    16-14        89.9     86.3     +3.7     +3.8   47.90% (5H/3A)
+6     ULK    22-7         82.0     78.6     +3.4     +3.8   55.22% (3H/6A)
+7     HTA    17-11        86.4     83.8     +2.5     +3.1   55.86% (5H/5A)
+8     RED    17-13        87.2     85.2     +2.0     +1.7   53.85% (3H/5A)
+9     DUB    15-14        88.5     87.8     +0.7     +0.4   45.80% (5H/4A)
+10    PAN    16-14        85.3     84.7     +0.6     +1.1   56.03% (4H/4A)
+11    BAR    17-13        85.5     85.0     +0.5     +1.0   51.75% (5H/3A)
+12    MIL    15-15        85.4     86.4     -1.0     -0.8   54.17% (3H/5A)
+13    PRS    11-18        90.2     91.7     -1.5     -1.8   47.33% (5H/4A)
+14    TEL    14-15        90.1     91.8     -1.7     -2.2   42.75% (5H/4A)
+15    VIR    13-17        82.0     84.5     -2.5     -3.0   37.82% (5H/3A)
+16    MUN    13-17        80.1     82.9     -2.8     -3.2   48.25% (4H/4A)
+17    IST    9-21         80.4     84.0     -3.6     -3.8   59.32% (2H/6A)
+18    BAS    9-21         87.5     92.7     -5.3     -5.6   55.65% (4H/4A)
+19    PAR    9-20         80.5     87.5     -7.0     -7.8   37.96% (5H/4A)
+20    ASV    8-22         78.9     86.0     -7.1     -7.4   52.21% (4H/4A)
+
+Saved adjusted ratings to adjusted_ratings_R30.json
+Loaded 7055 player-games.
+
+--- MVP LADDER TOP 20 ---
+ MVP_Rank           PlayerName TeamCode  MVP_Score      GmSc  TeamWinPct  ClutchPoints  GP
+        1      VEZENKOV, SASHA      OLY  92.151964 16.111111    0.655172          26.0  27
+        2     BALDWIN IV, WADE      ULK  80.289611 11.507143    0.758621          33.0  28
+        3   FRANCISCO, SYLVAIN      ZAL  79.196260 13.590000    0.566667          34.0  30
+        4 HORTON TUCKER, TALEN      ULK  77.758400 10.692593    0.758621          31.0  27
+        5       NUNN, KENDRICK      PAN  75.068265 13.182609    0.533333          26.0  23
+        6    MILUTINOV, NIKOLA      OLY  73.595835 12.838462    0.655172          12.0  26
+        7  WRIGHT IV, MCKINLEY      DUB  73.416069 12.168966    0.517241          52.0  29
+        8       BRYANT, ELIJAH      HTA  73.354071 12.845833    0.607143          13.0  24
+        9          JAMES, MIKE      MCO  72.979709 13.040000    0.533333          22.0  30
+       10        DORSEY, TYLER      OLY  72.348051 10.713793    0.655172          27.0  29
+       11        NWORA, JORDAN      RED  70.731297 11.608000    0.566667          26.0  25
+       12          HIFI, NADIR      PRS  69.799842 12.328571    0.379310          43.0  28
+       13        PUNTER, KEVIN      BAR  69.766479 11.182759    0.566667          31.0  29
+       14        MONTERO, JEAN      PAM  69.536335 10.768000    0.666667          21.0  25
+       15           OTURU, DAN      HTA  69.481384 11.617857    0.607143          18.0  28
+       16        MONEKE, CHIMA      RED  67.166103 11.462963    0.566667          20.0  27
+       17   KABENGELE, MFIONDU      DUB  66.276775 12.122222    0.517241          15.0  27
+       18          LYLES, TREY      MAD  66.130379 10.130000    0.633333          20.0  30
+       19    CAMPAZZO, FACUNDO      MAD  65.015575  9.703333    0.633333          26.0  30
+       20   SHENGELIA, TORNIKE      BAR  64.227360 10.580769    0.566667          21.0  26
+
+Saved mvp_rankings_2025_R30.json
+Processed 238 players with >10 GP and >10 MPG
+
+==========================================================================================
+  WEIGHTED IMPACT RATING (WIR) vs PIR per 40 mins — Euroleague 2025-26
+==========================================================================================
+  Rank Player               Team    WIR/40   PIR/40    TS%  PIR Rank    Diff
+  ----------------------------------------------------------------------------
+  1    ROBINSON, JUSTIN     PRS       29.5     29.6  57.4%  #7           +6
+  2    MILUTINOV, NIKOLA    OLY       29.1     36.9  74.4%  #1           -1
+  3    MONTERO, JEAN        PAM       28.8     28.4  54.3%  #13         +10
+  4    KABENGELE, MFIONDU   DUB       28.7     32.4  64.7%  #2           -2
+  5    AVRAMOVIC, ALEKSA    DUB       28.6     24.8  57.4%  #31         +26
+  6    FRANCISCO, SYLVAIN   ZAL       28.1     29.4  62.7%  #8           +2
+  7    THOMPSON, DARIUS     PAM       27.7     23.7  61.7%  #38         +31
+  8    IZUNDU, EBUKA        RED       27.6     27.7  72.2%  #17          +9
+  9    HIFI, NADIR          PRS       27.5     31.0  56.0%  #4           -5
+  10   BUTLER, JARED        RED       27.3     24.0  59.4%  #35         +25
+  11   JONES, TYRIQUE       PAR       27.2     28.4  68.5%  #12          +1
+  12   HALL, DONTA          OLY       26.5     29.7  76.9%  #6           -6
+  13   SLOUKAS, KOSTAS      PAN       26.5     24.2  57.7%  #33         +20
+  14   BALDWIN IV, WADE     ULK       26.2     27.2  55.6%  #20          +6
+  15   LEAF, TJ             TEL       25.7     27.6  67.3%  #19          +4
+
+  --- BIGGEST RISERS (Overlooked by PIR, loved by WIR) ---
+  CLARK III, JIMMY     (TEL) | WIR Rank: #36 | PIR Rank: #150 | WIR/40: 22.7
+  PAJOLA, ALESSANDRO   (VIR) | WIR Rank: #59 | PIR Rank: #163 | WIR/40: 21.0
+  KONDIC, KOSTA        (DUB) | WIR Rank: #83 | PIR Rank: #170 | WIR/40: 20.0
+  MCKISSIC, SHAQUIELLE (OLY) | WIR Rank: #92 | PIR Rank: #175 | WIR/40: 19.6
+  JOVIC, STEFAN        (MUN) | WIR Rank: #51 | PIR Rank: #133 | WIR/40: 21.5
+
+  --- BIGGEST FALLERS (Overrated by PIR volume/inefficiency) ---
+  LEDAY, ZACH          (MIL) | WIR Rank: #126 | PIR Rank: #39 | WIR/40: 18.0
+  LUCIC, VLADIMIR      (MUN) | WIR Rank: #167 | PIR Rank: #82 | WIR/40: 16.0
+  OBST, ANDREAS        (MUN) | WIR Rank: #164 | PIR Rank: #84 | WIR/40: 16.3
+  MOTIEJUNAS, DONATAS  (RED) | WIR Rank: #120 | PIR Rank: #41 | WIR/40: 18.2
+  BOOKER, DEVIN        (MIL) | WIR Rank: #173 | PIR Rank: #96 | WIR/40: 15.7
+
+  Saved full rankings to wir_ratings_R30.json
+Loading pbp_2025.csv...
+
+=================================================================
+  ACTION WIN PROBABILITY ADDED (WPA) — Euroleague 2025-26
+=================================================================
+  Rank Player                    Team   Total WPA
+  -------------------------------------------------------
+  1    EDWARDS, CARSEN           VIR      1846.6%
+  2    LUWAWU-CABARROT, TIMOTHE  BAS      1719.0%
+  3    VEZENKOV, SASHA           OLY      1676.8%
+  4    HIFI, NADIR               PRS      1674.1%
+  5    WRIGHT IV, MCKINLEY       DUB      1638.1%
+  6    FRANCISCO, SYLVAIN        ZAL      1634.8%
+  7    NWORA, JORDAN             RED      1558.9%
+  8    BALDWIN IV, WADE          ULK      1545.0%
+  9    PUNTER, KEVIN             BAR      1524.9%
+  10   JAMES, MIKE               MCO      1508.7%
+  11   DORSEY, TYLER             OLY      1487.1%
+  12   NUNN, KENDRICK            PAN      1456.4%
+  13   HORTON TUCKER, TALEN      ULK      1446.3%
+  14   WATSON, GLYNN             ASV      1434.8%
+  15   OTURU, DAN                HTA      1365.7%
+  16   SORKIN, ROMAN             TEL      1361.2%
+  17   HEZONJA, MARIO            MAD      1351.7%
+  18   BLAKENEY, ANTONIO         HTA      1325.0%
+  19   OBST, ANDREAS             MUN      1302.9%
+  20   BRYANT, ELIJAH            HTA      1278.9%
+
+Saved Action WPA to wpa_ratings_R30.json
+
+=============================================
+  EUROLEAGUE ELO RATINGS (296 games)
+=============================================
+   1. ULK     1565 (  +65)  WP vs avg: 59%
+   2. PAM     1541 (  +41)  WP vs avg: 56%
+   3. OLY     1538 (  +38)  WP vs avg: 55%
+   4. MAD     1534 (  +34)  WP vs avg: 55%
+   5. HTA     1519 (  +19)  WP vs avg: 53%
+   6. ZAL     1515 (  +15)  WP vs avg: 52%
+   7. RED     1514 (  +14)  WP vs avg: 52%
+   8. BAR     1513 (  +13)  WP vs avg: 52%
+   9. DUB     1508 (   +8)  WP vs avg: 51%
+  10. MCO     1506 (   +6)  WP vs avg: 51%
+  11. PAN     1503 (   +3)  WP vs avg: 50%
+  12. TEL     1503 (   +3)  WP vs avg: 50%
+  13. MIL     1498 (   -2)  WP vs avg: 50%
+  14. MUN     1486 (  -14)  WP vs avg: 48%
+  15. VIR     1484 (  -16)  WP vs avg: 48%
+  16. PRS     1474 (  -26)  WP vs avg: 46%
+  17. PAR     1457 (  -43)  WP vs avg: 44%
+  18. BAS     1451 (  -49)  WP vs avg: 43%
+  19. IST     1448 (  -52)  WP vs avg: 43%
+  20. ASV     1443 (  -57)  WP vs avg: 42%
+
+Saved elo_ratings_R30.json
+--- 🏀 Euroleague Monte Carlo Playoff Matrix 🏀 ---
+Running 10000 simulations of the remaining season...
+Generating Remaining SOS Table...
+Table saved to remaining_sos_R30.png!
+Generating Playoff Matrix Visualization...
+Poster saved to playoff_matrix_R30.png!
+Generating Expected Wins Profile Matrix...
+Chart saved to wins_profile_matrix_R30.png!
+Generating Seed Distribution Heatmap...
+Chart saved to seed_distribution_R30.png!
+Generating Clutch Matchup Chart...
+Chart saved to clutch_matchups_R30.png!
+Generating Remaining Schedule Grid...
+Chart saved to schedule_grid_R30.png!
+Computing Power Rankings over the season...
+  Round ~4: 20 teams rated
+  Round ~6: 20 teams rated
+  Round ~8: 20 teams rated
+  Round ~10: 20 teams rated
+  Round ~12: 20 teams rated
+  Round ~14: 20 teams rated
+  Round ~16: 20 teams rated
+  Round ~18: 20 teams rated
+  Round ~20: 20 teams rated
+  Round ~22: 20 teams rated
+  Round ~24: 20 teams rated
+  Round ~26: 20 teams rated
+  Round ~28: 20 teams rated
+  Round ~30: 20 teams rated
+Chart saved to power_trajectory_R30.png!
+Generating Round Preview Card...
+Next round: 31 with 10 games
+Card saved to round_preview_R30.png!
+Saved mvp_ladder_2025.png
+Saved tpm_vs_wir_quadrants_R30.png
+Visualization saved to wir_vs_pir_R30.png
+Saved wpa_leaders_R30.png
+
+[1m[93m============================================================[0m
+[1m[93m  🏀 EUROLEAGUE ANALYTICS - FULL REFRESH PIPELINE[0m
+[1m[93m============================================================[0m
+[96m📌 Active Round Suffix for Outputs: _R30[0m
+
+[93m⏭️  Skipping data fetch[0m
+
+[1m🧮 PHASE 2: Running Compute Engines[0m
+
+[96m============================================================[0m
+[1m⏳ Computing KenPom Adjusted Ratings + SOS...[0m
+[96m============================================================[0m
+[92m✅ Computing KenPom Adjusted Ratings + SOS completed in 0.2s[0m
+
+[96m============================================================[0m
+[1m⏳ Computing MVP Ladder Scores...[0m
+[96m============================================================[0m
+[92m✅ Computing MVP Ladder Scores completed in 0.4s[0m
+
+[96m============================================================[0m
+[1m⏳ Computing True Plus-Minus (TPM)...[0m
+[96m============================================================[0m
+[91m❌ Computing True Plus-Minus (TPM) FAILED (exit code 1)[0m
+
+[96m============================================================[0m
+[1m⏳ Computing Weighted Impact Ratings (WIR)...[0m
+[96m============================================================[0m
+[92m✅ Computing Weighted Impact Ratings (WIR) completed in 0.6s[0m
+
+[96m============================================================[0m
+[1m⏳ Computing Win Probability Added (WPA)...[0m
+[96m============================================================[0m
+[92m✅ Computing Win Probability Added (WPA) completed in 4.5s[0m
+
+[96m============================================================[0m
+[1m⏳ Computing Elo Ratings...[0m
+[96m============================================================[0m
+[92m✅ Computing Elo Ratings completed in 0.1s[0m
+
+[96m============================================================[0m
+[1m⏳ Running Monte Carlo Simulation (10K iterations)...[0m
+[96m============================================================[0m
+[91m❌ Running Monte Carlo Simulation (10K iterations) FAILED (exit code 1)[0m
+
+[1m🎨 PHASE 3: Generating Visualizations[0m
+
+[96m============================================================[0m
+[1m⏳ Generating Remaining SOS Table...[0m
+[96m============================================================[0m
+[92m✅ Generating Remaining SOS Table completed in 1.1s[0m
+
+[96m============================================================[0m
+[1m⏳ Generating Playoff Matrix...[0m
+[96m============================================================[0m
+[92m✅ Generating Playoff Matrix completed in 1.2s[0m
+
+[96m============================================================[0m
+[1m⏳ Generating Wins Profile Matrix...[0m
+[96m============================================================[0m
+[92m✅ Generating Wins Profile Matrix completed in 1.3s[0m
+
+[96m============================================================[0m
+[1m⏳ Generating Seed Distribution...[0m
+[96m============================================================[0m
+[92m✅ Generating Seed Distribution completed in 1.1s[0m
+
+[96m============================================================[0m
+[1m⏳ Generating Clutch Matchups...[0m
+[96m============================================================[0m
+[92m✅ Generating Clutch Matchups completed in 1.3s[0m
+
+[96m============================================================[0m
+[1m⏳ Generating Schedule Grid...[0m
+[96m============================================================[0m
+[92m✅ Generating Schedule Grid completed in 1.6s[0m
+
+[96m============================================================[0m
+[1m⏳ Generating Power Trajectory...[0m
+[96m============================================================[0m
+[92m✅ Generating Power Trajectory completed in 0.9s[0m
+
+[96m============================================================[0m
+[1m⏳ Generating Round Preview Card...[0m
+[96m============================================================[0m
+[92m✅ Generating Round Preview Card completed in 1.1s[0m
+
+[96m============================================================[0m
+[1m⏳ Generating MVP Ladder...[0m
+[96m============================================================[0m
+[92m✅ Generating MVP Ladder completed in 1.6s[0m
+
+[96m============================================================[0m
+[1m⏳ Generating TPM vs WIR Quadrants...[0m
+[96m============================================================[0m
+[92m✅ Generating TPM vs WIR Quadrants completed in 6.4s[0m
+
+[96m============================================================[0m
+[1m⏳ Generating WIR vs PIR...[0m
+[96m============================================================[0m
+[92m✅ Generating WIR vs PIR completed in 2.6s[0m
+
+[96m============================================================[0m
+[1m⏳ Generating WPA Leaders...[0m
+[96m============================================================[0m
+[92m✅ Generating WPA Leaders completed in 1.9s[0m
+
+[93m⏭️  Skipping animations (use --with-animations to include)[0m
+
+[1m============================================================[0m
+[1m📊 REFRESH COMPLETE — 28.6s total[0m
+============================================================
+  [92m✅[0m Adjusted Ratings
+  [92m✅[0m MVP Scores
+  [91m❌[0m TPM Ratings
+  [92m✅[0m WIR Ratings
+  [92m✅[0m WPA Ratings
+  [92m✅[0m Elo Ratings
+  [91m❌[0m Monte Carlo Sim
+  [92m✅[0m Remaining SOS Table
+  [92m✅[0m Playoff Matrix
+  [92m✅[0m Wins Profile Matrix
+  [92m✅[0m Seed Distribution
+  [92m✅[0m Clutch Matchups
+  [92m✅[0m Schedule Grid
+  [92m✅[0m Power Trajectory
+  [92m✅[0m Round Preview Card
+  [92m✅[0m MVP Ladder
+  [92m✅[0m TPM vs WIR Quadrants
+  [92m✅[0m WIR vs PIR
+  [92m✅[0m WPA Leaders
+
+  [92m17 passed[0m, [91m2 failed[0m
+
+C:\Users\klalo\PycharmProjects\pythonProject\calculate_mvp_scores.py:96: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  merged['ClutchPoints'].fillna(0, inplace=True)
+Traceback (most recent call last):
+  File "C:\Users\klalo\PycharmProjects\pythonProject\calculate_tpm.py", line 114, in <module>
+    calculate_tpm_2025()
+  File "C:\Users\klalo\PycharmProjects\pythonProject\calculate_tpm.py", line 18, in calculate_tpm_2025
+    if os.path.exists('adjusted_ratings.json'):
+       ^^
+UnboundLocalError: cannot access local variable 'os' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\klalo\PycharmProjects\pythonProject\simulate_monte_carlo.py", line 284, in <module>
+    run_monte_carlo(10000)
+  File "C:\Users\klalo\PycharmProjects\pythonProject\simulate_monte_carlo.py", line 12, in run_monte_carlo
+    if not os.path.exists('mvp_game_results.json'):
+           ^^
+UnboundLocalError: cannot access local variable 'os' where it is not associated with a value
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+findfont: Font family 'Montserrat' not found.
+Looks like you are using a tranform that doesn't support FancyArrowPatch, using ax.annotate instead. The arrows might strike through texts. Increasing shrinkA in arrowprops might help.
+Looks like you are using a tranform that doesn't support FancyArrowPatch, using ax.annotate instead. The arrows might strike through texts. Increasing shrinkA in arrowprops might help.
+C:\Users\klalo\PycharmProjects\pythonProject\visualize_wpa.py:18: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `y` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.barplot(

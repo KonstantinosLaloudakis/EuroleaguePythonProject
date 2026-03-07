@@ -200,8 +200,12 @@ def create_trajectory_chart():
         spine.set_color('#334155')
     
     plt.tight_layout(rect=[0, 0, 0.92, 0.90])
-    plt.savefig('power_trajectory.png', dpi=200, bbox_inches='tight', facecolor='#0f172a')
-    print("Chart saved to power_trajectory.png!")
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'power_trajectory{round_suffix}.png'
+    
+    plt.savefig(outfile, dpi=200, bbox_inches='tight', facecolor='#0f172a')
+    print(f"Chart saved to {outfile}!")
 
 
 if __name__ == '__main__':

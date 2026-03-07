@@ -63,8 +63,12 @@ def run_monte_carlo(num_simulations=10000):
 
     # 1b. Load KenPom Adjusted Ratings
     adj_net_lookup = {}
-    if os.path.exists('adjusted_ratings.json'):
-        with open('adjusted_ratings.json', 'r') as f:
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    in_file = f'adjusted_ratings{round_suffix}.json'
+    if not os.path.exists(in_file):
+        in_file = 'adjusted_ratings.json'
+    if os.path.exists(in_file):
+        with open(in_file, 'r') as f:
             adj_data = json.load(f)
         for entry in adj_data:
             adj_net_lookup[entry['Team']] = entry['Adj_Net']
@@ -271,10 +275,13 @@ def run_monte_carlo(num_simulations=10000):
         final_json.append({'Team': t, **data})
         print(f"{t}: Avg Wins: {data['Avg_Wins']} | Top 4: {data['Top4_Pct']:>5.1f}% | Top 6: {data['Top6_Pct']:>5.1f}% | Top 10: {data['Top10_Pct']:>5.1f}%")
 
-    with open('monte_carlo_results.json', 'w') as f:
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'monte_carlo_results{round_suffix}.json'
+
+    with open(outfile, 'w') as f:
         json.dump(final_json, f, indent=4)
         
-    print("\nSaved fully aggregated matrix to monte_carlo_results.json!")
+    print(f"\nSaved fully aggregated matrix to {outfile}!")
 
 if __name__ == "__main__":
     run_monte_carlo(10000)

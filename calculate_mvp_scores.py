@@ -129,8 +129,11 @@ def calculate_mvp_scores():
     print(top_20.to_string(index=False))
     
     # Save
-    merged[final_cols].to_json('mvp_rankings_2025.json', orient='records', indent=4)
-    print("\nSaved mvp_rankings_2025.json")
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'mvp_rankings_2025{round_suffix}.json'
+    merged[final_cols].to_json(outfile, orient='records', indent=4)
+    print(f"\nSaved {outfile}")
 
 if __name__ == "__main__":
     calculate_mvp_scores()

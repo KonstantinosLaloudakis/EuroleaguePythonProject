@@ -35,8 +35,12 @@ def build_features():
     # Load static adjusted ratings
     adj_net = {}
     sos = {}
-    if os.path.exists('adjusted_ratings.json'):
-        with open('adjusted_ratings.json', 'r') as f:
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    in_file = f'adjusted_ratings{round_suffix}.json'
+    if not os.path.exists(in_file):
+        in_file = 'adjusted_ratings.json'
+    if os.path.exists(in_file):
+        with open(in_file, 'r') as f:
             for e in json.load(f):
                 adj_net[e['Team']] = e['Adj_Net']
                 sos[e['Team']] = e.get('SOS_WinPct', 0.5)

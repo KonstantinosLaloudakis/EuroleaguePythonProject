@@ -87,9 +87,12 @@ def compute_elo_ratings():
             'Delta': round(rating - STARTING_ELO, 1)
         })
     
-    with open('elo_ratings.json', 'w') as f:
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'elo_ratings{round_suffix}.json'
+    
+    with open(outfile, 'w') as f:
         json.dump(output, f, indent=4)
-    print(f"\nSaved elo_ratings.json")
+    print(f"\nSaved {outfile}")
     
     return elo
 

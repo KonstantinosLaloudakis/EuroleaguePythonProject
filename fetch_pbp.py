@@ -2,9 +2,12 @@ import pandas as pd
 from euroleague_api import play_by_play_data
 import os
 
+import sys
+
 def fetch_and_cache_pbp():
     file_path = 'pbp_2025.csv'
-    if os.path.exists(file_path):
+    force_fetch = '--force' in sys.argv
+    if os.path.exists(file_path) and not force_fetch:
         print(f"Loading cached Play-By-Play data from {file_path}")
         df = pd.read_csv(file_path)
     else:

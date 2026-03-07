@@ -92,8 +92,11 @@ def create_tpm_wir_chart():
     ax.grid(True, alpha=0.15, color='#30363d')
     
     plt.tight_layout()
-    plt.savefig('tpm_vs_wir_quadrants.png', dpi=150, facecolor=fig.get_facecolor(), bbox_inches='tight')
-    print("Saved tpm_vs_wir_quadrants.png")
+    import os
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    outfile = f'tpm_vs_wir_quadrants{round_suffix}.png'
+    plt.savefig(outfile, dpi=150, facecolor=fig.get_facecolor(), bbox_inches='tight')
+    print(f"Saved {outfile}")
 
 if __name__ == '__main__':
     create_tpm_wir_chart()
