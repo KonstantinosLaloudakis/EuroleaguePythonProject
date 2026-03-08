@@ -406,6 +406,81 @@ function renderChart(data, taName, tbName) {
             runsList.innerHTML = '<div style="color:var(--text-muted); font-size: 0.9rem; padding: 1rem 0;">No major runs (8+ pts) detected.</div>';
         }
 
+        // 4. Four Factors Radar
+        if (data.adv.f && data.adv.f.length > 0) {
+            const get_team_factors = (teamCode) => {
+                const fa = data.adv.f.find(f => f.t === teamCode) || { eFG: 0, TOV: 0, ORB: 0, FTR: 0 };
+                return [fa.eFG, fa.TOV, fa.ORB, fa.FTR, fa.eFG];
+            };
+
+            const rCategories = ['eFG%', 'TOV% (Lower=Better)', 'ORB%', 'FT Rate', 'eFG%'];
+
+            const rTraces = [
+                {
+                    type: 'scatterpolar',
+                    r: get_team_factors(ta),
+                    theta: rCategories,
+                    fill: 'toself',
+                    name: taName,
+                    line: { color: '#ef4444' },
+                    fillcolor: 'rgba(239, 68, 68, 0.2)'
+                },
+                {
+                    type: 'scatterpolar',
+                    r: get_team_factors(tb),
+                    theta: rCategories,
+                    fill: 'toself',
+                    name: tbName,
+                    line: { color: '#3b82f6' },
+                    fillcolor: 'rgba(59, 130, 246, 0.2)'
+                }
+            ];
+
+            const rLayout = {
+                polar: {
+                    radialaxis: { visible: true, range: [0, 80], color: '#4b5563', gridcolor: '#334155' },
+                    angularaxis: { color: '#9ca3af', gridcolor: '#334155' },
+                    bgcolor: 'transparent'
+                },
+                showlegend: true,
+                legend: { orientation: 'h', y: 1.1, x: 0.5, xanchor: 'center', font: { color: '#9ca3af' } },
+                paper_bgcolor: 'transparent',
+                plot_bgcolor: 'transparent',
+                margin: { l: 40, r: 40, t: 30, b: 30 }
+            };
+
+            Plotly.newPlot('radar-chart', rTraces, rLayout, { displayModeBar: false });
+        }
+
+        // 5. Top Lineups
+        const lineupsList = document.getElementById('lineups-list');
+        lineupsList.innerHTML = '';
+        if (data.adv.l && data.adv.l.length > 0) {
+            data.adv.l.forEach(lu => {
+                const isTeamA = lu.t === ta;
+                const teamName = isTeamA ? taName : tbName;
+                const cls = isTeamA ? 'team-a' : 'team-b';
+
+                const item = document.createElement('div');
+                item.className = `lineup-item ${cls}`;
+
+                const scoreClass = lu.n > 0 ? 'positive' : (lu.n < 0 ? 'negative' : '');
+                const scorePrefix = lu.n > 0 ? '+' : '';
+
+                item.innerHTML = `
+                    <div class="lineup-meta">
+                        <strong>${teamName}</strong>
+                        <div class="lineup-score ${scoreClass}">${scorePrefix}${lu.n}</div>
+                    </div>
+                    <div class="lineup-names">${lu.l}</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 5px;">Played: ${lu.d} mins</div>
+                `;
+                lineupsList.appendChild(item);
+            });
+        } else {
+            lineupsList.innerHTML = '<div style="color:var(--text-muted); font-size: 0.9rem; padding: 1rem 0;">No significant 5-man lineups tracked for this game.</div>';
+        }
+
     } else {
         advStatsSection.classList.add('hidden');
     }

@@ -213,6 +213,106 @@ def extract_advanced_stats(game_df, team_a, team_b):
     except:
         stats['r'] = []
         
+    # Four Factors
+    try:
+        ff_stats = {
+            team_a: {'2FGM': 0, '2FGA': 0, '3FGM': 0, '3FGA': 0, 'FTA': 0, 'TO': 0, 'ORB': 0, 'DRB': 0},
+            team_b: {'2FGM': 0, '2FGA': 0, '3FGM': 0, '3FGA': 0, 'FTA': 0, 'TO': 0, 'ORB': 0, 'DRB': 0}
+        }
+        for _, row in game_df.iterrows():
+            team, ptype = row.get('CODETEAM'), row.get('PLAYTYPE')
+            if team not in ff_stats: continue
+            if ptype == '2FGM': ff_stats[team]['2FGM'] += 1; ff_stats[team]['2FGA'] += 1
+            elif ptype == '2FGA': ff_stats[team]['2FGA'] += 1
+            elif ptype == '3FGM': ff_stats[team]['3FGM'] += 1; ff_stats[team]['3FGA'] += 1
+            elif ptype == '3FGA': ff_stats[team]['3FGA'] += 1
+            elif ptype == 'FTA' or ptype == 'FTM': ff_stats[team]['FTA'] += 1
+            elif ptype == 'TO': ff_stats[team]['TO'] += 1
+            elif ptype == 'O': ff_stats[team]['ORB'] += 1
+            elif ptype == 'D': ff_stats[team]['DRB'] += 1
+            
+        factors = []
+        for team in [team_a, team_b]:
+            s = ff_stats[team]
+            opp_s = ff_stats[team_b if team == team_a else team_a]
+            FGA = s['2FGA'] + s['3FGA']
+            efg = round(((s['2FGM'] + 1.5 * s['3FGM']) / FGA) * 100, 1) if FGA > 0 else 0
+            possessions = FGA + 0.44 * s['FTA'] + s['TO']
+            tov = round((s['TO'] / possessions) * 100, 1) if possessions > 0 else 0
+            orb_opp = s['ORB'] + opp_s['DRB']
+            orb = round((s['ORB'] / orb_opp) * 100, 1) if orb_opp > 0 else 0
+            ftr = round((s['FTA'] / FGA) * 100, 1) if FGA > 0 else 0
+            factors.append({'t': team, 'eFG': efg, 'TOV': tov, 'ORB': orb, 'FTR': ftr})
+        stats['f'] = factors
+    except:
+        stats['f'] = []
+
+    # Top Lineups
+    try:
+        def get_cont_time(period, clock):
+            if pd.isna(clock) or pd.isna(period): return 0.0
+            try:
+                m, s = map(int, str(clock).split(':'))
+                minutes_remaining = m + s/60.0
+                period = int(period)
+                if period <= 4: return (period - 1) * 10.0 + (10.0 - minutes_remaining)
+                else: return 40.0 + (period - 5) * 5.0 + (5.0 - minutes_remaining)
+            except: return 0.0
+
+        game_df['GameTimeMinute'] = game_df.apply(lambda row: get_cont_time(row['PERIOD'], row['MARKERTIME']), axis=1)
+        active_lineups = {team_a: set(), team_b: set()}
+        curr_a = {'l': frozenset(), 'st': 0.0, 'pf': 0, 'pa': 0}
+        curr_b = {'l': frozenset(), 'st': 0.0, 'pf': 0, 'pa': 0}
+        stints = []
+        pra, prb = 0, 0
+        
+        for i in range(len(game_df)):
+            row = game_df.iloc[i]
+            time, ptype, team = row['GameTimeMinute'], row['PLAYTYPE'], row['CODETEAM']
+            pa, pb = row.get('POINTS_A'), row.get('POINTS_B')
+            try: pa, pb = int(float(pa)), int(float(pb))
+            except: pa, pb = pra, prb
+            
+            p = str(row['PLAYER']) if pd.notna(row['PLAYER']) else None
+            if p and ptype in ['IN', 'OUT']:
+                clean = p.split(',')[0].title() if ',' in p else p
+                if team == team_a:
+                    stints.append({'t': team_a, 'l': frozenset(active_lineups[team_a]), 'd': time - curr_a['st'], 'pf': pa - curr_a['pf'], 'pa': pb - curr_a['pa']})
+                    if ptype == 'IN': active_lineups[team_a].add(clean)
+                    elif clean in active_lineups[team_a]: active_lineups[team_a].remove(clean)
+                    curr_a = {'l': frozenset(active_lineups[team_a]), 'st': time, 'pf': pa, 'pa': pb}
+                elif team == team_b:
+                    stints.append({'t': team_b, 'l': frozenset(active_lineups[team_b]), 'd': time - curr_b['st'], 'pf': pb - curr_b['pf'], 'pa': pa - curr_b['pa']})
+                    if ptype == 'IN': active_lineups[team_b].add(clean)
+                    elif clean in active_lineups[team_b]: active_lineups[team_b].remove(clean)
+                    curr_b = {'l': frozenset(active_lineups[team_b]), 'st': time, 'pf': pb, 'pa': pa}
+            pra, prb = pa, pb
+
+        final_time = game_df['GameTimeMinute'].iloc[-1] if not game_df.empty else 40.0
+        stints.append({'t': team_a, 'l': curr_a['l'], 'd': final_time - curr_a['st'], 'pf': pra - curr_a['pf'], 'pa': prb - curr_a['pa']})
+        stints.append({'t': team_b, 'l': curr_b['l'], 'd': final_time - curr_b['st'], 'pf': prb - curr_b['pf'], 'pa': pra - curr_b['pa']})
+        
+        sdf = pd.DataFrame(stints)
+        sdf = sdf[sdf['l'].apply(len) == 5].copy()
+        if not sdf.empty:
+            sdf['l_str'] = sdf['l'].apply(lambda x: ' + '.join(sorted(list(x))))
+            agg = sdf.groupby(['t', 'l_str']).agg({'d': 'sum', 'pf': 'sum', 'pa': 'sum'}).reset_index()
+            agg['net'] = agg['pf'] - agg['pa']
+            agg = agg[agg['d'] >= 1.5]
+            
+            top_lu = []
+            for t in [team_a, team_b]:
+                t_agg = agg[agg['t'] == t].sort_values('net', ascending=False)
+                for _, r in t_agg.head(2).iterrows():
+                    top_lu.append({'t': r['t'], 'l': r['l_str'], 'd': round(r['d'], 1), 'n': int(r['net'])})
+                bot = t_agg.tail(1)
+                if not bot.empty and bot.iloc[0]['net'] < 0:
+                    top_lu.append({'t': bot.iloc[0]['t'], 'l': bot.iloc[0]['l_str'], 'd': round(bot.iloc[0]['d'], 1), 'n': int(bot.iloc[0]['net'])})
+            stats['l'] = top_lu
+        else: stats['l'] = []
+    except:
+        stats['l'] = []
+        
     return stats
 
 

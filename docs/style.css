@@ -340,6 +340,57 @@ select:disabled {
     color: var(--text-muted);
 }
 
+.lineups-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.lineup-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    border-left: 4px solid var(--text-muted);
+}
+
+.lineup-item.team-a {
+    border-left-color: var(--accent-red);
+}
+
+.lineup-item.team-b {
+    border-left-color: var(--accent-blue);
+}
+
+.lineup-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.4rem;
+}
+
+.lineup-names {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.lineup-score {
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.lineup-score.positive {
+    color: var(--accent-green);
+}
+
+.lineup-score.negative {
+    color: var(--accent-red);
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
