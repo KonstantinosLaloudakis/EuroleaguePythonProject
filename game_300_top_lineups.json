@@ -1,0 +1,142 @@
+[
+    {
+        "Team": "OLY",
+        "Lineup": [
+            "Dorsey",
+            "Fournier",
+            "Milutinov",
+            "Ntilikina",
+            "Peters"
+        ],
+        "MinutesPlayed": 2.1,
+        "PtsFor": 2.0,
+        "PtsAgainst": 7.0,
+        "NetMargin": -5.0
+    },
+    {
+        "Team": "OLY",
+        "Lineup": [
+            "Fournier",
+            "Jones",
+            "Joseph",
+            "Papanikolaou",
+            "Ward"
+        ],
+        "MinutesPlayed": 3.1,
+        "PtsFor": 4.0,
+        "PtsAgainst": 9.0,
+        "NetMargin": -5.0
+    },
+    {
+        "Team": "PAN",
+        "Lineup": [
+            "Grant",
+            "Hernangomez",
+            "Mitoglou",
+            "Nunn",
+            "Osman"
+        ],
+        "MinutesPlayed": 5.2,
+        "PtsFor": 10.0,
+        "PtsAgainst": 15.0,
+        "NetMargin": -5.0
+    },
+    {
+        "Team": "OLY",
+        "Lineup": [
+            "Fournier",
+            "Joseph",
+            "Milutinov",
+            "Papanikolaou",
+            "Peters"
+        ],
+        "MinutesPlayed": 2.6,
+        "PtsFor": 5.0,
+        "PtsAgainst": 8.0,
+        "NetMargin": -3.0
+    },
+    {
+        "Team": "PAN",
+        "Lineup": [
+            "Hayes-Davis",
+            "Mitoglou",
+            "Rogkavopoulos",
+            "Shorts",
+            "Sloukas"
+        ],
+        "MinutesPlayed": 3.8,
+        "PtsFor": 2.0,
+        "PtsAgainst": 5.0,
+        "NetMargin": -3.0
+    },
+    {
+        "Team": "OLY",
+        "Lineup": [
+            "Dorsey",
+            "Fournier",
+            "Milutinov",
+            "Ntilikina",
+            "Ward"
+        ],
+        "MinutesPlayed": 2.6,
+        "PtsFor": 7.0,
+        "PtsAgainst": 5.0,
+        "NetMargin": 2.0
+    },
+    {
+        "Team": "OLY",
+        "Lineup": [
+            "Fournier",
+            "Milutinov",
+            "Ntilikina",
+            "Papanikolaou",
+            "Peters"
+        ],
+        "MinutesPlayed": 2.1,
+        "PtsFor": 7.0,
+        "PtsAgainst": 4.0,
+        "NetMargin": 3.0
+    },
+    {
+        "Team": "OLY",
+        "Lineup": [
+            "Dorsey",
+            "Jones",
+            "Joseph",
+            "Mckissic",
+            "Ward"
+        ],
+        "MinutesPlayed": 2.4,
+        "PtsFor": 11.0,
+        "PtsAgainst": 8.0,
+        "NetMargin": 3.0
+    },
+    {
+        "Team": "OLY",
+        "Lineup": [
+            "Fournier",
+            "Jones",
+            "Joseph",
+            "Mckissic",
+            "Ward"
+        ],
+        "MinutesPlayed": 7.5,
+        "PtsFor": 13.0,
+        "PtsAgainst": 7.0,
+        "NetMargin": 6.0
+    },
+    {
+        "Team": "PAN",
+        "Lineup": [
+            "Grant",
+            "Hernangomez",
+            "Holmes",
+            "Nunn",
+            "Osman"
+        ],
+        "MinutesPlayed": 10.9,
+        "PtsFor": 29.0,
+        "PtsAgainst": 23.0,
+        "NetMargin": 6.0
+    }
+]
