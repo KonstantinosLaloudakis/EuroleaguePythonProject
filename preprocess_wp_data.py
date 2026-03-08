@@ -121,6 +121,101 @@ def process_game(game_df, teams):
     return timeline, team_a, team_b, last_a, last_b
 
 
+def extract_advanced_stats(game_df, team_a, team_b):
+    stats = {}
+    
+    # Calculate Quarter Margins
+    try:
+        q_scores = game_df.groupby('PERIOD')[['POINTS_A', 'POINTS_B']].max().reset_index()
+        q_scores['Q_PTS_A'] = q_scores['POINTS_A'].diff().fillna(q_scores['POINTS_A'])
+        q_scores['Q_PTS_B'] = q_scores['POINTS_B'].diff().fillna(q_scores['POINTS_B'])
+        
+        q_margins = []
+        for _, row in q_scores.iterrows():
+            q_margins.append({
+                'p': int(row['PERIOD']),
+                'a': int(row['Q_PTS_A']),
+                'b': int(row['Q_PTS_B'])
+            })
+        stats['q'] = q_margins
+    except:
+        stats['q'] = []
+        
+    # Player Impact
+    try:
+        player_events = game_df[pd.notna(game_df['PLAYER'])].copy()
+        impacts = []
+        if not player_events.empty:
+            for player, pdf in player_events.groupby('PLAYER'):
+                pts = (len(pdf[pdf['PLAYTYPE'] == '2FGM']) * 2 + 
+                       len(pdf[pdf['PLAYTYPE'] == '3FGM']) * 3 + 
+                       len(pdf[pdf['PLAYTYPE'] == 'FTM']) * 1)
+                
+                hustle = (len(pdf[pdf['PLAYTYPE'] == 'D']) + 
+                          len(pdf[pdf['PLAYTYPE'] == 'O']) + 
+                          len(pdf[pdf['PLAYTYPE'] == 'AS']) + 
+                          len(pdf[pdf['PLAYTYPE'] == 'ST']))
+                          
+                if pts > 0 or hustle > 0:
+                    team = pdf['CODETEAM'].iloc[0]
+                    name_parts = str(player).split(',')
+                    clean_name = name_parts[0].title() if len(name_parts) > 0 else str(player)
+                    impacts.append({'n': clean_name, 'p': pts, 'h': hustle, 't': team})
+        stats['i'] = impacts
+    except:
+        stats['i'] = []
+        
+    # Scoring Runs
+    try:
+        def parse_marker(m_str, p):
+            if pd.isna(m_str): return None
+            try:
+                mins, secs = map(int, str(m_str).split(':'))
+                ps_left = mins * 60 + secs
+                return ps_left + (4 - p) * 600 if p <= 4 else ps_left
+            except: return None
+            
+        runs = []
+        curr_team = None
+        curr_pts = 0
+        run_start = None
+        last_a, last_b = 0, 0
+        
+        for _, row in game_df.sort_values('NUMBEROFPLAY').iterrows():
+            pa, pb = row.get('POINTS_A'), row.get('POINTS_B')
+            if pd.isna(pa) or pd.isna(pb): continue
+            try: pa, pb = int(float(pa)), int(float(pb))
+            except: continue
+            
+            if pa == last_a and pb == last_b: continue
+            period = int(row['PERIOD']) if pd.notna(row['PERIOD']) else 1
+            sf = parse_marker(row.get('MARKERTIME'), period)
+            if sf is None: continue
+            elapsed = 2400 - sf
+            
+            scoring_team = team_a if pa > last_a else team_b
+            pts = (pa - last_a) if pa > last_a else (pb - last_b)
+            
+            if curr_team == scoring_team:
+                curr_pts += pts
+            else:
+                if curr_pts >= 8:
+                    runs.append({'t': curr_team, 'p': curr_pts, 'st': run_start, 'en': elapsed})
+                curr_team = scoring_team
+                curr_pts = pts
+                run_start = elapsed
+            last_a, last_b = pa, pb
+            
+        if curr_pts >= 8:
+            runs.append({'t': curr_team, 'p': curr_pts, 'st': run_start, 'en': 2400})
+            
+        stats['r'] = runs
+    except:
+        stats['r'] = []
+        
+    return stats
+
+
 def process_season(year):
     """Process one season's PBP data."""
     csv_path = f'data_cache/pbp_{year}.csv'
@@ -145,6 +240,7 @@ def process_season(year):
 
         try:
             timeline, team_a, team_b, score_a, score_b = process_game(game, teams)
+            adv = extract_advanced_stats(game, team_a, team_b)
             
             # Extract Round
             round_val = game['Round'].dropna().iloc[0] if not game['Round'].dropna().empty else "Unknown"
@@ -163,7 +259,7 @@ def process_season(year):
         # Save game timeline
         game_file = os.path.join(out_dir, f'{gc}.json')
         with open(game_file, 'w') as f:
-            json.dump({'ta': team_a, 'tb': team_b, 'timeline': timeline}, f,
+            json.dump({'ta': team_a, 'tb': team_b, 'timeline': timeline, 'adv': adv}, f,
                      separators=(',', ':'))
 
         games_index.append({

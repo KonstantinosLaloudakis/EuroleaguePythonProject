@@ -301,7 +301,114 @@ function renderChart(data, taName, tbName) {
 
     gameSummary.classList.remove('hidden');
 
+    // ── Advanced Stats Panel ─────────────────────────────
+    const advStatsSection = document.getElementById('adv-stats');
+    if (data.adv && Object.keys(data.adv).length > 0) {
+        advStatsSection.classList.remove('hidden');
 
+        // 1. Quarter Margins (Bar Chart)
+        if (data.adv.q && data.adv.q.length > 0) {
+            const periods = data.adv.q.map(q => q.p <= 4 ? `Q${q.p}` : `OT${q.p - 4}`);
+            const margins = data.adv.q.map(q => q.a - q.b);
+            const colors = margins.map(m => m >= 0 ? '#ef4444' : '#3b82f6');
+
+            const qTrace = {
+                x: periods,
+                y: margins,
+                type: 'bar',
+                marker: { color: colors },
+                text: margins.map(m => m > 0 ? `+${m}` : m),
+                textposition: 'auto',
+                hoverinfo: 'none'
+            };
+
+            const qLayout = {
+                margin: { l: 30, r: 10, t: 10, b: 30 },
+                paper_bgcolor: 'transparent',
+                plot_bgcolor: 'transparent',
+                font: { color: '#9ca3af' },
+                xaxis: { fixedrange: true },
+                yaxis: { fixedrange: true, zerolinecolor: '#4b5563' }
+            };
+            Plotly.newPlot('q-margin-chart', [qTrace], qLayout, { displayModeBar: false });
+        }
+
+        // 2. Player Impact (Scatter Plot)
+        if (data.adv.i && data.adv.i.length > 0) {
+            const teamA_players = data.adv.i.filter(p => p.t === ta);
+            const teamB_players = data.adv.i.filter(p => p.t === tb);
+
+            const impactTraces = [
+                {
+                    x: teamA_players.map(p => p.p),
+                    y: teamA_players.map(p => p.h),
+                    mode: 'markers+text',
+                    type: 'scatter',
+                    name: taName,
+                    text: teamA_players.map(p => p.n),
+                    textposition: 'top center',
+                    marker: { size: 12, color: '#ef4444', line: { color: 'white', width: 1 } },
+                    hoverinfo: 'text',
+                    hovertext: teamA_players.map(p => `<b>${p.n}</b><br>Points: ${p.p}<br>Hustle (REB+AST+STL): ${p.h}`)
+                },
+                {
+                    x: teamB_players.map(p => p.p),
+                    y: teamB_players.map(p => p.h),
+                    mode: 'markers+text',
+                    type: 'scatter',
+                    name: tbName,
+                    text: teamB_players.map(p => p.n),
+                    textposition: 'top center',
+                    marker: { size: 12, color: '#3b82f6', line: { color: 'white', width: 1 } },
+                    hoverinfo: 'text',
+                    hovertext: teamB_players.map(p => `<b>${p.n}</b><br>Points: ${p.p}<br>Hustle (REB+AST+STL): ${p.h}`)
+                }
+            ];
+
+            const impactLayout = {
+                margin: { l: 40, r: 20, t: 20, b: 40 },
+                paper_bgcolor: 'transparent',
+                plot_bgcolor: 'transparent',
+                font: { color: '#9ca3af' },
+                xaxis: { title: 'Offensive Production (Points)', gridcolor: '#2d2e3a' },
+                yaxis: { title: 'Playmaking & Hustle', gridcolor: '#2d2e3a' },
+                legend: { orientation: 'h', y: 1.1, x: 0.5, xanchor: 'center' },
+                annotations: [
+                    { x: 1, y: 1, xref: 'paper', yref: 'paper', text: 'High Volume / High Hustle', showarrow: false, font: { color: '#10b981', size: 10 }, xanchor: 'right', yanchor: 'top', opacity: 0.5 },
+                    { x: 1, y: 0, xref: 'paper', yref: 'paper', text: 'Scoring Specialists', showarrow: false, font: { color: '#f59e0b', size: 10 }, xanchor: 'right', yanchor: 'bottom', opacity: 0.5 },
+                    { x: 0, y: 1, xref: 'paper', yref: 'paper', text: 'Role Players / Glue', showarrow: false, font: { color: '#f59e0b', size: 10 }, xanchor: 'left', yanchor: 'top', opacity: 0.5 }
+                ]
+            };
+            Plotly.newPlot('impact-chart', impactTraces, impactLayout, { displayModeBar: false });
+        }
+
+        // 3. Major Scoring Runs
+        const runsList = document.getElementById('runs-list');
+        runsList.innerHTML = '';
+        if (data.adv.r && data.adv.r.length > 0) {
+            data.adv.r.forEach(run => {
+                const isTeamA = run.t === ta;
+                const teamName = isTeamA ? taName : tbName;
+                const cls = isTeamA ? 'team-a' : 'team-b';
+
+                const item = document.createElement('div');
+                item.className = `run-item ${cls}`;
+                item.innerHTML = `
+                    <div class="run-score ${cls}">${run.p} - 0</div>
+                    <div class="run-meta">
+                        <strong>${teamName}</strong><br>
+                        ${fmtTime(2400 - run.en)} to ${fmtTime(2400 - run.st)} remaining
+                    </div>
+                `;
+                runsList.appendChild(item);
+            });
+        } else {
+            runsList.innerHTML = '<div style="color:var(--text-muted); font-size: 0.9rem; padding: 1rem 0;">No major runs (8+ pts) detected.</div>';
+        }
+
+    } else {
+        advStatsSection.classList.add('hidden');
+    }
 }
 
 // ── Reset ────────────────────────────────────────────────
@@ -314,6 +421,7 @@ function resetDownstream() {
     placeholder.classList.remove('hidden');
     keyPlaysSection.classList.add('hidden');
     gameSummary.classList.add('hidden');
+    document.getElementById('adv-stats').classList.add('hidden');
     Plotly.purge(chartDiv);
 }
 

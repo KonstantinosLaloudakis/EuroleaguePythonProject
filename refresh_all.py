@@ -87,6 +87,11 @@ def main():
             'fetch_pbp.py',
             ['--force']
         )))
+        results.append(('Fetch Shot Data', run_step(
+            'Fetching spatial shot data coordinates',
+            'fetch_shot_data.py',
+            ['--force']
+        )))
         results.append(('Parse Game Data', run_step(
             'Parsing game results',
             'parse_mvp_data.py'

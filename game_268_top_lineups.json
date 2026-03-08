@@ -1,0 +1,142 @@
+[
+    {
+        "Team": "TEL",
+        "Lineup": [
+            "Blatt",
+            "Brissett",
+            "Hoard",
+            "Lundberg",
+            "Sorkin"
+        ],
+        "MinutesPlayed": 3.7,
+        "PtsFor": 4.0,
+        "PtsAgainst": 11.0,
+        "NetMargin": -7.0
+    },
+    {
+        "Team": "RED",
+        "Lineup": [
+            "Butler",
+            "Miller-Mcintyre",
+            "Moneke",
+            "Nwora",
+            "Ojeleye"
+        ],
+        "MinutesPlayed": 4.0,
+        "PtsFor": 9.0,
+        "PtsAgainst": 13.0,
+        "NetMargin": -4.0
+    },
+    {
+        "Team": "TEL",
+        "Lineup": [
+            "Blatt",
+            "Brissett",
+            "Clark Iii",
+            "Hoard",
+            "Santos"
+        ],
+        "MinutesPlayed": 3.3,
+        "PtsFor": 10.0,
+        "PtsAgainst": 13.0,
+        "NetMargin": -3.0
+    },
+    {
+        "Team": "RED",
+        "Lineup": [
+            "Kalinic",
+            "Miller-Mcintyre",
+            "Moneke",
+            "Nwora",
+            "Ojeleye"
+        ],
+        "MinutesPlayed": 4.4,
+        "PtsFor": 4.0,
+        "PtsAgainst": 7.0,
+        "NetMargin": -3.0
+    },
+    {
+        "Team": "RED",
+        "Lineup": [
+            "Butler",
+            "Davidovac",
+            "Dos Santos",
+            "Izundu",
+            "Ojeleye"
+        ],
+        "MinutesPlayed": 5.4,
+        "PtsFor": 11.0,
+        "PtsAgainst": 13.0,
+        "NetMargin": -2.0
+    },
+    {
+        "Team": "TEL",
+        "Lineup": [
+            "Clark Iii",
+            "Hoard",
+            "Lundberg",
+            "Rayman",
+            "Sorkin"
+        ],
+        "MinutesPlayed": 7.9,
+        "PtsFor": 14.0,
+        "PtsAgainst": 13.0,
+        "NetMargin": 1.0
+    },
+    {
+        "Team": "TEL",
+        "Lineup": [
+            "Blatt",
+            "Brissett",
+            "Dibartolomeo",
+            "Lavi",
+            "Santos"
+        ],
+        "MinutesPlayed": 2.6,
+        "PtsFor": 7.0,
+        "PtsAgainst": 5.0,
+        "NetMargin": 2.0
+    },
+    {
+        "Team": "RED",
+        "Lineup": [
+            "Butler",
+            "Izundu",
+            "Kalinic",
+            "Miller-Mcintyre",
+            "Ojeleye"
+        ],
+        "MinutesPlayed": 3.2,
+        "PtsFor": 10.0,
+        "PtsAgainst": 7.0,
+        "NetMargin": 3.0
+    },
+    {
+        "Team": "RED",
+        "Lineup": [
+            "Bolomboy",
+            "Kalinic",
+            "Miller-Mcintyre",
+            "Moneke",
+            "Nwora"
+        ],
+        "MinutesPlayed": 13.1,
+        "PtsFor": 25.0,
+        "PtsAgainst": 20.0,
+        "NetMargin": 5.0
+    },
+    {
+        "Team": "TEL",
+        "Lineup": [
+            "Brissett",
+            "Clark Iii",
+            "Hoard",
+            "Lundberg",
+            "Sorkin"
+        ],
+        "MinutesPlayed": 9.7,
+        "PtsFor": 24.0,
+        "PtsAgainst": 16.0,
+        "NetMargin": 8.0
+    }
+]
