@@ -9,14 +9,20 @@ from teeter_totter import get_seconds_from_time, load_team_names
 
 def load_game_data(season, game_code):
     """Loads PBP data and filters for the specific game"""
-    pbp_file = f'pbp_{season}.csv'
+    # Data is often inside a data/ folder in this repo
+    pbp_file = f"data/pbp_{season}.csv"
+    if not os.path.exists(pbp_file):
+        # Fallback to root
+        pbp_file = f"pbp_{season}.csv"
+        
     if not os.path.exists(pbp_file):
         print(f"Error: {pbp_file} not found. Run fetch_pbp.py first.")
         return None, None
-
+    
     try:
-        df = pd.read_csv(pbp_file, low_memory=False)
-        game_df = df[df['Gamecode'] == game_code].copy()
+        print(f"Loading {pbp_file}...")
+        all_pbp = pd.read_csv(pbp_file, low_memory=False)
+        game_df = all_pbp[all_pbp['Gamecode'] == game_code].copy()
         
         if game_df.empty:
             print(f"Error: Game {game_code} not found in {season} season data.")
@@ -31,7 +37,7 @@ def load_game_data(season, game_code):
         game_df['POINTS_A'] = pd.to_numeric(game_df['POINTS_A'], errors='coerce').ffill().fillna(0)
         game_df['POINTS_B'] = pd.to_numeric(game_df['POINTS_B'], errors='coerce').ffill().fillna(0)
         
-        return df, game_df
+        return all_pbp, game_df
     except Exception as e:
         print(f"Error loading PBP data: {e}")
         return None, None
@@ -875,7 +881,7 @@ def generate_top_lineups(game_df, meta):
     fig.patch.set_facecolor('#0f172a')
     ax.set_facecolor('#0f172a')
     
-    colors = ['#3b82f6' if team==team_b_code else '#ef4444' for team in top_lineups['Team']]
+    colors = ['#3b82f6' if t == team_b_code else '#ef4444' for t in top_lineups['Team']]
     
     # Make names shorter by taking only last names if possible to fit
     def shorten_lineup(l_str):
@@ -915,15 +921,154 @@ def generate_top_lineups(game_df, meta):
     ax.set_xlabel("Net Margin (+/-) while on floor", fontsize=14, color='#cbd5e1')
     
     # Custom legend
-    from matplotlib.lines import Line2D
-    custom_lines = [Line2D([0], [0], color='#ef4444', lw=8),
-                    Line2D([0], [0], color='#3b82f6', lw=8)]
-    ax.legend(custom_lines, [team_a_name, team_b_name], loc='lower right', frameon=True, facecolor='#1e293b', edgecolor='#334155', fontsize=12)
+    from matplotlib.patches import Patch
+    legend_elements = [Patch(facecolor='#ef4444', label=team_a_name),
+                       Patch(facecolor='#3b82f6', label=team_b_name)]
+    ax.legend(handles=legend_elements, loc='lower right', facecolor='#1e293b', edgecolor='#334155')
 
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_color('#334155')
+    ax.spines['bottom'].set_color('#334155')
     ax.grid(axis='x', alpha=0.2)
     plt.tight_layout()
     output_path = f"game_{meta.get('GameCode', 'X')}_top_lineups.png"
     plt.savefig(output_path, dpi=300, bbox_inches='tight')
+    plt.close()
+    print(f"-> Saved {output_path}")
+
+def draw_half_court(ax, color='#333333', lw=1.5):
+    """Draw a Euroleague half-court diagram directly from the_gravity_map.py"""
+    import matplotlib.patches as patches
+    # Baseline
+    ax.add_line(plt.Line2D([-750, 750], [-157.5, -157.5], color=color, linewidth=lw))
+    # Backboard
+    ax.add_line(plt.Line2D([-90, 90], [-37.5, -37.5], color=color, linewidth=lw))
+    # Paint
+    ax.plot([-245, -245], [-157.5, 422.5], color=color, linewidth=lw)
+    ax.plot([245, 245], [-157.5, 422.5], color=color, linewidth=lw)
+    ax.plot([-245, 245], [422.5, 422.5], color=color, linewidth=lw)
+    # Restricted Area arc
+    ax.add_patch(patches.Arc((0, 0), 250, 250, theta1=0, theta2=180, linewidth=lw, color=color))
+    # Basket
+    ax.add_patch(patches.Circle((0, 0), radius=22.5, linewidth=lw, color=color, fill=False))
+    
+    # 3PT line
+    corner_x = 660
+    intersection_y = np.sqrt(675**2 - corner_x**2)
+    ax.plot([corner_x, corner_x], [-157.5, intersection_y], color=color, linewidth=lw)
+    ax.plot([-corner_x, -corner_x], [-157.5, intersection_y], color=color, linewidth=lw)
+    theta = np.degrees(np.arctan2(intersection_y, corner_x))
+    ax.add_patch(patches.Arc((0, 0), 1350, 1350, theta1=theta, theta2=180-theta, linewidth=lw, color=color))
+
+def generate_gravity_map(gamecode, season, meta, game_df):
+    """Calculates and visualizes the Spatial Gravity Map using shot_data coords."""
+    print("Generating The Spatial Gravity Map (Side-by-Side Shot Charts)...")
+    import os
+    from matplotlib.colors import LinearSegmentedColormap, PowerNorm
+    team_names = load_team_names()
+    
+    team_a_code = meta.get('LocalTeam') if (meta and isinstance(meta, dict)) else None
+    if not team_a_code:
+        unique_teams = game_df['CODETEAM'].dropna().unique()
+        team_a_code = unique_teams[0] if len(unique_teams) > 0 else "Home"
+
+    away_events = game_df[game_df['CODETEAM'] != team_a_code]
+    unique_away = away_events['CODETEAM'].dropna().unique()
+    team_b_code = unique_away[0] if len(unique_away) > 0 else "Away"
+         
+    team_a_name = team_names.get(team_a_code, str(team_a_code))
+    team_b_name = team_names.get(team_b_code, str(team_b_code))
+    
+    # Try to load the corresponding shot_data file
+    shot_path = f"data/shot_data_{season}_{season}.csv"
+    if not os.path.exists(shot_path):
+        # Fallback to root
+        shot_path = f"shot_data_{season}_{season}.csv"
+        
+    if not os.path.exists(shot_path):
+        print(f"  [Warning] {shot_path} not found. Skipping Spatial Gravity Map.")
+        return
+        
+    try:
+        shots_df = pd.read_csv(shot_path, low_memory=False)
+        shots_df = shots_df[shots_df['Gamecode'] == gamecode]
+        if len(shots_df) == 0:
+            print(f"  [Warning] No shot coordinates found in {shot_path} for game {gamecode}.")
+            return
+    except Exception as e:
+        print(f"  [Warning] Error loading {shot_path}: {e}")
+        return
+        
+    # Cleanup coords exactly as gravity map script dictates
+    shots_df = shots_df[shots_df['ID_ACTION'].str.contains('2FG|3FG', na=False)].copy()
+    shots_df['COORD_X'] = pd.to_numeric(shots_df['COORD_X'], errors='coerce')
+    shots_df['COORD_Y'] = pd.to_numeric(shots_df['COORD_Y'], errors='coerce')
+    shots_df = shots_df.dropna(subset=['COORD_X', 'COORD_Y'])
+    shots_df['MADE'] = shots_df['ID_ACTION'].str.contains('2FGM|3FGM', na=False).astype(int)
+    
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(20, 9))
+    fig.patch.set_facecolor('#0E1117')
+    
+    colors_cmap = ['#2a1a4e', '#6a3d9a', '#e6b800', '#ff6600', '#ff1a1a']
+    cmap = LinearSegmentedColormap.from_list('shot_heat', colors_cmap, N=256)
+    
+    for ax, team_code, team_display_name in zip([ax1, ax2], [team_a_code, team_b_code], [team_a_name, team_b_name]):
+        ax.set_facecolor('#0E1117')
+        draw_half_court(ax, color='#AAAAAA', lw=1.2)
+        
+        team_shots = shots_df[shots_df['TEAM'] == team_code]
+        if team_shots.empty:
+            ax.set_title(f"{team_display_name}\nNo data", color='white', fontsize=14)
+            ax.axis('off')
+            continue
+            
+        total_shots = len(team_shots)
+        total_makes = team_shots['MADE'].sum()
+        team_fg_pct = total_makes / total_shots * 100 if total_shots > 0 else 0
+        
+        hb = ax.hexbin(team_shots['COORD_X'], team_shots['COORD_Y'],
+            gridsize=25, cmap=cmap, norm=PowerNorm(gamma=0.5), mincnt=1,
+            extent=[-800, 800, -200, 1000], alpha=0.85, edgecolors='none', zorder=2)
+            
+        # Draw explicit makes to annotate high-FG cells
+        makes_df = team_shots[team_shots['MADE'] == 1]
+        if not makes_df.empty:
+            hb_makes = ax.hexbin(makes_df['COORD_X'], makes_df['COORD_Y'],
+                gridsize=25, mincnt=0, extent=[-800, 800, -200, 1000], alpha=0, zorder=1)
+                
+            make_counts = hb_makes.get_array()
+            make_offsets = hb_makes.get_offsets()
+            make_lookup = {(round(off[0], 1), round(off[1], 1)): make_counts[i] 
+                           for i, off in enumerate(make_offsets) if i < len(make_counts)}
+            
+            offsets = hb.get_offsets()
+            counts = hb.get_array()
+            for i, off in enumerate(offsets):
+                if i < len(counts) and counts[i] >= 2: # Min 2 shots in cell to annotate %
+                    key = (round(off[0], 1), round(off[1], 1))
+                    makes = make_lookup.get(key, 0)
+                    fg_pct = makes / counts[i] * 100 if counts[i] > 0 else 0
+                    if counts[i] >= 3:
+                        color_text = '#00ff88' if fg_pct >= 45 else '#ffffff' if fg_pct >= 35 else '#ff6666'
+                        ax.text(off[0], off[1], f"{fg_pct:.0f}%",
+                                ha='center', va='center', fontsize=8, color=color_text, fontweight='bold', zorder=10)
+                                
+            hb_makes.remove()
+        
+        ax.set_title(f"Offensive Gravity Map — {team_display_name}\n{total_shots} Attempts | {team_fg_pct:.1f}% FG",
+                     color='white', fontsize=16, fontweight='bold', pad=15)
+        ax.set_xlim(-800, 800)
+        ax.set_ylim(-200, 1000)
+        ax.set_aspect('equal')
+        ax.axis('off')
+
+    fig.suptitle(f"The Spatial Gravity Map\n{team_a_name} vs {team_b_name} (Game {meta.get('GameCode', 'X')})",
+                 color='white', fontsize=22, fontname='Impact', y=0.98)
+                 
+    plt.tight_layout(rect=[0, 0, 1, 0.9])
+    output_path = f"game_{meta.get('GameCode', 'X')}_gravity_map.png"
+    plt.savefig(output_path, dpi=200, bbox_inches='tight', facecolor='#0E1117')
     plt.close()
     print(f"-> Saved {output_path}")
 
@@ -1084,6 +1229,7 @@ def main():
     generate_scoring_runs(game_df, game_meta)
     generate_top_lineups(game_df, game_meta)
     generate_four_factors(game_df, game_meta)
+    generate_gravity_map(args.gamecode, args.season, game_meta, game_df)
     
     print(f"\nAnalysis complete for Game {args.gamecode}!")
 
