@@ -443,10 +443,10 @@ function renderChart(data, taName, tbName) {
                     bgcolor: 'transparent'
                 },
                 showlegend: true,
-                legend: { orientation: 'h', y: 1.1, x: 0.5, xanchor: 'center', font: { color: '#9ca3af' } },
+                legend: { orientation: 'h', y: -0.2, x: 0.5, xanchor: 'center', font: { color: '#9ca3af' } },
                 paper_bgcolor: 'transparent',
                 plot_bgcolor: 'transparent',
-                margin: { l: 40, r: 40, t: 30, b: 30 }
+                margin: { l: 65, r: 65, t: 40, b: 50 }
             };
 
             Plotly.newPlot('radar-chart', rTraces, rLayout, { displayModeBar: false });
