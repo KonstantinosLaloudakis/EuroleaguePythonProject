@@ -419,6 +419,64 @@ select:disabled {
     color: var(--text-primary);
 }
 
+.box-score-wrap {
+    overflow-x: auto;
+}
+
+.box-score-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    white-space: nowrap;
+}
+
+.box-score-table th {
+    background: var(--bg-secondary);
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    padding: 0.6rem 0.8rem;
+    border-bottom: 2px solid var(--border);
+    position: sticky;
+    top: 0;
+    text-align: right;
+}
+
+.box-score-table th:first-child {
+    text-align: left;
+}
+
+.box-score-table td {
+    padding: 0.5rem 0.8rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-primary);
+    text-align: right;
+}
+
+.box-score-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+}
+
+.box-score-table tbody tr:hover {
+    background: rgba(139, 92, 246, 0.08);
+}
+
+.box-score-table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.box-score-table tbody tr:nth-child(even):hover {
+    background: rgba(139, 92, 246, 0.08);
+}
+
+.box-score-table .highlight-pts {
+    color: var(--accent-green);
+    font-weight: 700;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

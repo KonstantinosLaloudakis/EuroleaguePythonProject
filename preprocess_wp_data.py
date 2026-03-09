@@ -312,6 +312,36 @@ def extract_advanced_stats(game_df, team_a, team_b):
         else: stats['l'] = []
     except:
         stats['l'] = []
+
+    # Box Score
+    try:
+        box = {}
+        for _, row in game_df.iterrows():
+            team = row.get('CODETEAM')
+            ptype = row.get('PLAYTYPE')
+            p = str(row.get('PLAYER', '')) if pd.notna(row.get('PLAYER')) else None
+            if not p or team not in [team_a, team_b]: continue
+            clean = p.split(',')[0].title() if ',' in p else p
+            key = (team, clean)
+            if key not in box:
+                box[key] = {'t': team, 'n': clean, 'pts': 0, 'reb': 0, 'ast': 0, 'stl': 0, 'blk': 0, 'to': 0,
+                            'fgm': 0, 'fga': 0, 'fg3m': 0, 'fg3a': 0, 'ftm': 0, 'fta': 0}
+            s = box[key]
+            if ptype == '2FGM': s['pts'] += 2; s['fgm'] += 1; s['fga'] += 1
+            elif ptype == '2FGA': s['fga'] += 1
+            elif ptype == '3FGM': s['pts'] += 3; s['fgm'] += 1; s['fga'] += 1; s['fg3m'] += 1; s['fg3a'] += 1
+            elif ptype == '3FGA': s['fg3a'] += 1; s['fga'] += 1
+            elif ptype == 'FTM': s['pts'] += 1; s['ftm'] += 1; s['fta'] += 1
+            elif ptype == 'FTA': s['fta'] += 1
+            elif ptype == 'D': s['reb'] += 1
+            elif ptype == 'O': s['reb'] += 1
+            elif ptype == 'AS': s['ast'] += 1
+            elif ptype == 'ST': s['stl'] += 1
+            elif ptype == 'FV': s['blk'] += 1
+            elif ptype == 'TO': s['to'] += 1
+        stats['b'] = sorted(box.values(), key=lambda x: (x['t'] != team_a, -x['pts']))
+    except:
+        stats['b'] = []
         
     return stats
 

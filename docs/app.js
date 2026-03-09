@@ -593,6 +593,79 @@ function renderChart(data, taName, tbName) {
             };
         }
 
+        // 7. Advanced Box Score
+        if (data.adv.b && data.adv.b.length > 0) {
+            const boxData = data.adv.b;
+
+            function renderBoxScore(teamCode) {
+                const teamPlayers = boxData.filter(p => p.t === teamCode);
+                const isTeamA = teamCode === ta;
+                const teamName = isTeamA ? taName : tbName;
+
+                const pct = (m, a) => a > 0 ? (m / a * 100).toFixed(1) : '-';
+                const maxPts = Math.max(...teamPlayers.map(p => p.pts));
+
+                let html = `<table class="box-score-table">
+                    <thead><tr>
+                        <th>Player</th><th>PTS</th><th>REB</th><th>AST</th>
+                        <th>STL</th><th>BLK</th><th>TO</th>
+                        <th>FG%</th><th>3P%</th><th>FT%</th>
+                    </tr></thead><tbody>`;
+
+                teamPlayers.forEach(p => {
+                    const ptsCls = p.pts === maxPts && p.pts > 0 ? ' class="highlight-pts"' : '';
+                    html += `<tr>
+                        <td>${p.n}</td>
+                        <td${ptsCls}>${p.pts}</td>
+                        <td>${p.reb}</td><td>${p.ast}</td>
+                        <td>${p.stl}</td><td>${p.blk}</td><td>${p.to}</td>
+                        <td>${pct(p.fgm, p.fga)} <span style="color:var(--text-muted);font-size:0.7rem">(${p.fgm}/${p.fga})</span></td>
+                        <td>${pct(p.fg3m, p.fg3a)} <span style="color:var(--text-muted);font-size:0.7rem">(${p.fg3m}/${p.fg3a})</span></td>
+                        <td>${pct(p.ftm, p.fta)} <span style="color:var(--text-muted);font-size:0.7rem">(${p.ftm}/${p.fta})</span></td>
+                    </tr>`;
+                });
+
+                // Totals row
+                const totals = teamPlayers.reduce((acc, p) => {
+                    acc.pts += p.pts; acc.reb += p.reb; acc.ast += p.ast;
+                    acc.stl += p.stl; acc.blk += p.blk; acc.to += p.to;
+                    acc.fgm += p.fgm; acc.fga += p.fga; acc.fg3m += p.fg3m;
+                    acc.fg3a += p.fg3a; acc.ftm += p.ftm; acc.fta += p.fta;
+                    return acc;
+                }, { pts: 0, reb: 0, ast: 0, stl: 0, blk: 0, to: 0, fgm: 0, fga: 0, fg3m: 0, fg3a: 0, ftm: 0, fta: 0 });
+
+                html += `<tr style="border-top: 2px solid var(--border); font-weight: 700;">
+                    <td>TOTAL</td>
+                    <td>${totals.pts}</td><td>${totals.reb}</td><td>${totals.ast}</td>
+                    <td>${totals.stl}</td><td>${totals.blk}</td><td>${totals.to}</td>
+                    <td>${pct(totals.fgm, totals.fga)}</td>
+                    <td>${pct(totals.fg3m, totals.fg3a)}</td>
+                    <td>${pct(totals.ftm, totals.fta)}</td>
+                </tr>`;
+
+                html += '</tbody></table>';
+                document.getElementById('box-score-container').innerHTML = html;
+            }
+
+            // Initial render
+            renderBoxScore(ta);
+
+            // Toggle buttons
+            const btnBoxTa = document.getElementById('btn-box-ta');
+            const btnBoxTb = document.getElementById('btn-box-tb');
+            btnBoxTa.textContent = taName;
+            btnBoxTb.textContent = tbName;
+
+            btnBoxTa.onclick = () => {
+                btnBoxTa.classList.add('active'); btnBoxTb.classList.remove('active');
+                renderBoxScore(ta);
+            };
+            btnBoxTb.onclick = () => {
+                btnBoxTb.classList.add('active'); btnBoxTa.classList.remove('active');
+                renderBoxScore(tb);
+            };
+        }
+
     } else {
         advStatsSection.classList.add('hidden');
     }
