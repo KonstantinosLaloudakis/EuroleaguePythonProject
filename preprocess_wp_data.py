@@ -316,6 +316,41 @@ def extract_advanced_stats(game_df, team_a, team_b):
     return stats
 
 
+def extract_shot_data(year, gamecode, team_a, team_b):
+    try:
+        shot_path = f'data/shot_data_{year}_{year}.csv'
+        if not os.path.exists(shot_path): return []
+        shots_df = pd.read_csv(shot_path, low_memory=False)
+        shots_df = shots_df[shots_df['Gamecode'] == gamecode]
+        if shots_df.empty: return []
+        
+        shots_df = shots_df[shots_df['ID_ACTION'].str.contains('2FG|3FG', na=False)].copy()
+        shots_df['COORD_X'] = pd.to_numeric(shots_df['COORD_X'], errors='coerce')
+        shots_df['COORD_Y'] = pd.to_numeric(shots_df['COORD_Y'], errors='coerce')
+        shots_df = shots_df.dropna(subset=['COORD_X', 'COORD_Y'])
+        shots_df['MADE'] = shots_df['ID_ACTION'].str.contains('2FGM|3FGM', na=False).astype(int)
+        
+        shots_list = []
+        for _, r in shots_df.iterrows():
+            t = r['TEAM']
+            if t not in [team_a, team_b]: continue
+            p = str(r.get('PLAYER', ''))
+            clean = p.split(',')[0].title() if ',' in p else p
+            shots_list.append({
+                't': t,
+                'n': clean,
+                'x': float(r['COORD_X']),
+                'y': float(r['COORD_Y']),
+                'm': int(r['MADE']),
+                'q': int(r.get('PERIOD', 1)),
+                'clk': str(r.get('MARKERTIME', ''))
+            })
+        return shots_list
+    except Exception as e:
+        print(f'      [Shot Parsing Error]: {e}')
+        return []
+
+
 def process_season(year):
     """Process one season's PBP data."""
     csv_path = f'data_cache/pbp_{year}.csv'
@@ -341,6 +376,9 @@ def process_season(year):
         try:
             timeline, team_a, team_b, score_a, score_b = process_game(game, teams)
             adv = extract_advanced_stats(game, team_a, team_b)
+            shots = extract_shot_data(year, gc, team_a, team_b)
+            if shots: adv['s'] = shots
+            
             
             # Extract Round
             round_val = game['Round'].dropna().iloc[0] if not game['Round'].dropna().empty else "Unknown"

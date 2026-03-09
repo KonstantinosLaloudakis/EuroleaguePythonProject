@@ -481,6 +481,118 @@ function renderChart(data, taName, tbName) {
             lineupsList.innerHTML = '<div style="color:var(--text-muted); font-size: 0.9rem; padding: 1rem 0;">No significant 5-man lineups tracked for this game.</div>';
         }
 
+        // 6. Spatial Gravity Map (Interactive Shot Chart)
+        if (data.adv.s && data.adv.s.length > 0) {
+            const shotData = data.adv.s;
+            let currentShotTeam = ta;
+
+            function getCourtShapes() {
+                const c = '#555';
+                const w = 1.5;
+                // Generate arc path as SVG
+                function arcPath(cx, cy, rx, ry, startDeg, endDeg, steps = 60) {
+                    let path = '';
+                    for (let i = 0; i <= steps; i++) {
+                        const angle = (startDeg + (endDeg - startDeg) * i / steps) * Math.PI / 180;
+                        const x = cx + rx * Math.cos(angle);
+                        const y = cy + ry * Math.sin(angle);
+                        path += (i === 0 ? 'M ' : 'L ') + x + ',' + y + ' ';
+                    }
+                    return path;
+                }
+                const cornerX = 660;
+                const arcR = 675;
+                const interY = Math.sqrt(arcR * arcR - cornerX * cornerX);
+
+                return [
+                    // Baseline
+                    { type: 'line', x0: -750, y0: -157.5, x1: 750, y1: -157.5, line: { color: c, width: w } },
+                    // Backboard
+                    { type: 'line', x0: -90, y0: -37.5, x1: 90, y1: -37.5, line: { color: c, width: w } },
+                    // Paint left
+                    { type: 'line', x0: -245, y0: -157.5, x1: -245, y1: 422.5, line: { color: c, width: w } },
+                    // Paint right
+                    { type: 'line', x0: 245, y0: -157.5, x1: 245, y1: 422.5, line: { color: c, width: w } },
+                    // Paint top
+                    { type: 'line', x0: -245, y0: 422.5, x1: 245, y1: 422.5, line: { color: c, width: w } },
+                    // Restricted area arc
+                    { type: 'path', path: arcPath(0, 0, 125, 125, 0, 180), line: { color: c, width: w }, fillcolor: 'rgba(0,0,0,0)' },
+                    // Basket rim
+                    { type: 'circle', x0: -22.5, y0: -22.5, x1: 22.5, y1: 22.5, line: { color: '#ef4444', width: 2 }, fillcolor: 'rgba(0,0,0,0)' },
+                    // 3PT left corner
+                    { type: 'line', x0: cornerX, y0: -157.5, x1: cornerX, y1: interY, line: { color: c, width: w } },
+                    // 3PT right corner
+                    { type: 'line', x0: -cornerX, y0: -157.5, x1: -cornerX, y1: interY, line: { color: c, width: w } },
+                    // 3PT arc
+                    {
+                        type: 'path', path: arcPath(0, 0, arcR, arcR,
+                            Math.atan2(interY, cornerX) * 180 / Math.PI,
+                            180 - Math.atan2(interY, cornerX) * 180 / Math.PI),
+                        line: { color: c, width: w }, fillcolor: 'rgba(0,0,0,0)'
+                    }
+                ];
+            }
+
+            function renderShotChart(teamCode) {
+                const teamShots = shotData.filter(s => s.t === teamCode);
+                const isTeamA = teamCode === ta;
+                const teamName = isTeamA ? taName : tbName;
+
+                const makes = teamShots.filter(s => s.m === 1);
+                const misses = teamShots.filter(s => s.m === 0);
+                const fgPct = teamShots.length > 0 ? (makes.length / teamShots.length * 100).toFixed(1) : 0;
+
+                const traces = [
+                    {
+                        x: makes.map(s => s.x), y: makes.map(s => s.y),
+                        mode: 'markers', type: 'scatter', name: 'Made',
+                        marker: { size: 10, color: '#10b981', symbol: 'circle', line: { color: 'white', width: 1 }, opacity: 0.85 },
+                        hoverinfo: 'text',
+                        hovertext: makes.map(s => `<b>${s.n}</b><br>Made (Q${s.q})`)
+                    },
+                    {
+                        x: misses.map(s => s.x), y: misses.map(s => s.y),
+                        mode: 'markers', type: 'scatter', name: 'Missed',
+                        marker: { size: 8, color: '#ef4444', symbol: 'x', line: { width: 1.5 }, opacity: 0.6 },
+                        hoverinfo: 'text',
+                        hovertext: misses.map(s => `<b>${s.n}</b><br>Missed (Q${s.q})`)
+                    }
+                ];
+
+                const layout = {
+                    shapes: getCourtShapes(),
+                    xaxis: { range: [-800, 800], showgrid: false, zeroline: false, showticklabels: false, fixedrange: true, scaleanchor: 'y' },
+                    yaxis: { range: [-200, 1000], showgrid: false, zeroline: false, showticklabels: false, fixedrange: true },
+                    paper_bgcolor: 'transparent',
+                    plot_bgcolor: '#0E1117',
+                    margin: { l: 10, r: 10, t: 35, b: 10 },
+                    legend: { orientation: 'h', y: 1.05, x: 0.5, xanchor: 'center', font: { color: '#9ca3af' } },
+                    title: { text: `${teamName} — ${teamShots.length} Attempts | ${fgPct}% FG`, font: { color: '#9ca3af', size: 14 }, x: 0.5 },
+                    dragmode: false
+                };
+
+                Plotly.newPlot('shot-chart', traces, layout, { displayModeBar: false, staticPlot: false });
+            }
+
+            // Initial render
+            renderShotChart(ta);
+
+            // Toggle buttons
+            const btnTa = document.getElementById('btn-shots-ta');
+            const btnTb = document.getElementById('btn-shots-tb');
+            btnTa.textContent = taName;
+            btnTb.textContent = tbName;
+
+            btnTa.onclick = () => {
+                btnTa.classList.add('active'); btnTb.classList.remove('active');
+                currentShotTeam = ta; renderShotChart(ta);
+            };
+            btnTb.onclick = () => {
+                btnTb.classList.add('active'); btnTa.classList.remove('active');
+                currentShotTeam = tb; renderShotChart(tb);
+            };
+        }
+
     } else {
         advStatsSection.classList.add('hidden');
     }
