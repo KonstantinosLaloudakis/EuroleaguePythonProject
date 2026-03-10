@@ -13,7 +13,7 @@ env/
 
 # Project Data & Results
 #data/
-*.csv
+#*.csv
 *.xlsx
 
 # Local config (if any)
