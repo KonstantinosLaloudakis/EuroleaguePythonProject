@@ -196,48 +196,96 @@ def run_oracle(target_round=None):
             if len(team_form[road]['Last5']) > 5: team_form[road]['Last5'].pop(0)
 
     # 4. Identify Target Round
-    # 9 games per round.
-    # If target_round not provided, find first game with score 0
-    df['GameIdx'] = df.index
-    # Assuming chronological order in JSON (parse_mvp_data usually keeps it)
-    # GameCode is key.
+    # 20 teams → 10 games per round, 38 rounds
+    games_per_round = 10  # 20 teams / 2
     
     if target_round is None:
-        unplayed = df[df['LocalScore'] == 0]
-        if not unplayed.empty:
-            first_game = unplayed.iloc[0]['GameCode']
-            # Heuristic: Round = (GameCode-1) // 9 + 1
-            # But GameCodes in file might be sparse? 
-            # Let's trust the input file order.
-            # mvp_game_results has 1 row per game.
-            # Row index // 9 + 1 = Round?
-            # Let's use GameCode if present.
-            target_round = (first_game - 1) // 9 + 1
-            print(f"Auto-detected next round: {target_round} (GameCode {first_game})")
-        else:
-            print("All games played. Defaulting to Round 30.")
-            target_round = 30
-            
-    # Try to load manual schedule if available
-    manual_file = f'manual_round_{target_round}.json'
-    if os.path.exists(manual_file):
-        print(f"Loading manual schedule from {manual_file}...")
+        # Derive from standings: next round = max games played + 1
+        # This is robust against postponed games having score 0
         try:
-            manual_games = pd.read_json(manual_file)
-            round_games = manual_games
+            with open('mvp_standings_derived.json', 'r') as f:
+                standings_data = json.load(f)
+            current_round = max((t.get('GP', 0) for t in standings_data.values()), default=0)
+            target_round = current_round + 1
+            print(f"Auto-detected next round from standings: Round {target_round} (current max GP: {current_round})")
         except Exception as e:
-            print(f"Error loading manual schedule: {e}")
-            round_games = pd.DataFrame()
-    else:
-        # Filter from main dataset with Offset
-        # Offset Calculation:
-        # Round 1 starts at GameCode 28 (Offset 27).
-        # Round 29 starts at (29-1)*9 + 1 + 27 = 252 + 1 + 27 = 280.
-        offset = 27
-        
-        start_gc = (target_round - 1) * 9 + 1 + offset
-        end_gc = target_round * 9 + offset
-        
+            print(f"Warning: Could not read standings for round detection: {e}")
+            target_round = 38
+            
+    # Try to load schedule from official XML first (most reliable for unplayed rounds)
+    import xml.etree.ElementTree as ET
+    
+    name_to_code = {
+        'ALBA BERLIN': 'BER', 'ANADOLU EFES ISTANBUL': 'IST', 'AS MONACO': 'MCO',
+        'BASKONIA VITORIA-GASTEIZ': 'BAS', 'KOSNER BASKONIA VITORIA-GASTEIZ': 'BAS',
+        'CRVENA ZVEZDA MERIDIANBET BELGRADE': 'RED',
+        'EA7 EMPORIO ARMANI MILAN': 'MIL',
+        'FC BARCELONA': 'BAR', 'FC BAYERN MUNICH': 'MUN',
+        'FENERBAHCE BEKO ISTANBUL': 'ULK',
+        'LDLC ASVEL VILLEURBANNE': 'ASV',
+        'MACCABI PLAYTIKA TEL AVIV': 'TEL', 'MACCABI RAPYD TEL AVIV': 'TEL',
+        'OLYMPIACOS PIRAEUS': 'OLY',
+        'PANATHINAIKOS AKTOR ATHENS': 'PAN',
+        'PARTIZAN MOZZART BET BELGRADE': 'PAR',
+        'PARIS BASKETBALL': 'PRS',
+        'REAL MADRID': 'MAD',
+        'VALENCIA BASKET': 'PAM',
+        'VIRTUS SEGAFREDO BOLOGNA': 'VIR', 'VIRTUS BOLOGNA': 'VIR',
+        'ZALGIRIS KAUNAS': 'ZAL',
+        'DUBAI BASKETBALL': 'DUB',
+        'HAPOEL IBI TEL AVIV': 'HTA'
+    }
+    
+    round_games = pd.DataFrame()
+    
+    # Strategy 1: Official XML schedule
+    xml_path = 'official_schedule_2025.xml'
+    if os.path.exists(xml_path):
+        try:
+            tree = ET.parse(xml_path)
+            root = tree.getroot()
+            xml_items = [i for i in root.findall('item') if i.find('gameday').text == str(target_round)]
+            
+            if xml_items:
+                xml_games = []
+                for item in xml_items:
+                    home_name = item.find('hometeam').text
+                    away_name = item.find('awayteam').text
+                    home_code = name_to_code.get(home_name, 'UNK')
+                    away_code = name_to_code.get(away_name, 'UNK')
+                    
+                    if home_code == 'UNK':
+                        print(f"Warning: Unmapped team name '{home_name}'")
+                    if away_code == 'UNK':
+                        print(f"Warning: Unmapped team name '{away_name}'")
+                    
+                    xml_games.append({
+                        'LocalTeam': home_code,
+                        'RoadTeam': away_code,
+                        'LocalScore': 0,
+                        'RoadScore': 0
+                    })
+                
+                round_games = pd.DataFrame(xml_games)
+                print(f"Loaded {len(round_games)} games from official XML schedule")
+        except Exception as e:
+            print(f"Warning: Could not parse XML schedule: {e}")
+    
+    # Strategy 2: Manual JSON schedule
+    if round_games.empty:
+        manual_file = f'manual_round_{target_round}.json'
+        if os.path.exists(manual_file):
+            print(f"Loading manual schedule from {manual_file}...")
+            try:
+                round_games = pd.read_json(manual_file)
+            except Exception as e:
+                print(f"Error loading manual schedule: {e}")
+    
+    # Strategy 3: Game-code based lookup from results (works for already-played rounds)
+    if round_games.empty:
+        offset = 0
+        start_gc = (target_round - 1) * games_per_round + 1 + offset
+        end_gc = target_round * games_per_round + offset
         round_games = df[(df['GameCode'] >= start_gc) & (df['GameCode'] <= end_gc)].copy()
     
     if round_games.empty:

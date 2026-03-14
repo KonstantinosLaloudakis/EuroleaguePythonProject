@@ -60,21 +60,6 @@ def main():
     start_time = time.time()
     results = []
 
-    # ── COMPUTE CURRENT ROUND FOR HISTORY KEEPING ──
-    try:
-        import json
-        with open('mvp_standings_derived.json', 'r') as f:
-            standings = json.load(f)
-        max_gp = max((t.get('GP', 0) for t in standings.values()), default=0)
-        round_suffix = f"_R{max_gp}" if max_gp > 0 else ""
-    except Exception as e:
-        print(f"{YELLOW}⚠️  Could not determine current round for suffix: {e}{RESET}")
-        round_suffix = ""
-    
-    os.environ['EUROLEAGUE_ROUND_SUFFIX'] = round_suffix
-    if round_suffix:
-        print(f"{CYAN}📌 Active Round Suffix for Outputs: {round_suffix}{RESET}")
-    
     # ── PHASE 1: DATA FETCH ──
     if not skip_fetch and not viz_only:
         print(f"\n{BOLD}📡 PHASE 1: Fetching Latest Data{RESET}")
@@ -99,7 +84,22 @@ def main():
     else:
         print(f"\n{YELLOW}⏭️  Skipping data fetch{RESET}")
     
-    # ── PHASE 2: COMPUTE ENGINES ──
+    # ── COMPUTE CURRENT ROUND FOR HISTORY KEEPING ──
+    # (placed after fetch+parse so standings reflect the latest data)
+    try:
+        import json
+        with open('mvp_standings_derived.json', 'r') as f:
+            standings = json.load(f)
+        max_gp = max((t.get('GP', 0) for t in standings.values()), default=0)
+        round_suffix = f"_R{max_gp}" if max_gp > 0 else ""
+    except Exception as e:
+        print(f"{YELLOW}⚠️  Could not determine current round for suffix: {e}{RESET}")
+        round_suffix = ""
+    
+    os.environ['EUROLEAGUE_ROUND_SUFFIX'] = round_suffix
+    if round_suffix:
+        print(f"{CYAN}📌 Active Round Suffix for Outputs: {round_suffix}{RESET}")
+    
     if not viz_only:
         print(f"\n{BOLD}🧮 PHASE 2: Running Compute Engines{RESET}")
         results.append(('Adjusted Ratings', run_step(
@@ -149,6 +149,7 @@ def main():
         ('TPM vs WIR Quadrants', 'visualize_tpm_wir.py'),
         ('WIR vs PIR', 'visualize_wir.py'),
         ('WPA Leaders', 'visualize_wpa.py'),
+        ('Oracle Forecast', 'mvp_oracle.py'),
     ]
     
     for name, script in viz_scripts:
