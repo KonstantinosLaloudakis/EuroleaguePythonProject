@@ -10,6 +10,7 @@ import os
 
 from wp_model_utils import predict_wp
 from predict_round_mvp import predict_round_mvp, print_mvp_leaderboard
+from predict_player_performance import predict_round as predict_player_round, print_leaderboard as print_player_leaderboard
 
 def run_oracle(target_round=None):
     # 1. Load Data
@@ -454,7 +455,7 @@ def run_oracle(target_round=None):
     mvp_candidates = predict_round_mvp(predictions, top_n=10)
     print_mvp_leaderboard(mvp_candidates, target_round)
 
-    # 7. Save JSON forecast (includes MVP candidates)
+    # 7. Save JSON forecast (MVP candidates first, so player forecaster can read win probs)
     round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
     json_out = f"oracle_forecast_round_{target_round}{round_suffix}.json"
     output = {
@@ -465,6 +466,15 @@ def run_oracle(target_round=None):
     with open(json_out, 'w') as f:
         json.dump(output, f, indent=2)
     print(f"Forecast JSON saved to {json_out}")
+
+    # 8. Player performance forecast (reads win probs from the JSON just saved)
+    player_forecasts = predict_player_round(target_round=target_round, oracle_path=json_out)
+    if player_forecasts:
+        print_player_leaderboard(player_forecasts, target_round)
+        output['player_forecasts'] = player_forecasts
+        with open(json_out, 'w') as f:
+            json.dump(output, f, indent=2)
+        print(f"Player forecasts added to {json_out}")
 
     # 7. Visualize
     cols = 3
