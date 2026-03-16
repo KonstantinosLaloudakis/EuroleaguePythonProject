@@ -1,11 +1,16 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 def plot_mvp_ladder():
-    # Load rankings
+    # Load rankings (respects EUROLEAGUE_ROUND_SUFFIX env var)
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    in_file = f'mvp_rankings_2025{round_suffix}.json'
+    if not os.path.exists(in_file):
+        in_file = 'mvp_rankings_2025.json'
     try:
-        df = pd.read_json('mvp_rankings_2025.json')
+        df = pd.read_json(in_file)
     except Exception as e:
         print(f"Error loading rankings: {e}")
         return
@@ -39,7 +44,10 @@ def plot_mvp_ladder():
         'MUN': '#0066B2', # Blue
         'VIR': '#000000', # Black
         'PAM': '#EB7622', # Orange
-        'ASV': '#000000'  # Black
+        'ASV': '#000000', # Black
+        'PRS': '#1a1a2e', # Dark Navy (Paris)
+        'BER': '#005CA9', # Blue (ALBA Berlin)
+        'MIL': '#C8102E', # Red (EA7 Milan)
     }
     
     # Add edgecolor for visibility of White bars
@@ -55,8 +63,9 @@ def plot_mvp_ladder():
             bar.set_hatch('///') # Red stripes on white
         
     # Add Titles and Labels
-    plt.title('Euroleague 2025-26 MVP Ladder (Week 28)', fontsize=16, fontweight='bold', pad=20)
-    plt.xlabel('MVP Score (Weighted: Base + Team + Clutch)', fontsize=12)
+    round_label = round_suffix.lstrip('_') if round_suffix else 'Current'
+    plt.title(f'Euroleague 2025-26 MVP Ladder ({round_label})', fontsize=16, fontweight='bold', pad=20)
+    plt.xlabel('MVP Score (PIR 45% · WPA 25% · Team 15% · Clutch 10% · Consistency 5%)', fontsize=10)
     plt.ylabel('Player', fontsize=12)
     
     # Add Score Labels
@@ -69,8 +78,9 @@ def plot_mvp_ladder():
     plt.xlim(0, top_10['MVP_Score'].max() * 1.15)
     
     plt.tight_layout()
-    plt.savefig('mvp_ladder_2025.png', dpi=300)
-    print("Saved mvp_ladder_2025.png")
+    outfile = f'mvp_ladder_2025{round_suffix}.png'
+    plt.savefig(outfile, dpi=300)
+    print(f"Saved {outfile}")
 
 if __name__ == "__main__":
     plot_mvp_ladder()
