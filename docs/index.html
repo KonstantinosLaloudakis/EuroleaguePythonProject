@@ -44,6 +44,10 @@
         </div>
 
         <div id="chart-container">
+            <div class="chart-mode-toggle" id="chart-mode-toggle" style="display:none;">
+                <button id="btn-mode-wp" class="active">Win Probability</button>
+                <button id="btn-mode-margin">Score Margin</button>
+            </div>
             <div id="wp-chart"></div>
             <div id="placeholder">
                 <div class="placeholder-icon">📈</div>
@@ -72,6 +76,11 @@
                 <div class="stat-card">
                     <h3>Major Scoring Runs (8+)</h3>
                     <div id="runs-list" class="runs-container"></div>
+                </div>
+
+                <div class="stat-card full-width">
+                    <h3>In-Game WPA — Who Swung the Game</h3>
+                    <div id="wpa-ingame-chart" style="height: 380px;"></div>
                 </div>
 
                 <div class="stat-card full-width">
