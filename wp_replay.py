@@ -15,33 +15,16 @@ import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 
+from wp_model_utils import predict_wp, get_elo_diff
+
 
 # ── Win Probability Model ──────────────────────────────────
-def win_probability(margin, seconds_remaining, total_seconds=2400):
+def win_probability(margin, seconds_remaining, elo_diff=0.0, total_seconds=2400):
     """
     Estimate win probability for the leading team based on margin and time.
-    Uses a logistic model calibrated to basketball dynamics.
-    - margin: positive = home team leads
-    - seconds_remaining: time left in regulation
+    Delegates to the ML model if available, otherwise uses analytic fallback.
     """
-    if seconds_remaining <= 0:
-        return 1.0 if margin > 0 else (0.0 if margin < 0 else 0.5)
-
-    # Normalize time factor: how much of the game is remaining
-    time_frac = seconds_remaining / total_seconds
-
-    # Standard deviation of final margin scales with sqrt of remaining time
-    # Calibrated empirically: ~11 point std for full game, shrinks toward 0
-    sigma = 11.0 * math.sqrt(time_frac)
-
-    if sigma == 0:
-        return 1.0 if margin > 0 else (0.0 if margin < 0 else 0.5)
-
-    # Logistic approximation of CDF
-    z = margin / sigma
-    wp = 1.0 / (1.0 + math.exp(-0.8 * z))
-
-    return wp
+    return predict_wp(margin, seconds_remaining, elo_diff=elo_diff)
 
 
 def parse_marker_time(marker_str, period):
@@ -66,7 +49,7 @@ def parse_marker_time(marker_str, period):
         return None
 
 
-def replay_game(pbp_file, gamecode, home_team=None):
+def replay_game(pbp_file, gamecode, home_team=None, season=None):
     """Build the WP curve for a specific game."""
     df = pd.read_csv(pbp_file, low_memory=False)
     game = df[df['Gamecode'] == gamecode].sort_values('NUMBEROFPLAY').copy()
@@ -89,6 +72,13 @@ def replay_game(pbp_file, gamecode, home_team=None):
         away_team = teams[1]
 
     print(f"\n  Game Replay: {home_team} vs {away_team} (Gamecode {gamecode})")
+
+    # Look up pre-game Elo differential if season is known
+    elo_diff = 0.0
+    if season is not None:
+        elo_diff = get_elo_diff(season, gamecode)
+        if elo_diff != 0.0:
+            print(f"  Pre-game Elo diff (home - away): {elo_diff:+.1f}")
 
     # ── Auto-detect which team is POINTS_A vs POINTS_B ─────
     # Find the first scoring play where a team's action changes a specific column
@@ -164,7 +154,7 @@ def replay_game(pbp_file, gamecode, home_team=None):
             score_home, score_away = pts_b, pts_a
 
         # Calculate WP for home team
-        wp = win_probability(margin, secs_remaining)
+        wp = win_probability(margin, secs_remaining, elo_diff=elo_diff)
 
         # Build play description
         play_type = row.get('PLAYTYPE', '')
@@ -440,12 +430,13 @@ def generate_html(wp_df, key_plays, home_team, away_team, gamecode):
 
 if __name__ == '__main__':
     if len(sys.argv) < 3:
-        print("Usage: python wp_replay.py <pbp_csv> <gamecode> [home_team]")
-        print("Example: python wp_replay.py pbp_2011.csv 188 OLY")
+        print("Usage: python wp_replay.py <pbp_csv> <gamecode> [home_team] [season]")
+        print("Example: python wp_replay.py pbp_2025.csv 188 OLY 2025")
         sys.exit(1)
 
     pbp_file = sys.argv[1]
     gamecode = int(sys.argv[2])
     home_team = sys.argv[3] if len(sys.argv) > 3 else None
+    season = int(sys.argv[4]) if len(sys.argv) > 4 else None
 
-    replay_game(pbp_file, gamecode, home_team)
+    replay_game(pbp_file, gamecode, home_team, season=season)

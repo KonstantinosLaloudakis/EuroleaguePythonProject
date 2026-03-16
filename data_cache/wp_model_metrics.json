@@ -1,0 +1,26 @@
+{
+  "ml_brier": 0.159282,
+  "analytic_brier": 0.168158,
+  "ml_logloss": 0.472729,
+  "analytic_logloss": 0.498451,
+  "brier_improvement_pct": 5.28,
+  "logloss_improvement_pct": 5.16,
+  "train_seasons": "2007-2022",
+  "val_season": "2023",
+  "test_seasons": "2024-2025",
+  "train_rows": 332129,
+  "val_rows": 28355,
+  "test_rows": 56568,
+  "features": [
+    "margin",
+    "seconds_remaining",
+    "time_frac",
+    "elo_diff",
+    "is_home",
+    "margin_time",
+    "normalized_lead",
+    "scoring_run",
+    "lead_changes",
+    "is_overtime"
+  ]
+}

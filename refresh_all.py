@@ -102,6 +102,10 @@ def main():
     
     if not viz_only:
         print(f"\n{BOLD}🧮 PHASE 2: Running Compute Engines{RESET}")
+        results.append(('WP Model Training', run_step(
+            'Training ML Win Probability Model',
+            'train_wp_model.py'
+        )))
         results.append(('Adjusted Ratings', run_step(
             'Computing KenPom Adjusted Ratings + SOS',
             'calculate_adjusted_ratings.py'

@@ -2,6 +2,11 @@
 Euroleague Rolling Elo Rating System.
 Computes game-by-game Elo ratings that update after each result.
 Produces elo_ratings.json for use by mvp_oracle.py.
+
+Warm-starts from the previous season's end-of-season Elo snapshot
+(data_cache/elo_season_snapshots.json, produced by train_wp_model.py)
+with regression-to-mean applied (75% carryover), so early-season
+predictions reflect last year's team quality rather than resetting to 1500.
 """
 
 import json
@@ -13,6 +18,7 @@ import os
 K_FACTOR = 10        # Conservative K for single-season stability
 ELO_HCA = 50         # Elo points for home court advantage
 STARTING_ELO = 1500  # All teams start here
+CARRYOVER = 0.75     # Fraction of Elo deviation carried over from prior season
 
 
 def expected_score(rating_a, rating_b, hca=0):
@@ -20,34 +26,81 @@ def expected_score(rating_a, rating_b, hca=0):
     return 1 / (1 + 10 ** ((rating_b - rating_a - hca) / 400))
 
 
+def _load_prior_season_elos(current_season):
+    """
+    Load end-of-season Elo ratings from the previous season snapshot,
+    then apply regression-to-mean (CARRYOVER).
+    Returns a dict {team: starting_elo} or {} if no snapshot found.
+    """
+    snap_path = os.path.join('data_cache', 'elo_season_snapshots.json')
+    if not os.path.exists(snap_path):
+        return {}
+    try:
+        with open(snap_path, 'r') as f:
+            snapshots = json.load(f)
+        prior_key = str(current_season - 1)
+        if prior_key not in snapshots:
+            return {}
+        prior = snapshots[prior_key]
+        warm_start = {
+            team: STARTING_ELO + CARRYOVER * (elo - STARTING_ELO)
+            for team, elo in prior.items()
+        }
+        print(f"[Elo] Warm-starting from {prior_key} season snapshot "
+              f"({len(warm_start)} teams, {CARRYOVER:.0%} carryover)")
+        return warm_start
+    except Exception as e:
+        print(f"[Elo] Could not load prior season snapshot: {e}")
+        return {}
+
+
 def compute_elo_ratings():
     """Compute rolling Elo ratings from game results."""
-    
+
     with open('mvp_game_results.json', 'r') as f:
         all_games = json.load(f)
-    
+
     # Only played games, sorted chronologically
     played = sorted(
         [g for g in all_games if g['LocalScore'] > 0],
         key=lambda g: g['GameCode']
     )
-    
+
     if not played:
         print("No played games found.")
         return {}
-    
-    # Initialize Elo ratings
+
+    # Determine current season: env var > latest pbp_*.csv in data/ > skip warm-start
+    current_season = None
+    _season_env = os.environ.get('EUROLEAGUE_SEASON')
+    if _season_env:
+        current_season = int(_season_env)
+    else:
+        import glob as _glob
+        pbp_files = sorted(_glob.glob('data/pbp_*.csv'))
+        if pbp_files:
+            current_season = max(
+                int(os.path.basename(f).replace('pbp_', '').replace('.csv', ''))
+                for f in pbp_files
+            )
+    if current_season is None:
+        print("[Elo] Could not determine current season — skipping warm-start")
+
+    # Warm-start Elo from prior season snapshot (skipped if season unknown)
+    prior_elos = _load_prior_season_elos(current_season) if current_season else {}
+
+    # Initialize Elo ratings — use warm-start values where available
     elo = {}
     history = []  # Track Elo after each round for visualization
-    
+
     for game in played:
         local = game['LocalTeam']
         road = game['RoadTeam']
-        
+
         if local not in elo:
-            elo[local] = STARTING_ELO
+            elo[local] = prior_elos.get(local, STARTING_ELO)
         if road not in elo:
-            elo[road] = STARTING_ELO
+            elo[road] = prior_elos.get(road, STARTING_ELO)
         
         actual_margin = game['LocalScore'] - game['RoadScore']
         actual_score_local = 1.0 if actual_margin > 0 else 0.0

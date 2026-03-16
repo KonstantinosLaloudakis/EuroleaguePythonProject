@@ -13,16 +13,13 @@ import os
 import math
 import glob
 
+from wp_model_utils import get_elo_diff
 
-def win_probability(margin, seconds_remaining, total_seconds=2400):
-    if seconds_remaining <= 0:
-        return 1.0 if margin > 0 else (0.0 if margin < 0 else 0.5)
-    time_frac = seconds_remaining / total_seconds
-    sigma = 11.0 * math.sqrt(time_frac)
-    if sigma == 0:
-        return 1.0 if margin > 0 else (0.0 if margin < 0 else 0.5)
-    z = margin / sigma
-    return 1.0 / (1.0 + math.exp(-0.8 * z))
+
+def win_probability(margin, seconds_remaining, elo_diff=0.0, total_seconds=2400):
+    """Delegates to ML model if available, otherwise analytic fallback."""
+    from wp_model_utils import predict_wp
+    return predict_wp(margin, seconds_remaining, elo_diff=elo_diff)
 
 
 def parse_marker_time(marker_str, period):
@@ -61,7 +58,7 @@ def detect_team_a(game, teams):
     return teams[0]
 
 
-def process_game(game_df, teams):
+def process_game(game_df, teams, elo_diff=0.0):
     """Process a single game into a scoring timeline."""
     team_a = detect_team_a(game_df, teams)
     team_b = [t for t in teams if t != team_a][0]
@@ -89,7 +86,7 @@ def process_game(game_df, teams):
 
         elapsed = 2400 - secs
         margin_a = pts_a - pts_b
-        wp_a = win_probability(margin_a, secs)
+        wp_a = win_probability(margin_a, secs, elo_diff=elo_diff)
 
         player = str(row.get('PLAYER', '')) if pd.notna(row.get('PLAYER')) else ''
         team = str(row.get('CODETEAM', '')) if pd.notna(row.get('CODETEAM')) else ''
@@ -404,7 +401,8 @@ def process_season(year):
             continue
 
         try:
-            timeline, team_a, team_b, score_a, score_b = process_game(game, teams)
+            elo_diff = get_elo_diff(year, gc)
+            timeline, team_a, team_b, score_a, score_b = process_game(game, teams, elo_diff=elo_diff)
             adv = extract_advanced_stats(game, team_a, team_b)
             shots = extract_shot_data(year, gc, team_a, team_b)
             if shots: adv['s'] = shots

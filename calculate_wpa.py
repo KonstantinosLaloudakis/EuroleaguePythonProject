@@ -2,24 +2,21 @@
 Win Probability Added (WPA) Calculator — 2025-26 Season
 Calculates the True Win Probability at every play-by-play event,
 and assigns the delta (change) in WP to the player who made the play.
+
+Uses the ML model from wp_model_utils if available, otherwise falls back
+to the analytic formula.
 """
 
 import pandas as pd
 import numpy as np
 import math
 
-def calc_wp(margin, seconds_remaining):
-    if seconds_remaining <= 0:
-        return 1.0 if margin > 0 else (0.0 if margin < 0 else 0.5)
-        
-    # Standard deviation of the score margin shrinks as time runs out
-    # 11.5 is the approximate End-Of-Game standard deviation of margin for Euroleague
-    sigma = 11.5 * math.sqrt(seconds_remaining / 2400.0)
-    if sigma < 0.1: sigma = 0.1
-    
-    # Logistic approximation of Normal CDF
-    # formula: 1 / (1 + exp(-1.702 * x / sigma))
-    return 1.0 / (1.0 + math.exp(-1.702 * margin / sigma))
+from wp_model_utils import predict_wp, get_elo_diff
+
+
+def calc_wp(margin, seconds_remaining, elo_diff=0.0):
+    """Wrapper for backward compatibility. Delegates to ML model or fallback."""
+    return predict_wp(margin, seconds_remaining, elo_diff=elo_diff)
 
 def get_seconds(time_str):
     try:
@@ -56,9 +53,16 @@ def calculate_action_wpa():
             
     df['SecondsRemaining'] = df.apply(calc_game_seconds, axis=1)
     
+    # Load per-game Elo diffs (season = first Season value in file)
+    season = int(df['Season'].iloc[0]) if 'Season' in df.columns else 2025
+    elo_diff_map = {gc: get_elo_diff(season, gc) for gc in df['Gamecode'].unique()}
+    df['EloDiff'] = df['Gamecode'].map(elo_diff_map).fillna(0.0)
+
     # Determine WP at each row
     df['Margin'] = df['POINTS_A'] - df['POINTS_B']
-    df['WP_A'] = df.apply(lambda r: calc_wp(r['Margin'], r['SecondsRemaining']), axis=1)
+    df['WP_A'] = df.apply(
+        lambda r: calc_wp(r['Margin'], r['SecondsRemaining'], elo_diff=r['EloDiff']), axis=1
+    )
     
     # Calculate ΔWP
     # Shift within the game
