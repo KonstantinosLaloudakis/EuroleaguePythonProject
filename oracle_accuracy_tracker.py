@@ -282,24 +282,43 @@ def visualize(metrics, records):
         ax.grid(color=grid_color, linewidth=0.5, alpha=0.6)
 
     # ── Top: per-round accuracy trend ────────────────────────────────────────
+    MIN_FULL_ROUND = 5  # rounds with fewer games are makeup/rescheduled games
     if not per_round.empty:
-        ax_trend.plot(per_round['Round'], per_round['Accuracy'],
-                      color=accent, linewidth=2.0, marker='o', markersize=5)
+        full   = per_round[per_round['Games'] >= MIN_FULL_ROUND]
+        makeup = per_round[per_round['Games'] <  MIN_FULL_ROUND]
+
+        # Main trend line through full rounds only
+        ax_trend.plot(full['Round'], full['Accuracy'],
+                      color=accent, linewidth=2.0, marker='o', markersize=5,
+                      label='Full round (≥5 games)')
+        # Makeup games as hollow markers — not connected to the line
+        if not makeup.empty:
+            ax_trend.scatter(makeup['Round'], makeup['Accuracy'],
+                             color='#94a3b8', s=50, marker='o', zorder=5,
+                             linewidths=1.5, facecolors='none',
+                             label='Makeup game (<5 games)')
+
         ax_trend.axhline(metrics['accuracy'], color=green, linewidth=1.5,
                          linestyle='--', label=f"Season avg {metrics['accuracy']}%")
         ax_trend.axhline(50, color='#64748b', linewidth=1.0, linestyle=':')
-        ax_trend.set_ylim(0, 105)
+        ax_trend.set_ylim(0, 110)
         ax_trend.set_xlabel('Round', color=text_color, fontsize=10)
         ax_trend.set_ylabel('Accuracy %', color=text_color, fontsize=10)
         ax_trend.set_title('Prediction Accuracy by Round', color=text_color,
                             fontsize=13, fontweight='bold')
         ax_trend.legend(facecolor='#1e293b', labelcolor=text_color, fontsize=9)
-        # Annotate each point
-        for _, row in per_round.iterrows():
+        # Annotate full rounds
+        for _, row in full.iterrows():
             ax_trend.annotate(f"{row['Accuracy']:.0f}%",
                               (row['Round'], row['Accuracy']),
                               textcoords='offset points', xytext=(0, 8),
                               color=text_color, fontsize=7, ha='center')
+        # Annotate makeup games with game count
+        for _, row in makeup.iterrows():
+            ax_trend.annotate(f"{row['Accuracy']:.0f}%\n(n={row['Games']})",
+                              (row['Round'], row['Accuracy']),
+                              textcoords='offset points', xytext=(0, 10),
+                              color='#94a3b8', fontsize=7, ha='center')
 
     # ── Bottom-left: calibration bar chart ───────────────────────────────────
     if not calibration.empty:
