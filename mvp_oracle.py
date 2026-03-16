@@ -3,12 +3,13 @@ import matplotlib.pyplot as plt
 import argparse
 import sys
 import json
-import numpy as np
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 import matplotlib.image as mpimg
 from PIL import Image
 import os
-import pickle
+
+from wp_model_utils import predict_wp
+from predict_round_mvp import predict_round_mvp, print_mvp_leaderboard
 
 def run_oracle(target_round=None):
     # 1. Load Data
@@ -126,17 +127,26 @@ def run_oracle(target_round=None):
     else:
         print("Warning: elo_ratings.json not found. Elo factor disabled.")
 
-    # 3.3 Load Trained Logistic Regression Model (for calibrated probabilities)
-    lr_model = None
-    lr_scaler = None
-    if os.path.exists('oracle_lr_model.pkl'):
-        with open('oracle_lr_model.pkl', 'rb') as f:
-            lr_data = pickle.load(f)
-        lr_model = lr_data['model']
-        lr_scaler = lr_data['scaler']
-        print("Loaded trained LR model for calibrated probabilities.")
-    else:
-        print("Warning: oracle_lr_model.pkl not found. Using hand-tuned logistic.")
+    # 3.3 Load WPA ratings for per-team key player context
+    wpa_lookup = {}  # team -> {'player': str, 'wpa': float}
+    wpa_file = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    wpa_file = f'wpa_ratings{wpa_file}.json'
+    if not os.path.exists(wpa_file):
+        wpa_file = 'wpa_ratings.json'
+    if os.path.exists(wpa_file):
+        with open(wpa_file, 'r') as f:
+            wpa_data = json.load(f)
+        # Keep only the top WPA player per team
+        seen = set()
+        for entry in sorted(wpa_data, key=lambda x: x.get('Action_WPA', 0), reverse=True):
+            team = entry.get('Team')
+            if team and team not in seen:
+                wpa_lookup[team] = {
+                    'player': entry.get('Player', ''),
+                    'wpa': entry.get('Action_WPA', 0.0),
+                }
+                seen.add(team)
+        print(f"Loaded WPA ratings for {len(wpa_lookup)} teams.")
 
     # 3.5 Calculate League Rankings
     # Sort by ORTG (Desc) and DRTG (Asc)
@@ -297,7 +307,7 @@ def run_oracle(target_round=None):
     # Load Advanced Stats (optional, for X-Factor insights)
     adv_stats = {}
     try:
-        with open('C:/Users/klalo/PycharmProjects/pythonProject/team_advanced_stats.json', 'r') as f:
+        with open('team_advanced_stats.json', 'r') as f:
             adv_stats = json.load(f)
     except:
         pass
@@ -352,28 +362,17 @@ def run_oracle(target_round=None):
         
         margin = margin_raw + blended_hca
         
-        winner = local if margin > 0 else road
-        
-        # Win probability: use trained LR model if available, else hand-tuned
-        if lr_model is not None and lr_scaler is not None:
-            # Build feature vector matching training features
-            l_form_val = l_stat['Form']
-            r_form_val = r_stat['Form']
-            form_diff = l_form_val - r_form_val
-            l_sos = sos_lookup.get(local, 0.5)
-            r_sos = sos_lookup.get(road, 0.5)
-            sos_diff = l_sos - r_sos
-            l_home_net = l_stat['HomeNet']
-            r_away_net = r_stat['AwayNet']
-            
-            feat = np.array([[adj_diff, elo_margin, l_home_net, r_away_net, 
-                              form_diff, sos_diff, team_hca]])
-            feat_s = lr_scaler.transform(feat)
-            win_prob = lr_model.predict_proba(feat_s)[0][1] * 100  # P(home wins)
-            if winner != local:
-                win_prob = 100 - win_prob  # Flip to winner's perspective
-        else:
-            win_prob = 1 / (1 + np.exp(-margin / 6)) * 100
+        # Win probability: feed the blended predicted margin into the ML model
+        # (full time remaining = pre-game). Winner and confidence are derived
+        # from the same signal so they are always consistent.
+        home_win_prob = predict_wp(
+            margin=margin,
+            seconds_remaining=2400,
+            elo_diff=l_elo - r_elo,
+            is_home=True,
+        ) * 100
+        winner = local if home_win_prob >= 50 else road
+        win_prob = home_win_prob if winner == local else 100 - home_win_prob
         
         # === X-FACTOR INSIGHTS ===
         # Now data-driven with SOS context
@@ -414,8 +413,6 @@ def run_oracle(target_round=None):
                 insight = f"⚖️ Evenly matched (Adj Net gap: {gap:.1f})"
         
         # Build insight block
-        l_form_val = l_stat['Form']
-        r_form_val = r_stat['Form']
         line2 = f"Adj Net: {l_adj:+.1f} v {r_adj:+.1f}  |  Elo: {l_elo:.0f} v {r_elo:.0f}"
         
         l_l5 = l_form.get('Last5', [])
@@ -424,24 +421,55 @@ def run_oracle(target_round=None):
         r_l5_w = r_l5.count('W')
         
         line3 = f"L5: {l_l5_w}-{(5-l_l5_w)} v {r_l5_w}-{(5-r_l5_w)}  |  H: {l_form['HomeW']}-{l_form['HomeG']-l_form['HomeW']} v A: {r_form.get('RoadW',0)}-{r_form.get('RoadG',0)-r_form.get('RoadW',0)}"
-        
-        final_insight = f"{insight}\n{line2}\n{line3}"
-        
+
+        # WPA key player per team — last name only, no value (cumulative total is not card-friendly)
+        def _last_name(full):
+            # Names stored as "SURNAME, FIRST" or "SURNAME FIRST"
+            return full.split(',')[0].strip().title()
+
+        wpa_parts = []
+        for code, label in [(local, 'H'), (road, 'A')]:
+            entry = wpa_lookup.get(code)
+            if entry:
+                wpa_parts.append(f"{label}: {_last_name(entry['player'])}")
+        line4 = "Key players — " + "  |  ".join(wpa_parts) if wpa_parts else ""
+
+        final_insight = f"{insight}\n{line2}\n{line3}" + (f"\n{line4}" if line4 else "")
+
         predictions.append({
+            'Round': target_round,
             'Local': local,
+            'LocalName': local_name,
             'Road': road,
-            'Margin': margin,
+            'RoadName': road_name,
+            'Margin': round(margin, 2),
             'Winner': winner,
-            'Conf': win_prob,
-            'Insight': final_insight
+            'WinnerName': team_names.get(winner, winner),
+            'HomeWinProb': round(home_win_prob, 1),
+            'Conf': round(win_prob, 1),
+            'Insight': final_insight,
         })
 
-    # 6. Visualize
+    # 6. Round MVP candidates
+    mvp_candidates = predict_round_mvp(predictions, top_n=10)
+    print_mvp_leaderboard(mvp_candidates, target_round)
+
+    # 7. Save JSON forecast (includes MVP candidates)
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    json_out = f"oracle_forecast_round_{target_round}{round_suffix}.json"
+    output = {
+        'round': target_round,
+        'predictions': predictions,
+        'mvp_candidates': mvp_candidates,
+    }
+    with open(json_out, 'w') as f:
+        json.dump(output, f, indent=2)
+    print(f"Forecast JSON saved to {json_out}")
+
+    # 7. Visualize
     cols = 3
-    rows = (len(predictions) // cols) + (1 if len(predictions)%cols else 0)
-    
-    rows = (len(predictions) // cols) + (1 if len(predictions)%cols else 0)
-    
+    rows = (len(predictions) // cols) + (1 if len(predictions) % cols else 0)
+
     # Taller figsize to fit text (even taller for 3-line insight)
     # INCREASED HEIGHT: 8 inches per row to prevent layout cramping
     fig, axes = plt.subplots(rows, cols, figsize=(15, 8*rows))
@@ -478,13 +506,8 @@ def run_oracle(target_round=None):
         ax.set_xlim(0, 1)
         ax.set_ylim(0, 1)
         
-        # Team Names
         l_col = team_colors.get(local, '#333')
         r_col = team_colors.get(road, '#333')
-        # Team Names (Larger)
-        # Team Names (Larger)
-        # Add Logos if available
-        # Add Logos if available
         def add_normalized_logo(ax, team_code, x, y):
              logo_path = f"logos/{team_code}.png"
              if os.path.exists(logo_path):
@@ -502,28 +525,6 @@ def run_oracle(target_round=None):
                      print(f"Error loading logo for {team_code}: {e}")
              return False
 
-        # LOGO PLACEMENT: Vertical Stack "Poster Style"
-        # Since horizontal space is tight for long names, we stack them vertically.
-        # Structure:
-        # [Home Logo]
-        # [Home Name]
-        #     vs
-        # [Away Name]
-        # [Away Logo]
-        
-        # LOGO PLACEMENT: Vertical Stack "Poster Style"
-        # Since horizontal space is tight for long names, we stack them vertically.
-        # Structure:
-        # [Home Logo]
-        # [Home Name]
-        #     vs
-        # [Away Name]
-        # [Away Logo]
-        # [Gap]
-        # [Winner]
-        # [Insight]
-        # [Chart]
-        
         # Local (Top)
         # Logo at Top (0.5, 0.92)
         logo_loaded = add_normalized_logo(ax, local, 0.5, 0.92)
@@ -559,14 +560,38 @@ def run_oracle(target_round=None):
 
 
 
-    # Hide unused subplots completely
-    for j in range(i+1, len(axes)):
+    # MVP candidates card — use first available empty slot
+    first_empty = i + 1
+    if mvp_candidates and first_empty < len(axes):
+        ax = axes[first_empty]
+        ax.set_facecolor('#f0f4ff')
+        ax.set_xlim(0, 1)
+        ax.set_ylim(0, 1)
+        ax.axis('off')
+        ax.text(0.5, 0.95, f"MVP CANDIDATES — Round {target_round}",
+                ha='center', va='top', fontsize=13, fontweight='bold', color='#1d428a')
+        ax.axhline(0.88, color='#1d428a', linewidth=1, xmin=0.05, xmax=0.95)
+        header = f"{'#':<3} {'Player':<22} {'Tm':<5} {'AvgPIR':>7} {'WinP':>6} {'ExpPIR':>7}"
+        ax.text(0.05, 0.83, header, ha='left', va='top', fontsize=8,
+                fontfamily='monospace', color='#555')
+        for rank, c in enumerate(mvp_candidates[:8], 1):
+            y = 0.83 - rank * 0.09
+            name = c['Player'].split(',')[0].strip().title()  # last name only
+            line = f"{rank:<3} {name:<22} {c['Team']:<5} {c['AvgPIR']:>7.1f} {c['WinProb']:>5.0f}% {c['ExpectedPIR']:>7.1f}"
+            color = '#1a6b1a' if rank == 1 else '#333'
+            weight = 'bold' if rank == 1 else 'normal'
+            ax.text(0.05, y, line, ha='left', va='top', fontsize=8,
+                    fontfamily='monospace', color=color, fontweight=weight)
+        first_empty += 1
+
+    # Hide any remaining unused subplots
+    for j in range(first_empty, len(axes)):
         axes[j].set_visible(False)
     
     plt.tight_layout()
     plt.subplots_adjust(top=0.92)
     
-    outfile = f"oracle_forecast_round_{target_round}.png"
+    outfile = f"oracle_forecast_round_{target_round}{round_suffix}.png"
     plt.savefig(outfile, dpi=150)
     print(f"Forecast saved to {outfile}")
 

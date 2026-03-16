@@ -1,0 +1,237 @@
+{
+  "round": 32,
+  "predictions": [
+    {
+      "Round": 32,
+      "Local": "ULK",
+      "LocalName": "Fenerbahce",
+      "Road": "MIL",
+      "RoadName": "EA7 Milan",
+      "Margin": 5.63,
+      "Winner": "ULK",
+      "WinnerName": "Fenerbahce",
+      "HomeWinProb": 77.8,
+      "Conf": 77.8,
+      "Insight": "\u2696\ufe0f Evenly matched (Adj Net gap: 3.9)\nAdj Net: +2.8 v -1.2  |  Elo: 1561 v 1494\nL5: 4-1 v 3-2  |  H: 13-3 v A: 6-8\nKey players \u2014 H: Baldwin Iv  |  A: Brooks"
+    },
+    {
+      "Round": 32,
+      "Local": "PAM",
+      "LocalName": "Valencia",
+      "Road": "BAR",
+      "RoadName": "Barcelona",
+      "Margin": 5.54,
+      "Winner": "PAM",
+      "WinnerName": "Valencia",
+      "HomeWinProb": 66.4,
+      "Conf": 66.4,
+      "Insight": "\ud83c\udfdf\ufe0f FORTRESS: Valencia 87% at Home\nAdj Net: +4.7 v +0.6  |  Elo: 1536 v 1517\nL5: 4-1 v 1-4  |  H: 13-2 v A: 8-8\nKey players \u2014 H: Montero  |  A: Punter"
+    },
+    {
+      "Round": 32,
+      "Local": "PRS",
+      "LocalName": "Paris Basketball",
+      "Road": "PAR",
+      "RoadName": "Partizan",
+      "Margin": 5.64,
+      "Winner": "PRS",
+      "WinnerName": "Paris Basketball",
+      "HomeWinProb": 72.3,
+      "Conf": 72.3,
+      "Insight": "\ud83d\udcca Paris Basketball has faced tougher schedule\nAdj Net: -1.9 v -7.0  |  Elo: 1469 v 1457\nL5: 4-1 v 2-3  |  H: 6-10 v A: 3-13\nKey players \u2014 H: Hifi  |  A: Brown"
+    },
+    {
+      "Round": 32,
+      "Local": "MUN",
+      "LocalName": "Bayern",
+      "Road": "DUB",
+      "RoadName": "Dubai BC",
+      "Margin": -0.73,
+      "Winner": "MUN",
+      "WinnerName": "Bayern",
+      "HomeWinProb": 50.6,
+      "Conf": 50.6,
+      "Insight": "\ud83d\udd25 Dubai BC Won 5 Straight\nAdj Net: -3.1 v +0.7  |  Elo: 1480 v 1508\nL5: 2-3 v 5-0  |  H: 10-6 v A: 4-11\nKey players \u2014 H: Obst  |  A: Wright Iv"
+    },
+    {
+      "Round": 32,
+      "Local": "OLY",
+      "LocalName": "Olympiacos",
+      "Road": "BAS",
+      "RoadName": "Baskonia",
+      "Margin": 10.72,
+      "Winner": "OLY",
+      "WinnerName": "Olympiacos",
+      "HomeWinProb": 83.3,
+      "Conf": 83.3,
+      "Insight": "\u2744\ufe0f Baskonia Lost 6 Straight\nAdj Net: +5.4 v -4.9  |  Elo: 1534 v 1457\nL5: 3-2 v 0-5  |  H: 12-3 v A: 1-15\nKey players \u2014 H: Dorsey  |  A: Luwawu-Cabarrot"
+    },
+    {
+      "Round": 32,
+      "Local": "ASV",
+      "LocalName": "ASVEL",
+      "Road": "TEL",
+      "RoadName": "Maccabi",
+      "Margin": -2.75,
+      "Winner": "TEL",
+      "WinnerName": "Maccabi",
+      "HomeWinProb": 40.4,
+      "Conf": 59.6,
+      "Insight": "\ud83d\udcc8 Maccabi +5.6 Adj Net advantage\nAdj Net: -7.3 v -1.6  |  Elo: 1437 v 1503\nL5: 1-4 v 4-1  |  H: 6-9 v A: 6-10\nKey players \u2014 H: Watson  |  A: Sorkin"
+    },
+    {
+      "Round": 32,
+      "Local": "ZAL",
+      "LocalName": "Zalgiris",
+      "Road": "MAD",
+      "RoadName": "Real Madrid",
+      "Margin": 3.15,
+      "Winner": "ZAL",
+      "WinnerName": "Zalgiris",
+      "HomeWinProb": 61.0,
+      "Conf": 61.0,
+      "Insight": "\u2696\ufe0f Evenly matched (Adj Net gap: 1.2)\nAdj Net: +5.2 v +4.0  |  Elo: 1520 v 1530\nL5: 2-3 v 4-1  |  H: 10-4 v A: 5-10\nKey players \u2014 H: Francisco  |  A: Hezonja"
+    },
+    {
+      "Round": 32,
+      "Local": "IST",
+      "LocalName": "Anadolu Efes",
+      "Road": "MCO",
+      "RoadName": "Monaco",
+      "Margin": -4.39,
+      "Winner": "IST",
+      "WinnerName": "Anadolu Efes",
+      "HomeWinProb": 50.6,
+      "Conf": 50.6,
+      "Insight": "\ud83d\udcc8 Monaco +7.7 Adj Net advantage\nAdj Net: -3.4 v +4.3  |  Elo: 1454 v 1509\nL5: 3-2 v 2-3  |  H: 6-11 v A: 7-9\nKey players \u2014 H: Osmani  |  A: James"
+    },
+    {
+      "Round": 32,
+      "Local": "HTA",
+      "LocalName": "Hapoel Tel Aviv",
+      "Road": "VIR",
+      "RoadName": "Virtus Bologna",
+      "Margin": 5.89,
+      "Winner": "HTA",
+      "WinnerName": "Hapoel Tel Aviv",
+      "HomeWinProb": 72.5,
+      "Conf": 72.5,
+      "Insight": "\ud83d\udcca Hapoel Tel Aviv has faced tougher schedule\nAdj Net: +2.5 v -2.4  |  Elo: 1519 v 1487\nL5: 2-3 v 1-4  |  H: 9-5 v A: 4-12\nKey players \u2014 H: Bryant  |  A: Edwards"
+    },
+    {
+      "Round": 32,
+      "Local": "PAN",
+      "LocalName": "Panathinaikos",
+      "Road": "RED",
+      "RoadName": "Crvena Zvezda",
+      "Margin": 0.72,
+      "Winner": "PAN",
+      "WinnerName": "Panathinaikos",
+      "HomeWinProb": 59.7,
+      "Conf": 59.7,
+      "Insight": "\ud83d\udcca Panathinaikos has faced tougher schedule\nAdj Net: +0.6 v +2.4  |  Elo: 1507 v 1520\nL5: 1-4 v 2-3  |  H: 10-6 v A: 6-8\nKey players \u2014 H: Nunn  |  A: Nwora"
+    }
+  ],
+  "mvp_candidates": [
+    {
+      "Player": "VEZENKOV, SASHA",
+      "Team": "OLY",
+      "GP": 27,
+      "AvgPIR": 23.4,
+      "MaxPIR": 35.0,
+      "AvgPTS": 19.3,
+      "WinProb": 83.3,
+      "ExpectedPIR": 25.8
+    },
+    {
+      "Player": "BRYANT, ELIJAH",
+      "Team": "HTA",
+      "GP": 25,
+      "AvgPIR": 21.4,
+      "MaxPIR": 38.0,
+      "AvgPTS": 15.7,
+      "WinProb": 72.5,
+      "ExpectedPIR": 22.8
+    },
+    {
+      "Player": "MILUTINOV, NIKOLA",
+      "Team": "OLY",
+      "GP": 28,
+      "AvgPIR": 20.6,
+      "MaxPIR": 31.0,
+      "AvgPTS": 10.9,
+      "WinProb": 83.3,
+      "ExpectedPIR": 22.7
+    },
+    {
+      "Player": "FRANCISCO, SYLVAIN",
+      "Team": "ZAL",
+      "GP": 31,
+      "AvgPIR": 20.0,
+      "MaxPIR": 37.0,
+      "AvgPTS": 17.0,
+      "WinProb": 61.0,
+      "ExpectedPIR": 20.6
+    },
+    {
+      "Player": "JAMES, MIKE",
+      "Team": "MCO",
+      "GP": 31,
+      "AvgPIR": 18.9,
+      "MaxPIR": 37.0,
+      "AvgPTS": 16.7,
+      "WinProb": 49.4,
+      "ExpectedPIR": 18.8
+    },
+    {
+      "Player": "BALDWIN IV, WADE",
+      "Team": "ULK",
+      "GP": 29,
+      "AvgPIR": 17.0,
+      "MaxPIR": 34.0,
+      "AvgPTS": 14.3,
+      "WinProb": 77.8,
+      "ExpectedPIR": 18.4
+    },
+    {
+      "Player": "NUNN, KENDRICK",
+      "Team": "PAN",
+      "GP": 24,
+      "AvgPIR": 17.7,
+      "MaxPIR": 40.0,
+      "AvgPTS": 19.5,
+      "WinProb": 59.7,
+      "ExpectedPIR": 18.2
+    },
+    {
+      "Player": "HIFI, NADIR",
+      "Team": "PRS",
+      "GP": 30,
+      "AvgPIR": 17.0,
+      "MaxPIR": 32.0,
+      "AvgPTS": 19.0,
+      "WinProb": 72.3,
+      "ExpectedPIR": 18.1
+    },
+    {
+      "Player": "OTURU, DAN",
+      "Team": "HTA",
+      "GP": 29,
+      "AvgPIR": 16.4,
+      "MaxPIR": 30.0,
+      "AvgPTS": 13.3,
+      "WinProb": 72.5,
+      "ExpectedPIR": 17.6
+    },
+    {
+      "Player": "MONEKE, CHIMA",
+      "Team": "RED",
+      "GP": 28,
+      "AvgPIR": 18.1,
+      "MaxPIR": 35.0,
+      "AvgPTS": 13.6,
+      "WinProb": 40.3,
+      "ExpectedPIR": 17.5
+    }
+  ]
+}
