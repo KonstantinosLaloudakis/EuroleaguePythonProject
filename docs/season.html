@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Season Hub — Euroleague Analytics</title>
+    <meta name="description"
+        content="Euroleague Season Hub: standings, power ratings, playoff odds, MVP race, and Oracle Forecast.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="site-nav">
+        <span class="site-nav-brand">🏀 Euroleague Analytics</span>
+        <a href="index.html" class="nav-link">Game Replay</a>
+        <a href="season.html" class="nav-link active">Season Hub</a>
+    </nav>
+
+    <header>
+        <h1>📊 Season Hub</h1>
+        <p class="subtitle">Standings · Power Ratings · Playoff Odds · MVP Race · Oracle Forecast</p>
+    </header>
+
+    <main>
+        <!-- Tab Bar -->
+        <div class="tab-bar">
+            <button class="tab-btn active" onclick="switchTab('tab-standings')">
+                🏆 Standings &amp; Odds
+            </button>
+            <button class="tab-btn" onclick="switchTab('tab-oracle')">
+                🔮 Oracle Forecast
+            </button>
+        </div>
+
+        <!-- ── TAB 1: Standings & Odds ───────────────────────────────────── -->
+        <div id="tab-standings">
+
+            <div class="stat-card" style="margin-bottom:1.5rem;">
+                <h3>League Standings</h3>
+                <div id="standings-table">
+                    <div class="loading-placeholder">
+                        <span class="loading-spinner"></span> Loading standings...
+                    </div>
+                </div>
+            </div>
+
+            <div class="season-grid">
+                <div class="stat-card">
+                    <h3>Power Ratings — Adj Off vs Adj Def</h3>
+                    <div id="power-scatter" style="height:420px"></div>
+                </div>
+                <div class="stat-card">
+                    <h3>MVP Race — Top 10</h3>
+                    <div id="mvp-chart" style="height:420px"></div>
+                </div>
+            </div>
+
+            <div class="stat-card" style="margin-bottom:1.5rem;">
+                <h3>Playoff Probability Matrix</h3>
+                <div id="playoff-grid">
+                    <div class="loading-placeholder">
+                        <span class="loading-spinner"></span> Loading playoff grid...
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ── TAB 2: Oracle Forecast ────────────────────────────────────── -->
+        <div id="tab-oracle" class="hidden">
+
+            <div id="oracle-header" class="oracle-header-bar">
+                <div class="loading-placeholder">
+                    <span class="loading-spinner"></span> Loading oracle data...
+                </div>
+            </div>
+
+            <div id="oracle-cards">
+                <div class="loading-placeholder" style="padding:2rem 0;">
+                    <span class="loading-spinner"></span> Loading predictions...
+                </div>
+            </div>
+
+            <div class="season-grid" style="margin-top:1.5rem;">
+                <div class="stat-card">
+                    <h3>Player Performance Forecasts</h3>
+                    <div id="player-forecast-table">
+                        <div class="loading-placeholder">
+                            <span class="loading-spinner"></span> Loading forecasts...
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <h3>Oracle Accuracy &amp; Calibration</h3>
+                    <div id="accuracy-stats">
+                        <div class="loading-placeholder">
+                            <span class="loading-spinner"></span> Loading accuracy stats...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Error message (hidden by default) -->
+        <div id="load-error" class="hidden" style="text-align:center;padding:3rem 1rem;">
+            <div style="font-size:3rem;margin-bottom:1rem;">⚠️</div>
+            <p style="color:var(--text-muted);font-size:1rem;">
+                Could not load dashboard data. Make sure
+                <code>docs/data/current/dashboard.json</code> exists.<br>
+                Run <code>python export_dashboard_data.py</code> to generate it.
+            </p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Data from Euroleague API · Power Ratings: KenPom-style Adj. Off/Def ·
+            Monte Carlo: 10,000 simulations · Built with Plotly.js</p>
+    </footer>
+
+    <script src="season.js"></script>
+</body>
+
+</html>

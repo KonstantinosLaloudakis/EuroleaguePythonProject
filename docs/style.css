@@ -570,3 +570,594 @@ footer {
         height: 350px;
     }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   SEASON HUB STYLES
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Site Navigation ─────────────────────────────────────── */
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-nav-brand {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-right: auto;
+}
+
+.nav-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.35rem 0.8rem;
+    border-radius: 6px;
+    transition: all var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+    background: var(--bg-card);
+}
+
+.nav-link.active {
+    color: var(--accent-purple);
+    background: rgba(168, 85, 247, 0.12);
+}
+
+/* ── Tab Bar ─────────────────────────────────────────────── */
+.tab-bar {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--text-muted);
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all var(--transition);
+    margin-bottom: -1px;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+}
+
+.tab-btn.active {
+    color: var(--accent-purple);
+    border-bottom-color: var(--accent-purple);
+}
+
+/* ── Hidden utility ─────────────────────────────────────── */
+.hidden {
+    display: none !important;
+}
+
+/* ── Season grid (2-col layout) ──────────────────────────── */
+.season-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ── Loading placeholder ─────────────────────────────────── */
+.loading-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem 1rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ── Standings table ─────────────────────────────────────── */
+.standings-table-wrap {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.standings-tbl {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.83rem;
+    white-space: nowrap;
+}
+
+.standings-tbl th {
+    background: var(--bg-secondary);
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.standings-tbl th.sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.standings-tbl th.sortable:hover {
+    color: var(--text-primary);
+}
+
+.standings-tbl th.sort-active {
+    color: var(--accent-purple);
+}
+
+.standings-tbl td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-primary);
+    vertical-align: middle;
+}
+
+.standings-tbl tbody tr:hover {
+    background: rgba(168, 85, 247, 0.07);
+}
+
+.standings-tbl tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.standings-tbl tbody tr:nth-child(even):hover {
+    background: rgba(168, 85, 247, 0.07);
+}
+
+.pct-cell {
+    display: inline-block;
+    min-width: 52px;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    text-align: right;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+/* ── Team badge ─────────────────────────────────────────── */
+.team-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 22px;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.02em;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.team-badge.sm {
+    width: 28px;
+    height: 18px;
+    font-size: 0.58rem;
+}
+
+/* ── Playoff probability grid ────────────────────────────── */
+.playoff-grid-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.playoff-header-row {
+    display: grid;
+    grid-template-columns: 1fr 80px 90px 90px 90px;
+    gap: 0.5rem;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+}
+
+.ph-team { text-align: left; }
+.ph-xwins, .ph-tile { text-align: center; }
+
+.playoff-row {
+    display: grid;
+    grid-template-columns: 1fr 80px 90px 90px 90px;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.35rem 0.5rem;
+    border-radius: 6px;
+    transition: background var(--transition);
+}
+
+.playoff-row:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.pr-team {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.pr-name {
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pr-xwins {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.pr-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playoff-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 82px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: opacity var(--transition);
+}
+
+/* ── Oracle header bar ───────────────────────────────────── */
+.oracle-header-bar {
+    margin-bottom: 1.5rem;
+}
+
+.oracle-header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.oracle-round-badge {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.oracle-acc-badge {
+    background: rgba(168, 85, 247, 0.15);
+    color: var(--accent-purple);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ── Oracle cards grid ───────────────────────────────────── */
+.oracle-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.oracle-placeholder {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.oracle-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: border-color var(--transition);
+}
+
+.oracle-card:hover {
+    border-color: rgba(168, 85, 247, 0.4);
+}
+
+.oracle-matchup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.oracle-team {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex: 1;
+}
+
+.oracle-team.home-team {
+    justify-content: flex-start;
+}
+
+.oracle-team.away-team {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+.oracle-team-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+}
+
+.oracle-vs {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.ha-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.ha-home {
+    background: rgba(34, 197, 94, 0.2);
+    color: var(--accent-green);
+}
+
+.ha-away {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--accent-blue);
+}
+
+.winner-glow .oracle-team-name {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.winner-glow .team-badge {
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+/* ── Win probability bar ─────────────────────────────────── */
+.wp-bar-wrap {
+    display: flex;
+    height: 24px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.wp-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    transition: width 0.4s ease;
+    min-width: 28px;
+}
+
+.wp-home {
+    justify-content: flex-start;
+    padding-left: 6px;
+}
+
+.wp-away {
+    justify-content: flex-end;
+    padding-right: 6px;
+}
+
+/* ── Oracle footer ───────────────────────────────────────── */
+.oracle-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.oracle-margin {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.oracle-conf {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 10px;
+}
+
+.conf-high {
+    background: rgba(34, 197, 94, 0.15);
+    color: var(--accent-green);
+}
+
+.conf-med {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--accent-gold);
+}
+
+.conf-low {
+    background: rgba(156, 163, 175, 0.1);
+    color: var(--text-muted);
+}
+
+.oracle-insight {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    border-top: 1px solid var(--border);
+    padding-top: 0.5rem;
+    font-style: italic;
+}
+
+/* ── Player forecast table ───────────────────────────────── */
+.forecast-tbl {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.forecast-tbl th {
+    background: var(--bg-secondary);
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 0.6rem;
+    border-bottom: 2px solid var(--border);
+    text-align: right;
+}
+
+.forecast-tbl th:first-child,
+.forecast-tbl th:nth-child(2) {
+    text-align: left;
+}
+
+.forecast-tbl td {
+    padding: 0.45rem 0.6rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-primary);
+    text-align: right;
+    vertical-align: middle;
+}
+
+.forecast-tbl td:first-child,
+.forecast-tbl td:nth-child(2) {
+    text-align: left;
+}
+
+.forecast-tbl tbody tr:hover {
+    background: rgba(168, 85, 247, 0.07);
+}
+
+/* ── Accuracy stats ─────────────────────────────────────── */
+.accuracy-stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.acc-stat-box {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 0.8rem 0.5rem;
+    text-align: center;
+}
+
+.acc-val {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+}
+
+.acc-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .season-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .accuracy-stat-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .playoff-header-row,
+    .playoff-row {
+        grid-template-columns: 1fr 60px 72px 72px 72px;
+    }
+
+    .playoff-tile {
+        width: 68px;
+        font-size: 0.72rem;
+    }
+
+    .oracle-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .oracle-team-name {
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-nav {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .site-nav-brand {
+        font-size: 0.85rem;
+    }
+
+    .playoff-header-row,
+    .playoff-row {
+        grid-template-columns: 1fr 55px 65px 65px 65px;
+    }
+
+    .playoff-tile {
+        width: 60px;
+        font-size: 0.68rem;
+    }
+}
