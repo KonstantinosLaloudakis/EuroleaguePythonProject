@@ -4,6 +4,8 @@ import xml.etree.ElementTree as ET
 import json
 import os
 
+from wp_model_utils import predict_wp
+
 def run_monte_carlo(num_simulations=10000):
     print("--- 🏀 Euroleague Monte Carlo Playoff Matrix 🏀 ---")
     print(f"Running {num_simulations} simulations of the remaining season...")
@@ -76,6 +78,20 @@ def run_monte_carlo(num_simulations=10000):
     else:
         print("Warning: adjusted_ratings.json not found. Using raw ratings only.")
 
+    # 1c. Load Rolling Elo Ratings
+    elo_lookup = {}
+    elo_file = f'elo_ratings{round_suffix}.json'
+    if not os.path.exists(elo_file):
+        elo_file = 'elo_ratings.json'
+    if os.path.exists(elo_file):
+        with open(elo_file, 'r') as f:
+            elo_data = json.load(f)
+        for entry in elo_data:
+            elo_lookup[entry['Team']] = entry['Elo']
+        print(f"Loaded Elo Ratings for {len(elo_lookup)} teams.")
+    else:
+        print("Warning: elo_ratings.json not found. Elo factor disabled.")
+
     team_list = sorted(list(teams_data.keys()))
     num_teams = len(team_list)
     team_to_idx = {t: i for i, t in enumerate(team_list)}
@@ -83,33 +99,25 @@ def run_monte_carlo(num_simulations=10000):
     # Base Numpy Arrays
     base_wins = np.zeros(num_teams)
     base_pd = np.zeros(num_teams)
-    home_ratings = np.zeros(num_teams)
-    away_ratings = np.zeros(num_teams)
-    form_ratings = np.zeros(num_teams)
+    home_net_ratings = np.zeros(num_teams)
+    net_ratings = np.zeros(num_teams)
     adj_net_ratings = np.zeros(num_teams)
-    
+    elo_ratings = np.zeros(num_teams)
+
     for t in team_list:
         idx = team_to_idx[t]
         stats = teams_data[t]
-        
+
         base_wins[idx] = stats['W']
-        # Total PD
         t_pts = stats['HomePTS'] + stats['AwayPTS']
-        t_pa = stats['HomePA'] + stats['AwayPA']
+        t_pa  = stats['HomePA']  + stats['AwayPA']
         base_pd[idx] = t_pts - t_pa
-        
-        # True Home Rating
-        home_ratings[idx] = (stats['HomePTS'] - stats['HomePA']) / stats['HomeGP'] if stats['HomeGP'] > 0 else 0
-        
-        # True Away Rating
-        away_ratings[idx] = (stats['AwayPTS'] - stats['AwayPA']) / stats['AwayGP'] if stats['AwayGP'] > 0 else 0
-        
-        # Momentum (Last 5 Games Avg Margin)
-        recent_games = stats['GameMargins'][-5:] if len(stats['GameMargins']) >=5 else stats['GameMargins']
-        form_ratings[idx] = sum(recent_games) / len(recent_games) if recent_games else 0
-        
-        # KenPom Adjusted Net Rating
-        adj_net_ratings[idx] = adj_net_lookup.get(t, 0)
+
+        gp = stats['HomeGP'] + stats['AwayGP']
+        net_ratings[idx]      = (t_pts - t_pa) / gp if gp > 0 else 0
+        home_net_ratings[idx] = (stats['HomePTS'] - stats['HomePA']) / stats['HomeGP'] if stats['HomeGP'] > 0 else 0
+        adj_net_ratings[idx]  = adj_net_lookup.get(t, 0)
+        elo_ratings[idx]      = elo_lookup.get(t, 1500)
 
     # 2. Extract Unplayed Games
     name_to_code = {
@@ -184,42 +192,44 @@ def run_monte_carlo(num_simulations=10000):
     for h_code, a_code in remaining_games:
         h_idx = team_to_idx[h_code]
         a_idx = team_to_idx[a_code]
-        
-        # 3.1 Advanced 3-Factor Prediction Formula
-        # Factor 1: KenPom Adjusted Net Rating (50%) — opponent-quality corrected
-        # Factor 2: True Home/Away Location Split (20%) — captures venue-specific performance
-        # Factor 3: Recent Form / Momentum (30%) — last 5 games streak
-        
+
+        # Mirror oracle prediction formula exactly:
+        # 75% Adj Net diff + 25% Elo margin (Elo HCA=+50, converted to pts /25)
         h_adj = adj_net_ratings[h_idx]
         a_adj = adj_net_ratings[a_idx]
-        
-        h_loc = home_ratings[h_idx]
-        a_loc = away_ratings[a_idx]
-        
-        h_form = form_ratings[h_idx]
-        a_form = form_ratings[a_idx]
-        
-        # Blended Rating: 50% Adjusted + 20% Location + 30% Form
-        h_power = (h_adj * 0.50) + (h_loc * 0.20) + (h_form * 0.30)
-        a_power = (a_adj * 0.50) + (a_loc * 0.20) + (a_form * 0.30)
-        
-        # Adj Net is global (not location-split), so add reduced HCA bonus
-        pred_margin = (h_power - a_power) + (hca * 0.5)
-        
-        # Simulate Margin with noise (std dev of 12 points)
-        margins = np.random.normal(loc=pred_margin, scale=12.0, size=num_simulations)
-        
-        # Resolve exact ties randomly
-        margins[margins == 0] = np.random.choice([0.1, -0.1], size=np.sum(margins == 0))
-        
-        home_wins = (margins > 0).astype(int)
+        h_elo = elo_ratings[h_idx]
+        a_elo = elo_ratings[a_idx]
+
+        adj_diff   = h_adj - a_adj
+        elo_margin = (h_elo - a_elo + 50) / 25
+        margin_raw = adj_diff * 0.75 + elo_margin * 0.25
+
+        # Per-team HCA (30% team-specific, 70% global)
+        team_hca   = home_net_ratings[h_idx] - net_ratings[h_idx]
+        blended_hca = (hca * 0.7 + team_hca * 0.3) * 0.5
+        pred_margin = margin_raw + blended_hca
+
+        # ML win probability — same call as the oracle
+        home_win_prob = predict_wp(
+            margin=pred_margin,
+            seconds_remaining=2400,
+            elo_diff=h_elo - a_elo,
+        )
+
+        # Vectorised Bernoulli draw for win/loss
+        rand = np.random.uniform(size=num_simulations)
+        home_wins = (rand < home_win_prob).astype(int)
         away_wins = 1 - home_wins
-        
+
+        # Sample margin magnitude for point-differential tracking;
+        # sign is forced to match the win/loss outcome
+        mag = np.abs(np.random.normal(loc=abs(pred_margin), scale=10.0, size=num_simulations))
+        margins = np.where(home_wins, mag, -mag)
+
         sim_wins[:, h_idx] += home_wins
         sim_wins[:, a_idx] += away_wins
-        
-        sim_pd[:, h_idx] += margins
-        sim_pd[:, a_idx] -= margins
+        sim_pd[:, h_idx]   += margins
+        sim_pd[:, a_idx]   -= margins
 
     # 4. Rank and Aggregate
     print("Aggregating ranks...")
