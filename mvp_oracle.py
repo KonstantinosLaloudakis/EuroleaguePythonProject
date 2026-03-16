@@ -451,30 +451,47 @@ def run_oracle(target_round=None):
             'Insight': final_insight,
         })
 
-    # 6. Round MVP candidates
-    mvp_candidates = predict_round_mvp(predictions, top_n=10)
-    print_mvp_leaderboard(mvp_candidates, target_round)
-
-    # 7. Save JSON forecast (MVP candidates first, so player forecaster can read win probs)
+    # 6. Save game predictions first so player forecaster can read win probs
     round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
     json_out = f"oracle_forecast_round_{target_round}{round_suffix}.json"
+    with open(json_out, 'w') as f:
+        json.dump({'round': target_round, 'predictions': predictions}, f, indent=2)
+
+    # 7. Player performance forecast (more complete model: defence + form + home/away)
+    player_forecasts = predict_player_round(target_round=target_round, oracle_path=json_out)
+    if player_forecasts:
+        print_player_leaderboard(player_forecasts, target_round)
+
+    # 8. Derive MVP candidates from player forecasts (top 10 by PredictedPIR)
+    #    This ensures consistency — same defensive / form / win-prob factors for both lists.
+    if player_forecasts:
+        mvp_candidates = [
+            {
+                'Player':       p['Player'],
+                'Team':         p['Team'],
+                'GP':           p['GP'],
+                'AvgPIR':       p['AvgPIR'],
+                'MaxPIR':       p.get('MaxPIR', p['AvgPIR']),
+                'AvgPTS':       p['AvgPTS'],
+                'WinProb':      p['WinProb'],
+                'ExpectedPIR':  p['PredictedPIR'],
+            }
+            for p in player_forecasts[:10]
+        ]
+    else:
+        mvp_candidates = predict_round_mvp(predictions, top_n=10)
+    print_mvp_leaderboard(mvp_candidates, target_round)
+
+    # 9. Save full JSON
     output = {
-        'round': target_round,
-        'predictions': predictions,
-        'mvp_candidates': mvp_candidates,
+        'round':           target_round,
+        'predictions':     predictions,
+        'mvp_candidates':  mvp_candidates,
+        'player_forecasts': player_forecasts,
     }
     with open(json_out, 'w') as f:
         json.dump(output, f, indent=2)
     print(f"Forecast JSON saved to {json_out}")
-
-    # 8. Player performance forecast (reads win probs from the JSON just saved)
-    player_forecasts = predict_player_round(target_round=target_round, oracle_path=json_out)
-    if player_forecasts:
-        print_player_leaderboard(player_forecasts, target_round)
-        output['player_forecasts'] = player_forecasts
-        with open(json_out, 'w') as f:
-            json.dump(output, f, indent=2)
-        print(f"Player forecasts added to {json_out}")
 
     # 7. Visualize
     cols = 3

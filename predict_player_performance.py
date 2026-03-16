@@ -72,6 +72,7 @@ def _build_player_profiles(logs):
         .agg(
             GP      = ('GameCode', 'count'),
             AvgPIR  = ('PIR',      'mean'),
+            MaxPIR  = ('PIR',      'max'),
             AvgPTS  = ('PTS',      'mean'),
             # Home splits
             HomePIR = ('PIR',      lambda x: x[logs.loc[x.index, 'IsHome']].mean()),
@@ -244,6 +245,7 @@ def predict_round(target_round=None, oracle_path=None, top_n=15):
                 'IsHome':        is_home,
                 'GP':            int(player['GP']),
                 'AvgPIR':        round(player['AvgPIR'], 1),
+                'MaxPIR':        round(player['MaxPIR'], 1),
                 'AvgPTS':        round(player['AvgPTS'], 1),
                 'FormFactor':    round(form_factor, 3),
                 'DefFactor':     round(def_factor, 3),
