@@ -26,7 +26,7 @@ def create_playoff_matrix():
     
     # Titling
     ax.text(0.5, 0.97, "ADVANCED PLAYOFF PROBABILITY MATRIX", ha='center', va='center', fontsize=26, color='#fbbf24', fontweight='bold', fontname='Impact')
-    ax.text(0.5, 0.94, "10,000 Simulations (Location Splits + Momentum)", ha='center', va='center', fontsize=14, color='#94a3b8', style='italic')
+    ax.text(0.5, 0.94, "10,000 Simulations · ML Win Probability Model (Adj Net + Elo)", ha='center', va='center', fontsize=14, color='#94a3b8', style='italic')
     
     # Grid Layout X Coordinates
     cols = {
