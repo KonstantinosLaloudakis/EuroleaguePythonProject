@@ -64,6 +64,24 @@ def load_with_fallback(suffix, base_name, fallback_name=None):
     return data
 
 
+def parse_schedule_dates():
+    """Parse official_schedule_2025.xml → {(homecode, awaycode): {'date': ..., 'time': ...}}."""
+    dates = {}
+    try:
+        import xml.etree.ElementTree as ET
+        tree = ET.parse('official_schedule_2025.xml')
+        for item in tree.getroot().iter('item'):
+            home = (item.findtext('homecode') or '').strip()
+            away = (item.findtext('awaycode') or '').strip()
+            date = (item.findtext('date') or '').strip()
+            time = (item.findtext('startime') or '').strip()
+            if home and away and date:
+                dates[(home, away)] = {'date': date, 'time': time}
+    except Exception as e:
+        print(f"  [WARN] Could not parse schedule XML: {e}")
+    return dates
+
+
 def find_latest_oracle_forecast():
     """Scan for oracle_forecast_round_*_ml.json or oracle_forecast_round_*.json,
     pick highest round number. Returns (path, round_num) or (None, None)."""
@@ -111,7 +129,14 @@ def main():
     mc_data = load_with_fallback(suffix, 'monte_carlo_results.json')
     mvp_data = load_with_fallback(suffix, 'mvp_rankings_2025.json')
     standings_data = load_json('mvp_standings_derived.json')
-    accuracy_data = load_with_fallback(suffix, 'oracle_accuracy_ml.json', 'oracle_accuracy_ml.json')
+    # Accuracy: try oracle_accuracy{suffix}.json first (no _ml infix), then ml variant, then bare
+    accuracy_data = None
+    if suffix:
+        accuracy_data = load_json(f'oracle_accuracy{suffix}.json')
+        if accuracy_data is not None:
+            print(f"  Loaded: oracle_accuracy{suffix}.json")
+    if accuracy_data is None:
+        accuracy_data = load_with_fallback(suffix, 'oracle_accuracy_ml.json', 'oracle_accuracy_ml.json')
     if accuracy_data is None:
         accuracy_data = load_with_fallback(suffix, 'oracle_accuracy.json')
 
@@ -122,6 +147,31 @@ def main():
     player_forecasts = find_latest_player_forecast(oracle_round)
     if oracle_data and player_forecasts:
         oracle_data['player_forecasts'] = player_forecasts
+
+    # Enrich oracle predictions with game dates from schedule XML
+    schedule_dates = parse_schedule_dates()
+    if oracle_data and schedule_dates:
+        for pred in oracle_data.get('predictions', []):
+            key = (pred.get('Local', ''), pred.get('Road', ''))
+            info = schedule_dates.get(key, {})
+            pred['Date'] = info.get('date', '')
+            pred['Time'] = info.get('time', '')
+
+    # ── Compute Last 5 results per team from backtest ────────────────────────
+    l5_lookup = {}
+    backtest_data = load_with_fallback(suffix, 'oracle_backtest_predictions.json', 'oracle_backtest_predictions.json')
+    if backtest_data:
+        from collections import defaultdict
+        team_games = defaultdict(list)
+        for g in backtest_data:
+            home, away, winner = g.get('Home'), g.get('Away'), g.get('ActualWinner')
+            rnd = g.get('Round', 0)
+            if home and away and winner:
+                team_games[home].append((rnd, 'W' if winner == home else 'L'))
+                team_games[away].append((rnd, 'W' if winner == away else 'L'))
+        for team, games in team_games.items():
+            games.sort(key=lambda x: x[0])
+            l5_lookup[team] = [r for _, r in games[-5:]]
 
     # ── Build Elo lookup ─────────────────────────────────────────────────────
     elo_lookup = {}
@@ -186,6 +236,11 @@ def main():
                 'top10_pct': mc.get('Top10_Pct', 0.0),
                 'avg_wins': round(mc.get('Avg_Wins', wins), 1),
                 'current_wins': mc.get('Current_Wins', wins),
+                'last5': l5_lookup.get(code, []),
+                'remaining_sos': round(row.get('Remaining_SOS', 0.0), 1),
+                'home_games': row.get('Home_Games', 0),
+                'away_games': row.get('Away_Games', 0),
+                'remaining_opponents': row.get('Remaining_Opponents', []),
             })
 
     # Sort: wins desc, then adj_net desc
@@ -208,8 +263,10 @@ def main():
             })
 
     # ── Build output ─────────────────────────────────────────────────────────
+    from datetime import datetime
     output = {
         'round': round_num,
+        'updated': datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
         'teams': teams,
         'mvp': mvp_list,
         'oracle': oracle_data,

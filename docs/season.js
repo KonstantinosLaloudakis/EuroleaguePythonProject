@@ -29,13 +29,30 @@ async function init() {
         renderStandings(data.teams || []);
         renderPowerScatter(data.teams || []);
         renderMVPRace(data.mvp || []);
-        renderPlayoffGrid(data.teams || []);
+        renderScheduleDifficulty(data.teams || []);
         renderOracleHeader(data);
         renderOracleCards(data.oracle);
         renderPlayerForecasts(
-            (data.oracle && data.oracle.player_forecasts) ? data.oracle.player_forecasts : []
+            (data.oracle && data.oracle.player_forecasts) ? data.oracle.player_forecasts : [],
+            data.teams || []
         );
         renderAccuracyStats(data.accuracy);
+
+        // Last updated stamp
+        if (data.updated) {
+            const el = document.getElementById('last-updated');
+            if (el) {
+                const d = new Date(data.updated);
+                el.textContent = `Data as of Round ${data.round} · Updated ${d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}`;
+                el.style.display = '';
+            }
+        }
+
+        // Restore tab from URL hash
+        const hash = location.hash.replace('#', '');
+        if (hash === 'tab-oracle' || hash === 'tab-standings') {
+            switchTab(hash);
+        }
 
     } catch (err) {
         console.error('Dashboard load error:', err);
@@ -59,6 +76,9 @@ function switchTab(tabId) {
         btn.classList.toggle('active', tabs[i] === tabId);
     });
 
+    // Persist tab in URL hash
+    history.replaceState(null, '', '#' + tabId);
+
     // Trigger Plotly resize so charts fill their containers correctly
     if (tabId === 'tab-oracle') {
         setTimeout(() => {
@@ -76,10 +96,13 @@ function renderStandings(teams) {
         return;
     }
 
+    const PLAYOFF_CUTOFFS = { 4: 'cutoff-top4', 6: 'cutoff-top6', 10: 'cutoff-top10' };
+
     const cols = [
         { key: '#',        label: '#',        sortKey: null,       align: 'center' },
         { key: 'name',     label: 'Team',     sortKey: 'name',     align: 'left' },
         { key: 'wl',       label: 'W-L',      sortKey: 'wins',     align: 'center' },
+        { key: 'last5',    label: 'Last 5',   sortKey: null,       align: 'center' },
         { key: 'elo',      label: 'Elo',      sortKey: 'elo',      align: 'right' },
         { key: 'adj_net',  label: 'Adj Net',  sortKey: 'adj_net',  align: 'right' },
         { key: 'adj_off',  label: 'Adj Off',  sortKey: 'adj_off',  align: 'right' },
@@ -102,15 +125,36 @@ function renderStandings(teams) {
         html += '</tr></thead><tbody>';
 
         sorted.forEach((t, i) => {
+            const rank = i + 1;
             const badgeColor = TEAM_COLORS[t.team] || '#555';
             const badge = `<span class="team-badge" style="background:${badgeColor}">${t.team.substring(0,3)}</span>`;
             const netColor = t.adj_net >= 0 ? 'var(--accent-green)' : 'var(--accent-red)';
             const netStr = (t.adj_net >= 0 ? '+' : '') + t.adj_net.toFixed(2);
 
-            html += `<tr>
-                <td style="text-align:center;color:var(--text-muted);font-size:0.8rem">${i + 1}</td>
+            // Last 5 form dots
+            const last5 = (t.last5 || []);
+            const formDots = last5.map(r =>
+                `<span class="form-dot form-${r === 'W' ? 'w' : 'l'}">${r}</span>`
+            ).join('');
+
+            // Cutoff divider row — insert BEFORE rank 5, 7, 11
+            let divider = '';
+            if (PLAYOFF_CUTOFFS[rank - 1]) {
+                const label = rank - 1 === 4 ? 'Top 4 cutoff' : rank - 1 === 6 ? 'Playoff cutoff (Top 6)' : 'Play-in cutoff (Top 10)';
+                const colorMap = { 'cutoff-top4': '#a855f7', 'cutoff-top6': '#22c55e', 'cutoff-top10': '#3b82f6' };
+                const col = colorMap[PLAYOFF_CUTOFFS[rank - 1]];
+                divider = `<tr class="cutoff-row ${PLAYOFF_CUTOFFS[rank - 1]}">
+                    <td colspan="${cols.length}" style="border-top:2px solid ${col}40;padding:0">
+                        <span class="cutoff-label" style="color:${col}">${label}</span>
+                    </td>
+                </tr>`;
+            }
+
+            html += divider + `<tr>
+                <td style="text-align:center;color:var(--text-muted);font-size:0.8rem">${rank}</td>
                 <td style="text-align:left">${badge} <span style="font-weight:600">${t.name}</span></td>
                 <td style="text-align:center;font-weight:700">${t.wins}-${t.losses}</td>
+                <td style="text-align:center"><div class="form-dots">${formDots}</div></td>
                 <td style="text-align:right">${t.elo.toFixed(0)}</td>
                 <td style="text-align:right;color:${netColor};font-weight:700">${netStr}</td>
                 <td style="text-align:right">${t.adj_off.toFixed(1)}</td>
@@ -226,7 +270,7 @@ function renderPowerScatter(teams) {
 
     const trace = {
         type: 'scatter',
-        mode: 'markers+text',
+        mode: 'markers',
         x, y,
         text,
         hovertext: hoverText,
@@ -248,6 +292,14 @@ function renderPowerScatter(teams) {
     };
 
     Plotly.newPlot('power-scatter', [trace], layout, { displayModeBar: false, responsive: true });
+}
+
+let _scatterLabelsOn = false;
+function toggleScatterLabels() {
+    _scatterLabelsOn = !_scatterLabelsOn;
+    Plotly.restyle('power-scatter', { mode: _scatterLabelsOn ? 'markers+text' : 'markers' });
+    const btn = document.getElementById('scatter-label-btn');
+    if (btn) btn.textContent = _scatterLabelsOn ? 'Hide Labels' : 'Show Labels';
 }
 
 // ── MVP Race bar chart ────────────────────────────────────────────────────
@@ -307,45 +359,92 @@ function renderMVPRace(mvp) {
 }
 
 // ── Playoff probability grid ──────────────────────────────────────────────
-function renderPlayoffGrid(teams) {
-    const container = document.getElementById('playoff-grid');
-    if (!teams.length) {
-        container.innerHTML = '<p style="color:var(--text-muted);padding:1rem">No playoff data available.</p>';
-        return;
-    }
+// ── Remaining Schedule Difficulty ─────────────────────────────────────────
+function renderScheduleDifficulty(teams) {
+    const container = document.getElementById('schedule-difficulty');
+    if (!teams.length) return;
+    container.innerHTML = '';
 
-    const sorted = [...teams].sort((a, b) => b.top6_pct - a.top6_pct);
+    // Sort by current standing (wins desc, then adj_net desc) — same as standings table
+    const sorted = [...teams].sort((a, b) => b.wins - a.wins || b.adj_net - a.adj_net);
 
-    let html = '<div class="playoff-grid-inner">';
-    html += `<div class="playoff-header-row">
-        <div class="ph-team">Team</div>
-        <div class="ph-xwins">xWins</div>
-        <div class="ph-tile" style="color:#a855f7">Top 4</div>
-        <div class="ph-tile" style="color:#22c55e">Top 6</div>
-        <div class="ph-tile" style="color:#3b82f6">Top 10</div>
-    </div>`;
+    const names     = sorted.map(t => t.name);
+    const sos       = sorted.map(t => t.remaining_sos || 0);
+    const remaining = sorted.map(t => t.remaining || 0);
+    const homeGames = sorted.map(t => t.home_games || 0);
+    const awayGames = sorted.map(t => t.away_games || 0);
+    const colors    = sorted.map(t => TEAM_COLORS[t.team] || '#555');
 
-    sorted.forEach(t => {
-        const badgeColor = TEAM_COLORS[t.team] || '#555';
-        const badge = `<span class="team-badge" style="background:${badgeColor}">${t.team.substring(0,3)}</span>`;
-        html += `<div class="playoff-row">
-            <div class="pr-team">${badge} <span class="pr-name">${t.name}</span></div>
-            <div class="pr-xwins">${t.avg_wins.toFixed(1)}</div>
-            <div class="pr-tile">${playoffTile(t.top4_pct, '#a855f7')}</div>
-            <div class="pr-tile">${playoffTile(t.top6_pct, '#22c55e')}</div>
-            <div class="pr-tile">${playoffTile(t.top10_pct, '#3b82f6')}</div>
-        </div>`;
+    const meanSOS = sos.reduce((s, v) => s + v, 0) / sos.length;
+
+    const hoverText = sorted.map((t, i) =>
+        `<b>${t.name}</b><br>` +
+        `Remaining: ${remaining[i]} games (${homeGames[i]}H / ${awayGames[i]}A)<br>` +
+        `Opp Avg Win%: ${sos[i].toFixed(1)}%<br>` +
+        `League avg: ${meanSOS.toFixed(1)}%`
+    );
+
+    // Difficulty label: colour bar by SOS vs mean
+    const barColors = sos.map(s => {
+        const diff = s - meanSOS;
+        if (diff > 3)  return 'rgba(239,68,68,0.75)';   // tough
+        if (diff < -3) return 'rgba(34,197,94,0.75)';   // easy
+        return 'rgba(245,158,11,0.65)';                  // average
     });
 
-    html += '</div>';
-    container.innerHTML = html;
-}
+    const traces = [
+        {
+            type: 'bar',
+            orientation: 'h',
+            y: names,
+            x: sos,
+            text: sorted.map((t, i) => `${sos[i].toFixed(1)}%  (${homeGames[i]}H/${awayGames[i]}A)`),
+            textposition: 'outside',
+            textfont: { color: '#9ca3af', size: 10 },
+            hovertext: hoverText,
+            hoverinfo: 'text',
+            marker: { color: barColors, line: { color: '#1f2029', width: 1 } },
+        },
+        // Mean reference line (shape is cleaner but annotations work for legend)
+    ];
 
-function playoffTile(val, color) {
-    const opacity = Math.min(val / 100, 1) * 0.75;
-    const bg = hexToRgba(color, opacity);
-    const textColor = opacity > 0.25 ? '#fff' : 'var(--text-muted)';
-    return `<div class="playoff-tile" style="background:${bg};color:${textColor}">${val.toFixed(1)}%</div>`;
+    const layout = {
+        paper_bgcolor: 'transparent',
+        plot_bgcolor: '#0f1117',
+        font: { color: '#9ca3af', family: 'Inter' },
+        margin: { t: 10, b: 50, l: 160, r: 90 },
+        height: 500,
+        xaxis: {
+            title: 'Opponents Avg Win% (higher = harder schedule)',
+            gridcolor: '#2d2e3a',
+            zerolinecolor: '#2d2e3a',
+            ticksuffix: '%',
+            tickfont: { size: 11 },
+            range: [Math.min(...sos) - 5, Math.max(...sos) + 8],
+        },
+        yaxis: {
+            autorange: 'reversed',   // rank 1 at top
+            gridcolor: '#2d2e3a',
+            tickfont: { size: 11, color: '#f0f0f5' },
+        },
+        shapes: [{
+            type: 'line',
+            x0: meanSOS, x1: meanSOS,
+            y0: -0.5, y1: names.length - 0.5,
+            line: { color: 'rgba(156,163,175,0.5)', width: 1.5, dash: 'dot' },
+        }],
+        annotations: [{
+            x: meanSOS, y: -0.5,
+            text: `Avg ${meanSOS.toFixed(1)}%`,
+            showarrow: false,
+            yanchor: 'top',
+            font: { color: 'rgba(156,163,175,0.7)', size: 10 },
+        }],
+        showlegend: false,
+        hovermode: 'closest',
+    };
+
+    Plotly.newPlot('schedule-difficulty', traces, layout, { displayModeBar: false, responsive: true });
 }
 
 // ── Oracle header ─────────────────────────────────────────────────────────
@@ -364,6 +463,38 @@ function renderOracleHeader(data) {
 }
 
 // ── Oracle game cards ─────────────────────────────────────────────────────
+function parseInsight(raw) {
+    if (!raw) return { headline: '', pills: [], keyPlayers: '' };
+    const lines = raw.split('\n').map(l => l.trim()).filter(Boolean);
+
+    // Line 0: emoji + headline
+    const headline = lines[0] ? lines[0].replace(/[\u2600-\u27BF\uD83C-\uDBFF\uDC00-\uDFFF]+/gu, '').trim() : '';
+
+    // Line 1: "Adj Net: X v Y  |  Elo: X v Y"
+    const pills = [];
+    if (lines[1]) {
+        lines[1].split('|').forEach(seg => {
+            const s = seg.trim();
+            if (s) pills.push(s);
+        });
+    }
+    // Line 2: "L5: X-Y v X-Y  |  H: X-Y v A: X-Y"
+    if (lines[2]) {
+        lines[2].split('|').forEach(seg => {
+            const s = seg.trim();
+            if (s) pills.push(s);
+        });
+    }
+
+    // Line 3: "Key players — H: Player  |  A: Player"
+    let keyPlayers = '';
+    if (lines[3]) {
+        keyPlayers = lines[3].replace('Key players —', '').trim();
+    }
+
+    return { headline, pills, keyPlayers };
+}
+
 function renderOracleCards(oracle) {
     const container = document.getElementById('oracle-cards');
     if (!oracle || !oracle.predictions || !oracle.predictions.length) {
@@ -371,7 +502,8 @@ function renderOracleCards(oracle) {
         return;
     }
 
-    const preds = oracle.predictions;
+    // Sort by confidence descending — highest confidence picks first
+    const preds = [...oracle.predictions].sort((a, b) => (b.Conf || 0) - (a.Conf || 0));
     let html = '<div class="oracle-cards-grid">';
 
     preds.forEach(p => {
@@ -384,43 +516,67 @@ function renderOracleCards(oracle) {
         const awayGlow = !isHomeWinner ? ' winner-glow' : '';
         const homeColor = TEAM_COLORS[p.Local] || '#ef4444';
         const awayColor = TEAM_COLORS[p.Road] || '#3b82f6';
+        const winnerName = p.WinnerName || (isHomeWinner ? p.LocalName : p.RoadName) || p.Winner;
 
-        // Truncate insight to 100 chars
-        let insight = '';
-        if (p.Insight) {
-            const clean = p.Insight.replace(/[\u2600-\u27BF\uD800-\uDFFF]/gu, '').trim();
-            insight = clean.length > 100 ? clean.substring(0, 97) + '…' : clean;
+        const confNum = parseFloat(conf);
+        // Confidence color: green ≥70%, gold 60-70%, grey <60%
+        const confBadgeClass = confNum >= 70 ? 'conf-high' : confNum >= 60 ? 'conf-med' : 'conf-low';
+        const isCoinFlip = p.Margin !== undefined && p.Margin !== null && Math.abs(p.Margin) <= 3;
+
+        // Favorite bar gets brighter color + border; underdog bar stays muted
+        const homeBarStyle = isHomeWinner
+            ? `width:${homeWP}%;background:${homeColor}cc;box-shadow:0 0 8px ${homeColor}55;border:1px solid ${homeColor}`
+            : `width:${homeWP}%;background:${homeColor}40`;
+        const awayBarStyle = !isHomeWinner
+            ? `width:${awayWP}%;background:${awayColor}cc;box-shadow:0 0 8px ${awayColor}55;border:1px solid ${awayColor}`
+            : `width:${awayWP}%;background:${awayColor}40`;
+
+        const { headline, pills, keyPlayers } = parseInsight(p.Insight);
+
+        const pillsHtml = pills.map(pill => `<span class="insight-pill">${pill}</span>`).join('');
+        const keyHtml = keyPlayers ? `<div class="insight-key-players">${keyPlayers}</div>` : '';
+
+        // Format date: "Sep 30, 2025" → "Tue Sep 30"
+        let dateStr = '';
+        if (p.Date) {
+            try {
+                const dt = new Date(p.Date);
+                dateStr = dt.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+            } catch (_) { dateStr = p.Date; }
         }
+        const timeStr = p.Time ? p.Time.substring(0, 5) : '';
 
-        const confBadgeClass = conf >= 75 ? 'conf-high' : conf >= 60 ? 'conf-med' : 'conf-low';
-
-        html += `<div class="oracle-card">
+        html += `<div class="oracle-card" style="border-top:2px solid ${isHomeWinner ? homeColor : awayColor}22">
+            ${dateStr ? `<div class="oracle-game-date">${dateStr}${timeStr ? ' · ' + timeStr : ''}</div>` : ''}
             <div class="oracle-matchup">
                 <div class="oracle-team home-team${homeGlow}">
                     <span class="team-badge" style="background:${homeColor}">${(p.Local||'').substring(0,3)}</span>
                     <span class="oracle-team-name">${p.LocalName || p.Local}</span>
-                    <span class="ha-badge ha-home">H</span>
+                    <span class="ha-badge ha-home">HOME</span>
                 </div>
                 <div class="oracle-vs">vs</div>
                 <div class="oracle-team away-team${awayGlow}">
-                    <span class="ha-badge ha-away">A</span>
+                    <span class="ha-badge ha-away">AWAY</span>
                     <span class="oracle-team-name">${p.RoadName || p.Road}</span>
                     <span class="team-badge" style="background:${awayColor}">${(p.Road||'').substring(0,3)}</span>
                 </div>
             </div>
             <div class="wp-bar-wrap">
-                <div class="wp-bar wp-home" style="width:${homeWP}%;background:${homeColor}80">
+                <div class="wp-bar wp-home" style="${homeBarStyle}">
                     ${homeWP.toFixed(0)}%
                 </div>
-                <div class="wp-bar wp-away" style="width:${awayWP}%;background:${awayColor}80">
+                <div class="wp-bar wp-away" style="${awayBarStyle}">
                     ${awayWP.toFixed(0)}%
                 </div>
             </div>
-            <div class="oracle-footer">
-                <span class="oracle-margin">±${margin} pts</span>
-                <span class="oracle-conf ${confBadgeClass}">${conf}% conf</span>
+            <div class="oracle-predicted">
+                ${isCoinFlip ? '<span class="coin-flip-badge">🪙 Coin flip</span>' : ''}
+                Predicted: <strong style="color:${isHomeWinner ? homeColor : awayColor}">${winnerName}</strong>
+                <span class="oracle-conf ${confBadgeClass}">${conf}% conf · ±${margin} pts</span>
             </div>
-            ${insight ? `<div class="oracle-insight">${insight}</div>` : ''}
+            ${headline ? `<div class="oracle-headline">${headline}</div>` : ''}
+            ${pillsHtml ? `<div class="insight-pills">${pillsHtml}</div>` : ''}
+            ${keyHtml}
         </div>`;
     });
 
@@ -429,58 +585,123 @@ function renderOracleCards(oracle) {
 }
 
 // ── Player forecasts table ────────────────────────────────────────────────
-function renderPlayerForecasts(forecasts) {
+let _forecastsAll = [];
+let _forecastShowAll = false;
+let _forecastTeamFilter = '';
+let _forecastSort = { col: 'PredictedPIR', asc: false };
+let _forecastTeamNames = {}; // code → full name
+
+function renderPlayerForecasts(forecasts, teams) {
+    _forecastsAll = forecasts || [];
+    // Build code → name lookup from teams list
+    _forecastTeamNames = {};
+    (teams || []).forEach(t => { _forecastTeamNames[t.team] = t.name; });
+
     const container = document.getElementById('player-forecast-table');
-    if (!forecasts || !forecasts.length) {
+    if (!_forecastsAll.length) {
         container.innerHTML = '<p style="color:var(--text-muted);padding:1rem">No player forecast data available.</p>';
         return;
     }
 
-    const top15 = forecasts.slice(0, 15);
-    let html = '<div style="overflow-x:auto"><table class="forecast-tbl">';
+    // Build dropdown options sorted by team name
+    const forecastTeams = [...new Set(_forecastsAll.map(p => p.Team))].sort((a, b) => {
+        const na = _forecastTeamNames[a] || a, nb = _forecastTeamNames[b] || b;
+        return na.localeCompare(nb);
+    });
+
+    const controls = `<div class="forecast-controls">
+        <select id="forecast-team-filter" onchange="_forecastTeamFilter=this.value;_renderForecastTable()">
+            <option value="">All Teams</option>
+            ${forecastTeams.map(t => `<option value="${t}">${_forecastTeamNames[t] || t}</option>`).join('')}
+        </select>
+        <button class="forecast-toggle-btn" id="forecast-toggle-btn"
+            onclick="_forecastShowAll=!_forecastShowAll;document.getElementById('forecast-toggle-btn').textContent=_forecastShowAll?'Show Top 15':'Show All';_renderForecastTable()">
+            Show All
+        </button>
+    </div>`;
+
+    container.innerHTML = controls + '<div id="forecast-table-body"></div>';
+    _renderForecastTable();
+}
+
+function _forecastSortBy(col) {
+    if (_forecastSort.col === col) {
+        _forecastSort.asc = !_forecastSort.asc;
+    } else {
+        _forecastSort.col = col;
+        _forecastSort.asc = false;
+    }
+    _renderForecastTable();
+}
+
+function _renderForecastTable() {
+    let data = [..._forecastsAll];
+
+    // Apply team filter
+    if (_forecastTeamFilter) data = data.filter(p => p.Team === _forecastTeamFilter);
+
+    // Apply sort
+    const { col, asc } = _forecastSort;
+    data.sort((a, b) => {
+        const va = a[col] ?? 0, vb = b[col] ?? 0;
+        return asc ? va - vb : vb - va;
+    });
+
+    const rows = _forecastShowAll || _forecastTeamFilter ? data : data.slice(0, 15);
+
+    const sortable = (col, label) => {
+        const active = _forecastSort.col === col;
+        const arrow = active ? (_forecastSort.asc ? ' ▲' : ' ▼') : '';
+        return `<th class="fc-sortable${active ? ' fc-sort-active' : ''}" onclick="_forecastSortBy('${col}')" style="text-align:right;cursor:pointer">${label}${arrow}</th>`;
+    };
+
+    let html = '<table class="forecast-tbl">';
     html += `<thead><tr>
         <th>#</th>
         <th style="text-align:left">Player</th>
-        <th>Tm</th>
+        <th>Team</th>
         <th>vs</th>
         <th>H/A</th>
-        <th>AvgPIR</th>
+        ${sortable('AvgPIR', 'AvgPIR')}
         <th>Form</th>
-        <th>Def</th>
         <th>WinP%</th>
-        <th>PredPIR</th>
-        <th>PredPTS</th>
+        ${sortable('PredictedPIR', 'PredPIR')}
+        ${sortable('PredictedPTS', 'PredPTS')}
     </tr></thead><tbody>`;
 
-    top15.forEach((p, i) => {
+    rows.forEach((p, i) => {
         const rowBg = i % 2 === 0 ? 'background:rgba(255,255,255,0.02)' : '';
         const pirHighlight = p.PredictedPIR >= 20 ? 'color:var(--accent-gold);font-weight:700' : '';
         const ha = p.IsHome ? 'H' : 'A';
         const haColor = p.IsHome ? 'var(--accent-green)' : 'var(--accent-blue)';
         const teamColor = TEAM_COLORS[p.Team] || '#555';
+        const teamName = _forecastTeamNames[p.Team] || p.Team;
         const lastName = (p.Player || '').split(',')[0].trim();
         const formPct = p.FormFactor ? ((p.FormFactor - 1) * 100).toFixed(0) : '0';
         const formColor = p.FormFactor >= 1 ? 'var(--accent-green)' : 'var(--accent-red)';
         const formStr = (p.FormFactor >= 1 ? '+' : '') + formPct + '%';
-        const defFactor = p.DefFactor ? p.DefFactor.toFixed(2) : '1.00';
+        const globalRank = _forecastsAll.indexOf(p) + 1;
 
         html += `<tr style="${rowBg}">
-            <td style="color:var(--text-muted);text-align:center">${i + 1}</td>
+            <td style="color:var(--text-muted);text-align:center">${globalRank}</td>
             <td style="text-align:left;font-weight:600">${lastName}</td>
-            <td><span class="team-badge sm" style="background:${teamColor}">${p.Team}</span></td>
-            <td style="color:var(--text-muted)">${p.Opponent || ''}</td>
+            <td><span class="team-badge sm" style="background:${teamColor}" title="${teamName}">${p.Team}</span></td>
+            <td>${p.Opponent ? `<span class="team-badge sm" style="background:${TEAM_COLORS[p.Opponent]||'#555'}" title="${_forecastTeamNames[p.Opponent]||p.Opponent}">${p.Opponent}</span>` : ''}</td>
             <td style="color:${haColor};font-weight:700;text-align:center">${ha}</td>
             <td style="text-align:right">${(p.AvgPIR || 0).toFixed(1)}</td>
             <td style="text-align:right;color:${formColor}">${formStr}</td>
-            <td style="text-align:right">${defFactor}</td>
             <td style="text-align:right">${(p.WinProb || 0).toFixed(0)}%</td>
             <td style="text-align:right;${pirHighlight}">${(p.PredictedPIR || 0).toFixed(1)}</td>
             <td style="text-align:right">${(p.PredictedPTS || 0).toFixed(1)}</td>
         </tr>`;
     });
 
-    html += '</tbody></table></div>';
-    container.innerHTML = html;
+    const filteredCount = _forecastTeamFilter ? _forecastsAll.filter(p => p.Team === _forecastTeamFilter).length : _forecastsAll.length;
+    const filterLabel = _forecastTeamFilter ? ` · ${filteredCount} on ${_forecastTeamNames[_forecastTeamFilter] || _forecastTeamFilter}` : '';
+    const total = `${rows.length} of ${filteredCount} players${filterLabel ? '' : ` (${filteredCount} total)`}`;
+
+    html += `</tbody></table><div class="forecast-count">${rows.length} of ${filteredCount} players${filterLabel}</div>`;
+    document.getElementById('forecast-table-body').innerHTML = html;
 }
 
 // ── Accuracy stats ────────────────────────────────────────────────────────
@@ -530,14 +751,23 @@ function renderAccuracyStats(accuracy) {
         const accVals = calibration.map(c => c.Accuracy);
         const confVals = calibration.map(c => c.AvgConfidence);
 
+        // Color each bar by calibration error: |actual - confidence|
+        const barColors = calibration.map(c => {
+            const err = Math.abs(c.Accuracy - c.AvgConfidence);
+            if (err <= 5)  return 'rgba(34,197,94,0.85)';   // well-calibrated
+            if (err <= 10) return 'rgba(245,158,11,0.85)';  // slight miss
+            return 'rgba(239,68,68,0.85)';                   // significant miss
+        });
+
         const traces = [
             {
                 type: 'bar',
                 name: 'Actual Accuracy %',
                 x: buckets,
                 y: accVals,
-                marker: { color: '#22c55e', opacity: 0.8 },
-                hovertemplate: '%{x}: %{y:.1f}%<extra>Actual</extra>',
+                marker: { color: barColors },
+                hovertemplate: '%{x}: %{y:.1f}% actual (conf %{customdata:.1f}%)<extra></extra>',
+                customdata: confVals,
             },
             {
                 type: 'scatter',
@@ -563,6 +793,55 @@ function renderAccuracyStats(accuracy) {
         };
 
         Plotly.newPlot('calibration-chart', traces, layout, { displayModeBar: false, responsive: true });
+    }
+
+    // Per-round accuracy trend
+    const perRound = accuracy.per_round || [];
+    if (perRound.length) {
+        const trendDiv = document.createElement('div');
+        trendDiv.id = 'accuracy-trend-chart';
+        trendDiv.style.height = '200px';
+        trendDiv.style.marginTop = '1.25rem';
+        container.appendChild(trendDiv);
+
+        const rounds = perRound.map(r => r.Round);
+        const accByRound = perRound.map(r => r.Accuracy);
+        const avgAcc = accByRound.reduce((s, v) => s + v, 0) / accByRound.length;
+
+        const trendTraces = [
+            {
+                type: 'scatter',
+                mode: 'lines+markers',
+                name: 'Round accuracy',
+                x: rounds,
+                y: accByRound,
+                line: { color: '#6366f1', width: 2 },
+                marker: { color: accByRound.map(v => v >= 70 ? '#22c55e' : v >= 50 ? '#f59e0b' : '#ef4444'), size: 7 },
+                hovertemplate: 'Round %{x}: %{y:.1f}%<extra></extra>',
+            },
+            {
+                type: 'scatter',
+                mode: 'lines',
+                name: `Season avg ${avgAcc.toFixed(1)}%`,
+                x: [rounds[0], rounds[rounds.length - 1]],
+                y: [avgAcc, avgAcc],
+                line: { color: 'rgba(156,163,175,0.45)', width: 1.5, dash: 'dot' },
+                hoverinfo: 'skip',
+            },
+        ];
+
+        const trendLayout = {
+            paper_bgcolor: 'transparent',
+            plot_bgcolor: '#0f1117',
+            font: { color: '#9ca3af', family: 'Inter', size: 10 },
+            margin: { t: 10, b: 35, l: 40, r: 10 },
+            xaxis: { title: 'Round', gridcolor: '#2d2e3a', tickfont: { size: 10 }, dtick: 5 },
+            yaxis: { gridcolor: '#2d2e3a', tickfont: { size: 10 }, ticksuffix: '%', range: [0, 110] },
+            legend: { font: { size: 10 }, bgcolor: 'transparent', x: 0, y: 1.15, orientation: 'h' },
+            showlegend: true,
+        };
+
+        Plotly.newPlot('accuracy-trend-chart', trendTraces, trendLayout, { displayModeBar: false, responsive: true });
     }
 }
 

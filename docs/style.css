@@ -728,6 +728,57 @@ footer {
     background: rgba(168, 85, 247, 0.07);
 }
 
+/* ── Form dots (Last 5) ─────────────────────────────────── */
+.form-dots {
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-dot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.form-w {
+    background: rgba(34, 197, 94, 0.2);
+    color: var(--accent-green);
+    border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+.form-l {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--accent-red);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* ── Playoff cutoff dividers ────────────────────────────── */
+.cutoff-row td {
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    position: relative;
+}
+
+.cutoff-label {
+    display: block;
+    text-align: right;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 2px 0.75rem;
+    opacity: 0.8;
+}
+
 .pct-cell {
     display: inline-block;
     min-width: 52px;
@@ -868,9 +919,15 @@ footer {
 /* ── Oracle cards grid ───────────────────────────────────── */
 .oracle-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     margin-bottom: 1rem;
+}
+
+/* Last card alone on a row spans all columns */
+.oracle-cards-grid > .oracle-card:last-child:nth-child(3n + 1) {
+    grid-column: 1 / -1;
+    max-width: calc(33.33% - 0.67rem);
 }
 
 .oracle-placeholder {
@@ -940,22 +997,25 @@ footer {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 18px;
+    padding: 0 0.35rem;
     height: 18px;
     border-radius: 3px;
     font-size: 0.6rem;
     font-weight: 700;
+    letter-spacing: 0.04em;
     flex-shrink: 0;
 }
 
 .ha-home {
-    background: rgba(34, 197, 94, 0.2);
+    background: rgba(34, 197, 94, 0.18);
     color: var(--accent-green);
+    border: 1px solid rgba(34, 197, 94, 0.3);
 }
 
 .ha-away {
-    background: rgba(59, 130, 246, 0.2);
+    background: rgba(59, 130, 246, 0.18);
     color: var(--accent-blue);
+    border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
 .winner-glow .oracle-team-name {
@@ -1017,27 +1077,158 @@ footer {
 }
 
 .conf-high {
-    background: rgba(34, 197, 94, 0.15);
+    background: rgba(34, 197, 94, 0.18);
     color: var(--accent-green);
+    border: 1px solid rgba(34, 197, 94, 0.35);
+    font-weight: 700;
 }
 
 .conf-med {
     background: rgba(245, 158, 11, 0.15);
     color: var(--accent-gold);
+    border: 1px solid rgba(245, 158, 11, 0.3);
 }
 
 .conf-low {
-    background: rgba(156, 163, 175, 0.1);
+    background: rgba(156, 163, 175, 0.08);
     color: var(--text-muted);
+    border: 1px solid rgba(156, 163, 175, 0.15);
 }
 
-.oracle-insight {
+.oracle-predicted {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    padding: 0.35rem 0;
+    border-top: 1px solid var(--border);
+    gap: 0.5rem;
+}
+.oracle-predicted strong {
+    font-size: 0.9rem;
+}
+.coin-flip-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #9ca3af;
+    background: rgba(156,163,175,0.12);
+    border: 1px solid rgba(156,163,175,0.3);
+    border-radius: 4px;
+    padding: 0.1rem 0.4rem;
+    white-space: nowrap;
+    margin-right: 0.25rem;
+}
+
+.oracle-headline {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding-top: 0.4rem;
+    border-top: 1px solid var(--border);
+}
+
+.insight-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-top: 0.35rem;
+}
+.insight-pill {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.15rem 0.45rem;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+.insight-key-players {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+    font-style: italic;
+}
+
+/* ── Last updated stamp ─────────────────────────────────── */
+.last-updated {
     font-size: 0.75rem;
     color: var(--text-muted);
-    line-height: 1.4;
-    border-top: 1px solid var(--border);
-    padding-top: 0.5rem;
-    font-style: italic;
+    margin-top: 0.25rem;
+    letter-spacing: 0.02em;
+}
+
+/* ── Oracle game date ───────────────────────────────────── */
+.oracle-game-date {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+/* ── Player forecast controls ───────────────────────────── */
+.forecast-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.forecast-controls select {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    border-radius: 6px;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.forecast-toggle-btn {
+    background: rgba(168, 85, 247, 0.15);
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    color: var(--accent-purple);
+    border-radius: 6px;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.forecast-toggle-btn:hover {
+    background: rgba(168, 85, 247, 0.25);
+}
+
+.forecast-count {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-align: right;
+    margin-top: 0.4rem;
+    padding-right: 0.5rem;
+}
+
+.fc-sortable {
+    user-select: none;
+}
+
+.fc-sortable:hover {
+    color: var(--text-primary);
+}
+
+.fc-sort-active {
+    color: var(--accent-purple) !important;
+}
+
+/* Inline team name next to badge */
+.fc-team-name {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    white-space: nowrap;
 }
 
 /* ── Player forecast table ───────────────────────────────── */
@@ -1045,7 +1236,6 @@ footer {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.8rem;
-    white-space: nowrap;
 }
 
 .forecast-tbl th {

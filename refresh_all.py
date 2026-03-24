@@ -153,9 +153,9 @@ def main():
         ('TPM vs WIR Quadrants', 'visualize_tpm_wir.py'),
         ('WIR vs PIR', 'visualize_wir.py'),
         ('WPA Leaders', 'visualize_wpa.py'),
-        ('Dashboard Export', 'export_dashboard_data.py'),
         ('Oracle Forecast', 'mvp_oracle.py'),
         ('Oracle Accuracy Tracker', 'oracle_accuracy_tracker.py'),
+        ('Dashboard Export', 'export_dashboard_data.py'),
     ]
     
     for name, script in viz_scripts:

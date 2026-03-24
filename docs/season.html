@@ -26,6 +26,7 @@
     <header>
         <h1>📊 Season Hub</h1>
         <p class="subtitle">Standings · Power Ratings · Playoff Odds · MVP Race · Oracle Forecast</p>
+        <p id="last-updated" class="last-updated" style="display:none"></p>
     </header>
 
     <main>
@@ -53,7 +54,10 @@
 
             <div class="season-grid">
                 <div class="stat-card">
-                    <h3>Power Ratings — Adj Off vs Adj Def</h3>
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem">
+                        <h3 style="margin:0">Power Ratings — Adj Off vs Adj Def</h3>
+                        <button class="forecast-toggle-btn" id="scatter-label-btn" onclick="toggleScatterLabels()">Show Labels</button>
+                    </div>
                     <div id="power-scatter" style="height:420px"></div>
                 </div>
                 <div class="stat-card">
@@ -63,10 +67,10 @@
             </div>
 
             <div class="stat-card" style="margin-bottom:1.5rem;">
-                <h3>Playoff Probability Matrix</h3>
-                <div id="playoff-grid">
+                <h3>Remaining Schedule Difficulty</h3>
+                <div id="schedule-difficulty">
                     <div class="loading-placeholder">
-                        <span class="loading-spinner"></span> Loading playoff grid...
+                        <span class="loading-spinner"></span> Loading schedule data...
                     </div>
                 </div>
             </div>
@@ -88,21 +92,20 @@
                 </div>
             </div>
 
-            <div class="season-grid" style="margin-top:1.5rem;">
-                <div class="stat-card">
-                    <h3>Player Performance Forecasts</h3>
-                    <div id="player-forecast-table">
-                        <div class="loading-placeholder">
-                            <span class="loading-spinner"></span> Loading forecasts...
-                        </div>
+            <div class="stat-card" style="margin-top:1.5rem;">
+                <h3>Player Performance Forecasts</h3>
+                <div id="player-forecast-table">
+                    <div class="loading-placeholder">
+                        <span class="loading-spinner"></span> Loading forecasts...
                     </div>
                 </div>
-                <div class="stat-card">
-                    <h3>Oracle Accuracy &amp; Calibration</h3>
-                    <div id="accuracy-stats">
-                        <div class="loading-placeholder">
-                            <span class="loading-spinner"></span> Loading accuracy stats...
-                        </div>
+            </div>
+
+            <div class="stat-card" style="margin-top:1rem;">
+                <h3>Oracle Accuracy &amp; Calibration</h3>
+                <div id="accuracy-stats">
+                    <div class="loading-placeholder">
+                        <span class="loading-spinner"></span> Loading accuracy stats...
                     </div>
                 </div>
             </div>

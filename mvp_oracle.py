@@ -216,9 +216,12 @@ def run_oracle(target_round=None):
         try:
             with open('mvp_standings_derived.json', 'r') as f:
                 standings_data = json.load(f)
-            current_round = max((t.get('GP', 0) for t in standings_data.values()), default=0)
+            gp_values = [t.get('GP', 0) for t in standings_data.values() if t.get('GP', 0) > 0]
+            # Use mode (most common GP) to avoid makeup games skewing the round detection
+            from collections import Counter
+            current_round = Counter(gp_values).most_common(1)[0][0] if gp_values else 0
             target_round = current_round + 1
-            print(f"Auto-detected next round from standings: Round {target_round} (current max GP: {current_round})")
+            print(f"Auto-detected next round from standings: Round {target_round} (modal GP: {current_round}, max GP: {max(gp_values)})")
         except Exception as e:
             print(f"Warning: Could not read standings for round detection: {e}")
             target_round = 38
