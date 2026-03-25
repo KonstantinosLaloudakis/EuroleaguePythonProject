@@ -1,6 +1,6 @@
 {
   "round": 33,
-  "updated": "2026-03-25T11:47:57Z",
+  "updated": "2026-03-25T20:37:02Z",
   "teams": [
     {
       "team": "ULK",
@@ -8,17 +8,17 @@
       "wins": 23,
       "losses": 9,
       "win_pct": 71.9,
-      "adj_net": 2.69,
-      "adj_off": 81.85,
-      "adj_def": 79.16,
-      "elo": 1597.9,
-      "sos": 49.0,
-      "remaining": 6,
-      "top4_pct": 99.1,
-      "top6_pct": 100.0,
+      "adj_net": 2.76,
+      "adj_off": 81.78,
+      "adj_def": 79.02,
+      "elo": 1561.4,
+      "sos": 54.8,
+      "remaining": 10,
+      "top4_pct": 98.6,
+      "top6_pct": 99.9,
       "top10_pct": 100.0,
       "avg_wins": 26.8,
-      "current_wins": 23,
+      "current_wins": 22,
       "last5": [
         "W",
         "W",
@@ -228,10 +228,14 @@
           "home": true
         }
       ],
-      "remaining_sos": 49.0,
-      "home_games": 2,
-      "away_games": 4,
+      "remaining_sos": 54.8,
+      "home_games": 4,
+      "away_games": 6,
       "remaining_opponents": [
+        "OLY",
+        "MCO",
+        "RED",
+        "MIL",
         "TEL",
         "ZAL",
         "MUN",
@@ -246,17 +250,17 @@
       "wins": 22,
       "losses": 11,
       "win_pct": 66.7,
-      "adj_net": 6.01,
-      "adj_off": 90.33,
-      "adj_def": 84.32,
-      "elo": 1596.3,
-      "sos": 51.9,
-      "remaining": 5,
-      "top4_pct": 98.2,
-      "top6_pct": 99.9,
+      "adj_net": 5.41,
+      "adj_off": 90.1,
+      "adj_def": 84.69,
+      "elo": 1534.1,
+      "sos": 48.6,
+      "remaining": 10,
+      "top4_pct": 84.7,
+      "top6_pct": 97.7,
       "top10_pct": 100.0,
-      "avg_wins": 25.4,
-      "current_wins": 22,
+      "avg_wins": 24.3,
+      "current_wins": 20,
       "last5": [
         "L",
         "W",
@@ -472,253 +476,20 @@
           "home": false
         }
       ],
-      "remaining_sos": 51.9,
-      "home_games": 2,
-      "away_games": 3,
+      "remaining_sos": 48.6,
+      "home_games": 5,
+      "away_games": 5,
       "remaining_opponents": [
+        "ULK",
+        "PAN",
+        "MCO",
+        "BAS",
         "PAM",
+        "PRS",
         "ASV",
         "MAD",
         "HTA",
         "MIL"
-      ]
-    },
-    {
-      "team": "MAD",
-      "name": "Real Madrid",
-      "wins": 20,
-      "losses": 12,
-      "win_pct": 62.5,
-      "adj_net": 4.52,
-      "adj_off": 87.36,
-      "adj_def": 82.84,
-      "elo": 1572.9,
-      "sos": 59.1,
-      "remaining": 6,
-      "top4_pct": 75.7,
-      "top6_pct": 94.8,
-      "top10_pct": 100.0,
-      "avg_wins": 23.8,
-      "current_wins": 20,
-      "last5": [
-        "W",
-        "W",
-        "W",
-        "W",
-        "L"
-      ],
-      "home_record": {
-        "W": 15,
-        "L": 1
-      },
-      "away_record": {
-        "W": 5,
-        "L": 11
-      },
-      "round_results": [
-        {
-          "round": 1,
-          "result": "L",
-          "opp": "VIR",
-          "home": false
-        },
-        {
-          "round": 2,
-          "result": "W",
-          "opp": "OLY",
-          "home": true
-        },
-        {
-          "round": 3,
-          "result": "W",
-          "opp": "ASV",
-          "home": true
-        },
-        {
-          "round": 4,
-          "result": "W",
-          "opp": "PAR",
-          "home": true
-        },
-        {
-          "round": 5,
-          "result": "L",
-          "opp": "RED",
-          "home": false
-        },
-        {
-          "round": 6,
-          "result": "L",
-          "opp": "TEL",
-          "home": false
-        },
-        {
-          "round": 7,
-          "result": "L",
-          "opp": "MUN",
-          "home": false
-        },
-        {
-          "round": 8,
-          "result": "W",
-          "opp": "ULK",
-          "home": true
-        },
-        {
-          "round": 9,
-          "result": "W",
-          "opp": "BAR",
-          "home": false
-        },
-        {
-          "round": 10,
-          "result": "L",
-          "opp": "PAM",
-          "home": false
-        },
-        {
-          "round": 11,
-          "result": "L",
-          "opp": "PAN",
-          "home": true
-        },
-        {
-          "round": 12,
-          "result": "W",
-          "opp": "ZAL",
-          "home": true
-        },
-        {
-          "round": 13,
-          "result": "W",
-          "opp": "HTA",
-          "home": false
-        },
-        {
-          "round": 14,
-          "result": "W",
-          "opp": "IST",
-          "home": false
-        },
-        {
-          "round": 15,
-          "result": "W",
-          "opp": "BAS",
-          "home": true
-        },
-        {
-          "round": 16,
-          "result": "L",
-          "opp": "MIL",
-          "home": false
-        },
-        {
-          "round": 17,
-          "result": "W",
-          "opp": "PRS",
-          "home": true
-        },
-        {
-          "round": 18,
-          "result": "L",
-          "opp": "MCO",
-          "home": false
-        },
-        {
-          "round": 19,
-          "result": "W",
-          "opp": "DUB",
-          "home": true
-        },
-        {
-          "round": 20,
-          "result": "W",
-          "opp": "ASV",
-          "home": false
-        },
-        {
-          "round": 21,
-          "result": "W",
-          "opp": "TEL",
-          "home": true
-        },
-        {
-          "round": 22,
-          "result": "W",
-          "opp": "BAR",
-          "home": true
-        },
-        {
-          "round": 23,
-          "result": "W",
-          "opp": "MIL",
-          "home": true
-        },
-        {
-          "round": 24,
-          "result": "W",
-          "opp": "MCO",
-          "home": true
-        },
-        {
-          "round": 25,
-          "result": "L",
-          "opp": "PRS",
-          "home": false
-        },
-        {
-          "round": 26,
-          "result": "L",
-          "opp": "PAN",
-          "home": false
-        },
-        {
-          "round": 27,
-          "result": "L",
-          "opp": "DUB",
-          "home": false
-        },
-        {
-          "round": 28,
-          "result": "W",
-          "opp": "PAR",
-          "home": false
-        },
-        {
-          "round": 29,
-          "result": "W",
-          "opp": "MUN",
-          "home": true
-        },
-        {
-          "round": 30,
-          "result": "W",
-          "opp": "VIR",
-          "home": true
-        },
-        {
-          "round": 31,
-          "result": "W",
-          "opp": "PAM",
-          "home": true
-        },
-        {
-          "round": 32,
-          "result": "L",
-          "opp": "ZAL",
-          "home": false
-        }
-      ],
-      "remaining_sos": 59.1,
-      "home_games": 3,
-      "away_games": 3,
-      "remaining_opponents": [
-        "HTA",
-        "IST",
-        "BAS",
-        "OLY",
-        "ULK",
-        "RED"
       ]
     },
     {
@@ -727,16 +498,16 @@
       "wins": 20,
       "losses": 12,
       "win_pct": 62.5,
-      "adj_net": 3.99,
-      "adj_off": 89.84,
-      "adj_def": 85.85,
-      "elo": 1521.6,
-      "sos": 54.9,
-      "remaining": 6,
-      "top4_pct": 47.8,
-      "top6_pct": 83.8,
-      "top10_pct": 99.7,
-      "avg_wins": 23.3,
+      "adj_net": 4.68,
+      "adj_off": 91.01,
+      "adj_def": 86.33,
+      "elo": 1536.5,
+      "sos": 58.6,
+      "remaining": 9,
+      "top4_pct": 82.3,
+      "top6_pct": 96.7,
+      "top10_pct": 100.0,
+      "avg_wins": 24.5,
       "current_wins": 20,
       "last5": [
         "W",
@@ -947,10 +718,13 @@
           "home": true
         }
       ],
-      "remaining_sos": 55.0,
-      "home_games": 3,
-      "away_games": 3,
+      "remaining_sos": 58.6,
+      "home_games": 5,
+      "away_games": 4,
       "remaining_opponents": [
+        "ZAL",
+        "MAD",
+        "BAR",
         "OLY",
         "PAR",
         "VIR",
@@ -960,22 +734,263 @@
       ]
     },
     {
+      "team": "MAD",
+      "name": "Real Madrid",
+      "wins": 20,
+      "losses": 12,
+      "win_pct": 62.5,
+      "adj_net": 4.01,
+      "adj_off": 86.85,
+      "adj_def": 82.83,
+      "elo": 1530.1,
+      "sos": 53.9,
+      "remaining": 9,
+      "top4_pct": 74.0,
+      "top6_pct": 94.6,
+      "top10_pct": 100.0,
+      "avg_wins": 24.0,
+      "current_wins": 20,
+      "last5": [
+        "W",
+        "W",
+        "W",
+        "W",
+        "L"
+      ],
+      "home_record": {
+        "W": 15,
+        "L": 1
+      },
+      "away_record": {
+        "W": 5,
+        "L": 11
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "L",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 2,
+          "result": "W",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 3,
+          "result": "W",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 4,
+          "result": "W",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 5,
+          "result": "L",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 6,
+          "result": "L",
+          "opp": "TEL",
+          "home": false
+        },
+        {
+          "round": 7,
+          "result": "L",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 8,
+          "result": "W",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 9,
+          "result": "W",
+          "opp": "BAR",
+          "home": false
+        },
+        {
+          "round": 10,
+          "result": "L",
+          "opp": "PAM",
+          "home": false
+        },
+        {
+          "round": 11,
+          "result": "L",
+          "opp": "PAN",
+          "home": true
+        },
+        {
+          "round": 12,
+          "result": "W",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 13,
+          "result": "W",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 14,
+          "result": "W",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 15,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 16,
+          "result": "L",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 17,
+          "result": "W",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 18,
+          "result": "L",
+          "opp": "MCO",
+          "home": false
+        },
+        {
+          "round": 19,
+          "result": "W",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 20,
+          "result": "W",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 21,
+          "result": "W",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 22,
+          "result": "W",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 23,
+          "result": "W",
+          "opp": "MIL",
+          "home": true
+        },
+        {
+          "round": 24,
+          "result": "W",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 25,
+          "result": "L",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 26,
+          "result": "L",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 27,
+          "result": "L",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 28,
+          "result": "W",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 29,
+          "result": "W",
+          "opp": "MUN",
+          "home": true
+        },
+        {
+          "round": 30,
+          "result": "W",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 31,
+          "result": "W",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 32,
+          "result": "L",
+          "opp": "ZAL",
+          "home": false
+        }
+      ],
+      "remaining_sos": 53.9,
+      "home_games": 5,
+      "away_games": 4,
+      "remaining_opponents": [
+        "VIR",
+        "PAM",
+        "ZAL",
+        "HTA",
+        "IST",
+        "BAS",
+        "OLY",
+        "ULK",
+        "RED"
+      ]
+    },
+    {
       "team": "HTA",
       "name": "Hapoel Tel Aviv",
       "wins": 20,
       "losses": 11,
       "win_pct": 64.5,
-      "adj_net": 3.21,
-      "adj_off": 87.02,
-      "adj_def": 83.82,
-      "elo": 1532.5,
-      "sos": 61.3,
-      "remaining": 7,
-      "top4_pct": 47.1,
-      "top6_pct": 81.9,
-      "top10_pct": 99.7,
-      "avg_wins": 23.4,
-      "current_wins": 20,
+      "adj_net": 2.54,
+      "adj_off": 86.4,
+      "adj_def": 83.86,
+      "elo": 1518.9,
+      "sos": 56.4,
+      "remaining": 10,
+      "top4_pct": 34.9,
+      "top6_pct": 75.4,
+      "top10_pct": 99.2,
+      "avg_wins": 23.1,
+      "current_wins": 18,
       "last5": [
         "L",
         "L",
@@ -1179,11 +1194,14 @@
           "home": true
         }
       ],
-      "remaining_sos": 61.3,
-      "home_games": 3,
-      "away_games": 4,
+      "remaining_sos": 56.4,
+      "home_games": 5,
+      "away_games": 5,
       "remaining_opponents": [
+        "PRS",
         "TEL",
+        "BAR",
+        "VIR",
         "MAD",
         "BAS",
         "PAN",
@@ -1198,17 +1216,17 @@
       "wins": 18,
       "losses": 14,
       "win_pct": 56.2,
-      "adj_net": 4.87,
-      "adj_off": 88.79,
-      "adj_def": 83.91,
-      "elo": 1504.0,
-      "sos": 46.4,
-      "remaining": 6,
+      "adj_net": 5.24,
+      "adj_off": 88.83,
+      "adj_def": 83.59,
+      "elo": 1519.5,
+      "sos": 48.9,
+      "remaining": 9,
       "top4_pct": 12.0,
-      "top6_pct": 44.9,
-      "top10_pct": 94.6,
+      "top6_pct": 47.7,
+      "top10_pct": 96.0,
       "avg_wins": 21.6,
-      "current_wins": 18,
+      "current_wins": 17,
       "last5": [
         "W",
         "W",
@@ -1418,10 +1436,13 @@
           "home": true
         }
       ],
-      "remaining_sos": 46.4,
-      "home_games": 4,
-      "away_games": 2,
+      "remaining_sos": 48.9,
+      "home_games": 5,
+      "away_games": 4,
       "remaining_opponents": [
+        "PAM",
+        "PAN",
+        "MAD",
         "MUN",
         "ULK",
         "BAR",
@@ -1436,17 +1457,17 @@
       "wins": 18,
       "losses": 14,
       "win_pct": 56.2,
-      "adj_net": 3.61,
-      "adj_off": 89.97,
-      "adj_def": 86.36,
-      "elo": 1553.1,
-      "sos": 51.6,
-      "remaining": 6,
-      "top4_pct": 14.2,
-      "top6_pct": 48.6,
-      "top10_pct": 96.1,
-      "avg_wins": 21.9,
-      "current_wins": 18,
+      "adj_net": 4.33,
+      "adj_off": 90.39,
+      "adj_def": 86.07,
+      "elo": 1509.4,
+      "sos": 51.9,
+      "remaining": 9,
+      "top4_pct": 4.8,
+      "top6_pct": 27.6,
+      "top10_pct": 89.7,
+      "avg_wins": 21.1,
+      "current_wins": 17,
       "last5": [
         "W",
         "L",
@@ -1656,10 +1677,13 @@
           "home": false
         }
       ],
-      "remaining_sos": 51.6,
-      "home_games": 4,
-      "away_games": 2,
+      "remaining_sos": 51.9,
+      "home_games": 5,
+      "away_games": 4,
       "remaining_opponents": [
+        "ULK",
+        "OLY",
+        "IST",
         "MIL",
         "PAN",
         "DUB",
@@ -1674,16 +1698,16 @@
       "wins": 18,
       "losses": 14,
       "win_pct": 56.2,
-      "adj_net": 1.88,
-      "adj_off": 86.73,
-      "adj_def": 84.85,
-      "elo": 1508.0,
-      "sos": 50.5,
-      "remaining": 6,
-      "top4_pct": 2.1,
-      "top6_pct": 14.6,
-      "top10_pct": 87.7,
-      "avg_wins": 21.3,
+      "adj_net": 2.37,
+      "adj_off": 87.41,
+      "adj_def": 85.04,
+      "elo": 1520.4,
+      "sos": 49.2,
+      "remaining": 9,
+      "top4_pct": 7.0,
+      "top6_pct": 39.1,
+      "top10_pct": 96.4,
+      "avg_wins": 22.0,
       "current_wins": 18,
       "last5": [
         "L",
@@ -1894,10 +1918,13 @@
           "home": false
         }
       ],
-      "remaining_sos": 50.5,
-      "home_games": 2,
-      "away_games": 4,
+      "remaining_sos": 49.2,
+      "home_games": 4,
+      "away_games": 5,
       "remaining_opponents": [
+        "MUN",
+        "ULK",
+        "PAN",
         "BAS",
         "BAR",
         "PAR",
@@ -1907,22 +1934,263 @@
       ]
     },
     {
+      "team": "BAR",
+      "name": "FC Barcelona",
+      "wins": 18,
+      "losses": 14,
+      "win_pct": 56.2,
+      "adj_net": 0.61,
+      "adj_off": 85.54,
+      "adj_def": 84.93,
+      "elo": 1517.3,
+      "sos": 51.6,
+      "remaining": 9,
+      "top4_pct": 0.5,
+      "top6_pct": 8.6,
+      "top10_pct": 73.6,
+      "avg_wins": 20.7,
+      "current_wins": 17,
+      "last5": [
+        "L",
+        "L",
+        "L",
+        "L",
+        "W"
+      ],
+      "home_record": {
+        "W": 9,
+        "L": 6
+      },
+      "away_record": {
+        "W": 9,
+        "L": 8
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "L",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 2,
+          "result": "W",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 3,
+          "result": "W",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 4,
+          "result": "W",
+          "opp": "TEL",
+          "home": false
+        },
+        {
+          "round": 5,
+          "result": "L",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 6,
+          "result": "L",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 7,
+          "result": "W",
+          "opp": "MIL",
+          "home": true
+        },
+        {
+          "round": 8,
+          "result": "W",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 9,
+          "result": "L",
+          "opp": "MAD",
+          "home": true
+        },
+        {
+          "round": 10,
+          "result": "W",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 11,
+          "result": "W",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 12,
+          "result": "L",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 13,
+          "result": "W",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 14,
+          "result": "W",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 15,
+          "result": "W",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 16,
+          "result": "W",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 17,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 18,
+          "result": "L",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 19,
+          "result": "L",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 20,
+          "result": "W",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 21,
+          "result": "W",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 22,
+          "result": "L",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 23,
+          "result": "W",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 24,
+          "result": "W",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 25,
+          "result": "L",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 26,
+          "result": "L",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 27,
+          "result": "W",
+          "opp": "BAS",
+          "home": false
+        },
+        {
+          "round": 28,
+          "result": "L",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 29,
+          "result": "L",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 30,
+          "result": "L",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 31,
+          "result": "L",
+          "opp": "HTA",
+          "home": true
+        },
+        {
+          "round": 32,
+          "result": "W",
+          "opp": "PAM",
+          "home": false
+        }
+      ],
+      "remaining_sos": 51.6,
+      "home_games": 5,
+      "away_games": 4,
+      "remaining_opponents": [
+        "MIL",
+        "HTA",
+        "PAM",
+        "IST",
+        "RED",
+        "ZAL",
+        "PAN",
+        "MCO",
+        "MUN"
+      ]
+    },
+    {
       "team": "PAN",
       "name": "Panathinaikos",
       "wins": 18,
       "losses": 14,
       "win_pct": 56.2,
-      "adj_net": 1.1,
-      "adj_off": 85.44,
-      "adj_def": 84.34,
-      "elo": 1540.9,
-      "sos": 61.3,
-      "remaining": 6,
-      "top4_pct": 1.4,
-      "top6_pct": 10.3,
-      "top10_pct": 76.4,
-      "avg_wins": 20.9,
-      "current_wins": 18,
+      "adj_net": 0.6,
+      "adj_off": 85.42,
+      "adj_def": 84.83,
+      "elo": 1507.4,
+      "sos": 59.1,
+      "remaining": 9,
+      "top4_pct": 0.4,
+      "top6_pct": 5.6,
+      "top10_pct": 63.7,
+      "avg_wins": 20.2,
+      "current_wins": 17,
       "last5": [
         "L",
         "L",
@@ -2132,10 +2400,13 @@
           "home": true
         }
       ],
-      "remaining_sos": 61.3,
-      "home_games": 2,
-      "away_games": 4,
+      "remaining_sos": 59.1,
+      "home_games": 4,
+      "away_games": 5,
       "remaining_opponents": [
+        "OLY",
+        "ZAL",
+        "RED",
         "DUB",
         "MCO",
         "HTA",
@@ -2145,260 +2416,22 @@
       ]
     },
     {
-      "team": "BAR",
-      "name": "FC Barcelona",
-      "wins": 18,
-      "losses": 14,
-      "win_pct": 56.2,
-      "adj_net": 0.6,
-      "adj_off": 84.55,
-      "adj_def": 83.94,
-      "elo": 1543.1,
-      "sos": 46.1,
-      "remaining": 6,
-      "top4_pct": 2.4,
-      "top6_pct": 17.9,
-      "top10_pct": 85.5,
-      "avg_wins": 21.5,
-      "current_wins": 18,
-      "last5": [
-        "L",
-        "L",
-        "L",
-        "L",
-        "W"
-      ],
-      "home_record": {
-        "W": 9,
-        "L": 6
-      },
-      "away_record": {
-        "W": 9,
-        "L": 8
-      },
-      "round_results": [
-        {
-          "round": 1,
-          "result": "L",
-          "opp": "HTA",
-          "home": false
-        },
-        {
-          "round": 2,
-          "result": "W",
-          "opp": "PAN",
-          "home": false
-        },
-        {
-          "round": 3,
-          "result": "W",
-          "opp": "PAM",
-          "home": true
-        },
-        {
-          "round": 4,
-          "result": "W",
-          "opp": "TEL",
-          "home": false
-        },
-        {
-          "round": 5,
-          "result": "L",
-          "opp": "DUB",
-          "home": false
-        },
-        {
-          "round": 6,
-          "result": "L",
-          "opp": "ZAL",
-          "home": true
-        },
-        {
-          "round": 7,
-          "result": "W",
-          "opp": "MIL",
-          "home": true
-        },
-        {
-          "round": 8,
-          "result": "W",
-          "opp": "PAR",
-          "home": false
-        },
-        {
-          "round": 9,
-          "result": "L",
-          "opp": "MAD",
-          "home": true
-        },
-        {
-          "round": 10,
-          "result": "W",
-          "opp": "MUN",
-          "home": false
-        },
-        {
-          "round": 11,
-          "result": "W",
-          "opp": "VIR",
-          "home": true
-        },
-        {
-          "round": 12,
-          "result": "L",
-          "opp": "IST",
-          "home": false
-        },
-        {
-          "round": 13,
-          "result": "W",
-          "opp": "ASV",
-          "home": true
-        },
-        {
-          "round": 14,
-          "result": "W",
-          "opp": "RED",
-          "home": false
-        },
-        {
-          "round": 15,
-          "result": "W",
-          "opp": "OLY",
-          "home": true
-        },
-        {
-          "round": 16,
-          "result": "W",
-          "opp": "PRS",
-          "home": false
-        },
-        {
-          "round": 17,
-          "result": "W",
-          "opp": "BAS",
-          "home": true
-        },
-        {
-          "round": 18,
-          "result": "L",
-          "opp": "ULK",
-          "home": false
-        },
-        {
-          "round": 19,
-          "result": "L",
-          "opp": "MCO",
-          "home": true
-        },
-        {
-          "round": 20,
-          "result": "W",
-          "opp": "TEL",
-          "home": true
-        },
-        {
-          "round": 21,
-          "result": "W",
-          "opp": "PAR",
-          "home": true
-        },
-        {
-          "round": 22,
-          "result": "L",
-          "opp": "MAD",
-          "home": false
-        },
-        {
-          "round": 23,
-          "result": "W",
-          "opp": "DUB",
-          "home": true
-        },
-        {
-          "round": 24,
-          "result": "W",
-          "opp": "ASV",
-          "home": false
-        },
-        {
-          "round": 25,
-          "result": "L",
-          "opp": "OLY",
-          "home": false
-        },
-        {
-          "round": 26,
-          "result": "L",
-          "opp": "ULK",
-          "home": true
-        },
-        {
-          "round": 27,
-          "result": "W",
-          "opp": "BAS",
-          "home": false
-        },
-        {
-          "round": 28,
-          "result": "L",
-          "opp": "PRS",
-          "home": true
-        },
-        {
-          "round": 29,
-          "result": "L",
-          "opp": "VIR",
-          "home": false
-        },
-        {
-          "round": 30,
-          "result": "L",
-          "opp": "MIL",
-          "home": false
-        },
-        {
-          "round": 31,
-          "result": "L",
-          "opp": "HTA",
-          "home": true
-        },
-        {
-          "round": 32,
-          "result": "W",
-          "opp": "PAM",
-          "home": false
-        }
-      ],
-      "remaining_sos": 46.1,
-      "home_games": 4,
-      "away_games": 2,
-      "remaining_opponents": [
-        "IST",
-        "RED",
-        "ZAL",
-        "PAN",
-        "MCO",
-        "MUN"
-      ]
-    },
-    {
       "team": "DUB",
       "name": "Dubai Basketball",
       "wins": 17,
       "losses": 15,
       "win_pct": 53.1,
-      "adj_net": 0.34,
-      "adj_off": 88.2,
-      "adj_def": 87.86,
-      "elo": 1515.0,
-      "sos": 49.5,
-      "remaining": 6,
-      "top4_pct": 0.1,
-      "top6_pct": 3.1,
-      "top10_pct": 48.7,
-      "avg_wins": 20.2,
-      "current_wins": 17,
+      "adj_net": 0.65,
+      "adj_off": 88.5,
+      "adj_def": 87.85,
+      "elo": 1508.1,
+      "sos": 46.5,
+      "remaining": 9,
+      "top4_pct": 0.7,
+      "top6_pct": 6.7,
+      "top10_pct": 63.9,
+      "avg_wins": 20.4,
+      "current_wins": 16,
       "last5": [
         "W",
         "W",
@@ -2608,10 +2641,13 @@
           "home": false
         }
       ],
-      "remaining_sos": 49.5,
-      "home_games": 4,
-      "away_games": 2,
+      "remaining_sos": 46.5,
+      "home_games": 5,
+      "away_games": 4,
       "remaining_opponents": [
+        "PAR",
+        "BAS",
+        "MUN",
         "PAN",
         "TEL",
         "MCO",
@@ -2626,15 +2662,15 @@
       "wins": 16,
       "losses": 16,
       "win_pct": 50.0,
-      "adj_net": -0.75,
-      "adj_off": 85.45,
-      "adj_def": 86.2,
-      "elo": 1500.7,
-      "sos": 51.5,
-      "remaining": 6,
+      "adj_net": -1.17,
+      "adj_off": 85.37,
+      "adj_def": 86.53,
+      "elo": 1493.5,
+      "sos": 53.1,
+      "remaining": 9,
       "top4_pct": 0.0,
-      "top6_pct": 0.1,
-      "top10_pct": 3.6,
+      "top6_pct": 0.2,
+      "top10_pct": 9.3,
       "avg_wins": 18.6,
       "current_wins": 16,
       "last5": [
@@ -2846,10 +2882,13 @@
           "home": false
         }
       ],
-      "remaining_sos": 51.5,
-      "home_games": 2,
-      "away_games": 4,
+      "remaining_sos": 53.1,
+      "home_games": 4,
+      "away_games": 5,
       "remaining_opponents": [
+        "BAR",
+        "TEL",
+        "ULK",
         "MCO",
         "VIR",
         "PRS",
@@ -2864,17 +2903,17 @@
       "wins": 15,
       "losses": 16,
       "win_pct": 48.4,
-      "adj_net": -1.94,
-      "adj_off": 90.03,
-      "adj_def": 91.97,
-      "elo": 1494.8,
-      "sos": 40.9,
-      "remaining": 7,
+      "adj_net": -1.65,
+      "adj_off": 90.11,
+      "adj_def": 91.76,
+      "elo": 1503.2,
+      "sos": 43.0,
+      "remaining": 9,
       "top4_pct": 0.0,
-      "top6_pct": 0.0,
-      "top10_pct": 7.9,
-      "avg_wins": 18.9,
-      "current_wins": 15,
+      "top6_pct": 0.1,
+      "top10_pct": 8.0,
+      "avg_wins": 18.4,
+      "current_wins": 14,
       "last5": [
         "W",
         "W",
@@ -3078,11 +3117,13 @@
           "home": false
         }
       ],
-      "remaining_sos": 40.9,
+      "remaining_sos": 43.0,
       "home_games": 5,
-      "away_games": 2,
+      "away_games": 4,
       "remaining_opponents": [
         "HTA",
+        "MIL",
+        "ASV",
         "ULK",
         "DUB",
         "IST",
@@ -3097,16 +3138,16 @@
       "wins": 13,
       "losses": 19,
       "win_pct": 40.6,
-      "adj_net": -3.13,
-      "adj_off": 82.35,
-      "adj_def": 85.48,
-      "elo": 1446.3,
-      "sos": 36.8,
-      "remaining": 6,
+      "adj_net": -2.43,
+      "adj_off": 81.81,
+      "adj_def": 84.24,
+      "elo": 1487.2,
+      "sos": 42.3,
+      "remaining": 9,
       "top4_pct": 0.0,
       "top6_pct": 0.0,
-      "top10_pct": 0.0,
-      "avg_wins": 15.7,
+      "top10_pct": 0.2,
+      "avg_wins": 16.4,
       "current_wins": 13,
       "last5": [
         "L",
@@ -3317,10 +3358,13 @@
           "home": false
         }
       ],
-      "remaining_sos": 36.8,
-      "home_games": 4,
-      "away_games": 2,
+      "remaining_sos": 42.3,
+      "home_games": 5,
+      "away_games": 4,
       "remaining_opponents": [
+        "MAD",
+        "PAR",
+        "HTA",
         "PRS",
         "MIL",
         "PAM",
@@ -3335,16 +3379,16 @@
       "wins": 13,
       "losses": 19,
       "win_pct": 40.6,
-      "adj_net": -3.16,
-      "adj_off": 79.92,
-      "adj_def": 83.07,
-      "elo": 1475.0,
-      "sos": 53.8,
-      "remaining": 6,
+      "adj_net": -3.15,
+      "adj_off": 79.89,
+      "adj_def": 83.03,
+      "elo": 1480.1,
+      "sos": 50.4,
+      "remaining": 9,
       "top4_pct": 0.0,
       "top6_pct": 0.0,
-      "top10_pct": 0.0,
-      "avg_wins": 15.3,
+      "top10_pct": 0.1,
+      "avg_wins": 16.0,
       "current_wins": 13,
       "last5": [
         "L",
@@ -3555,10 +3599,13 @@
           "home": true
         }
       ],
-      "remaining_sos": 53.8,
-      "home_games": 2,
-      "away_games": 4,
+      "remaining_sos": 50.4,
+      "home_games": 4,
+      "away_games": 5,
       "remaining_opponents": [
+        "RED",
+        "IST",
+        "DUB",
         "ZAL",
         "ASV",
         "ULK",
@@ -3573,16 +3620,16 @@
       "wins": 12,
       "losses": 21,
       "win_pct": 36.4,
-      "adj_net": -2.27,
-      "adj_off": 89.67,
-      "adj_def": 91.94,
-      "elo": 1474.6,
-      "sos": 57.0,
-      "remaining": 5,
+      "adj_net": -1.89,
+      "adj_off": 90.25,
+      "adj_def": 92.15,
+      "elo": 1468.9,
+      "sos": 48.2,
+      "remaining": 10,
       "top4_pct": 0.0,
       "top6_pct": 0.0,
       "top10_pct": 0.0,
-      "avg_wins": 14.1,
+      "avg_wins": 14.9,
       "current_wins": 12,
       "last5": [
         "W",
@@ -3799,11 +3846,16 @@
           "home": true
         }
       ],
-      "remaining_sos": 57.0,
-      "home_games": 2,
-      "away_games": 3,
+      "remaining_sos": 48.2,
+      "home_games": 5,
+      "away_games": 5,
       "remaining_opponents": [
+        "HTA",
+        "BAS",
+        "ASV",
+        "PAR",
         "VIR",
+        "OLY",
         "MIL",
         "RED",
         "TEL",
@@ -3816,17 +3868,17 @@
       "wins": 12,
       "losses": 20,
       "win_pct": 37.5,
-      "adj_net": -5.65,
-      "adj_off": 80.97,
-      "adj_def": 86.62,
-      "elo": 1479.9,
-      "sos": 34.6,
-      "remaining": 6,
+      "adj_net": -7.04,
+      "adj_off": 80.45,
+      "adj_def": 87.49,
+      "elo": 1456.6,
+      "sos": 38.4,
+      "remaining": 9,
       "top4_pct": 0.0,
       "top6_pct": 0.0,
       "top10_pct": 0.0,
-      "avg_wins": 14.9,
-      "current_wins": 12,
+      "avg_wins": 13.1,
+      "current_wins": 10,
       "last5": [
         "L",
         "L",
@@ -4036,10 +4088,13 @@
           "home": false
         }
       ],
-      "remaining_sos": 34.6,
-      "home_games": 4,
-      "away_games": 2,
+      "remaining_sos": 38.4,
+      "home_games": 5,
+      "away_games": 4,
       "remaining_opponents": [
+        "DUB",
+        "VIR",
+        "PRS",
         "ASV",
         "PAM",
         "RED",
@@ -4054,16 +4109,16 @@
       "wins": 10,
       "losses": 22,
       "win_pct": 31.2,
-      "adj_net": -3.57,
-      "adj_off": 80.86,
-      "adj_def": 84.44,
-      "elo": 1468.1,
-      "sos": 62.8,
-      "remaining": 6,
+      "adj_net": -3.39,
+      "adj_off": 80.13,
+      "adj_def": 83.52,
+      "elo": 1453.8,
+      "sos": 53.8,
+      "remaining": 9,
       "top4_pct": 0.0,
       "top6_pct": 0.0,
       "top10_pct": 0.0,
-      "avg_wins": 11.8,
+      "avg_wins": 12.4,
       "current_wins": 10,
       "last5": [
         "W",
@@ -4274,10 +4329,13 @@
           "home": true
         }
       ],
-      "remaining_sos": 62.8,
-      "home_games": 1,
-      "away_games": 5,
+      "remaining_sos": 53.9,
+      "home_games": 3,
+      "away_games": 6,
       "remaining_opponents": [
+        "ASV",
+        "MUN",
+        "MCO",
         "BAR",
         "MAD",
         "TEL",
@@ -4292,16 +4350,16 @@
       "wins": 9,
       "losses": 23,
       "win_pct": 28.1,
-      "adj_net": -5.32,
-      "adj_off": 87.42,
-      "adj_def": 92.74,
-      "elo": 1437.0,
-      "sos": 47.3,
-      "remaining": 6,
+      "adj_net": -4.91,
+      "adj_off": 87.89,
+      "adj_def": 92.8,
+      "elo": 1456.7,
+      "sos": 53.1,
+      "remaining": 9,
       "top4_pct": 0.0,
       "top6_pct": 0.0,
       "top10_pct": 0.0,
-      "avg_wins": 11.1,
+      "avg_wins": 11.6,
       "current_wins": 9,
       "last5": [
         "L",
@@ -4512,10 +4570,13 @@
           "home": false
         }
       ],
-      "remaining_sos": 47.3,
-      "home_games": 4,
-      "away_games": 2,
+      "remaining_sos": 53.1,
+      "home_games": 5,
+      "away_games": 4,
       "remaining_opponents": [
+        "PRS",
+        "DUB",
+        "OLY",
         "RED",
         "HTA",
         "MAD",
@@ -4530,16 +4591,16 @@
       "wins": 8,
       "losses": 24,
       "win_pct": 25.0,
-      "adj_net": -7.13,
-      "adj_off": 78.8,
-      "adj_def": 85.93,
-      "elo": 1400.0,
-      "sos": 54.8,
-      "remaining": 6,
+      "adj_net": -7.26,
+      "adj_off": 78.41,
+      "adj_def": 85.67,
+      "elo": 1437.0,
+      "sos": 50.4,
+      "remaining": 9,
       "top4_pct": 0.0,
       "top6_pct": 0.0,
       "top10_pct": 0.0,
-      "avg_wins": 9.4,
+      "avg_wins": 10.0,
       "current_wins": 8,
       "last5": [
         "L",
@@ -4750,10 +4811,13 @@
           "home": true
         }
       ],
-      "remaining_sos": 54.8,
-      "home_games": 3,
-      "away_games": 3,
+      "remaining_sos": 50.4,
+      "home_games": 4,
+      "away_games": 5,
       "remaining_opponents": [
+        "IST",
+        "PRS",
+        "TEL",
         "PAR",
         "MUN",
         "OLY",
@@ -4768,166 +4832,166 @@
       "rank": 1,
       "player": "VEZENKOV, SASHA",
       "team": "OLY",
-      "mvp_score": 89.9,
-      "avg_pir": 23.59,
-      "wpa": 1086.3,
+      "mvp_score": 93.86,
+      "avg_pir": 0.0,
+      "wpa": 0.0,
       "team_win_pct": 66.7,
-      "clutch_eff": 0.5366,
-      "gp": 29
-    },
-    {
-      "rank": 2,
-      "player": "FRANCISCO, SYLVAIN",
-      "team": "ZAL",
-      "mvp_score": 87.79,
-      "avg_pir": 20.03,
-      "wpa": 1343.0,
-      "team_win_pct": 56.2,
-      "clutch_eff": 0.6237,
-      "gp": 32
-    },
-    {
-      "rank": 3,
-      "player": "BALDWIN IV, WADE",
-      "team": "ULK",
-      "mvp_score": 85.37,
-      "avg_pir": 16.97,
-      "wpa": 1164.9,
-      "team_win_pct": 71.9,
-      "clutch_eff": 0.7048,
-      "gp": 31
-    },
-    {
-      "rank": 4,
-      "player": "HORTON TUCKER, TALEN",
-      "team": "ULK",
-      "mvp_score": 83.53,
-      "avg_pir": 15.6,
-      "wpa": 1159.0,
-      "team_win_pct": 71.9,
-      "clutch_eff": 0.8273,
-      "gp": 30
-    },
-    {
-      "rank": 5,
-      "player": "BRYANT, ELIJAH",
-      "team": "HTA",
-      "mvp_score": 83.38,
-      "avg_pir": 20.96,
-      "wpa": 950.8,
-      "team_win_pct": 64.5,
-      "clutch_eff": 0.2476,
+      "clutch_eff": 0.0,
       "gp": 27
     },
     {
-      "rank": 6,
-      "player": "JAMES, MIKE",
-      "team": "MCO",
-      "mvp_score": 81.76,
-      "avg_pir": 18.87,
-      "wpa": 1180.1,
-      "team_win_pct": 56.2,
-      "clutch_eff": 0.2225,
-      "gp": 31
+      "rank": 2,
+      "player": "BALDWIN IV, WADE",
+      "team": "ULK",
+      "mvp_score": 80.87,
+      "avg_pir": 0.0,
+      "wpa": 0.0,
+      "team_win_pct": 74.1,
+      "clutch_eff": 0.0,
+      "gp": 26
     },
     {
-      "rank": 7,
+      "rank": 3,
+      "player": "FRANCISCO, SYLVAIN",
+      "team": "ZAL",
+      "mvp_score": 79.19,
+      "avg_pir": 0.0,
+      "wpa": 0.0,
+      "team_win_pct": 57.1,
+      "clutch_eff": 0.0,
+      "gp": 28
+    },
+    {
+      "rank": 4,
       "player": "NUNN, KENDRICK",
       "team": "PAN",
-      "mvp_score": 81.09,
-      "avg_pir": 17.6,
-      "wpa": 1078.1,
-      "team_win_pct": 56.2,
-      "clutch_eff": 0.6225,
+      "mvp_score": 78.03,
+      "avg_pir": 0.0,
+      "wpa": 0.0,
+      "team_win_pct": 57.1,
+      "clutch_eff": 0.0,
+      "gp": 22
+    },
+    {
+      "rank": 5,
+      "player": "JAMES, MIKE",
+      "team": "MCO",
+      "mvp_score": 76.02,
+      "avg_pir": 0.0,
+      "wpa": 0.0,
+      "team_win_pct": 57.1,
+      "clutch_eff": 0.0,
+      "gp": 28
+    },
+    {
+      "rank": 6,
+      "player": "MILUTINOV, NIKOLA",
+      "team": "OLY",
+      "mvp_score": 74.78,
+      "avg_pir": 0.0,
+      "wpa": 0.0,
+      "team_win_pct": 66.7,
+      "clutch_eff": 0.0,
       "gp": 25
     },
     {
+      "rank": 7,
+      "player": "DORSEY, TYLER",
+      "team": "OLY",
+      "mvp_score": 73.23,
+      "avg_pir": 0.0,
+      "wpa": 0.0,
+      "team_win_pct": 66.7,
+      "clutch_eff": 0.0,
+      "gp": 27
+    },
+    {
       "rank": 8,
-      "player": "WRIGHT IV, MCKINLEY",
-      "team": "DUB",
-      "mvp_score": 80.58,
-      "avg_pir": 15.97,
-      "wpa": 1170.5,
-      "team_win_pct": 53.1,
-      "clutch_eff": 1.4856,
-      "gp": 32
+      "player": "PUNTER, KEVIN",
+      "team": "BAR",
+      "mvp_score": 72.98,
+      "avg_pir": 0.0,
+      "wpa": 0.0,
+      "team_win_pct": 60.7,
+      "clutch_eff": 0.0,
+      "gp": 27
     },
     {
       "rank": 9,
-      "player": "MILUTINOV, NIKOLA",
-      "team": "OLY",
-      "mvp_score": 80.03,
-      "avg_pir": 20.57,
-      "wpa": 609.0,
-      "team_win_pct": 66.7,
-      "clutch_eff": 0.4,
-      "gp": 30
+      "player": "HORTON TUCKER, TALEN",
+      "team": "ULK",
+      "mvp_score": 72.96,
+      "avg_pir": 0.0,
+      "wpa": 0.0,
+      "team_win_pct": 74.1,
+      "clutch_eff": 0.0,
+      "gp": 25
     },
     {
       "rank": 10,
-      "player": "HIFI, NADIR",
-      "team": "PRS",
-      "mvp_score": 79.63,
-      "avg_pir": 17.06,
-      "wpa": 1311.0,
-      "team_win_pct": 36.4,
-      "clutch_eff": 0.6275,
-      "gp": 32
+      "player": "NWORA, JORDAN",
+      "team": "RED",
+      "mvp_score": 72.64,
+      "avg_pir": 0.0,
+      "wpa": 0.0,
+      "team_win_pct": 57.1,
+      "clutch_eff": 0.0,
+      "gp": 23
     },
     {
       "rank": 11,
-      "player": "DORSEY, TYLER",
-      "team": "OLY",
-      "mvp_score": 78.87,
-      "avg_pir": 14.55,
-      "wpa": 1171.5,
-      "team_win_pct": 66.7,
-      "clutch_eff": 0.4753,
-      "gp": 33
+      "player": "WRIGHT IV, MCKINLEY",
+      "team": "DUB",
+      "mvp_score": 71.75,
+      "avg_pir": 0.0,
+      "wpa": 0.0,
+      "team_win_pct": 50.0,
+      "clutch_eff": 0.0,
+      "gp": 28
     },
     {
       "rank": 12,
-      "player": "MONEKE, CHIMA",
-      "team": "RED",
-      "mvp_score": 78.58,
-      "avg_pir": 18.03,
-      "wpa": 833.6,
-      "team_win_pct": 56.2,
-      "clutch_eff": 0.5987,
-      "gp": 29
+      "player": "BRYANT, ELIJAH",
+      "team": "HTA",
+      "mvp_score": 71.02,
+      "avg_pir": 0.0,
+      "wpa": 0.0,
+      "team_win_pct": 59.3,
+      "clutch_eff": 0.0,
+      "gp": 23
     },
     {
       "rank": 13,
       "player": "OTURU, DAN",
       "team": "HTA",
-      "mvp_score": 77.31,
-      "avg_pir": 16.65,
-      "wpa": 832.5,
-      "team_win_pct": 64.5,
-      "clutch_eff": 0.4967,
-      "gp": 31
-    },
-    {
-      "rank": 14,
-      "player": "NWORA, JORDAN",
-      "team": "RED",
-      "mvp_score": 76.74,
-      "avg_pir": 16.0,
-      "wpa": 937.4,
-      "team_win_pct": 56.2,
-      "clutch_eff": 0.5939,
+      "mvp_score": 68.9,
+      "avg_pir": 0.0,
+      "wpa": 0.0,
+      "team_win_pct": 59.3,
+      "clutch_eff": 0.0,
       "gp": 27
     },
     {
+      "rank": 14,
+      "player": "MONTERO, JEAN",
+      "team": "PAM",
+      "mvp_score": 68.22,
+      "avg_pir": 0.0,
+      "wpa": 0.0,
+      "team_win_pct": 64.3,
+      "clutch_eff": 0.0,
+      "gp": 23
+    },
+    {
       "rank": 15,
-      "player": "KABENGELE, MFIONDU",
-      "team": "DUB",
-      "mvp_score": 76.32,
-      "avg_pir": 17.8,
-      "wpa": 876.1,
-      "team_win_pct": 53.1,
-      "clutch_eff": 0.3842,
-      "gp": 30
+      "player": "HIFI, NADIR",
+      "team": "PRS",
+      "mvp_score": 67.89,
+      "avg_pir": 0.0,
+      "wpa": 0.0,
+      "team_win_pct": 33.3,
+      "clutch_eff": 0.0,
+      "gp": 26
     }
   ],
   "player_stats": [
@@ -4947,11 +5011,11 @@
       "fg_pct": 54.7,
       "fg3_pct": 39.7,
       "ft_pct": 89.0,
-      "mvp_score": 89.9,
+      "mvp_score": 93.9,
       "mvp_rank": 1,
-      "wpa": 1086.3,
-      "consistency": 0.761,
-      "clutch_eff": 0.537
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "009846",
@@ -4969,11 +5033,11 @@
       "fg_pct": 53.3,
       "fg3_pct": 40.4,
       "ft_pct": 89.0,
-      "mvp_score": 83.4,
-      "mvp_rank": 5,
-      "wpa": 950.8,
-      "consistency": 0.714,
-      "clutch_eff": 0.248
+      "mvp_score": 71.0,
+      "mvp_rank": 12,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "003941",
@@ -4991,11 +5055,11 @@
       "fg_pct": 69.3,
       "fg3_pct": 0.0,
       "ft_pct": 79.7,
-      "mvp_score": 80.0,
-      "mvp_rank": 9,
-      "wpa": 609.0,
-      "consistency": 0.766,
-      "clutch_eff": 0.4
+      "mvp_score": 74.8,
+      "mvp_rank": 6,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007975",
@@ -5013,11 +5077,11 @@
       "fg_pct": 45.9,
       "fg3_pct": 40.8,
       "ft_pct": 80.0,
-      "mvp_score": 87.8,
-      "mvp_rank": 2,
-      "wpa": 1343.0,
-      "consistency": 0.682,
-      "clutch_eff": 0.624
+      "mvp_score": 79.2,
+      "mvp_rank": 3,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "005985",
@@ -5035,11 +5099,11 @@
       "fg_pct": 40.0,
       "fg3_pct": 30.1,
       "ft_pct": 85.1,
-      "mvp_score": 81.8,
-      "mvp_rank": 6,
-      "wpa": 1180.1,
-      "consistency": 0.745,
-      "clutch_eff": 0.223
+      "mvp_score": 76.0,
+      "mvp_rank": 5,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012201",
@@ -5057,11 +5121,11 @@
       "fg_pct": 56.2,
       "fg3_pct": 31.4,
       "ft_pct": 76.3,
-      "mvp_score": 78.6,
-      "mvp_rank": 12,
-      "wpa": 833.6,
-      "consistency": 0.695,
-      "clutch_eff": 0.599
+      "mvp_score": 66.7,
+      "mvp_rank": 16,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012796",
@@ -5079,11 +5143,11 @@
       "fg_pct": 57.2,
       "fg3_pct": 32.7,
       "ft_pct": 82.8,
-      "mvp_score": 76.3,
-      "mvp_rank": 15,
-      "wpa": 876.1,
-      "consistency": 0.657,
-      "clutch_eff": 0.384
+      "mvp_score": 65.7,
+      "mvp_rank": 19,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012774",
@@ -5101,11 +5165,11 @@
       "fg_pct": 51.3,
       "fg3_pct": 38.9,
       "ft_pct": 91.6,
-      "mvp_score": 81.1,
-      "mvp_rank": 7,
-      "wpa": 1078.1,
-      "consistency": 0.621,
-      "clutch_eff": 0.622
+      "mvp_score": 78.0,
+      "mvp_rank": 4,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "010465",
@@ -5123,11 +5187,11 @@
       "fg_pct": 37.1,
       "fg3_pct": 26.7,
       "ft_pct": 87.1,
-      "mvp_score": 65.6,
-      "mvp_rank": 43,
-      "wpa": 389.2,
-      "consistency": 0.637,
-      "clutch_eff": 0.654
+      "mvp_score": 59.6,
+      "mvp_rank": 29,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012640",
@@ -5145,11 +5209,11 @@
       "fg_pct": 40.6,
       "fg3_pct": 33.9,
       "ft_pct": 83.9,
-      "mvp_score": 79.6,
-      "mvp_rank": 10,
-      "wpa": 1311.0,
-      "consistency": 0.68,
-      "clutch_eff": 0.628
+      "mvp_score": 67.9,
+      "mvp_rank": 15,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "009863",
@@ -5167,11 +5231,11 @@
       "fg_pct": 46.4,
       "fg3_pct": 27.7,
       "ft_pct": 77.1,
-      "mvp_score": 85.4,
-      "mvp_rank": 3,
-      "wpa": 1164.9,
-      "consistency": 0.712,
-      "clutch_eff": 0.705
+      "mvp_score": 80.9,
+      "mvp_rank": 2,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012788",
@@ -5189,11 +5253,11 @@
       "fg_pct": 72.5,
       "fg3_pct": 0.0,
       "ft_pct": 66.7,
-      "mvp_score": 77.3,
+      "mvp_score": 68.9,
       "mvp_rank": 13,
-      "wpa": 832.5,
-      "consistency": 0.71,
-      "clutch_eff": 0.497
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011194",
@@ -5211,11 +5275,11 @@
       "fg_pct": 56.7,
       "fg3_pct": 37.9,
       "ft_pct": 82.5,
-      "mvp_score": 70.7,
-      "mvp_rank": 24,
-      "wpa": 797.0,
-      "consistency": 0.656,
-      "clutch_eff": 0.072
+      "mvp_score": 60.6,
+      "mvp_rank": 28,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "001133",
@@ -5233,11 +5297,11 @@
       "fg_pct": 55.5,
       "fg3_pct": 40.4,
       "ft_pct": 83.5,
-      "mvp_score": 74.0,
+      "mvp_score": 66.2,
       "mvp_rank": 18,
-      "wpa": 724.2,
-      "consistency": 0.671,
-      "clutch_eff": 0.539
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012878",
@@ -5255,11 +5319,11 @@
       "fg_pct": 60.2,
       "fg3_pct": 31.0,
       "ft_pct": 75.7,
-      "mvp_score": 73.2,
-      "mvp_rank": 20,
-      "wpa": 954.7,
-      "consistency": 0.654,
-      "clutch_eff": 0.08
+      "mvp_score": 60.8,
+      "mvp_rank": 27,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013363",
@@ -5277,11 +5341,11 @@
       "fg_pct": 47.3,
       "fg3_pct": 35.9,
       "ft_pct": 78.1,
-      "mvp_score": 76.7,
-      "mvp_rank": 14,
-      "wpa": 937.4,
-      "consistency": 0.658,
-      "clutch_eff": 0.594
+      "mvp_score": 72.6,
+      "mvp_rank": 10,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012606",
@@ -5299,11 +5363,11 @@
       "fg_pct": 50.4,
       "fg3_pct": 36.4,
       "ft_pct": 86.3,
-      "mvp_score": 80.6,
-      "mvp_rank": 8,
-      "wpa": 1170.5,
-      "consistency": 0.599,
-      "clutch_eff": 1.486
+      "mvp_score": 71.7,
+      "mvp_rank": 11,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013369",
@@ -5321,10 +5385,10 @@
       "fg_pct": 47.0,
       "fg3_pct": 23.8,
       "ft_pct": 86.7,
-      "mvp_score": 58.4,
-      "mvp_rank": 83,
-      "wpa": 201.4,
-      "consistency": 0.651,
+      "mvp_score": 36.8,
+      "mvp_rank": 130,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -5343,11 +5407,11 @@
       "fg_pct": 53.4,
       "fg3_pct": 31.7,
       "ft_pct": 84.5,
-      "mvp_score": 68.4,
-      "mvp_rank": 30,
-      "wpa": 667.4,
-      "consistency": 0.696,
-      "clutch_eff": 0.319
+      "mvp_score": 56.6,
+      "mvp_rank": 38,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "005791",
@@ -5365,11 +5429,11 @@
       "fg_pct": 68.8,
       "fg3_pct": 0.0,
       "ft_pct": 70.9,
-      "mvp_score": 69.4,
-      "mvp_rank": 27,
-      "wpa": 581.7,
-      "consistency": 0.658,
-      "clutch_eff": 0.169
+      "mvp_score": 56.9,
+      "mvp_rank": 36,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012080",
@@ -5387,11 +5451,11 @@
       "fg_pct": 47.0,
       "fg3_pct": 40.9,
       "ft_pct": 88.6,
-      "mvp_score": 74.4,
-      "mvp_rank": 17,
-      "wpa": 1189.0,
-      "consistency": 0.742,
-      "clutch_eff": 0.551
+      "mvp_score": 62.9,
+      "mvp_rank": 22,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007200",
@@ -5409,11 +5473,11 @@
       "fg_pct": 46.8,
       "fg3_pct": 41.9,
       "ft_pct": 88.2,
-      "mvp_score": 60.5,
-      "mvp_rank": 73,
-      "wpa": 382.0,
-      "consistency": 0.702,
-      "clutch_eff": 0.139
+      "mvp_score": 51.4,
+      "mvp_rank": 59,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014124",
@@ -5431,11 +5495,11 @@
       "fg_pct": 51.0,
       "fg3_pct": 32.7,
       "ft_pct": 75.9,
-      "mvp_score": 83.5,
-      "mvp_rank": 4,
-      "wpa": 1159.0,
-      "consistency": 0.625,
-      "clutch_eff": 0.827
+      "mvp_score": 73.0,
+      "mvp_rank": 9,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "010042",
@@ -5453,11 +5517,11 @@
       "fg_pct": 38.7,
       "fg3_pct": 32.4,
       "ft_pct": 88.7,
-      "mvp_score": 74.5,
-      "mvp_rank": 16,
-      "wpa": 803.3,
-      "consistency": 0.653,
-      "clutch_eff": 0.475
+      "mvp_score": 68.2,
+      "mvp_rank": 14,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011199",
@@ -5475,11 +5539,11 @@
       "fg_pct": 71.7,
       "fg3_pct": 0.0,
       "ft_pct": 67.8,
-      "mvp_score": 65.5,
-      "mvp_rank": 44,
-      "wpa": 520.5,
-      "consistency": 0.693,
-      "clutch_eff": 0.2
+      "mvp_score": 50.1,
+      "mvp_rank": 65,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014117",
@@ -5497,11 +5561,11 @@
       "fg_pct": 51.3,
       "fg3_pct": 42.3,
       "ft_pct": 78.9,
-      "mvp_score": 73.1,
-      "mvp_rank": 21,
-      "wpa": 802.6,
-      "consistency": 0.618,
-      "clutch_eff": 0.537
+      "mvp_score": 66.2,
+      "mvp_rank": 17,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "008987",
@@ -5519,11 +5583,11 @@
       "fg_pct": 49.8,
       "fg3_pct": 47.1,
       "ft_pct": 82.1,
-      "mvp_score": 67.4,
-      "mvp_rank": 36,
-      "wpa": 699.5,
-      "consistency": 0.683,
-      "clutch_eff": 0.206
+      "mvp_score": 53.1,
+      "mvp_rank": 51,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "009849",
@@ -5541,11 +5605,11 @@
       "fg_pct": 45.6,
       "fg3_pct": 39.1,
       "ft_pct": 79.5,
-      "mvp_score": 78.9,
-      "mvp_rank": 11,
-      "wpa": 1171.5,
-      "consistency": 0.681,
-      "clutch_eff": 0.475
+      "mvp_score": 73.2,
+      "mvp_rank": 7,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "009048",
@@ -5563,11 +5627,11 @@
       "fg_pct": 42.6,
       "fg3_pct": 31.9,
       "ft_pct": 58.8,
-      "mvp_score": 71.7,
-      "mvp_rank": 22,
-      "wpa": 860.8,
-      "consistency": 0.663,
-      "clutch_eff": 0.379
+      "mvp_score": 62.8,
+      "mvp_rank": 23,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "006760",
@@ -5585,11 +5649,11 @@
       "fg_pct": 48.2,
       "fg3_pct": 27.4,
       "ft_pct": 84.3,
-      "mvp_score": 62.9,
-      "mvp_rank": 58,
-      "wpa": 514.5,
-      "consistency": 0.688,
-      "clutch_eff": 0.297
+      "mvp_score": 44.0,
+      "mvp_rank": 90,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011219",
@@ -5607,11 +5671,11 @@
       "fg_pct": 51.6,
       "fg3_pct": 32.5,
       "ft_pct": 79.3,
-      "mvp_score": 67.9,
-      "mvp_rank": 34,
-      "wpa": 801.9,
-      "consistency": 0.619,
-      "clutch_eff": 0.223
+      "mvp_score": 57.8,
+      "mvp_rank": 33,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "002100",
@@ -5629,11 +5693,11 @@
       "fg_pct": 52.0,
       "fg3_pct": 41.6,
       "ft_pct": 97.6,
-      "mvp_score": 65.0,
-      "mvp_rank": 46,
-      "wpa": 618.6,
-      "consistency": 0.622,
-      "clutch_eff": 0.724
+      "mvp_score": 51.0,
+      "mvp_rank": 61,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011981",
@@ -5651,11 +5715,11 @@
       "fg_pct": 67.3,
       "fg3_pct": 0.0,
       "ft_pct": 66.7,
-      "mvp_score": 59.9,
-      "mvp_rank": 76,
-      "wpa": 522.7,
-      "consistency": 0.561,
-      "clutch_eff": 0.187
+      "mvp_score": 45.6,
+      "mvp_rank": 84,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "006540",
@@ -5673,11 +5737,11 @@
       "fg_pct": 45.6,
       "fg3_pct": 35.6,
       "ft_pct": 87.2,
-      "mvp_score": 61.6,
-      "mvp_rank": 65,
-      "wpa": 278.3,
-      "consistency": 0.646,
-      "clutch_eff": 0.25
+      "mvp_score": 48.1,
+      "mvp_rank": 76,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "009862",
@@ -5695,11 +5759,11 @@
       "fg_pct": 45.8,
       "fg3_pct": 40.3,
       "ft_pct": 87.5,
-      "mvp_score": 73.7,
-      "mvp_rank": 19,
-      "wpa": 1010.3,
-      "consistency": 0.54,
-      "clutch_eff": 0.527
+      "mvp_score": 73.0,
+      "mvp_rank": 8,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014008",
@@ -5717,11 +5781,11 @@
       "fg_pct": 41.7,
       "fg3_pct": 34.3,
       "ft_pct": 82.8,
-      "mvp_score": 68.3,
-      "mvp_rank": 33,
-      "wpa": 974.9,
-      "consistency": 0.589,
-      "clutch_eff": 0.362
+      "mvp_score": 52.5,
+      "mvp_rank": 54,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011226",
@@ -5739,11 +5803,11 @@
       "fg_pct": 51.2,
       "fg3_pct": 32.7,
       "ft_pct": 80.2,
-      "mvp_score": 68.8,
-      "mvp_rank": 29,
-      "wpa": 738.4,
-      "consistency": 0.68,
-      "clutch_eff": 0.323
+      "mvp_score": 61.1,
+      "mvp_rank": 26,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011286",
@@ -5761,11 +5825,11 @@
       "fg_pct": 42.5,
       "fg3_pct": 31.1,
       "ft_pct": 78.2,
-      "mvp_score": 68.9,
-      "mvp_rank": 28,
-      "wpa": 826.1,
-      "consistency": 0.618,
-      "clutch_eff": 0.315
+      "mvp_score": 54.7,
+      "mvp_rank": 45,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "004888",
@@ -5783,11 +5847,11 @@
       "fg_pct": 47.3,
       "fg3_pct": 37.4,
       "ft_pct": 69.4,
-      "mvp_score": 67.0,
-      "mvp_rank": 37,
-      "wpa": 749.4,
-      "consistency": 0.573,
-      "clutch_eff": 0.154
+      "mvp_score": 62.6,
+      "mvp_rank": 24,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "005928",
@@ -5805,11 +5869,11 @@
       "fg_pct": 42.2,
       "fg3_pct": 40.1,
       "ft_pct": 85.4,
-      "mvp_score": 70.9,
-      "mvp_rank": 23,
-      "wpa": 784.4,
-      "consistency": 0.606,
-      "clutch_eff": 0.413
+      "mvp_score": 63.6,
+      "mvp_rank": 20,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011217",
@@ -5827,11 +5891,11 @@
       "fg_pct": 51.5,
       "fg3_pct": 41.7,
       "ft_pct": 86.6,
-      "mvp_score": 68.3,
-      "mvp_rank": 32,
-      "wpa": 707.8,
-      "consistency": 0.64,
-      "clutch_eff": 0.216
+      "mvp_score": 62.9,
+      "mvp_rank": 21,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013367",
@@ -5849,11 +5913,11 @@
       "fg_pct": 43.7,
       "fg3_pct": 21.4,
       "ft_pct": 86.3,
-      "mvp_score": 56.3,
-      "mvp_rank": 97,
-      "wpa": 442.4,
-      "consistency": 0.592,
-      "clutch_eff": 0.218
+      "mvp_score": 43.3,
+      "mvp_rank": 95,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012712",
@@ -5871,11 +5935,11 @@
       "fg_pct": 46.1,
       "fg3_pct": 34.8,
       "ft_pct": 75.6,
-      "mvp_score": 63.4,
+      "mvp_score": 51.9,
       "mvp_rank": 55,
-      "wpa": 601.6,
-      "consistency": 0.602,
-      "clutch_eff": 0.1
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "000796",
@@ -5893,11 +5957,11 @@
       "fg_pct": 48.3,
       "fg3_pct": 39.2,
       "ft_pct": 82.6,
-      "mvp_score": 63.4,
-      "mvp_rank": 56,
-      "wpa": 625.3,
-      "consistency": 0.625,
-      "clutch_eff": 0.038
+      "mvp_score": 53.7,
+      "mvp_rank": 49,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013403",
@@ -5915,11 +5979,11 @@
       "fg_pct": 39.3,
       "fg3_pct": 33.6,
       "ft_pct": 72.7,
-      "mvp_score": 62.2,
-      "mvp_rank": 61,
-      "wpa": 590.7,
-      "consistency": 0.574,
-      "clutch_eff": 0.335
+      "mvp_score": 54.2,
+      "mvp_rank": 48,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007831",
@@ -5937,11 +6001,11 @@
       "fg_pct": 42.8,
       "fg3_pct": 37.3,
       "ft_pct": 87.0,
-      "mvp_score": 66.0,
-      "mvp_rank": 40,
-      "wpa": 788.3,
-      "consistency": 0.558,
-      "clutch_eff": 0.427
+      "mvp_score": 55.0,
+      "mvp_rank": 42,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "004508",
@@ -5959,11 +6023,11 @@
       "fg_pct": 43.1,
       "fg3_pct": 39.2,
       "ft_pct": 90.4,
-      "mvp_score": 68.4,
-      "mvp_rank": 31,
-      "wpa": 894.8,
-      "consistency": 0.561,
-      "clutch_eff": 0.688
+      "mvp_score": 57.7,
+      "mvp_rank": 34,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014012",
@@ -5981,11 +6045,11 @@
       "fg_pct": 61.3,
       "fg3_pct": 41.7,
       "ft_pct": 85.1,
-      "mvp_score": 59.6,
-      "mvp_rank": 78,
-      "wpa": 449.8,
-      "consistency": 0.645,
-      "clutch_eff": 0.116
+      "mvp_score": 47.4,
+      "mvp_rank": 80,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "001926",
@@ -6003,11 +6067,11 @@
       "fg_pct": 41.4,
       "fg3_pct": 35.8,
       "ft_pct": 91.7,
-      "mvp_score": 63.7,
-      "mvp_rank": 53,
-      "wpa": 610.0,
-      "consistency": 0.557,
-      "clutch_eff": 0.232
+      "mvp_score": 58.1,
+      "mvp_rank": 32,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "004132",
@@ -6025,11 +6089,11 @@
       "fg_pct": 60.4,
       "fg3_pct": 25.5,
       "ft_pct": 78.1,
-      "mvp_score": 64.5,
-      "mvp_rank": 47,
-      "wpa": 643.6,
-      "consistency": 0.661,
-      "clutch_eff": 0.224
+      "mvp_score": 51.0,
+      "mvp_rank": 60,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014013",
@@ -6047,11 +6111,11 @@
       "fg_pct": 45.6,
       "fg3_pct": 42.1,
       "ft_pct": 83.8,
-      "mvp_score": 65.1,
-      "mvp_rank": 45,
-      "wpa": 1005.4,
-      "consistency": 0.595,
-      "clutch_eff": 0.439
+      "mvp_score": 50.3,
+      "mvp_rank": 63,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014086",
@@ -6069,11 +6133,11 @@
       "fg_pct": 47.9,
       "fg3_pct": 13.6,
       "ft_pct": 68.9,
-      "mvp_score": 56.4,
-      "mvp_rank": 96,
-      "wpa": 319.9,
-      "consistency": 0.626,
-      "clutch_eff": 0.453
+      "mvp_score": 39.7,
+      "mvp_rank": 115,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "010781",
@@ -6091,11 +6155,11 @@
       "fg_pct": 43.0,
       "fg3_pct": 32.4,
       "ft_pct": 86.0,
-      "mvp_score": 62.3,
-      "mvp_rank": 60,
-      "wpa": 454.3,
-      "consistency": 0.671,
-      "clutch_eff": 0.46
+      "mvp_score": 49.3,
+      "mvp_rank": 68,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "008192",
@@ -6113,11 +6177,11 @@
       "fg_pct": 56.7,
       "fg3_pct": 41.1,
       "ft_pct": 71.4,
-      "mvp_score": 66.6,
-      "mvp_rank": 38,
-      "wpa": 829.7,
-      "consistency": 0.623,
-      "clutch_eff": 0.24
+      "mvp_score": 57.2,
+      "mvp_rank": 35,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007982",
@@ -6135,11 +6199,11 @@
       "fg_pct": 50.2,
       "fg3_pct": 41.7,
       "ft_pct": 77.8,
-      "mvp_score": 64.3,
-      "mvp_rank": 50,
-      "wpa": 659.8,
-      "consistency": 0.608,
-      "clutch_eff": 0.245
+      "mvp_score": 54.9,
+      "mvp_rank": 43,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "004088",
@@ -6157,11 +6221,11 @@
       "fg_pct": 45.0,
       "fg3_pct": 36.1,
       "ft_pct": 81.4,
-      "mvp_score": 63.0,
-      "mvp_rank": 57,
-      "wpa": 678.4,
-      "consistency": 0.561,
-      "clutch_eff": 0.104
+      "mvp_score": 51.5,
+      "mvp_rank": 58,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007027",
@@ -6179,11 +6243,11 @@
       "fg_pct": 45.9,
       "fg3_pct": 32.2,
       "ft_pct": 86.7,
-      "mvp_score": 61.9,
-      "mvp_rank": 63,
-      "wpa": 449.2,
-      "consistency": 0.57,
-      "clutch_eff": 0.261
+      "mvp_score": 56.0,
+      "mvp_rank": 40,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "004004",
@@ -6201,11 +6265,11 @@
       "fg_pct": 47.0,
       "fg3_pct": 37.1,
       "ft_pct": 90.1,
-      "mvp_score": 65.7,
-      "mvp_rank": 42,
-      "wpa": 818.7,
-      "consistency": 0.63,
-      "clutch_eff": 0.385
+      "mvp_score": 49.5,
+      "mvp_rank": 67,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "006085",
@@ -6223,11 +6287,11 @@
       "fg_pct": 45.8,
       "fg3_pct": 38.5,
       "ft_pct": 77.1,
-      "mvp_score": 58.7,
-      "mvp_rank": 82,
-      "wpa": 345.5,
-      "consistency": 0.688,
-      "clutch_eff": 0.501
+      "mvp_score": 47.2,
+      "mvp_rank": 81,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "010391",
@@ -6245,11 +6309,11 @@
       "fg_pct": 42.3,
       "fg3_pct": 36.7,
       "ft_pct": 74.1,
-      "mvp_score": 59.3,
-      "mvp_rank": 81,
-      "wpa": 663.9,
-      "consistency": 0.551,
-      "clutch_eff": 0.417
+      "mvp_score": 43.9,
+      "mvp_rank": 91,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014207",
@@ -6267,11 +6331,11 @@
       "fg_pct": 46.3,
       "fg3_pct": 32.5,
       "ft_pct": 74.0,
-      "mvp_score": 51.7,
-      "mvp_rank": 128,
-      "wpa": 310.1,
-      "consistency": 0.615,
-      "clutch_eff": 0.029
+      "mvp_score": 34.0,
+      "mvp_rank": 148,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011196",
@@ -6289,11 +6353,11 @@
       "fg_pct": 75.0,
       "fg3_pct": 0.0,
       "ft_pct": 75.9,
-      "mvp_score": 57.4,
-      "mvp_rank": 89,
-      "wpa": 323.9,
-      "consistency": 0.588,
-      "clutch_eff": 0.062
+      "mvp_score": 50.1,
+      "mvp_rank": 64,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "003108",
@@ -6311,11 +6375,11 @@
       "fg_pct": 42.1,
       "fg3_pct": 31.9,
       "ft_pct": 80.5,
-      "mvp_score": 67.6,
-      "mvp_rank": 35,
-      "wpa": 958.0,
-      "consistency": 0.595,
-      "clutch_eff": 0.144
+      "mvp_score": 54.5,
+      "mvp_rank": 46,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "008985",
@@ -6333,11 +6397,11 @@
       "fg_pct": 47.8,
       "fg3_pct": 40.0,
       "ft_pct": 80.3,
-      "mvp_score": 59.7,
-      "mvp_rank": 77,
-      "wpa": 461.3,
-      "consistency": 0.544,
-      "clutch_eff": 0.345
+      "mvp_score": 49.1,
+      "mvp_rank": 72,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012585",
@@ -6355,11 +6419,11 @@
       "fg_pct": 45.9,
       "fg3_pct": 36.3,
       "ft_pct": 91.3,
-      "mvp_score": 60.7,
-      "mvp_rank": 71,
-      "wpa": 685.8,
-      "consistency": 0.601,
-      "clutch_eff": 0.28
+      "mvp_score": 50.5,
+      "mvp_rank": 62,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014163",
@@ -6377,11 +6441,11 @@
       "fg_pct": 44.1,
       "fg3_pct": 37.1,
       "ft_pct": 83.9,
-      "mvp_score": 65.9,
-      "mvp_rank": 41,
-      "wpa": 704.4,
-      "consistency": 0.57,
-      "clutch_eff": 0.553
+      "mvp_score": 59.0,
+      "mvp_rank": 31,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012710",
@@ -6399,11 +6463,11 @@
       "fg_pct": 51.2,
       "fg3_pct": 38.7,
       "ft_pct": 78.3,
-      "mvp_score": 61.9,
-      "mvp_rank": 64,
-      "wpa": 835.8,
-      "consistency": 0.616,
-      "clutch_eff": 0.436
+      "mvp_score": 41.1,
+      "mvp_rank": 102,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011987",
@@ -6421,11 +6485,11 @@
       "fg_pct": 39.8,
       "fg3_pct": 33.9,
       "ft_pct": 78.4,
-      "mvp_score": 70.6,
-      "mvp_rank": 25,
-      "wpa": 1206.6,
-      "consistency": 0.529,
-      "clutch_eff": 0.74
+      "mvp_score": 56.7,
+      "mvp_rank": 37,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012720",
@@ -6443,11 +6507,11 @@
       "fg_pct": 46.6,
       "fg3_pct": 39.8,
       "ft_pct": 87.5,
-      "mvp_score": 62.0,
-      "mvp_rank": 62,
-      "wpa": 822.7,
-      "consistency": 0.586,
-      "clutch_eff": 0.376
+      "mvp_score": 49.3,
+      "mvp_rank": 69,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013370",
@@ -6465,11 +6529,11 @@
       "fg_pct": 45.0,
       "fg3_pct": 37.7,
       "ft_pct": 80.0,
-      "mvp_score": 63.7,
-      "mvp_rank": 52,
-      "wpa": 757.9,
-      "consistency": 0.54,
-      "clutch_eff": 1.135
+      "mvp_score": 48.5,
+      "mvp_rank": 75,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "002580",
@@ -6487,11 +6551,11 @@
       "fg_pct": 41.5,
       "fg3_pct": 31.2,
       "ft_pct": 90.6,
-      "mvp_score": 61.1,
-      "mvp_rank": 69,
-      "wpa": 589.4,
-      "consistency": 0.588,
-      "clutch_eff": 0.031
+      "mvp_score": 48.7,
+      "mvp_rank": 74,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011078",
@@ -6509,11 +6573,11 @@
       "fg_pct": 47.3,
       "fg3_pct": 40.2,
       "ft_pct": 85.0,
-      "mvp_score": 64.2,
-      "mvp_rank": 51,
-      "wpa": 677.2,
-      "consistency": 0.568,
-      "clutch_eff": 0.33
+      "mvp_score": 61.7,
+      "mvp_rank": 25,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "001288",
@@ -6531,11 +6595,11 @@
       "fg_pct": 46.7,
       "fg3_pct": 33.8,
       "ft_pct": 86.2,
-      "mvp_score": 54.9,
+      "mvp_score": 40.1,
       "mvp_rank": 107,
-      "wpa": 448.7,
-      "consistency": 0.587,
-      "clutch_eff": 0.074
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014213",
@@ -6553,11 +6617,11 @@
       "fg_pct": 40.2,
       "fg3_pct": 33.3,
       "ft_pct": 86.2,
-      "mvp_score": 52.5,
-      "mvp_rank": 121,
-      "wpa": 233.4,
-      "consistency": 0.556,
-      "clutch_eff": 0.235
+      "mvp_score": 40.2,
+      "mvp_rank": 106,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "002939",
@@ -6575,11 +6639,11 @@
       "fg_pct": 48.4,
       "fg3_pct": 46.3,
       "ft_pct": 73.0,
-      "mvp_score": 60.1,
-      "mvp_rank": 75,
-      "wpa": 532.8,
-      "consistency": 0.578,
-      "clutch_eff": 0.229
+      "mvp_score": 49.2,
+      "mvp_rank": 71,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011212",
@@ -6597,11 +6661,11 @@
       "fg_pct": 39.9,
       "fg3_pct": 31.8,
       "ft_pct": 84.4,
-      "mvp_score": 62.5,
-      "mvp_rank": 59,
-      "wpa": 775.7,
-      "consistency": 0.564,
-      "clutch_eff": 0.131
+      "mvp_score": 51.8,
+      "mvp_rank": 56,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012593",
@@ -6619,11 +6683,11 @@
       "fg_pct": 48.6,
       "fg3_pct": 38.8,
       "ft_pct": 81.0,
-      "mvp_score": 61.5,
-      "mvp_rank": 67,
-      "wpa": 584.0,
-      "consistency": 0.636,
-      "clutch_eff": 0.464
+      "mvp_score": 44.5,
+      "mvp_rank": 88,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013402",
@@ -6641,11 +6705,11 @@
       "fg_pct": 48.0,
       "fg3_pct": 40.5,
       "ft_pct": 83.3,
-      "mvp_score": 69.5,
-      "mvp_rank": 26,
-      "wpa": 1008.1,
-      "consistency": 0.597,
-      "clutch_eff": 0.415
+      "mvp_score": 59.1,
+      "mvp_rank": 30,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "003983",
@@ -6663,11 +6727,11 @@
       "fg_pct": 42.7,
       "fg3_pct": 32.9,
       "ft_pct": 80.5,
-      "mvp_score": 55.4,
-      "mvp_rank": 103,
-      "wpa": 408.9,
-      "consistency": 0.554,
-      "clutch_eff": 0.077
+      "mvp_score": 48.0,
+      "mvp_rank": 77,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013384",
@@ -6685,11 +6749,11 @@
       "fg_pct": 45.7,
       "fg3_pct": 42.6,
       "ft_pct": 81.0,
-      "mvp_score": 64.3,
-      "mvp_rank": 49,
-      "wpa": 917.5,
-      "consistency": 0.542,
-      "clutch_eff": 0.315
+      "mvp_score": 53.2,
+      "mvp_rank": 50,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012738",
@@ -6707,11 +6771,11 @@
       "fg_pct": 58.3,
       "fg3_pct": 42.0,
       "ft_pct": 64.2,
-      "mvp_score": 64.4,
-      "mvp_rank": 48,
-      "wpa": 725.4,
-      "consistency": 0.578,
-      "clutch_eff": 0.347
+      "mvp_score": 56.2,
+      "mvp_rank": 39,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014152",
@@ -6729,11 +6793,11 @@
       "fg_pct": 48.1,
       "fg3_pct": 26.1,
       "ft_pct": 92.3,
-      "mvp_score": 53.5,
-      "mvp_rank": 117,
-      "wpa": 541.4,
-      "consistency": 0.667,
-      "clutch_eff": 0.063
+      "mvp_score": 37.5,
+      "mvp_rank": 126,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014029",
@@ -6751,11 +6815,11 @@
       "fg_pct": 70.7,
       "fg3_pct": 0.0,
       "ft_pct": 76.4,
-      "mvp_score": 59.5,
+      "mvp_score": 47.4,
       "mvp_rank": 79,
-      "wpa": 558.2,
-      "consistency": 0.543,
-      "clutch_eff": 0.294
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007230",
@@ -6773,11 +6837,11 @@
       "fg_pct": 50.6,
       "fg3_pct": 28.3,
       "ft_pct": 53.8,
-      "mvp_score": 49.5,
-      "mvp_rank": 147,
-      "wpa": 269.4,
-      "consistency": 0.622,
-      "clutch_eff": 0.123
+      "mvp_score": 31.7,
+      "mvp_rank": 160,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013374",
@@ -6795,11 +6859,11 @@
       "fg_pct": 59.9,
       "fg3_pct": 0.0,
       "ft_pct": 73.3,
-      "mvp_score": 52.8,
-      "mvp_rank": 118,
-      "wpa": 290.3,
-      "consistency": 0.57,
-      "clutch_eff": 0.237
+      "mvp_score": 36.6,
+      "mvp_rank": 131,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013667",
@@ -6817,11 +6881,11 @@
       "fg_pct": 65.5,
       "fg3_pct": 50.0,
       "ft_pct": 72.9,
-      "mvp_score": 55.3,
-      "mvp_rank": 105,
-      "wpa": 383.8,
-      "consistency": 0.574,
-      "clutch_eff": 0.492
+      "mvp_score": 34.2,
+      "mvp_rank": 147,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "009783",
@@ -6839,11 +6903,11 @@
       "fg_pct": 52.2,
       "fg3_pct": 52.5,
       "ft_pct": 94.9,
-      "mvp_score": 61.2,
-      "mvp_rank": 68,
-      "wpa": 553.6,
-      "consistency": 0.598,
-      "clutch_eff": 0.1
+      "mvp_score": 52.6,
+      "mvp_rank": 53,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "010568",
@@ -6861,11 +6925,11 @@
       "fg_pct": 46.1,
       "fg3_pct": 40.6,
       "ft_pct": 86.1,
-      "mvp_score": 66.5,
-      "mvp_rank": 39,
-      "wpa": 724.3,
-      "consistency": 0.615,
-      "clutch_eff": 0.662
+      "mvp_score": 54.7,
+      "mvp_rank": 44,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011205",
@@ -6883,11 +6947,11 @@
       "fg_pct": 43.8,
       "fg3_pct": 30.6,
       "ft_pct": 87.5,
-      "mvp_score": 60.6,
-      "mvp_rank": 72,
-      "wpa": 452.4,
-      "consistency": 0.609,
-      "clutch_eff": 0.225
+      "mvp_score": 54.2,
+      "mvp_rank": 47,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014162",
@@ -6905,11 +6969,11 @@
       "fg_pct": 38.9,
       "fg3_pct": 30.2,
       "ft_pct": 81.2,
-      "mvp_score": 51.9,
-      "mvp_rank": 126,
-      "wpa": 258.1,
-      "consistency": 0.557,
-      "clutch_eff": 0.225
+      "mvp_score": 37.2,
+      "mvp_rank": 128,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "009733",
@@ -6927,11 +6991,11 @@
       "fg_pct": 53.4,
       "fg3_pct": 0.0,
       "ft_pct": 63.6,
-      "mvp_score": 49.1,
-      "mvp_rank": 150,
-      "wpa": 173.9,
-      "consistency": 0.6,
-      "clutch_eff": 0.083
+      "mvp_score": 30.4,
+      "mvp_rank": 168,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007947",
@@ -6949,11 +7013,11 @@
       "fg_pct": 45.5,
       "fg3_pct": 34.8,
       "ft_pct": 81.8,
-      "mvp_score": 58.4,
-      "mvp_rank": 84,
-      "wpa": 655.3,
-      "consistency": 0.557,
-      "clutch_eff": 0.389
+      "mvp_score": 40.0,
+      "mvp_rank": 112,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "008855",
@@ -6971,11 +7035,11 @@
       "fg_pct": 40.5,
       "fg3_pct": 34.7,
       "ft_pct": 76.5,
-      "mvp_score": 59.3,
-      "mvp_rank": 80,
-      "wpa": 264.7,
-      "consistency": 0.581,
-      "clutch_eff": 0.558
+      "mvp_score": 49.0,
+      "mvp_rank": 73,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012687",
@@ -6993,11 +7057,11 @@
       "fg_pct": 62.0,
       "fg3_pct": 12.5,
       "ft_pct": 76.7,
-      "mvp_score": 54.1,
-      "mvp_rank": 114,
-      "wpa": 411.2,
-      "consistency": 0.526,
-      "clutch_eff": 0.312
+      "mvp_score": 39.0,
+      "mvp_rank": 119,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "002849",
@@ -7015,11 +7079,11 @@
       "fg_pct": 45.9,
       "fg3_pct": 43.2,
       "ft_pct": 46.7,
-      "mvp_score": 57.4,
-      "mvp_rank": 91,
-      "wpa": 287.1,
-      "consistency": 0.637,
-      "clutch_eff": 0.119
+      "mvp_score": 49.6,
+      "mvp_rank": 66,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011231",
@@ -7037,11 +7101,11 @@
       "fg_pct": 53.8,
       "fg3_pct": 33.8,
       "ft_pct": 70.1,
-      "mvp_score": 58.2,
-      "mvp_rank": 85,
-      "wpa": 636.3,
-      "consistency": 0.557,
-      "clutch_eff": 0.046
+      "mvp_score": 40.0,
+      "mvp_rank": 110,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "008099",
@@ -7059,11 +7123,11 @@
       "fg_pct": 43.5,
       "fg3_pct": 38.0,
       "ft_pct": 82.5,
-      "mvp_score": 57.4,
-      "mvp_rank": 90,
-      "wpa": 504.9,
-      "consistency": 0.583,
-      "clutch_eff": 0.153
+      "mvp_score": 43.8,
+      "mvp_rank": 92,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012731",
@@ -7081,11 +7145,11 @@
       "fg_pct": 48.8,
       "fg3_pct": 20.0,
       "ft_pct": 52.4,
-      "mvp_score": 49.9,
-      "mvp_rank": 141,
-      "wpa": 410.8,
-      "consistency": 0.554,
-      "clutch_eff": 0.119
+      "mvp_score": 31.4,
+      "mvp_rank": 163,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014115",
@@ -7103,11 +7167,11 @@
       "fg_pct": 45.3,
       "fg3_pct": 32.9,
       "ft_pct": 76.1,
-      "mvp_score": 60.3,
-      "mvp_rank": 74,
-      "wpa": 591.5,
-      "consistency": 0.565,
-      "clutch_eff": 0.225
+      "mvp_score": 51.5,
+      "mvp_rank": 57,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "010393",
@@ -7125,11 +7189,11 @@
       "fg_pct": 53.5,
       "fg3_pct": 36.1,
       "ft_pct": 77.3,
-      "mvp_score": 57.5,
-      "mvp_rank": 88,
-      "wpa": 422.4,
-      "consistency": 0.632,
-      "clutch_eff": 0.141
+      "mvp_score": 45.3,
+      "mvp_rank": 85,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "004887",
@@ -7147,11 +7211,11 @@
       "fg_pct": 51.7,
       "fg3_pct": 0.0,
       "ft_pct": 77.3,
-      "mvp_score": 48.6,
-      "mvp_rank": 154,
-      "wpa": 186.2,
-      "consistency": 0.564,
-      "clutch_eff": 0.218
+      "mvp_score": 30.7,
+      "mvp_rank": 167,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "009035",
@@ -7169,10 +7233,10 @@
       "fg_pct": 61.1,
       "fg3_pct": 50.0,
       "ft_pct": 63.6,
-      "mvp_score": 51.1,
-      "mvp_rank": 132,
-      "wpa": 111.0,
-      "consistency": 0.697,
+      "mvp_score": 0.0,
+      "mvp_rank": 0,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -7191,11 +7255,11 @@
       "fg_pct": 41.2,
       "fg3_pct": 40.3,
       "ft_pct": 73.1,
-      "mvp_score": 55.5,
-      "mvp_rank": 101,
-      "wpa": 573.2,
-      "consistency": 0.529,
-      "clutch_eff": 0.086
+      "mvp_score": 36.0,
+      "mvp_rank": 137,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014127",
@@ -7213,11 +7277,11 @@
       "fg_pct": 40.8,
       "fg3_pct": 32.1,
       "ft_pct": 79.5,
-      "mvp_score": 56.8,
-      "mvp_rank": 92,
-      "wpa": 500.8,
-      "consistency": 0.629,
-      "clutch_eff": 0.29
+      "mvp_score": 38.7,
+      "mvp_rank": 121,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007056",
@@ -7235,11 +7299,11 @@
       "fg_pct": 49.1,
       "fg3_pct": 25.5,
       "ft_pct": 76.4,
-      "mvp_score": 54.9,
-      "mvp_rank": 108,
-      "wpa": 475.2,
-      "consistency": 0.533,
-      "clutch_eff": 0.12
+      "mvp_score": 38.5,
+      "mvp_rank": 122,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011157",
@@ -7257,11 +7321,11 @@
       "fg_pct": 63.9,
       "fg3_pct": 52.8,
       "ft_pct": 73.5,
-      "mvp_score": 61.1,
-      "mvp_rank": 70,
-      "wpa": 534.5,
-      "consistency": 0.553,
-      "clutch_eff": 0.431
+      "mvp_score": 47.6,
+      "mvp_rank": 78,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011836",
@@ -7279,11 +7343,11 @@
       "fg_pct": 46.0,
       "fg3_pct": 40.0,
       "ft_pct": 73.7,
-      "mvp_score": 53.7,
-      "mvp_rank": 116,
-      "wpa": 531.3,
-      "consistency": 0.52,
-      "clutch_eff": 0.113
+      "mvp_score": 41.2,
+      "mvp_rank": 101,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "009549",
@@ -7301,11 +7365,11 @@
       "fg_pct": 42.9,
       "fg3_pct": 30.0,
       "ft_pct": 83.6,
-      "mvp_score": 56.5,
-      "mvp_rank": 93,
-      "wpa": 708.8,
-      "consistency": 0.503,
-      "clutch_eff": 0.412
+      "mvp_score": 38.8,
+      "mvp_rank": 120,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "009754",
@@ -7323,11 +7387,11 @@
       "fg_pct": 39.1,
       "fg3_pct": 34.4,
       "ft_pct": 84.5,
-      "mvp_score": 55.8,
-      "mvp_rank": 99,
-      "wpa": 752.9,
-      "consistency": 0.511,
-      "clutch_eff": 0.233
+      "mvp_score": 35.4,
+      "mvp_rank": 139,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014011",
@@ -7345,11 +7409,11 @@
       "fg_pct": 64.4,
       "fg3_pct": 0.0,
       "ft_pct": 68.0,
-      "mvp_score": 52.1,
-      "mvp_rank": 123,
-      "wpa": 290.1,
-      "consistency": 0.46,
-      "clutch_eff": 0.12
+      "mvp_score": 44.2,
+      "mvp_rank": 89,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "000925",
@@ -7367,11 +7431,11 @@
       "fg_pct": 55.1,
       "fg3_pct": 32.0,
       "ft_pct": 76.3,
-      "mvp_score": 57.9,
-      "mvp_rank": 87,
-      "wpa": 554.3,
-      "consistency": 0.598,
-      "clutch_eff": 0.237
+      "mvp_score": 49.2,
+      "mvp_rank": 70,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014027",
@@ -7389,11 +7453,11 @@
       "fg_pct": 50.3,
       "fg3_pct": 27.6,
       "ft_pct": 84.0,
-      "mvp_score": 51.0,
-      "mvp_rank": 133,
-      "wpa": 460.9,
-      "consistency": 0.5,
-      "clutch_eff": 0.276
+      "mvp_score": 29.1,
+      "mvp_rank": 176,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014178",
@@ -7411,11 +7475,11 @@
       "fg_pct": 46.8,
       "fg3_pct": 43.3,
       "ft_pct": 81.6,
-      "mvp_score": 52.0,
-      "mvp_rank": 125,
-      "wpa": 510.2,
-      "consistency": 0.529,
-      "clutch_eff": 0.127
+      "mvp_score": 39.3,
+      "mvp_rank": 116,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014006",
@@ -7433,10 +7497,10 @@
       "fg_pct": 48.6,
       "fg3_pct": 39.8,
       "ft_pct": 64.7,
-      "mvp_score": 54.5,
-      "mvp_rank": 112,
-      "wpa": 400.2,
-      "consistency": 0.573,
+      "mvp_score": 41.7,
+      "mvp_rank": 99,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -7455,11 +7519,11 @@
       "fg_pct": 46.2,
       "fg3_pct": 32.0,
       "ft_pct": 76.3,
-      "mvp_score": 51.8,
-      "mvp_rank": 127,
-      "wpa": 298.6,
-      "consistency": 0.411,
-      "clutch_eff": 0.171
+      "mvp_score": 42.9,
+      "mvp_rank": 96,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012610",
@@ -7477,11 +7541,11 @@
       "fg_pct": 43.5,
       "fg3_pct": 22.8,
       "ft_pct": 72.7,
-      "mvp_score": 55.5,
-      "mvp_rank": 102,
-      "wpa": 390.6,
-      "consistency": 0.652,
-      "clutch_eff": 0.02
+      "mvp_score": 43.6,
+      "mvp_rank": 93,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011204",
@@ -7499,11 +7563,11 @@
       "fg_pct": 46.4,
       "fg3_pct": 35.9,
       "ft_pct": 78.6,
-      "mvp_score": 54.7,
-      "mvp_rank": 110,
-      "wpa": 494.1,
-      "consistency": 0.538,
-      "clutch_eff": 0.042
+      "mvp_score": 43.5,
+      "mvp_rank": 94,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014010",
@@ -7521,10 +7585,10 @@
       "fg_pct": 70.8,
       "fg3_pct": 0.0,
       "ft_pct": 39.5,
-      "mvp_score": 47.8,
-      "mvp_rank": 162,
-      "wpa": 281.7,
-      "consistency": 0.569,
+      "mvp_score": 23.3,
+      "mvp_rank": 213,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -7543,10 +7607,10 @@
       "fg_pct": 44.1,
       "fg3_pct": 38.5,
       "ft_pct": 81.0,
-      "mvp_score": 42.7,
-      "mvp_rank": 206,
-      "wpa": 89.3,
-      "consistency": 0.383,
+      "mvp_score": 28.7,
+      "mvp_rank": 180,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -7565,11 +7629,11 @@
       "fg_pct": 47.7,
       "fg3_pct": 38.6,
       "ft_pct": 74.3,
-      "mvp_score": 55.0,
-      "mvp_rank": 106,
-      "wpa": 385.4,
-      "consistency": 0.547,
-      "clutch_eff": 0.09
+      "mvp_score": 40.0,
+      "mvp_rank": 109,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "005353",
@@ -7587,10 +7651,10 @@
       "fg_pct": 63.5,
       "fg3_pct": 0.0,
       "ft_pct": 80.6,
-      "mvp_score": 47.8,
-      "mvp_rank": 163,
-      "wpa": 184.8,
-      "consistency": 0.472,
+      "mvp_score": 35.4,
+      "mvp_rank": 140,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -7609,11 +7673,11 @@
       "fg_pct": 54.4,
       "fg3_pct": 37.3,
       "ft_pct": 83.7,
-      "mvp_score": 56.2,
-      "mvp_rank": 98,
-      "wpa": 400.7,
-      "consistency": 0.588,
-      "clutch_eff": 0.254
+      "mvp_score": 40.0,
+      "mvp_rank": 113,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007032",
@@ -7631,11 +7695,11 @@
       "fg_pct": 44.9,
       "fg3_pct": 40.8,
       "ft_pct": 83.0,
-      "mvp_score": 57.9,
-      "mvp_rank": 86,
-      "wpa": 585.4,
-      "consistency": 0.545,
-      "clutch_eff": 0.332
+      "mvp_score": 41.0,
+      "mvp_rank": 103,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "KLT",
@@ -7653,11 +7717,11 @@
       "fg_pct": 40.5,
       "fg3_pct": 32.2,
       "ft_pct": 80.5,
-      "mvp_score": 48.6,
-      "mvp_rank": 153,
-      "wpa": 361.9,
-      "consistency": 0.514,
-      "clutch_eff": 0.3
+      "mvp_score": 28.4,
+      "mvp_rank": 186,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013380",
@@ -7675,11 +7739,11 @@
       "fg_pct": 40.4,
       "fg3_pct": 35.6,
       "ft_pct": 81.5,
-      "mvp_score": 63.6,
-      "mvp_rank": 54,
-      "wpa": 795.1,
-      "consistency": 0.485,
-      "clutch_eff": 0.482
+      "mvp_score": 52.8,
+      "mvp_rank": 52,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014005",
@@ -7697,11 +7761,11 @@
       "fg_pct": 50.0,
       "fg3_pct": 47.1,
       "ft_pct": 90.5,
-      "mvp_score": 54.7,
-      "mvp_rank": 109,
-      "wpa": 601.6,
-      "consistency": 0.512,
-      "clutch_eff": 0.294
+      "mvp_score": 40.0,
+      "mvp_rank": 111,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011051",
@@ -7719,10 +7783,10 @@
       "fg_pct": 46.8,
       "fg3_pct": 34.2,
       "ft_pct": 74.5,
-      "mvp_score": 49.3,
-      "mvp_rank": 149,
-      "wpa": 386.5,
-      "consistency": 0.546,
+      "mvp_score": 32.5,
+      "mvp_rank": 156,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -7741,11 +7805,11 @@
       "fg_pct": 59.8,
       "fg3_pct": 0.0,
       "ft_pct": 64.3,
-      "mvp_score": 51.6,
-      "mvp_rank": 130,
-      "wpa": 306.1,
-      "consistency": 0.486,
-      "clutch_eff": 0.087
+      "mvp_score": 37.5,
+      "mvp_rank": 124,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "006725",
@@ -7763,10 +7827,10 @@
       "fg_pct": 48.4,
       "fg3_pct": 41.9,
       "ft_pct": 68.6,
-      "mvp_score": 44.2,
-      "mvp_rank": 187,
-      "wpa": 209.1,
-      "consistency": 0.56,
+      "mvp_score": 18.0,
+      "mvp_rank": 260,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -7785,11 +7849,11 @@
       "fg_pct": 48.1,
       "fg3_pct": 39.6,
       "ft_pct": 51.1,
-      "mvp_score": 53.8,
-      "mvp_rank": 115,
-      "wpa": 392.4,
-      "consistency": 0.553,
-      "clutch_eff": 0.05
+      "mvp_score": 44.9,
+      "mvp_rank": 87,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012096",
@@ -7807,10 +7871,10 @@
       "fg_pct": 74.1,
       "fg3_pct": 77.8,
       "ft_pct": 50.0,
-      "mvp_score": 43.9,
-      "mvp_rank": 190,
-      "wpa": 39.9,
-      "consistency": 0.503,
+      "mvp_score": 31.5,
+      "mvp_rank": 162,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -7829,11 +7893,11 @@
       "fg_pct": 48.6,
       "fg3_pct": 35.5,
       "ft_pct": 100.0,
-      "mvp_score": 52.4,
-      "mvp_rank": 122,
-      "wpa": 590.2,
-      "consistency": 0.542,
-      "clutch_eff": 0.099
+      "mvp_score": 36.1,
+      "mvp_rank": 136,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "009664",
@@ -7851,11 +7915,11 @@
       "fg_pct": 43.5,
       "fg3_pct": 37.9,
       "ft_pct": 78.6,
-      "mvp_score": 47.9,
-      "mvp_rank": 160,
-      "wpa": 296.0,
-      "consistency": 0.508,
-      "clutch_eff": 0.154
+      "mvp_score": 31.3,
+      "mvp_rank": 164,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012742",
@@ -7873,11 +7937,11 @@
       "fg_pct": 37.3,
       "fg3_pct": 37.7,
       "ft_pct": 73.7,
-      "mvp_score": 52.6,
-      "mvp_rank": 120,
-      "wpa": 561.7,
-      "consistency": 0.466,
-      "clutch_eff": 0.437
+      "mvp_score": 34.5,
+      "mvp_rank": 144,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011982",
@@ -7895,11 +7959,11 @@
       "fg_pct": 45.3,
       "fg3_pct": 32.4,
       "ft_pct": 77.8,
-      "mvp_score": 55.6,
-      "mvp_rank": 100,
-      "wpa": 428.0,
-      "consistency": 0.581,
-      "clutch_eff": 0.401
+      "mvp_score": 45.0,
+      "mvp_rank": 86,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011244",
@@ -7917,11 +7981,11 @@
       "fg_pct": 60.2,
       "fg3_pct": 25.0,
       "ft_pct": 93.9,
-      "mvp_score": 48.6,
-      "mvp_rank": 155,
-      "wpa": 379.6,
-      "consistency": 0.488,
-      "clutch_eff": 0.067
+      "mvp_score": 33.4,
+      "mvp_rank": 149,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012608",
@@ -7939,11 +8003,11 @@
       "fg_pct": 44.7,
       "fg3_pct": 27.0,
       "ft_pct": 69.3,
-      "mvp_score": 54.6,
-      "mvp_rank": 111,
-      "wpa": 531.0,
-      "consistency": 0.464,
-      "clutch_eff": 0.225
+      "mvp_score": 42.2,
+      "mvp_rank": 98,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011948",
@@ -7961,11 +8025,11 @@
       "fg_pct": 40.4,
       "fg3_pct": 33.8,
       "ft_pct": 80.8,
-      "mvp_score": 50.6,
-      "mvp_rank": 135,
-      "wpa": 484.5,
-      "consistency": 0.44,
-      "clutch_eff": 0.453
+      "mvp_score": 37.3,
+      "mvp_rank": 127,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "004863",
@@ -7983,11 +8047,11 @@
       "fg_pct": 50.0,
       "fg3_pct": 37.9,
       "ft_pct": 75.0,
-      "mvp_score": 47.2,
-      "mvp_rank": 167,
-      "wpa": 198.5,
-      "consistency": 0.554,
-      "clutch_eff": 0.217
+      "mvp_score": 31.6,
+      "mvp_rank": 161,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011935",
@@ -8005,10 +8069,10 @@
       "fg_pct": 71.4,
       "fg3_pct": 0.0,
       "ft_pct": 91.7,
-      "mvp_score": 40.7,
-      "mvp_rank": 223,
-      "wpa": 2.9,
-      "consistency": 0.459,
+      "mvp_score": 25.7,
+      "mvp_rank": 201,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -8027,11 +8091,11 @@
       "fg_pct": 43.4,
       "fg3_pct": 37.7,
       "ft_pct": 97.2,
-      "mvp_score": 61.5,
-      "mvp_rank": 66,
-      "wpa": 746.3,
-      "consistency": 0.481,
-      "clutch_eff": 0.335
+      "mvp_score": 55.9,
+      "mvp_rank": 41,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013699",
@@ -8049,11 +8113,11 @@
       "fg_pct": 40.6,
       "fg3_pct": 32.7,
       "ft_pct": 72.2,
-      "mvp_score": 56.4,
-      "mvp_rank": 95,
-      "wpa": 626.0,
-      "consistency": 0.528,
-      "clutch_eff": 0.455
+      "mvp_score": 39.2,
+      "mvp_rank": 118,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "004866",
@@ -8071,11 +8135,11 @@
       "fg_pct": 48.0,
       "fg3_pct": 43.0,
       "ft_pct": 66.0,
-      "mvp_score": 52.1,
-      "mvp_rank": 124,
-      "wpa": 387.4,
-      "consistency": 0.578,
-      "clutch_eff": 0.108
+      "mvp_score": 40.0,
+      "mvp_rank": 108,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "003196",
@@ -8093,11 +8157,11 @@
       "fg_pct": 50.0,
       "fg3_pct": 25.0,
       "ft_pct": 65.6,
-      "mvp_score": 51.3,
-      "mvp_rank": 131,
-      "wpa": 367.1,
-      "consistency": 0.465,
-      "clutch_eff": 0.121
+      "mvp_score": 39.3,
+      "mvp_rank": 117,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "LCZ",
@@ -8115,10 +8179,10 @@
       "fg_pct": 59.6,
       "fg3_pct": 35.7,
       "ft_pct": 59.7,
-      "mvp_score": 48.5,
-      "mvp_rank": 156,
-      "wpa": 283.5,
-      "consistency": 0.535,
+      "mvp_score": 34.2,
+      "mvp_rank": 146,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -8137,11 +8201,11 @@
       "fg_pct": 43.8,
       "fg3_pct": 42.9,
       "ft_pct": 72.4,
-      "mvp_score": 45.3,
-      "mvp_rank": 179,
-      "wpa": 339.7,
-      "consistency": 0.403,
-      "clutch_eff": 0.044
+      "mvp_score": 29.4,
+      "mvp_rank": 174,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007579",
@@ -8159,10 +8223,10 @@
       "fg_pct": 47.8,
       "fg3_pct": 25.0,
       "ft_pct": 91.7,
-      "mvp_score": 40.5,
-      "mvp_rank": 227,
-      "wpa": 58.8,
-      "consistency": 0.437,
+      "mvp_score": 20.8,
+      "mvp_rank": 232,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -8181,11 +8245,11 @@
       "fg_pct": 50.0,
       "fg3_pct": 40.0,
       "ft_pct": 83.6,
-      "mvp_score": 56.5,
-      "mvp_rank": 94,
-      "wpa": 489.6,
-      "consistency": 0.5,
-      "clutch_eff": 0.319
+      "mvp_score": 42.8,
+      "mvp_rank": 97,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "006435",
@@ -8203,11 +8267,11 @@
       "fg_pct": 42.4,
       "fg3_pct": 35.2,
       "ft_pct": 92.0,
-      "mvp_score": 49.7,
-      "mvp_rank": 144,
-      "wpa": 284.5,
-      "consistency": 0.492,
-      "clutch_eff": 0.058
+      "mvp_score": 39.7,
+      "mvp_rank": 114,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "005713",
@@ -8225,11 +8289,11 @@
       "fg_pct": 48.2,
       "fg3_pct": 40.7,
       "ft_pct": 66.7,
-      "mvp_score": 46.4,
-      "mvp_rank": 170,
-      "wpa": 390.8,
-      "consistency": 0.506,
-      "clutch_eff": 0.125
+      "mvp_score": 28.4,
+      "mvp_rank": 185,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007527",
@@ -8247,11 +8311,11 @@
       "fg_pct": 43.4,
       "fg3_pct": 34.1,
       "ft_pct": 84.2,
-      "mvp_score": 55.4,
-      "mvp_rank": 104,
-      "wpa": 569.3,
-      "consistency": 0.564,
-      "clutch_eff": 0.093
+      "mvp_score": 46.9,
+      "mvp_rank": 82,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014009",
@@ -8269,11 +8333,11 @@
       "fg_pct": 43.8,
       "fg3_pct": 42.5,
       "ft_pct": 76.9,
-      "mvp_score": 48.2,
-      "mvp_rank": 157,
-      "wpa": 407.7,
-      "consistency": 0.544,
-      "clutch_eff": 0.109
+      "mvp_score": 28.8,
+      "mvp_rank": 178,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014102",
@@ -8291,10 +8355,10 @@
       "fg_pct": 96.1,
       "fg3_pct": 0.0,
       "ft_pct": 64.7,
-      "mvp_score": 42.3,
-      "mvp_rank": 209,
-      "wpa": 160.2,
-      "consistency": 0.49,
+      "mvp_score": 23.5,
+      "mvp_rank": 211,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -8313,11 +8377,11 @@
       "fg_pct": 52.6,
       "fg3_pct": 36.5,
       "ft_pct": 74.4,
-      "mvp_score": 49.9,
-      "mvp_rank": 142,
-      "wpa": 474.3,
-      "consistency": 0.529,
-      "clutch_eff": 0.361
+      "mvp_score": 29.3,
+      "mvp_rank": 175,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012403",
@@ -8335,11 +8399,11 @@
       "fg_pct": 63.5,
       "fg3_pct": 0.0,
       "ft_pct": 48.9,
-      "mvp_score": 47.9,
-      "mvp_rank": 161,
-      "wpa": 352.2,
-      "consistency": 0.585,
-      "clutch_eff": 0.168
+      "mvp_score": 28.0,
+      "mvp_rank": 190,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "006739",
@@ -8357,11 +8421,11 @@
       "fg_pct": 35.2,
       "fg3_pct": 27.1,
       "ft_pct": 66.7,
-      "mvp_score": 46.4,
-      "mvp_rank": 171,
-      "wpa": 212.4,
-      "consistency": 0.534,
-      "clutch_eff": 0.174
+      "mvp_score": 29.0,
+      "mvp_rank": 177,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007464",
@@ -8379,11 +8443,11 @@
       "fg_pct": 47.9,
       "fg3_pct": 28.1,
       "ft_pct": 81.2,
-      "mvp_score": 49.7,
-      "mvp_rank": 143,
-      "wpa": 355.1,
-      "consistency": 0.503,
-      "clutch_eff": 0.021
+      "mvp_score": 37.5,
+      "mvp_rank": 125,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "002676",
@@ -8401,11 +8465,11 @@
       "fg_pct": 59.4,
       "fg3_pct": 51.9,
       "ft_pct": 80.0,
-      "mvp_score": 49.9,
-      "mvp_rank": 140,
-      "wpa": 319.3,
-      "consistency": 0.489,
-      "clutch_eff": 0.107
+      "mvp_score": 37.1,
+      "mvp_rank": 129,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014088",
@@ -8423,11 +8487,11 @@
       "fg_pct": 38.0,
       "fg3_pct": 31.8,
       "ft_pct": 91.4,
-      "mvp_score": 46.4,
-      "mvp_rank": 169,
-      "wpa": 380.2,
-      "consistency": 0.5,
-      "clutch_eff": 0.304
+      "mvp_score": 28.5,
+      "mvp_rank": 183,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "010319",
@@ -8445,11 +8509,11 @@
       "fg_pct": 58.2,
       "fg3_pct": 34.0,
       "ft_pct": 63.2,
-      "mvp_score": 42.9,
-      "mvp_rank": 205,
-      "wpa": 224.4,
-      "consistency": 0.493,
-      "clutch_eff": 0.126
+      "mvp_score": 24.4,
+      "mvp_rank": 206,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "009622",
@@ -8467,10 +8531,10 @@
       "fg_pct": 45.3,
       "fg3_pct": 35.0,
       "ft_pct": 100.0,
-      "mvp_score": 45.1,
-      "mvp_rank": 180,
-      "wpa": 104.9,
-      "consistency": 0.514,
+      "mvp_score": 29.7,
+      "mvp_rank": 171,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -8489,11 +8553,11 @@
       "fg_pct": 41.0,
       "fg3_pct": 38.8,
       "ft_pct": 82.9,
-      "mvp_score": 52.7,
-      "mvp_rank": 119,
-      "wpa": 380.3,
-      "consistency": 0.557,
-      "clutch_eff": 0.322
+      "mvp_score": 38.5,
+      "mvp_rank": 123,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013371",
@@ -8511,11 +8575,11 @@
       "fg_pct": 39.2,
       "fg3_pct": 22.2,
       "ft_pct": 57.4,
-      "mvp_score": 43.2,
-      "mvp_rank": 201,
-      "wpa": 301.0,
-      "consistency": 0.529,
-      "clutch_eff": 0.128
+      "mvp_score": 20.2,
+      "mvp_rank": 237,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007201",
@@ -8533,11 +8597,11 @@
       "fg_pct": 44.3,
       "fg3_pct": 36.6,
       "ft_pct": 75.0,
-      "mvp_score": 43.3,
-      "mvp_rank": 199,
-      "wpa": 174.1,
-      "consistency": 0.428,
-      "clutch_eff": 0.081
+      "mvp_score": 24.4,
+      "mvp_rank": 207,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "008173",
@@ -8555,10 +8619,10 @@
       "fg_pct": 46.6,
       "fg3_pct": 32.4,
       "ft_pct": 77.4,
-      "mvp_score": 43.6,
-      "mvp_rank": 194,
-      "wpa": 352.8,
-      "consistency": 0.451,
+      "mvp_score": 24.9,
+      "mvp_rank": 204,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -8577,11 +8641,11 @@
       "fg_pct": 42.6,
       "fg3_pct": 35.4,
       "ft_pct": 89.2,
-      "mvp_score": 44.3,
-      "mvp_rank": 186,
-      "wpa": 294.3,
-      "consistency": 0.47,
-      "clutch_eff": 0.032
+      "mvp_score": 27.5,
+      "mvp_rank": 193,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014119",
@@ -8599,11 +8663,11 @@
       "fg_pct": 42.1,
       "fg3_pct": 32.4,
       "ft_pct": 77.8,
-      "mvp_score": 41.8,
-      "mvp_rank": 212,
-      "wpa": 229.0,
-      "consistency": 0.501,
-      "clutch_eff": 0.028
+      "mvp_score": 22.4,
+      "mvp_rank": 220,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014007",
@@ -8621,11 +8685,11 @@
       "fg_pct": 41.9,
       "fg3_pct": 25.0,
       "ft_pct": 86.2,
-      "mvp_score": 44.4,
-      "mvp_rank": 185,
-      "wpa": 256.5,
-      "consistency": 0.563,
-      "clutch_eff": 0.065
+      "mvp_score": 21.5,
+      "mvp_rank": 228,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007866",
@@ -8643,11 +8707,11 @@
       "fg_pct": 44.3,
       "fg3_pct": 21.1,
       "ft_pct": 81.2,
-      "mvp_score": 48.9,
-      "mvp_rank": 152,
-      "wpa": 287.3,
-      "consistency": 0.451,
-      "clutch_eff": 0.259
+      "mvp_score": 34.8,
+      "mvp_rank": 142,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "005422",
@@ -8665,10 +8729,10 @@
       "fg_pct": 49.0,
       "fg3_pct": 30.2,
       "ft_pct": 60.4,
-      "mvp_score": 47.2,
-      "mvp_rank": 166,
-      "wpa": 458.5,
-      "consistency": 0.49,
+      "mvp_score": 28.8,
+      "mvp_rank": 179,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -8687,11 +8751,11 @@
       "fg_pct": 59.3,
       "fg3_pct": 0.0,
       "ft_pct": 73.0,
-      "mvp_score": 50.1,
-      "mvp_rank": 138,
-      "wpa": 333.4,
-      "consistency": 0.475,
-      "clutch_eff": 0.207
+      "mvp_score": 40.3,
+      "mvp_rank": 105,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "010545",
@@ -8709,10 +8773,10 @@
       "fg_pct": 57.7,
       "fg3_pct": 0.0,
       "ft_pct": 45.3,
-      "mvp_score": 49.0,
-      "mvp_rank": 151,
-      "wpa": 291.7,
-      "consistency": 0.452,
+      "mvp_score": 34.9,
+      "mvp_rank": 141,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -8731,11 +8795,11 @@
       "fg_pct": 51.2,
       "fg3_pct": 39.2,
       "ft_pct": 79.7,
-      "mvp_score": 50.7,
-      "mvp_rank": 134,
-      "wpa": 447.1,
-      "consistency": 0.518,
-      "clutch_eff": 0.299
+      "mvp_score": 31.9,
+      "mvp_rank": 158,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012795",
@@ -8753,11 +8817,11 @@
       "fg_pct": 46.9,
       "fg3_pct": 38.8,
       "ft_pct": 86.4,
-      "mvp_score": 50.3,
-      "mvp_rank": 136,
-      "wpa": 363.8,
-      "consistency": 0.482,
-      "clutch_eff": 0.309
+      "mvp_score": 34.6,
+      "mvp_rank": 143,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014108",
@@ -8775,10 +8839,10 @@
       "fg_pct": 70.2,
       "fg3_pct": 0.0,
       "ft_pct": 54.2,
-      "mvp_score": 42.0,
-      "mvp_rank": 210,
-      "wpa": 177.1,
-      "consistency": 0.453,
+      "mvp_score": 20.1,
+      "mvp_rank": 240,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -8797,10 +8861,10 @@
       "fg_pct": 69.1,
       "fg3_pct": 0.0,
       "ft_pct": 56.2,
-      "mvp_score": 41.9,
-      "mvp_rank": 211,
-      "wpa": 229.4,
-      "consistency": 0.558,
+      "mvp_score": 21.4,
+      "mvp_rank": 229,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -8819,10 +8883,10 @@
       "fg_pct": 46.7,
       "fg3_pct": 44.9,
       "ft_pct": 81.8,
-      "mvp_score": 43.6,
-      "mvp_rank": 193,
-      "wpa": 261.6,
-      "consistency": 0.515,
+      "mvp_score": 22.7,
+      "mvp_rank": 219,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -8841,11 +8905,11 @@
       "fg_pct": 61.1,
       "fg3_pct": 0.0,
       "ft_pct": 65.5,
-      "mvp_score": 43.5,
-      "mvp_rank": 196,
-      "wpa": 215.0,
-      "consistency": 0.425,
-      "clutch_eff": 0.133
+      "mvp_score": 25.5,
+      "mvp_rank": 202,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011927",
@@ -8863,11 +8927,11 @@
       "fg_pct": 43.3,
       "fg3_pct": 40.9,
       "ft_pct": 76.7,
-      "mvp_score": 49.7,
-      "mvp_rank": 145,
-      "wpa": 410.8,
-      "consistency": 0.494,
-      "clutch_eff": 0.075
+      "mvp_score": 35.8,
+      "mvp_rank": 138,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "009992",
@@ -8885,11 +8949,11 @@
       "fg_pct": 45.5,
       "fg3_pct": 35.9,
       "ft_pct": 87.5,
-      "mvp_score": 54.2,
-      "mvp_rank": 113,
-      "wpa": 691.3,
-      "consistency": 0.422,
-      "clutch_eff": 0.218
+      "mvp_score": 46.6,
+      "mvp_rank": 83,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "005504",
@@ -8907,10 +8971,10 @@
       "fg_pct": 68.9,
       "fg3_pct": 0.0,
       "ft_pct": 41.5,
-      "mvp_score": 46.1,
-      "mvp_rank": 173,
-      "wpa": 206.5,
-      "consistency": 0.494,
+      "mvp_score": 31.1,
+      "mvp_rank": 165,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -8929,10 +8993,10 @@
       "fg_pct": 47.2,
       "fg3_pct": 44.0,
       "ft_pct": 50.0,
-      "mvp_score": 45.6,
-      "mvp_rank": 177,
-      "wpa": 61.3,
-      "consistency": 0.445,
+      "mvp_score": 41.4,
+      "mvp_rank": 100,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -8951,10 +9015,10 @@
       "fg_pct": 55.6,
       "fg3_pct": 0.0,
       "ft_pct": 71.4,
-      "mvp_score": 43.0,
-      "mvp_rank": 203,
-      "wpa": 200.0,
-      "consistency": 0.348,
+      "mvp_score": 25.9,
+      "mvp_rank": 199,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -8973,11 +9037,11 @@
       "fg_pct": 49.6,
       "fg3_pct": 44.2,
       "ft_pct": 76.0,
-      "mvp_score": 50.2,
-      "mvp_rank": 137,
-      "wpa": 376.3,
-      "consistency": 0.492,
-      "clutch_eff": 0.095
+      "mvp_score": 36.3,
+      "mvp_rank": 132,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007993",
@@ -8995,11 +9059,11 @@
       "fg_pct": 41.8,
       "fg3_pct": 33.8,
       "ft_pct": 84.5,
-      "mvp_score": 48.1,
-      "mvp_rank": 159,
-      "wpa": 523.6,
-      "consistency": 0.502,
-      "clutch_eff": 0.202
+      "mvp_score": 26.4,
+      "mvp_rank": 197,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012597",
@@ -9017,10 +9081,10 @@
       "fg_pct": 37.9,
       "fg3_pct": 27.3,
       "ft_pct": 90.9,
-      "mvp_score": 41.1,
-      "mvp_rank": 216,
-      "wpa": 104.2,
-      "consistency": 0.454,
+      "mvp_score": 25.9,
+      "mvp_rank": 200,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -9039,11 +9103,11 @@
       "fg_pct": 55.6,
       "fg3_pct": 25.0,
       "ft_pct": 45.7,
-      "mvp_score": 46.0,
-      "mvp_rank": 174,
-      "wpa": 331.4,
-      "consistency": 0.423,
-      "clutch_eff": 0.231
+      "mvp_score": 28.7,
+      "mvp_rank": 181,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007630",
@@ -9061,10 +9125,10 @@
       "fg_pct": 64.8,
       "fg3_pct": 60.0,
       "ft_pct": 58.6,
-      "mvp_score": 47.5,
-      "mvp_rank": 164,
-      "wpa": 277.7,
-      "consistency": 0.514,
+      "mvp_score": 33.0,
+      "mvp_rank": 153,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -9083,11 +9147,11 @@
       "fg_pct": 33.8,
       "fg3_pct": 31.3,
       "ft_pct": 84.2,
-      "mvp_score": 46.2,
-      "mvp_rank": 172,
-      "wpa": 310.9,
-      "consistency": 0.423,
-      "clutch_eff": 0.074
+      "mvp_score": 32.6,
+      "mvp_rank": 155,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "000848",
@@ -9105,10 +9169,10 @@
       "fg_pct": 47.7,
       "fg3_pct": 42.3,
       "ft_pct": 84.6,
-      "mvp_score": 47.5,
-      "mvp_rank": 165,
-      "wpa": 354.7,
-      "consistency": 0.514,
+      "mvp_score": 34.5,
+      "mvp_rank": 145,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -9127,11 +9191,11 @@
       "fg_pct": 44.8,
       "fg3_pct": 33.3,
       "ft_pct": 70.6,
-      "mvp_score": 45.7,
-      "mvp_rank": 176,
-      "wpa": 88.8,
-      "consistency": 0.46,
-      "clutch_eff": 0.016
+      "mvp_score": 0.0,
+      "mvp_rank": 0,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014014",
@@ -9149,11 +9213,11 @@
       "fg_pct": 52.9,
       "fg3_pct": 0.0,
       "ft_pct": 65.8,
-      "mvp_score": 44.7,
-      "mvp_rank": 184,
-      "wpa": 434.3,
-      "consistency": 0.423,
-      "clutch_eff": 0.314
+      "mvp_score": 21.2,
+      "mvp_rank": 231,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "006643",
@@ -9171,11 +9235,11 @@
       "fg_pct": 46.2,
       "fg3_pct": 41.9,
       "ft_pct": 73.9,
-      "mvp_score": 49.4,
-      "mvp_rank": 148,
-      "wpa": 322.9,
-      "consistency": 0.506,
-      "clutch_eff": 0.16
+      "mvp_score": 36.3,
+      "mvp_rank": 133,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "010318",
@@ -9193,11 +9257,11 @@
       "fg_pct": 66.7,
       "fg3_pct": 0.0,
       "ft_pct": 46.2,
-      "mvp_score": 39.8,
-      "mvp_rank": 237,
-      "wpa": 160.8,
-      "consistency": 0.462,
-      "clutch_eff": 0.133
+      "mvp_score": 18.5,
+      "mvp_rank": 254,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "005844",
@@ -9215,10 +9279,10 @@
       "fg_pct": 33.3,
       "fg3_pct": 20.0,
       "ft_pct": 0.0,
-      "mvp_score": 38.1,
-      "mvp_rank": 252,
-      "wpa": 14.6,
-      "consistency": 0.549,
+      "mvp_score": 13.7,
+      "mvp_rank": 281,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -9237,10 +9301,10 @@
       "fg_pct": 43.7,
       "fg3_pct": 50.0,
       "ft_pct": 63.2,
-      "mvp_score": 37.7,
-      "mvp_rank": 255,
-      "wpa": 168.5,
-      "consistency": 0.45,
+      "mvp_score": 17.1,
+      "mvp_rank": 264,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -9259,11 +9323,11 @@
       "fg_pct": 37.9,
       "fg3_pct": 23.9,
       "ft_pct": 37.5,
-      "mvp_score": 39.2,
-      "mvp_rank": 243,
-      "wpa": 137.1,
-      "consistency": 0.451,
-      "clutch_eff": 0.002
+      "mvp_score": 15.5,
+      "mvp_rank": 272,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007990",
@@ -9281,10 +9345,10 @@
       "fg_pct": 39.7,
       "fg3_pct": 39.6,
       "ft_pct": 100.0,
-      "mvp_score": 41.0,
-      "mvp_rank": 220,
-      "wpa": 157.7,
-      "consistency": 0.423,
+      "mvp_score": 22.2,
+      "mvp_rank": 221,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -9303,11 +9367,11 @@
       "fg_pct": 39.1,
       "fg3_pct": 29.3,
       "ft_pct": 94.7,
-      "mvp_score": 40.6,
-      "mvp_rank": 226,
-      "wpa": 196.4,
-      "consistency": 0.406,
-      "clutch_eff": 0.17
+      "mvp_score": 19.1,
+      "mvp_rank": 249,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012613",
@@ -9325,11 +9389,11 @@
       "fg_pct": 40.9,
       "fg3_pct": 36.2,
       "ft_pct": 87.5,
-      "mvp_score": 51.7,
-      "mvp_rank": 129,
-      "wpa": 323.9,
-      "consistency": 0.477,
-      "clutch_eff": 0.282
+      "mvp_score": 40.9,
+      "mvp_rank": 104,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013378",
@@ -9347,11 +9411,11 @@
       "fg_pct": 34.6,
       "fg3_pct": 25.2,
       "ft_pct": 71.4,
-      "mvp_score": 45.4,
-      "mvp_rank": 178,
-      "wpa": 423.9,
-      "consistency": 0.394,
-      "clutch_eff": 0.225
+      "mvp_score": 24.2,
+      "mvp_rank": 208,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013284",
@@ -9369,11 +9433,11 @@
       "fg_pct": 38.8,
       "fg3_pct": 31.7,
       "ft_pct": 69.2,
-      "mvp_score": 49.6,
-      "mvp_rank": 146,
-      "wpa": 351.0,
-      "consistency": 0.452,
-      "clutch_eff": 0.194
+      "mvp_score": 33.0,
+      "mvp_rank": 152,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012618",
@@ -9391,11 +9455,11 @@
       "fg_pct": 50.4,
       "fg3_pct": 50.0,
       "ft_pct": 57.9,
-      "mvp_score": 40.3,
-      "mvp_rank": 231,
-      "wpa": 292.5,
-      "consistency": 0.486,
-      "clutch_eff": 0.08
+      "mvp_score": 13.1,
+      "mvp_rank": 286,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "003048",
@@ -9413,10 +9477,10 @@
       "fg_pct": 61.5,
       "fg3_pct": 0.0,
       "ft_pct": 73.9,
-      "mvp_score": 38.3,
-      "mvp_rank": 251,
-      "wpa": 103.6,
-      "consistency": 0.386,
+      "mvp_score": 19.3,
+      "mvp_rank": 247,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -9435,11 +9499,11 @@
       "fg_pct": 44.4,
       "fg3_pct": 26.7,
       "ft_pct": 53.8,
-      "mvp_score": 45.8,
-      "mvp_rank": 175,
-      "wpa": 185.0,
-      "consistency": 0.459,
-      "clutch_eff": 0.045
+      "mvp_score": 30.9,
+      "mvp_rank": 166,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007182",
@@ -9457,11 +9521,11 @@
       "fg_pct": 62.2,
       "fg3_pct": 0.0,
       "ft_pct": 70.7,
-      "mvp_score": 48.1,
-      "mvp_rank": 158,
-      "wpa": 210.1,
-      "consistency": 0.477,
-      "clutch_eff": 0.102
+      "mvp_score": 36.2,
+      "mvp_rank": 134,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014031",
@@ -9479,11 +9543,11 @@
       "fg_pct": 41.7,
       "fg3_pct": 32.4,
       "ft_pct": 86.7,
-      "mvp_score": 43.8,
-      "mvp_rank": 192,
-      "wpa": 153.0,
-      "consistency": 0.436,
-      "clutch_eff": 0.272
+      "mvp_score": 29.6,
+      "mvp_rank": 172,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "003733",
@@ -9501,10 +9565,10 @@
       "fg_pct": 47.6,
       "fg3_pct": 49.2,
       "ft_pct": 75.0,
-      "mvp_score": 46.6,
-      "mvp_rank": 168,
-      "wpa": 284.1,
-      "consistency": 0.52,
+      "mvp_score": 33.3,
+      "mvp_rank": 150,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -9523,11 +9587,11 @@
       "fg_pct": 38.4,
       "fg3_pct": 36.0,
       "ft_pct": 88.0,
-      "mvp_score": 45.0,
+      "mvp_score": 28.7,
       "mvp_rank": 182,
-      "wpa": 377.2,
-      "consistency": 0.417,
-      "clutch_eff": 0.364
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "001844",
@@ -9545,11 +9609,11 @@
       "fg_pct": 40.6,
       "fg3_pct": 38.5,
       "ft_pct": 77.3,
-      "mvp_score": 41.1,
-      "mvp_rank": 217,
-      "wpa": 164.0,
-      "consistency": 0.498,
-      "clutch_eff": 0.078
+      "mvp_score": 20.5,
+      "mvp_rank": 235,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013373",
@@ -9567,11 +9631,11 @@
       "fg_pct": 47.7,
       "fg3_pct": 28.0,
       "ft_pct": 75.0,
-      "mvp_score": 40.6,
-      "mvp_rank": 225,
-      "wpa": 193.6,
-      "consistency": 0.506,
-      "clutch_eff": 0.062
+      "mvp_score": 16.9,
+      "mvp_rank": 265,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011949",
@@ -9589,11 +9653,11 @@
       "fg_pct": 43.5,
       "fg3_pct": 41.3,
       "ft_pct": 76.2,
-      "mvp_score": 39.8,
-      "mvp_rank": 236,
-      "wpa": 136.0,
-      "consistency": 0.499,
-      "clutch_eff": 0.118
+      "mvp_score": 18.5,
+      "mvp_rank": 255,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "009513",
@@ -9611,11 +9675,11 @@
       "fg_pct": 40.4,
       "fg3_pct": 44.0,
       "ft_pct": 81.8,
-      "mvp_score": 39.0,
-      "mvp_rank": 244,
-      "wpa": 75.6,
-      "consistency": 0.416,
-      "clutch_eff": 0.13
+      "mvp_score": 18.8,
+      "mvp_rank": 250,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "008161",
@@ -9633,11 +9697,11 @@
       "fg_pct": 52.6,
       "fg3_pct": 40.0,
       "ft_pct": 80.0,
-      "mvp_score": 39.4,
-      "mvp_rank": 240,
-      "wpa": 164.1,
-      "consistency": 0.316,
-      "clutch_eff": 0.1
+      "mvp_score": 17.7,
+      "mvp_rank": 261,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "001518",
@@ -9655,10 +9719,10 @@
       "fg_pct": 48.1,
       "fg3_pct": 43.2,
       "ft_pct": 100.0,
-      "mvp_score": 43.4,
-      "mvp_rank": 198,
-      "wpa": 269.2,
-      "consistency": 0.476,
+      "mvp_score": 28.5,
+      "mvp_rank": 184,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -9677,11 +9741,11 @@
       "fg_pct": 42.3,
       "fg3_pct": 35.2,
       "ft_pct": 75.0,
-      "mvp_score": 38.3,
-      "mvp_rank": 250,
-      "wpa": 236.1,
-      "consistency": 0.454,
-      "clutch_eff": 0.056
+      "mvp_score": 13.4,
+      "mvp_rank": 283,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "004007",
@@ -9699,11 +9763,11 @@
       "fg_pct": 42.9,
       "fg3_pct": 42.2,
       "ft_pct": 100.0,
-      "mvp_score": 43.6,
-      "mvp_rank": 195,
-      "wpa": 156.0,
-      "consistency": 0.392,
-      "clutch_eff": 0.122
+      "mvp_score": 33.2,
+      "mvp_rank": 151,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "004761",
@@ -9721,11 +9785,11 @@
       "fg_pct": 37.6,
       "fg3_pct": 33.3,
       "ft_pct": 77.8,
-      "mvp_score": 39.9,
-      "mvp_rank": 235,
-      "wpa": 166.8,
-      "consistency": 0.472,
-      "clutch_eff": 0.059
+      "mvp_score": 19.8,
+      "mvp_rank": 241,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "004197",
@@ -9743,11 +9807,11 @@
       "fg_pct": 37.1,
       "fg3_pct": 36.4,
       "ft_pct": 75.0,
-      "mvp_score": 41.0,
-      "mvp_rank": 219,
-      "wpa": 262.8,
-      "consistency": 0.466,
-      "clutch_eff": 0.053
+      "mvp_score": 21.9,
+      "mvp_rank": 223,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014134",
@@ -9765,11 +9829,11 @@
       "fg_pct": 45.7,
       "fg3_pct": 33.9,
       "ft_pct": 85.7,
-      "mvp_score": 43.5,
-      "mvp_rank": 197,
-      "wpa": 222.8,
-      "consistency": 0.45,
-      "clutch_eff": 0.032
+      "mvp_score": 29.9,
+      "mvp_rank": 170,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007853",
@@ -9787,11 +9851,11 @@
       "fg_pct": 42.9,
       "fg3_pct": 23.8,
       "ft_pct": 51.7,
-      "mvp_score": 45.1,
-      "mvp_rank": 181,
-      "wpa": 175.5,
-      "consistency": 0.458,
-      "clutch_eff": 0.056
+      "mvp_score": 31.9,
+      "mvp_rank": 159,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014190",
@@ -9809,11 +9873,11 @@
       "fg_pct": 46.2,
       "fg3_pct": 30.8,
       "ft_pct": 81.8,
-      "mvp_score": 37.6,
-      "mvp_rank": 258,
-      "wpa": 108.3,
-      "consistency": 0.475,
-      "clutch_eff": 0.079
+      "mvp_score": 19.5,
+      "mvp_rank": 244,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014220",
@@ -9831,10 +9895,10 @@
       "fg_pct": 56.2,
       "fg3_pct": 0.0,
       "ft_pct": 83.3,
-      "mvp_score": 44.0,
-      "mvp_rank": 188,
-      "wpa": 46.1,
-      "consistency": 0.403,
+      "mvp_score": 0.0,
+      "mvp_rank": 0,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -9853,11 +9917,11 @@
       "fg_pct": 45.5,
       "fg3_pct": 31.0,
       "ft_pct": 100.0,
-      "mvp_score": 34.9,
-      "mvp_rank": 274,
-      "wpa": 86.4,
-      "consistency": 0.388,
-      "clutch_eff": 0.026
+      "mvp_score": 15.0,
+      "mvp_rank": 273,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014025",
@@ -9875,10 +9939,10 @@
       "fg_pct": 51.1,
       "fg3_pct": 48.6,
       "ft_pct": 100.0,
-      "mvp_score": 37.9,
+      "mvp_score": 18.6,
       "mvp_rank": 253,
-      "wpa": 280.6,
-      "consistency": 0.329,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -9897,10 +9961,10 @@
       "fg_pct": 57.5,
       "fg3_pct": 0.0,
       "ft_pct": 75.0,
-      "mvp_score": 42.3,
-      "mvp_rank": 208,
-      "wpa": 181.1,
-      "consistency": 0.376,
+      "mvp_score": 23.4,
+      "mvp_rank": 212,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -9919,11 +9983,11 @@
       "fg_pct": 37.7,
       "fg3_pct": 36.4,
       "ft_pct": 79.2,
-      "mvp_score": 42.5,
-      "mvp_rank": 207,
-      "wpa": 181.2,
-      "consistency": 0.41,
-      "clutch_eff": 0.016
+      "mvp_score": 27.4,
+      "mvp_rank": 195,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007029",
@@ -9941,10 +10005,10 @@
       "fg_pct": 37.3,
       "fg3_pct": 30.4,
       "ft_pct": 92.3,
-      "mvp_score": 40.9,
-      "mvp_rank": 222,
-      "wpa": 194.6,
-      "consistency": 0.345,
+      "mvp_score": 25.4,
+      "mvp_rank": 203,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -9963,11 +10027,11 @@
       "fg_pct": 55.9,
       "fg3_pct": 0.0,
       "ft_pct": 70.8,
-      "mvp_score": 43.2,
-      "mvp_rank": 200,
-      "wpa": 163.6,
-      "consistency": 0.305,
-      "clutch_eff": 0.254
+      "mvp_score": 28.3,
+      "mvp_rank": 187,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014026",
@@ -9985,11 +10049,11 @@
       "fg_pct": 51.8,
       "fg3_pct": 41.2,
       "ft_pct": 100.0,
-      "mvp_score": 37.4,
-      "mvp_rank": 259,
-      "wpa": 152.1,
-      "consistency": 0.477,
-      "clutch_eff": 0.07
+      "mvp_score": 15.7,
+      "mvp_rank": 271,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011085",
@@ -10007,11 +10071,11 @@
       "fg_pct": 44.4,
       "fg3_pct": 28.3,
       "ft_pct": 83.3,
-      "mvp_score": 43.9,
-      "mvp_rank": 189,
-      "wpa": 262.0,
-      "consistency": 0.384,
-      "clutch_eff": 0.112
+      "mvp_score": 27.4,
+      "mvp_rank": 194,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "001557",
@@ -10029,11 +10093,11 @@
       "fg_pct": 44.7,
       "fg3_pct": 34.0,
       "ft_pct": 86.4,
-      "mvp_score": 40.3,
-      "mvp_rank": 232,
-      "wpa": 223.9,
-      "consistency": 0.442,
-      "clutch_eff": 0.025
+      "mvp_score": 22.9,
+      "mvp_rank": 215,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "010750",
@@ -10051,10 +10115,10 @@
       "fg_pct": 39.7,
       "fg3_pct": 34.5,
       "ft_pct": 68.0,
-      "mvp_score": 43.1,
-      "mvp_rank": 202,
-      "wpa": 164.5,
-      "consistency": 0.4,
+      "mvp_score": 29.5,
+      "mvp_rank": 173,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10073,11 +10137,11 @@
       "fg_pct": 67.4,
       "fg3_pct": 33.3,
       "ft_pct": 50.0,
-      "mvp_score": 38.7,
-      "mvp_rank": 247,
-      "wpa": 120.7,
-      "consistency": 0.384,
-      "clutch_eff": 0.087
+      "mvp_score": 21.6,
+      "mvp_rank": 225,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011064",
@@ -10095,10 +10159,10 @@
       "fg_pct": 38.9,
       "fg3_pct": 37.1,
       "ft_pct": 55.6,
-      "mvp_score": 37.6,
-      "mvp_rank": 257,
-      "wpa": 89.2,
-      "consistency": 0.358,
+      "mvp_score": 19.1,
+      "mvp_rank": 248,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10117,11 +10181,11 @@
       "fg_pct": 55.3,
       "fg3_pct": 41.7,
       "ft_pct": 72.7,
-      "mvp_score": 40.4,
-      "mvp_rank": 230,
-      "wpa": 124.3,
-      "consistency": 0.45,
-      "clutch_eff": 0.089
+      "mvp_score": 24.0,
+      "mvp_rank": 210,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "006568",
@@ -10139,10 +10203,10 @@
       "fg_pct": 65.2,
       "fg3_pct": 0.0,
       "ft_pct": 80.0,
-      "mvp_score": 37.7,
-      "mvp_rank": 256,
-      "wpa": 80.2,
-      "consistency": 0.312,
+      "mvp_score": 21.7,
+      "mvp_rank": 224,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10161,11 +10225,11 @@
       "fg_pct": 38.5,
       "fg3_pct": 33.3,
       "ft_pct": 80.0,
-      "mvp_score": 40.9,
-      "mvp_rank": 221,
-      "wpa": 195.4,
-      "consistency": 0.319,
-      "clutch_eff": 0.138
+      "mvp_score": 20.2,
+      "mvp_rank": 238,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013269",
@@ -10183,10 +10247,10 @@
       "fg_pct": 38.0,
       "fg3_pct": 29.2,
       "ft_pct": 86.7,
-      "mvp_score": 41.0,
-      "mvp_rank": 218,
-      "wpa": 148.4,
-      "consistency": 0.445,
+      "mvp_score": 28.1,
+      "mvp_rank": 189,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10205,11 +10269,11 @@
       "fg_pct": 41.7,
       "fg3_pct": 28.6,
       "ft_pct": 77.8,
-      "mvp_score": 45.0,
-      "mvp_rank": 183,
-      "wpa": 239.6,
-      "consistency": 0.346,
-      "clutch_eff": 0.083
+      "mvp_score": 36.2,
+      "mvp_rank": 135,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "006591",
@@ -10227,11 +10291,11 @@
       "fg_pct": 39.8,
       "fg3_pct": 39.6,
       "ft_pct": 80.0,
-      "mvp_score": 43.8,
-      "mvp_rank": 191,
-      "wpa": 197.7,
-      "consistency": 0.393,
-      "clutch_eff": 0.024
+      "mvp_score": 32.1,
+      "mvp_rank": 157,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014219",
@@ -10249,10 +10313,10 @@
       "fg_pct": 42.9,
       "fg3_pct": 20.0,
       "ft_pct": 100.0,
-      "mvp_score": 34.2,
-      "mvp_rank": 288,
+      "mvp_score": 12.0,
+      "mvp_rank": 291,
       "wpa": 0.0,
-      "consistency": 0.346,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10271,11 +10335,11 @@
       "fg_pct": 41.4,
       "fg3_pct": 50.0,
       "ft_pct": 80.0,
-      "mvp_score": 39.3,
-      "mvp_rank": 241,
-      "wpa": 90.4,
-      "consistency": 0.275,
-      "clutch_eff": 0.084
+      "mvp_score": 22.7,
+      "mvp_rank": 217,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "014120",
@@ -10293,11 +10357,11 @@
       "fg_pct": 62.9,
       "fg3_pct": 40.0,
       "ft_pct": 80.0,
-      "mvp_score": 38.9,
-      "mvp_rank": 245,
-      "wpa": 139.9,
-      "consistency": 0.354,
-      "clutch_eff": 0.189
+      "mvp_score": 16.0,
+      "mvp_rank": 269,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011201",
@@ -10315,11 +10379,11 @@
       "fg_pct": 42.3,
       "fg3_pct": 34.0,
       "ft_pct": 68.0,
-      "mvp_score": 39.6,
-      "mvp_rank": 239,
-      "wpa": 402.9,
-      "consistency": 0.302,
-      "clutch_eff": 0.111
+      "mvp_score": 10.4,
+      "mvp_rank": 296,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "010550",
@@ -10337,11 +10401,11 @@
       "fg_pct": 47.6,
       "fg3_pct": 10.0,
       "ft_pct": 38.5,
-      "mvp_score": 41.4,
-      "mvp_rank": 214,
-      "wpa": 138.3,
-      "consistency": 0.45,
-      "clutch_eff": 0.03
+      "mvp_score": 22.8,
+      "mvp_rank": 216,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011052",
@@ -10359,11 +10423,11 @@
       "fg_pct": 28.3,
       "fg3_pct": 13.0,
       "ft_pct": 82.4,
-      "mvp_score": 40.5,
-      "mvp_rank": 229,
-      "wpa": 127.5,
-      "consistency": 0.251,
-      "clutch_eff": 0.121
+      "mvp_score": 26.1,
+      "mvp_rank": 198,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007736",
@@ -10381,11 +10445,11 @@
       "fg_pct": 45.2,
       "fg3_pct": 39.3,
       "ft_pct": 71.4,
-      "mvp_score": 36.0,
-      "mvp_rank": 266,
-      "wpa": 106.4,
-      "consistency": 0.285,
-      "clutch_eff": 0.16
+      "mvp_score": 12.7,
+      "mvp_rank": 288,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "010316",
@@ -10403,11 +10467,11 @@
       "fg_pct": 34.5,
       "fg3_pct": 29.5,
       "ft_pct": 79.2,
-      "mvp_score": 36.1,
-      "mvp_rank": 265,
-      "wpa": 234.1,
-      "consistency": 0.317,
-      "clutch_eff": 0.138
+      "mvp_score": 14.6,
+      "mvp_rank": 276,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007513",
@@ -10425,11 +10489,11 @@
       "fg_pct": 42.3,
       "fg3_pct": 35.7,
       "ft_pct": 50.0,
-      "mvp_score": 39.9,
-      "mvp_rank": 234,
-      "wpa": 56.7,
-      "consistency": 0.392,
-      "clutch_eff": 0.125
+      "mvp_score": 26.9,
+      "mvp_rank": 196,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "012515",
@@ -10447,11 +10511,11 @@
       "fg_pct": 61.3,
       "fg3_pct": 61.5,
       "ft_pct": 62.5,
-      "mvp_score": 40.5,
-      "mvp_rank": 228,
-      "wpa": 93.2,
-      "consistency": 0.455,
-      "clutch_eff": 0.094
+      "mvp_score": 21.4,
+      "mvp_rank": 230,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "006904",
@@ -10469,10 +10533,10 @@
       "fg_pct": 37.9,
       "fg3_pct": 17.6,
       "ft_pct": 0.0,
-      "mvp_score": 33.9,
-      "mvp_rank": 291,
-      "wpa": 58.3,
-      "consistency": 0.327,
+      "mvp_score": 10.8,
+      "mvp_rank": 294,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10491,10 +10555,10 @@
       "fg_pct": 38.5,
       "fg3_pct": 33.3,
       "ft_pct": 86.7,
-      "mvp_score": 35.5,
-      "mvp_rank": 268,
-      "wpa": 7.8,
-      "consistency": 0.301,
+      "mvp_score": 18.4,
+      "mvp_rank": 258,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10513,10 +10577,10 @@
       "fg_pct": 60.9,
       "fg3_pct": 33.3,
       "ft_pct": 66.7,
-      "mvp_score": 38.4,
-      "mvp_rank": 249,
-      "wpa": 44.4,
-      "consistency": 0.361,
+      "mvp_score": 23.3,
+      "mvp_rank": 214,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10535,11 +10599,11 @@
       "fg_pct": 33.3,
       "fg3_pct": 15.4,
       "ft_pct": 88.2,
-      "mvp_score": 40.6,
-      "mvp_rank": 224,
-      "wpa": 61.1,
-      "consistency": 0.318,
-      "clutch_eff": 0.021
+      "mvp_score": 28.2,
+      "mvp_rank": 188,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "001255",
@@ -10557,10 +10621,10 @@
       "fg_pct": 36.2,
       "fg3_pct": 30.3,
       "ft_pct": 28.6,
-      "mvp_score": 41.5,
-      "mvp_rank": 213,
-      "wpa": 117.2,
-      "consistency": 0.459,
+      "mvp_score": 28.0,
+      "mvp_rank": 191,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10579,10 +10643,10 @@
       "fg_pct": 44.4,
       "fg3_pct": 34.1,
       "ft_pct": 64.3,
-      "mvp_score": 38.8,
-      "mvp_rank": 246,
-      "wpa": 143.9,
-      "consistency": 0.335,
+      "mvp_score": 22.0,
+      "mvp_rank": 222,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10601,10 +10665,10 @@
       "fg_pct": 61.5,
       "fg3_pct": 0.0,
       "ft_pct": 43.8,
-      "mvp_score": 35.1,
-      "mvp_rank": 271,
-      "wpa": 68.7,
-      "consistency": 0.393,
+      "mvp_score": 12.1,
+      "mvp_rank": 290,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10623,10 +10687,10 @@
       "fg_pct": 31.0,
       "fg3_pct": 38.1,
       "ft_pct": 100.0,
-      "mvp_score": 34.8,
-      "mvp_rank": 278,
-      "wpa": 24.0,
-      "consistency": 0.162,
+      "mvp_score": 19.4,
+      "mvp_rank": 246,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10645,11 +10709,11 @@
       "fg_pct": 58.3,
       "fg3_pct": 0.0,
       "ft_pct": 50.0,
-      "mvp_score": 37.8,
-      "mvp_rank": 254,
-      "wpa": 19.9,
-      "consistency": 0.233,
-      "clutch_eff": 0.222
+      "mvp_score": 24.2,
+      "mvp_rank": 209,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "013381",
@@ -10667,11 +10731,11 @@
       "fg_pct": 41.3,
       "fg3_pct": 39.5,
       "ft_pct": 68.4,
-      "mvp_score": 39.3,
-      "mvp_rank": 242,
-      "wpa": 237.1,
-      "consistency": 0.343,
-      "clutch_eff": 0.018
+      "mvp_score": 19.5,
+      "mvp_rank": 245,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "008232",
@@ -10689,11 +10753,11 @@
       "fg_pct": 41.1,
       "fg3_pct": 25.6,
       "ft_pct": 100.0,
-      "mvp_score": 34.4,
-      "mvp_rank": 283,
-      "wpa": 138.5,
-      "consistency": 0.243,
-      "clutch_eff": 0.015
+      "mvp_score": 11.3,
+      "mvp_rank": 292,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "007929",
@@ -10711,11 +10775,11 @@
       "fg_pct": 47.6,
       "fg3_pct": 34.6,
       "ft_pct": 58.3,
-      "mvp_score": 42.9,
-      "mvp_rank": 204,
-      "wpa": 114.1,
-      "consistency": 0.328,
-      "clutch_eff": 0.208
+      "mvp_score": 32.7,
+      "mvp_rank": 154,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "006509",
@@ -10733,11 +10797,11 @@
       "fg_pct": 42.9,
       "fg3_pct": 0.0,
       "ft_pct": 75.0,
-      "mvp_score": 35.1,
-      "mvp_rank": 272,
-      "wpa": 29.4,
-      "consistency": 0.315,
-      "clutch_eff": 0.041
+      "mvp_score": 15.8,
+      "mvp_rank": 270,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "TGB",
@@ -10755,10 +10819,10 @@
       "fg_pct": 30.6,
       "fg3_pct": 25.4,
       "ft_pct": 64.7,
-      "mvp_score": 41.2,
-      "mvp_rank": 215,
-      "wpa": 223.5,
-      "consistency": 0.388,
+      "mvp_score": 20.5,
+      "mvp_rank": 234,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10777,10 +10841,10 @@
       "fg_pct": 40.9,
       "fg3_pct": 47.1,
       "ft_pct": 100.0,
-      "mvp_score": 33.4,
-      "mvp_rank": 297,
-      "wpa": 49.6,
-      "consistency": 0.294,
+      "mvp_score": 13.1,
+      "mvp_rank": 284,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10799,10 +10863,10 @@
       "fg_pct": 35.3,
       "fg3_pct": 11.1,
       "ft_pct": 73.3,
-      "mvp_score": 31.3,
-      "mvp_rank": 305,
-      "wpa": 36.4,
-      "consistency": 0.319,
+      "mvp_score": 7.5,
+      "mvp_rank": 300,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10821,10 +10885,10 @@
       "fg_pct": 41.5,
       "fg3_pct": 31.2,
       "ft_pct": 78.6,
-      "mvp_score": 39.6,
-      "mvp_rank": 238,
-      "wpa": 81.7,
-      "consistency": 0.289,
+      "mvp_score": 30.0,
+      "mvp_rank": 169,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10843,10 +10907,10 @@
       "fg_pct": 50.0,
       "fg3_pct": 60.0,
       "ft_pct": 100.0,
-      "mvp_score": 35.8,
-      "mvp_rank": 267,
-      "wpa": 23.0,
-      "consistency": 0.193,
+      "mvp_score": 18.3,
+      "mvp_rank": 259,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10865,10 +10929,10 @@
       "fg_pct": 33.3,
       "fg3_pct": 14.3,
       "ft_pct": 100.0,
-      "mvp_score": 34.9,
-      "mvp_rank": 275,
-      "wpa": 46.5,
-      "consistency": 0.306,
+      "mvp_score": 18.4,
+      "mvp_rank": 256,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10887,10 +10951,10 @@
       "fg_pct": 34.0,
       "fg3_pct": 37.1,
       "ft_pct": 0.0,
-      "mvp_score": 36.5,
-      "mvp_rank": 263,
-      "wpa": 61.5,
-      "consistency": 0.293,
+      "mvp_score": 21.6,
+      "mvp_rank": 226,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10909,11 +10973,11 @@
       "fg_pct": 23.8,
       "fg3_pct": 20.8,
       "ft_pct": 92.9,
-      "mvp_score": 38.6,
-      "mvp_rank": 248,
-      "wpa": 118.9,
-      "consistency": 0.363,
-      "clutch_eff": 0.148
+      "mvp_score": 20.1,
+      "mvp_rank": 239,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "002968",
@@ -10931,10 +10995,10 @@
       "fg_pct": 66.7,
       "fg3_pct": 66.7,
       "ft_pct": 100.0,
-      "mvp_score": 34.9,
-      "mvp_rank": 276,
-      "wpa": 24.1,
-      "consistency": 0.302,
+      "mvp_score": 14.6,
+      "mvp_rank": 277,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10953,10 +11017,10 @@
       "fg_pct": 55.6,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 31.3,
-      "mvp_rank": 306,
-      "wpa": 14.5,
-      "consistency": 0.238,
+      "mvp_score": 6.6,
+      "mvp_rank": 301,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -10975,11 +11039,11 @@
       "fg_pct": 14.3,
       "fg3_pct": 0.0,
       "ft_pct": 58.3,
-      "mvp_score": 37.3,
-      "mvp_rank": 260,
-      "wpa": 30.3,
-      "consistency": 0.184,
-      "clutch_eff": 0.091
+      "mvp_score": 0.0,
+      "mvp_rank": 0,
+      "wpa": 0.0,
+      "consistency": 0.0,
+      "clutch_eff": 0.0
     },
     {
       "code": "011209",
@@ -10997,10 +11061,10 @@
       "fg_pct": 43.5,
       "fg3_pct": 23.1,
       "ft_pct": 33.3,
-      "mvp_score": 34.9,
-      "mvp_rank": 273,
-      "wpa": 16.8,
-      "consistency": 0.256,
+      "mvp_score": 18.6,
+      "mvp_rank": 252,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11019,10 +11083,10 @@
       "fg_pct": 33.3,
       "fg3_pct": 32.0,
       "ft_pct": 50.0,
-      "mvp_score": 35.4,
-      "mvp_rank": 270,
-      "wpa": 19.2,
-      "consistency": 0.141,
+      "mvp_score": 20.5,
+      "mvp_rank": 233,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11041,10 +11105,10 @@
       "fg_pct": 36.0,
       "fg3_pct": 43.8,
       "ft_pct": 100.0,
-      "mvp_score": 33.7,
-      "mvp_rank": 294,
-      "wpa": 2.2,
-      "consistency": 0.154,
+      "mvp_score": 17.1,
+      "mvp_rank": 263,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11063,10 +11127,10 @@
       "fg_pct": 23.3,
       "fg3_pct": 25.0,
       "ft_pct": 20.0,
-      "mvp_score": 34.3,
-      "mvp_rank": 287,
-      "wpa": 68.3,
-      "consistency": 0.088,
+      "mvp_score": 16.8,
+      "mvp_rank": 266,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11085,10 +11149,10 @@
       "fg_pct": 57.1,
       "fg3_pct": 50.0,
       "ft_pct": 57.1,
-      "mvp_score": 32.8,
-      "mvp_rank": 300,
-      "wpa": 23.9,
-      "consistency": 0.18,
+      "mvp_score": 13.1,
+      "mvp_rank": 285,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11107,10 +11171,10 @@
       "fg_pct": 36.8,
       "fg3_pct": 20.0,
       "ft_pct": 33.3,
-      "mvp_score": 33.3,
-      "mvp_rank": 298,
-      "wpa": 0.2,
-      "consistency": 0.248,
+      "mvp_score": 12.8,
+      "mvp_rank": 287,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11129,10 +11193,10 @@
       "fg_pct": 54.5,
       "fg3_pct": 37.5,
       "ft_pct": 50.0,
-      "mvp_score": 28.7,
-      "mvp_rank": 310,
+      "mvp_score": 6.1,
+      "mvp_rank": 302,
       "wpa": 0.0,
-      "consistency": 0.169,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11151,10 +11215,10 @@
       "fg_pct": 14.3,
       "fg3_pct": 13.9,
       "ft_pct": 83.3,
-      "mvp_score": 27.8,
-      "mvp_rank": 314,
-      "wpa": 31.8,
-      "consistency": 0.108,
+      "mvp_score": 3.4,
+      "mvp_rank": 308,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11173,10 +11237,10 @@
       "fg_pct": 28.6,
       "fg3_pct": 0.0,
       "ft_pct": 50.0,
-      "mvp_score": 33.7,
-      "mvp_rank": 295,
-      "wpa": 14.9,
-      "consistency": 0.122,
+      "mvp_score": 16.1,
+      "mvp_rank": 268,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11195,10 +11259,10 @@
       "fg_pct": 37.5,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 30.1,
-      "mvp_rank": 307,
+      "mvp_score": 7.7,
+      "mvp_rank": 299,
       "wpa": 0.0,
-      "consistency": 0.103,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11217,10 +11281,10 @@
       "fg_pct": 45.5,
       "fg3_pct": 0.0,
       "ft_pct": 100.0,
-      "mvp_score": 28.5,
-      "mvp_rank": 311,
-      "wpa": 21.1,
-      "consistency": 0.17,
+      "mvp_score": 5.0,
+      "mvp_rank": 303,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11239,10 +11303,10 @@
       "fg_pct": 46.7,
       "fg3_pct": 33.3,
       "ft_pct": 50.0,
-      "mvp_score": 34.5,
-      "mvp_rank": 281,
-      "wpa": -0.1,
-      "consistency": 0.119,
+      "mvp_score": 22.7,
+      "mvp_rank": 218,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11261,10 +11325,10 @@
       "fg_pct": 25.0,
       "fg3_pct": 25.0,
       "ft_pct": 100.0,
-      "mvp_score": 34.3,
-      "mvp_rank": 286,
+      "mvp_score": 18.4,
+      "mvp_rank": 257,
       "wpa": 0.0,
-      "consistency": 0.118,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11283,10 +11347,10 @@
       "fg_pct": 23.8,
       "fg3_pct": 21.4,
       "ft_pct": 80.0,
-      "mvp_score": 34.5,
-      "mvp_rank": 280,
-      "wpa": 24.6,
-      "consistency": 0.098,
+      "mvp_score": 20.3,
+      "mvp_rank": 236,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11305,10 +11369,10 @@
       "fg_pct": 0.0,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 34.3,
-      "mvp_rank": 285,
-      "wpa": 2.8,
-      "consistency": 0.156,
+      "mvp_score": 18.6,
+      "mvp_rank": 251,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11327,10 +11391,10 @@
       "fg_pct": 20.4,
       "fg3_pct": 16.7,
       "ft_pct": 86.7,
-      "mvp_score": 27.4,
-      "mvp_rank": 315,
-      "wpa": 34.9,
-      "consistency": 0.068,
+      "mvp_score": 4.9,
+      "mvp_rank": 304,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11349,10 +11413,10 @@
       "fg_pct": 50.0,
       "fg3_pct": 100.0,
       "ft_pct": 0.0,
-      "mvp_score": 34.5,
-      "mvp_rank": 282,
+      "mvp_score": 16.4,
+      "mvp_rank": 267,
       "wpa": 0.0,
-      "consistency": 0.109,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11371,10 +11435,10 @@
       "fg_pct": 29.4,
       "fg3_pct": 30.8,
       "ft_pct": 100.0,
-      "mvp_score": 35.4,
-      "mvp_rank": 269,
+      "mvp_score": 24.6,
+      "mvp_rank": 205,
       "wpa": 0.0,
-      "consistency": 0.043,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11393,10 +11457,10 @@
       "fg_pct": 16.7,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 34.4,
-      "mvp_rank": 284,
+      "mvp_score": 19.7,
+      "mvp_rank": 242,
       "wpa": 0.0,
-      "consistency": 0.057,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11415,10 +11479,10 @@
       "fg_pct": 0.0,
       "fg3_pct": 0.0,
       "ft_pct": 50.0,
-      "mvp_score": 29.3,
-      "mvp_rank": 309,
+      "mvp_score": 4.1,
+      "mvp_rank": 306,
       "wpa": 0.0,
-      "consistency": 0.137,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11437,10 +11501,10 @@
       "fg_pct": 23.1,
       "fg3_pct": 14.3,
       "ft_pct": 0.0,
-      "mvp_score": 26.9,
-      "mvp_rank": 316,
-      "wpa": 11.6,
-      "consistency": 0.036,
+      "mvp_score": 3.6,
+      "mvp_rank": 307,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11459,10 +11523,10 @@
       "fg_pct": 66.7,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 29.4,
-      "mvp_rank": 308,
-      "wpa": 11.4,
-      "consistency": 0.071,
+      "mvp_score": 8.1,
+      "mvp_rank": 298,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11481,10 +11545,10 @@
       "fg_pct": 40.0,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 31.5,
-      "mvp_rank": 304,
+      "mvp_score": 11.0,
+      "mvp_rank": 293,
       "wpa": 0.0,
-      "consistency": 0.067,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11503,10 +11567,10 @@
       "fg_pct": 16.7,
       "fg3_pct": 18.2,
       "ft_pct": 0.0,
-      "mvp_score": 32.1,
-      "mvp_rank": 303,
-      "wpa": 14.5,
-      "consistency": 0.084,
+      "mvp_score": 14.1,
+      "mvp_rank": 280,
+      "wpa": 0.0,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11525,10 +11589,10 @@
       "fg_pct": 0.0,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 28.3,
-      "mvp_rank": 312,
+      "mvp_score": 2.9,
+      "mvp_rank": 309,
       "wpa": 0.0,
-      "consistency": 0.091,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     },
     {
@@ -11547,10 +11611,10 @@
       "fg_pct": 16.7,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 27.8,
-      "mvp_rank": 313,
+      "mvp_score": 0.0,
+      "mvp_rank": 0,
       "wpa": 0.0,
-      "consistency": 0.063,
+      "consistency": 0.0,
       "clutch_eff": 0.0
     }
   ],
@@ -16554,40 +16618,40 @@
     ]
   },
   "accuracy": {
-    "n_games": 340,
-    "accuracy": 65.6,
-    "brier_score": 0.2066,
-    "log_loss": 0.5939,
+    "n_games": 307,
+    "accuracy": 69.4,
+    "brier_score": 0.2028,
+    "log_loss": 0.5893,
     "calibration": [
       {
         "Bucket": "50-60%",
-        "Count": 127,
-        "Accuracy": 55.1,
+        "Count": 119,
+        "Accuracy": 60.5,
         "AvgConfidence": 56.3
       },
       {
         "Bucket": "60-70%",
-        "Count": 67,
-        "Accuracy": 56.7,
-        "AvgConfidence": 64.9
+        "Count": 103,
+        "Accuracy": 68.9,
+        "AvgConfidence": 65.4
       },
       {
         "Bucket": "70-80%",
-        "Count": 88,
-        "Accuracy": 68.2,
-        "AvgConfidence": 75.6
+        "Count": 60,
+        "Accuracy": 76.7,
+        "AvgConfidence": 76.8
       },
       {
         "Bucket": "80-90%",
-        "Count": 37,
-        "Accuracy": 94.6,
-        "AvgConfidence": 84.9
+        "Count": 19,
+        "Accuracy": 94.7,
+        "AvgConfidence": 83.9
       },
       {
         "Bucket": "90%+",
-        "Count": 21,
-        "Accuracy": 95.2,
-        "AvgConfidence": 92.3
+        "Count": 6,
+        "Accuracy": 100.0,
+        "AvgConfidence": 92.2
       }
     ],
     "per_round": [
@@ -16604,7 +16668,7 @@
       {
         "Round": 3,
         "Games": 10,
-        "Accuracy": 70.0
+        "Accuracy": 60.0
       },
       {
         "Round": 4,
@@ -16614,12 +16678,12 @@
       {
         "Round": 5,
         "Games": 10,
-        "Accuracy": 60.0
+        "Accuracy": 80.0
       },
       {
         "Round": 6,
         "Games": 10,
-        "Accuracy": 50.0
+        "Accuracy": 70.0
       },
       {
         "Round": 7,
@@ -16634,12 +16698,12 @@
       {
         "Round": 9,
         "Games": 10,
-        "Accuracy": 70.0
+        "Accuracy": 50.0
       },
       {
         "Round": 10,
         "Games": 10,
-        "Accuracy": 80.0
+        "Accuracy": 70.0
       },
       {
         "Round": 11,
@@ -16649,17 +16713,17 @@
       {
         "Round": 12,
         "Games": 10,
-        "Accuracy": 70.0
+        "Accuracy": 80.0
       },
       {
         "Round": 13,
         "Games": 10,
-        "Accuracy": 70.0
+        "Accuracy": 80.0
       },
       {
         "Round": 14,
-        "Games": 10,
-        "Accuracy": 50.0
+        "Games": 9,
+        "Accuracy": 77.8
       },
       {
         "Round": 15,
@@ -16669,7 +16733,7 @@
       {
         "Round": 16,
         "Games": 10,
-        "Accuracy": 20.0
+        "Accuracy": 50.0
       },
       {
         "Round": 17,
@@ -16679,22 +16743,22 @@
       {
         "Round": 18,
         "Games": 10,
-        "Accuracy": 70.0
+        "Accuracy": 50.0
       },
       {
         "Round": 19,
         "Games": 10,
-        "Accuracy": 60.0
+        "Accuracy": 70.0
       },
       {
         "Round": 20,
         "Games": 10,
-        "Accuracy": 60.0
+        "Accuracy": 70.0
       },
       {
         "Round": 21,
-        "Games": 10,
-        "Accuracy": 80.0
+        "Games": 9,
+        "Accuracy": 77.8
       },
       {
         "Round": 22,
@@ -16709,7 +16773,7 @@
       {
         "Round": 24,
         "Games": 10,
-        "Accuracy": 70.0
+        "Accuracy": 50.0
       },
       {
         "Round": 25,
@@ -16719,7 +16783,7 @@
       {
         "Round": 26,
         "Games": 10,
-        "Accuracy": 60.0
+        "Accuracy": 70.0
       },
       {
         "Round": 27,
@@ -16734,22 +16798,17 @@
       {
         "Round": 29,
         "Games": 10,
-        "Accuracy": 60.0
+        "Accuracy": 80.0
       },
       {
         "Round": 30,
-        "Games": 9,
-        "Accuracy": 55.6
+        "Games": 8,
+        "Accuracy": 62.5
       },
       {
         "Round": 31,
         "Games": 10,
         "Accuracy": 70.0
-      },
-      {
-        "Round": 32,
-        "Games": 30,
-        "Accuracy": 56.7
       },
       {
         "Round": 34,

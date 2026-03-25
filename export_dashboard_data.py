@@ -208,6 +208,164 @@ def build_player_stats(mvp_data):
     return result
 
 
+# ── Shot stats aggregation ────────────────────────────────────────────────
+def build_shot_stats():
+    """Aggregate shot data by zone for league, team, and player breakdowns."""
+    import csv
+    shot_file = glob.glob('shot_data_*_*.csv')
+    if not shot_file:
+        print("  No shot data CSV found — skipping shot stats.")
+        return None
+    shot_file = sorted(shot_file)[-1]  # latest
+    print(f"\n--- Building shot stats from {shot_file} ---")
+
+    from collections import defaultdict
+
+    ZONES = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
+    ZONE_NAMES = {
+        'A': 'At Rim', 'B': 'Left Paint', 'C': 'Right Paint',
+        'D': 'Left Mid', 'E': 'Right Mid', 'F': 'Left Extended',
+        'G': 'Right Extended', 'H': 'Left 3PT', 'I': 'Right 3PT', 'J': 'Deep 3PT',
+    }
+
+    def new_zone(): return {'attempts': 0, 'makes': 0, 'pts': 0}
+
+    league = {z: new_zone() for z in ZONES}
+    teams = defaultdict(lambda: {z: new_zone() for z in ZONES})
+    players = defaultdict(lambda: {'team': '', 'zones': {z: new_zone() for z in ZONES}, 'total_fga': 0})
+
+    with open(shot_file, encoding='utf-8') as f:
+        for row in csv.DictReader(f):
+            zone = row.get('ZONE', '').strip()
+            if zone not in ZONES:
+                continue
+            action = row.get('ID_ACTION', '')
+            if action == 'FTM':
+                continue  # free throws don't have meaningful zone data
+            team_code = row.get('TEAM', '')
+            player = row.get('PLAYER', '')
+            pts = int(row.get('POINTS', 0))
+            made = action in ('2FGM', '3FGM')
+
+            # League
+            league[zone]['attempts'] += 1
+            if made:
+                league[zone]['makes'] += 1
+                league[zone]['pts'] += pts
+
+            # Team
+            teams[team_code][zone]['attempts'] += 1
+            if made:
+                teams[team_code][zone]['makes'] += 1
+                teams[team_code][zone]['pts'] += pts
+
+            # Player
+            players[player]['team'] = team_code
+            players[player]['zones'][zone]['attempts'] += 1
+            players[player]['total_fga'] += 1
+            if made:
+                players[player]['zones'][zone]['makes'] += 1
+                players[player]['zones'][zone]['pts'] += pts
+
+    def finalize(zone_dict):
+        result = {}
+        for z, d in zone_dict.items():
+            att = d['attempts']
+            if att == 0:
+                continue
+            result[z] = {
+                'attempts': att,
+                'makes': d['makes'],
+                'fg_pct': round(d['makes'] / att * 100, 1),
+                'pps': round(d['pts'] / att, 2),  # points per shot
+            }
+        return result
+
+    # Filter players: min 50 FGA
+    filtered_players = {}
+    for name, pdata in players.items():
+        if pdata['total_fga'] >= 50:
+            filtered_players[name] = {
+                'team': pdata['team'],
+                'total_fga': pdata['total_fga'],
+                'zones': finalize(pdata['zones']),
+            }
+
+    # ── Heatmap grid ─────────────────────────────────────────────────────────
+    GRID_COLS, GRID_ROWS = 25, 25
+    X_MIN, X_MAX = -740, 740
+    Y_MIN, Y_MAX = -100, 1300
+    cell_w = (X_MAX - X_MIN) / GRID_COLS
+    cell_h = (Y_MAX - Y_MIN) / GRID_ROWS
+
+    def new_grid():
+        return [[{'att': 0, 'makes': 0} for _ in range(GRID_COLS)] for _ in range(GRID_ROWS)]
+
+    league_grid = new_grid()
+    team_grids = defaultdict(new_grid)
+
+    with open(shot_file, encoding='utf-8') as f:
+        for row in csv.DictReader(f):
+            action = row.get('ID_ACTION', '')
+            if action not in ('2FGM', '2FGA', '3FGM', '3FGA'):
+                continue
+            try:
+                x = int(row['COORD_X'])
+                y = int(row['COORD_Y'])
+            except (ValueError, KeyError):
+                continue
+            col = min(GRID_COLS - 1, max(0, int((x - X_MIN) / cell_w)))
+            r   = min(GRID_ROWS - 1, max(0, int((y - Y_MIN) / cell_h)))
+            made = 1 if action in ('2FGM', '3FGM') else 0
+            team_code = row.get('TEAM', '')
+
+            league_grid[r][col]['att'] += 1
+            league_grid[r][col]['makes'] += made
+            team_grids[team_code][r][col]['att'] += 1
+            team_grids[team_code][r][col]['makes'] += made
+
+    def grid_to_arrays(grid, min_att=3):
+        """Convert grid to fg_pct and attempts 2D arrays with smoothing."""
+        fg = []
+        att = []
+        for r in range(GRID_ROWS):
+            fg_row = []
+            att_row = []
+            for c in range(GRID_COLS):
+                cell = grid[r][c]
+                if cell['att'] >= min_att:
+                    fg_row.append(round(cell['makes'] / cell['att'] * 100, 1))
+                    att_row.append(cell['att'])
+                else:
+                    fg_row.append(None)
+                    att_row.append(0)
+            fg.append(fg_row)
+            att.append(att_row)
+        return {'fg_pct': fg, 'attempts': att}
+
+    grid_data = {
+        'cols': GRID_COLS, 'rows': GRID_ROWS,
+        'x_min': X_MIN, 'x_max': X_MAX,
+        'y_min': Y_MIN, 'y_max': Y_MAX,
+        'league': grid_to_arrays(league_grid, min_att=5),
+        'teams': {code: grid_to_arrays(g, min_att=2) for code, g in team_grids.items()},
+    }
+
+    output = {
+        'zone_names': ZONE_NAMES,
+        'league': finalize(league),
+        'teams': {code: finalize(zones) for code, zones in teams.items()},
+        'players': filtered_players,
+        'grid': grid_data,
+    }
+
+    total_shots = sum(d['attempts'] for d in league.values())
+    print(f"  Total field goal attempts: {total_shots}")
+    print(f"  Teams: {len(teams)}, Players (>=50 FGA): {len(filtered_players)}")
+    print(f"  Heatmap grid: {GRID_COLS}x{GRID_ROWS} cells")
+    return output
+
+
 def main():
     suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
     print(f"\n=== Dashboard Export ===")
@@ -409,6 +567,16 @@ def main():
     if accuracy_data:
         print(f"  Accuracy: {accuracy_data.get('accuracy', '?')}% over {accuracy_data.get('n_games', '?')} games")
     print(f"\nDone! dashboard.json written to {out_path}")
+
+    # ── Shot stats export ────────────────────────────────────────────────────
+    shot_stats = build_shot_stats()
+    if shot_stats:
+        shot_path = os.path.join(out_dir, 'shot_stats.json')
+        with open(shot_path, 'w', encoding='utf-8') as f:
+            json.dump(shot_stats, f, ensure_ascii=False, indent=2)
+        n_players = len(shot_stats.get('players', {}))
+        n_teams = len(shot_stats.get('teams', {}))
+        print(f"  Shot stats: {n_teams} teams, {n_players} players -> {shot_path}")
 
     # Copy backtest predictions for H2H page
     import shutil
