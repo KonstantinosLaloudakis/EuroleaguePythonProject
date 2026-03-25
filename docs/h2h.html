@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head-to-Head — Euroleague Analytics</title>
+    <meta name="description" content="Euroleague Head-to-Head: compare two teams side by side — stats, matchup history, key players, radar chart.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── Team selector row ─────────────────────────────────── */
+        .h2h-selector {
+            display: flex;
+            gap: 1rem;
+            align-items: end;
+        }
+
+        .h2h-selector .control-group { flex: 1; }
+
+        .h2h-selector select {
+            width: 100%;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            padding: 0.55rem 0.75rem;
+            border-radius: 8px;
+        }
+
+        .h2h-selector label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.3rem;
+            display: block;
+        }
+
+        .h2h-vs {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            color: var(--text-muted);
+            padding-bottom: 0.45rem;
+            text-align: center;
+            min-width: 3rem;
+        }
+
+        /* ── Hidden panel ──────────────────────────────────────── */
+        #h2h-panel { display: none; }
+
+        /* ── Header bar ────────────────────────────────────────── */
+        .h2h-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .h2h-team-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .h2h-team-record {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .h2h-vs-big {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        /* ── Comparison bars ───────────────────────────────────── */
+        .compare-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.55rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .compare-row:last-child { border-bottom: none; }
+
+        .compare-val {
+            min-width: 5rem;
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: var(--text-primary);
+        }
+
+        .compare-val-left { text-align: right; }
+        .compare-val-right { text-align: left; }
+
+        .compare-label {
+            min-width: 7.5rem;
+            text-align: center;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .compare-bar-wrap {
+            flex: 1;
+            height: 8px;
+            background: var(--bg-secondary);
+            border-radius: 4px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .compare-bar-a, .compare-bar-b {
+            height: 8px;
+            transition: width 0.35s ease;
+        }
+
+        .compare-advantage {
+            font-weight: 700;
+        }
+
+        /* ── Matchup history ───────────────────────────────────── */
+        .h2h-history-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        .h2h-history-table th {
+            color: var(--text-muted);
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            padding: 0.5rem 0.6rem;
+            text-align: left;
+            letter-spacing: 0.04em;
+        }
+
+        .h2h-history-table td {
+            padding: 0.5rem 0.6rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .h2h-winner-badge {
+            font-weight: 700;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .h2h-oracle-correct {
+            color: var(--accent-green);
+            font-size: 0.75rem;
+        }
+
+        .h2h-oracle-wrong {
+            color: var(--accent-red);
+            font-size: 0.75rem;
+        }
+
+        /* ── Player comparison columns ─────────────────────────── */
+        .player-compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 650px) { .player-compare { grid-template-columns: 1fr; } }
+
+        .pc-side-title {
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 0.6rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid;
+        }
+
+        .pc-player {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.45rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pc-player:last-child { border-bottom: none; }
+
+        .pc-name {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+        }
+
+        .pc-meta {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        .pc-stats {
+            display: flex;
+            gap: 0.8rem;
+            font-size: 0.8rem;
+        }
+
+        .pc-stat-val { font-weight: 700; color: var(--text-primary); }
+        .pc-stat-lbl { font-size: 0.68rem; color: var(--text-muted); }
+
+        /* ── Oracle prediction card ────────────────────────────── */
+        .h2h-oracle-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            text-align: center;
+        }
+
+        .h2h-oracle-winner {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .h2h-oracle-detail {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+        }
+
+        /* ── Two-column layout ─────────────────────────────────── */
+        .h2h-two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 750px) { .h2h-two-col { grid-template-columns: 1fr; } }
+    </style>
+</head>
+
+<body>
+
+    <nav class="site-nav">
+        <span class="site-nav-brand">🏀 Euroleague Analytics</span>
+        <a href="index.html" class="nav-link">Game Replay</a>
+        <a href="season.html" class="nav-link">Season Hub</a>
+        <a href="players.html" class="nav-link">Player Stats</a>
+        <a href="team.html" class="nav-link">Team Deep-Dive</a>
+        <a href="h2h.html" class="nav-link active">Head-to-Head</a>
+    </nav>
+
+    <header>
+        <h1>🤝 Head-to-Head</h1>
+        <p class="subtitle">Side-by-Side Comparison · Matchup History · Key Players · Radar Chart</p>
+        <p id="last-updated" class="last-updated" style="display:none"></p>
+    </header>
+
+    <main>
+        <!-- Team selectors -->
+        <div class="stat-card" style="margin-bottom:1rem">
+            <h3>Select Two Teams</h3>
+            <div class="h2h-selector">
+                <div class="control-group">
+                    <label for="sel-a">Team A</label>
+                    <select id="sel-a" onchange="onSelectionChange()">
+                        <option value="">— Choose —</option>
+                    </select>
+                </div>
+                <div class="h2h-vs">VS</div>
+                <div class="control-group">
+                    <label for="sel-b">Team B</label>
+                    <select id="sel-b" onchange="onSelectionChange()">
+                        <option value="">— Choose —</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- H2H panel (hidden until both selected) -->
+        <div id="h2h-panel">
+
+            <!-- VS header -->
+            <div class="h2h-header" id="h2h-header"></div>
+
+            <!-- Stat comparison bars -->
+            <div class="stat-card" style="margin-bottom:1rem">
+                <h3>Statistical Comparison</h3>
+                <div id="h2h-stat-bars"></div>
+            </div>
+
+            <!-- History + Oracle -->
+            <div class="h2h-two-col">
+                <div class="stat-card">
+                    <h3>Matchup History</h3>
+                    <div id="h2h-history"></div>
+                </div>
+                <div class="stat-card">
+                    <h3>Oracle Prediction</h3>
+                    <div id="h2h-oracle"></div>
+                </div>
+            </div>
+
+            <!-- Key players -->
+            <div class="stat-card" style="margin-bottom:1rem">
+                <h3>Key Player Comparison</h3>
+                <div id="h2h-players" class="player-compare"></div>
+            </div>
+
+            <!-- Radar chart -->
+            <div class="stat-card">
+                <h3>Team Profile Radar</h3>
+                <div id="h2h-radar"></div>
+            </div>
+
+        </div><!-- /h2h-panel -->
+    </main>
+
+    <script src="h2h.js"></script>
+</body>
+
+</html>

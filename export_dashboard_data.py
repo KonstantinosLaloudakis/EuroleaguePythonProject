@@ -410,6 +410,13 @@ def main():
         print(f"  Accuracy: {accuracy_data.get('accuracy', '?')}% over {accuracy_data.get('n_games', '?')} games")
     print(f"\nDone! dashboard.json written to {out_path}")
 
+    # Copy backtest predictions for H2H page
+    import shutil
+    backtest_src = f'oracle_backtest_predictions.json'
+    if os.path.exists(backtest_src):
+        shutil.copy2(backtest_src, os.path.join(out_dir, 'oracle_backtest_predictions.json'))
+        print(f"  Copied backtest predictions to {out_dir}")
+
 
 if __name__ == '__main__':
     main()
