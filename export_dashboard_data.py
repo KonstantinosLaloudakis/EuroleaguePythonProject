@@ -118,6 +118,96 @@ def find_latest_player_forecast(oracle_round):
     return None
 
 
+def build_player_stats(mvp_data):
+    """Aggregate per-player season averages from mvp_all_game_stats_2025.json."""
+    from collections import defaultdict
+
+    all_stats = load_json('mvp_all_game_stats_2025.json')
+    if not all_stats:
+        return []
+
+    # Build rankings lookup by player name
+    rankings_lookup = {}
+    if mvp_data:
+        for row in mvp_data:
+            rankings_lookup[row.get('PlayerName', '')] = row
+
+    agg = defaultdict(lambda: {
+        'name': '', 'team': '', 'position': '',
+        'pts': [], 'reb': [], 'ast': [], 'stl': [], 'to_': [], 'blk': [],
+        'pir': [], 'fg2m': 0, 'fg2a': 0, 'fg3m': 0, 'fg3a': 0,
+        'ftm': 0, 'fta': 0,
+    })
+
+    for game in all_stats:
+        for side in ('local.players', 'road.players'):
+            for entry in game.get(side, []):
+                p = entry.get('player', {})
+                s = entry.get('stats', {})
+                code = p.get('person', {}).get('code', '')
+                name = p.get('person', {}).get('name', '')
+                team = p.get('club', {}).get('code', '')
+                pos = p.get('positionName', '')
+                if not code or not name:
+                    continue
+                # Skip DNPs (no minutes and no stats)
+                if s.get('timePlayed', 0) == 0 and s.get('points', 0) == 0 and s.get('valuation', 0) == 0:
+                    continue
+                d = agg[code]
+                d['name'] = name
+                d['team'] = team
+                d['position'] = pos
+                d['pts'].append(s.get('points', 0))
+                d['reb'].append(s.get('totalRebounds', 0))
+                d['ast'].append(s.get('assistances', 0))
+                d['stl'].append(s.get('steals', 0))
+                d['to_'].append(s.get('turnovers', 0))
+                d['blk'].append(s.get('blocksFavour', 0))
+                d['pir'].append(s.get('valuation', 0))
+                d['fg2m'] += s.get('fieldGoalsMade2', 0)
+                d['fg2a'] += s.get('fieldGoalsAttempted2', 0)
+                d['fg3m'] += s.get('fieldGoalsMade3', 0)
+                d['fg3a'] += s.get('fieldGoalsAttempted3', 0)
+                d['ftm'] += s.get('freeThrowsMade', 0)
+                d['fta'] += s.get('freeThrowsAttempted', 0)
+
+    def avg(lst): return round(sum(lst) / len(lst), 1) if lst else 0.0
+
+    result = []
+    for code, d in agg.items():
+        gp = len(d['pts'])
+        if gp < 5:
+            continue
+        fgm = d['fg2m'] + d['fg3m']
+        fga = d['fg2a'] + d['fg3a']
+        rnk = rankings_lookup.get(d['name'], {})
+        result.append({
+            'code': code,
+            'name': d['name'],
+            'team': d['team'],
+            'position': d['position'],
+            'gp': gp,
+            'avg_pts': avg(d['pts']),
+            'avg_reb': avg(d['reb']),
+            'avg_ast': avg(d['ast']),
+            'avg_stl': avg(d['stl']),
+            'avg_to': avg(d['to_']),
+            'avg_blk': avg(d['blk']),
+            'avg_pir': avg(d['pir']),
+            'fg_pct': round(fgm / fga * 100, 1) if fga > 0 else 0.0,
+            'fg3_pct': round(d['fg3m'] / d['fg3a'] * 100, 1) if d['fg3a'] > 0 else 0.0,
+            'ft_pct': round(d['ftm'] / d['fta'] * 100, 1) if d['fta'] > 0 else 0.0,
+            'mvp_score': round(rnk.get('MVP_Score', 0.0), 1),
+            'mvp_rank': rnk.get('MVP_Rank', 0),
+            'wpa': round(rnk.get('WPA', 0.0), 1),
+            'consistency': round(rnk.get('Consistency', 0.0), 3),
+            'clutch_eff': round(rnk.get('ClutchEff', 0.0), 3),
+        })
+
+    result.sort(key=lambda x: -x['avg_pir'])
+    return result
+
+
 def main():
     suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
     print(f"\n=== Dashboard Export ===")
@@ -262,6 +352,10 @@ def main():
                 'gp': row.get('GP', 0),
             })
 
+    # ── Build player stats leaderboard ───────────────────────────────────────
+    player_stats = build_player_stats(mvp_data)
+    print(f"  Player stats: {len(player_stats)} players")
+
     # ── Build output ─────────────────────────────────────────────────────────
     from datetime import datetime
     output = {
@@ -269,6 +363,7 @@ def main():
         'updated': datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
         'teams': teams,
         'mvp': mvp_list,
+        'player_stats': player_stats,
         'oracle': oracle_data,
         'accuracy': accuracy_data,
     }

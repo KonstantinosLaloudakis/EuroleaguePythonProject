@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Stats Hub — Euroleague Analytics</title>
+    <meta name="description"
+        content="Euroleague Player Stats Hub: season leaderboards, averages, shooting splits, and MVP race.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── Players-specific overrides ─────────────────────────── */
+        .players-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .players-filters select,
+        .players-filters input[type="text"] {
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            border-radius: 8px;
+            padding: 0.4rem 0.75rem;
+            font-size: 0.85rem;
+            font-family: inherit;
+        }
+
+        .players-filters input[type="text"] {
+            min-width: 180px;
+        }
+
+        .pos-btn {
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            border-radius: 20px;
+            padding: 0.3rem 0.85rem;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .pos-btn.active {
+            background: var(--accent-blue);
+            border-color: var(--accent-blue);
+            color: #fff;
+        }
+
+        .leaderboard-tbl {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        .leaderboard-tbl th {
+            text-align: right;
+            padding: 0.5rem 0.6rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        .leaderboard-tbl th:nth-child(1),
+        .leaderboard-tbl th:nth-child(2) {
+            text-align: left;
+        }
+
+        .leaderboard-tbl th:hover { color: var(--text-primary); }
+
+        .leaderboard-tbl th.lb-sort-asc::after  { content: ' ↑'; color: var(--accent-blue); }
+        .leaderboard-tbl th.lb-sort-desc::after { content: ' ↓'; color: var(--accent-blue); }
+
+        .leaderboard-tbl td {
+            text-align: right;
+            padding: 0.5rem 0.6rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .leaderboard-tbl td:nth-child(1),
+        .leaderboard-tbl td:nth-child(2) {
+            text-align: left;
+        }
+
+        .leaderboard-tbl tr:hover td { background: rgba(255,255,255,0.03); }
+
+        .lb-rank {
+            font-weight: 700;
+            color: var(--text-muted);
+            width: 2rem;
+        }
+
+        .lb-player-cell { min-width: 160px; }
+
+        .lb-player-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            display: block;
+        }
+
+        .lb-player-meta {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .lb-highlight { color: var(--text-primary); font-weight: 600; }
+
+        .lb-team-badge {
+            display: inline-block;
+            padding: 0.15rem 0.45rem;
+            border-radius: 4px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            border: 1px solid;
+            margin-right: 0.3rem;
+            vertical-align: middle;
+        }
+
+        .lb-footer {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            padding: 0.5rem 0;
+            text-align: right;
+        }
+
+        /* ── MVP Race ───────────────────────────────────────────── */
+        .mvp-podium {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 700px) {
+            .mvp-podium { grid-template-columns: 1fr; }
+        }
+
+        .mvp-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.2rem;
+            text-align: center;
+        }
+
+        .mvp-card.rank-1 { border-color: var(--accent-gold); }
+        .mvp-card.rank-2 { border-color: #9ca3af; }
+        .mvp-card.rank-3 { border-color: #b45309; }
+
+        .mvp-medal { font-size: 1.8rem; margin-bottom: 0.3rem; }
+
+        .mvp-card-name {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .mvp-card-team {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+        }
+
+        .mvp-score-bar-wrap {
+            background: var(--bg-card);
+            border-radius: 4px;
+            height: 6px;
+            margin-bottom: 0.6rem;
+        }
+
+        .mvp-score-bar {
+            height: 6px;
+            border-radius: 4px;
+            background: var(--accent-gold);
+        }
+
+        .mvp-score-label {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+        }
+
+        .mvp-card-stats {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 0.8rem;
+        }
+
+        .mvp-stat { text-align: center; }
+        .mvp-stat-val { font-weight: 700; color: var(--text-primary); display: block; }
+        .mvp-stat-lbl { color: var(--text-muted); font-size: 0.72rem; }
+
+        .mvp-race-tbl {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        .mvp-race-tbl th {
+            text-align: right;
+            padding: 0.45rem 0.6rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+            white-space: nowrap;
+        }
+
+        .mvp-race-tbl th:nth-child(1),
+        .mvp-race-tbl th:nth-child(2) { text-align: left; }
+
+        .mvp-race-tbl td {
+            text-align: right;
+            padding: 0.45rem 0.6rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .mvp-race-tbl td:nth-child(1),
+        .mvp-race-tbl td:nth-child(2) { text-align: left; }
+
+        .mvp-race-tbl tr:hover td { background: rgba(255,255,255,0.03); }
+
+        .mvp-score-pill {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent-gold);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 6px;
+            padding: 0.1rem 0.5rem;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="site-nav">
+        <span class="site-nav-brand">🏀 Euroleague Analytics</span>
+        <a href="index.html" class="nav-link">Game Replay</a>
+        <a href="season.html" class="nav-link">Season Hub</a>
+        <a href="players.html" class="nav-link active">Player Stats</a>
+    </nav>
+
+    <header>
+        <h1>🏅 Player Stats Hub</h1>
+        <p class="subtitle">Season Leaderboards · Shooting Splits · MVP Race</p>
+        <p id="last-updated" class="last-updated" style="display:none"></p>
+    </header>
+
+    <main>
+        <!-- Tab Bar -->
+        <div class="tab-bar">
+            <button class="tab-btn active" onclick="switchTab('tab-leaderboards')">
+                📊 Leaderboards
+            </button>
+            <button class="tab-btn" onclick="switchTab('tab-mvp')">
+                🏆 MVP Race
+            </button>
+        </div>
+
+        <!-- ── TAB 1: Leaderboards ────────────────────────────────────── -->
+        <div id="tab-leaderboards">
+            <div class="stat-card">
+                <h3>Season Averages</h3>
+
+                <div class="players-filters" id="lb-filters">
+                    <input type="text" id="lb-search" placeholder="Search player…"
+                        oninput="_lbShowAll=false;_renderLeaderboard()" autocomplete="off">
+                    <select id="lb-team" onchange="_lbShowAll=false;_renderLeaderboard()">
+                        <option value="">All Teams</option>
+                    </select>
+                    <select id="lb-mingp" onchange="_lbShowAll=false;_renderLeaderboard()">
+                        <option value="5">Min 5 GP</option>
+                        <option value="10">Min 10 GP</option>
+                        <option value="15">Min 15 GP</option>
+                        <option value="20">Min 20 GP</option>
+                    </select>
+                    <div style="display:flex;gap:0.4rem;flex-wrap:wrap">
+                        <button class="pos-btn active" onclick="_setPosFilter(this,'')">All</button>
+                        <button class="pos-btn" onclick="_setPosFilter(this,'Guard')">Guard</button>
+                        <button class="pos-btn" onclick="_setPosFilter(this,'Forward')">Forward</button>
+                        <button class="pos-btn" onclick="_setPosFilter(this,'Center')">Center</button>
+                    </div>
+                </div>
+
+                <div id="leaderboard-table">
+                    <div class="loading-placeholder">
+                        <span class="loading-spinner"></span> Loading player stats…
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── TAB 2: MVP Race ───────────────────────────────────────── -->
+        <div id="tab-mvp" style="display:none">
+            <div class="stat-card">
+                <h3>MVP Race — Top 3</h3>
+                <div id="mvp-podium">
+                    <div class="loading-placeholder">
+                        <span class="loading-spinner"></span> Loading MVP data…
+                    </div>
+                </div>
+            </div>
+            <div class="stat-card" style="margin-top:1rem">
+                <h3>Full Rankings</h3>
+                <div id="mvp-race-table">
+                    <div class="loading-placeholder">
+                        <span class="loading-spinner"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="players.js"></script>
+</body>
+
+</html>
