@@ -366,6 +366,145 @@ def build_shot_stats():
     return output
 
 
+def build_game_recaps():
+    """Build per-round game recaps with box scores from game stats + backtest."""
+    all_stats = load_json('mvp_all_game_stats_2025.json')
+    backtest = load_json('oracle_backtest_predictions.json')
+    if not all_stats or not backtest:
+        print("  Missing game stats or backtest — skipping game recaps.")
+        return None
+
+    # Build backtest lookup by GameCode
+    bt_lookup = {}
+    for g in backtest:
+        bt_lookup[g['GameCode']] = g
+
+    rounds = {}  # round_num -> [game, ...]
+
+    for game in all_stats:
+        gc = game.get('Gamecode', game.get('GameCode'))
+        bt = bt_lookup.get(gc)
+        if not bt:
+            continue  # skip games not in backtest (future/unplayed)
+
+        local_players = game.get('local.players', [])
+        road_players = game.get('road.players', [])
+        if not local_players and not road_players:
+            continue  # no box score data
+
+        rnd = bt['Round']
+        home_code = bt['Home']
+        away_code = bt['Away']
+        home_pts = game.get('local.total.points', 0) or 0
+        away_pts = game.get('road.total.points', 0) or 0
+
+        def fmt_time(secs):
+            secs = int(secs or 0)
+            return f"{secs // 60}:{secs % 60:02d}"
+
+        def build_player_row(entry):
+            p = entry.get('player', {})
+            s = entry.get('stats', {})
+            person = p.get('person', {})
+            time_secs = s.get('timePlayed', 0) or 0
+            pts = int(s.get('points', 0) or 0)
+            fg2m = int(s.get('fieldGoalsMade2', 0) or 0)
+            fg2a = int(s.get('fieldGoalsAttempted2', 0) or 0)
+            fg3m = int(s.get('fieldGoalsMade3', 0) or 0)
+            fg3a = int(s.get('fieldGoalsAttempted3', 0) or 0)
+            ftm = int(s.get('freeThrowsMade', 0) or 0)
+            fta = int(s.get('freeThrowsAttempted', 0) or 0)
+            return {
+                'name': person.get('name', ''),
+                'starter': bool(s.get('startFive')),
+                'min': fmt_time(time_secs),
+                'pts': pts,
+                'reb': int(s.get('totalRebounds', 0) or 0),
+                'ast': int(s.get('assistances', 0) or 0),
+                'stl': int(s.get('steals', 0) or 0),
+                'to': int(s.get('turnovers', 0) or 0),
+                'blk': int(s.get('blocksFavour', 0) or 0),
+                'pir': int(s.get('valuation', 0) or 0),
+                'pm': int(s.get('plusMinus', 0) or 0),
+                'fg': f"{fg2m + fg3m}/{fg2a + fg3a}",
+                'fg3': f"{fg3m}/{fg3a}",
+                'ft': f"{ftm}/{fta}",
+            }
+
+        home_roster = [build_player_row(e) for e in local_players
+                       if (e.get('stats', {}).get('timePlayed', 0) or 0) > 0
+                       or e.get('stats', {}).get('startFive')]
+        away_roster = [build_player_row(e) for e in road_players
+                       if (e.get('stats', {}).get('timePlayed', 0) or 0) > 0
+                       or e.get('stats', {}).get('startFive')]
+
+        # Sort: starters first (by PIR desc), then bench (by PIR desc)
+        for roster in (home_roster, away_roster):
+            roster.sort(key=lambda x: (-x['starter'], -x['pir']))
+
+        # Team totals
+        def team_totals(prefix):
+            return {
+                'pts': int(game.get(f'{prefix}.total.points', 0) or 0),
+                'reb': int(game.get(f'{prefix}.total.totalRebounds', 0) or 0),
+                'ast': int(game.get(f'{prefix}.total.assistances', 0) or 0),
+                'stl': int(game.get(f'{prefix}.total.steals', 0) or 0),
+                'to': int(game.get(f'{prefix}.total.turnovers', 0) or 0),
+                'blk': int(game.get(f'{prefix}.total.blocksFavour', 0) or 0),
+                'fg2': f"{int(game.get(f'{prefix}.total.fieldGoalsMade2', 0) or 0)}/{int(game.get(f'{prefix}.total.fieldGoalsAttempted2', 0) or 0)}",
+                'fg3': f"{int(game.get(f'{prefix}.total.fieldGoalsMade3', 0) or 0)}/{int(game.get(f'{prefix}.total.fieldGoalsAttempted3', 0) or 0)}",
+                'ft': f"{int(game.get(f'{prefix}.total.freeThrowsMade', 0) or 0)}/{int(game.get(f'{prefix}.total.freeThrowsAttempted', 0) or 0)}",
+                'pir': int(game.get(f'{prefix}.total.valuation', 0) or 0),
+            }
+
+        # Find top performer (highest PIR across both teams)
+        all_players = home_roster + away_roster
+        top = max(all_players, key=lambda x: x['pir']) if all_players else None
+
+        game_obj = {
+            'gameCode': gc,
+            'home': home_code,
+            'away': away_code,
+            'homePts': int(home_pts),
+            'awayPts': int(away_pts),
+            'homeName': TEAM_NAMES.get(home_code, home_code),
+            'awayName': TEAM_NAMES.get(away_code, away_code),
+            'homeRoster': home_roster,
+            'awayRoster': away_roster,
+            'homeTotals': team_totals('local'),
+            'awayTotals': team_totals('road'),
+            'oracle': {
+                'predictedWinner': bt.get('PredictedWinner', ''),
+                'homeWinProb': bt.get('HomeWinProb', 50),
+                'margin': bt.get('PredictedMargin', 0),
+                'correct': bt.get('Correct', False),
+            },
+        }
+        if top:
+            game_obj['topPerformer'] = {
+                'name': top['name'],
+                'pts': top['pts'],
+                'reb': top['reb'],
+                'ast': top['ast'],
+                'pir': top['pir'],
+            }
+
+        rounds.setdefault(rnd, []).append(game_obj)
+
+    # Sort games within each round by gamecode
+    for rnd in rounds:
+        rounds[rnd].sort(key=lambda x: x['gameCode'])
+
+    # Convert to sorted list of rounds
+    output = {
+        'rounds': {str(r): rounds[r] for r in sorted(rounds.keys())},
+        'totalRounds': max(rounds.keys()) if rounds else 0,
+    }
+
+    print(f"  Game recaps: {sum(len(v) for v in rounds.values())} games across {len(rounds)} rounds")
+    return output
+
+
 def main():
     suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
     print(f"\n=== Dashboard Export ===")
@@ -577,6 +716,15 @@ def main():
         n_players = len(shot_stats.get('players', {}))
         n_teams = len(shot_stats.get('teams', {}))
         print(f"  Shot stats: {n_teams} teams, {n_players} players -> {shot_path}")
+
+    # ── Game recaps export ─────────────────────────────────────────────────
+    print("\n--- Building game recaps ---")
+    game_recaps = build_game_recaps()
+    if game_recaps:
+        recap_path = os.path.join(out_dir, 'game_recaps.json')
+        with open(recap_path, 'w', encoding='utf-8') as f:
+            json.dump(game_recaps, f, ensure_ascii=False)
+        print(f"  Game recaps -> {recap_path}")
 
     # Copy backtest predictions for H2H page
     import shutil
