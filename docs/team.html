@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Deep-Dive — Euroleague Analytics</title>
+    <meta name="description" content="Euroleague Team Deep-Dive: season profile, home/away splits, rolling form, top contributors, next fixtures.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── Team selector grid ─────────────────────────────────── */
+        .team-selector-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 700px) { .team-selector-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        .team-chip {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.55rem 0.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .team-chip:hover { border-color: #4b5563; background: var(--bg-card); }
+
+        .team-chip.selected {
+            border-color: var(--accent-blue);
+            background: rgba(59,130,246,0.08);
+        }
+
+        .team-chip-code {
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: block;
+        }
+
+        .team-chip-record {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            margin-top: 0.15rem;
+        }
+
+        /* ── Deep-dive panel ────────────────────────────────────── */
+        #deep-dive { display: none; }
+
+        .dd-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .dd-team-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .dd-record {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        .dd-rank-badge {
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 0.25rem 0.6rem;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        /* ── KPI pills row ──────────────────────────────────────── */
+        .dd-kpi-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        @media (max-width: 600px) { .dd-kpi-row { grid-template-columns: repeat(2, 1fr); } }
+
+        .dd-kpi {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 0.85rem 1rem;
+            text-align: center;
+        }
+
+        .dd-kpi-val {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .dd-kpi-lbl {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.15rem;
+        }
+
+        /* ── Splits row ─────────────────────────────────────────── */
+        .dd-splits {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .dd-split-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 0.85rem 1rem;
+        }
+
+        .dd-split-title {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.4rem;
+        }
+
+        .dd-split-record {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .dd-split-bar-wrap {
+            height: 4px;
+            background: var(--bg-card);
+            border-radius: 2px;
+            margin-top: 0.5rem;
+        }
+
+        .dd-split-bar {
+            height: 4px;
+            border-radius: 2px;
+        }
+
+        /* ── Two-column layout for lower sections ───────────────── */
+        .dd-lower {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 750px) { .dd-lower { grid-template-columns: 1fr; } }
+
+        /* ── Top contributors ───────────────────────────────────── */
+        .contributor-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .contributor-row:last-child { border-bottom: none; }
+
+        .contributor-name {
+            font-weight: 600;
+            font-size: 0.88rem;
+            color: var(--text-primary);
+        }
+
+        .contributor-pos {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .contributor-stats {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.82rem;
+        }
+
+        .contributor-stat { text-align: right; }
+        .contributor-stat-val { font-weight: 700; color: var(--text-primary); }
+        .contributor-stat-lbl { font-size: 0.7rem; color: var(--text-muted); }
+
+        /* ── Next fixtures ──────────────────────────────────────── */
+        .fixture-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .fixture-row:last-child { border-bottom: none; }
+
+        .fixture-opp {
+            font-weight: 600;
+            font-size: 0.88rem;
+            color: var(--text-primary);
+        }
+
+        .fixture-opp-full {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .fixture-sos-bar-wrap {
+            flex: 1;
+            margin: 0 1rem;
+            height: 4px;
+            background: var(--bg-card);
+            border-radius: 2px;
+        }
+
+        .fixture-sos-bar { height: 4px; border-radius: 2px; }
+
+        .fixture-sos-val {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            min-width: 3.5rem;
+            text-align: right;
+        }
+
+        /* ── Playoff odds bars ──────────────────────────────────── */
+        .odds-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .odds-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            min-width: 3.5rem;
+        }
+
+        .odds-bar-wrap {
+            flex: 1;
+            height: 8px;
+            background: var(--bg-card);
+            border-radius: 4px;
+        }
+
+        .odds-bar {
+            height: 8px;
+            border-radius: 4px;
+            transition: width 0.4s ease;
+        }
+
+        .odds-pct {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            min-width: 3rem;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="site-nav">
+        <span class="site-nav-brand">🏀 Euroleague Analytics</span>
+        <a href="index.html" class="nav-link">Game Replay</a>
+        <a href="season.html" class="nav-link">Season Hub</a>
+        <a href="players.html" class="nav-link">Player Stats</a>
+        <a href="team.html" class="nav-link active">Team Deep-Dive</a>
+    </nav>
+
+    <header>
+        <h1>🔬 Team Deep-Dive</h1>
+        <p class="subtitle">Season Profile · Home/Away Splits · Rolling Form · Top Contributors · Next Fixtures</p>
+        <p id="last-updated" class="last-updated" style="display:none"></p>
+    </header>
+
+    <main>
+        <div class="stat-card">
+            <h3>Select a Team</h3>
+            <div id="team-selector-grid" class="team-selector-grid">
+                <div class="loading-placeholder"><span class="loading-spinner"></span> Loading…</div>
+            </div>
+        </div>
+
+        <!-- ── Deep-dive panel ──────────────────────────────────── -->
+        <div id="deep-dive">
+
+            <!-- Header -->
+            <div class="dd-header">
+                <div id="dd-color-bar" style="width:5px;height:3rem;border-radius:3px;flex-shrink:0"></div>
+                <div>
+                    <div class="dd-team-name" id="dd-name"></div>
+                    <span class="dd-record" id="dd-record"></span>
+                </div>
+                <span class="dd-rank-badge" id="dd-rank"></span>
+                <span class="dd-rank-badge" id="dd-net"></span>
+            </div>
+
+            <!-- KPIs -->
+            <div class="dd-kpi-row">
+                <div class="dd-kpi">
+                    <div class="dd-kpi-val" id="kpi-adjoff"></div>
+                    <div class="dd-kpi-lbl">Adj Offensive Rating</div>
+                </div>
+                <div class="dd-kpi">
+                    <div class="dd-kpi-val" id="kpi-adjdef"></div>
+                    <div class="dd-kpi-lbl">Adj Defensive Rating</div>
+                </div>
+                <div class="dd-kpi">
+                    <div class="dd-kpi-val" id="kpi-elo"></div>
+                    <div class="dd-kpi-lbl">Elo Rating</div>
+                </div>
+                <div class="dd-kpi">
+                    <div class="dd-kpi-val" id="kpi-winpct"></div>
+                    <div class="dd-kpi-lbl">Win %</div>
+                </div>
+            </div>
+
+            <!-- Splits + Playoff Odds -->
+            <div class="dd-splits">
+                <div class="dd-split-card">
+                    <div class="dd-split-title">🏠 Home Record</div>
+                    <div class="dd-split-record" id="dd-home-rec"></div>
+                    <div class="dd-split-bar-wrap"><div class="dd-split-bar" id="dd-home-bar"></div></div>
+                </div>
+                <div class="dd-split-card">
+                    <div class="dd-split-title">✈️ Away Record</div>
+                    <div class="dd-split-record" id="dd-away-rec"></div>
+                    <div class="dd-split-bar-wrap"><div class="dd-split-bar" id="dd-away-bar"></div></div>
+                </div>
+            </div>
+
+            <!-- Rolling form chart -->
+            <div class="stat-card" style="margin-bottom:1rem">
+                <h3>Season Form</h3>
+                <div id="form-chart"></div>
+            </div>
+
+            <!-- Lower: contributors + fixtures + playoff odds -->
+            <div class="dd-lower">
+                <div class="stat-card">
+                    <h3>Top Contributors</h3>
+                    <div id="dd-contributors"></div>
+                </div>
+                <div class="stat-card">
+                    <h3>Next 5 Fixtures</h3>
+                    <div id="dd-fixtures"></div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <h3>Playoff Odds</h3>
+                <div id="dd-playoff-odds"></div>
+            </div>
+
+        </div><!-- /deep-dive -->
+    </main>
+
+    <script src="team.js"></script>
+</body>
+
+</html>

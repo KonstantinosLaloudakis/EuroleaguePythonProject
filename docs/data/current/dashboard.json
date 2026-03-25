@@ -1,6 +1,6 @@
 {
   "round": 33,
-  "updated": "2026-03-25T11:19:10Z",
+  "updated": "2026-03-25T11:47:57Z",
   "teams": [
     {
       "team": "ULK",
@@ -25,6 +25,208 @@
         "W",
         "L",
         "W"
+      ],
+      "home_record": {
+        "W": 14,
+        "L": 3
+      },
+      "away_record": {
+        "W": 9,
+        "L": 6
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "W",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 2,
+          "result": "L",
+          "opp": "ZAL",
+          "home": false
+        },
+        {
+          "round": 3,
+          "result": "L",
+          "opp": "RED",
+          "home": true
+        },
+        {
+          "round": 4,
+          "result": "L",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 5,
+          "result": "W",
+          "opp": "MUN",
+          "home": true
+        },
+        {
+          "round": 6,
+          "result": "W",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 7,
+          "result": "L",
+          "opp": "PAM",
+          "home": false
+        },
+        {
+          "round": 8,
+          "result": "L",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 9,
+          "result": "W",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 10,
+          "result": "W",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 11,
+          "result": "W",
+          "opp": "HTA",
+          "home": true
+        },
+        {
+          "round": 12,
+          "result": "W",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 13,
+          "result": "W",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 14,
+          "result": "L",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 15,
+          "result": "W",
+          "opp": "MCO",
+          "home": false
+        },
+        {
+          "round": 16,
+          "result": "L",
+          "opp": "PAN",
+          "home": true
+        },
+        {
+          "round": 17,
+          "result": "W",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 18,
+          "result": "W",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 19,
+          "result": "W",
+          "opp": "BAS",
+          "home": false
+        },
+        {
+          "round": 20,
+          "result": "W",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 21,
+          "result": "L",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 22,
+          "result": "W",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 23,
+          "result": "W",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 24,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 25,
+          "result": "W",
+          "opp": "IST",
+          "home": true
+        },
+        {
+          "round": 26,
+          "result": "W",
+          "opp": "BAR",
+          "home": false
+        },
+        {
+          "round": 27,
+          "result": "W",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 28,
+          "result": "W",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 29,
+          "result": "W",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 30,
+          "result": "W",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 31,
+          "result": "L",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 32,
+          "result": "W",
+          "opp": "MIL",
+          "home": true
+        }
       ],
       "remaining_sos": 49.0,
       "home_games": 2,
@@ -62,6 +264,214 @@
         "W",
         "W"
       ],
+      "home_record": {
+        "W": 14,
+        "L": 3
+      },
+      "away_record": {
+        "W": 8,
+        "L": 8
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "W",
+          "opp": "BAS",
+          "home": false
+        },
+        {
+          "round": 2,
+          "result": "L",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 3,
+          "result": "W",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 4,
+          "result": "L",
+          "opp": "IST",
+          "home": true
+        },
+        {
+          "round": 5,
+          "result": "W",
+          "opp": "TEL",
+          "home": false
+        },
+        {
+          "round": 6,
+          "result": "W",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 7,
+          "result": "L",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 8,
+          "result": "W",
+          "opp": "HTA",
+          "home": true
+        },
+        {
+          "round": 9,
+          "result": "W",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 10,
+          "result": "W",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 11,
+          "result": "L",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 12,
+          "result": "W",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 13,
+          "result": "L",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 14,
+          "result": "W",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 15,
+          "result": "L",
+          "opp": "BAR",
+          "home": false
+        },
+        {
+          "round": 16,
+          "result": "L",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 17,
+          "result": "W",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 18,
+          "result": "W",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 19,
+          "result": "W",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 20,
+          "result": "L",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 21,
+          "result": "W",
+          "opp": "MUN",
+          "home": true
+        },
+        {
+          "round": 22,
+          "result": "W",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 23,
+          "result": "W",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 24,
+          "result": "W",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 25,
+          "result": "W",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 26,
+          "result": "L",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 27,
+          "result": "W",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 28,
+          "result": "W",
+          "opp": "RED",
+          "home": true
+        },
+        {
+          "round": 29,
+          "result": "L",
+          "opp": "ZAL",
+          "home": false
+        },
+        {
+          "round": 30,
+          "result": "W",
+          "opp": "PAN",
+          "home": true
+        },
+        {
+          "round": 31,
+          "result": "L",
+          "opp": "MCO",
+          "home": false
+        },
+        {
+          "round": 32,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 34,
+          "result": "W",
+          "opp": "PRS",
+          "home": false
+        }
+      ],
       "remaining_sos": 51.9,
       "home_games": 2,
       "away_games": 3,
@@ -96,6 +506,208 @@
         "W",
         "W",
         "L"
+      ],
+      "home_record": {
+        "W": 15,
+        "L": 1
+      },
+      "away_record": {
+        "W": 5,
+        "L": 11
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "L",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 2,
+          "result": "W",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 3,
+          "result": "W",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 4,
+          "result": "W",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 5,
+          "result": "L",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 6,
+          "result": "L",
+          "opp": "TEL",
+          "home": false
+        },
+        {
+          "round": 7,
+          "result": "L",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 8,
+          "result": "W",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 9,
+          "result": "W",
+          "opp": "BAR",
+          "home": false
+        },
+        {
+          "round": 10,
+          "result": "L",
+          "opp": "PAM",
+          "home": false
+        },
+        {
+          "round": 11,
+          "result": "L",
+          "opp": "PAN",
+          "home": true
+        },
+        {
+          "round": 12,
+          "result": "W",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 13,
+          "result": "W",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 14,
+          "result": "W",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 15,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 16,
+          "result": "L",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 17,
+          "result": "W",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 18,
+          "result": "L",
+          "opp": "MCO",
+          "home": false
+        },
+        {
+          "round": 19,
+          "result": "W",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 20,
+          "result": "W",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 21,
+          "result": "W",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 22,
+          "result": "W",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 23,
+          "result": "W",
+          "opp": "MIL",
+          "home": true
+        },
+        {
+          "round": 24,
+          "result": "W",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 25,
+          "result": "L",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 26,
+          "result": "L",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 27,
+          "result": "L",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 28,
+          "result": "W",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 29,
+          "result": "W",
+          "opp": "MUN",
+          "home": true
+        },
+        {
+          "round": 30,
+          "result": "W",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 31,
+          "result": "W",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 32,
+          "result": "L",
+          "opp": "ZAL",
+          "home": false
+        }
       ],
       "remaining_sos": 59.1,
       "home_games": 3,
@@ -133,6 +745,208 @@
         "L",
         "L"
       ],
+      "home_record": {
+        "W": 13,
+        "L": 3
+      },
+      "away_record": {
+        "W": 7,
+        "L": 9
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "W",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 2,
+          "result": "W",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 3,
+          "result": "L",
+          "opp": "BAR",
+          "home": false
+        },
+        {
+          "round": 4,
+          "result": "L",
+          "opp": "HTA",
+          "home": true
+        },
+        {
+          "round": 5,
+          "result": "L",
+          "opp": "MCO",
+          "home": false
+        },
+        {
+          "round": 6,
+          "result": "W",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 7,
+          "result": "W",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 8,
+          "result": "W",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 9,
+          "result": "L",
+          "opp": "ZAL",
+          "home": false
+        },
+        {
+          "round": 10,
+          "result": "W",
+          "opp": "MAD",
+          "home": true
+        },
+        {
+          "round": 11,
+          "result": "L",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 12,
+          "result": "W",
+          "opp": "RED",
+          "home": true
+        },
+        {
+          "round": 13,
+          "result": "W",
+          "opp": "MUN",
+          "home": true
+        },
+        {
+          "round": 14,
+          "result": "W",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 15,
+          "result": "W",
+          "opp": "IST",
+          "home": true
+        },
+        {
+          "round": 16,
+          "result": "W",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 17,
+          "result": "L",
+          "opp": "TEL",
+          "home": false
+        },
+        {
+          "round": 18,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 19,
+          "result": "W",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 20,
+          "result": "W",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 21,
+          "result": "L",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 22,
+          "result": "L",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 23,
+          "result": "W",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 24,
+          "result": "L",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 25,
+          "result": "W",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 26,
+          "result": "L",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 27,
+          "result": "W",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 28,
+          "result": "W",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 29,
+          "result": "W",
+          "opp": "BAS",
+          "home": false
+        },
+        {
+          "round": 30,
+          "result": "W",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 31,
+          "result": "L",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 32,
+          "result": "L",
+          "opp": "BAR",
+          "home": true
+        }
+      ],
       "remaining_sos": 55.0,
       "home_games": 3,
       "away_games": 3,
@@ -168,6 +982,202 @@
         "W",
         "W",
         "W"
+      ],
+      "home_record": {
+        "W": 11,
+        "L": 5
+      },
+      "away_record": {
+        "W": 9,
+        "L": 6
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "W",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 2,
+          "result": "W",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 3,
+          "result": "L",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 4,
+          "result": "W",
+          "opp": "PAM",
+          "home": false
+        },
+        {
+          "round": 5,
+          "result": "W",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 6,
+          "result": "W",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 7,
+          "result": "W",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 8,
+          "result": "L",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 9,
+          "result": "W",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 10,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 11,
+          "result": "L",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 12,
+          "result": "W",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 13,
+          "result": "L",
+          "opp": "MAD",
+          "home": true
+        },
+        {
+          "round": 14,
+          "result": "W",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 15,
+          "result": "W",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 16,
+          "result": "W",
+          "opp": "RED",
+          "home": true
+        },
+        {
+          "round": 17,
+          "result": "L",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 18,
+          "result": "W",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 19,
+          "result": "L",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 20,
+          "result": "W",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 21,
+          "result": "W",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 22,
+          "result": "W",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 23,
+          "result": "W",
+          "opp": "IST",
+          "home": true
+        },
+        {
+          "round": 24,
+          "result": "L",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 25,
+          "result": "L",
+          "opp": "MUN",
+          "home": true
+        },
+        {
+          "round": 26,
+          "result": "L",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 27,
+          "result": "L",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 28,
+          "result": "L",
+          "opp": "ZAL",
+          "home": false
+        },
+        {
+          "round": 29,
+          "result": "W",
+          "opp": "MIL",
+          "home": true
+        },
+        {
+          "round": 31,
+          "result": "W",
+          "opp": "BAR",
+          "home": false
+        },
+        {
+          "round": 32,
+          "result": "W",
+          "opp": "VIR",
+          "home": true
+        }
       ],
       "remaining_sos": 61.3,
       "home_games": 3,
@@ -206,6 +1216,208 @@
         "L",
         "W"
       ],
+      "home_record": {
+        "W": 11,
+        "L": 4
+      },
+      "away_record": {
+        "W": 7,
+        "L": 10
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "W",
+          "opp": "MCO",
+          "home": false
+        },
+        {
+          "round": 2,
+          "result": "W",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 3,
+          "result": "W",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 4,
+          "result": "L",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 5,
+          "result": "L",
+          "opp": "MIL",
+          "home": true
+        },
+        {
+          "round": 6,
+          "result": "W",
+          "opp": "BAR",
+          "home": false
+        },
+        {
+          "round": 7,
+          "result": "W",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 8,
+          "result": "W",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 9,
+          "result": "W",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 10,
+          "result": "L",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 11,
+          "result": "L",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 12,
+          "result": "L",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 13,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 14,
+          "result": "L",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 15,
+          "result": "W",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 16,
+          "result": "L",
+          "opp": "IST",
+          "home": true
+        },
+        {
+          "round": 17,
+          "result": "W",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 18,
+          "result": "L",
+          "opp": "PAN",
+          "home": true
+        },
+        {
+          "round": 19,
+          "result": "W",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 20,
+          "result": "L",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 21,
+          "result": "W",
+          "opp": "RED",
+          "home": true
+        },
+        {
+          "round": 22,
+          "result": "L",
+          "opp": "TEL",
+          "home": false
+        },
+        {
+          "round": 23,
+          "result": "W",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 24,
+          "result": "W",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 25,
+          "result": "L",
+          "opp": "BAS",
+          "home": false
+        },
+        {
+          "round": 26,
+          "result": "W",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 27,
+          "result": "L",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 28,
+          "result": "W",
+          "opp": "HTA",
+          "home": true
+        },
+        {
+          "round": 29,
+          "result": "W",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 30,
+          "result": "L",
+          "opp": "PAM",
+          "home": false
+        },
+        {
+          "round": 31,
+          "result": "L",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 32,
+          "result": "W",
+          "opp": "MAD",
+          "home": true
+        }
+      ],
       "remaining_sos": 46.4,
       "home_games": 4,
       "away_games": 2,
@@ -241,6 +1453,208 @@
         "L",
         "W",
         "W"
+      ],
+      "home_record": {
+        "W": 10,
+        "L": 5
+      },
+      "away_record": {
+        "W": 8,
+        "L": 9
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "L",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 2,
+          "result": "W",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 3,
+          "result": "W",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 4,
+          "result": "L",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 5,
+          "result": "W",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 6,
+          "result": "L",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 7,
+          "result": "W",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 8,
+          "result": "W",
+          "opp": "PAN",
+          "home": true
+        },
+        {
+          "round": 9,
+          "result": "W",
+          "opp": "TEL",
+          "home": false
+        },
+        {
+          "round": 10,
+          "result": "L",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 11,
+          "result": "L",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 12,
+          "result": "W",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 13,
+          "result": "W",
+          "opp": "IST",
+          "home": true
+        },
+        {
+          "round": 14,
+          "result": "W",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 15,
+          "result": "L",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 16,
+          "result": "L",
+          "opp": "BAS",
+          "home": false
+        },
+        {
+          "round": 17,
+          "result": "W",
+          "opp": "MUN",
+          "home": true
+        },
+        {
+          "round": 18,
+          "result": "W",
+          "opp": "MAD",
+          "home": true
+        },
+        {
+          "round": 19,
+          "result": "W",
+          "opp": "BAR",
+          "home": false
+        },
+        {
+          "round": 20,
+          "result": "W",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 21,
+          "result": "W",
+          "opp": "PAM",
+          "home": false
+        },
+        {
+          "round": 22,
+          "result": "W",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 23,
+          "result": "L",
+          "opp": "RED",
+          "home": true
+        },
+        {
+          "round": 24,
+          "result": "L",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 25,
+          "result": "L",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 26,
+          "result": "L",
+          "opp": "ZAL",
+          "home": false
+        },
+        {
+          "round": 27,
+          "result": "L",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 28,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 29,
+          "result": "L",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 30,
+          "result": "L",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 31,
+          "result": "W",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 32,
+          "result": "W",
+          "opp": "IST",
+          "home": false
+        }
       ],
       "remaining_sos": 51.6,
       "home_games": 4,
@@ -278,6 +1692,208 @@
         "W",
         "L"
       ],
+      "home_record": {
+        "W": 12,
+        "L": 5
+      },
+      "away_record": {
+        "W": 6,
+        "L": 9
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "L",
+          "opp": "MIL",
+          "home": true
+        },
+        {
+          "round": 2,
+          "result": "L",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 3,
+          "result": "W",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 4,
+          "result": "W",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 5,
+          "result": "W",
+          "opp": "MAD",
+          "home": true
+        },
+        {
+          "round": 6,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 7,
+          "result": "W",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 8,
+          "result": "W",
+          "opp": "TEL",
+          "home": false
+        },
+        {
+          "round": 9,
+          "result": "W",
+          "opp": "PAN",
+          "home": true
+        },
+        {
+          "round": 10,
+          "result": "L",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 11,
+          "result": "W",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 12,
+          "result": "L",
+          "opp": "PAM",
+          "home": false
+        },
+        {
+          "round": 13,
+          "result": "W",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 14,
+          "result": "L",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 15,
+          "result": "L",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 16,
+          "result": "L",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 17,
+          "result": "W",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 18,
+          "result": "L",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 19,
+          "result": "W",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 20,
+          "result": "L",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 21,
+          "result": "L",
+          "opp": "ZAL",
+          "home": false
+        },
+        {
+          "round": 22,
+          "result": "W",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 23,
+          "result": "W",
+          "opp": "MCO",
+          "home": false
+        },
+        {
+          "round": 24,
+          "result": "W",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 25,
+          "result": "W",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 26,
+          "result": "W",
+          "opp": "HTA",
+          "home": true
+        },
+        {
+          "round": 27,
+          "result": "L",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 28,
+          "result": "L",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 29,
+          "result": "W",
+          "opp": "IST",
+          "home": true
+        },
+        {
+          "round": 30,
+          "result": "L",
+          "opp": "MUN",
+          "home": true
+        },
+        {
+          "round": 31,
+          "result": "W",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 32,
+          "result": "L",
+          "opp": "PAN",
+          "home": false
+        }
+      ],
       "remaining_sos": 50.5,
       "home_games": 2,
       "away_games": 4,
@@ -313,6 +1929,208 @@
         "L",
         "W",
         "W"
+      ],
+      "home_record": {
+        "W": 11,
+        "L": 6
+      },
+      "away_record": {
+        "W": 7,
+        "L": 8
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "W",
+          "opp": "MUN",
+          "home": true
+        },
+        {
+          "round": 2,
+          "result": "L",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 3,
+          "result": "W",
+          "opp": "BAS",
+          "home": false
+        },
+        {
+          "round": 4,
+          "result": "W",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 5,
+          "result": "W",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 6,
+          "result": "L",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 7,
+          "result": "W",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 8,
+          "result": "L",
+          "opp": "MCO",
+          "home": false
+        },
+        {
+          "round": 9,
+          "result": "L",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 10,
+          "result": "W",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 11,
+          "result": "W",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 12,
+          "result": "W",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 13,
+          "result": "W",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 14,
+          "result": "L",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 15,
+          "result": "L",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 16,
+          "result": "W",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 17,
+          "result": "W",
+          "opp": "HTA",
+          "home": true
+        },
+        {
+          "round": 18,
+          "result": "W",
+          "opp": "ZAL",
+          "home": false
+        },
+        {
+          "round": 19,
+          "result": "L",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 20,
+          "result": "L",
+          "opp": "MIL",
+          "home": true
+        },
+        {
+          "round": 21,
+          "result": "W",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 22,
+          "result": "L",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 23,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 24,
+          "result": "L",
+          "opp": "TEL",
+          "home": false
+        },
+        {
+          "round": 25,
+          "result": "W",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 26,
+          "result": "W",
+          "opp": "MAD",
+          "home": true
+        },
+        {
+          "round": 27,
+          "result": "L",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 28,
+          "result": "L",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 29,
+          "result": "L",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 30,
+          "result": "L",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 31,
+          "result": "W",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 32,
+          "result": "W",
+          "opp": "RED",
+          "home": true
+        }
       ],
       "remaining_sos": 61.3,
       "home_games": 2,
@@ -350,6 +2168,208 @@
         "L",
         "W"
       ],
+      "home_record": {
+        "W": 9,
+        "L": 6
+      },
+      "away_record": {
+        "W": 9,
+        "L": 8
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "L",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 2,
+          "result": "W",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 3,
+          "result": "W",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 4,
+          "result": "W",
+          "opp": "TEL",
+          "home": false
+        },
+        {
+          "round": 5,
+          "result": "L",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 6,
+          "result": "L",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 7,
+          "result": "W",
+          "opp": "MIL",
+          "home": true
+        },
+        {
+          "round": 8,
+          "result": "W",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 9,
+          "result": "L",
+          "opp": "MAD",
+          "home": true
+        },
+        {
+          "round": 10,
+          "result": "W",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 11,
+          "result": "W",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 12,
+          "result": "L",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 13,
+          "result": "W",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 14,
+          "result": "W",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 15,
+          "result": "W",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 16,
+          "result": "W",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 17,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 18,
+          "result": "L",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 19,
+          "result": "L",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 20,
+          "result": "W",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 21,
+          "result": "W",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 22,
+          "result": "L",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 23,
+          "result": "W",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 24,
+          "result": "W",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 25,
+          "result": "L",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 26,
+          "result": "L",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 27,
+          "result": "W",
+          "opp": "BAS",
+          "home": false
+        },
+        {
+          "round": 28,
+          "result": "L",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 29,
+          "result": "L",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 30,
+          "result": "L",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 31,
+          "result": "L",
+          "opp": "HTA",
+          "home": true
+        },
+        {
+          "round": 32,
+          "result": "W",
+          "opp": "PAM",
+          "home": false
+        }
+      ],
       "remaining_sos": 46.1,
       "home_games": 4,
       "away_games": 2,
@@ -385,6 +2405,208 @@
         "L",
         "W",
         "W"
+      ],
+      "home_record": {
+        "W": 12,
+        "L": 3
+      },
+      "away_record": {
+        "W": 5,
+        "L": 12
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "W",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 2,
+          "result": "L",
+          "opp": "MCO",
+          "home": false
+        },
+        {
+          "round": 3,
+          "result": "L",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 4,
+          "result": "W",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 5,
+          "result": "W",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 6,
+          "result": "L",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 7,
+          "result": "L",
+          "opp": "BAS",
+          "home": false
+        },
+        {
+          "round": 8,
+          "result": "L",
+          "opp": "PAM",
+          "home": false
+        },
+        {
+          "round": 9,
+          "result": "L",
+          "opp": "HTA",
+          "home": true
+        },
+        {
+          "round": 10,
+          "result": "W",
+          "opp": "RED",
+          "home": true
+        },
+        {
+          "round": 11,
+          "result": "W",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 12,
+          "result": "L",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 13,
+          "result": "W",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 14,
+          "result": "L",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 15,
+          "result": "W",
+          "opp": "MUN",
+          "home": true
+        },
+        {
+          "round": 16,
+          "result": "L",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 17,
+          "result": "W",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 18,
+          "result": "W",
+          "opp": "MIL",
+          "home": true
+        },
+        {
+          "round": 19,
+          "result": "L",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 20,
+          "result": "L",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 21,
+          "result": "W",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 22,
+          "result": "L",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 23,
+          "result": "L",
+          "opp": "BAR",
+          "home": false
+        },
+        {
+          "round": 24,
+          "result": "W",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 25,
+          "result": "L",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 26,
+          "result": "W",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 27,
+          "result": "W",
+          "opp": "MAD",
+          "home": true
+        },
+        {
+          "round": 28,
+          "result": "W",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 29,
+          "result": "W",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 30,
+          "result": "L",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 31,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 32,
+          "result": "W",
+          "opp": "MUN",
+          "home": false
+        }
       ],
       "remaining_sos": 49.5,
       "home_games": 4,
@@ -422,6 +2644,208 @@
         "W",
         "L"
       ],
+      "home_record": {
+        "W": 10,
+        "L": 7
+      },
+      "away_record": {
+        "W": 6,
+        "L": 9
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "W",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 2,
+          "result": "L",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 3,
+          "result": "L",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 4,
+          "result": "L",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 5,
+          "result": "W",
+          "opp": "ZAL",
+          "home": false
+        },
+        {
+          "round": 6,
+          "result": "L",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 7,
+          "result": "L",
+          "opp": "BAR",
+          "home": false
+        },
+        {
+          "round": 8,
+          "result": "W",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 9,
+          "result": "W",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 10,
+          "result": "W",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 11,
+          "result": "W",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 12,
+          "result": "L",
+          "opp": "HTA",
+          "home": true
+        },
+        {
+          "round": 13,
+          "result": "W",
+          "opp": "TEL",
+          "home": false
+        },
+        {
+          "round": 14,
+          "result": "L",
+          "opp": "BAS",
+          "home": false
+        },
+        {
+          "round": 15,
+          "result": "W",
+          "opp": "PAN",
+          "home": true
+        },
+        {
+          "round": 16,
+          "result": "W",
+          "opp": "MAD",
+          "home": true
+        },
+        {
+          "round": 17,
+          "result": "L",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 18,
+          "result": "L",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 19,
+          "result": "L",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 20,
+          "result": "W",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 21,
+          "result": "W",
+          "opp": "IST",
+          "home": true
+        },
+        {
+          "round": 22,
+          "result": "L",
+          "opp": "RED",
+          "home": true
+        },
+        {
+          "round": 23,
+          "result": "L",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 24,
+          "result": "L",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 25,
+          "result": "W",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 26,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 27,
+          "result": "W",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 28,
+          "result": "L",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 29,
+          "result": "L",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 30,
+          "result": "W",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 31,
+          "result": "W",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 32,
+          "result": "L",
+          "opp": "ULK",
+          "home": false
+        }
+      ],
       "remaining_sos": 51.5,
       "home_games": 2,
       "away_games": 4,
@@ -457,6 +2881,202 @@
         "W",
         "L",
         "W"
+      ],
+      "home_record": {
+        "W": 8,
+        "L": 6
+      },
+      "away_record": {
+        "W": 7,
+        "L": 10
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "L",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 2,
+          "result": "L",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 3,
+          "result": "W",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 4,
+          "result": "L",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 5,
+          "result": "L",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 6,
+          "result": "W",
+          "opp": "MAD",
+          "home": true
+        },
+        {
+          "round": 7,
+          "result": "L",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 8,
+          "result": "L",
+          "opp": "RED",
+          "home": true
+        },
+        {
+          "round": 9,
+          "result": "L",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 10,
+          "result": "L",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 11,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 12,
+          "result": "L",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 13,
+          "result": "L",
+          "opp": "MIL",
+          "home": true
+        },
+        {
+          "round": 14,
+          "result": "W",
+          "opp": "ZAL",
+          "home": false
+        },
+        {
+          "round": 15,
+          "result": "W",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 16,
+          "result": "W",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 17,
+          "result": "W",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 18,
+          "result": "W",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 19,
+          "result": "L",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 20,
+          "result": "L",
+          "opp": "BAR",
+          "home": false
+        },
+        {
+          "round": 21,
+          "result": "L",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 22,
+          "result": "W",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 23,
+          "result": "L",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 24,
+          "result": "W",
+          "opp": "PAN",
+          "home": true
+        },
+        {
+          "round": 25,
+          "result": "L",
+          "opp": "PAM",
+          "home": false
+        },
+        {
+          "round": 26,
+          "result": "W",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 27,
+          "result": "W",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 28,
+          "result": "W",
+          "opp": "MUN",
+          "home": true
+        },
+        {
+          "round": 29,
+          "result": "W",
+          "opp": "MCO",
+          "home": false
+        },
+        {
+          "round": 31,
+          "result": "L",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 32,
+          "result": "W",
+          "opp": "ASV",
+          "home": false
+        }
       ],
       "remaining_sos": 40.9,
       "home_games": 5,
@@ -495,6 +3115,208 @@
         "L",
         "L"
       ],
+      "home_record": {
+        "W": 9,
+        "L": 6
+      },
+      "away_record": {
+        "W": 4,
+        "L": 13
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "W",
+          "opp": "MAD",
+          "home": true
+        },
+        {
+          "round": 2,
+          "result": "L",
+          "opp": "PAM",
+          "home": false
+        },
+        {
+          "round": 3,
+          "result": "L",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 4,
+          "result": "W",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 5,
+          "result": "W",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 6,
+          "result": "W",
+          "opp": "PAN",
+          "home": true
+        },
+        {
+          "round": 7,
+          "result": "L",
+          "opp": "ZAL",
+          "home": false
+        },
+        {
+          "round": 8,
+          "result": "L",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 9,
+          "result": "L",
+          "opp": "BAS",
+          "home": false
+        },
+        {
+          "round": 10,
+          "result": "W",
+          "opp": "IST",
+          "home": true
+        },
+        {
+          "round": 11,
+          "result": "L",
+          "opp": "BAR",
+          "home": false
+        },
+        {
+          "round": 12,
+          "result": "W",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 13,
+          "result": "L",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 14,
+          "result": "W",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 15,
+          "result": "L",
+          "opp": "HTA",
+          "home": true
+        },
+        {
+          "round": 16,
+          "result": "W",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 17,
+          "result": "L",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 18,
+          "result": "L",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 19,
+          "result": "W",
+          "opp": "MIL",
+          "home": true
+        },
+        {
+          "round": 20,
+          "result": "W",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 21,
+          "result": "L",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 22,
+          "result": "W",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 23,
+          "result": "L",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 24,
+          "result": "L",
+          "opp": "RED",
+          "home": true
+        },
+        {
+          "round": 25,
+          "result": "W",
+          "opp": "MCO",
+          "home": false
+        },
+        {
+          "round": 26,
+          "result": "L",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 27,
+          "result": "L",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 28,
+          "result": "L",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 29,
+          "result": "W",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 30,
+          "result": "L",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 31,
+          "result": "L",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 32,
+          "result": "L",
+          "opp": "HTA",
+          "home": false
+        }
+      ],
       "remaining_sos": 36.8,
       "home_games": 4,
       "away_games": 2,
@@ -530,6 +3352,208 @@
         "W",
         "L",
         "L"
+      ],
+      "home_record": {
+        "W": 10,
+        "L": 7
+      },
+      "away_record": {
+        "W": 3,
+        "L": 12
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "L",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 2,
+          "result": "W",
+          "opp": "RED",
+          "home": true
+        },
+        {
+          "round": 3,
+          "result": "L",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 4,
+          "result": "W",
+          "opp": "MIL",
+          "home": true
+        },
+        {
+          "round": 5,
+          "result": "L",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 6,
+          "result": "L",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 7,
+          "result": "W",
+          "opp": "MAD",
+          "home": true
+        },
+        {
+          "round": 8,
+          "result": "W",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 9,
+          "result": "W",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 10,
+          "result": "L",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 11,
+          "result": "L",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 12,
+          "result": "L",
+          "opp": "BAS",
+          "home": false
+        },
+        {
+          "round": 13,
+          "result": "L",
+          "opp": "PAM",
+          "home": false
+        },
+        {
+          "round": 14,
+          "result": "L",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 15,
+          "result": "L",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 16,
+          "result": "L",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 17,
+          "result": "L",
+          "opp": "MCO",
+          "home": false
+        },
+        {
+          "round": 18,
+          "result": "L",
+          "opp": "HTA",
+          "home": true
+        },
+        {
+          "round": 19,
+          "result": "W",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 20,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 21,
+          "result": "L",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 22,
+          "result": "W",
+          "opp": "PAN",
+          "home": true
+        },
+        {
+          "round": 23,
+          "result": "L",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 24,
+          "result": "W",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 25,
+          "result": "W",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 26,
+          "result": "W",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 27,
+          "result": "W",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 28,
+          "result": "L",
+          "opp": "TEL",
+          "home": false
+        },
+        {
+          "round": 29,
+          "result": "L",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 30,
+          "result": "W",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 31,
+          "result": "L",
+          "opp": "IST",
+          "home": true
+        },
+        {
+          "round": 32,
+          "result": "L",
+          "opp": "DUB",
+          "home": true
+        }
       ],
       "remaining_sos": 53.8,
       "home_games": 2,
@@ -567,6 +3591,214 @@
         "L",
         "L"
       ],
+      "home_record": {
+        "W": 6,
+        "L": 11
+      },
+      "away_record": {
+        "W": 6,
+        "L": 10
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "L",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 2,
+          "result": "W",
+          "opp": "TEL",
+          "home": false
+        },
+        {
+          "round": 3,
+          "result": "W",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 4,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 5,
+          "result": "L",
+          "opp": "HTA",
+          "home": true
+        },
+        {
+          "round": 6,
+          "result": "W",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 7,
+          "result": "L",
+          "opp": "IST",
+          "home": true
+        },
+        {
+          "round": 8,
+          "result": "L",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 9,
+          "result": "L",
+          "opp": "MUN",
+          "home": true
+        },
+        {
+          "round": 10,
+          "result": "L",
+          "opp": "PAN",
+          "home": true
+        },
+        {
+          "round": 11,
+          "result": "W",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 12,
+          "result": "L",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 13,
+          "result": "L",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 14,
+          "result": "L",
+          "opp": "MCO",
+          "home": false
+        },
+        {
+          "round": 15,
+          "result": "L",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 16,
+          "result": "L",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 17,
+          "result": "L",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 18,
+          "result": "W",
+          "opp": "RED",
+          "home": true
+        },
+        {
+          "round": 19,
+          "result": "L",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 20,
+          "result": "W",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 21,
+          "result": "L",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 22,
+          "result": "L",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 23,
+          "result": "L",
+          "opp": "PAM",
+          "home": false
+        },
+        {
+          "round": 24,
+          "result": "L",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 25,
+          "result": "W",
+          "opp": "MAD",
+          "home": true
+        },
+        {
+          "round": 26,
+          "result": "L",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 27,
+          "result": "L",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 28,
+          "result": "W",
+          "opp": "BAR",
+          "home": false
+        },
+        {
+          "round": 29,
+          "result": "W",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 30,
+          "result": "W",
+          "opp": "BAS",
+          "home": false
+        },
+        {
+          "round": 31,
+          "result": "W",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 32,
+          "result": "L",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 34,
+          "result": "L",
+          "opp": "OLY",
+          "home": true
+        }
+      ],
       "remaining_sos": 57.0,
       "home_games": 2,
       "away_games": 3,
@@ -601,6 +3833,208 @@
         "W",
         "W",
         "W"
+      ],
+      "home_record": {
+        "W": 8,
+        "L": 7
+      },
+      "away_record": {
+        "W": 4,
+        "L": 13
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "L",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 2,
+          "result": "W",
+          "opp": "MIL",
+          "home": true
+        },
+        {
+          "round": 3,
+          "result": "W",
+          "opp": "IST",
+          "home": true
+        },
+        {
+          "round": 4,
+          "result": "L",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 5,
+          "result": "W",
+          "opp": "BAS",
+          "home": false
+        },
+        {
+          "round": 6,
+          "result": "L",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 7,
+          "result": "L",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 8,
+          "result": "L",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 9,
+          "result": "L",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 10,
+          "result": "W",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 11,
+          "result": "L",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 12,
+          "result": "L",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 13,
+          "result": "L",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 14,
+          "result": "W",
+          "opp": "MUN",
+          "home": true
+        },
+        {
+          "round": 15,
+          "result": "W",
+          "opp": "RED",
+          "home": true
+        },
+        {
+          "round": 16,
+          "result": "L",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 17,
+          "result": "L",
+          "opp": "ZAL",
+          "home": false
+        },
+        {
+          "round": 18,
+          "result": "L",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 19,
+          "result": "L",
+          "opp": "PAM",
+          "home": false
+        },
+        {
+          "round": 20,
+          "result": "L",
+          "opp": "MCO",
+          "home": false
+        },
+        {
+          "round": 21,
+          "result": "L",
+          "opp": "BAR",
+          "home": false
+        },
+        {
+          "round": 22,
+          "result": "L",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 23,
+          "result": "W",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 24,
+          "result": "W",
+          "opp": "HTA",
+          "home": true
+        },
+        {
+          "round": 25,
+          "result": "L",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 26,
+          "result": "L",
+          "opp": "TEL",
+          "home": false
+        },
+        {
+          "round": 27,
+          "result": "W",
+          "opp": "PAN",
+          "home": true
+        },
+        {
+          "round": 28,
+          "result": "L",
+          "opp": "MAD",
+          "home": true
+        },
+        {
+          "round": 29,
+          "result": "L",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 30,
+          "result": "W",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 31,
+          "result": "W",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 32,
+          "result": "W",
+          "opp": "PRS",
+          "home": false
+        }
       ],
       "remaining_sos": 34.6,
       "home_games": 4,
@@ -638,6 +4072,208 @@
         "W",
         "L"
       ],
+      "home_record": {
+        "W": 6,
+        "L": 12
+      },
+      "away_record": {
+        "W": 4,
+        "L": 10
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "W",
+          "opp": "TEL",
+          "home": true
+        },
+        {
+          "round": 2,
+          "result": "L",
+          "opp": "HTA",
+          "home": true
+        },
+        {
+          "round": 3,
+          "result": "L",
+          "opp": "PAR",
+          "home": false
+        },
+        {
+          "round": 4,
+          "result": "W",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 5,
+          "result": "L",
+          "opp": "PAN",
+          "home": true
+        },
+        {
+          "round": 6,
+          "result": "L",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 7,
+          "result": "W",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 8,
+          "result": "L",
+          "opp": "BAS",
+          "home": false
+        },
+        {
+          "round": 9,
+          "result": "L",
+          "opp": "MIL",
+          "home": true
+        },
+        {
+          "round": 10,
+          "result": "L",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 11,
+          "result": "W",
+          "opp": "MUN",
+          "home": true
+        },
+        {
+          "round": 12,
+          "result": "W",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 13,
+          "result": "L",
+          "opp": "MCO",
+          "home": false
+        },
+        {
+          "round": 14,
+          "result": "L",
+          "opp": "MAD",
+          "home": true
+        },
+        {
+          "round": 15,
+          "result": "L",
+          "opp": "PAM",
+          "home": false
+        },
+        {
+          "round": 16,
+          "result": "W",
+          "opp": "ZAL",
+          "home": false
+        },
+        {
+          "round": 17,
+          "result": "L",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 18,
+          "result": "L",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 19,
+          "result": "L",
+          "opp": "RED",
+          "home": true
+        },
+        {
+          "round": 20,
+          "result": "L",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 21,
+          "result": "L",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 22,
+          "result": "L",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 23,
+          "result": "L",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 24,
+          "result": "L",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 25,
+          "result": "L",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 26,
+          "result": "W",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 27,
+          "result": "W",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 28,
+          "result": "W",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 29,
+          "result": "L",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 30,
+          "result": "L",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 31,
+          "result": "W",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 32,
+          "result": "L",
+          "opp": "MCO",
+          "home": true
+        }
+      ],
       "remaining_sos": 62.8,
       "home_games": 1,
       "away_games": 5,
@@ -674,6 +4310,208 @@
         "L",
         "L"
       ],
+      "home_record": {
+        "W": 8,
+        "L": 7
+      },
+      "away_record": {
+        "W": 1,
+        "L": 16
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "L",
+          "opp": "OLY",
+          "home": true
+        },
+        {
+          "round": 2,
+          "result": "L",
+          "opp": "ASV",
+          "home": false
+        },
+        {
+          "round": 3,
+          "result": "L",
+          "opp": "PAN",
+          "home": true
+        },
+        {
+          "round": 4,
+          "result": "L",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 5,
+          "result": "L",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 6,
+          "result": "L",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 7,
+          "result": "W",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 8,
+          "result": "W",
+          "opp": "IST",
+          "home": true
+        },
+        {
+          "round": 9,
+          "result": "W",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 10,
+          "result": "L",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 11,
+          "result": "L",
+          "opp": "TEL",
+          "home": false
+        },
+        {
+          "round": 12,
+          "result": "W",
+          "opp": "MUN",
+          "home": true
+        },
+        {
+          "round": 13,
+          "result": "L",
+          "opp": "ZAL",
+          "home": false
+        },
+        {
+          "round": 14,
+          "result": "W",
+          "opp": "MIL",
+          "home": true
+        },
+        {
+          "round": 15,
+          "result": "L",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 16,
+          "result": "W",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 17,
+          "result": "L",
+          "opp": "BAR",
+          "home": false
+        },
+        {
+          "round": 18,
+          "result": "L",
+          "opp": "PAM",
+          "home": false
+        },
+        {
+          "round": 19,
+          "result": "L",
+          "opp": "ULK",
+          "home": true
+        },
+        {
+          "round": 20,
+          "result": "L",
+          "opp": "MUN",
+          "home": false
+        },
+        {
+          "round": 21,
+          "result": "W",
+          "opp": "ASV",
+          "home": true
+        },
+        {
+          "round": 22,
+          "result": "W",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 23,
+          "result": "L",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 24,
+          "result": "L",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 25,
+          "result": "W",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 26,
+          "result": "L",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 27,
+          "result": "L",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 28,
+          "result": "L",
+          "opp": "MCO",
+          "home": false
+        },
+        {
+          "round": 29,
+          "result": "L",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 30,
+          "result": "L",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 31,
+          "result": "L",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 32,
+          "result": "L",
+          "opp": "OLY",
+          "home": false
+        }
+      ],
       "remaining_sos": 47.3,
       "home_games": 4,
       "away_games": 2,
@@ -709,6 +4547,208 @@
         "W",
         "L",
         "L"
+      ],
+      "home_record": {
+        "W": 6,
+        "L": 10
+      },
+      "away_record": {
+        "W": 2,
+        "L": 14
+      },
+      "round_results": [
+        {
+          "round": 1,
+          "result": "L",
+          "opp": "PAM",
+          "home": true
+        },
+        {
+          "round": 2,
+          "result": "W",
+          "opp": "BAS",
+          "home": true
+        },
+        {
+          "round": 3,
+          "result": "L",
+          "opp": "MAD",
+          "home": false
+        },
+        {
+          "round": 4,
+          "result": "L",
+          "opp": "PAN",
+          "home": false
+        },
+        {
+          "round": 5,
+          "result": "L",
+          "opp": "VIR",
+          "home": true
+        },
+        {
+          "round": 6,
+          "result": "W",
+          "opp": "DUB",
+          "home": true
+        },
+        {
+          "round": 7,
+          "result": "L",
+          "opp": "RED",
+          "home": false
+        },
+        {
+          "round": 8,
+          "result": "L",
+          "opp": "ZAL",
+          "home": false
+        },
+        {
+          "round": 9,
+          "result": "L",
+          "opp": "ULK",
+          "home": false
+        },
+        {
+          "round": 10,
+          "result": "L",
+          "opp": "MIL",
+          "home": false
+        },
+        {
+          "round": 11,
+          "result": "W",
+          "opp": "PAR",
+          "home": true
+        },
+        {
+          "round": 12,
+          "result": "L",
+          "opp": "MCO",
+          "home": true
+        },
+        {
+          "round": 13,
+          "result": "L",
+          "opp": "BAR",
+          "home": false
+        },
+        {
+          "round": 14,
+          "result": "L",
+          "opp": "HTA",
+          "home": false
+        },
+        {
+          "round": 15,
+          "result": "L",
+          "opp": "TEL",
+          "home": false
+        },
+        {
+          "round": 16,
+          "result": "W",
+          "opp": "MUN",
+          "home": true
+        },
+        {
+          "round": 17,
+          "result": "L",
+          "opp": "OLY",
+          "home": false
+        },
+        {
+          "round": 18,
+          "result": "W",
+          "opp": "IST",
+          "home": true
+        },
+        {
+          "round": 19,
+          "result": "W",
+          "opp": "PRS",
+          "home": true
+        },
+        {
+          "round": 20,
+          "result": "L",
+          "opp": "MAD",
+          "home": true
+        },
+        {
+          "round": 21,
+          "result": "L",
+          "opp": "BAS",
+          "home": false
+        },
+        {
+          "round": 22,
+          "result": "L",
+          "opp": "HTA",
+          "home": true
+        },
+        {
+          "round": 23,
+          "result": "L",
+          "opp": "ZAL",
+          "home": true
+        },
+        {
+          "round": 24,
+          "result": "L",
+          "opp": "BAR",
+          "home": true
+        },
+        {
+          "round": 25,
+          "result": "L",
+          "opp": "PAN",
+          "home": true
+        },
+        {
+          "round": 26,
+          "result": "W",
+          "opp": "VIR",
+          "home": false
+        },
+        {
+          "round": 27,
+          "result": "L",
+          "opp": "MIL",
+          "home": true
+        },
+        {
+          "round": 28,
+          "result": "L",
+          "opp": "PAM",
+          "home": false
+        },
+        {
+          "round": 29,
+          "result": "L",
+          "opp": "DUB",
+          "home": false
+        },
+        {
+          "round": 30,
+          "result": "W",
+          "opp": "IST",
+          "home": false
+        },
+        {
+          "round": 31,
+          "result": "L",
+          "opp": "PRS",
+          "home": false
+        },
+        {
+          "round": 32,
+          "result": "L",
+          "opp": "TEL",
+          "home": true
+        }
       ],
       "remaining_sos": 54.8,
       "home_games": 3,

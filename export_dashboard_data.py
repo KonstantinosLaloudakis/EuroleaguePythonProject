@@ -247,21 +247,36 @@ def main():
             pred['Date'] = info.get('date', '')
             pred['Time'] = info.get('time', '')
 
-    # ── Compute Last 5 results per team from backtest ────────────────────────
-    l5_lookup = {}
+    # ── Compute Last 5 / home-away records / round results from backtest ─────
+    l5_lookup       = {}
+    home_rec_lookup = {}   # team -> {'W': n, 'L': n}
+    away_rec_lookup = {}
+    round_results_lookup = {}  # team -> [{round, result, opp}]
     backtest_data = load_with_fallback(suffix, 'oracle_backtest_predictions.json', 'oracle_backtest_predictions.json')
     if backtest_data:
         from collections import defaultdict
-        team_games = defaultdict(list)
+        team_games      = defaultdict(list)   # (rnd, result, opp, is_home)
+        home_rec        = defaultdict(lambda: {'W': 0, 'L': 0})
+        away_rec        = defaultdict(lambda: {'W': 0, 'L': 0})
         for g in backtest_data:
             home, away, winner = g.get('Home'), g.get('Away'), g.get('ActualWinner')
             rnd = g.get('Round', 0)
             if home and away and winner:
-                team_games[home].append((rnd, 'W' if winner == home else 'L'))
-                team_games[away].append((rnd, 'W' if winner == away else 'L'))
+                hw = 'W' if winner == home else 'L'
+                aw = 'W' if winner == away else 'L'
+                team_games[home].append((rnd, hw, away,  True))
+                team_games[away].append((rnd, aw, home, False))
+                home_rec[home][hw] += 1
+                away_rec[away][aw] += 1
         for team, games in team_games.items():
             games.sort(key=lambda x: x[0])
-            l5_lookup[team] = [r for _, r in games[-5:]]
+            l5_lookup[team] = [r for _, r, _, _ in games[-5:]]
+            home_rec_lookup[team] = dict(home_rec[team])
+            away_rec_lookup[team] = dict(away_rec[team])
+            round_results_lookup[team] = [
+                {'round': rnd, 'result': res, 'opp': opp, 'home': is_home}
+                for rnd, res, opp, is_home in games
+            ]
 
     # ── Build Elo lookup ─────────────────────────────────────────────────────
     elo_lookup = {}
@@ -327,6 +342,9 @@ def main():
                 'avg_wins': round(mc.get('Avg_Wins', wins), 1),
                 'current_wins': mc.get('Current_Wins', wins),
                 'last5': l5_lookup.get(code, []),
+                'home_record': home_rec_lookup.get(code, {'W': 0, 'L': 0}),
+                'away_record': away_rec_lookup.get(code, {'W': 0, 'L': 0}),
+                'round_results': round_results_lookup.get(code, []),
                 'remaining_sos': round(row.get('Remaining_SOS', 0.0), 1),
                 'home_games': row.get('Home_Games', 0),
                 'away_games': row.get('Away_Games', 0),
