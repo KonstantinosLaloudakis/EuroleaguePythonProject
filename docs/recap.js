@@ -41,6 +41,13 @@ fetch('data/current/game_recaps.json')
 
         buildRoundPills();
         renderRound();
+
+        // Show last-updated timestamp
+        if (data.updated) {
+            const el = document.getElementById('last-updated');
+            el.textContent = `Last updated: ${new Date(data.updated).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' })}`;
+            el.style.display = '';
+        }
     })
     .catch(err => {
         document.getElementById('game-grid').innerHTML =
@@ -79,6 +86,12 @@ function renderRound() {
     document.getElementById('round-label').textContent = `Round ${_currentRound}`;
     document.getElementById('btn-prev').disabled = idx <= 0;
     document.getElementById('btn-next').disabled = idx >= _rounds.length - 1;
+
+    // Show/hide jump-to-latest button
+    const latestBtn = document.getElementById('btn-latest');
+    if (latestBtn) {
+        latestBtn.style.display = _currentRound === _rounds[_rounds.length - 1] ? 'none' : '';
+    }
 
     // Round summary
     const oracleCorrect = games.filter(g => g.oracle.correct).length;
@@ -125,6 +138,7 @@ function renderRound() {
                     <div class="game-card-name">${g.awayName}</div>
                 </div>
             </div>
+            ${g.date ? `<div style="text-align:center;font-size:0.68rem;color:var(--text-muted);margin-top:0.3rem">${g.date}${g.time ? ' · ' + g.time : ''}</div>` : ''}
             <div class="game-card-meta">
                 <div class="game-card-oracle">
                     <span class="${g.oracle.correct ? 'oracle-correct' : 'oracle-wrong'}">

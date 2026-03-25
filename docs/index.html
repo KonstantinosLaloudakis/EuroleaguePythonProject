@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Euroleague Win Probability Replay</title>
+    <title>Season Hub — Euroleague Analytics</title>
     <meta name="description"
-        content="Interactive Win Probability Replay for every Euroleague game from 2007-08 to 2025-26. Relive the biggest moments with data.">
+        content="Euroleague Season Hub: standings, power ratings, playoff odds, MVP race, and Oracle Forecast.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap"
@@ -16,132 +16,125 @@
 </head>
 
 <body>
+
     <nav class="site-nav">
         <span class="site-nav-brand">🏀 Euroleague Analytics</span>
-        <a href="index.html" class="nav-link active">Game Replay</a>
-        <a href="season.html" class="nav-link">Season Hub</a>
-        <a href="players.html" class="nav-link">Player Stats</a>
+        <a href="index.html" class="nav-link active">Season Hub</a>
         <a href="team.html" class="nav-link">Team Deep-Dive</a>
+        <a href="players.html" class="nav-link">Player Stats</a>
         <a href="h2h.html" class="nav-link">Head-to-Head</a>
-        <a href="shots.html" class="nav-link">Shot Lab</a>
         <a href="recap.html" class="nav-link">Game Recap</a>
+        <a href="shots.html" class="nav-link">Shot Lab</a>
+        <a href="replay.html" class="nav-link">Game Replay</a>
     </nav>
 
     <header>
-        <h1>🏀 Euroleague Win Probability Replay</h1>
-        <p class="subtitle">Relive every game from 2007-08 to 2025-26 — one play at a time</p>
+        <h1>📊 Season Hub</h1>
+        <p class="subtitle">Standings · Power Ratings · Playoff Odds · MVP Race · Oracle Forecast</p>
+        <p id="last-updated" class="last-updated" style="display:none"></p>
     </header>
 
     <main>
-        <div class="controls">
-            <div class="control-group">
-                <label for="season-select">Season</label>
-                <select id="season-select" disabled>
-                    <option value="">Loading seasons...</option>
-                </select>
-            </div>
-            <div class="control-group">
-                <label for="team-filter">Team Filter</label>
-                <select id="team-filter" disabled>
-                    <option value="">All Teams</option>
-                </select>
-            </div>
-            <div class="control-group control-group-wide">
-                <label for="game-select">Game</label>
-                <select id="game-select" disabled>
-                    <option value="">Select a season first</option>
-                </select>
-            </div>
+        <!-- Tab Bar -->
+        <div class="tab-bar">
+            <button class="tab-btn active" onclick="switchTab('tab-standings')">
+                🏆 Standings &amp; Odds
+            </button>
+            <button class="tab-btn" onclick="switchTab('tab-oracle')">
+                🔮 Oracle Forecast
+            </button>
         </div>
 
-        <div id="chart-container">
-            <div class="chart-mode-toggle" id="chart-mode-toggle" style="display:none;">
-                <button id="btn-mode-wp" class="active">Win Probability</button>
-                <button id="btn-mode-margin">Score Margin</button>
-            </div>
-            <div id="wp-chart"></div>
-            <div id="placeholder">
-                <div class="placeholder-icon">📈</div>
-                <p>Select a season and game above to see the Win Probability Replay</p>
-            </div>
-        </div>
+        <!-- ── TAB 1: Standings & Odds ───────────────────────────────────── -->
+        <div id="tab-standings">
 
-        <div id="key-plays" class="hidden">
-            <h2>⚡ Biggest Momentum Swings</h2>
-            <div id="key-plays-list"></div>
-        </div>
-
-        <div id="game-summary" class="hidden">
-            <div id="summary-content"></div>
-        </div>
-
-        <div id="adv-stats" class="hidden">
-            <h2>📊 Advanced Game Analytics</h2>
-
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <h3>Quarter-by-Quarter Margin</h3>
-                    <div id="q-margin-chart" style="height: 250px;"></div>
-                </div>
-
-                <div class="stat-card">
-                    <h3>Major Scoring Runs (8+)</h3>
-                    <div id="runs-list" class="runs-container"></div>
-                </div>
-
-                <div class="stat-card full-width">
-                    <h3>In-Game WPA — Who Swung the Game</h3>
-                    <div id="wpa-ingame-chart" style="height: 380px;"></div>
-                </div>
-
-                <div class="stat-card full-width">
-                    <h3>Player Impact Quadrant</h3>
-                    <div id="impact-chart" style="height: 400px;"></div>
-                </div>
-
-                <div class="stat-card">
-                    <h3>The Four Factors (Radar Battle)</h3>
-                    <div id="radar-chart" style="height: 350px;"></div>
-                </div>
-
-                <div class="stat-card">
-                    <h3>Top 5-Man Lineups by Net Margin</h3>
-                    <div id="lineups-list" class="lineups-container"></div>
-                </div>
-
-                <div class="stat-card full-width">
-                    <div
-                        style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1rem;">
-                        <h3 style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">Spatial Gravity Map
-                            (Interactive Shot Chart)</h3>
-                        <div class="shot-toggle">
-                            <button id="btn-shots-ta" class="active">Team A</button>
-                            <button id="btn-shots-tb">Team B</button>
-                        </div>
+            <div class="stat-card" style="margin-bottom:1.5rem;">
+                <h3>League Standings</h3>
+                <div id="standings-table">
+                    <div class="loading-placeholder">
+                        <span class="loading-spinner"></span> Loading standings...
                     </div>
-                    <div id="shot-chart" style="height: 500px; width: 100%;"></div>
-                </div>
-
-                <div class="stat-card full-width">
-                    <div
-                        style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1rem;">
-                        <h3 style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">Advanced Box Score</h3>
-                        <div class="shot-toggle">
-                            <button id="btn-box-ta" class="active">Team A</button>
-                            <button id="btn-box-tb">Team B</button>
-                        </div>
-                    </div>
-                    <div id="box-score-container" class="box-score-wrap"></div>
                 </div>
             </div>
+
+            <div class="season-grid">
+                <div class="stat-card">
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem">
+                        <h3 style="margin:0">Power Ratings — Adj Off vs Adj Def</h3>
+                        <button class="forecast-toggle-btn" id="scatter-label-btn" onclick="toggleScatterLabels()">Show Labels</button>
+                    </div>
+                    <div id="power-scatter" style="height:420px"></div>
+                </div>
+                <div class="stat-card">
+                    <h3>MVP Race — Top 10</h3>
+                    <div id="mvp-chart" style="height:420px"></div>
+                </div>
+            </div>
+
+            <div class="stat-card" style="margin-bottom:1.5rem;">
+                <h3>Remaining Schedule Difficulty</h3>
+                <div id="schedule-difficulty">
+                    <div class="loading-placeholder">
+                        <span class="loading-spinner"></span> Loading schedule data...
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+        <!-- ── TAB 2: Oracle Forecast ────────────────────────────────────── -->
+        <div id="tab-oracle" class="hidden">
+
+            <div id="oracle-header" class="oracle-header-bar">
+                <div class="loading-placeholder">
+                    <span class="loading-spinner"></span> Loading oracle data...
+                </div>
+            </div>
+
+            <div id="oracle-cards">
+                <div class="loading-placeholder" style="padding:2rem 0;">
+                    <span class="loading-spinner"></span> Loading predictions...
+                </div>
+            </div>
+
+            <div class="stat-card" style="margin-top:1.5rem;">
+                <h3>Player Performance Forecasts</h3>
+                <div id="player-forecast-table">
+                    <div class="loading-placeholder">
+                        <span class="loading-spinner"></span> Loading forecasts...
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-card" style="margin-top:1rem;">
+                <h3>Oracle Accuracy &amp; Calibration</h3>
+                <div id="accuracy-stats">
+                    <div class="loading-placeholder">
+                        <span class="loading-spinner"></span> Loading accuracy stats...
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Error message (hidden by default) -->
+        <div id="load-error" class="hidden" style="text-align:center;padding:3rem 1rem;">
+            <div style="font-size:3rem;margin-bottom:1rem;">⚠️</div>
+            <p style="color:var(--text-muted);font-size:1rem;">
+                Could not load dashboard data. Make sure
+                <code>docs/data/current/dashboard.json</code> exists.<br>
+                Run <code>python export_dashboard_data.py</code> to generate it.
+            </p>
+        </div>
+
     </main>
 
     <footer>
-        <p>Data from Euroleague API · Win Probability Model: Logistic(margin, time) · Built with Plotly.js</p>
+        <p>Data from Euroleague API · Power Ratings: KenPom-style Adj. Off/Def ·
+            Monte Carlo: 10,000 simulations · Built with Plotly.js</p>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="season.js"></script>
 </body>
 
 </html>

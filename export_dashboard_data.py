@@ -379,6 +379,21 @@ def build_game_recaps():
     for g in backtest:
         bt_lookup[g['GameCode']] = g
 
+    # Build schedule lookup by (homecode, awaycode) for game dates
+    sched_lookup = {}
+    try:
+        import xml.etree.ElementTree as ET
+        tree = ET.parse('official_schedule_2025.xml')
+        for item in tree.getroot().iter('item'):
+            home = (item.findtext('homecode') or '').strip()
+            away = (item.findtext('awaycode') or '').strip()
+            date = (item.findtext('date') or '').strip()
+            time_ = (item.findtext('startime') or '').strip()
+            if home and away:
+                sched_lookup[(home, away)] = {'date': date, 'time': time_}
+    except Exception:
+        pass
+
     rounds = {}  # round_num -> [game, ...]
 
     for game in all_stats:
@@ -461,6 +476,9 @@ def build_game_recaps():
         all_players = home_roster + away_roster
         top = max(all_players, key=lambda x: x['pir']) if all_players else None
 
+        # Game date/time from schedule
+        sched = sched_lookup.get((home_code, away_code), {})
+
         game_obj = {
             'gameCode': gc,
             'home': home_code,
@@ -469,6 +487,8 @@ def build_game_recaps():
             'awayPts': int(away_pts),
             'homeName': TEAM_NAMES.get(home_code, home_code),
             'awayName': TEAM_NAMES.get(away_code, away_code),
+            'date': sched.get('date', ''),
+            'time': sched.get('time', ''),
             'homeRoster': home_roster,
             'awayRoster': away_roster,
             'homeTotals': team_totals('local'),
@@ -496,9 +516,11 @@ def build_game_recaps():
         rounds[rnd].sort(key=lambda x: x['gameCode'])
 
     # Convert to sorted list of rounds
+    from datetime import datetime, timezone
     output = {
         'rounds': {str(r): rounds[r] for r in sorted(rounds.keys())},
         'totalRounds': max(rounds.keys()) if rounds else 0,
+        'updated': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
     }
 
     print(f"  Game recaps: {sum(len(v) for v in rounds.values())} games across {len(rounds)} rounds")

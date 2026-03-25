@@ -27,6 +27,7 @@ fetch('data/current/shot_stats.json')
     .then(data => {
         _data = data;
         populateFilters();
+        restoreFromURL();
         renderAll();
     })
     .catch(err => {
@@ -71,7 +72,31 @@ function onFilterChange() {
         document.getElementById('shot-player').value = '';
         rebuildPlayerDropdown();
     }
+    updateURL();
     renderAll();
+}
+
+function restoreFromURL() {
+    const params = new URLSearchParams(location.search);
+    const team = params.get('team');
+    const player = params.get('player');
+    if (team) {
+        document.getElementById('shot-team').value = team;
+        rebuildPlayerDropdown();
+    }
+    if (player) {
+        document.getElementById('shot-player').value = player;
+    }
+}
+
+function updateURL() {
+    const team = document.getElementById('shot-team').value;
+    const player = document.getElementById('shot-player').value;
+    const params = new URLSearchParams();
+    if (team) params.set('team', team);
+    if (player) params.set('player', player);
+    const qs = params.toString();
+    history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
 }
 
 // ── Active data ───────────────────────────────────────────────────────────
