@@ -4,10 +4,11 @@
 One command to update everything after a new round.
 
 Usage:
-    python refresh_all.py              # Full refresh (fetch + compute + visualize)
-    python refresh_all.py --no-fetch   # Skip data fetch (just recompute + visualize)
-    python refresh_all.py --viz-only   # Only regenerate visualizations
-    python refresh_all.py --commit     # Automatically stage and commit new round files
+    python refresh_all.py                  # Full refresh (fetch + compute + visualize)
+    python refresh_all.py --no-fetch       # Skip data fetch (just recompute + visualize)
+    python refresh_all.py --viz-only       # Only regenerate visualizations
+    python refresh_all.py --skip-wp-train  # Skip WP model training (use existing model)
+    python refresh_all.py --commit         # Automatically stage and commit new round files
 """
 
 import subprocess
@@ -52,6 +53,7 @@ def main():
     args = sys.argv[1:]
     skip_fetch = '--no-fetch' in args
     viz_only = '--viz-only' in args
+    skip_wp_train = '--skip-wp-train' in args
     
     print(f"\n{BOLD}{YELLOW}{'='*60}{RESET}")
     print(f"{BOLD}{YELLOW}  🏀 EUROLEAGUE ANALYTICS - FULL REFRESH PIPELINE{RESET}")
@@ -102,10 +104,13 @@ def main():
     
     if not viz_only:
         print(f"\n{BOLD}🧮 PHASE 2: Running Compute Engines{RESET}")
-        results.append(('WP Model Training', run_step(
-            'Training ML Win Probability Model',
-            'train_wp_model.py'
-        )))
+        if skip_wp_train:
+            print(f"{YELLOW}⏭️  Skipping WP model training (--skip-wp-train){RESET}")
+        else:
+            results.append(('WP Model Training', run_step(
+                'Training ML Win Probability Model',
+                'train_wp_model.py'
+            )))
         results.append(('Adjusted Ratings', run_step(
             'Computing KenPom Adjusted Ratings + SOS',
             'calculate_adjusted_ratings.py'
