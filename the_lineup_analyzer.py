@@ -7,7 +7,7 @@ import os
 import time
 
 # --- Configuration ---
-START_SEASON = 2024
+START_SEASON = 2025
 END_SEASON = 2025
 MIN_MINUTES_5MAN = 50
 MIN_MINUTES_2MAN = 150
