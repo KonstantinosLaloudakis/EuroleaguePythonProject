@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About & Methodology — Euroleague Analytics</title>
+    <meta name="description"
+        content="Data sources, metrics, models, and methodology behind the Euroleague Analytics dashboard.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .about-section h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .about-section p,
+        .about-section li {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            line-height: 1.7;
+        }
+
+        .about-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .about-section ul li {
+            padding: 0.3rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .about-section ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.7rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+        }
+
+        .metric-name {
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .metric-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            margin-left: 0.4rem;
+            vertical-align: middle;
+        }
+
+        .metric-tag.player {
+            color: var(--accent-blue);
+            background: rgba(59, 130, 246, 0.12);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+        }
+
+        .metric-tag.team {
+            color: var(--accent-purple);
+            background: rgba(168, 85, 247, 0.12);
+            border: 1px solid rgba(168, 85, 247, 0.25);
+        }
+
+        .metric-tag.game {
+            color: var(--accent-green);
+            background: rgba(34, 197, 94, 0.12);
+            border: 1px solid rgba(34, 197, 94, 0.25);
+        }
+
+        .metric-tag.model {
+            color: var(--accent-gold);
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+        }
+
+        .formula-block {
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.6rem 1rem;
+            margin: 0.5rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.82rem;
+            color: var(--text-primary);
+            overflow-x: auto;
+        }
+
+        .pipeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.8rem;
+            margin-top: 0.8rem;
+        }
+
+        .pipeline-step {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            text-align: center;
+        }
+
+        .pipeline-step-num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .pipeline-step-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 0.2rem;
+        }
+
+        .data-stat {
+            display: inline-block;
+            text-align: center;
+            padding: 0 1.2rem;
+        }
+
+        .data-stat-val {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            display: block;
+        }
+
+        .data-stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .data-stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+        }
+
+        .about-footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            border-top: 1px solid var(--border);
+            margin-top: 1.5rem;
+        }
+
+        .about-footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .about-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="site-nav">
+        <span class="site-nav-brand">🏀 Euroleague Analytics</span>
+        <a href="index.html" class="nav-link">Season Hub</a>
+        <a href="team.html" class="nav-link">Team Deep-Dive</a>
+        <a href="players.html" class="nav-link">Player Stats</a>
+        <a href="h2h.html" class="nav-link">Head-to-Head</a>
+        <a href="recap.html" class="nav-link">Game Recap</a>
+        <a href="shots.html" class="nav-link">Shot Lab</a>
+        <a href="replay.html" class="nav-link">Game Replay</a>
+        <a href="about.html" class="nav-link active">About</a>
+    </nav>
+
+    <header>
+        <h1>About & Methodology</h1>
+        <p class="subtitle">Data Sources · Metrics · Models · Pipeline</p>
+    </header>
+
+    <main>
+
+        <!-- ── Data Sources ──────────────────────────────────────── -->
+        <div class="about-section">
+            <h3>Data Sources</h3>
+            <p>
+                All data is sourced from the official <strong style="color:var(--text-primary)">Euroleague Basketball API</strong>
+                via the <code style="color:var(--accent-blue)">euroleague-api</code> Python package. No scraping is involved
+                — every data point comes from Euroleague's official endpoints.
+            </p>
+
+            <div class="data-stats-row">
+                <div class="data-stat">
+                    <span class="data-stat-val">19</span>
+                    <span class="data-stat-label">Seasons (2007-2025)</span>
+                </div>
+                <div class="data-stat">
+                    <span class="data-stat-val">5,000+</span>
+                    <span class="data-stat-label">Games Analyzed</span>
+                </div>
+                <div class="data-stat">
+                    <span class="data-stat-val">2M+</span>
+                    <span class="data-stat-label">Play-by-Play Events</span>
+                </div>
+                <div class="data-stat">
+                    <span class="data-stat-val">700K+</span>
+                    <span class="data-stat-label">Shot Coordinates</span>
+                </div>
+            </div>
+
+            <ul>
+                <li><span class="metric-name">Play-by-Play Data</span> — Every event (shot, rebound, turnover, foul, substitution) with timestamps, scores, and full lineup tracking for recent seasons.</li>
+                <li><span class="metric-name">Shot Location Data</span> — X/Y coordinates for every field goal attempt, enabling shot charts, zone analysis, and spatial models.</li>
+                <li><span class="metric-name">Box Score Data</span> — Per-player, per-game statistics including points, rebounds, assists, steals, blocks, turnovers, plus-minus, and the official PIR valuation.</li>
+                <li><span class="metric-name">Game Metadata</span> — Schedule, results, home/away designations, and round structure for each season.</li>
+            </ul>
+        </div>
+
+        <!-- ── Player Metrics ────────────────────────────────────── -->
+        <div class="about-section">
+            <h3>Player Metrics</h3>
+
+            <ul>
+                <li>
+                    <span class="metric-name">RAPM</span>
+                    <span class="metric-tag player">Player</span>
+                    <span class="metric-tag model">ML Model</span>
+                    <br>
+                    <strong>Regularized Adjusted Plus-Minus</strong> — The gold standard for measuring individual impact.
+                    Uses ridge regression on 11,000+ game stints (contiguous stretches where the same 10 players are on court)
+                    to isolate each player's contribution, controlling for teammates and opponents simultaneously.
+                    <br><br>
+                    Our implementation uses a <strong style="color:var(--text-primary)">two-pass informed prior</strong>: a first pass generates noisy RAPM estimates,
+                    then a box-score model (points, assists, steals, blocks, rebounds, turnovers, true shooting %) learns to predict RAPM from traditional stats.
+                    These predictions become the regularization center for the final pass — so low-minute players shrink toward their stats-based expectation
+                    rather than toward zero. This is the same concept behind ESPN's RPM and FiveThirtyEight's RAPTOR.
+                    <br><br>
+                    Split into <strong style="color:var(--text-primary)">O-RAPM</strong> (offensive impact) and <strong style="color:var(--text-primary)">D-RAPM</strong> (defensive impact, positive = good defender).
+                    Measured in points per 100 possessions.
+                </li>
+
+                <li>
+                    <span class="metric-name">WPA</span>
+                    <span class="metric-tag player">Player</span>
+                    <br>
+                    <strong>Win Probability Added</strong> — Evaluates every play-by-play event through the lens of win probability.
+                    Each action (made shot, turnover, steal) shifts the game's win probability — WPA sums these shifts to measure
+                    who contributed most to actual wins. Rewards clutch performances and high-leverage plays.
+                </li>
+
+                <li>
+                    <span class="metric-name">WIR</span>
+                    <span class="metric-tag player">Player</span>
+                    <br>
+                    <strong>Weighted Impact Rating</strong> — An efficiency-adjusted alternative to Euroleague's official PIR.
+                    Reweights box-score stats to better reflect modern basketball value: playmaking (1.5x), steals (1.8x),
+                    blocks (1.2x), while penalizing inefficiency (missed shots, turnovers). Normalized per 40 minutes.
+                </li>
+
+                <li>
+                    <span class="metric-name">TPM</span>
+                    <span class="metric-tag player">Player</span>
+                    <br>
+                    <strong>True Plus-Minus</strong> — Raw point differential when a player is on the floor,
+                    normalized per 40 minutes. Unlike RAPM, this is unadjusted — a bench player on Real Madrid
+                    will look better than they are. Compare with RAPM to see who the context adjustment helps or hurts.
+                </li>
+
+                <li>
+                    <span class="metric-name">MVP Score</span>
+                    <span class="metric-tag player">Player</span>
+                    <br>
+                    <strong>Composite MVP Ranking</strong> — A weighted blend of per-game performance (PIR), win probability added (WPA),
+                    team success (win %), consistency (inverse coefficient of variation), and clutch efficiency.
+                    Designed to approximate how the Euroleague MVP award is actually voted on.
+                </li>
+            </ul>
+        </div>
+
+        <!-- ── Team Metrics ──────────────────────────────────────── -->
+        <div class="about-section">
+            <h3>Team Metrics</h3>
+
+            <ul>
+                <li>
+                    <span class="metric-name">Adjusted Ratings</span>
+                    <span class="metric-tag team">Team</span>
+                    <br>
+                    <strong>KenPom-style Four Factors</strong> — Offensive and defensive efficiency adjusted for strength of schedule.
+                    Breaks team performance into four components: effective shooting, turnover rate, rebounding rate, and free throw rate.
+                    Adj_Net = Adj_Off - Adj_Def, measured in points per 100 possessions.
+                </li>
+
+                <li>
+                    <span class="metric-name">Elo Rating</span>
+                    <span class="metric-tag team">Team</span>
+                    <br>
+                    A rolling rating system adapted from chess. Each game updates both teams' ratings based on the result
+                    and pre-game expectation. Parameters: K-factor = 10, home court advantage = 50 Elo points,
+                    75% carryover between seasons with regression to the mean. Spans all 19 seasons continuously.
+                </li>
+
+                <li>
+                    <span class="metric-name">Strength of Schedule</span>
+                    <span class="metric-tag team">Team</span>
+                    <br>
+                    Average win percentage of opponents faced. Used to adjust raw records —
+                    a 20-10 team that played the hardest schedule is more impressive than a 22-8 team with the easiest.
+                    Also computed for remaining games to identify favorable or brutal finishes.
+                </li>
+
+                <li>
+                    <span class="metric-name">Home Court Advantage</span>
+                    <span class="metric-tag team">Team</span>
+                    <br>
+                    Decomposed into six components: shooting boost, whistle advantage (free throw rate), ball security (turnover rate),
+                    offensive rebounding boost, defensive squeeze, and residual (crowd/travel effects).
+                    Computed per-team, not just league-wide.
+                </li>
+            </ul>
+        </div>
+
+        <!-- ── Predictive Models ─────────────────────────────────── -->
+        <div class="about-section">
+            <h3>Predictive Models</h3>
+
+            <ul>
+                <li>
+                    <span class="metric-name">Win Probability Model</span>
+                    <span class="metric-tag model">ML Model</span>
+                    <br>
+                    A Gradient Boosting Machine trained on historical play-by-play data with Platt scaling calibration.
+                    Predicts real-time win probability from four features: current score margin, seconds remaining,
+                    Elo rating difference, and home/away status. Used to compute WPA for every play-by-play event
+                    and power the Game Replay visualizations.
+                    <div class="formula-block">
+                        Fallback (when model unavailable):<br>
+                        WP = 1 / (1 + exp(-0.8 * margin / sigma))<br>
+                        sigma = 11 * sqrt(seconds_remaining / 2400)
+                    </div>
+                </li>
+
+                <li>
+                    <span class="metric-name">Oracle Forecast</span>
+                    <span class="metric-tag model">ML Model</span>
+                    <br>
+                    Game-by-game win/loss predictions using Logistic Regression. Features include adjusted net rating differential,
+                    Elo difference, home/away net ratings, recent form differential, and strength of schedule difference.
+                    Produces win probabilities and predicted margins for upcoming rounds.
+                </li>
+
+                <li>
+                    <span class="metric-name">Monte Carlo Simulation</span>
+                    <span class="metric-tag model">Simulation</span>
+                    <br>
+                    Simulates the remainder of the season 10,000 times to generate probability distributions for final standings.
+                    Each unplayed game is resolved using a blend of adjusted ratings (75%) and Elo margin (25%), with team-specific
+                    home court advantage. Outputs playoff probabilities (Top 4, Top 6, Top 10), projected win totals,
+                    and seed distributions for every team.
+                </li>
+
+                <li>
+                    <span class="metric-name">RAPM Ridge Regression</span>
+                    <span class="metric-tag model">ML Model</span>
+                    <br>
+                    Two-pass ridge regression with cross-validated regularization (alpha selected from [0.01 ... 5000]).
+                    Pass 1 uses low regularization (alpha=100) to generate training targets for the box-score prior model.
+                    Pass 2 uses full cross-validated alpha with the prior as the regularization center.
+                    Sparse design matrix with ~335 player columns + HCA indicator, weighted by possession count per stint.
+                </li>
+            </ul>
+        </div>
+
+        <!-- ── Pipeline ──────────────────────────────────────────── -->
+        <div class="about-section">
+            <h3>Data Pipeline</h3>
+            <p>
+                The entire analytics suite updates via a single command (<code style="color:var(--accent-blue)">python refresh_all.py</code>)
+                that orchestrates the full pipeline:
+            </p>
+
+            <div class="pipeline-grid">
+                <div class="pipeline-step">
+                    <div class="pipeline-step-num">1</div>
+                    <div class="pipeline-step-label">Fetch latest data from Euroleague API</div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="pipeline-step-num">2</div>
+                    <div class="pipeline-step-label">Parse game results and play-by-play events</div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="pipeline-step-num">3</div>
+                    <div class="pipeline-step-label">Train ML models (Win Probability, Oracle)</div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="pipeline-step-num">4</div>
+                    <div class="pipeline-step-label">Compute ratings (Adjusted, Elo, RAPM, WPA, WIR)</div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="pipeline-step-num">5</div>
+                    <div class="pipeline-step-label">Run Monte Carlo simulation (10K iterations)</div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="pipeline-step-num">6</div>
+                    <div class="pipeline-step-label">Generate visualizations and export dashboard data</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Tech Stack ────────────────────────────────────────── -->
+        <div class="about-section">
+            <h3>Tech Stack</h3>
+            <ul>
+                <li><span class="metric-name">Python</span> — pandas, NumPy, scikit-learn, SciPy, matplotlib, seaborn for all computation and visualization</li>
+                <li><span class="metric-name">scikit-learn</span> — Ridge/Logistic regression, Gradient Boosting, cross-validation, calibration</li>
+                <li><span class="metric-name">Frontend</span> — Vanilla JavaScript, HTML, CSS with Plotly.js for interactive charts. No frameworks — fast, lightweight, zero dependencies.</li>
+                <li><span class="metric-name">Data</span> — CSV and JSON flat files with incremental caching. No database required.</li>
+                <li><span class="metric-name">euroleague-api</span> — Official Python package for Euroleague data access</li>
+            </ul>
+        </div>
+
+        <!-- ── Glossary ──────────────────────────────────────────── -->
+        <div class="about-section">
+            <h3>Quick Glossary</h3>
+            <ul>
+                <li><span class="metric-name">Per 100 Possessions</span> — Normalizing stats by possessions instead of games removes pace effects. A fast team that plays 75 possessions per game and a slow team that plays 65 become comparable.</li>
+                <li><span class="metric-name">Stint</span> — A continuous stretch of play where the same 10 players (5 per team) are on court. Substitutions create new stints. RAPM is built on these.</li>
+                <li><span class="metric-name">Ridge Regression</span> — A form of regularized regression that prevents overfitting by penalizing large coefficients. Essential for RAPM because many lineup combinations are seen only a few times.</li>
+                <li><span class="metric-name">Informed Prior</span> — Instead of assuming every player starts at zero impact, we use box-score stats to set a reasonable starting estimate. The on-court data then adjusts from there.</li>
+                <li><span class="metric-name">True Shooting %</span> — Points / (2 * (FGA + 0.44 * FTA)). Accounts for three-pointers and free throws in a single efficiency number.</li>
+                <li><span class="metric-name">Four Factors</span> — Dean Oliver's framework: effective FG%, turnover rate, offensive rebound rate, and free throw rate. These four factors explain most of the variance in team success.</li>
+            </ul>
+        </div>
+
+        <div class="about-footer">
+            Built with Python, curiosity, and 19 seasons of Euroleague data.
+        </div>
+
+    </main>
+
+</body>
+
+</html>
