@@ -693,6 +693,13 @@ def main():
     player_stats = build_player_stats(mvp_data)
     print(f"  Player stats: {len(player_stats)} players")
 
+    # ── Load RAPM ratings ────────────────────────────────────────────────────
+    rapm_data = load_with_fallback(suffix, 'rapm_ratings.json')
+    if rapm_data:
+        print(f"  RAPM ratings: {len(rapm_data)} players")
+    else:
+        rapm_data = []
+
     # ── Build output ─────────────────────────────────────────────────────────
     from datetime import datetime
     output = {
@@ -701,6 +708,7 @@ def main():
         'teams': teams,
         'mvp': mvp_list,
         'player_stats': player_stats,
+        'rapm': rapm_data,
         'oracle': oracle_data,
         'accuracy': accuracy_data,
     }

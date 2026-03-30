@@ -21,16 +21,20 @@ const TEAM_COLORS = {
 // ── State ─────────────────────────────────────────────────────────────────
 let _players = [];
 let _mvpList  = [];
+let _rapmData = [];
 let _lbSort    = { key: 'avg_pir', dir: 'desc' };
+let _rapmSort  = { key: 'RAPM', dir: 'desc' };
 let _posFilter = '';
+let _rapmPosFilter = '';
 let _lbShowAll = false;
+let _rapmShowAll = false;
 
 // ── Tab switching ─────────────────────────────────────────────────────────
 function switchTab(id) {
     document.querySelectorAll('[id^="tab-"]').forEach(el => el.style.display = 'none');
     document.getElementById(id).style.display = '';
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    const idx = ['tab-leaderboards','tab-mvp'].indexOf(id);
+    const idx = ['tab-leaderboards','tab-mvp','tab-rapm'].indexOf(id);
     document.querySelectorAll('.tab-btn')[idx]?.classList.add('active');
     history.replaceState(null, '', '#' + id);
 }
@@ -41,6 +45,7 @@ fetch('data/current/dashboard.json')
     .then(data => {
         _players = data.player_stats || [];
         _mvpList  = data.mvp || [];
+        _rapmData = data.rapm || [];
 
         // Last-updated stamp
         if (data.updated) {
@@ -50,17 +55,35 @@ fetch('data/current/dashboard.json')
             el.style.display = '';
         }
 
-        // Populate team dropdown
-        const teams = [...new Set(_players.map(p => p.team))].sort();
+        // Populate team dropdowns (show full name, store code as value)
+        const teams = [...new Set(_players.map(p => p.team))].sort((a, b) =>
+            (TEAM_NAMES[a] || a).localeCompare(TEAM_NAMES[b] || b));
         const sel   = document.getElementById('lb-team');
         teams.forEach(t => {
             const o = document.createElement('option');
-            o.value = t; o.textContent = t;
+            o.value = t; o.textContent = TEAM_NAMES[t] || t;
             sel.appendChild(o);
         });
 
+        const rapmTeams = [...new Set(_rapmData.map(p => p.team))].sort((a, b) =>
+            (TEAM_NAMES[a] || a).localeCompare(TEAM_NAMES[b] || b));
+        const rapmSel   = document.getElementById('rapm-team');
+        if (rapmSel) {
+            rapmTeams.forEach(t => {
+                const o = document.createElement('option');
+                o.value = t; o.textContent = TEAM_NAMES[t] || t;
+                rapmSel.appendChild(o);
+            });
+        }
+
+        // Enrich RAPM data with positions from player_stats
+        const posLookup = {};
+        _players.forEach(p => { posLookup[p.name] = p.position || ''; });
+        _rapmData.forEach(r => { r.position = posLookup[r.player] || ''; });
+
         _renderLeaderboard();
         renderMvpRace(_mvpList, _players);
+        _renderRapm();
 
         // Restore tab from hash
         const hash = location.hash.replace('#','');
@@ -272,4 +295,243 @@ function renderMvpRace(mvpList, playerStats) {
             <tbody>${tableRows}</tbody>
         </table>
         </div>`;
+}
+
+// ── RAPM Tab ─────────────────────────────────────────────────────────────
+
+function _fmtRapm(val) {
+    if (val == null) return { text: '—', cls: 'neutral' };
+    const sign = val > 0 ? '+' : '';
+    const cls = val > 0.1 ? 'positive' : val < -0.1 ? 'negative' : 'neutral';
+    return { text: sign + val.toFixed(2), cls };
+}
+
+function _rapmBar(val, maxAbs) {
+    if (val == null || maxAbs === 0) return '';
+    const pct = Math.min(Math.abs(val) / maxAbs * 100, 100);
+    const cls = val >= 0 ? 'positive' : 'negative';
+    return `<span class="rapm-bar ${cls}" style="width:${pct}%"></span>`;
+}
+
+function _cleanName(raw) {
+    const parts = (raw || '').split(',');
+    if (parts.length !== 2) return raw;
+    const first = parts[1].trim(), last = parts[0].trim();
+    // Title-case each word, preserve apostrophes and hyphens
+    const tc = s => s.replace(/\w\S*/g, w => {
+        // Keep suffixes like III, IV, II uppercase
+        if (/^(II|III|IV|V|VI|JR|SR)$/i.test(w)) return w.toUpperCase();
+        return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+    // Fix post-apostrophe: O'shae → O'Shae
+    }).replace(/([''-])(\w)/g, (_, sep, ch) => sep + ch.toUpperCase());
+    return tc(first) + ' ' + tc(last);
+}
+
+const RAPM_COLS = {
+    overall: [
+        { key: 'RAPM',       label: 'RAPM',    title: 'Overall impact: net points gained per 100 possessions with this player on court' },
+        { key: 'ORAPM',      label: 'O-RAPM',  title: 'Offensive impact: how much better the team scores with this player on court (per 100 poss)' },
+        { key: 'DRAPM',      label: 'D-RAPM',  title: 'Defensive impact: how much the team limits opponents (positive = good defender, per 100 poss)' },
+        { key: 'prior',      label: 'Prior',    title: 'Box-score expectation: what traditional stats predict this player\'s RAPM should be' },
+        { key: 'RAPM_basic', label: 'Basic',    title: 'Basic RAPM without box-score adjustment — compare with RAPM to see the prior\'s effect' },
+    ],
+    offense: [
+        { key: 'ORAPM',      label: 'O-RAPM',  title: 'Offensive impact: how much better the team scores with this player on court (per 100 poss)' },
+        { key: 'RAPM',       label: 'RAPM',    title: 'Overall impact: net points gained per 100 possessions' },
+        { key: 'DRAPM',      label: 'D-RAPM',  title: 'Defensive impact: positive = good defender (per 100 poss)' },
+    ],
+    defense: [
+        { key: 'DRAPM',      label: 'D-RAPM',  title: 'Defensive impact: how much the team limits opponents (positive = good defender, per 100 poss)' },
+        { key: 'RAPM',       label: 'RAPM',    title: 'Overall impact: net points gained per 100 possessions' },
+        { key: 'ORAPM',      label: 'O-RAPM',  title: 'Offensive impact: how much better the team scores (per 100 poss)' },
+    ],
+};
+
+let _rapmView = 'overall';
+
+function _setRapmView(btn, view) {
+    document.querySelectorAll('[data-rapm-view]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    _rapmView = view;
+    _rapmShowAll = false;
+    _renderRapm();
+}
+
+function _setRapmPos(btn, pos) {
+    document.querySelectorAll('[data-rapm-pos]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    _rapmPosFilter = pos;
+    _rapmShowAll = false;
+    _renderRapm();
+}
+
+function _renderRapmTeamSummary(team, rows) {
+    const el = document.getElementById('rapm-team-summary');
+    if (!el) return;
+
+    if (!team || rows.length === 0) {
+        el.innerHTML = '';
+        return;
+    }
+
+    const avg = arr => arr.reduce((a, b) => a + b, 0) / arr.length;
+    const teamRapm  = avg(rows.map(r => r.RAPM ?? 0));
+    const teamOrapm = avg(rows.map(r => r.ORAPM ?? 0));
+    const teamDrapm = avg(rows.map(r => r.DRAPM ?? 0));
+
+    // Rank among all teams
+    const teamAvgs = {};
+    _rapmData.forEach(p => {
+        if (!teamAvgs[p.team]) teamAvgs[p.team] = [];
+        teamAvgs[p.team].push(p.RAPM ?? 0);
+    });
+    const teamRanking = Object.entries(teamAvgs)
+        .map(([t, vals]) => ({ team: t, avg: avg(vals) }))
+        .sort((a, b) => b.avg - a.avg);
+    const rank = teamRanking.findIndex(t => t.team === team) + 1;
+    const total = teamRanking.length;
+
+    const best = rows.reduce((a, b) => (a.RAPM ?? 0) > (b.RAPM ?? 0) ? a : b);
+    const worst = rows.reduce((a, b) => (a.RAPM ?? 0) < (b.RAPM ?? 0) ? a : b);
+
+    const fmtV = v => { const s = v > 0 ? '+' : ''; return `<span class="rapm-val ${v > 0.1 ? 'positive' : v < -0.1 ? 'negative' : 'neutral'}">${s}${v.toFixed(2)}</span>`; };
+
+    const color = TEAM_COLORS[team] || '#6b7280';
+    el.innerHTML = `<div class="rapm-team-summary">
+        <div><span class="lb-team-badge" style="color:${color};border-color:${color}30;background:${color}15;font-size:0.85rem">${team}</span> <strong style="color:var(--text-primary)">${TEAM_NAMES[team] || team}</strong></div>
+        <div><span class="rapm-ts-label">Team Avg RAPM</span><br>${fmtV(teamRapm)}</div>
+        <div><span class="rapm-ts-label">Offense</span><br>${fmtV(teamOrapm)}</div>
+        <div><span class="rapm-ts-label">Defense</span><br>${fmtV(teamDrapm)}</div>
+        <div><span class="rapm-ts-label">Team Rank</span><br><span class="rapm-ts-value" style="color:var(--text-primary)">${rank} of ${total}</span></div>
+        <div><span class="rapm-ts-label">Best Player</span><br><span style="color:var(--text-primary);font-weight:600">${_cleanName(best.player)}</span> ${fmtV(best.RAPM)}</div>
+        <div><span class="rapm-ts-label">Weakest</span><br><span style="color:var(--text-primary);font-weight:600">${_cleanName(worst.player)}</span> ${fmtV(worst.RAPM)}</div>
+    </div>`;
+}
+
+function _renderRapm() {
+    const container = document.getElementById('rapm-table');
+    if (!container || !_rapmData.length) {
+        if (container) container.innerHTML = '<p style="color:var(--text-muted);padding:1rem">No RAPM data available.</p>';
+        return;
+    }
+
+    const search = (document.getElementById('rapm-search')?.value || '').toLowerCase();
+    const team   = document.getElementById('rapm-team')?.value || '';
+    const view   = _rapmView;
+    const cols   = RAPM_COLS[view] || RAPM_COLS.overall;
+
+    // Default sort to first column of current view
+    const validKeys = cols.map(c => c.key);
+    if (!validKeys.includes(_rapmSort.key)) {
+        _rapmSort.key = cols[0].key;
+        _rapmSort.dir = 'desc';
+    }
+
+    let rows = _rapmData.filter(p =>
+        (!team || p.team === team) &&
+        (!_rapmPosFilter || (p.position || '').startsWith(_rapmPosFilter)) &&
+        (!search || p.player.toLowerCase().includes(search))
+    );
+
+    // Team summary
+    _renderRapmTeamSummary(team, rows);
+
+    rows.sort((a, b) => {
+        const av = a[_rapmSort.key] ?? 0;
+        const bv = b[_rapmSort.key] ?? 0;
+        return _rapmSort.dir === 'desc' ? bv - av : av - bv;
+    });
+
+    if (!rows.length) {
+        container.innerHTML = '<p style="color:var(--text-muted);padding:1rem">No players match your filters.</p>';
+        return;
+    }
+
+    // Max absolute value for bar scaling
+    const maxAbs = Math.max(...rows.map(r => Math.abs(r[cols[0].key] ?? 0)), 0.01);
+
+    const displayed = _rapmShowAll ? rows : rows.slice(0, 30);
+    const sortIdx = cols.findIndex(c => c.key === _rapmSort.key);
+
+    const bodyHtml = displayed.map((p, i) => {
+        const color = TEAM_COLORS[p.team] || '#6b7280';
+        const badge = `<span class="lb-team-badge" title="${TEAM_NAMES[p.team] || p.team}" style="color:${color};border-color:${color}30;background:${color}15">${p.team}</span>`;
+
+        const cells = cols.map((c, ci) => {
+            const f = _fmtRapm(p[c.key]);
+            const isActive = ci === sortIdx;
+            const style = isActive ? ' style="background:rgba(59,130,246,0.08)"' : '';
+
+            // Show bar only for the primary (first) column
+            if (ci === 0) {
+                return `<td${style}>
+                    <span class="rapm-val ${f.cls}">${f.text}</span>
+                    <div style="width:80px;display:inline-block;margin-left:0.5rem">${_rapmBar(p[c.key], maxAbs)}</div>
+                </td>`;
+            }
+            return `<td${style}><span class="rapm-val ${f.cls}">${f.text}</span></td>`;
+        }).join('');
+
+        // Prior boost badge (shown in overall view)
+        let boostHtml = '';
+        if (view === 'overall' && p.RAPM != null && p.RAPM_basic != null) {
+            const diff = p.RAPM - p.RAPM_basic;
+            if (Math.abs(diff) >= 0.05) {
+                const cls = diff > 0 ? 'boost' : 'drop';
+                const sign = diff > 0 ? '+' : '';
+                boostHtml = `<span class="rapm-prior-badge ${cls}">${sign}${diff.toFixed(2)}</span>`;
+            }
+        }
+
+        return `<tr>
+            <td class="lb-rank">${i + 1}</td>
+            <td class="lb-player-cell">
+                <span class="lb-player-name">${_cleanName(p.player)}${boostHtml}</span>
+                <span class="lb-player-meta">${badge} ${Math.round(p.est_minutes || 0)} min</span>
+            </td>
+            ${cells}
+        </tr>`;
+    }).join('');
+
+    const showAllBtn = rows.length > 30
+        ? `<button class="forecast-toggle-btn" onclick="_rapmToggleShowAll()">${_rapmShowAll ? 'Show Top 30' : `Show All ${rows.length}`}</button>`
+        : '';
+
+    container.innerHTML = `
+        <div style="overflow-x:auto">
+        <table class="leaderboard-tbl">
+            <thead><tr>
+                <th></th>
+                <th style="text-align:left">Player</th>
+                ${cols.map((c, ci) => {
+                    const isActive = ci === sortIdx;
+                    let cls = '';
+                    if (isActive) cls = _rapmSort.dir === 'desc' ? 'lb-sort-desc' : 'lb-sort-asc';
+                    const style = isActive ? 'background:rgba(59,130,246,0.12)' : '';
+                    return `<th class="${cls}" title="${c.title}" style="${style}" onclick="_rapmSetSort('${c.key}')">${c.label}</th>`;
+                }).join('')}
+            </tr></thead>
+            <tbody>${bodyHtml}</tbody>
+        </table>
+        </div>
+        <div class="lb-footer" style="display:flex;justify-content:space-between;align-items:center">
+            <span>${_rapmShowAll ? displayed.length : Math.min(30, rows.length)} of ${rows.length} players</span>
+            ${showAllBtn}
+        </div>`;
+}
+
+function _rapmSetSort(key) {
+    if (_rapmSort.key === key) {
+        _rapmSort.dir = _rapmSort.dir === 'desc' ? 'asc' : 'desc';
+    } else {
+        _rapmSort.key = key;
+        _rapmSort.dir = 'desc';
+    }
+    _rapmShowAll = false;
+    _renderRapm();
+}
+
+function _rapmToggleShowAll() {
+    _rapmShowAll = !_rapmShowAll;
+    _renderRapm();
 }

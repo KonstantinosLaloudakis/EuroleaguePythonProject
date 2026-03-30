@@ -139,6 +139,10 @@ def main():
             'Running Monte Carlo Simulation (10K iterations)',
             'simulate_monte_carlo.py'
         )))
+        results.append(('RAPM Ratings', run_step(
+            'Computing Regularized Adjusted Plus-Minus (RAPM)',
+            'calculate_rapm.py'
+        )))
     else:
         print(f"\n{YELLOW}⏭️  Skipping compute engines{RESET}")
     
@@ -158,6 +162,7 @@ def main():
         ('TPM vs WIR Quadrants', 'visualize_tpm_wir.py'),
         ('WIR vs PIR', 'visualize_wir.py'),
         ('WPA Leaders', 'visualize_wpa.py'),
+        ('RAPM Charts', 'visualize_rapm.py'),
         ('Oracle Forecast', 'mvp_oracle.py'),
         ('Oracle Accuracy Tracker', 'oracle_accuracy_tracker.py'),
         ('Dashboard Export', 'export_dashboard_data.py'),

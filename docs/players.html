@@ -223,6 +223,50 @@
         .mvp-stat-val { font-weight: 700; color: var(--text-primary); display: block; }
         .mvp-stat-lbl { color: var(--text-muted); font-size: 0.72rem; }
 
+        /* ── RAPM ──────────────────────────────────────────────── */
+        .rapm-bar {
+            display: inline-block;
+            height: 8px;
+            border-radius: 4px;
+            vertical-align: middle;
+        }
+        .rapm-bar.positive { background: #39d353; }
+        .rapm-bar.negative { background: #f85149; }
+        .rapm-val { font-weight: 700; font-size: 0.85rem; }
+        .rapm-val.positive { color: #39d353; }
+        .rapm-val.negative { color: #f85149; }
+        .rapm-val.neutral { color: var(--text-muted); }
+        .rapm-prior-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            padding: 0.1rem 0.35rem;
+            border-radius: 4px;
+            margin-left: 0.3rem;
+            font-weight: 600;
+        }
+        .rapm-prior-badge.boost { color: #39d353; background: rgba(57,211,83,0.12); }
+        .rapm-prior-badge.drop { color: #f85149; background: rgba(248,81,73,0.12); }
+        .rapm-team-summary {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.8rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-size: 0.82rem;
+            align-items: center;
+        }
+        .rapm-team-summary .rapm-ts-label {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+        }
+        .rapm-team-summary .rapm-ts-value {
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
         .mvp-race-tbl {
             width: 100%;
             border-collapse: collapse;
@@ -294,6 +338,9 @@
             <button class="tab-btn" onclick="switchTab('tab-mvp')">
                 🏆 MVP Race
             </button>
+            <button class="tab-btn" onclick="switchTab('tab-rapm')">
+                📈 RAPM
+            </button>
         </div>
 
         <!-- ── TAB 1: Leaderboards ────────────────────────────────────── -->
@@ -324,6 +371,56 @@
                 <div id="leaderboard-table">
                     <div class="loading-placeholder">
                         <span class="loading-spinner"></span> Loading player stats…
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── TAB 3: RAPM ─────────────────────────────────────────── -->
+        <div id="tab-rapm" style="display:none">
+            <div class="stat-card">
+                <h3>Regularized Adjusted Plus-Minus</h3>
+                <p style="color:var(--text-muted);font-size:0.82rem;margin-bottom:0.6rem;">
+                    How much does a player actually help their team win, independent of who they play with?
+                    RAPM answers this by analyzing every lineup combination across 11,000+ game segments,
+                    using machine learning to separate each player's true contribution from their teammates' and opponents' strength.
+                </p>
+                <details style="margin-bottom:1rem;">
+                    <summary style="color:var(--accent-blue);cursor:pointer;font-size:0.82rem;font-weight:600;">What do the columns mean?</summary>
+                    <div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;line-height:1.6;">
+                        <strong style="color:var(--text-secondary)">RAPM</strong> — Overall impact: points per 100 possessions the team gains/loses with this player on court. <span style="color:#39d353">+2.0</span> means the team scores 2 more points per 100 possessions than it concedes.<br>
+                        <strong style="color:var(--text-secondary)">O-RAPM</strong> — Offensive impact only: how much better the team scores with this player on court.<br>
+                        <strong style="color:var(--text-secondary)">D-RAPM</strong> — Defensive impact: how much the team limits opponents. <span style="color:#39d353">Positive = good defender</span>, <span style="color:#f85149">Negative = defensive liability</span>.<br>
+                        <strong style="color:var(--text-secondary)">Prior</strong> — The box-score expectation used as a starting point. Players with limited minutes are pulled toward this value rather than zero.<br>
+                        <strong style="color:var(--text-secondary)">Basic</strong> — RAPM without the box-score prior. Comparing Basic vs RAPM reveals which players the prior adjusts most.<br>
+                        <strong style="color:var(--text-secondary)">Boost badge</strong> — The colored badge next to a player's name shows how much the informed prior shifted their rating vs. basic RAPM. A <span style="color:#39d353">green boost</span> means box-score stats suggest they're better than raw lineups show (often good players on weak teams).
+                    </div>
+                </details>
+
+                <div class="players-filters" id="rapm-filters">
+                    <input type="text" id="rapm-search" placeholder="Search player…"
+                        oninput="_rapmShowAll=false;_renderRapm()" autocomplete="off">
+                    <select id="rapm-team" onchange="_rapmShowAll=false;_renderRapm()">
+                        <option value="">All Teams</option>
+                    </select>
+                    <div style="display:flex;gap:0.4rem;flex-wrap:wrap">
+                        <button class="pos-btn active" data-rapm-view="overall" onclick="_setRapmView(this,'overall')">Overall</button>
+                        <button class="pos-btn" data-rapm-view="offense" onclick="_setRapmView(this,'offense')">Offense</button>
+                        <button class="pos-btn" data-rapm-view="defense" onclick="_setRapmView(this,'defense')">Defense</button>
+                    </div>
+                    <span style="color:var(--border);margin:0 0.2rem">|</span>
+                    <div style="display:flex;gap:0.4rem;flex-wrap:wrap">
+                        <button class="pos-btn active" data-rapm-pos onclick="_setRapmPos(this,'')">All</button>
+                        <button class="pos-btn" data-rapm-pos onclick="_setRapmPos(this,'Guard')">Guard</button>
+                        <button class="pos-btn" data-rapm-pos onclick="_setRapmPos(this,'Forward')">Forward</button>
+                        <button class="pos-btn" data-rapm-pos onclick="_setRapmPos(this,'Center')">Center</button>
+                    </div>
+                </div>
+                <div id="rapm-team-summary"></div>
+
+                <div id="rapm-table">
+                    <div class="loading-placeholder">
+                        <span class="loading-spinner"></span> Loading RAPM data…
                     </div>
                 </div>
             </div>
