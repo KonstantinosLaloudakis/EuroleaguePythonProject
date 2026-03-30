@@ -28,13 +28,15 @@ let _posFilter = '';
 let _rapmPosFilter = '';
 let _lbShowAll = false;
 let _rapmShowAll = false;
+let _cmpPlayerA = null;
+let _cmpPlayerB = null;
 
 // ── Tab switching ─────────────────────────────────────────────────────────
 function switchTab(id) {
     document.querySelectorAll('[id^="tab-"]').forEach(el => el.style.display = 'none');
     document.getElementById(id).style.display = '';
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    const idx = ['tab-leaderboards','tab-mvp','tab-rapm'].indexOf(id);
+    const idx = ['tab-leaderboards','tab-mvp','tab-rapm','tab-compare'].indexOf(id);
     document.querySelectorAll('.tab-btn')[idx]?.classList.add('active');
     history.replaceState(null, '', '#' + id);
 }
@@ -84,6 +86,7 @@ fetch('data/current/dashboard.json')
         _renderLeaderboard();
         renderMvpRace(_mvpList, _players);
         _renderRapm();
+        _initCompare();
 
         // Restore tab from hash
         const hash = location.hash.replace('#','');
@@ -534,4 +537,211 @@ function _rapmSetSort(key) {
 function _rapmToggleShowAll() {
     _rapmShowAll = !_rapmShowAll;
     _renderRapm();
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// PLAYER COMPARISON TAB
+// ═══════════════════════════════════════════════════════════════════════════
+
+const CMP_STATS = [
+    { key: 'avg_pts',  label: 'PTS',  title: 'Points per game' },
+    { key: 'avg_reb',  label: 'REB',  title: 'Rebounds per game' },
+    { key: 'avg_ast',  label: 'AST',  title: 'Assists per game' },
+    { key: 'avg_stl',  label: 'STL',  title: 'Steals per game' },
+    { key: 'avg_blk',  label: 'BLK',  title: 'Blocks per game' },
+    { key: 'avg_to',   label: 'TO',   title: 'Turnovers per game', invert: true },
+    { key: 'avg_pir',  label: 'PIR',  title: 'Performance Index Rating' },
+    { key: 'fg_pct',   label: 'FG%',  title: 'Field goal percentage' },
+    { key: 'fg3_pct',  label: '3P%',  title: 'Three-point percentage' },
+    { key: 'ft_pct',   label: 'FT%',  title: 'Free throw percentage' },
+];
+
+const CMP_RADAR_AXES = [
+    { key: 'avg_pts', label: 'PTS' },
+    { key: 'avg_reb', label: 'REB' },
+    { key: 'avg_ast', label: 'AST' },
+    { key: 'avg_stl', label: 'STL' },
+    { key: 'avg_blk', label: 'BLK' },
+    { key: 'avg_pir', label: 'PIR' },
+    { key: 'fg_pct',  label: 'FG%' },
+];
+
+function _initCompare() {
+    const inputA = document.getElementById('cmp-search-a');
+    const inputB = document.getElementById('cmp-search-b');
+    if (!inputA || !inputB) return;
+    _setupCmpInput(inputA, 'cmp-dropdown-a', 'a');
+    _setupCmpInput(inputB, 'cmp-dropdown-b', 'b');
+    // close dropdowns on outside click
+    document.addEventListener('click', e => {
+        if (!e.target.closest('.cmp-picker-wrap')) {
+            document.querySelectorAll('.cmp-dropdown').forEach(d => d.classList.remove('open'));
+        }
+    });
+}
+
+function _setupCmpInput(input, dropdownId, side) {
+    const dd = document.getElementById(dropdownId);
+    input.addEventListener('input', () => {
+        const q = input.value.trim().toLowerCase();
+        if (q.length < 2) { dd.classList.remove('open'); return; }
+        const matches = _players.filter(p =>
+            p.name.toLowerCase().includes(q)
+        ).slice(0, 12);
+        if (!matches.length) { dd.innerHTML = '<div class="cmp-dropdown-item" style="color:var(--text-muted)">No matches</div>'; dd.classList.add('open'); return; }
+        dd.innerHTML = matches.map((p, i) => {
+            const color = TEAM_COLORS[p.team] || '#6b7280';
+            return `<div class="cmp-dropdown-item" data-idx="${i}" onclick="_selectCmpPlayer('${side}', '${p.code}')">
+                <span>${p.name}</span>
+                <span class="cmp-dd-team" style="color:${color}">${TEAM_NAMES[p.team] || p.team}</span>
+            </div>`;
+        }).join('');
+        dd.classList.add('open');
+    });
+    input.addEventListener('focus', () => { if (input.value.trim().length >= 2) input.dispatchEvent(new Event('input')); });
+}
+
+function _selectCmpPlayer(side, code) {
+    const p = _players.find(x => x.code === code);
+    if (!p) return;
+    if (side === 'a') { _cmpPlayerA = p; document.getElementById('cmp-search-a').value = p.name; }
+    else { _cmpPlayerB = p; document.getElementById('cmp-search-b').value = p.name; }
+    document.querySelectorAll('.cmp-dropdown').forEach(d => d.classList.remove('open'));
+    if (_cmpPlayerA && _cmpPlayerB) _renderComparison();
+}
+
+function _renderComparison() {
+    const a = _cmpPlayerA, b = _cmpPlayerB;
+    if (!a || !b) return;
+    const container = document.getElementById('cmp-result');
+
+    const colA = TEAM_COLORS[a.team] || '#6b7280';
+    const colB = TEAM_COLORS[b.team] || '#6b7280';
+
+    // — Player cards —
+    const card = (p, col) => {
+        const rapm = _rapmData.find(r => r.player === p.name);
+        const rapmHtml = rapm
+            ? `<div style="margin-top:0.5rem;padding-top:0.5rem;border-top:1px solid var(--border)">
+                <div class="cmp-player-kpis">
+                    <div><div class="cmp-kpi-val" style="color:${rapm.RAPM >= 0 ? '#39d353' : '#f85149'}">${rapm.RAPM > 0 ? '+' : ''}${rapm.RAPM.toFixed(1)}</div><div class="cmp-kpi-label">RAPM</div></div>
+                    <div><div class="cmp-kpi-val">${rapm.ORAPM > 0 ? '+' : ''}${rapm.ORAPM.toFixed(1)}</div><div class="cmp-kpi-label">O-RAPM</div></div>
+                    <div><div class="cmp-kpi-val">${rapm.DRAPM > 0 ? '+' : ''}${rapm.DRAPM.toFixed(1)}</div><div class="cmp-kpi-label">D-RAPM</div></div>
+                </div>
+               </div>`
+            : '';
+        return `<div class="cmp-player-card" style="border-top-color:${col}">
+            <div class="cmp-player-name">${p.name}</div>
+            <div class="cmp-player-meta">${TEAM_NAMES[p.team] || p.team} · ${p.position || '—'} · ${p.gp} GP</div>
+            <div class="cmp-player-kpis">
+                <div><div class="cmp-kpi-val">${p.avg_pts}</div><div class="cmp-kpi-label">PTS</div></div>
+                <div><div class="cmp-kpi-val">${p.avg_reb}</div><div class="cmp-kpi-label">REB</div></div>
+                <div><div class="cmp-kpi-val">${p.avg_ast}</div><div class="cmp-kpi-label">AST</div></div>
+            </div>
+            ${rapmHtml}
+        </div>`;
+    };
+
+    // — Stat bars —
+    const bars = CMP_STATS.map(s => {
+        const va = a[s.key] ?? 0, vb = b[s.key] ?? 0;
+        const max = Math.max(va, vb, 0.1);
+        const pctA = (va / max) * 50;
+        const pctB = (vb / max) * 50;
+        const winA = s.invert ? va < vb : va > vb;
+        const winB = s.invert ? vb < va : vb > va;
+        const tie  = va === vb;
+        const clsA = !tie && winA ? ' cmp-bar-winner' : '';
+        const clsB = !tie && winB ? ' cmp-bar-winner' : '';
+        const suffix = (s.key === 'fg_pct' || s.key === 'fg3_pct' || s.key === 'ft_pct') ? '%' : '';
+        return `<div class="cmp-bar-row" title="${s.title}">
+            <div class="cmp-bar-val${clsA}" style="color:${!tie && winA ? colA : 'var(--text-muted)'}">${va}${suffix}</div>
+            <div class="cmp-bar-track">
+                <div class="cmp-bar-fill-a" style="width:${pctA}%;background:${colA};margin-left:auto"></div>
+                <div class="cmp-bar-mid"></div>
+                <div class="cmp-bar-fill-b" style="width:${pctB}%;background:${colB}"></div>
+            </div>
+            <div class="cmp-bar-val${clsB}" style="color:${!tie && winB ? colB : 'var(--text-muted)'}">${vb}${suffix}</div>
+            <div class="cmp-bar-label">${s.label}</div>
+        </div>`;
+    }).join('');
+
+    // — Radar chart (SVG) —
+    const radarSvg = _buildRadarSvg(a, b, colA, colB);
+
+    container.innerHTML = `
+        <div class="cmp-grid">${card(a, colA)}${card(b, colB)}</div>
+        <div class="cmp-radar-legend">
+            <span><span class="cmp-legend-dot" style="background:${colA}"></span>${a.name}</span>
+            <span><span class="cmp-legend-dot" style="background:${colB}"></span>${b.name}</span>
+        </div>
+        <div class="cmp-radar-wrap">${radarSvg}</div>
+        <div class="cmp-bars">${bars}</div>
+    `;
+}
+
+function _buildRadarSvg(a, b, colA, colB) {
+    const axes = CMP_RADAR_AXES;
+    const n    = axes.length;
+    const cx   = 160, cy = 160, R = 130;
+    const allVals = {};
+    axes.forEach(ax => {
+        const vals = _players.map(p => p[ax.key] ?? 0).sort((x, y) => x - y);
+        allVals[ax.key] = vals;
+    });
+
+    // Percentile rank for a value among all players
+    const pctRank = (key, val) => {
+        const sorted = allVals[key];
+        if (!sorted.length) return 0;
+        let idx = 0;
+        for (let i = 0; i < sorted.length; i++) { if (sorted[i] <= val) idx = i; }
+        return (idx / (sorted.length - 1)) * 100;
+    };
+
+    const angleStep = (2 * Math.PI) / n;
+    const startAngle = -Math.PI / 2; // start from top
+
+    const point = (pct, i) => {
+        const r = (pct / 100) * R;
+        const angle = startAngle + i * angleStep;
+        return [cx + r * Math.cos(angle), cy + r * Math.sin(angle)];
+    };
+
+    // Grid rings
+    let grid = '';
+    for (let ring = 25; ring <= 100; ring += 25) {
+        const pts = [];
+        for (let i = 0; i < n; i++) pts.push(point(ring, i).join(','));
+        grid += `<polygon points="${pts.join(' ')}" fill="none" stroke="#2d2e3a" stroke-width="1"/>`;
+    }
+
+    // Axis lines and labels
+    let axisLines = '', labels = '';
+    for (let i = 0; i < n; i++) {
+        const [x, y] = point(100, i);
+        axisLines += `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#2d2e3a" stroke-width="1"/>`;
+        const [lx, ly] = point(115, i);
+        labels += `<text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="central" fill="#9ca3af" font-size="11" font-weight="600">${axes[i].label}</text>`;
+    }
+
+    // Player polygons
+    const polyPts = (player) => {
+        const pts = [];
+        for (let i = 0; i < n; i++) {
+            const pct = pctRank(axes[i].key, player[axes[i].key] ?? 0);
+            pts.push(point(pct, i).join(','));
+        }
+        return pts.join(' ');
+    };
+
+    const polyA = polyPts(a), polyB = polyPts(b);
+
+    return `<svg viewBox="0 0 320 320" width="320" height="320" style="max-width:100%">
+        ${grid}
+        ${axisLines}
+        <polygon points="${polyA}" fill="${colA}30" stroke="${colA}" stroke-width="2.5"/>
+        <polygon points="${polyB}" fill="${colB}30" stroke="${colB}" stroke-width="2.5"/>
+        ${labels}
+    </svg>`;
 }
