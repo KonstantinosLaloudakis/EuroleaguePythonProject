@@ -642,12 +642,12 @@ function _renderComparison() {
         </div>`;
     };
 
-    // — Stat bars —
+    // — Stat bars (tug-of-war: full width split proportionally) —
     const bars = CMP_STATS.map(s => {
         const va = a[s.key] ?? 0, vb = b[s.key] ?? 0;
-        const max = Math.max(va, vb, 0.1);
-        const pctA = (va / max) * 50;
-        const pctB = (vb / max) * 50;
+        const total = va + vb || 1;
+        const pctA = (va / total) * 100;
+        const pctB = (vb / total) * 100;
         const winA = s.invert ? va < vb : va > vb;
         const winB = s.invert ? vb < va : vb > va;
         const tie  = va === vb;
@@ -657,8 +657,7 @@ function _renderComparison() {
         return `<div class="cmp-bar-row" title="${s.title}">
             <div class="cmp-bar-val${clsA}" style="color:${!tie && winA ? colA : 'var(--text-muted)'}">${va}${suffix}</div>
             <div class="cmp-bar-track">
-                <div class="cmp-bar-fill-a" style="width:${pctA}%;background:${colA};margin-left:auto"></div>
-                <div class="cmp-bar-mid"></div>
+                <div class="cmp-bar-fill-a" style="width:${pctA}%;background:${colA}"></div>
                 <div class="cmp-bar-fill-b" style="width:${pctB}%;background:${colB}"></div>
             </div>
             <div class="cmp-bar-val${clsB}" style="color:${!tie && winB ? colB : 'var(--text-muted)'}">${vb}${suffix}</div>
