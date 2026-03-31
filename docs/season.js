@@ -30,6 +30,7 @@ async function init() {
         renderPowerScatter(data.teams || []);
         renderMVPRace(data.mvp || []);
         renderScheduleDifficulty(data.teams || []);
+        renderStandingsTimeline(data.teams || []);
         renderOracleHeader(data);
         renderOracleCards(data.oracle);
         renderPlayerForecasts(
@@ -843,6 +844,114 @@ function renderAccuracyStats(accuracy) {
 
         Plotly.newPlot('accuracy-trend-chart', trendTraces, trendLayout, { displayModeBar: false, responsive: true });
     }
+}
+
+// ── Standings Timeline (Bump Chart) ──────────────────────────────────────
+function renderStandingsTimeline(teams) {
+    const container = document.getElementById('standings-timeline');
+    if (!container || !teams.length) return;
+
+    // Find max round played
+    const maxRound = Math.max(...teams.map(t => (t.round_results || []).length));
+    if (maxRound < 1) { container.innerHTML = '<p style="color:var(--text-muted)">No round data available.</p>'; return; }
+
+    // Build cumulative wins for each team at each round
+    const teamData = teams.map(t => {
+        const results = t.round_results || [];
+        const cumWins = [];
+        let wins = 0;
+        for (let i = 0; i < results.length; i++) {
+            if (results[i].result === 'W') wins++;
+            cumWins.push(wins);
+        }
+        return { team: t.team, name: t.name, cumWins, gamesPlayed: results.length, results };
+    });
+
+    // Compute rank at each round (1 = best, ties broken by team name for consistency)
+    const ranks = []; // ranks[round][teamCode] = position
+    for (let r = 0; r < maxRound; r++) {
+        // For teams that haven't played round r+1 yet, use their last known wins
+        const snapshot = teamData.map(td => ({
+            team: td.team,
+            wins: r < td.cumWins.length ? td.cumWins[r] : (td.cumWins.length ? td.cumWins[td.cumWins.length - 1] : 0),
+            losses: (r < td.gamesPlayed ? r + 1 : td.gamesPlayed) - (r < td.cumWins.length ? td.cumWins[r] : (td.cumWins.length ? td.cumWins[td.cumWins.length - 1] : 0)),
+        }));
+
+        // Sort: more wins first, fewer losses as tiebreak, then alphabetical
+        snapshot.sort((a, b) => b.wins - a.wins || a.losses - b.losses || a.team.localeCompare(b.team));
+
+        const roundRanks = {};
+        snapshot.forEach((s, i) => { roundRanks[s.team] = i + 1; });
+        ranks.push(roundRanks);
+    }
+
+    // Sort teams by final rank for legend ordering
+    const finalRanks = ranks[ranks.length - 1];
+    const sortedTeams = [...teamData].sort((a, b) => finalRanks[a.team] - finalRanks[b.team]);
+
+    // Top 8 visible by default, rest hidden (legendonly)
+    const top8 = new Set(sortedTeams.slice(0, 8).map(t => t.team));
+
+    // Build Plotly traces
+    const rounds = Array.from({ length: maxRound }, (_, i) => i + 1);
+
+    const traces = sortedTeams.map(td => {
+        const color = TEAM_COLORS[td.team] || '#555';
+        const y = rounds.map((_, i) => ranks[i][td.team]);
+        const hoverText = rounds.map((r, i) => {
+            const w = i < td.cumWins.length ? td.cumWins[i] : td.cumWins[td.cumWins.length - 1] || 0;
+            const g = Math.min(r, td.gamesPlayed);
+            const l = g - w;
+            return `<b>${td.name}</b><br>Round ${r}: Rank #${ranks[i][td.team]}<br>Record: ${w}-${l}`;
+        });
+
+        return {
+            x: rounds,
+            y: y,
+            mode: 'lines+markers',
+            name: td.name,
+            line: { color, width: 2.5, shape: 'spline' },
+            marker: { color, size: 4 },
+            hovertemplate: '%{customdata}<extra></extra>',
+            customdata: hoverText,
+            visible: top8.has(td.team) ? true : 'legendonly',
+        };
+    });
+
+    const layout = {
+        paper_bgcolor: 'transparent',
+        plot_bgcolor: 'transparent',
+        height: 500,
+        margin: { t: 10, r: 20, b: 50, l: 50 },
+        xaxis: {
+            title: { text: 'Round', font: { color: '#9ca3af', size: 12 } },
+            tickfont: { color: '#6b7280', size: 11 },
+            gridcolor: '#2d2e3a',
+            linecolor: '#2d2e3a',
+            dtick: 2,
+            range: [0.5, maxRound + 0.5],
+        },
+        yaxis: {
+            title: { text: 'Standings Position', font: { color: '#9ca3af', size: 12 } },
+            tickfont: { color: '#6b7280', size: 11 },
+            gridcolor: '#2d2e3a',
+            linecolor: '#2d2e3a',
+            autorange: 'reversed', // 1st place at top
+            dtick: 1,
+            range: [0.5, teams.length + 0.5],
+        },
+        legend: {
+            font: { color: '#9ca3af', size: 11 },
+            bgcolor: 'transparent',
+            orientation: 'h',
+            x: 0.5, xanchor: 'center', y: -0.15,
+        },
+        font: { family: 'Inter, sans-serif' },
+        hovermode: 'closest',
+    };
+
+    container.innerHTML = '';
+    Plotly.newPlot(container, traces, layout, { displayModeBar: false, responsive: true });
 }
 
 // ── Utility: hex to rgba ──────────────────────────────────────────────────

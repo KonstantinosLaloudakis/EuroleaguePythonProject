@@ -7,6 +7,11 @@
     <title>Season Hub — Euroleague Analytics</title>
     <meta name="description"
         content="Euroleague Season Hub: standings, power ratings, playoff odds, MVP race, and Oracle Forecast.">
+    <meta property="og:title" content="Season Hub — Euroleague Analytics">
+    <meta property="og:description" content="Standings, power ratings, playoff odds, MVP race, and Oracle Forecast for all 20 Euroleague teams.">
+    <meta property="og:image" content="og-image.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap"
@@ -77,6 +82,18 @@
                 <div id="schedule-difficulty">
                     <div class="loading-placeholder">
                         <span class="loading-spinner"></span> Loading schedule data...
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-card" style="margin-bottom:1.5rem;">
+                <h3>Standings Race</h3>
+                <p style="color:var(--text-muted);font-size:0.82rem;margin-bottom:0.5rem;">
+                    How team rankings evolved round by round. Click a team name in the legend to toggle visibility.
+                </p>
+                <div id="standings-timeline" style="height:520px">
+                    <div class="loading-placeholder">
+                        <span class="loading-spinner"></span> Loading standings timeline...
                     </div>
                 </div>
             </div>
