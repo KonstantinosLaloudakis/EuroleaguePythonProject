@@ -475,7 +475,7 @@ def format_name(name):
 
 # game_data_instance = game_stats.GameStats()
 # box_score_data_instance = boxscore_data.BoxScoreData()
-# data = box_score_data_instance.get_player_boxscore_stats_multiple_seasons(2007, 2023)
+# data = box_score_data_instance.get_player_boxscore_stats_range_seasons(2007, 2023)
 #
 # data_df = pd.DataFrame(data)
 #
@@ -551,7 +551,7 @@ def format_name(name):
 # Load data
 game_data_instance = game_stats.GameStats()
 box_score_data_instance = boxscore_data.BoxScoreData()
-data = box_score_data_instance.get_player_boxscore_stats_multiple_seasons(2007, 2024)
+data = box_score_data_instance.get_player_boxscore_stats_range_seasons(2007, 2024)
 df = pd.DataFrame(data)
 
 # Clean and convert relevant columns
@@ -693,7 +693,7 @@ print(f"Analysis Complete! Duos found: {len(duo_df)} | Trios found: {len(trio_df
 #
 # game_data_instance = game_stats.GameStats()
 # box_score_data_instance = boxscore_data.BoxScoreData()
-# data = box_score_data_instance.get_player_boxscore_stats_multiple_seasons(2007, 2023)
+# data = box_score_data_instance.get_player_boxscore_stats_range_seasons(2007, 2023)
 #
 # data_df = pd.DataFrame(data)
 #
@@ -1001,7 +1001,7 @@ print(f"Analysis Complete! Duos found: {len(duo_df)} | Trios found: {len(trio_df
 # game_data = play_by_play_instance.get_lineups_data(2009, 188)
 # data_df_game = pd.DataFrame(game_data)
 
-# game_data = play_by_play_instance.get_game_play_by_play_data_multiple_seasons(2007, 2023)
+# game_data = play_by_play_instance.get_game_play_by_play_data_range_seasons(2007, 2023)
 # data_df_game = pd.DataFrame(game_data)
 #
 # spanoulis_assists = data_df_game[data_df_game['PLAYTYPE'] == 'AS'][data_df_game['PLAYER'] == 'NAVARRO, JUAN CARLOS']
@@ -1080,7 +1080,7 @@ print(f"Analysis Complete! Duos found: {len(duo_df)} | Trios found: {len(trio_df
 #
 # top_5_minutes = points_per_minute.sort_values(by='points_scored', ascending=False).head(5)
 
-# shot_data_stats_multiple = shot_data_instance.get_game_shot_data_multiple_seasons(2016, 2023)
+# shot_data_stats_multiple = shot_data_instance.get_game_shot_data_range_seasons(2016, 2023)
 # data_df_shot_multiple = pd.DataFrame(shot_data_stats_multiple)
 #
 # points_per_minute = data_df_shot_multiple.groupby(['Season','MINUTE'])['POINTS'].sum().reset_index()

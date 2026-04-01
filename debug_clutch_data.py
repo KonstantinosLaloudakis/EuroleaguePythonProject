@@ -8,7 +8,7 @@ def debug_clutch_data():
     
     # Just fetch a few rounds or games if possible, but the API might fetch all.
     # We'll just fetch normally.
-    df = pbp.get_game_play_by_play_data_multiple_seasons(season, season)
+    df = pbp.get_game_play_by_play_data_range_seasons(season, season)
     
     print(f"Total rows: {len(df)}")
     

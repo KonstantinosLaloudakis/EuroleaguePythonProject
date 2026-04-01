@@ -16,7 +16,7 @@ def analyze_clutch_stats(start_season=2023, end_season=2024):
     print(f"Fetching play-by-play data for seasons {start_season}-{end_season}...")
     try:
         # Use bulk fetch method
-        full_df = pbp.get_game_play_by_play_data_multiple_seasons(start_season, end_season)
+        full_df = pbp.get_game_play_by_play_data_range_seasons(start_season, end_season)
     except Exception as e:
         print(f"Error fetching data: {e}")
         return

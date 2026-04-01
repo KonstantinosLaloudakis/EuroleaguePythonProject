@@ -31,7 +31,7 @@ for year in SEASONS:
 
     print(f"  [FETCH] Season {year}-{str(year+1)[-2:]}...")
     try:
-        df = pbp.get_game_play_by_play_data_multiple_seasons(year, year)
+        df = pbp.get_game_play_by_play_data_range_seasons(year, year)
         if df is not None and len(df) > 0:
             df.to_csv(cache_path, index=False)
             print(f"    Saved {len(df)} events to {cache_path}")

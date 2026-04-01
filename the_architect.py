@@ -26,9 +26,9 @@ def fetch_pbp_data(start_season, end_season):
         # The API doesn't have a multi-season PBP fetcher by default in some versions,
         # but let's check if it exists or we need to loop.
         # Based on previous usage, we might need to loop games.
-        # But wait, `euroleague_clutch_analysis.py` used `get_game_play_by_play_data_multiple_seasons`.
+        # But wait, `euroleague_clutch_analysis.py` used `get_game_play_by_play_data_range_seasons`.
         # Let's try that.
-        df = pbp.get_game_play_by_play_data_multiple_seasons(start_season, end_season)
+        df = pbp.get_game_play_by_play_data_range_seasons(start_season, end_season)
         
         if not df.empty:
             print(f"Saving data to {cache_file}...")

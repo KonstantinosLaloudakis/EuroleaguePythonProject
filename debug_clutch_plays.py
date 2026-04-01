@@ -14,7 +14,7 @@ def list_clutch_plays():
     
     pbp = play_by_play_data.PlayByPlay()
     print(f"Fetching data for season {season}...")
-    full_df = pbp.get_game_play_by_play_data_multiple_seasons(season, season)
+    full_df = pbp.get_game_play_by_play_data_range_seasons(season, season)
     
     # --- Data Processing (Same as clutchStats.py) ---
     if 'NUMBEROFPLAY' in full_df.columns:

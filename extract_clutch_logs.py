@@ -18,7 +18,7 @@ class ClutchLogExtractor(ClutchAnalysis):
         pbp = play_by_play_data.PlayByPlay()
         
         try:
-            full_df = pbp.get_game_play_by_play_data_multiple_seasons(self.start_season, self.end_season)
+            full_df = pbp.get_game_play_by_play_data_range_seasons(self.start_season, self.end_season)
         except Exception as e:
             print(f"Error: {e}")
             return

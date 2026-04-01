@@ -20,7 +20,7 @@ def fetch_and_cache_shot_data(season=2025):
     else:
         print(f"Fetching full Shot data (coordinates) for {season} season...")
         shots = shot_data.ShotData()
-        df = shots.get_game_shot_data_multiple_seasons(season, season)
+        df = shots.get_game_shot_data_range_seasons(season, season)
         
         if not df.empty:
             # Ensure data directory exists

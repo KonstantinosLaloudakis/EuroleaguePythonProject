@@ -44,8 +44,8 @@ def fetch_shot_data(start_season, end_season):
     try:
         shots = shot_data.ShotData()
         # Note: The library method name might vary slightly depending on version, 
-        # but the previous code used get_game_shot_data_multiple_seasons and it worked.
-        df = shots.get_game_shot_data_multiple_seasons(start_season, end_season)
+        # but the previous code used get_game_shot_data_range_seasons and it worked.
+        df = shots.get_game_shot_data_range_seasons(start_season, end_season)
         
         if not df.empty:
             print(f"Saving data to {cache_file}...")

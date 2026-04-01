@@ -13,7 +13,7 @@ def fetch_and_cache_pbp():
     else:
         print(f"Fetching full Play-By-Play data for 2025 season...")
         pbp = play_by_play_data.PlayByPlay()
-        df = pbp.get_game_play_by_play_data_multiple_seasons(2025, 2025)
+        df = pbp.get_game_play_by_play_data_range_seasons(2025, 2025)
         
         # Clean up some types to save space
         if not df.empty:

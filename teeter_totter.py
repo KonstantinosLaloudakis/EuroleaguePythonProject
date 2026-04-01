@@ -31,7 +31,7 @@ def fetch_season_data(season, force_update=False):
     print(f"Fetching data for season {season} from API...")
     pbp = play_by_play_data.PlayByPlay()
     try:
-        df = pbp.get_game_play_by_play_data_multiple_seasons(season, season)
+        df = pbp.get_game_play_by_play_data_range_seasons(season, season)
         if not df.empty:
             df = pd.DataFrame(df)
             df.to_csv(cache_file, index=False)

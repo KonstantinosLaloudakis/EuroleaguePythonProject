@@ -24,7 +24,7 @@ class ClutchAnalysis:
         
         print(f"Fetching play-by-play data for seasons {self.start_season}-{self.end_season}...")
         try:
-            full_df = pbp.get_game_play_by_play_data_multiple_seasons(self.start_season, self.end_season)
+            full_df = pbp.get_game_play_by_play_data_range_seasons(self.start_season, self.end_season)
         except Exception as e:
             print(f"Error fetching data: {e}")
             return None
@@ -266,7 +266,7 @@ class ClutchAnalysis:
         print(f"Fetching shot data for seasons {self.start_season}-{self.end_season}...")
         shots = shot_data.ShotData()
         try:
-            full_df = shots.get_game_shot_data_multiple_seasons(self.start_season, self.end_season)
+            full_df = shots.get_game_shot_data_range_seasons(self.start_season, self.end_season)
         except Exception as e:
             print(f"Error fetching shots: {e}")
             return

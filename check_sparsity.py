@@ -5,7 +5,7 @@ import numpy as np
 def check_score_sparsity():
     pbp = play_by_play_data.PlayByPlay()
     # Fetch small sample
-    df = pbp.get_game_play_by_play_data_multiple_seasons(2025, 2025)
+    df = pbp.get_game_play_by_play_data_range_seasons(2025, 2025)
     
     # Pick a game
     game_code = df['Gamecode'].iloc[0]
