@@ -2,8 +2,11 @@
  * playoffs.js — Interactive Euroleague Playoff Bracket Simulator
  *
  * Format:
- *   Play-In:      7v10, 8v9 (single game)
- *   Quarterfinals: 1v(PI-B), 2v(PI-A), 3v6, 4v5 (best-of-5)
+ *   Play-In:
+ *     Game A: 7 vs 8 — winner = 7th place (→ QF vs seed 2)
+ *     Game B: 9 vs 10
+ *     Game C: Loser(A) vs Winner(B) — winner = 8th place (→ QF vs seed 1)
+ *   Quarterfinals: 1v8, 2v7, 3v6, 4v5 (best-of-5, higher seed home court)
  *   Final Four:    SF1 vs SF2, then Final (single game, neutral venue)
  *   Champion
  */
@@ -20,6 +23,7 @@ const TEAM_COLORS = {
 };
 
 const ELO_HCA = 50;
+const MC_ITERATIONS = 10000;
 
 // State
 let _teams = [];
@@ -36,21 +40,8 @@ function eloWinProb(eloA, eloB, neutral = false) {
 // Best-of-N series probability (team A wins >=ceil(n/2) games)
 function seriesProb(pGame, n) {
     const need = Math.ceil(n / 2);
-    let prob = 0;
-    for (let wins = need; wins <= n; wins++) {
-        // P(exactly `wins` wins in `wins + (need-1)` games, last game is a win)
-        const games = wins + need - 1;
-        // but we need at most n games, and team wins the last game
-        // Use: P(win series) = sum over k=need..n of C(k-1, need-1) * p^need * (1-p)^(k-need)
-        const losses = wins - need;
-        const totalGames = wins + losses; // = need + losses, but wins is the loop var... let me redo
-        // Actually: team needs `need` wins. Series ends when one team hits `need`.
-        // P = sum_{losses=0}^{need-1} C(need-1+losses, losses) * p^need * (1-p)^losses
-        // Let me recalculate properly
-    }
-    // Correct formula: P(A wins best-of-n) = sum_{l=0}^{need-1} C(need-1+l, l) * p^need * q^l
     const q = 1 - pGame;
-    prob = 0;
+    let prob = 0;
     for (let l = 0; l < need; l++) {
         prob += comb(need - 1 + l, l) * Math.pow(pGame, need) * Math.pow(q, l);
     }
@@ -92,6 +83,8 @@ async function init() {
         }));
 
         resetBracket();
+        loadFromURL();
+        runMonteCarlo();
     } catch (err) {
         document.getElementById('bracket').innerHTML =
             `<p style="color:var(--accent-red);padding:1rem">Failed to load data: ${err}</p>`;
@@ -101,12 +94,13 @@ async function init() {
 function resetBracket() {
     _bracket = {
         playin: [
-            { a: null, b: null, winner: null },  // 7 vs 10
-            { a: null, b: null, winner: null },   // 8 vs 9
+            { a: null, b: null, winner: null },   // Game A: 7 vs 8
+            { a: null, b: null, winner: null },   // Game B: 9 vs 10
+            { a: null, b: null, winner: null },   // Game C: Loser(A) vs Winner(B)
         ],
         quarters: [
-            { a: null, b: null, winner: null },   // 1 vs PI-B winner
-            { a: null, b: null, winner: null },   // 2 vs PI-A winner
+            { a: null, b: null, winner: null },   // 1 vs 8th (Game C winner)
+            { a: null, b: null, winner: null },   // 2 vs 7th (Game A winner)
             { a: null, b: null, winner: null },   // 3 vs 6
             { a: null, b: null, winner: null },   // 4 vs 5
         ],
@@ -121,10 +115,11 @@ function resetBracket() {
     _champion = null;
 
     // Seed play-in
-    _bracket.playin[0].a = _seeded[6];  // 7
-    _bracket.playin[0].b = _seeded[9];  // 10
-    _bracket.playin[1].a = _seeded[7];  // 8
-    _bracket.playin[1].b = _seeded[8];  // 9
+    _bracket.playin[0].a = _seeded[6];  // 7 — Game A
+    _bracket.playin[0].b = _seeded[7];  // 8
+    _bracket.playin[1].a = _seeded[8];  // 9 — Game B
+    _bracket.playin[1].b = _seeded[9];  // 10
+    // Game C slots filled when Game A and Game B are decided
 
     // Seed QF with known teams (1-6 go directly)
     _bracket.quarters[0].a = _seeded[0]; // 1
@@ -135,6 +130,7 @@ function resetBracket() {
     _bracket.quarters[3].b = _seeded[4]; // 5
 
     renderBracket();
+    updateURL();
 }
 
 // ── Render ────────────────────────────────────────────────────────────────
@@ -142,24 +138,25 @@ function renderBracket() {
     const container = document.getElementById('bracket');
 
     container.innerHTML = `
-        <div class="bracket-round">
+        <div class="bracket-round" data-round="playin">
             <div class="bracket-round-title">Play-In</div>
-            ${renderMatchup('playin', 0, 1, false)}
-            ${renderMatchup('playin', 1, 1, false)}
+            ${renderMatchup('playin', 0, 1, false, 'Game A · 7th place')}
+            ${renderMatchup('playin', 1, 1, false, 'Game B')}
+            ${renderMatchup('playin', 2, 1, false, 'Game C · 8th place')}
         </div>
-        <div class="bracket-round">
+        <div class="bracket-round" data-round="quarters">
             <div class="bracket-round-title">Quarterfinals</div>
-            ${renderMatchup('quarters', 0, 5, true)}
-            ${renderMatchup('quarters', 1, 5, true)}
+            ${renderMatchup('quarters', 0, 5, false)}
+            ${renderMatchup('quarters', 1, 5, false)}
             ${renderMatchup('quarters', 2, 5, false)}
             ${renderMatchup('quarters', 3, 5, false)}
         </div>
-        <div class="bracket-round">
+        <div class="bracket-round" data-round="semis">
             <div class="bracket-round-title">Final Four — Semis</div>
             ${renderMatchup('semis', 0, 1, true)}
             ${renderMatchup('semis', 1, 1, true)}
         </div>
-        <div class="bracket-round">
+        <div class="bracket-round" data-round="final">
             <div class="bracket-round-title">Final</div>
             ${renderMatchup('final', 0, 1, true)}
         </div>
@@ -169,9 +166,10 @@ function renderBracket() {
     `;
 
     renderPathSummary();
+    drawConnectors();
 }
 
-function renderMatchup(round, idx, seriesLen, neutral) {
+function renderMatchup(round, idx, seriesLen, neutral, label) {
     const m = _bracket[round][idx];
     const teamA = m.a;
     const teamB = m.b;
@@ -189,9 +187,10 @@ function renderMatchup(round, idx, seriesLen, neutral) {
 
     const sideA = renderSide(teamA, probA, m.winner, round, idx, 'a');
     const sideB = renderSide(teamB, probB, m.winner, round, idx, 'b');
-    const badge = seriesLen > 1 ? `<div class="series-badge">Best of ${seriesLen}</div>` : `<div class="series-badge">Single game</div>`;
+    const badgeText = label || (seriesLen > 1 ? `Best of ${seriesLen}` : 'Single game');
+    const badge = `<div class="series-badge">${badgeText}</div>`;
 
-    return `<div class="matchup">${sideA}${sideB}${badge}</div>`;
+    return `<div class="matchup" data-round="${round}" data-idx="${idx}">${sideA}${sideB}${badge}</div>`;
 }
 
 function renderSide(team, prob, winner, round, idx, side) {
@@ -207,14 +206,20 @@ function renderSide(team, prob, winner, round, idx, side) {
     const isWinner = winner && winner.team === team.team;
     const isLoser = winner && winner.team !== team.team;
     const cls = isWinner ? ' winner' : isLoser ? ' loser' : '';
-    const locked = winner ? ' locked' : '';
+    const locked = (winner && !isWinner) ? ' locked' : '';
     const check = isWinner ? '<div class="seed-check">✓</div>' : '<div class="seed-check"></div>';
 
     const probText = prob !== null
         ? `<div class="seed-prob" style="color:${probColor(prob)}">${(prob * 100).toFixed(0)}%</div>`
         : '';
 
-    const onclick = winner ? '' : `onclick="pickWinner('${round}',${idx},'${side}')"`;
+    // Winner can be clicked to undo; non-winner side locked when winner is set
+    let onclick = '';
+    if (isWinner) {
+        onclick = `onclick="undoPick('${round}',${idx})"`;
+    } else if (!winner) {
+        onclick = `onclick="pickWinner('${round}',${idx},'${side}')"`;
+    }
 
     return `<div class="matchup-seed${cls}${locked}" ${onclick}>
         <div class="seed-num">#${team.seed}</div>
@@ -262,13 +267,33 @@ function pickWinner(round, idx, side) {
     m.winner = winner;
 
     // Cascade: feed winner into next round
+    cascadeForward(round, idx, side);
+
+    renderBracket();
+    updateURL();
+}
+
+function cascadeForward(round, idx, side) {
+    const m = _bracket[round][idx];
+    const winner = m.winner;
+
     if (round === 'playin') {
-        // Play-in 0 (7v10) winner → QF slot 1 (as opponent of seed 2)
-        // Play-in 1 (8v9) winner → QF slot 0 (as opponent of seed 1)
-        if (idx === 0) _bracket.quarters[1].b = winner;
-        if (idx === 1) _bracket.quarters[0].b = winner;
+        const loser = side === 'a' ? m.b : m.a;
+        if (idx === 0) {
+            // Game A decided: winner gets 7th place → QF vs seed 2
+            _bracket.quarters[1].b = winner;
+            // Loser goes to Game C as side A
+            _bracket.playin[2].a = loser;
+        }
+        if (idx === 1) {
+            // Game B decided: winner goes to Game C as side B
+            _bracket.playin[2].b = winner;
+        }
+        if (idx === 2) {
+            // Game C decided: winner gets 8th place → QF vs seed 1
+            _bracket.quarters[0].b = winner;
+        }
     } else if (round === 'quarters') {
-        // QF0 & QF3 winners → SF0, QF1 & QF2 winners → SF1
         if (idx === 0) _bracket.semis[0].a = winner;
         if (idx === 3) _bracket.semis[0].b = winner;
         if (idx === 1) _bracket.semis[1].a = winner;
@@ -279,8 +304,190 @@ function pickWinner(round, idx, side) {
     } else if (round === 'final') {
         _champion = winner;
     }
+}
+
+// ── Undo pick ────────────────────────────────────────────────────────────
+function undoPick(round, idx) {
+    const m = _bracket[round][idx];
+    if (!m.winner) return;
+
+    m.winner = null;
+
+    // Clear all downstream picks that depended on this winner
+    if (round === 'playin') {
+        if (idx === 0) {
+            // Game A undone: clear QF1 opponent, clear Game C side A + its downstream
+            _bracket.quarters[1].b = null;
+            clearMatchup('quarters', 1);
+            _bracket.playin[2].a = null;
+            clearMatchup('playin', 2);
+        }
+        if (idx === 1) {
+            // Game B undone: clear Game C side B + its downstream
+            _bracket.playin[2].b = null;
+            clearMatchup('playin', 2);
+        }
+        if (idx === 2) {
+            // Game C undone: clear QF0 opponent
+            _bracket.quarters[0].b = null;
+            clearMatchup('quarters', 0);
+        }
+    } else if (round === 'quarters') {
+        if (idx === 0) { _bracket.semis[0].a = null; clearMatchup('semis', 0); }
+        if (idx === 3) { _bracket.semis[0].b = null; clearMatchup('semis', 0); }
+        if (idx === 1) { _bracket.semis[1].a = null; clearMatchup('semis', 1); }
+        if (idx === 2) { _bracket.semis[1].b = null; clearMatchup('semis', 1); }
+    } else if (round === 'semis') {
+        if (idx === 0) { _bracket.final[0].a = null; clearMatchup('final', 0); }
+        if (idx === 1) { _bracket.final[0].b = null; clearMatchup('final', 0); }
+    } else if (round === 'final') {
+        _champion = null;
+    }
 
     renderBracket();
+    updateURL();
+}
+
+// Recursively clear a matchup and its downstream effects
+function clearMatchup(round, idx) {
+    const m = _bracket[round][idx];
+    if (m.winner) {
+        m.winner = null;
+
+        if (round === 'playin' && idx === 2) {
+            _bracket.quarters[0].b = null;
+            clearMatchup('quarters', 0);
+        } else if (round === 'quarters') {
+            if (idx === 0) { _bracket.semis[0].a = null; clearMatchup('semis', 0); }
+            if (idx === 3) { _bracket.semis[0].b = null; clearMatchup('semis', 0); }
+            if (idx === 1) { _bracket.semis[1].a = null; clearMatchup('semis', 1); }
+            if (idx === 2) { _bracket.semis[1].b = null; clearMatchup('semis', 1); }
+        } else if (round === 'semis') {
+            if (idx === 0) { _bracket.final[0].a = null; clearMatchup('final', 0); }
+            if (idx === 1) { _bracket.final[0].b = null; clearMatchup('final', 0); }
+        } else if (round === 'final') {
+            _champion = null;
+        }
+    }
+}
+
+// ── Auto-fill by favorites ───────────────────────────────────────────────
+function autoFill() {
+    resetBracket();
+
+    // Walk through each round in order, picking the higher-probability side
+    const roundOrder = [
+        { round: 'playin', indices: [0, 1, 2], seriesLen: 1, neutral: false },
+        { round: 'quarters', indices: [0, 1, 2, 3], seriesLen: 5, neutral: false },
+        { round: 'semis', indices: [0, 1], seriesLen: 1, neutral: true },
+        { round: 'final', indices: [0], seriesLen: 1, neutral: true },
+    ];
+
+    for (const { round, indices, seriesLen, neutral } of roundOrder) {
+        for (const idx of indices) {
+            const m = _bracket[round][idx];
+            if (!m.a || !m.b || m.winner) continue;
+            const pGame = eloWinProb(m.a.elo, m.b.elo, neutral);
+            const pA = seriesLen > 1 ? seriesProb(pGame, seriesLen) : pGame;
+            const side = pA >= 0.5 ? 'a' : 'b';
+            m.winner = side === 'a' ? m.a : m.b;
+            cascadeForward(round, idx, side);
+        }
+    }
+
+    renderBracket();
+    updateURL();
+}
+
+// ── Monte Carlo simulation ───────────────────────────────────────────────
+function runMonteCarlo() {
+    if (_seeded.length < 10) return;
+
+    const counts = {};
+    for (const t of _seeded) counts[t.team] = 0;
+
+    for (let i = 0; i < MC_ITERATIONS; i++) {
+        const champ = simulateOnce();
+        if (champ) counts[champ.team] = (counts[champ.team] || 0) + 1;
+    }
+
+    renderMonteCarloChart(counts);
+}
+
+function simulateOnce() {
+    const s = _seeded;
+
+    // Play-In
+    const pA = eloWinProb(s[6].elo, s[7].elo);
+    const gameAWinner = Math.random() < pA ? s[6] : s[7];
+    const gameALoser  = gameAWinner === s[6] ? s[7] : s[6];
+
+    const pB = eloWinProb(s[8].elo, s[9].elo);
+    const gameBWinner = Math.random() < pB ? s[8] : s[9];
+
+    const pC = eloWinProb(gameALoser.elo, gameBWinner.elo);
+    const gameCWinner = Math.random() < pC ? gameALoser : gameBWinner;
+
+    const seed7 = gameAWinner;  // → QF vs seed 2
+    const seed8 = gameCWinner;  // → QF vs seed 1
+
+    // Quarterfinals (best-of-5)
+    const qf = [
+        simSeries(s[0], seed8, 5, false),   // 1 vs 8
+        simSeries(s[1], seed7, 5, false),   // 2 vs 7
+        simSeries(s[2], s[5], 5, false),    // 3 vs 6
+        simSeries(s[3], s[4], 5, false),    // 4 vs 5
+    ];
+
+    // Final Four (neutral)
+    const sf1 = simGame(qf[0], qf[3], true);
+    const sf2 = simGame(qf[1], qf[2], true);
+
+    // Final (neutral)
+    return simGame(sf1, sf2, true);
+}
+
+function simGame(a, b, neutral) {
+    const p = eloWinProb(a.elo, b.elo, neutral);
+    return Math.random() < p ? a : b;
+}
+
+function simSeries(a, b, n, neutral) {
+    const need = Math.ceil(n / 2);
+    let wA = 0, wB = 0;
+    const p = eloWinProb(a.elo, b.elo, neutral);
+    while (wA < need && wB < need) {
+        if (Math.random() < p) wA++; else wB++;
+    }
+    return wA >= need ? a : b;
+}
+
+function renderMonteCarloChart(counts) {
+    const container = document.getElementById('mc-chart');
+    if (!container) return;
+
+    const entries = _seeded.map(t => ({
+        team: t.team,
+        name: t.name,
+        pct: (counts[t.team] / MC_ITERATIONS) * 100,
+        color: TEAM_COLORS[t.team] || '#555',
+    })).sort((a, b) => b.pct - a.pct);
+
+    const maxPct = Math.max(...entries.map(e => e.pct), 1);
+
+    let html = '';
+    for (const e of entries) {
+        const w = (e.pct / maxPct) * 100;
+        html += `<div class="mc-bar-row">
+            <div class="mc-bar-label">${e.name}</div>
+            <div class="mc-bar-track">
+                <div class="mc-bar-fill" style="width:${w}%;background:${e.color}"></div>
+            </div>
+            <div class="mc-bar-pct">${e.pct.toFixed(1)}%</div>
+        </div>`;
+    }
+
+    container.innerHTML = html;
 }
 
 // ── Path probability ─────────────────────────────────────────────────────
@@ -288,10 +495,9 @@ function computeChampionPath() {
     if (!_champion) return 0;
     let prob = 1;
 
-    // Walk backwards through the bracket to find all matchups the champion won
     const rounds = ['playin', 'quarters', 'semis', 'final'];
     const seriesLens = { playin: 1, quarters: 5, semis: 1, final: 1 };
-    const neutrals = { playin: false, quarters: true, semis: true, final: true };
+    const neutrals = { playin: false, quarters: false, semis: true, final: true };
 
     for (const round of rounds) {
         for (const m of _bracket[round]) {
@@ -311,8 +517,6 @@ function renderPathSummary() {
     const container = document.getElementById('path-summary');
     if (!_seeded.length) { container.innerHTML = ''; return; }
 
-    // Show championship probability for all top seeds based on Elo
-    // Simple: for each top-6 team, compute naive path probability assuming they face expected opponents
     const chips = _seeded.slice(0, 6).map(t => {
         const color = TEAM_COLORS[t.team] || '#555';
         const pct = t.top4_pct != null ? t.top4_pct : '—';
@@ -327,5 +531,191 @@ function renderPathSummary() {
     container.innerHTML = chips.join('');
 }
 
+// ── SVG Connector Lines ──────────────────────────────────────────────────
+function drawConnectors() {
+    const old = document.getElementById('bracket-connectors');
+    if (old) old.remove();
+
+    const bracketEl = document.getElementById('bracket');
+    const rect = bracketEl.getBoundingClientRect();
+
+    // Resolve CSS custom property for stroke color
+    const strokeColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--border').trim() || '#2a2a3a';
+
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.id = 'bracket-connectors';
+    svg.setAttribute('width', rect.width);
+    svg.setAttribute('height', rect.height);
+    svg.style.cssText = 'position:absolute;top:0;left:0;pointer-events:none;overflow:visible;';
+    bracketEl.appendChild(svg);
+
+    // Cross-round connections only (same-column play-in links are implicit)
+    const connections = [
+        // Play-In → Quarters
+        { from: { round: 'playin', idx: 0 }, to: { round: 'quarters', idx: 1 } },
+        { from: { round: 'playin', idx: 2 }, to: { round: 'quarters', idx: 0 } },
+        // Quarters → Semis
+        { from: { round: 'quarters', idx: 0 }, to: { round: 'semis', idx: 0 } },
+        { from: { round: 'quarters', idx: 3 }, to: { round: 'semis', idx: 0 } },
+        { from: { round: 'quarters', idx: 1 }, to: { round: 'semis', idx: 1 } },
+        { from: { round: 'quarters', idx: 2 }, to: { round: 'semis', idx: 1 } },
+        // Semis → Final
+        { from: { round: 'semis', idx: 0 }, to: { round: 'final', idx: 0 } },
+        { from: { round: 'semis', idx: 1 }, to: { round: 'final', idx: 0 } },
+    ];
+
+    for (const conn of connections) {
+        const fromEl = bracketEl.querySelector(`.matchup[data-round="${conn.from.round}"][data-idx="${conn.from.idx}"]`);
+        const toEl = bracketEl.querySelector(`.matchup[data-round="${conn.to.round}"][data-idx="${conn.to.idx}"]`);
+        if (!fromEl || !toEl) continue;
+
+        const fromRect = fromEl.getBoundingClientRect();
+        const toRect = toEl.getBoundingClientRect();
+
+        const x1 = fromRect.right - rect.left;
+        const y1 = fromRect.top + fromRect.height / 2 - rect.top;
+        const x2 = toRect.left - rect.left;
+        const y2 = toRect.top + toRect.height / 2 - rect.top;
+        const midX = (x1 + x2) / 2;
+
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', `M${x1},${y1} C${midX},${y1} ${midX},${y2} ${x2},${y2}`);
+        path.setAttribute('fill', 'none');
+        path.setAttribute('stroke', strokeColor);
+        path.setAttribute('stroke-width', '1.5');
+        path.setAttribute('opacity', '0.4');
+        svg.appendChild(path);
+    }
+}
+
+// ── Share via URL ────────────────────────────────────────────────────────
+function encodeBracket() {
+    // Encode each pick as side letter (a/b) or dash for unpicked, per matchup
+    const rounds = [
+        { key: 'playin', count: 3 },
+        { key: 'quarters', count: 4 },
+        { key: 'semis', count: 2 },
+        { key: 'final', count: 1 },
+    ];
+    let code = '';
+    for (const { key, count } of rounds) {
+        for (let i = 0; i < count; i++) {
+            const m = _bracket[key][i];
+            if (!m.winner) {
+                code += '-';
+            } else if (m.a && m.winner.team === m.a.team) {
+                code += 'a';
+            } else {
+                code += 'b';
+            }
+        }
+    }
+    return code;
+}
+
+function updateURL() {
+    const code = encodeBracket();
+    // Only set param if there are picks
+    if (code.replace(/-/g, '').length > 0) {
+        const url = new URL(window.location);
+        url.searchParams.set('b', code);
+        history.replaceState(null, '', url);
+    } else {
+        const url = new URL(window.location);
+        url.searchParams.delete('b');
+        history.replaceState(null, '', url);
+    }
+}
+
+function loadFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('b');
+    if (!code) return;
+
+    // Reset first to get clean state
+    resetBracketSilent();
+
+    const rounds = [
+        { key: 'playin', count: 3 },
+        { key: 'quarters', count: 4 },
+        { key: 'semis', count: 2 },
+        { key: 'final', count: 1 },
+    ];
+
+    let pos = 0;
+    for (const { key, count } of rounds) {
+        for (let i = 0; i < count; i++) {
+            if (pos >= code.length) break;
+            const ch = code[pos++];
+            if (ch === '-') continue;
+            const m = _bracket[key][i];
+            if (!m.a || !m.b) continue;
+            const side = ch === 'a' ? 'a' : 'b';
+            m.winner = side === 'a' ? m.a : m.b;
+            cascadeForward(key, i, side);
+        }
+    }
+
+    renderBracket();
+}
+
+// Same as resetBracket but without rendering or URL update
+function resetBracketSilent() {
+    _bracket = {
+        playin: [
+            { a: null, b: null, winner: null },
+            { a: null, b: null, winner: null },
+            { a: null, b: null, winner: null },
+        ],
+        quarters: [
+            { a: null, b: null, winner: null },
+            { a: null, b: null, winner: null },
+            { a: null, b: null, winner: null },
+            { a: null, b: null, winner: null },
+        ],
+        semis: [
+            { a: null, b: null, winner: null },
+            { a: null, b: null, winner: null },
+        ],
+        final: [
+            { a: null, b: null, winner: null },
+        ],
+    };
+    _champion = null;
+
+    _bracket.playin[0].a = _seeded[6];
+    _bracket.playin[0].b = _seeded[7];
+    _bracket.playin[1].a = _seeded[8];
+    _bracket.playin[1].b = _seeded[9];
+
+    _bracket.quarters[0].a = _seeded[0];
+    _bracket.quarters[1].a = _seeded[1];
+    _bracket.quarters[2].a = _seeded[2];
+    _bracket.quarters[2].b = _seeded[5];
+    _bracket.quarters[3].a = _seeded[3];
+    _bracket.quarters[3].b = _seeded[4];
+}
+
+function copyBracketLink() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(() => {
+        const btn = document.getElementById('share-btn');
+        const orig = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = orig; }, 1500);
+    }).catch(() => {
+        // Fallback for older browsers
+        prompt('Copy this link to share your bracket:', url);
+    });
+}
+
 // ── Boot ──────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', init);
+
+// Redraw connectors on resize
+let _resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(_resizeTimer);
+    _resizeTimer = setTimeout(drawConnectors, 150);
+});
