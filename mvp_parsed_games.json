@@ -72619,5 +72619,221 @@
         "GmSc":16.8,
         "PIR":22.0,
         "PTS":16.0
+    },
+    {
+        "PlayerCode":"011244",
+        "PlayerName":"DA SILVA, OSCAR",
+        "TeamCode":"MUN",
+        "GameCode":348,
+        "GmSc":0.5,
+        "PIR":0.0,
+        "PTS":4.0
+    },
+    {
+        "PlayerCode":"006085",
+        "PlayerName":"DIMITRIJEVIC, NENO",
+        "TeamCode":"MUN",
+        "GameCode":348,
+        "GmSc":16.7,
+        "PIR":25.0,
+        "PTS":22.0
+    },
+    {
+        "PlayerCode":"013383",
+        "PlayerName":"GABRIEL, WENYEN",
+        "TeamCode":"MUN",
+        "GameCode":348,
+        "GmSc":1.1,
+        "PIR":3.0,
+        "PTS":2.0
+    },
+    {
+        "PlayerCode":"001557",
+        "PlayerName":"GIFFEY, NIELS",
+        "TeamCode":"MUN",
+        "GameCode":348,
+        "GmSc":3.6,
+        "PIR":4.0,
+        "PTS":4.0
+    },
+    {
+        "PlayerCode":"009513",
+        "PlayerName":"HOLLATZ, JUSTUS",
+        "TeamCode":"MUN",
+        "GameCode":348,
+        "GmSc":1.0,
+        "PIR":1.0,
+        "PTS":0.0
+    },
+    {
+        "PlayerCode":"013290",
+        "PlayerName":"JESSUP, JUSTINIAN",
+        "TeamCode":"MUN",
+        "GameCode":348,
+        "GmSc":14.9,
+        "PIR":15.0,
+        "PTS":16.0
+    },
+    {
+        "PlayerCode":"004512",
+        "PlayerName":"KRATZER, LEON",
+        "TeamCode":"MUN",
+        "GameCode":348,
+        "GmSc":0.0,
+        "PIR":0.0,
+        "PTS":0.0
+    },
+    {
+        "PlayerCode":"013386",
+        "PlayerName":"MCCORMACK, DAVID",
+        "TeamCode":"MUN",
+        "GameCode":348,
+        "GmSc":9.3,
+        "PIR":17.0,
+        "PTS":9.0
+    },
+    {
+        "PlayerCode":"011836",
+        "PlayerName":"MIKE, ISIAHA",
+        "TeamCode":"MUN",
+        "GameCode":348,
+        "GmSc":1.4,
+        "PIR":2.0,
+        "PTS":3.0
+    },
+    {
+        "PlayerCode":"004508",
+        "PlayerName":"OBST, ANDREAS",
+        "TeamCode":"MUN",
+        "GameCode":348,
+        "GmSc":11.4,
+        "PIR":15.0,
+        "PTS":14.0
+    },
+    {
+        "PlayerCode":"013378",
+        "PlayerName":"RATHAN-MAYES, XAVIER",
+        "TeamCode":"MUN",
+        "GameCode":348,
+        "GmSc":6.4,
+        "PIR":5.0,
+        "PTS":11.0
+    },
+    {
+        "PlayerCode":"007201",
+        "PlayerName":"VOIGTMANN, JOHANNES",
+        "TeamCode":"MUN",
+        "GameCode":348,
+        "GmSc":0.0,
+        "PIR":0.0,
+        "PTS":0.0
+    },
+    {
+        "PlayerCode":"014015",
+        "PlayerName":"BACOT JR., ARMANDO",
+        "TeamCode":"ULK",
+        "GameCode":348,
+        "GmSc":0.4,
+        "PIR":-2.0,
+        "PTS":2.0
+    },
+    {
+        "PlayerCode":"009863",
+        "PlayerName":"BALDWIN IV, WADE",
+        "TeamCode":"ULK",
+        "GameCode":348,
+        "GmSc":3.5,
+        "PIR":7.0,
+        "PTS":8.0
+    },
+    {
+        "PlayerCode":"006961",
+        "PlayerName":"BIBEROVIC, TARIK",
+        "TeamCode":"ULK",
+        "GameCode":348,
+        "GmSc":19.2,
+        "PIR":24.0,
+        "PTS":21.0
+    },
+    {
+        "PlayerCode":"007182",
+        "PlayerName":"BIRCH, KHEM",
+        "TeamCode":"ULK",
+        "GameCode":348,
+        "GmSc":7.5,
+        "PIR":11.0,
+        "PTS":7.0
+    },
+    {
+        "PlayerCode":"003091",
+        "PlayerName":"BIRSEN, METECAN",
+        "TeamCode":"ULK",
+        "GameCode":348,
+        "GmSc":-1.9,
+        "PIR":-3.0,
+        "PTS":1.0
+    },
+    {
+        "PlayerCode":"007929",
+        "PlayerName":"BITIM, ONURALP",
+        "TeamCode":"ULK",
+        "GameCode":348,
+        "GmSc":5.6,
+        "PIR":8.0,
+        "PTS":7.0
+    },
+    {
+        "PlayerCode":"014016",
+        "PlayerName":"BOSTON JR., BRANDON",
+        "TeamCode":"ULK",
+        "GameCode":348,
+        "GmSc":-1.8,
+        "PIR":-3.0,
+        "PTS":0.0
+    },
+    {
+        "PlayerCode":"009783",
+        "PlayerName":"COLSON, BONZIE",
+        "TeamCode":"ULK",
+        "GameCode":348,
+        "GmSc":10.3,
+        "PIR":15.0,
+        "PTS":6.0
+    },
+    {
+        "PlayerCode":"011205",
+        "PlayerName":"HALL, DEVON",
+        "TeamCode":"ULK",
+        "GameCode":348,
+        "GmSc":7.2,
+        "PIR":13.0,
+        "PTS":9.0
+    },
+    {
+        "PlayerCode":"014124",
+        "PlayerName":"HORTON TUCKER, TALEN",
+        "TeamCode":"ULK",
+        "GameCode":348,
+        "GmSc":8.5,
+        "PIR":14.0,
+        "PTS":13.0
+    },
+    {
+        "PlayerCode":"014220",
+        "PlayerName":"SILVA, CHRIS",
+        "TeamCode":"ULK",
+        "GameCode":348,
+        "GmSc":-0.4,
+        "PIR":-1.0,
+        "PTS":2.0
+    },
+    {
+        "PlayerCode":"008104",
+        "PlayerName":"ZAGARS, ARTURS",
+        "TeamCode":"ULK",
+        "GameCode":348,
+        "GmSc":0.6,
+        "PIR":1.0,
+        "PTS":0.0
     }
 ]
