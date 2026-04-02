@@ -673,7 +673,7 @@ def main():
     # Sort: wins desc, then adj_net desc
     teams.sort(key=lambda t: (-t['wins'], -t['adj_net']))
 
-    # ── Build MVP list (top 15) ──────────────────────────────────────────────
+    # ── Build MVP list (top 15) with component breakdowns ─────────────────────
     mvp_list = []
     if mvp_data:
         for row in mvp_data[:15]:
@@ -683,11 +683,20 @@ def main():
                 'team': row.get('TeamCode', ''),
                 'mvp_score': round(row.get('MVP_Score', 0.0), 2),
                 'avg_pir': round(row.get('AvgPIR', 0.0), 2),
+                'avg_gmsc': round(row.get('AvgGmSc', 0.0), 2),
                 'wpa': round(row.get('WPA', 0.0), 1),
                 'team_win_pct': round(row.get('TeamWinPct', 0.0) * 100, 1),
                 'clutch_eff': round(row.get('ClutchEff', 0.0), 4),
+                'clutch_pts': round(row.get('ClutchPoints', 0.0), 1),
+                'consistency': round(row.get('Consistency', 0.0), 4),
                 'gp': row.get('GP', 0),
             })
+
+    # ── Build MVP race timeline ─────────────────────────────────────────────
+    mvp_race = load_json('mvp_race_timeline.json') or []
+    if mvp_race:
+        rounds_in_race = len(set(r['round'] for r in mvp_race))
+        print(f"  MVP race timeline: {len(mvp_race)} data points across {rounds_in_race} rounds")
 
     # ── Build player stats leaderboard ───────────────────────────────────────
     player_stats = build_player_stats(mvp_data)
@@ -707,6 +716,7 @@ def main():
         'updated': datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
         'teams': teams,
         'mvp': mvp_list,
+        'mvp_race': mvp_race,
         'player_stats': player_stats,
         'rapm': rapm_data,
         'oracle': oracle_data,

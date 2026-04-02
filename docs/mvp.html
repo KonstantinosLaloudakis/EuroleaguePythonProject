@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVP Race — Euroleague Analytics</title>
+    <meta name="description" content="Euroleague MVP Race Tracker: rankings, score breakdowns, and how the race evolved round by round.">
+    <meta property="og:title" content="MVP Race — Euroleague Analytics">
+    <meta property="og:description" content="Track the Euroleague MVP race: composite scores, component breakdowns, and round-by-round evolution.">
+    <meta property="og:image" content="og-image.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── MVP Ladder table ─────────────────────────────────── */
+        .mvp-table-wrap { overflow-x: auto; }
+
+        .mvp-tbl {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+        }
+
+        .mvp-tbl th {
+            text-align: left;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 0.6rem 0.5rem;
+            border-bottom: 1px solid var(--border);
+            white-space: nowrap;
+        }
+
+        .mvp-tbl th.num { text-align: right; }
+
+        .mvp-tbl td {
+            padding: 0.55rem 0.5rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        .mvp-tbl td.num { text-align: right; font-family: 'Outfit', sans-serif; font-weight: 700; }
+
+        .mvp-tbl tr { cursor: pointer; transition: background 0.15s ease; }
+        .mvp-tbl tr:hover { background: var(--bg-secondary); }
+        .mvp-tbl tr.selected { background: rgba(59, 130, 246, 0.08); }
+
+        .mvp-rank-cell {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            color: var(--text-muted);
+            width: 32px;
+            text-align: center;
+        }
+
+        .mvp-rank-cell.top1 { color: var(--accent-gold); }
+        .mvp-rank-cell.top3 { color: var(--accent-blue); }
+
+        .mvp-player-cell {
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .mvp-team-badge {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-right: 0.4rem;
+            vertical-align: middle;
+        }
+
+        .mvp-score-cell {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 0.95rem;
+        }
+
+        /* ── Stacked bar ──────────────────────────────────────── */
+        .mvp-bar-wrap {
+            width: 140px;
+            min-width: 100px;
+        }
+
+        .mvp-bar-track {
+            display: flex;
+            height: 16px;
+            border-radius: 3px;
+            overflow: hidden;
+            background: var(--bg-secondary);
+        }
+
+        .mvp-bar-seg {
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        /* ── Component legend ─────────────────────────────────── */
+        .mvp-legend {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 0.75rem;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        .mvp-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .mvp-legend-swatch {
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+        }
+
+        /* ── Player detail card ───────────────────────────────── */
+        .mvp-detail {
+            display: none;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .mvp-detail.visible { display: block; }
+
+        .mvp-detail-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .mvp-detail-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+
+        .mvp-detail-sub {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .mvp-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        /* ── Component breakdown bars ─────────────────────────── */
+        .comp-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .comp-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            min-width: 90px;
+        }
+
+        .comp-bar-track {
+            flex: 1;
+            height: 20px;
+            background: var(--bg-secondary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .comp-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .comp-val {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            min-width: 36px;
+            text-align: right;
+        }
+
+        /* ── Race chart ───────────────────────────────────────── */
+        .race-chart-wrap {
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 480px) {
+            .mvp-tbl { font-size: 0.75rem; }
+            .mvp-bar-wrap { width: 80px; min-width: 60px; }
+            .mvp-detail-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="site-nav">
+        <span class="site-nav-brand">🏀 Euroleague Analytics</span>
+        <a href="index.html" class="nav-link">Season Hub</a>
+        <a href="team.html" class="nav-link">Team Deep-Dive</a>
+        <a href="players.html" class="nav-link">Player Stats</a>
+        <a href="h2h.html" class="nav-link">Head-to-Head</a>
+        <a href="recap.html" class="nav-link">Game Recap</a>
+        <a href="shots.html" class="nav-link">Shot Lab</a>
+        <a href="replay.html" class="nav-link">Game Replay</a>
+        <a href="playoffs.html" class="nav-link">Playoffs</a>
+        <a href="mvp.html" class="nav-link active">MVP Race</a>
+        <a href="about.html" class="nav-link">About</a>
+    </nav>
+
+    <header>
+        <h1>🏅 MVP Race</h1>
+        <p class="subtitle">Composite rankings · Score breakdowns · Round-by-round evolution</p>
+        <p id="last-updated" class="last-updated" style="display:none"></p>
+    </header>
+
+    <main>
+        <!-- MVP Ladder -->
+        <div class="stat-card">
+            <h3>MVP Ladder</h3>
+            <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.75rem">
+                Score = 45% PIR + 25% WPA + 15% Team Win% + 10% Clutch + 5% Consistency. Click a row to see details.
+            </p>
+            <div class="mvp-table-wrap">
+                <table class="mvp-tbl">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th class="num">Score</th>
+                            <th>Breakdown</th>
+                            <th class="num">PIR</th>
+                            <th class="num">GP</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mvp-tbody"></tbody>
+                </table>
+            </div>
+            <div class="mvp-legend" id="mvp-legend"></div>
+            <div class="mvp-detail" id="mvp-detail"></div>
+        </div>
+
+        <!-- Race Timeline -->
+        <div class="stat-card" style="margin-top:1rem">
+            <h3>MVP Race Timeline</h3>
+            <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem">
+                How the top candidates' MVP scores evolved across rounds.
+            </p>
+            <div id="race-chart" style="height:420px;"></div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="about.html">About & Methodology</a>
+            <span class="footer-sep">·</span>
+            <a href="https://github.com/giasemidis/euroleague_api" target="_blank" rel="noopener">Data: Euroleague API</a>
+            <span class="footer-sep">·</span>
+            <a href="https://github.com/KonstantinosLaloudakis" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div>19 seasons · 7,000+ games · Updated daily</div>
+    </footer>
+
+    <script src="mvp.js"></script>
+</body>
+
+</html>
