@@ -78,8 +78,8 @@ function renderH2H(a, b) {
 
 // ── VS header ─────────────────────────────────────────────────────────────
 function renderHeader(a, b) {
-    const colA = TEAM_COLORS[a.team] || '#6b7280';
-    const colB = TEAM_COLORS[b.team] || '#6b7280';
+    const colA = getTeamColor(a.team);
+    const colB = getTeamColor(b.team);
     const formDots = team => (team.last5 || []).map(r =>
         `<span class="form-dot ${r === 'W' ? 'form-w' : 'form-l'}">${r}</span>`
     ).join('');
@@ -104,8 +104,8 @@ function renderStatBars(a, b) {
         return sorted.findIndex(t => t.team === team) + 1;
     };
 
-    const colA = TEAM_COLORS[a.team] || '#6b7280';
-    const colB = TEAM_COLORS[b.team] || '#6b7280';
+    const colA = getTeamColor(a.team);
+    const colB = getTeamColor(b.team);
 
     const stats = [
         { label: 'Win %',            valA: a.win_pct,  valB: b.win_pct,  fmtA: a.win_pct + '%', fmtB: b.win_pct + '%' },
@@ -170,8 +170,8 @@ function renderMatchupHistory(codeA, codeB) {
         return;
     }
 
-    const colA = TEAM_COLORS[codeA] || '#6b7280';
-    const colB = TEAM_COLORS[codeB] || '#6b7280';
+    const colA = getTeamColor(codeA);
+    const colB = getTeamColor(codeB);
 
     // H2H record
     const winsA = games.filter(g => g.ActualWinner === codeA).length;
@@ -187,7 +187,7 @@ function renderMatchupHistory(codeA, codeB) {
                 <th>Round</th><th>Home</th><th>Away</th><th>Winner</th><th>Oracle</th>
             </tr></thead>
             <tbody>${games.map(g => {
-                const winColor = TEAM_COLORS[g.ActualWinner] || '#6b7280';
+                const winColor = getTeamColor(g.ActualWinner);
                 const oracleOk = g.Correct;
                 return `<tr>
                     <td>R${g.Round}</td>
@@ -217,7 +217,7 @@ function renderOraclePrediction(codeA, codeB) {
     }
 
     const winnerCode  = match.Winner;
-    const winnerColor = TEAM_COLORS[winnerCode] || '#6b7280';
+    const winnerColor = getTeamColor(winnerCode);
     const winnerName  = TEAM_NAMES[winnerCode] || winnerCode;
     const conf        = match.Conf;
     const margin      = Math.abs(match.Margin).toFixed(1);
@@ -255,8 +255,8 @@ function renderPlayerComparison(codeA, codeB) {
         .sort((a, b) => b.avg_pir - a.avg_pir)
         .slice(0, 3);
 
-    const colA = TEAM_COLORS[codeA] || '#6b7280';
-    const colB = TEAM_COLORS[codeB] || '#6b7280';
+    const colA = getTeamColor(codeA);
+    const colB = getTeamColor(codeB);
 
     const renderSide = (players, color, name) => {
         if (!players.length) return `<p style="color:var(--text-muted)">No player data.</p>`;
@@ -310,8 +310,8 @@ function renderRadarChart(a, b) {
         pctRank(b, 'sos', false),
     ];
 
-    const colA = TEAM_COLORS[a.team] || '#6b7280';
-    const colB = TEAM_COLORS[b.team] || '#6b7280';
+    const colA = getTeamColor(a.team);
+    const colB = getTeamColor(b.team);
 
     const traces = [
         {

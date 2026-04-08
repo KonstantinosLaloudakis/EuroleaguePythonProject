@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f1117">
     <title>Game Recap — Euroleague Analytics</title>
     <meta name="description" content="Euroleague Game Recap: round-by-round results, box scores, top performers, oracle predictions.">
     <meta property="og:title" content="Game Recap — Euroleague Analytics">
@@ -37,7 +38,7 @@
             transition: var(--transition);
         }
 
-        .round-nav-btn:hover { border-color: #4b5563; }
+        .round-nav-btn:hover { border-color: var(--border-hover); }
         .round-nav-btn:disabled { opacity: 0.35; cursor: default; }
 
         .round-nav-label {
@@ -68,7 +69,7 @@
             transition: var(--transition);
         }
 
-        .round-pill:hover { border-color: #4b5563; color: var(--text-secondary); }
+        .round-pill:hover { border-color: var(--border-hover); color: var(--text-secondary); }
 
         .round-pill.active {
             border-color: var(--accent-blue);
@@ -92,7 +93,7 @@
             transition: var(--transition);
         }
 
-        .game-card:hover { border-color: #4b5563; }
+        .game-card:hover { border-color: var(--border-hover); }
         .game-card.expanded { border-color: var(--accent-blue); }
 
         .game-card-header {

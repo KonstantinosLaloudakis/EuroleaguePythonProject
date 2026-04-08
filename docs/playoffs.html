@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f1117">
     <title>Playoff Simulator — Euroleague Analytics</title>
     <meta name="description"
         content="Interactive Euroleague Playoff Bracket Simulator: build your own bracket, see win probabilities cascade in real-time.">
@@ -41,7 +42,7 @@
         }
 
         .bracket-ctrl-btn:hover {
-            border-color: #4b5563;
+            border-color: var(--border-hover);
             color: var(--text-primary);
         }
 
@@ -121,7 +122,7 @@
 
         .matchup-seed.winner.upset {
             background: rgba(249, 115, 22, 0.15); /* orange */
-            border-left: 2px solid #f97316;
+            border-left: 2px solid var(--accent-orange);
         }
 
         .matchup-seed.loser {
@@ -420,7 +421,7 @@
         }
 
         .matchup-seed.winner.upset .seed-check {
-            color: #f97316 !important;
+            color: var(--accent-orange) !important;
         }
 
         @media (max-width: 768px) {

@@ -46,7 +46,7 @@ function renderTeamGrid() {
         return na.localeCompare(nb);
     });
     grid.innerHTML = codes.map(code => {
-        const color = TEAM_COLORS[code] || '#6b7280';
+        const color = getTeamColor(code);
         const name = TEAM_NAMES[code] || code;
         return `<div class="team-chip" id="chip-${code}"
                      onclick="selectTeam('${code}')"
@@ -85,7 +85,7 @@ function renderChord(teamData, teamCode) {
     svg.innerHTML = '';
 
     const cx = 270, cy = 270, outerR = 240, innerR = 220;
-    const teamColor = TEAM_COLORS[teamCode] || '#6b7280';
+    const teamColor = getTeamColor(teamCode);
 
     // Top 8 by assist involvement
     const players = teamData.players
@@ -397,7 +397,7 @@ function showPlayerDetail(playerId) {
     const player = team.players.find(p => p.id === playerId);
     if (!player) return;
 
-    const color = TEAM_COLORS[_selected] || '#6b7280';
+    const color = getTeamColor(_selected);
     const teamName = TEAM_NAMES[_selected] || _selected;
 
     document.getElementById('pd-name').textContent = formatPlayerName(player.name);

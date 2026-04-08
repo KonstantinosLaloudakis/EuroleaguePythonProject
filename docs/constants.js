@@ -88,6 +88,9 @@ const PLOTLY_THEME = {
 
 const PLOTLY_CONFIG = { displayModeBar: false, responsive: true };
 
+// ── Team color helper ──────────────────────────────────────────────────
+function getTeamColor(code) { return TEAM_COLORS[code] || '#6b7280'; }
+
 // ── Safe fetch with resp.ok check ───────────────────────────────────────
 function fetchJSON(url) {
     return fetch(url).then(r => {

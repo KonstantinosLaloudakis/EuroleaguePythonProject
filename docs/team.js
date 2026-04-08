@@ -33,7 +33,7 @@ fetchJSON('data/current/dashboard.json')
 function renderSelector(teams) {
     const grid = document.getElementById('team-selector-grid');
     grid.innerHTML = teams.map(t => {
-        const color = TEAM_COLORS[t.team] || '#6b7280';
+        const color = getTeamColor(t.team);
         const name  = TEAM_NAMES[t.team]  || t.team;
         return `<div class="team-chip" id="chip-${t.team}"
                     onclick="selectTeam('${t.team}')"
@@ -63,7 +63,7 @@ function selectTeam(code) {
 
 // ── Deep-dive ─────────────────────────────────────────────────────────────
 function renderDeepDive(team) {
-    const color    = TEAM_COLORS[team.team] || '#6b7280';
+    const color    = getTeamColor(team.team);
     const allTeams = _data.teams || [];
     const rank     = allTeams.findIndex(t => t.team === team.team) + 1;
 
@@ -283,7 +283,7 @@ function renderFixtures(team, allTeams) {
         const color    = isHard ? 'var(--accent-red)' : isEasy ? 'var(--accent-green)' : 'var(--accent-gold)';
         const diffLabel = isHard ? 'Hard' : isEasy ? 'Easy' : 'Average';
         const barW     = Math.round((wp / max) * 100);
-        const oppColor = TEAM_COLORS[opp] || '#6b7280';
+        const oppColor = getTeamColor(opp);
         return `<div class="fixture-row">
             <div>
                 <div class="fixture-opp">

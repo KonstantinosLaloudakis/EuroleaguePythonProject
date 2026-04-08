@@ -20,7 +20,9 @@
     --accent-blue: #3b82f6;
     --accent-purple: #a855f7;
     --accent-gold: #f59e0b;
+    --accent-orange: #f97316;
     --border: #2d2e3a;
+    --border-hover: #4b5563;
     --radius: 12px;
     --transition: 0.2s ease;
 }
@@ -121,6 +123,22 @@ select:focus {
 select:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+/* ── Utility classes ──────────────────────────────────── */
+.help-text {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+/* ── Focus-visible for keyboard navigation ───────────── */
+button:focus-visible,
+.tab-btn:focus-visible,
+.team-chip:focus-visible,
+.nav-link:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
 }
 
 /* ── Chart Mode Toggle ───────────────────────────────── */

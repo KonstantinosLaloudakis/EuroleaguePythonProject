@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f1117">
     <title>Player Stats Hub — Euroleague Analytics</title>
     <meta name="description"
         content="Euroleague Player Stats Hub: season leaderboards, averages, shooting splits, and MVP race.">
@@ -600,14 +601,14 @@
         <div id="tab-rapm" class="hidden">
             <div class="stat-card">
                 <h3>Regularized Adjusted Plus-Minus</h3>
-                <p style="color:var(--text-muted);font-size:0.82rem;margin-bottom:0.6rem;">
+                <p class="help-text" style="margin-bottom:0.6rem;">
                     How much does a player actually help their team win, independent of who they play with?
                     RAPM answers this by analyzing every lineup combination across 11,000+ game segments,
                     using machine learning to separate each player's true contribution from their teammates' and opponents' strength.
                 </p>
                 <details style="margin-bottom:1rem;">
                     <summary style="color:var(--accent-blue);cursor:pointer;font-size:0.82rem;font-weight:600;">What do the columns mean?</summary>
-                    <div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;line-height:1.6;">
+                    <div class="help-text" style="margin-top:0.5rem;">
                         <strong style="color:var(--text-secondary)">RAPM</strong> — Overall impact: points per 100 possessions the team gains/loses with this player on court. <span style="color:#39d353">+2.0</span> means the team scores 2 more points per 100 possessions than it concedes.<br>
                         <strong style="color:var(--text-secondary)">O-RAPM</strong> — Offensive impact only: how much better the team scores with this player on court.<br>
                         <strong style="color:var(--text-secondary)">D-RAPM</strong> — Defensive impact: how much the team limits opponents. <span style="color:#39d353">Positive = good defender</span>, <span style="color:#f85149">Negative = defensive liability</span>.<br>
@@ -650,7 +651,7 @@
         <div id="tab-compare" class="hidden">
             <div class="stat-card">
                 <h3>Player Comparison</h3>
-                <p style="color:var(--text-muted);font-size:0.82rem;margin-bottom:1rem;">
+                <p class="help-text" style="margin-bottom:1rem;">
                     Pick two players to compare their stats side-by-side. The radar chart shows percentile ranks across all qualified players.
                 </p>
                 <div class="cmp-pickers">

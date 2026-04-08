@@ -129,7 +129,7 @@ function _renderLeaderboard() {
     const sortColIdx = LB_COLS.findIndex(c => c.key === _lbSort.key); // 0-based among stat cols
 
     const bodyRows = displayed.map((p, i) => {
-        const color = TEAM_COLORS[p.team] || '#6b7280';
+        const color = getTeamColor(p.team);
         const badge = `<span class="lb-team-badge" title="${TEAM_NAMES[p.team] || p.team}" style="color:${color};border-color:${color}30;background:${color}15">${p.team}</span>`;
         const statCells = LB_COLS.map((c, ci) => {
             const isActive = ci === sortColIdx;
@@ -207,7 +207,7 @@ function renderMvpRace(mvpList, playerStats) {
     // Podium (top 3)
     const medals = ['🥇','🥈','🥉'];
     const podiumHtml = enriched.slice(0, 3).map((m, i) => {
-        const color   = TEAM_COLORS[m.team] || '#6b7280';
+        const color   = getTeamColor(m.team);
         const pct     = Math.round((m.mvp_score / maxScore) * 100);
         const avgPir  = m.avg_pir ?? m.avg_pir ?? '—';
         const avgPts  = m.avg_pts ?? '—';
@@ -233,7 +233,7 @@ function renderMvpRace(mvpList, playerStats) {
 
     // Full rankings table
     const tableRows = enriched.map((m, i) => {
-        const color = TEAM_COLORS[m.team] || '#6b7280';
+        const color = getTeamColor(m.team);
         const badge = `<span class="lb-team-badge" title="${TEAM_NAMES[m.team] || m.team}" style="color:${color};border-color:${color}30;background:${color}15">${m.team}</span>`;
         const avgPir  = m.avg_pir ?? '—';
         const avgPts  = m.avg_pts ?? '—';
@@ -373,7 +373,7 @@ function _renderRapmTeamSummary(team, rows) {
 
     const fmtV = v => { const s = v > 0 ? '+' : ''; return `<span class="rapm-val ${v > 0.1 ? 'positive' : v < -0.1 ? 'negative' : 'neutral'}">${s}${v.toFixed(2)}</span>`; };
 
-    const color = TEAM_COLORS[team] || '#6b7280';
+    const color = getTeamColor(team);
     el.innerHTML = `<div class="rapm-team-summary">
         <div><span class="lb-team-badge" style="color:${color};border-color:${color}30;background:${color}15;font-size:0.85rem">${team}</span> <strong style="color:var(--text-primary)">${TEAM_NAMES[team] || team}</strong></div>
         <div><span class="rapm-ts-label">Team Avg RAPM</span><br>${fmtV(teamRapm)}</div>
@@ -431,7 +431,7 @@ function _renderRapm() {
     const sortIdx = cols.findIndex(c => c.key === _rapmSort.key);
 
     const bodyHtml = displayed.map((p, i) => {
-        const color = TEAM_COLORS[p.team] || '#6b7280';
+        const color = getTeamColor(p.team);
         const badge = `<span class="lb-team-badge" title="${TEAM_NAMES[p.team] || p.team}" style="color:${color};border-color:${color}30;background:${color}15">${p.team}</span>`;
 
         const cells = cols.map((c, ci) => {
@@ -564,7 +564,7 @@ function _setupCmpInput(input, dropdownId, side) {
         ).slice(0, 12);
         if (!matches.length) { dd.innerHTML = '<div class="cmp-dropdown-item" style="color:var(--text-muted)">No matches</div>'; dd.classList.add('open'); return; }
         dd.innerHTML = matches.map((p, i) => {
-            const color = TEAM_COLORS[p.team] || '#6b7280';
+            const color = getTeamColor(p.team);
             return `<div class="cmp-dropdown-item" data-idx="${i}" onclick="_selectCmpPlayer('${side}', '${p.code}')">
                 <span>${p.name}</span>
                 <span class="cmp-dd-team" style="color:${color}">${TEAM_NAMES[p.team] || p.team}</span>
@@ -589,8 +589,8 @@ function _renderComparison() {
     if (!a || !b) return;
     const container = document.getElementById('cmp-result');
 
-    const colA = TEAM_COLORS[a.team] || '#6b7280';
-    const colB = TEAM_COLORS[b.team] || '#6b7280';
+    const colA = getTeamColor(a.team);
+    const colB = getTeamColor(b.team);
 
     // — Player cards —
     const card = (p, col) => {
