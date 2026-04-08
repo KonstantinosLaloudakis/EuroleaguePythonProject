@@ -19,21 +19,26 @@ const TEAM_NAMES = {
 };
 
 let _data = null;
+let _paintData = null;
+let _paintTab = 'players';
+let _paintSelectedPlayer = null;
 const ZONES = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
 
 // ── Boot ──────────────────────────────────────────────────────────────────
-fetch('data/current/shot_stats.json')
-    .then(r => r.json())
-    .then(data => {
-        _data = data;
-        populateFilters();
-        restoreFromURL();
-        renderAll();
-    })
-    .catch(err => {
-        document.getElementById('court-chart').innerHTML =
-            `<p style="color:var(--accent-red);padding:1rem">Failed to load shot data: ${err}</p>`;
-    });
+Promise.all([
+    fetch('data/current/shot_stats.json').then(r => r.json()),
+    fetch('data/current/paint_profiles.json').then(r => r.json()).catch(() => null),
+]).then(([shotData, paintData]) => {
+    _data = shotData;
+    _paintData = paintData;
+    populateFilters();
+    restoreFromURL();
+    renderAll();
+    if (_paintData) renderPaintProfiles();
+}).catch(err => {
+    document.getElementById('court-chart').innerHTML =
+        `<p style="color:var(--accent-red);padding:1rem">Failed to load shot data: ${err}</p>`;
+});
 
 function populateFilters() {
     const teamSel = document.getElementById('shot-team');
@@ -429,3 +434,206 @@ function renderDistChart(zones, label) {
     document.getElementById('dist-chart').innerHTML = '';
     Plotly.newPlot('dist-chart', traces, layout, { displayModeBar: false, responsive: true });
 }
+
+// ══════════════════════════════════════════════════════════════════════════
+// ── Paint Finishing Profiles ─────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════════════════════
+
+function switchPaintTab(tab, btn) {
+    _paintTab = tab;
+    _paintSelectedPlayer = null;
+    document.getElementById('paint-detail').classList.remove('visible');
+    document.querySelectorAll('.paint-tab-content').forEach(el => el.style.display = 'none');
+    document.getElementById(`paint-${tab}`).style.display = '';
+    document.querySelectorAll('#paint-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+
+function renderPaintProfiles() {
+    renderPaintPlayers();
+    renderPaintTeams();
+    renderPaintDefense();
+}
+
+function splitBar(p) {
+    const lPct = p.left_pct || 0;
+    const rPct = p.right_pct || 0;
+    const cPct = Math.max(0, 100 - lPct - rPct);
+    return `<div class="paint-split-bar">
+        <div class="paint-split-left" style="width:${lPct}%" title="Left ${lPct}%"></div>
+        <div class="paint-split-center" style="width:${cPct}%"></div>
+        <div class="paint-split-right" style="width:${rPct}%" title="Right ${rPct}%"></div>
+    </div>`;
+}
+
+function tendencyTag(p) {
+    const lPct = p.left_pct || 0;
+    const rPct = p.right_pct || 0;
+    if (lPct >= 55) return `<span class="paint-tag paint-tag-left">Goes Left</span>`;
+    if (rPct >= 55) return `<span class="paint-tag paint-tag-right">Goes Right</span>`;
+    return `<span class="paint-tag paint-tag-balanced">Balanced</span>`;
+}
+
+function fgpCell(val) {
+    if (val == null) return '–';
+    const color = val >= 65 ? '#22c55e' : val >= 55 ? '#a3e635' : val >= 45 ? '#fbbf24' : '#f87171';
+    return `<span style="color:${color};font-weight:700">${val}%</span>`;
+}
+
+function renderPaintPlayers() {
+    const tbody = document.getElementById('paint-players-body');
+    if (!_paintData || !_paintData.players) { tbody.innerHTML = ''; return; }
+
+    const rows = _paintData.players.map((p, i) => {
+        const color = TEAM_COLORS[p.team] || '#555';
+        return `<tr class="paint-row" onclick="selectPaintPlayer(${i})">
+            <td class="zone-name-cell">${p.player}</td>
+            <td><span style="color:${color};font-weight:600">${p.team}</span></td>
+            <td>${p.att}</td>
+            <td>${fgpCell(p.fg_pct)}</td>
+            <td>${p.left_pct}%</td>
+            <td>${p.right_pct}%</td>
+            <td>${fgpCell(p.left_fgp)}</td>
+            <td>${fgpCell(p.right_fgp)}</td>
+            <td>${splitBar(p)}</td>
+            <td>${tendencyTag(p)}</td>
+        </tr>`;
+    }).join('');
+    tbody.innerHTML = rows;
+}
+
+function renderPaintTeams() {
+    const tbody = document.getElementById('paint-teams-body');
+    if (!_paintData || !_paintData.teams) { tbody.innerHTML = ''; return; }
+
+    const entries = Object.entries(_paintData.teams)
+        .sort((a, b) => b[1].att - a[1].att);
+
+    const rows = entries.map(([code, p]) => {
+        const name = TEAM_NAMES[code] || code;
+        const color = TEAM_COLORS[code] || '#555';
+        return `<tr>
+            <td class="zone-name-cell"><span style="color:${color};font-weight:700">${name}</span></td>
+            <td>${p.att}</td>
+            <td>${fgpCell(p.fg_pct)}</td>
+            <td>${p.left_pct}%</td>
+            <td>${p.right_pct}%</td>
+            <td>${fgpCell(p.left_fgp)}</td>
+            <td>${fgpCell(p.right_fgp)}</td>
+            <td>${splitBar(p)}</td>
+        </tr>`;
+    }).join('');
+    tbody.innerHTML = rows;
+}
+
+function renderPaintDefense() {
+    const tbody = document.getElementById('paint-defense-body');
+    if (!_paintData || !_paintData.team_defense) { tbody.innerHTML = ''; return; }
+
+    const entries = Object.entries(_paintData.team_defense)
+        .sort((a, b) => a[1].fg_pct - b[1].fg_pct);  // best defense first
+
+    const rows = entries.map(([code, p]) => {
+        const name = TEAM_NAMES[code] || code;
+        const color = TEAM_COLORS[code] || '#555';
+        return `<tr>
+            <td class="zone-name-cell"><span style="color:${color};font-weight:700">${name}</span></td>
+            <td>${p.att}</td>
+            <td>${fgpCell(p.fg_pct)}</td>
+            <td>${fgpCell(p.left_fgp)}</td>
+            <td>${fgpCell(p.right_fgp)}</td>
+            <td>${splitBar(p)}</td>
+        </tr>`;
+    }).join('');
+    tbody.innerHTML = rows;
+}
+
+// ── Player paint detail card with SVG court ──────────────────────────────
+function selectPaintPlayer(idx) {
+    const detail = document.getElementById('paint-detail');
+    if (_paintSelectedPlayer === idx) {
+        _paintSelectedPlayer = null;
+        detail.classList.remove('visible');
+        return;
+    }
+    _paintSelectedPlayer = idx;
+    const p = _paintData.players[idx];
+    const color = TEAM_COLORS[p.team] || '#555';
+    const league = _paintData.league;
+
+    // L vs R efficiency delta
+    const lrDelta = p.left_fgp != null && p.right_fgp != null
+        ? (p.left_fgp - p.right_fgp).toFixed(1) : null;
+    const deltaText = lrDelta != null
+        ? (lrDelta > 0 ? `+${lrDelta}% better from left` : lrDelta < 0 ? `+${Math.abs(lrDelta)}% better from right` : 'Equal L/R')
+        : '';
+
+    const svg = buildPaintCourt(p, league, color);
+
+    detail.innerHTML = `
+        <div class="paint-detail-info">
+            <div class="paint-detail-name" style="color:${color}">${p.player}</div>
+            <div class="paint-detail-stats">
+                ${TEAM_NAMES[p.team] || p.team} · ${p.att} paint attempts · ${p.fg_pct}% overall<br>
+                Left: ${p.left_att} att, ${p.left_fgp ?? '–'}% FG (${p.left_pct}% of shots)<br>
+                Center: ${p.center_att} att, ${p.center_fgp ?? '–'}% FG<br>
+                Right: ${p.right_att} att, ${p.right_fgp ?? '–'}% FG (${p.right_pct}% of shots)<br>
+                <span style="font-weight:700;color:var(--text-primary)">${deltaText}</span>
+            </div>
+        </div>
+        <div class="paint-court-svg">${svg}</div>
+    `;
+    detail.classList.add('visible');
+}
+
+function buildPaintCourt(p, league, teamColor) {
+    const w = 280, h = 220;
+    // Half-court paint area, simplified top-down view
+    // Basket at bottom-center, paint rectangle, 3 zones: left, center, right
+
+    function fgColor(fgp) {
+        if (fgp == null) return '#374151';
+        if (fgp >= 70) return '#22c55e';
+        if (fgp >= 60) return '#86efac';
+        if (fgp >= 50) return '#fbbf24';
+        if (fgp >= 40) return '#fb923c';
+        return '#ef4444';
+    }
+
+    function zoneCircle(cx, cy, att, fgp, label, total) {
+        const maxR = 42;
+        const minR = 16;
+        const r = Math.min(maxR, Math.max(minR, Math.sqrt(att / total) * maxR * 2.5));
+        const fill = fgColor(fgp);
+        const fgText = fgp != null ? `${fgp}%` : '–';
+        return `
+            <circle cx="${cx}" cy="${cy}" r="${r}" fill="${fill}" fill-opacity="0.25" stroke="${fill}" stroke-width="2"/>
+            <text x="${cx}" y="${cy - 6}" text-anchor="middle" fill="${fill}" font-size="14" font-weight="800">${fgText}</text>
+            <text x="${cx}" y="${cy + 10}" text-anchor="middle" fill="#9ca3af" font-size="10">${att} att</text>
+            <text x="${cx}" y="${cy + 22}" text-anchor="middle" fill="#6b7280" font-size="9">${label}</text>
+        `;
+    }
+
+    const total = p.att || 1;
+
+    // Court outline
+    let svg = `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" style="max-width:100%">`;
+    // Background
+    svg += `<rect x="0" y="0" width="${w}" height="${h}" fill="#1a1b2e" rx="8"/>`;
+    // Paint rectangle
+    svg += `<rect x="60" y="30" width="160" height="160" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" rx="2"/>`;
+    // Basket
+    svg += `<circle cx="140" cy="190" r="5" fill="#ff6b00" stroke="#ff6b00" stroke-width="1.5"/>`;
+    svg += `<line x1="120" y1="198" x2="160" y2="198" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>`;
+    // Center line
+    svg += `<line x1="140" y1="30" x2="140" y2="190" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4,3"/>`;
+
+    // Three zones
+    svg += zoneCircle(80, 110, p.left_att, p.left_fgp, 'LEFT', total);
+    svg += zoneCircle(140, 80, p.center_att, p.center_fgp, 'CENTER', total);
+    svg += zoneCircle(200, 110, p.right_att, p.right_fgp, 'RIGHT', total);
+
+    svg += '</svg>';
+    return svg;
+}
+

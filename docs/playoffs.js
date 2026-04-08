@@ -56,6 +56,104 @@ function comb(n, k) {
     return r;
 }
 
+// Best-of-N series probability with alternating home court (2-2-1 pattern)
+// Higher seed (team A) is home for games 1, 2, 5; away for games 3, 4
+function seriesProbHCA(eloA, eloB, n) {
+    const need = Math.ceil(n / 2);
+    const homePattern = [true, true, false, false, true];
+
+    // Per-game win probability for team A
+    const gameProbs = [];
+    for (let g = 0; g < n; g++) {
+        gameProbs.push(homePattern[g]
+            ? eloWinProb(eloA, eloB, false)             // A home → A gets HCA
+            : 1 - eloWinProb(eloB, eloA, false));       // B home → invert B's HCA prob
+    }
+
+    // DP: walk through games, tracking P(winsA, winsB) states
+    let states = new Map();
+    states.set('0,0', 1.0);
+    let probA = 0;
+
+    for (let g = 0; g < n; g++) {
+        const p = gameProbs[g];
+        const next = new Map();
+
+        for (const [key, prob] of states) {
+            const [a, b] = key.split(',').map(Number);
+
+            // A wins game g
+            const a1 = a + 1;
+            if (a1 >= need) {
+                probA += prob * p;                       // A clinches
+            } else {
+                const k = `${a1},${b}`;
+                next.set(k, (next.get(k) || 0) + prob * p);
+            }
+
+            // B wins game g
+            const b1 = b + 1;
+            if (b1 < need) {
+                const k = `${a},${b1}`;
+                next.set(k, (next.get(k) || 0) + prob * (1 - p));
+            }
+            // else: B clinches — not counted for A
+        }
+
+        states = next;
+    }
+
+    return probA;
+}
+
+// Compute probability of each possible series outcome (e.g. 3-0, 3-1, 3-2, 0-3, ...)
+function seriesOutcomeProbs(eloA, eloB, n) {
+    const need = Math.ceil(n / 2);
+    const homePattern = [true, true, false, false, true];
+
+    const gameProbs = [];
+    for (let g = 0; g < n; g++) {
+        gameProbs.push(homePattern[g]
+            ? eloWinProb(eloA, eloB, false)
+            : 1 - eloWinProb(eloB, eloA, false));
+    }
+
+    let states = new Map();
+    states.set('0,0', 1.0);
+    const outcomes = {};           // "3-1" → probability
+
+    for (let g = 0; g < n; g++) {
+        const p = gameProbs[g];
+        const next = new Map();
+
+        for (const [key, prob] of states) {
+            const [a, b] = key.split(',').map(Number);
+
+            const a1 = a + 1;
+            if (a1 >= need) {
+                const k = `${a1}-${b}`;
+                outcomes[k] = (outcomes[k] || 0) + prob * p;
+            } else {
+                const k = `${a1},${b}`;
+                next.set(k, (next.get(k) || 0) + prob * p);
+            }
+
+            const b1 = b + 1;
+            if (b1 >= need) {
+                const k = `${a}-${b1}`;
+                outcomes[k] = (outcomes[k] || 0) + prob * (1 - p);
+            } else {
+                const k = `${a},${b1}`;
+                next.set(k, (next.get(k) || 0) + prob * (1 - p));
+            }
+        }
+
+        states = next;
+    }
+
+    return outcomes;
+}
+
 // ── Initialize ───────────────────────────────────────────────────────────
 async function init() {
     try {
@@ -135,6 +233,14 @@ function resetBracket() {
 
 // ── Render ────────────────────────────────────────────────────────────────
 function renderBracket() {
+    if (document.startViewTransition) {
+        document.startViewTransition(_doRenderBracket);
+    } else {
+        _doRenderBracket();
+    }
+}
+
+function _doRenderBracket() {
     const container = document.getElementById('bracket');
 
     container.innerHTML = `
@@ -176,21 +282,30 @@ function renderMatchup(round, idx, seriesLen, neutral, label) {
 
     let probA = null, probB = null;
     if (teamA && teamB) {
-        const pGame = eloWinProb(teamA.elo, teamB.elo, neutral);
         if (seriesLen > 1) {
-            probA = seriesProb(pGame, seriesLen);
+            probA = seriesProbHCA(teamA.elo, teamB.elo, seriesLen);
         } else {
-            probA = pGame;
+            probA = eloWinProb(teamA.elo, teamB.elo, neutral);
         }
         probB = 1 - probA;
     }
 
     const sideA = renderSide(teamA, probA, m.winner, round, idx, 'a');
     const sideB = renderSide(teamB, probB, m.winner, round, idx, 'b');
-    const badgeText = label || (seriesLen > 1 ? `Best of ${seriesLen}` : 'Single game');
-    const badge = `<div class="series-badge">${badgeText}</div>`;
 
-    return `<div class="matchup" data-round="${round}" data-idx="${idx}">${sideA}${sideB}${badge}</div>`;
+    let badgeHTML = '';
+    if (label) {
+        badgeHTML = `<div class="series-badge">${label}</div>`;
+    } else if (seriesLen > 1 && teamA && teamB) {
+        const prediction = getPredictedScore(teamA, teamB, seriesLen);
+        badgeHTML = `<div class="series-badge">Best of ${seriesLen} · HCA 2-2-1<div class="series-prediction">${prediction}</div></div>`;
+    } else if (seriesLen > 1) {
+        badgeHTML = `<div class="series-badge">Best of ${seriesLen} · HCA 2-2-1</div>`;
+    } else {
+        badgeHTML = `<div class="series-badge">Single game</div>`;
+    }
+
+    return `<div class="matchup" data-round="${round}" data-idx="${idx}">${sideA}${sideB}${badgeHTML}</div>`;
 }
 
 function renderSide(team, prob, winner, round, idx, side) {
@@ -205,7 +320,8 @@ function renderSide(team, prob, winner, round, idx, side) {
     const color = TEAM_COLORS[team.team] || '#555';
     const isWinner = winner && winner.team === team.team;
     const isLoser = winner && winner.team !== team.team;
-    const cls = isWinner ? ' winner' : isLoser ? ' loser' : '';
+    const isUpset = isWinner && prob < 0.5;
+    const cls = (isWinner ? ' winner' : isLoser ? ' loser' : '') + (isUpset ? ' upset' : '');
     const locked = (winner && !isWinner) ? ' locked' : '';
     const check = isWinner ? '<div class="seed-check">✓</div>' : '<div class="seed-check"></div>';
 
@@ -221,7 +337,9 @@ function renderSide(team, prob, winner, round, idx, side) {
         onclick = `onclick="pickWinner('${round}',${idx},'${side}')"`;
     }
 
-    return `<div class="matchup-seed${cls}${locked}" ${onclick}>
+    const hoverEvents = `onmouseenter="highlightPath('${team.team}')" onmouseleave="highlightPath(null)"`;
+
+    return `<div class="matchup-seed${cls}${locked}" ${onclick} ${hoverEvents}>
         <div class="seed-num">#${team.seed}</div>
         <div class="seed-color" style="background:${color}"></div>
         <div class="seed-info">
@@ -238,6 +356,43 @@ function probColor(p) {
     if (p >= 0.50) return '#a3e635';
     if (p >= 0.35) return '#fbbf24';
     return '#f87171';
+}
+
+// Series length distribution: mini bar chart showing P(in 3), P(in 4), P(in 5)
+function getPredictedScore(teamA, teamB, seriesLen) {
+    const outcomes = seriesOutcomeProbs(teamA.elo, teamB.elo, seriesLen);
+    const need = Math.ceil(seriesLen / 2);
+
+    // Group by series length (combine both winners)
+    const lengthProbs = {};
+    for (const [key, prob] of Object.entries(outcomes)) {
+        const [wA, wB] = key.split('-').map(Number);
+        const total = wA + wB;
+        lengthProbs[total] = (lengthProbs[total] || 0) + prob;
+    }
+
+    // Find most likely length
+    let bestLen = 0, bestProb = 0;
+    for (const [len, prob] of Object.entries(lengthProbs)) {
+        if (prob > bestProb) { bestLen = Number(len); bestProb = prob; }
+    }
+
+    // Build mini bar chart
+    const maxProb = Math.max(...Object.values(lengthProbs));
+    let html = '<div class="series-len-dist">';
+    for (let g = need; g <= seriesLen; g++) {
+        const p = lengthProbs[g] || 0;
+        const pct = (p * 100).toFixed(0);
+        const w = (p / maxProb) * 100;
+        const best = g === bestLen ? ' best' : '';
+        html += `<div class="len-row${best}">` +
+            `<span class="len-label">In ${g}</span>` +
+            `<div class="len-track"><div class="len-fill" style="width:${w}%"></div></div>` +
+            `<span class="len-pct">${pct}%</span>` +
+            `</div>`;
+    }
+    html += '</div>';
+    return html;
 }
 
 function renderChampion() {
@@ -387,8 +542,9 @@ function autoFill() {
         for (const idx of indices) {
             const m = _bracket[round][idx];
             if (!m.a || !m.b || m.winner) continue;
-            const pGame = eloWinProb(m.a.elo, m.b.elo, neutral);
-            const pA = seriesLen > 1 ? seriesProb(pGame, seriesLen) : pGame;
+            const pA = seriesLen > 1
+                ? seriesProbHCA(m.a.elo, m.b.elo, seriesLen)
+                : eloWinProb(m.a.elo, m.b.elo, neutral);
             const side = pA >= 0.5 ? 'a' : 'b';
             m.winner = side === 'a' ? m.a : m.b;
             cascadeForward(round, idx, side);
@@ -454,10 +610,15 @@ function simGame(a, b, neutral) {
 
 function simSeries(a, b, n, neutral) {
     const need = Math.ceil(n / 2);
-    let wA = 0, wB = 0;
-    const p = eloWinProb(a.elo, b.elo, neutral);
+    // 2-2-1 home court pattern: higher seed (a) home for games 1, 2, 5
+    const homePattern = [true, true, false, false, true];
+    let wA = 0, wB = 0, game = 0;
     while (wA < need && wB < need) {
+        const p = homePattern[game]
+            ? eloWinProb(a.elo, b.elo, false)
+            : 1 - eloWinProb(b.elo, a.elo, false);
         if (Math.random() < p) wA++; else wB++;
+        game++;
     }
     return wA >= need ? a : b;
 }
@@ -502,9 +663,10 @@ function computeChampionPath() {
     for (const round of rounds) {
         for (const m of _bracket[round]) {
             if (m.winner && m.winner.team === _champion.team && m.a && m.b) {
-                const pGame = eloWinProb(m.a.elo, m.b.elo, neutrals[round]);
                 const len = seriesLens[round];
-                const pA = len > 1 ? seriesProb(pGame, len) : pGame;
+                const pA = len > 1
+                    ? seriesProbHCA(m.a.elo, m.b.elo, len)
+                    : eloWinProb(m.a.elo, m.b.elo, neutrals[round]);
                 const side = m.winner.team === m.a.team ? pA : 1 - pA;
                 prob *= side;
             }
@@ -585,7 +747,33 @@ function drawConnectors() {
         path.setAttribute('stroke', strokeColor);
         path.setAttribute('stroke-width', '1.5');
         path.setAttribute('opacity', '0.4');
+        path.style.transition = 'opacity 0.2s, stroke-width 0.2s, stroke 0.2s';
+        
+        const m = _bracket[conn.from.round][conn.from.idx];
+        if (m && m.winner) {
+            path.setAttribute('data-team', m.winner.team);
+        }
+
         svg.appendChild(path);
+    }
+}
+
+function highlightPath(teamId) {
+    const svg = document.getElementById('bracket-connectors');
+    if (!svg) return;
+    
+    if (teamId) {
+        svg.classList.add('hovering');
+        svg.querySelectorAll('path').forEach(p => {
+            if (p.getAttribute('data-team') === teamId) {
+                p.classList.add('active-path');
+            } else {
+                p.classList.remove('active-path');
+            }
+        });
+    } else {
+        svg.classList.remove('hovering');
+        svg.querySelectorAll('path').forEach(p => p.classList.remove('active-path'));
     }
 }
 
@@ -616,21 +804,39 @@ function encodeBracket() {
 
 function updateURL() {
     const code = encodeBracket();
-    // Only set param if there are picks
-    if (code.replace(/-/g, '').length > 0) {
-        const url = new URL(window.location);
+    const hasPicks = code.replace(/-/g, '').length > 0;
+    
+    // Update URL
+    const url = new URL(window.location);
+    if (hasPicks) {
         url.searchParams.set('b', code);
-        history.replaceState(null, '', url);
     } else {
-        const url = new URL(window.location);
         url.searchParams.delete('b');
-        history.replaceState(null, '', url);
+    }
+    history.replaceState(null, '', url);
+
+    // Update LocalStorage
+    try {
+        if (hasPicks) {
+            localStorage.setItem('euroleague_bracket', code);
+        } else {
+            localStorage.removeItem('euroleague_bracket');
+        }
+    } catch (e) {
+        // Ignore errors if localStorage is blocked (e.g. incognito)
     }
 }
 
 function loadFromURL() {
     const params = new URLSearchParams(window.location.search);
-    const code = params.get('b');
+    let code = params.get('b');
+    
+    if (!code) {
+        try {
+            code = localStorage.getItem('euroleague_bracket');
+        } catch (e) {}
+    }
+    
     if (!code) return;
 
     // Reset first to get clean state

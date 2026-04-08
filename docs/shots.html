@@ -125,6 +125,68 @@
             vertical-align: middle;
             margin-right: 0.2rem;
         }
+        /* ── Paint profiles ─────────────────────────────────── */
+        .paint-table-wrap { overflow-x: auto; }
+
+        .paint-tag {
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 0.15rem 0.4rem;
+            border-radius: 3px;
+            white-space: nowrap;
+        }
+        .paint-tag-left { color: #60a5fa; background: rgba(96,165,250,0.12); }
+        .paint-tag-right { color: #f97316; background: rgba(249,115,22,0.12); }
+        .paint-tag-balanced { color: var(--text-muted); background: var(--bg-secondary); }
+
+        .zone-tbl tr.paint-row { cursor: pointer; transition: background 0.15s ease; }
+        .zone-tbl tr.paint-row:hover { background: var(--bg-secondary); }
+        .zone-tbl tr.paint-row.selected { background: rgba(59, 130, 246, 0.08); }
+
+        .paint-split-bar {
+            display: flex;
+            height: 14px;
+            width: 100px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .paint-split-left { background: #60a5fa; }
+        .paint-split-center { background: #6b7280; }
+        .paint-split-right { background: #f97316; }
+
+        /* ── Paint detail card ─────────────────────────────── */
+        .paint-detail {
+            display: none;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--bg-secondary);
+        }
+
+        .paint-detail.visible { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+
+        .paint-detail-info { flex: 1; min-width: 200px; }
+
+        .paint-detail-name {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .paint-detail-stats {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .paint-court-svg { flex-shrink: 0; }
+
+        @media (max-width: 480px) {
+            .paint-split-bar { width: 60px; }
+        }
     </style>
 </head>
 
@@ -146,7 +208,7 @@
 
     <header>
         <h1>🎯 Shot Lab</h1>
-        <p class="subtitle">Zone Heatmaps · Shooting Splits · Shot Distribution</p>
+        <p class="subtitle">Zone Heatmaps · Shooting Splits · Paint Finishing Profiles</p>
         <p id="last-updated" class="last-updated" style="display:none"></p>
     </header>
 
@@ -198,6 +260,81 @@
         <div class="stat-card">
             <h3>Shot Distribution by Zone</h3>
             <div id="dist-chart" class="dist-chart-wrap"></div>
+        </div>
+
+        <!-- Paint Finishing Profiles -->
+        <div class="stat-card" style="margin-top:1rem">
+            <h3>Paint Finishing Profiles</h3>
+            <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.75rem">
+                How players and teams finish in the paint (zones A/B/C). Left, center, right determined by shot X-coordinate. Min 30 attempts.
+            </p>
+            <div class="tab-bar" id="paint-tabs" style="margin-bottom:1rem">
+                <button class="tab-btn active" onclick="switchPaintTab('players', this)">Players</button>
+                <button class="tab-btn" onclick="switchPaintTab('teams', this)">Teams</button>
+                <button class="tab-btn" onclick="switchPaintTab('defense', this)">Team Defense</button>
+            </div>
+
+            <!-- Player detail paint court -->
+            <div id="paint-detail" class="paint-detail"></div>
+
+            <!-- Tables -->
+            <div id="paint-players" class="paint-tab-content">
+                <div class="paint-table-wrap">
+                    <table class="zone-tbl">
+                        <thead>
+                            <tr>
+                                <th>Player</th>
+                                <th>Tm</th>
+                                <th>Att</th>
+                                <th>FG%</th>
+                                <th>L%</th>
+                                <th>R%</th>
+                                <th>L-FG%</th>
+                                <th>R-FG%</th>
+                                <th>Split</th>
+                                <th>Tendency</th>
+                            </tr>
+                        </thead>
+                        <tbody id="paint-players-body"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="paint-teams" class="paint-tab-content" style="display:none">
+                <div class="paint-table-wrap">
+                    <table class="zone-tbl">
+                        <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>Att</th>
+                                <th>FG%</th>
+                                <th>L%</th>
+                                <th>R%</th>
+                                <th>L-FG%</th>
+                                <th>R-FG%</th>
+                                <th>Split</th>
+                            </tr>
+                        </thead>
+                        <tbody id="paint-teams-body"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="paint-defense" class="paint-tab-content" style="display:none">
+                <div class="paint-table-wrap">
+                    <table class="zone-tbl">
+                        <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>Att Allowed</th>
+                                <th>Opp FG%</th>
+                                <th>Opp L-FG%</th>
+                                <th>Opp R-FG%</th>
+                                <th>Split</th>
+                            </tr>
+                        </thead>
+                        <tbody id="paint-defense-body"></tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </main>
 

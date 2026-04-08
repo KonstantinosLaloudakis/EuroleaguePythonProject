@@ -115,7 +115,13 @@
         }
 
         .matchup-seed.winner {
-            background: rgba(34, 197, 94, 0.08);
+            background: rgba(34, 197, 94, 0.08); /* green */
+            border-left: 2px solid transparent;
+        }
+
+        .matchup-seed.winner.upset {
+            background: rgba(249, 115, 22, 0.15); /* orange */
+            border-left: 2px solid #f97316;
         }
 
         .matchup-seed.loser {
@@ -203,6 +209,30 @@
             border-color: var(--border);
         }
 
+        @keyframes popIn {
+            0% { transform: scale(0.9); opacity: 0; }
+            60% { transform: scale(1.03); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .champion-card:not(.empty) {
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.2) forwards;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+        }
+
+        @keyframes trophyWiggle {
+            0%, 100% { transform: rotate(0) scale(1); }
+            20% { transform: rotate(-8deg) scale(1.1); }
+            40% { transform: rotate(8deg) scale(1.1); }
+            60% { transform: rotate(-4deg) scale(1.05); }
+            80% { transform: rotate(4deg) scale(1.05); }
+        }
+
+        .champion-card:not(.empty) .champion-trophy {
+            animation: trophyWiggle 0.8s ease forwards 0.2s;
+            display: inline-block;
+        }
+
         .champion-trophy {
             font-size: 2.5rem;
             margin-bottom: 0.3rem;
@@ -239,6 +269,72 @@
             padding: 0.2rem 0;
             background: var(--bg-secondary);
             border-top: 1px solid var(--border);
+        }
+
+        .series-len-dist {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            padding: 0.3rem 0.6rem 0.25rem;
+        }
+
+        .len-row {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .len-row.best .len-label,
+        .len-row.best .len-pct {
+            color: var(--text-primary);
+        }
+
+        .len-row.best .len-fill {
+            background: var(--accent-blue, #60a5fa);
+        }
+
+        .len-label {
+            font-size: 0.62rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            width: 24px;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .len-track {
+            flex: 1;
+            height: 6px;
+            background: var(--bg-card);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .len-fill {
+            height: 100%;
+            border-radius: 3px;
+            background: var(--border);
+            transition: width 0.3s ease;
+        }
+
+        .len-pct {
+            font-size: 0.62rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            width: 26px;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        /* ── SVG Path Highlighting ──────────────────────────── */
+        #bracket-connectors.hovering path {
+            opacity: 0.15;
+        }
+
+        #bracket-connectors.hovering path.active-path {
+            opacity: 1;
+            stroke-width: 2.5;
+            stroke: var(--accent-blue, #60a5fa);
         }
 
         /* ── Path probability summary ──────────────────────── */
@@ -320,7 +416,11 @@
         }
 
         .matchup-seed.winner:hover .seed-check {
-            color: var(--accent-red);
+            color: var(--accent-red) !important;
+        }
+
+        .matchup-seed.winner.upset .seed-check {
+            color: #f97316 !important;
         }
 
         @media (max-width: 480px) {

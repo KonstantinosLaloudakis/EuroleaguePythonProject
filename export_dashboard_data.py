@@ -366,6 +366,171 @@ def build_shot_stats():
     return output
 
 
+def build_paint_profiles():
+    """Build paint finishing profiles: L/R/C breakdown for players and teams."""
+    import csv
+    import math
+    shot_file = 'shot_data_2025_2025.csv'
+    if not os.path.exists(shot_file):
+        print("  shot_data_2025_2025.csv not found — skipping paint profiles.")
+        return None
+
+    # Accumulators: {key: {left_att, left_made, right_att, right_made, center_att, center_made}}
+    from collections import defaultdict
+    def new_profile():
+        return {'left_att':0,'left_made':0,'right_att':0,'right_made':0,
+                'center_att':0,'center_made':0,'fb_att':0,'sc_att':0}
+
+    players = defaultdict(lambda: {'team':'', 'profile': new_profile()})
+    teams = defaultdict(new_profile)
+    league = new_profile()
+
+    with open(shot_file, newline='', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            zone = (row.get('ZONE') or '').strip()
+            if zone not in ('A', 'B', 'C'):
+                continue
+            action = (row.get('ID_ACTION') or '').strip()
+            if action not in ('2FGM', '2FGA'):
+                continue
+
+            x = float(row.get('COORD_X', 0) or 0)
+            made = action == '2FGM'
+            fb = int(row.get('FASTBREAK', 0) or 0)
+            sc = int(row.get('SECOND_CHANCE', 0) or 0)
+
+            if x < -20:
+                side = 'left'
+            elif x > 20:
+                side = 'right'
+            else:
+                side = 'center'
+
+            team_code = (row.get('TEAM') or '').strip()
+            player = (row.get('PLAYER') or '').strip()
+
+            for target in [league, teams[team_code], players[player]['profile']]:
+                target[f'{side}_att'] += 1
+                if made:
+                    target[f'{side}_made'] += 1
+                if fb:
+                    target['fb_att'] += 1
+                if sc:
+                    target['sc_att'] += 1
+
+            players[player]['team'] = team_code
+
+    def finalize_profile(p):
+        total = p['left_att'] + p['right_att'] + p['center_att']
+        if total == 0:
+            return None
+        made = p['left_made'] + p['right_made'] + p['center_made']
+        left_fgp = round(p['left_made'] / p['left_att'] * 100, 1) if p['left_att'] > 0 else None
+        right_fgp = round(p['right_made'] / p['right_att'] * 100, 1) if p['right_att'] > 0 else None
+        center_fgp = round(p['center_made'] / p['center_att'] * 100, 1) if p['center_att'] > 0 else None
+        left_pct = round(p['left_att'] / total * 100, 1)
+        right_pct = round(p['right_att'] / total * 100, 1)
+        return {
+            'att': total,
+            'made': made,
+            'fg_pct': round(made / total * 100, 1),
+            'left_att': p['left_att'], 'left_made': p['left_made'],
+            'left_fgp': left_fgp, 'left_pct': left_pct,
+            'right_att': p['right_att'], 'right_made': p['right_made'],
+            'right_fgp': right_fgp, 'right_pct': right_pct,
+            'center_att': p['center_att'], 'center_made': p['center_made'],
+            'center_fgp': center_fgp,
+        }
+
+    # Players: min 30 paint attempts
+    player_profiles = []
+    for name, data in players.items():
+        fp = finalize_profile(data['profile'])
+        if fp and fp['att'] >= 30:
+            fp['player'] = name
+            fp['team'] = data['team']
+            player_profiles.append(fp)
+    player_profiles.sort(key=lambda x: x['att'], reverse=True)
+
+    # Teams
+    team_profiles = {}
+    for code, prof in teams.items():
+        fp = finalize_profile(prof)
+        if fp:
+            team_profiles[code] = fp
+
+    # Team paint defense: opponent paint finishing
+    team_defense = defaultdict(new_profile)
+    with open(shot_file, newline='', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        # We need opponent info — load game data for team mapping
+    # Simpler approach: use game-level data
+    # Load all game stats to map gamecodes to home/away teams
+    all_stats = load_json('mvp_all_game_stats_2025.json') or []
+    game_teams = {}
+    for g in all_stats:
+        gc = g.get('Gamecode', g.get('GameCode'))
+        lp = g.get('local.players') or []
+        rp = g.get('road.players') or []
+        if lp and rp:
+            local = lp[0]['player']['club']['code']
+            road = rp[0]['player']['club']['code']
+            game_teams[gc] = {'local': local, 'road': road}
+
+    with open(shot_file, newline='', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            zone = (row.get('ZONE') or '').strip()
+            if zone not in ('A', 'B', 'C'):
+                continue
+            action = (row.get('ID_ACTION') or '').strip()
+            if action not in ('2FGM', '2FGA'):
+                continue
+
+            x = float(row.get('COORD_X', 0) or 0)
+            made = action == '2FGM'
+            gc = int(row.get('Gamecode', 0) or 0)
+            team_code = (row.get('TEAM') or '').strip()
+
+            if x < -20:
+                side = 'left'
+            elif x > 20:
+                side = 'right'
+            else:
+                side = 'center'
+
+            # Find the defending team
+            gt = game_teams.get(gc)
+            if not gt:
+                continue
+            if team_code == gt['local']:
+                defender = gt['road']
+            elif team_code == gt['road']:
+                defender = gt['local']
+            else:
+                continue
+
+            target = team_defense[defender]
+            target[f'{side}_att'] += 1
+            if made:
+                target[f'{side}_made'] += 1
+
+    team_def_profiles = {}
+    for code, prof in team_defense.items():
+        fp = finalize_profile(prof)
+        if fp:
+            team_def_profiles[code] = fp
+
+    output = {
+        'league': finalize_profile(league),
+        'players': player_profiles,
+        'teams': team_profiles,
+        'team_defense': team_def_profiles,
+    }
+    return output
+
+
 def build_game_recaps():
     """Build per-round game recaps with box scores from game stats + backtest."""
     all_stats = load_json('mvp_all_game_stats_2025.json')
@@ -756,6 +921,18 @@ def main():
         n_players = len(shot_stats.get('players', {}))
         n_teams = len(shot_stats.get('teams', {}))
         print(f"  Shot stats: {n_teams} teams, {n_players} players -> {shot_path}")
+
+    # ── Paint profiles export ──────────────────────────────────────────────
+    print("\n--- Building paint profiles ---")
+    paint_profiles = build_paint_profiles()
+    if paint_profiles:
+        paint_path = os.path.join(out_dir, 'paint_profiles.json')
+        with open(paint_path, 'w', encoding='utf-8') as f:
+            json.dump(paint_profiles, f, ensure_ascii=False, indent=2)
+        n_players = len(paint_profiles.get('players', []))
+        n_teams = len(paint_profiles.get('teams', {}))
+        n_def = len(paint_profiles.get('team_defense', {}))
+        print(f"  Paint profiles: {n_players} players, {n_teams} teams, {n_def} team defense -> {paint_path}")
 
     # ── Game recaps export ─────────────────────────────────────────────────
     print("\n--- Building game recaps ---")
