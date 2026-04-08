@@ -423,6 +423,12 @@
             color: #f97316 !important;
         }
 
+        @media (max-width: 768px) {
+            .bracket { gap: 1.2rem; min-width: 820px; }
+            .bracket-round { min-width: 170px; }
+            .matchup-seed { font-size: 0.82rem; }
+        }
+
         @media (max-width: 480px) {
             .bracket { gap: 1rem; min-width: 750px; }
             .bracket-round { min-width: 160px; }
@@ -493,7 +499,8 @@
         <div>19 seasons · 7,000+ games · Updated daily</div>
     </footer>
 
-    <script src="playoffs.js"></script>
+    <script src="constants.js"></script>
+<script src="playoffs.js"></script>
 </body>
 
 </html>

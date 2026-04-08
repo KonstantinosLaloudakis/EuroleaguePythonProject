@@ -3,24 +3,6 @@
  */
 'use strict';
 
-const TEAM_COLORS = {
-    BER:'#005CA9', IST:'#E30613', MCO:'#D4AF37', BAS:'#B50031',
-    RED:'#CC0000', MIL:'#C8102E', BAR:'#004D98', MUN:'#0066B2',
-    ULK:'#003366', ASV:'#222222', TEL:'#F6C300', OLY:'#E2001A',
-    PAN:'#007F3D', PAR:'#333333', PRS:'#1a1a2e', MAD:'#6d4c94',
-    PAM:'#EB7622', VIR:'#1a1a1a', ZAL:'#006233', DUB:'#555555',
-    HTA:'#cc0000',
-};
-
-const TEAM_NAMES = {
-    BER:'ALBA Berlin', IST:'Anadolu Efes', MCO:'AS Monaco', BAS:'Baskonia',
-    RED:'Crvena Zvezda', MIL:'EA7 Milan', BAR:'FC Barcelona', MUN:'Bayern Munich',
-    ULK:'Fenerbahce', ASV:'ASVEL', TEL:'Maccabi Tel Aviv', OLY:'Olympiacos',
-    PAN:'Panathinaikos', PAR:'Partizan', PRS:'Paris Basketball', MAD:'Real Madrid',
-    PAM:'Panathinaikos', VIR:'Virtus Bologna', ZAL:'Zalgiris', DUB:'Maccabi Ramat Gan',
-    HTA:'Hapoel Tel Aviv',
-};
-
 // MVP component config: key → { label, color, weight }
 const COMPONENTS = [
     { key: 'pir',         label: 'PIR',        color: '#3b82f6', weight: 0.45 },
@@ -33,6 +15,7 @@ const COMPONENTS = [
 let _mvpData = [];
 let _raceData = [];
 let _selectedIdx = null;
+let _mvpSort = { key: 'mvp_score', dir: 'desc' };
 
 async function init() {
     try {
@@ -79,26 +62,49 @@ function computePercentiles() {
 }
 
 // ── Render MVP ladder ────────────────────────────────────────────────────
-function renderLadder() {
-    const tbody = document.getElementById('mvp-tbody');
-    const pctls = computePercentiles();
+const MVP_COLS = [
+    { key: null, label: '#' },
+    { key: 'player', label: 'Player' },
+    { key: null, label: 'Team' },
+    { key: 'mvp_score', label: 'Score', cls: 'num' },
+    { key: null, label: 'Breakdown' },
+    { key: 'avg_pir', label: 'PIR', cls: 'num' },
+    { key: 'gp', label: 'GP', cls: 'num' },
+];
 
-    // Map percentile keys to component keys
+function renderLadder() {
+    const pctls = computePercentiles();
     const pctlMap = {
-        pir: 'avg_pir',
-        wpa: 'wpa',
-        team_win: 'team_win_pct',
-        clutch: 'clutch_eff',
-        consistency: 'consistency',
+        pir: 'avg_pir', wpa: 'wpa', team_win: 'team_win_pct',
+        clutch: 'clutch_eff', consistency: 'consistency',
     };
 
+    // Sort data (keep original indices for percentiles)
+    const indexed = _mvpData.map((m, i) => ({ m, i }));
+    indexed.sort((a, b) => {
+        let va = a.m[_mvpSort.key], vb = b.m[_mvpSort.key];
+        if (typeof va === 'string') { va = va.toLowerCase(); vb = vb.toLowerCase(); }
+        return _mvpSort.dir === 'desc' ? (vb > va ? 1 : vb < va ? -1 : 0) : (va > vb ? 1 : va < vb ? -1 : 0);
+    });
+
+    // Build sortable header
+    let thead = '<tr>';
+    for (const col of MVP_COLS) {
+        const active = col.key && _mvpSort.key === col.key;
+        const arrow = active ? (_mvpSort.dir === 'desc' ? ' ▼' : ' ▲') : '';
+        const cls = [col.cls || '', active ? 'sort-active' : '', col.key ? 'sortable-th' : ''].filter(Boolean).join(' ');
+        const onclick = col.key ? ` onclick="sortMvp('${col.key}')" style="cursor:pointer"` : '';
+        thead += `<th class="${cls}"${onclick}>${col.label}${arrow}</th>`;
+    }
+    thead += '</tr>';
+    document.querySelector('#mvp-table thead').innerHTML = thead;
+
+    // Build rows
     let html = '';
-    for (let i = 0; i < _mvpData.length; i++) {
-        const m = _mvpData[i];
+    for (const { m, i } of indexed) {
         const color = TEAM_COLORS[m.team] || '#555';
         const rankCls = m.rank === 1 ? 'top1' : m.rank <= 3 ? 'top3' : '';
 
-        // Build stacked bar segments from percentiles
         let barHtml = '';
         for (const comp of COMPONENTS) {
             const pctl = pctls[i][pctlMap[comp.key]] || 0;
@@ -116,7 +122,17 @@ function renderLadder() {
             <td class="num">${m.gp}</td>
         </tr>`;
     }
-    tbody.innerHTML = html;
+    document.getElementById('mvp-tbody').innerHTML = html;
+}
+
+function sortMvp(key) {
+    if (_mvpSort.key === key) {
+        _mvpSort.dir = _mvpSort.dir === 'desc' ? 'asc' : 'desc';
+    } else {
+        _mvpSort.key = key;
+        _mvpSort.dir = 'desc';
+    }
+    renderLadder();
 }
 
 function renderLegend() {
@@ -294,20 +310,10 @@ function renderRaceChart() {
     }
 
     const layout = {
-        paper_bgcolor: 'rgba(0,0,0,0)',
-        plot_bgcolor: 'rgba(0,0,0,0)',
-        font: { family: 'Inter, sans-serif', color: '#9ca3af' },
+        ...PLOTLY_THEME,
         margin: { t: 20, r: 20, b: 50, l: 50 },
-        xaxis: {
-            title: 'Round',
-            gridcolor: '#1f2937',
-            linecolor: '#1f2937',
-        },
-        yaxis: {
-            title: 'MVP Score',
-            gridcolor: '#1f2937',
-            linecolor: '#1f2937',
-        },
+        xaxis: { ...PLOTLY_THEME.xaxis, title: 'Round' },
+        yaxis: { ...PLOTLY_THEME.yaxis, title: 'MVP Score' },
         legend: {
             orientation: 'h',
             y: -0.18,
@@ -318,10 +324,7 @@ function renderRaceChart() {
         hovermode: 'closest',
     };
 
-    Plotly.newPlot(container, traces, layout, {
-        responsive: true,
-        displayModeBar: false,
-    });
+    Plotly.newPlot(container, traces, layout, PLOTLY_CONFIG);
 }
 
 // ── Utility ──────────────────────────────────────────────────────────────

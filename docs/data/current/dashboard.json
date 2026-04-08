@@ -1,6 +1,6 @@
 {
   "round": 36,
-  "updated": "2026-04-08T14:59:51Z",
+  "updated": "2026-04-08T15:37:28Z",
   "teams": [
     {
       "team": "OLY",
@@ -258,7 +258,47 @@
       "remaining_opponents": [
         "HTA",
         "MIL"
-      ]
+      ],
+      "win_distribution": {
+        "15": 100,
+        "16": 100,
+        "17": 100,
+        "18": 100,
+        "19": 100,
+        "20": 100,
+        "21": 100,
+        "22": 100,
+        "23": 100,
+        "24": 100,
+        "25": 93,
+        "26": 46,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 95.4,
+        "2": 3.3,
+        "3": 1.2,
+        "4": 0.1,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0
+      }
     },
     {
       "team": "PAM",
@@ -516,7 +556,47 @@
       "remaining_opponents": [
         "PAN",
         "DUB"
-      ]
+      ],
+      "win_distribution": {
+        "15": 100,
+        "16": 100,
+        "17": 100,
+        "18": 100,
+        "19": 100,
+        "20": 100,
+        "21": 100,
+        "22": 100,
+        "23": 100,
+        "24": 80,
+        "25": 27,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 1.7,
+        "2": 31.4,
+        "3": 42.8,
+        "4": 12.3,
+        "5": 8.7,
+        "6": 3.1,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0
+      }
     },
     {
       "team": "ULK",
@@ -774,7 +854,47 @@
       "remaining_opponents": [
         "MAD",
         "ASV"
-      ]
+      ],
+      "win_distribution": {
+        "15": 100,
+        "16": 100,
+        "17": 100,
+        "18": 100,
+        "19": 100,
+        "20": 100,
+        "21": 100,
+        "22": 100,
+        "23": 100,
+        "24": 94,
+        "25": 49,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 2.2,
+        "2": 34.3,
+        "3": 25.1,
+        "4": 23.3,
+        "5": 12.2,
+        "6": 2.4,
+        "7": 0.6,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0
+      }
     },
     {
       "team": "MAD",
@@ -1032,7 +1152,47 @@
       "remaining_opponents": [
         "ULK",
         "RED"
-      ]
+      ],
+      "win_distribution": {
+        "15": 100,
+        "16": 100,
+        "17": 100,
+        "18": 100,
+        "19": 100,
+        "20": 100,
+        "21": 100,
+        "22": 100,
+        "23": 93,
+        "24": 37,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.0,
+        "2": 25.3,
+        "3": 16.3,
+        "4": 22.0,
+        "5": 24.5,
+        "6": 10.1,
+        "7": 1.7,
+        "8": 0.1,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0
+      }
     },
     {
       "team": "HTA",
@@ -1285,7 +1445,47 @@
         "TEL",
         "OLY",
         "MCO"
-      ]
+      ],
+      "win_distribution": {
+        "15": 100,
+        "16": 100,
+        "17": 100,
+        "18": 100,
+        "19": 100,
+        "20": 100,
+        "21": 100,
+        "22": 100,
+        "23": 79,
+        "24": 36,
+        "25": 6,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.8,
+        "2": 5.6,
+        "3": 11.1,
+        "4": 22.6,
+        "5": 23.6,
+        "6": 21.2,
+        "7": 11.0,
+        "8": 4.0,
+        "9": 0.1,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0
+      }
     },
     {
       "team": "ZAL",
@@ -1543,7 +1743,47 @@
       "remaining_opponents": [
         "PAR",
         "PRS"
-      ]
+      ],
+      "win_distribution": {
+        "15": 100,
+        "16": 100,
+        "17": 100,
+        "18": 100,
+        "19": 100,
+        "20": 100,
+        "21": 100,
+        "22": 91,
+        "23": 43,
+        "24": 0,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 3.5,
+        "4": 19.3,
+        "5": 24.7,
+        "6": 33.0,
+        "7": 13.6,
+        "8": 5.4,
+        "9": 0.5,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0
+      }
     },
     {
       "team": "PAN",
@@ -1801,7 +2041,47 @@
       "remaining_opponents": [
         "PAM",
         "IST"
-      ]
+      ],
+      "win_distribution": {
+        "15": 100,
+        "16": 100,
+        "17": 100,
+        "18": 100,
+        "19": 100,
+        "20": 100,
+        "21": 100,
+        "22": 91,
+        "23": 29,
+        "24": 0,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.4,
+        "5": 5.2,
+        "6": 18.9,
+        "7": 42.6,
+        "8": 26.1,
+        "9": 5.1,
+        "10": 1.5,
+        "11": 0.2,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0
+      }
     },
     {
       "team": "RED",
@@ -2059,7 +2339,47 @@
       "remaining_opponents": [
         "ASV",
         "MAD"
-      ]
+      ],
+      "win_distribution": {
+        "15": 100,
+        "16": 100,
+        "17": 100,
+        "18": 100,
+        "19": 100,
+        "20": 100,
+        "21": 75,
+        "22": 8,
+        "23": 0,
+        "24": 0,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.2,
+        "7": 2.6,
+        "8": 9.0,
+        "9": 49.4,
+        "10": 22.1,
+        "11": 13.6,
+        "12": 3.1,
+        "13": 0.0,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0
+      }
     },
     {
       "team": "BAR",
@@ -2317,7 +2637,47 @@
       "remaining_opponents": [
         "MCO",
         "MUN"
-      ]
+      ],
+      "win_distribution": {
+        "15": 100,
+        "16": 100,
+        "17": 100,
+        "18": 100,
+        "19": 100,
+        "20": 100,
+        "21": 88,
+        "22": 25,
+        "23": 0,
+        "24": 0,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.2,
+        "7": 4.0,
+        "8": 19.8,
+        "9": 11.5,
+        "10": 33.1,
+        "11": 29.0,
+        "12": 2.4,
+        "13": 0.0,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0
+      }
     },
     {
       "team": "MCO",
@@ -2570,7 +2930,47 @@
         "ASV",
         "BAR",
         "HTA"
-      ]
+      ],
+      "win_distribution": {
+        "15": 100,
+        "16": 100,
+        "17": 100,
+        "18": 100,
+        "19": 100,
+        "20": 99,
+        "21": 86,
+        "22": 40,
+        "23": 0,
+        "24": 0,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 1.1,
+        "6": 10.9,
+        "7": 23.9,
+        "8": 34.4,
+        "9": 16.2,
+        "10": 7.1,
+        "11": 5.1,
+        "12": 1.4,
+        "13": 0.0,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0
+      }
     },
     {
       "team": "DUB",
@@ -2828,7 +3228,47 @@
       "remaining_opponents": [
         "IST",
         "PAM"
-      ]
+      ],
+      "win_distribution": {
+        "15": 100,
+        "16": 100,
+        "17": 100,
+        "18": 100,
+        "19": 100,
+        "20": 91,
+        "21": 45,
+        "22": 0,
+        "23": 0,
+        "24": 0,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 1.2,
+        "9": 16.6,
+        "10": 30.7,
+        "11": 36.5,
+        "12": 14.9,
+        "13": 0.1,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0
+      }
     },
     {
       "team": "TEL",
@@ -3081,7 +3521,47 @@
         "HTA",
         "PRS",
         "VIR"
-      ]
+      ],
+      "win_distribution": {
+        "15": 100,
+        "16": 100,
+        "17": 100,
+        "18": 100,
+        "19": 94,
+        "20": 68,
+        "21": 23,
+        "22": 0,
+        "23": 0,
+        "24": 0,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.8,
+        "10": 5.5,
+        "11": 15.5,
+        "12": 71.6,
+        "13": 6.6,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0
+      }
     },
     {
       "team": "MIL",
@@ -3339,7 +3819,47 @@
       "remaining_opponents": [
         "MUN",
         "OLY"
-      ]
+      ],
+      "win_distribution": {
+        "15": 100,
+        "16": 100,
+        "17": 100,
+        "18": 73,
+        "19": 9,
+        "20": 0,
+        "21": 0,
+        "22": 0,
+        "23": 0,
+        "24": 0,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 6.6,
+        "13": 86.7,
+        "14": 6.3,
+        "15": 0.4,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0
+      }
     },
     {
       "team": "MUN",
@@ -3597,7 +4117,47 @@
       "remaining_opponents": [
         "MIL",
         "BAR"
-      ]
+      ],
+      "win_distribution": {
+        "15": 100,
+        "16": 100,
+        "17": 42,
+        "18": 5,
+        "19": 0,
+        "20": 0,
+        "21": 0,
+        "22": 0,
+        "23": 0,
+        "24": 0,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.1,
+        "13": 4.4,
+        "14": 61.3,
+        "15": 31.7,
+        "16": 2.6,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0
+      }
     },
     {
       "team": "PAR",
@@ -3850,7 +4410,47 @@
         "IST",
         "ZAL",
         "BAS"
-      ]
+      ],
+      "win_distribution": {
+        "15": 100,
+        "16": 88,
+        "17": 48,
+        "18": 10,
+        "19": 0,
+        "20": 0,
+        "21": 0,
+        "22": 0,
+        "23": 0,
+        "24": 0,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 2.3,
+        "14": 29.5,
+        "15": 56.6,
+        "16": 10.3,
+        "17": 1.4,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0
+      }
     },
     {
       "team": "PRS",
@@ -4108,7 +4708,47 @@
       "remaining_opponents": [
         "TEL",
         "ZAL"
-      ]
+      ],
+      "win_distribution": {
+        "15": 56,
+        "16": 9,
+        "17": 0,
+        "18": 0,
+        "19": 0,
+        "20": 0,
+        "21": 0,
+        "22": 0,
+        "23": 0,
+        "24": 0,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 2.9,
+        "15": 10.4,
+        "16": 78.7,
+        "17": 8.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0
+      }
     },
     {
       "team": "VIR",
@@ -4366,7 +5006,47 @@
       "remaining_opponents": [
         "BAS",
         "TEL"
-      ]
+      ],
+      "win_distribution": {
+        "15": 18,
+        "16": 0,
+        "17": 0,
+        "18": 0,
+        "19": 0,
+        "20": 0,
+        "21": 0,
+        "22": 0,
+        "23": 0,
+        "24": 0,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 0.0,
+        "15": 0.9,
+        "16": 8.5,
+        "17": 66.0,
+        "18": 24.2,
+        "19": 0.4,
+        "20": 0.0
+      }
     },
     {
       "team": "BAS",
@@ -4624,7 +5304,47 @@
       "remaining_opponents": [
         "VIR",
         "PAR"
-      ]
+      ],
+      "win_distribution": {
+        "15": 0,
+        "16": 0,
+        "17": 0,
+        "18": 0,
+        "19": 0,
+        "20": 0,
+        "21": 0,
+        "22": 0,
+        "23": 0,
+        "24": 0,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 24.2,
+        "18": 66.3,
+        "19": 9.4,
+        "20": 0.0
+      }
     },
     {
       "team": "IST",
@@ -4877,7 +5597,47 @@
         "PAR",
         "DUB",
         "PAN"
-      ]
+      ],
+      "win_distribution": {
+        "15": 0,
+        "16": 0,
+        "17": 0,
+        "18": 0,
+        "19": 0,
+        "20": 0,
+        "21": 0,
+        "22": 0,
+        "23": 0,
+        "24": 0,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.4,
+        "18": 9.4,
+        "19": 90.2,
+        "20": 0.0
+      }
     },
     {
       "team": "ASV",
@@ -5130,7 +5890,47 @@
         "MCO",
         "RED",
         "ULK"
-      ]
+      ],
+      "win_distribution": {
+        "15": 0,
+        "16": 0,
+        "17": 0,
+        "18": 0,
+        "19": 0,
+        "20": 0,
+        "21": 0,
+        "22": 0,
+        "23": 0,
+        "24": 0,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "29": 0,
+        "30": 0
+      },
+      "seed_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 100.0
+      }
     }
   ],
   "mvp": [
@@ -17603,6 +18403,7341 @@
       "est_minutes": 1118.0,
       "possessions": 1956.0,
       "RAPM_Rank": 268
+    }
+  ],
+  "wpa": [
+    {
+      "player": "FRANCISCO, SYLVAIN",
+      "team": "ZAL",
+      "wpa": 1442.04,
+      "plays": 1634,
+      "rank": 1
+    },
+    {
+      "player": "HIFI, NADIR",
+      "team": "PRS",
+      "wpa": 1410.88,
+      "plays": 1737,
+      "rank": 2
+    },
+    {
+      "player": "LUWAWU-CABARROT, TIMOTHE",
+      "team": "BAS",
+      "wpa": 1399.98,
+      "plays": 1308,
+      "rank": 3
+    },
+    {
+      "player": "WRIGHT IV, MCKINLEY",
+      "team": "DUB",
+      "wpa": 1335.45,
+      "plays": 1313,
+      "rank": 4
+    },
+    {
+      "player": "EDWARDS, CARSEN",
+      "team": "VIR",
+      "wpa": 1329.84,
+      "plays": 1366,
+      "rank": 5
+    },
+    {
+      "player": "BALDWIN IV, WADE",
+      "team": "ULK",
+      "wpa": 1301.9,
+      "plays": 1457,
+      "rank": 6
+    },
+    {
+      "player": "NUNN, KENDRICK",
+      "team": "PAN",
+      "wpa": 1278.72,
+      "plays": 1169,
+      "rank": 7
+    },
+    {
+      "player": "DORSEY, TYLER",
+      "team": "OLY",
+      "wpa": 1273.16,
+      "plays": 1216,
+      "rank": 8
+    },
+    {
+      "player": "HORTON TUCKER, TALEN",
+      "team": "ULK",
+      "wpa": 1253.86,
+      "plays": 1414,
+      "rank": 9
+    },
+    {
+      "player": "VEZENKOV, SASHA",
+      "team": "OLY",
+      "wpa": 1213.83,
+      "plays": 1128,
+      "rank": 10
+    },
+    {
+      "player": "JAMES, MIKE",
+      "team": "MCO",
+      "wpa": 1180.09,
+      "plays": 1347,
+      "rank": 11
+    },
+    {
+      "player": "NWORA, JORDAN",
+      "team": "RED",
+      "wpa": 1134.1,
+      "plays": 1170,
+      "rank": 12
+    },
+    {
+      "player": "BLAKENEY, ANTONIO",
+      "team": "HTA",
+      "wpa": 1111.18,
+      "plays": 893,
+      "rank": 13
+    },
+    {
+      "player": "PUNTER, KEVIN",
+      "team": "BAR",
+      "wpa": 1101.39,
+      "plays": 1153,
+      "rank": 14
+    },
+    {
+      "player": "WRIGHT, MOSES",
+      "team": "ZAL",
+      "wpa": 1095.02,
+      "plays": 1227,
+      "rank": 15
+    },
+    {
+      "player": "MONEKE, CHIMA",
+      "team": "RED",
+      "wpa": 1094.98,
+      "plays": 1226,
+      "rank": 16
+    },
+    {
+      "player": "BRYANT, ELIJAH",
+      "team": "HTA",
+      "wpa": 1068.74,
+      "plays": 1167,
+      "rank": 17
+    },
+    {
+      "player": "HEZONJA, MARIO",
+      "team": "MAD",
+      "wpa": 1055.17,
+      "plays": 1113,
+      "rank": 18
+    },
+    {
+      "player": "KABENGELE, MFIONDU",
+      "team": "DUB",
+      "wpa": 1048.7,
+      "plays": 1160,
+      "rank": 19
+    },
+    {
+      "player": "ROBINSON, JUSTIN",
+      "team": "PRS",
+      "wpa": 1042.46,
+      "plays": 1415,
+      "rank": 20
+    },
+    {
+      "player": "BROOKS, ARMONI",
+      "team": "MIL",
+      "wpa": 1040.13,
+      "plays": 1007,
+      "rank": 21
+    },
+    {
+      "player": "WATSON, GLYNN",
+      "team": "ASV",
+      "wpa": 1005.38,
+      "plays": 1004,
+      "rank": 22
+    },
+    {
+      "player": "MILLER-MCINTYRE, CODI",
+      "team": "RED",
+      "wpa": 989.97,
+      "plays": 1429,
+      "rank": 23
+    },
+    {
+      "player": "BROWN, STERLING",
+      "team": "PAR",
+      "wpa": 989.13,
+      "plays": 1044,
+      "rank": 24
+    },
+    {
+      "player": "OBST, ANDREAS",
+      "team": "MUN",
+      "wpa": 972.17,
+      "plays": 976,
+      "rank": 25
+    },
+    {
+      "player": "SORKIN, ROMAN",
+      "team": "TEL",
+      "wpa": 959.1,
+      "plays": 1161,
+      "rank": 26
+    },
+    {
+      "player": "BACON, DWAYNE",
+      "team": "DUB",
+      "wpa": 954.4,
+      "plays": 1167,
+      "rank": 27
+    },
+    {
+      "player": "TUBELIS, AZUOLAS",
+      "team": "ZAL",
+      "wpa": 938.22,
+      "plays": 1082,
+      "rank": 28
+    },
+    {
+      "player": "OSMANI, ERCAN",
+      "team": "IST",
+      "wpa": 931.83,
+      "plays": 1016,
+      "rank": 29
+    },
+    {
+      "player": "OTURU, DAN",
+      "team": "HTA",
+      "wpa": 928.26,
+      "plays": 1103,
+      "rank": 30
+    },
+    {
+      "player": "MONTERO, JEAN",
+      "team": "PAM",
+      "wpa": 923.2,
+      "plays": 1172,
+      "rank": 31
+    },
+    {
+      "player": "CLYBURN, WILL",
+      "team": "BAR",
+      "wpa": 922.27,
+      "plays": 922,
+      "rank": 32
+    },
+    {
+      "player": "FOURNIER, EVAN",
+      "team": "OLY",
+      "wpa": 916.5,
+      "plays": 868,
+      "rank": 33
+    },
+    {
+      "player": "CAMPAZZO, FACUNDO",
+      "team": "MAD",
+      "wpa": 912.22,
+      "plays": 1157,
+      "rank": 34
+    },
+    {
+      "player": "SHIELDS, SHAVON",
+      "team": "MIL",
+      "wpa": 891.81,
+      "plays": 1024,
+      "rank": 35
+    },
+    {
+      "player": "MORGAN, MATTHEW",
+      "team": "VIR",
+      "wpa": 887.1,
+      "plays": 1064,
+      "rank": 36
+    },
+    {
+      "player": "GUDURIC, MARKO",
+      "team": "MIL",
+      "wpa": 884.16,
+      "plays": 1048,
+      "rank": 37
+    },
+    {
+      "player": "REUVERS, NATHAN",
+      "team": "PAM",
+      "wpa": 871.9,
+      "plays": 1084,
+      "rank": 38
+    },
+    {
+      "player": "LYLES, TREY",
+      "team": "MAD",
+      "wpa": 870.23,
+      "plays": 1047,
+      "rank": 39
+    },
+    {
+      "player": "DIALLO, ALPHA",
+      "team": "MCO",
+      "wpa": 858.4,
+      "plays": 1087,
+      "rank": 40
+    },
+    {
+      "player": "OKOBO, ELIE",
+      "team": "MCO",
+      "wpa": 853.68,
+      "plays": 1068,
+      "rank": 41
+    },
+    {
+      "player": "PETRUSEV, FILIP",
+      "team": "DUB",
+      "wpa": 852.09,
+      "plays": 1129,
+      "rank": 42
+    },
+    {
+      "player": "TAYLOR, KAMERON",
+      "team": "PAM",
+      "wpa": 850.22,
+      "plays": 1049,
+      "rank": 43
+    },
+    {
+      "player": "BUTLER, JARED",
+      "team": "RED",
+      "wpa": 835.93,
+      "plays": 1001,
+      "rank": 44
+    },
+    {
+      "player": "LOYD, JORDAN",
+      "team": "IST",
+      "wpa": 833.26,
+      "plays": 900,
+      "rank": 45
+    },
+    {
+      "player": "CLARK III, JIMMY",
+      "team": "TEL",
+      "wpa": 819.08,
+      "plays": 1104,
+      "rank": 46
+    },
+    {
+      "player": "BIBEROVIC, TARIK",
+      "team": "ULK",
+      "wpa": 813.63,
+      "plays": 926,
+      "rank": 47
+    },
+    {
+      "player": "LEDAY, ZACH",
+      "team": "MIL",
+      "wpa": 812.58,
+      "plays": 857,
+      "rank": 48
+    },
+    {
+      "player": "SHENGELIA, TORNIKE",
+      "team": "BAR",
+      "wpa": 798.68,
+      "plays": 1057,
+      "rank": 49
+    },
+    {
+      "player": "BADIO, BRANCOU",
+      "team": "PAM",
+      "wpa": 798.31,
+      "plays": 985,
+      "rank": 50
+    },
+    {
+      "player": "THOMPSON, DARIUS",
+      "team": "PAM",
+      "wpa": 792.38,
+      "plays": 1012,
+      "rank": 51
+    },
+    {
+      "player": "HOARD, JAYLEN",
+      "team": "TEL",
+      "wpa": 786.92,
+      "plays": 1052,
+      "rank": 52
+    },
+    {
+      "player": "JONES, CHRIS",
+      "team": "HTA",
+      "wpa": 784.46,
+      "plays": 881,
+      "rank": 53
+    },
+    {
+      "player": "CORDINIER, ISAIA",
+      "team": "IST",
+      "wpa": 767.34,
+      "plays": 829,
+      "rank": 54
+    },
+    {
+      "player": "DE COLO, NANDO",
+      "team": "ASV",
+      "wpa": 762.34,
+      "plays": 843,
+      "rank": 55
+    },
+    {
+      "player": "WASHINGTON, DUANE",
+      "team": "PAR",
+      "wpa": 757.88,
+      "plays": 780,
+      "rank": 56
+    },
+    {
+      "player": "VILDOZA, LUCA",
+      "team": "VIR",
+      "wpa": 743.13,
+      "plays": 841,
+      "rank": 57
+    },
+    {
+      "player": "BRIZUELA, DARIO",
+      "team": "BAR",
+      "wpa": 739.79,
+      "plays": 740,
+      "rank": 58
+    },
+    {
+      "player": "OSMAN, CEDI",
+      "team": "PAN",
+      "wpa": 726.5,
+      "plays": 906,
+      "rank": 59
+    },
+    {
+      "player": "JESSUP, JUSTINIAN",
+      "team": "MUN",
+      "wpa": 722.73,
+      "plays": 717,
+      "rank": 60
+    },
+    {
+      "player": "SIMMONS, KOBI",
+      "team": "BAS",
+      "wpa": 720.31,
+      "plays": 911,
+      "rank": 61
+    },
+    {
+      "player": "BLOSSOMGAME, JARON",
+      "team": "MCO",
+      "wpa": 716.51,
+      "plays": 833,
+      "rank": 62
+    },
+    {
+      "player": "WILLIAMS-GOSS, NIGEL",
+      "team": "ZAL",
+      "wpa": 716.25,
+      "plays": 841,
+      "rank": 63
+    },
+    {
+      "player": "WALKER IV, LONNIE",
+      "team": "TEL",
+      "wpa": 702.79,
+      "plays": 894,
+      "rank": 64
+    },
+    {
+      "player": "WEILER-BABB, NICK",
+      "team": "IST",
+      "wpa": 700.91,
+      "plays": 1006,
+      "rank": 65
+    },
+    {
+      "player": "BONGA, ISAAC",
+      "team": "PAR",
+      "wpa": 698.47,
+      "plays": 1046,
+      "rank": 66
+    },
+    {
+      "player": "HERNANGOMEZ, JUANCHO",
+      "team": "PAN",
+      "wpa": 693.6,
+      "plays": 873,
+      "rank": 67
+    },
+    {
+      "player": "ALSTON JR., DERRICK",
+      "team": "VIR",
+      "wpa": 690.01,
+      "plays": 837,
+      "rank": 68
+    },
+    {
+      "player": "BRISSETT, O'SHAE J",
+      "team": "TEL",
+      "wpa": 685.73,
+      "plays": 917,
+      "rank": 69
+    },
+    {
+      "player": "THEIS, DANIEL",
+      "team": "MCO",
+      "wpa": 680.5,
+      "plays": 883,
+      "rank": 70
+    },
+    {
+      "player": "MICIC, VASILIJE",
+      "team": "HTA",
+      "wpa": 672.63,
+      "plays": 1091,
+      "rank": 71
+    },
+    {
+      "player": "MIROTIC, NIKOLA",
+      "team": "MCO",
+      "wpa": 669.11,
+      "plays": 845,
+      "rank": 72
+    },
+    {
+      "player": "SLOUKAS, KOSTAS",
+      "team": "PAN",
+      "wpa": 665.08,
+      "plays": 1087,
+      "rank": 73
+    },
+    {
+      "player": "TAVARES, WALTER",
+      "team": "MAD",
+      "wpa": 658.6,
+      "plays": 1141,
+      "rank": 74
+    },
+    {
+      "player": "MILUTINOV, NIKOLA",
+      "team": "OLY",
+      "wpa": 652.34,
+      "plays": 965,
+      "rank": 75
+    },
+    {
+      "player": "ELLIS, QUINN",
+      "team": "MIL",
+      "wpa": 649.61,
+      "plays": 958,
+      "rank": 76
+    },
+    {
+      "player": "VESELY, JAN",
+      "team": "BAR",
+      "wpa": 640.67,
+      "plays": 824,
+      "rank": 77
+    },
+    {
+      "player": "FORREST, TRENT",
+      "team": "BAS",
+      "wpa": 637.73,
+      "plays": 852,
+      "rank": 78
+    },
+    {
+      "player": "BLATT, TAMIR",
+      "team": "TEL",
+      "wpa": 627.01,
+      "plays": 869,
+      "rank": 79
+    },
+    {
+      "player": "MOORE, OMARI",
+      "team": "PAM",
+      "wpa": 626.96,
+      "plays": 1034,
+      "rank": 80
+    },
+    {
+      "player": "IZUNDU, EBUKA",
+      "team": "RED",
+      "wpa": 614.98,
+      "plays": 639,
+      "rank": 81
+    },
+    {
+      "player": "SATORANSKY, TOMAS",
+      "team": "BAR",
+      "wpa": 612.15,
+      "plays": 878,
+      "rank": 82
+    },
+    {
+      "player": "COLSON, BONZIE",
+      "team": "ULK",
+      "wpa": 604.51,
+      "plays": 743,
+      "rank": 83
+    },
+    {
+      "player": "DOZIER, PJ",
+      "team": "IST",
+      "wpa": 603.61,
+      "plays": 716,
+      "rank": 84
+    },
+    {
+      "player": "LO, MAODO",
+      "team": "ZAL",
+      "wpa": 599.84,
+      "plays": 843,
+      "rank": 85
+    },
+    {
+      "player": "MIKE, ISIAHA",
+      "team": "MUN",
+      "wpa": 582.15,
+      "plays": 943,
+      "rank": 86
+    },
+    {
+      "player": "NEBO, JOSH",
+      "team": "MIL",
+      "wpa": 578.69,
+      "plays": 686,
+      "rank": 87
+    },
+    {
+      "player": "SHORTS, TJ",
+      "team": "PAN",
+      "wpa": 570.75,
+      "plays": 897,
+      "rank": 88
+    },
+    {
+      "player": "M'BAYE, AMATH",
+      "team": "PRS",
+      "wpa": 567.23,
+      "plays": 855,
+      "rank": 89
+    },
+    {
+      "player": "BOOKER, DEVIN",
+      "team": "MIL",
+      "wpa": 565.03,
+      "plays": 855,
+      "rank": 90
+    },
+    {
+      "player": "STRAZEL, MATTHEW",
+      "team": "MCO",
+      "wpa": 557.68,
+      "plays": 944,
+      "rank": 91
+    },
+    {
+      "player": "DIAKITE, MAMADI",
+      "team": "BAS",
+      "wpa": 555.77,
+      "plays": 990,
+      "rank": 92
+    },
+    {
+      "player": "RHODEN, JARED",
+      "team": "PRS",
+      "wpa": 554.87,
+      "plays": 779,
+      "rank": 93
+    },
+    {
+      "player": "JONES, TYRIQUE",
+      "team": "PAR",
+      "wpa": 552.37,
+      "plays": 859,
+      "rank": 94
+    },
+    {
+      "player": "MOTLEY, JOHNATHAN",
+      "team": "HTA",
+      "wpa": 547.82,
+      "plays": 709,
+      "rank": 95
+    },
+    {
+      "player": "JONES, CARLIK",
+      "team": "PAR",
+      "wpa": 538.83,
+      "plays": 475,
+      "rank": 96
+    },
+    {
+      "player": "PETERS, ALEC",
+      "team": "OLY",
+      "wpa": 538.22,
+      "plays": 654,
+      "rank": 97
+    },
+    {
+      "player": "GRANT, JERIAN",
+      "team": "PAN",
+      "wpa": 520.25,
+      "plays": 830,
+      "rank": 98
+    },
+    {
+      "player": "OJELEYE, SEMI",
+      "team": "RED",
+      "wpa": 519.7,
+      "plays": 815,
+      "rank": 99
+    },
+    {
+      "player": "VAUTIER, BASTIEN",
+      "team": "ASV",
+      "wpa": 512.21,
+      "plays": 825,
+      "rank": 100
+    },
+    {
+      "player": "SANTOS, MARCIO",
+      "team": "TEL",
+      "wpa": 510.3,
+      "plays": 821,
+      "rank": 101
+    },
+    {
+      "player": "HOWARD, MARKUS",
+      "team": "BAS",
+      "wpa": 505.45,
+      "plays": 621,
+      "rank": 102
+    },
+    {
+      "player": "NIANG, SALIOU",
+      "team": "VIR",
+      "wpa": 503.2,
+      "plays": 944,
+      "rank": 103
+    },
+    {
+      "player": "PRADILLA, JAIME",
+      "team": "PAM",
+      "wpa": 497.02,
+      "plays": 954,
+      "rank": 104
+    },
+    {
+      "player": "SMITS, ROLANDS",
+      "team": "IST",
+      "wpa": 494.72,
+      "plays": 727,
+      "rank": 105
+    },
+    {
+      "player": "HEURTEL, THOMAS",
+      "team": "ASV",
+      "wpa": 494.28,
+      "plays": 717,
+      "rank": 106
+    },
+    {
+      "player": "LUCIC, VLADIMIR",
+      "team": "MUN",
+      "wpa": 493.11,
+      "plays": 753,
+      "rank": 107
+    },
+    {
+      "player": "HALL, DEVON",
+      "team": "ULK",
+      "wpa": 492.62,
+      "plays": 885,
+      "rank": 108
+    },
+    {
+      "player": "BOLMARO, LEANDRO",
+      "team": "MIL",
+      "wpa": 491.19,
+      "plays": 828,
+      "rank": 109
+    },
+    {
+      "player": "NDIAYE, MBAYE",
+      "team": "ASV",
+      "wpa": 488.01,
+      "plays": 881,
+      "rank": 110
+    },
+    {
+      "player": "RATHAN-MAYES, XAVIER",
+      "team": "MUN",
+      "wpa": 485.91,
+      "plays": 700,
+      "rank": 111
+    },
+    {
+      "player": "MALEDON, THEO",
+      "team": "MAD",
+      "wpa": 485.83,
+      "plays": 826,
+      "rank": 112
+    },
+    {
+      "player": "COSTELLO, MATTHEW",
+      "team": "PAM",
+      "wpa": 485.49,
+      "plays": 801,
+      "rank": 113
+    },
+    {
+      "player": "DECK, GABRIEL",
+      "team": "MAD",
+      "wpa": 482.47,
+      "plays": 661,
+      "rank": 114
+    },
+    {
+      "player": "ANGOLA, BRAIAN",
+      "team": "ASV",
+      "wpa": 476.66,
+      "plays": 461,
+      "rank": 115
+    },
+    {
+      "player": "SLEVA, DUSTIN",
+      "team": "ZAL",
+      "wpa": 472.58,
+      "plays": 849,
+      "rank": 116
+    },
+    {
+      "player": "JALLOW, KARIM",
+      "team": "VIR",
+      "wpa": 472.19,
+      "plays": 737,
+      "rank": 117
+    },
+    {
+      "player": "ANDERSON, JUSTIN",
+      "team": "DUB",
+      "wpa": 471.66,
+      "plays": 580,
+      "rank": 118
+    },
+    {
+      "player": "AVRAMOVIC, ALEKSA",
+      "team": "DUB",
+      "wpa": 464.09,
+      "plays": 541,
+      "rank": 119
+    },
+    {
+      "player": "HAZER, SEHMUS",
+      "team": "IST",
+      "wpa": 458.08,
+      "plays": 480,
+      "rank": 120
+    },
+    {
+      "player": "LUNDBERG, IFFE",
+      "team": "TEL",
+      "wpa": 454.26,
+      "plays": 468,
+      "rank": 121
+    },
+    {
+      "player": "LEAF, TJ",
+      "team": "TEL",
+      "wpa": 449.78,
+      "plays": 583,
+      "rank": 122
+    },
+    {
+      "player": "KALINIC, NIKOLA",
+      "team": "RED",
+      "wpa": 447.13,
+      "plays": 861,
+      "rank": 123
+    },
+    {
+      "player": "MALCOLM, COLLIN",
+      "team": "HTA",
+      "wpa": 444.63,
+      "plays": 719,
+      "rank": 124
+    },
+    {
+      "player": "OKEKE, CHUMA",
+      "team": "MAD",
+      "wpa": 438.44,
+      "plays": 590,
+      "rank": 125
+    },
+    {
+      "player": "STEVENS, LAMAR",
+      "team": "PRS",
+      "wpa": 434.64,
+      "plays": 647,
+      "rank": 126
+    },
+    {
+      "player": "HAYES, KEVARRIUS",
+      "team": "MCO",
+      "wpa": 432.03,
+      "plays": 663,
+      "rank": 127
+    },
+    {
+      "player": "MUSA, DZANAN",
+      "team": "DUB",
+      "wpa": 429.16,
+      "plays": 519,
+      "rank": 128
+    },
+    {
+      "player": "BUTKEVICIUS, ARNAS",
+      "team": "ZAL",
+      "wpa": 425.24,
+      "plays": 644,
+      "rank": 129
+    },
+    {
+      "player": "OMORUYI, EUGENE",
+      "team": "BAS",
+      "wpa": 422.84,
+      "plays": 724,
+      "rank": 130
+    },
+    {
+      "player": "SMAILAGIC, ALEN",
+      "team": "VIR",
+      "wpa": 422.78,
+      "plays": 630,
+      "rank": 131
+    },
+    {
+      "player": "DA SILVA, OSCAR",
+      "team": "MUN",
+      "wpa": 416.33,
+      "plays": 629,
+      "rank": 132
+    },
+    {
+      "player": "NEDOVIC, NEMANJA",
+      "team": "MCO",
+      "wpa": 410.0,
+      "plays": 551,
+      "rank": 133
+    },
+    {
+      "player": "FERNANDO, BRUNO",
+      "team": "MAD",
+      "wpa": 408.62,
+      "plays": 887,
+      "rank": 134
+    },
+    {
+      "player": "PARRA, JOEL",
+      "team": "BAR",
+      "wpa": 408.09,
+      "plays": 703,
+      "rank": 135
+    },
+    {
+      "player": "DIOUF, MOUHAMET",
+      "team": "VIR",
+      "wpa": 404.3,
+      "plays": 835,
+      "rank": 136
+    },
+    {
+      "player": "KURUCS, RODIONS",
+      "team": "BAS",
+      "wpa": 401.73,
+      "plays": 715,
+      "rank": 137
+    },
+    {
+      "player": "SPAGNOLO, MATTEO",
+      "team": "BAS",
+      "wpa": 398.84,
+      "plays": 723,
+      "rank": 138
+    },
+    {
+      "player": "DIMITRIJEVIC, NENO",
+      "team": "MUN",
+      "wpa": 398.42,
+      "plays": 452,
+      "rank": 139
+    },
+    {
+      "player": "HERNANGOMEZ, WILLY",
+      "team": "BAR",
+      "wpa": 394.77,
+      "plays": 801,
+      "rank": 140
+    },
+    {
+      "player": "OSETKOWSKI, DYLAN",
+      "team": "PAR",
+      "wpa": 392.73,
+      "plays": 670,
+      "rank": 141
+    },
+    {
+      "player": "SELJAAS, ZACHARY",
+      "team": "ASV",
+      "wpa": 389.51,
+      "plays": 739,
+      "rank": 142
+    },
+    {
+      "player": "ULANOVAS, EDGARAS",
+      "team": "ZAL",
+      "wpa": 389.2,
+      "plays": 697,
+      "rank": 143
+    },
+    {
+      "player": "GABRIEL, WENYEN",
+      "team": "MUN",
+      "wpa": 383.32,
+      "plays": 807,
+      "rank": 144
+    },
+    {
+      "player": "WARD, TYSON",
+      "team": "OLY",
+      "wpa": 382.94,
+      "plays": 729,
+      "rank": 145
+    },
+    {
+      "player": "WAINRIGHT, ISH",
+      "team": "HTA",
+      "wpa": 382.61,
+      "plays": 649,
+      "rank": 146
+    },
+    {
+      "player": "LARKIN, SHANE",
+      "team": "IST",
+      "wpa": 382.02,
+      "plays": 382,
+      "rank": 147
+    },
+    {
+      "player": "MCCORMACK, DAVID",
+      "team": "MUN",
+      "wpa": 379.73,
+      "plays": 577,
+      "rank": 148
+    },
+    {
+      "player": "HALL, DONTA",
+      "team": "OLY",
+      "wpa": 378.23,
+      "plays": 626,
+      "rank": 149
+    },
+    {
+      "player": "FAYE, MOUHAMED",
+      "team": "PRS",
+      "wpa": 364.28,
+      "plays": 951,
+      "rank": 150
+    },
+    {
+      "player": "HERRERA, SEBASTIAN",
+      "team": "PRS",
+      "wpa": 362.67,
+      "plays": 850,
+      "rank": 151
+    },
+    {
+      "player": "HARRISON, SHAQUILLE",
+      "team": "ASV",
+      "wpa": 362.28,
+      "plays": 686,
+      "rank": 152
+    },
+    {
+      "player": "BERTANS, DAVIS",
+      "team": "DUB",
+      "wpa": 351.99,
+      "plays": 593,
+      "rank": 153
+    },
+    {
+      "player": "FELIZ, ANDRES",
+      "team": "MAD",
+      "wpa": 348.15,
+      "plays": 608,
+      "rank": 154
+    },
+    {
+      "player": "GARUBA, USMAN",
+      "team": "MAD",
+      "wpa": 343.56,
+      "plays": 565,
+      "rank": 155
+    },
+    {
+      "player": "FARIED, KENNETH",
+      "team": "PAN",
+      "wpa": 342.47,
+      "plays": 599,
+      "rank": 156
+    },
+    {
+      "player": "DOWTIN JR, JEFFREY",
+      "team": "TEL",
+      "wpa": 339.72,
+      "plays": 354,
+      "rank": 157
+    },
+    {
+      "player": "JANTUNEN, MIKAEL",
+      "team": "ULK",
+      "wpa": 339.34,
+      "plays": 724,
+      "rank": 158
+    },
+    {
+      "player": "SAKO, NEAL",
+      "team": "PAM",
+      "wpa": 337.41,
+      "plays": 759,
+      "rank": 159
+    },
+    {
+      "player": "WILLIS, DEREK",
+      "team": "PRS",
+      "wpa": 331.4,
+      "plays": 675,
+      "rank": 160
+    },
+    {
+      "player": "PUERTO, JOSEP",
+      "team": "PAM",
+      "wpa": 329.46,
+      "plays": 621,
+      "rank": 161
+    },
+    {
+      "player": "LEE, SABEN",
+      "team": "OLY",
+      "wpa": 327.33,
+      "plays": 581,
+      "rank": 162
+    },
+    {
+      "player": "TRAORE, ARMEL",
+      "team": "ASV",
+      "wpa": 324.89,
+      "plays": 688,
+      "rank": 163
+    },
+    {
+      "player": "MASSA, BODIAN",
+      "team": "ASV",
+      "wpa": 324.05,
+      "plays": 746,
+      "rank": 164
+    },
+    {
+      "player": "DIALLO, HAMIDOU",
+      "team": "BAS",
+      "wpa": 319.88,
+      "plays": 502,
+      "rank": 165
+    },
+    {
+      "player": "RICCI, GIAMPAOLO",
+      "team": "MIL",
+      "wpa": 319.61,
+      "plays": 561,
+      "rank": 166
+    },
+    {
+      "player": "LLULL, SERGIO",
+      "team": "MAD",
+      "wpa": 314.46,
+      "plays": 434,
+      "rank": 167
+    },
+    {
+      "player": "AJINCA, MELVIN",
+      "team": "ASV",
+      "wpa": 301.73,
+      "plays": 531,
+      "rank": 168
+    },
+    {
+      "player": "ABALDE, ALBERTO",
+      "team": "MAD",
+      "wpa": 299.55,
+      "plays": 546,
+      "rank": 169
+    },
+    {
+      "player": "MITOGLOU, KONSTANTINOS",
+      "team": "PAN",
+      "wpa": 298.56,
+      "plays": 511,
+      "rank": 170
+    },
+    {
+      "player": "MELLI, NICOLO",
+      "team": "ULK",
+      "wpa": 297.53,
+      "plays": 800,
+      "rank": 171
+    },
+    {
+      "player": "WALKUP, THOMAS",
+      "team": "OLY",
+      "wpa": 293.73,
+      "plays": 763,
+      "rank": 172
+    },
+    {
+      "player": "OUATTARA, YAKUBA",
+      "team": "PRS",
+      "wpa": 293.31,
+      "plays": 772,
+      "rank": 173
+    },
+    {
+      "player": "HOLMES, RICHAUN",
+      "team": "PAN",
+      "wpa": 290.14,
+      "plays": 457,
+      "rank": 174
+    },
+    {
+      "player": "SWIDER, COLE",
+      "team": "IST",
+      "wpa": 289.23,
+      "plays": 334,
+      "rank": 175
+    },
+    {
+      "player": "DOKOSSI, ALLAN",
+      "team": "PRS",
+      "wpa": 288.82,
+      "plays": 882,
+      "rank": 176
+    },
+    {
+      "player": "NOWELL, MARKQUIS",
+      "team": "BAS",
+      "wpa": 284.85,
+      "plays": 589,
+      "rank": 177
+    },
+    {
+      "player": "LAPROVITTOLA, NICOLAS",
+      "team": "BAR",
+      "wpa": 284.5,
+      "plays": 521,
+      "rank": 178
+    },
+    {
+      "player": "MOTIEJUNAS, DONATAS",
+      "team": "RED",
+      "wpa": 283.45,
+      "plays": 495,
+      "rank": 179
+    },
+    {
+      "player": "MILTON, SHAKE",
+      "team": "PAR",
+      "wpa": 279.82,
+      "plays": 453,
+      "rank": 180
+    },
+    {
+      "player": "NORRIS, MILES",
+      "team": "BAR",
+      "wpa": 275.59,
+      "plays": 402,
+      "rank": 181
+    },
+    {
+      "player": "MORGAN, JEREMY",
+      "team": "PRS",
+      "wpa": 272.89,
+      "plays": 761,
+      "rank": 182
+    },
+    {
+      "player": "SEDEKERSKIS, TADAS",
+      "team": "BAS",
+      "wpa": 269.38,
+      "plays": 317,
+      "rank": 183
+    },
+    {
+      "player": "KEY, BRAXTON",
+      "team": "PAM",
+      "wpa": 267.21,
+      "plays": 637,
+      "rank": 184
+    },
+    {
+      "player": "DE LARREA, SERGIO",
+      "team": "PAM",
+      "wpa": 267.08,
+      "plays": 465,
+      "rank": 185
+    },
+    {
+      "player": "ROGKAVOPOULOS, NIKOLAOS",
+      "team": "PAN",
+      "wpa": 261.98,
+      "plays": 361,
+      "rank": 186
+    },
+    {
+      "player": "LIGHTY, DAVID",
+      "team": "ASV",
+      "wpa": 261.58,
+      "plays": 502,
+      "rank": 187
+    },
+    {
+      "player": "DINWIDDIE, SPENCER",
+      "team": "MUN",
+      "wpa": 258.06,
+      "plays": 370,
+      "rank": 188
+    },
+    {
+      "player": "CALATHES, NICK",
+      "team": "PAR",
+      "wpa": 254.86,
+      "plays": 675,
+      "rank": 189
+    },
+    {
+      "player": "RAYMAN, WILLIAM",
+      "team": "TEL",
+      "wpa": 252.52,
+      "plays": 573,
+      "rank": 190
+    },
+    {
+      "player": "BOSTON JR., BRANDON",
+      "team": "ULK",
+      "wpa": 241.3,
+      "plays": 384,
+      "rank": 191
+    },
+    {
+      "player": "HAYES-DAVIS, NIGEL",
+      "team": "PAN",
+      "wpa": 240.71,
+      "plays": 255,
+      "rank": 192
+    },
+    {
+      "player": "EBOUA, PAUL",
+      "team": "ASV",
+      "wpa": 239.37,
+      "plays": 374,
+      "rank": 193
+    },
+    {
+      "player": "GIFFEY, NIELS",
+      "team": "MUN",
+      "wpa": 233.65,
+      "plays": 441,
+      "rank": 194
+    },
+    {
+      "player": "PAYNE, CAMERON",
+      "team": "PAR",
+      "wpa": 233.39,
+      "plays": 349,
+      "rank": 195
+    },
+    {
+      "player": "BIRUTIS, LAURYNAS",
+      "team": "ZAL",
+      "wpa": 232.77,
+      "plays": 539,
+      "rank": 196
+    },
+    {
+      "player": "BIRCH, KHEM",
+      "team": "ULK",
+      "wpa": 232.56,
+      "plays": 821,
+      "rank": 197
+    },
+    {
+      "player": "DIOP, KHALIFA",
+      "team": "BAS",
+      "wpa": 229.39,
+      "plays": 628,
+      "rank": 198
+    },
+    {
+      "player": "BRAZDEIKIS, IGNAS",
+      "team": "ZAL",
+      "wpa": 229.38,
+      "plays": 571,
+      "rank": 199
+    },
+    {
+      "player": "FRISCH, CLEMENT",
+      "team": "BAS",
+      "wpa": 229.31,
+      "plays": 488,
+      "rank": 200
+    },
+    {
+      "player": "ODIASE, TAI",
+      "team": "HTA",
+      "wpa": 229.25,
+      "plays": 298,
+      "rank": 201
+    },
+    {
+      "player": "DIARRA, ALIOU",
+      "team": "VIR",
+      "wpa": 227.65,
+      "plays": 430,
+      "rank": 202
+    },
+    {
+      "player": "JEKIRI, TONYE",
+      "team": "PAR",
+      "wpa": 226.92,
+      "plays": 354,
+      "rank": 203
+    },
+    {
+      "player": "MCKISSIC, SHAQUIELLE",
+      "team": "OLY",
+      "wpa": 220.03,
+      "plays": 290,
+      "rank": 204
+    },
+    {
+      "player": "KAMENJAS, KENAN",
+      "team": "DUB",
+      "wpa": 216.76,
+      "plays": 418,
+      "rank": 205
+    },
+    {
+      "player": "CAVALIERE, LEOPOLD",
+      "team": "PRS",
+      "wpa": 215.9,
+      "plays": 695,
+      "rank": 206
+    },
+    {
+      "player": "PREPELIC, KLEMEN",
+      "team": "DUB",
+      "wpa": 214.47,
+      "plays": 425,
+      "rank": 207
+    },
+    {
+      "player": "DIBARTOLOMEO, JOHN",
+      "team": "TEL",
+      "wpa": 213.5,
+      "plays": 408,
+      "rank": 208
+    },
+    {
+      "player": "PAJOLA, ALESSANDRO",
+      "team": "VIR",
+      "wpa": 212.43,
+      "plays": 593,
+      "rank": 209
+    },
+    {
+      "player": "DOBRIC, OGNJEN",
+      "team": "RED",
+      "wpa": 208.48,
+      "plays": 311,
+      "rank": 210
+    },
+    {
+      "player": "POIRIER, VINCENT",
+      "team": "IST",
+      "wpa": 204.72,
+      "plays": 290,
+      "rank": 211
+    },
+    {
+      "player": "NTILIKINA, FRANK",
+      "team": "OLY",
+      "wpa": 203.52,
+      "plays": 440,
+      "rank": 212
+    },
+    {
+      "player": "SIRVYDIS, DEIVIDAS",
+      "team": "ZAL",
+      "wpa": 200.01,
+      "plays": 365,
+      "rank": 213
+    },
+    {
+      "player": "JOVIC, STEFAN",
+      "team": "MUN",
+      "wpa": 198.46,
+      "plays": 444,
+      "rank": 214
+    },
+    {
+      "player": "JACKSON, EDWIN",
+      "team": "ASV",
+      "wpa": 196.44,
+      "plays": 350,
+      "rank": 215
+    },
+    {
+      "player": "PARKER, JABARI",
+      "team": "PAR",
+      "wpa": 196.37,
+      "plays": 329,
+      "rank": 216
+    },
+    {
+      "player": "DESSERT, BRICE",
+      "team": "IST",
+      "wpa": 192.51,
+      "plays": 254,
+      "rank": 217
+    },
+    {
+      "player": "HACKETT, DANIEL",
+      "team": "VIR",
+      "wpa": 191.69,
+      "plays": 543,
+      "rank": 218
+    },
+    {
+      "player": "YURTSEVEN, OMER",
+      "team": "PAN",
+      "wpa": 184.76,
+      "plays": 369,
+      "rank": 219
+    },
+    {
+      "player": "JONES, KAI",
+      "team": "IST",
+      "wpa": 183.98,
+      "plays": 520,
+      "rank": 220
+    },
+    {
+      "player": "BEGARIN, JUHANN",
+      "team": "MCO",
+      "wpa": 181.12,
+      "plays": 212,
+      "rank": 221
+    },
+    {
+      "player": "RADZEVICIUS, GYTIS",
+      "team": "BAS",
+      "wpa": 179.19,
+      "plays": 425,
+      "rank": 222
+    },
+    {
+      "player": "POKUSEVSKI, ALEKSEJ",
+      "team": "PAR",
+      "wpa": 174.92,
+      "plays": 300,
+      "rank": 223
+    },
+    {
+      "player": "VOIGTMANN, JOHANNES",
+      "team": "MUN",
+      "wpa": 174.13,
+      "plays": 358,
+      "rank": 224
+    },
+    {
+      "player": "MARINKOVIC, VANJA",
+      "team": "PAR",
+      "wpa": 166.76,
+      "plays": 348,
+      "rank": 225
+    },
+    {
+      "player": "LEN, ALEX",
+      "team": "MAD",
+      "wpa": 163.58,
+      "plays": 216,
+      "rank": 226
+    },
+    {
+      "player": "BOLOMBOY, JOEL",
+      "team": "RED",
+      "wpa": 160.39,
+      "plays": 267,
+      "rank": 227
+    },
+    {
+      "player": "CALE, MYLES",
+      "team": "BAR",
+      "wpa": 160.18,
+      "plays": 491,
+      "rank": 228
+    },
+    {
+      "player": "BITIM, ONURALP",
+      "team": "ULK",
+      "wpa": 156.51,
+      "plays": 424,
+      "rank": 229
+    },
+    {
+      "player": "HOMMES, DAULTON",
+      "team": "PRS",
+      "wpa": 154.36,
+      "plays": 408,
+      "rank": 230
+    },
+    {
+      "player": "LAVI, GUR",
+      "team": "TEL",
+      "wpa": 149.74,
+      "plays": 209,
+      "rank": 231
+    },
+    {
+      "player": "HOLLATZ, JUSTUS",
+      "team": "MUN",
+      "wpa": 144.39,
+      "plays": 435,
+      "rank": 232
+    },
+    {
+      "player": "LAKIC, ARIJAN",
+      "team": "PAR",
+      "wpa": 143.58,
+      "plays": 311,
+      "rank": 233
+    },
+    {
+      "player": "KONDIC, KOSTA",
+      "team": "DUB",
+      "wpa": 142.58,
+      "plays": 235,
+      "rank": 234
+    },
+    {
+      "player": "ABASS, AWUDU",
+      "team": "DUB",
+      "wpa": 142.57,
+      "plays": 406,
+      "rank": 235
+    },
+    {
+      "player": "GINAT, TOMER",
+      "team": "HTA",
+      "wpa": 138.3,
+      "plays": 178,
+      "rank": 236
+    },
+    {
+      "player": "AKELE, NICOLA",
+      "team": "VIR",
+      "wpa": 129.01,
+      "plays": 308,
+      "rank": 237
+    },
+    {
+      "player": "MADAR, YAM",
+      "team": "HTA",
+      "wpa": 127.53,
+      "plays": 194,
+      "rank": 238
+    },
+    {
+      "player": "DAVIDOVAC, DEJAN",
+      "team": "RED",
+      "wpa": 124.32,
+      "plays": 265,
+      "rank": 239
+    },
+    {
+      "player": "DOS SANTOS, YAGO",
+      "team": "RED",
+      "wpa": 123.13,
+      "plays": 378,
+      "rank": 240
+    },
+    {
+      "player": "PAPANIKOLAOU, KOSTAS",
+      "team": "OLY",
+      "wpa": 121.8,
+      "plays": 385,
+      "rank": 241
+    },
+    {
+      "player": "CARTER, TYSON",
+      "team": "RED",
+      "wpa": 119.86,
+      "plays": 151,
+      "rank": 242
+    },
+    {
+      "player": "BEAUBOIS, RODRIGUE",
+      "team": "IST",
+      "wpa": 109.72,
+      "plays": 243,
+      "rank": 243
+    },
+    {
+      "player": "MANNION, NICCOLO",
+      "team": "MIL",
+      "wpa": 108.87,
+      "plays": 308,
+      "rank": 244
+    },
+    {
+      "player": "BIRSEN, METECAN",
+      "team": "ULK",
+      "wpa": 108.79,
+      "plays": 326,
+      "rank": 245
+    },
+    {
+      "player": "BROWN, LORENZO",
+      "team": "MIL",
+      "wpa": 104.9,
+      "plays": 236,
+      "rank": 246
+    },
+    {
+      "player": "BALDWIN, KAMAR",
+      "team": "MUN",
+      "wpa": 104.19,
+      "plays": 206,
+      "rank": 247
+    },
+    {
+      "player": "DUNSTON, BRYANT",
+      "team": "MIL",
+      "wpa": 103.57,
+      "plays": 243,
+      "rank": 248
+    },
+    {
+      "player": "TARPEY, TERRY",
+      "team": "MCO",
+      "wpa": 97.6,
+      "plays": 254,
+      "rank": 249
+    },
+    {
+      "player": "SILVA, CHRIS",
+      "team": "ULK",
+      "wpa": 91.65,
+      "plays": 167,
+      "rank": 250
+    },
+    {
+      "player": "ENNIS, TYLER",
+      "team": "HTA",
+      "wpa": 90.4,
+      "plays": 120,
+      "rank": 251
+    },
+    {
+      "player": "ELLIS, BOOGIE",
+      "team": "DUB",
+      "wpa": 89.3,
+      "plays": 135,
+      "rank": 252
+    },
+    {
+      "player": "JOSEPH, CORY",
+      "team": "OLY",
+      "wpa": 88.76,
+      "plays": 179,
+      "rank": 253
+    },
+    {
+      "player": "CABOCLO, BRUNO",
+      "team": "DUB",
+      "wpa": 88.63,
+      "plays": 181,
+      "rank": 254
+    },
+    {
+      "player": "BACOT JR., ARMANDO",
+      "team": "ULK",
+      "wpa": 84.28,
+      "plays": 394,
+      "rank": 255
+    },
+    {
+      "player": "FALL, YOUSSOUPHA",
+      "team": "BAR",
+      "wpa": 80.21,
+      "plays": 141,
+      "rank": 256
+    },
+    {
+      "player": "AYAYI, JOEL",
+      "team": "PRS",
+      "wpa": 75.24,
+      "plays": 226,
+      "rank": 257
+    },
+    {
+      "player": "MARCOS, JUANI",
+      "team": "BAR",
+      "wpa": 72.81,
+      "plays": 298,
+      "rank": 258
+    },
+    {
+      "player": "LESSORT, MATHIAS",
+      "team": "PAN",
+      "wpa": 71.58,
+      "plays": 188,
+      "rank": 259
+    },
+    {
+      "player": "BAKO, ISMAEL",
+      "team": "PRS",
+      "wpa": 68.74,
+      "plays": 156,
+      "rank": 260
+    },
+    {
+      "player": "GRAHAM, DEVONTE",
+      "team": "RED",
+      "wpa": 68.33,
+      "plays": 101,
+      "rank": 261
+    },
+    {
+      "player": "RIVERO, JASIEL",
+      "team": "RED",
+      "wpa": 65.73,
+      "plays": 88,
+      "rank": 262
+    },
+    {
+      "player": "GIEDRAITIS, DOVYDAS",
+      "team": "ZAL",
+      "wpa": 64.48,
+      "plays": 269,
+      "rank": 263
+    },
+    {
+      "player": "WILBEKIN, SCOTTIE",
+      "team": "ULK",
+      "wpa": 61.31,
+      "plays": 125,
+      "rank": 264
+    },
+    {
+      "player": "SAMANIC, LUKA",
+      "team": "BAS",
+      "wpa": 58.81,
+      "plays": 116,
+      "rank": 265
+    },
+    {
+      "player": "TAYLOR, BRANDON",
+      "team": "VIR",
+      "wpa": 49.59,
+      "plays": 108,
+      "rank": 266
+    },
+    {
+      "player": "SESTINA, NATHAN",
+      "team": "PAM",
+      "wpa": 47.45,
+      "plays": 126,
+      "rank": 267
+    },
+    {
+      "player": "SAMODUROV, ALEXANDROS",
+      "team": "PAN",
+      "wpa": 44.44,
+      "plays": 97,
+      "rank": 268
+    },
+    {
+      "player": "HANKINS, ZACHARY",
+      "team": "TEL",
+      "wpa": 43.9,
+      "plays": 91,
+      "rank": 269
+    },
+    {
+      "player": "YILMAZ, ERKAN",
+      "team": "IST",
+      "wpa": 36.56,
+      "plays": 199,
+      "rank": 270
+    },
+    {
+      "player": "NGOUAMA, MEHDY",
+      "team": "ASV",
+      "wpa": 34.85,
+      "plays": 202,
+      "rank": 271
+    },
+    {
+      "player": "ATAMNA, ADAM",
+      "team": "ASV",
+      "wpa": 34.47,
+      "plays": 244,
+      "rank": 272
+    },
+    {
+      "player": "SHAHRVIN, ENZO",
+      "team": "PRS",
+      "wpa": 33.15,
+      "plays": 145,
+      "rank": 273
+    },
+    {
+      "player": "VILLAR, RAFA",
+      "team": "BAS",
+      "wpa": 31.23,
+      "plays": 190,
+      "rank": 274
+    },
+    {
+      "player": "TONUT, STEFANO",
+      "team": "MIL",
+      "wpa": 29.36,
+      "plays": 83,
+      "rank": 275
+    },
+    {
+      "player": "TOLIOPOULOS, VASSILIS",
+      "team": "PAN",
+      "wpa": 28.92,
+      "plays": 100,
+      "rank": 276
+    },
+    {
+      "player": "GRIGONIS, MARIUS",
+      "team": "PAN",
+      "wpa": 27.77,
+      "plays": 95,
+      "rank": 277
+    },
+    {
+      "player": "ZAGARS, ARTURS",
+      "team": "ULK",
+      "wpa": 27.76,
+      "plays": 87,
+      "rank": 278
+    },
+    {
+      "player": "LOPEZ-AROSTEGUI, XABI",
+      "team": "PAM",
+      "wpa": 24.61,
+      "plays": 116,
+      "rank": 279
+    },
+    {
+      "player": "SANLI, SERTAC",
+      "team": "DUB",
+      "wpa": 24.14,
+      "plays": 62,
+      "rank": 280
+    },
+    {
+      "player": "MORRIS, MONTE",
+      "team": "OLY",
+      "wpa": 24.12,
+      "plays": 100,
+      "rank": 281
+    },
+    {
+      "player": "FLACCADORI, DIEGO",
+      "team": "MIL",
+      "wpa": 23.94,
+      "plays": 62,
+      "rank": 282
+    },
+    {
+      "player": "TIMOR, BAR",
+      "team": "HTA",
+      "wpa": 22.98,
+      "plays": 61,
+      "rank": 283
+    },
+    {
+      "player": "EDWARDS, KESSLER",
+      "team": "HTA",
+      "wpa": 22.29,
+      "plays": 90,
+      "rank": 284
+    },
+    {
+      "player": "KEITA, SAYON",
+      "team": "BAR",
+      "wpa": 19.94,
+      "plays": 69,
+      "rank": 285
+    },
+    {
+      "player": "KRAMER, DAVID",
+      "team": "MAD",
+      "wpa": 19.16,
+      "plays": 168,
+      "rank": 286
+    },
+    {
+      "player": "KALAITZAKIS, PANAGIOTIS",
+      "team": "PAN",
+      "wpa": 16.83,
+      "plays": 240,
+      "rank": 287
+    },
+    {
+      "player": "RANDOLPH, LEVI",
+      "team": "HTA",
+      "wpa": 15.52,
+      "plays": 65,
+      "rank": 288
+    },
+    {
+      "player": "PLAVSIC, UROS",
+      "team": "RED",
+      "wpa": 14.89,
+      "plays": 61,
+      "rank": 289
+    },
+    {
+      "player": "PAPAGIANNIS, GEORGIOS",
+      "team": "IST",
+      "wpa": 14.6,
+      "plays": 86,
+      "rank": 290
+    },
+    {
+      "player": "RADANOV, ALEKSA",
+      "team": "PAR",
+      "wpa": 13.27,
+      "plays": 59,
+      "rank": 291
+    },
+    {
+      "player": "JOKSIMOVIC, STEFAN",
+      "team": "BAS",
+      "wpa": 11.61,
+      "plays": 73,
+      "rank": 292
+    },
+    {
+      "player": "KRATZER, LEON",
+      "team": "MUN",
+      "wpa": 11.36,
+      "plays": 71,
+      "rank": 293
+    },
+    {
+      "player": "FERRARI, FRANCESCO",
+      "team": "VIR",
+      "wpa": 5.47,
+      "plays": 94,
+      "rank": 294
+    },
+    {
+      "player": "MILJENOVIC, STEFAN",
+      "team": "RED",
+      "wpa": 4.95,
+      "plays": 111,
+      "rank": 295
+    },
+    {
+      "player": "MAKOUNDOU, YOAN",
+      "team": "MCO",
+      "wpa": 2.9,
+      "plays": 58,
+      "rank": 296
+    },
+    {
+      "player": "NOGUES, ISAAC",
+      "team": "PAM",
+      "wpa": 2.83,
+      "plays": 65,
+      "rank": 297
+    },
+    {
+      "player": "RUBSTAVICIUS, MANTAS",
+      "team": "ZAL",
+      "wpa": 2.15,
+      "plays": 118,
+      "rank": 298
+    },
+    {
+      "player": "DANGUBIC, NEMANJA",
+      "team": "DUB",
+      "wpa": 0.21,
+      "plays": 136,
+      "rank": 299
+    },
+    {
+      "player": "SIMA, YANKUBA",
+      "team": "PAM",
+      "wpa": -0.06,
+      "plays": 98,
+      "rank": 300
+    }
+  ],
+  "tpm": [
+    {
+      "player": "DIBARTOLOMEO, JOHN",
+      "team": "TEL",
+      "tpm_40": 13.58,
+      "total_pm": 117.0,
+      "gp": 24,
+      "mpg": 14.4,
+      "rank": 1
+    },
+    {
+      "player": "WARD, TYSON",
+      "team": "OLY",
+      "tpm_40": 11.79,
+      "total_pm": 177.0,
+      "gp": 30,
+      "mpg": 20.0,
+      "rank": 2
+    },
+    {
+      "player": "COSTELLO, MATTHEW",
+      "team": "PAM",
+      "tpm_40": 11.71,
+      "total_pm": 159.0,
+      "gp": 32,
+      "mpg": 17.0,
+      "rank": 3
+    },
+    {
+      "player": "WALKUP, THOMAS",
+      "team": "OLY",
+      "tpm_40": 9.82,
+      "total_pm": 179.0,
+      "gp": 30,
+      "mpg": 24.3,
+      "rank": 4
+    },
+    {
+      "player": "FRANCISCO, SYLVAIN",
+      "team": "ZAL",
+      "tpm_40": 9.75,
+      "total_pm": 238.0,
+      "gp": 36,
+      "mpg": 27.1,
+      "rank": 5
+    },
+    {
+      "player": "HAYES, KEVARRIUS",
+      "team": "MCO",
+      "tpm_40": 9.36,
+      "total_pm": 126.0,
+      "gp": 32,
+      "mpg": 16.8,
+      "rank": 6
+    },
+    {
+      "player": "MILUTINOV, NIKOLA",
+      "team": "OLY",
+      "tpm_40": 8.61,
+      "total_pm": 156.0,
+      "gp": 33,
+      "mpg": 21.9,
+      "rank": 7
+    },
+    {
+      "player": "TAVARES, WALTER",
+      "team": "MAD",
+      "tpm_40": 8.41,
+      "total_pm": 175.0,
+      "gp": 36,
+      "mpg": 23.1,
+      "rank": 8
+    },
+    {
+      "player": "IZUNDU, EBUKA",
+      "team": "RED",
+      "tpm_40": 8.11,
+      "total_pm": 86.0,
+      "gp": 30,
+      "mpg": 14.1,
+      "rank": 9
+    },
+    {
+      "player": "JONES, CARLIK",
+      "team": "PAR",
+      "tpm_40": 7.82,
+      "total_pm": 66.0,
+      "gp": 12,
+      "mpg": 28.1,
+      "rank": 10
+    },
+    {
+      "player": "MIROTIC, NIKOLA",
+      "team": "MCO",
+      "tpm_40": 7.72,
+      "total_pm": 110.0,
+      "gp": 30,
+      "mpg": 19.0,
+      "rank": 11
+    },
+    {
+      "player": "THOMPSON, DARIUS",
+      "team": "PAM",
+      "tpm_40": 7.71,
+      "total_pm": 134.0,
+      "gp": 36,
+      "mpg": 19.3,
+      "rank": 12
+    },
+    {
+      "player": "TAYLOR, KAMERON",
+      "team": "PAM",
+      "tpm_40": 7.62,
+      "total_pm": 145.0,
+      "gp": 32,
+      "mpg": 23.8,
+      "rank": 13
+    },
+    {
+      "player": "TUBELIS, AZUOLAS",
+      "team": "ZAL",
+      "tpm_40": 7.55,
+      "total_pm": 150.0,
+      "gp": 36,
+      "mpg": 22.1,
+      "rank": 14
+    },
+    {
+      "player": "VEZENKOV, SASHA",
+      "team": "OLY",
+      "tpm_40": 7.51,
+      "total_pm": 171.0,
+      "gp": 32,
+      "mpg": 28.5,
+      "rank": 15
+    },
+    {
+      "player": "BRYANT, ELIJAH",
+      "team": "HTA",
+      "tpm_40": 7.44,
+      "total_pm": 172.0,
+      "gp": 31,
+      "mpg": 29.8,
+      "rank": 16
+    },
+    {
+      "player": "CAMPAZZO, FACUNDO",
+      "team": "MAD",
+      "tpm_40": 7.39,
+      "total_pm": 161.0,
+      "gp": 36,
+      "mpg": 24.2,
+      "rank": 17
+    },
+    {
+      "player": "DORSEY, TYLER",
+      "team": "OLY",
+      "tpm_40": 7.16,
+      "total_pm": 167.0,
+      "gp": 36,
+      "mpg": 25.9,
+      "rank": 18
+    },
+    {
+      "player": "SHENGELIA, TORNIKE",
+      "team": "BAR",
+      "tpm_40": 7.06,
+      "total_pm": 133.0,
+      "gp": 30,
+      "mpg": 25.1,
+      "rank": 19
+    },
+    {
+      "player": "MONEKE, CHIMA",
+      "team": "RED",
+      "tpm_40": 6.82,
+      "total_pm": 147.0,
+      "gp": 32,
+      "mpg": 26.9,
+      "rank": 20
+    },
+    {
+      "player": "SLEVA, DUSTIN",
+      "team": "ZAL",
+      "tpm_40": 6.78,
+      "total_pm": 111.0,
+      "gp": 36,
+      "mpg": 18.2,
+      "rank": 21
+    },
+    {
+      "player": "CABOCLO, BRUNO",
+      "team": "DUB",
+      "tpm_40": 6.53,
+      "total_pm": 22.0,
+      "gp": 10,
+      "mpg": 13.5,
+      "rank": 22
+    },
+    {
+      "player": "NTILIKINA, FRANK",
+      "team": "OLY",
+      "tpm_40": 6.52,
+      "total_pm": 62.0,
+      "gp": 23,
+      "mpg": 16.5,
+      "rank": 23
+    },
+    {
+      "player": "SIRVYDIS, DEIVIDAS",
+      "team": "ZAL",
+      "tpm_40": 6.24,
+      "total_pm": 50.0,
+      "gp": 24,
+      "mpg": 13.3,
+      "rank": 24
+    },
+    {
+      "player": "NEDOVIC, NEMANJA",
+      "team": "MCO",
+      "tpm_40": 6.24,
+      "total_pm": 67.0,
+      "gp": 32,
+      "mpg": 13.4,
+      "rank": 25
+    },
+    {
+      "player": "DOBRIC, OGNJEN",
+      "team": "RED",
+      "tpm_40": 6.2,
+      "total_pm": 45.0,
+      "gp": 23,
+      "mpg": 12.6,
+      "rank": 26
+    },
+    {
+      "player": "DECK, GABRIEL",
+      "team": "MAD",
+      "tpm_40": 6.18,
+      "total_pm": 104.0,
+      "gp": 33,
+      "mpg": 20.4,
+      "rank": 27
+    },
+    {
+      "player": "PAPANIKOLAOU, KOSTAS",
+      "team": "OLY",
+      "tpm_40": 6.18,
+      "total_pm": 63.0,
+      "gp": 29,
+      "mpg": 14.1,
+      "rank": 28
+    },
+    {
+      "player": "OKEKE, CHUMA",
+      "team": "MAD",
+      "tpm_40": 6.08,
+      "total_pm": 94.0,
+      "gp": 35,
+      "mpg": 17.7,
+      "rank": 29
+    },
+    {
+      "player": "MELLI, NICOLO",
+      "team": "ULK",
+      "tpm_40": 6.07,
+      "total_pm": 96.0,
+      "gp": 28,
+      "mpg": 22.6,
+      "rank": 30
+    },
+    {
+      "player": "MORGAN, JEREMY",
+      "team": "PRS",
+      "tpm_40": 6.02,
+      "total_pm": 83.0,
+      "gp": 31,
+      "mpg": 17.8,
+      "rank": 31
+    },
+    {
+      "player": "DE COLO, NANDO",
+      "team": "ASV",
+      "tpm_40": 5.96,
+      "total_pm": 73.0,
+      "gp": 25,
+      "mpg": 19.6,
+      "rank": 32
+    },
+    {
+      "player": "MONTERO, JEAN",
+      "team": "PAM",
+      "tpm_40": 5.81,
+      "total_pm": 95.0,
+      "gp": 30,
+      "mpg": 21.8,
+      "rank": 33
+    },
+    {
+      "player": "LO, MAODO",
+      "team": "ZAL",
+      "tpm_40": 5.51,
+      "total_pm": 88.0,
+      "gp": 35,
+      "mpg": 18.3,
+      "rank": 34
+    },
+    {
+      "player": "WAINRIGHT, ISH",
+      "team": "HTA",
+      "tpm_40": 5.41,
+      "total_pm": 114.0,
+      "gp": 35,
+      "mpg": 24.1,
+      "rank": 35
+    },
+    {
+      "player": "BUTKEVICIUS, ARNAS",
+      "team": "ZAL",
+      "tpm_40": 5.18,
+      "total_pm": 76.0,
+      "gp": 32,
+      "mpg": 18.4,
+      "rank": 36
+    },
+    {
+      "player": "JONES, CHRIS",
+      "team": "HTA",
+      "tpm_40": 5.14,
+      "total_pm": 89.0,
+      "gp": 35,
+      "mpg": 19.8,
+      "rank": 37
+    },
+    {
+      "player": "PETERS, ALEC",
+      "team": "OLY",
+      "tpm_40": 4.99,
+      "total_pm": 66.0,
+      "gp": 36,
+      "mpg": 14.7,
+      "rank": 38
+    },
+    {
+      "player": "HEZONJA, MARIO",
+      "team": "MAD",
+      "tpm_40": 4.89,
+      "total_pm": 97.0,
+      "gp": 36,
+      "mpg": 22.0,
+      "rank": 39
+    },
+    {
+      "player": "BRAZDEIKIS, IGNAS",
+      "team": "ZAL",
+      "tpm_40": 4.87,
+      "total_pm": 64.0,
+      "gp": 34,
+      "mpg": 15.5,
+      "rank": 40
+    },
+    {
+      "player": "FOURNIER, EVAN",
+      "team": "OLY",
+      "tpm_40": 4.83,
+      "total_pm": 87.0,
+      "gp": 33,
+      "mpg": 21.8,
+      "rank": 41
+    },
+    {
+      "player": "BLAKENEY, ANTONIO",
+      "team": "HTA",
+      "tpm_40": 4.65,
+      "total_pm": 90.0,
+      "gp": 35,
+      "mpg": 22.1,
+      "rank": 42
+    },
+    {
+      "player": "JANTUNEN, MIKAEL",
+      "team": "ULK",
+      "tpm_40": 4.58,
+      "total_pm": 63.0,
+      "gp": 29,
+      "mpg": 19.0,
+      "rank": 43
+    },
+    {
+      "player": "WRIGHT IV, MCKINLEY",
+      "team": "DUB",
+      "tpm_40": 4.49,
+      "total_pm": 120.0,
+      "gp": 36,
+      "mpg": 29.7,
+      "rank": 44
+    },
+    {
+      "player": "ODIASE, TAI",
+      "team": "HTA",
+      "tpm_40": 4.29,
+      "total_pm": 28.0,
+      "gp": 22,
+      "mpg": 11.9,
+      "rank": 45
+    },
+    {
+      "player": "SAKO, NEAL",
+      "team": "PAM",
+      "tpm_40": 4.29,
+      "total_pm": 48.0,
+      "gp": 34,
+      "mpg": 13.2,
+      "rank": 46
+    },
+    {
+      "player": "HOLMES, RICHAUN",
+      "team": "PAN",
+      "tpm_40": 4.27,
+      "total_pm": 38.0,
+      "gp": 19,
+      "mpg": 18.7,
+      "rank": 47
+    },
+    {
+      "player": "RAYMAN, WILLIAM",
+      "team": "TEL",
+      "tpm_40": 4.24,
+      "total_pm": 43.0,
+      "gp": 35,
+      "mpg": 11.6,
+      "rank": 48
+    },
+    {
+      "player": "LYLES, TREY",
+      "team": "MAD",
+      "tpm_40": 4.23,
+      "total_pm": 75.0,
+      "gp": 34,
+      "mpg": 20.8,
+      "rank": 49
+    },
+    {
+      "player": "FELIZ, ANDRES",
+      "team": "MAD",
+      "tpm_40": 4.23,
+      "total_pm": 51.0,
+      "gp": 31,
+      "mpg": 15.6,
+      "rank": 50
+    },
+    {
+      "player": "SATORANSKY, TOMAS",
+      "team": "BAR",
+      "tpm_40": 4.22,
+      "total_pm": 90.0,
+      "gp": 34,
+      "mpg": 25.1,
+      "rank": 51
+    },
+    {
+      "player": "SLOUKAS, KOSTAS",
+      "team": "PAN",
+      "tpm_40": 4.19,
+      "total_pm": 79.0,
+      "gp": 35,
+      "mpg": 21.5,
+      "rank": 52
+    },
+    {
+      "player": "DIMITRIJEVIC, NENO",
+      "team": "MUN",
+      "tpm_40": 4.16,
+      "total_pm": 31.0,
+      "gp": 14,
+      "mpg": 21.3,
+      "rank": 53
+    },
+    {
+      "player": "MILLER-MCINTYRE, CODI",
+      "team": "RED",
+      "tpm_40": 4.04,
+      "total_pm": 112.0,
+      "gp": 36,
+      "mpg": 30.8,
+      "rank": 54
+    },
+    {
+      "player": "LEAF, TJ",
+      "team": "TEL",
+      "tpm_40": 4.03,
+      "total_pm": 44.0,
+      "gp": 24,
+      "mpg": 18.2,
+      "rank": 55
+    },
+    {
+      "player": "ROGKAVOPOULOS, NIKOLAOS",
+      "team": "PAN",
+      "tpm_40": 4.03,
+      "total_pm": 32.0,
+      "gp": 27,
+      "mpg": 11.8,
+      "rank": 56
+    },
+    {
+      "player": "JESSUP, JUSTINIAN",
+      "team": "MUN",
+      "tpm_40": 4.0,
+      "total_pm": 68.0,
+      "gp": 35,
+      "mpg": 19.4,
+      "rank": 57
+    },
+    {
+      "player": "ABALDE, ALBERTO",
+      "team": "MAD",
+      "tpm_40": 3.97,
+      "total_pm": 55.0,
+      "gp": 34,
+      "mpg": 16.3,
+      "rank": 58
+    },
+    {
+      "player": "HORTON TUCKER, TALEN",
+      "team": "ULK",
+      "tpm_40": 3.9,
+      "total_pm": 78.0,
+      "gp": 34,
+      "mpg": 23.6,
+      "rank": 59
+    },
+    {
+      "player": "OTURU, DAN",
+      "team": "HTA",
+      "tpm_40": 3.86,
+      "total_pm": 79.0,
+      "gp": 35,
+      "mpg": 23.4,
+      "rank": 60
+    },
+    {
+      "player": "BOSTON JR., BRANDON",
+      "team": "ULK",
+      "tpm_40": 3.82,
+      "total_pm": 27.0,
+      "gp": 24,
+      "mpg": 11.8,
+      "rank": 61
+    },
+    {
+      "player": "NUNN, KENDRICK",
+      "team": "PAN",
+      "tpm_40": 3.71,
+      "total_pm": 81.0,
+      "gp": 29,
+      "mpg": 30.1,
+      "rank": 62
+    },
+    {
+      "player": "WRIGHT, MOSES",
+      "team": "ZAL",
+      "tpm_40": 3.68,
+      "total_pm": 76.0,
+      "gp": 36,
+      "mpg": 22.9,
+      "rank": 63
+    },
+    {
+      "player": "OSMAN, CEDI",
+      "team": "PAN",
+      "tpm_40": 3.57,
+      "total_pm": 76.0,
+      "gp": 31,
+      "mpg": 27.5,
+      "rank": 64
+    },
+    {
+      "player": "BADIO, BRANCOU",
+      "team": "PAM",
+      "tpm_40": 3.54,
+      "total_pm": 54.0,
+      "gp": 32,
+      "mpg": 19.1,
+      "rank": 65
+    },
+    {
+      "player": "KABENGELE, MFIONDU",
+      "team": "DUB",
+      "tpm_40": 3.53,
+      "total_pm": 67.0,
+      "gp": 34,
+      "mpg": 22.3,
+      "rank": 66
+    },
+    {
+      "player": "KRAMER, DAVID",
+      "team": "MAD",
+      "tpm_40": 3.53,
+      "total_pm": 14.0,
+      "gp": 14,
+      "mpg": 11.3,
+      "rank": 67
+    },
+    {
+      "player": "DIALLO, ALPHA",
+      "team": "MCO",
+      "tpm_40": 3.51,
+      "total_pm": 86.0,
+      "gp": 35,
+      "mpg": 28.0,
+      "rank": 68
+    },
+    {
+      "player": "NEBO, JOSH",
+      "team": "MIL",
+      "tpm_40": 3.49,
+      "total_pm": 46.0,
+      "gp": 24,
+      "mpg": 21.9,
+      "rank": 69
+    },
+    {
+      "player": "BUTLER, JARED",
+      "team": "RED",
+      "tpm_40": 3.42,
+      "total_pm": 49.0,
+      "gp": 29,
+      "mpg": 19.8,
+      "rank": 70
+    },
+    {
+      "player": "KEY, BRAXTON",
+      "team": "PAM",
+      "tpm_40": 3.39,
+      "total_pm": 35.0,
+      "gp": 26,
+      "mpg": 15.9,
+      "rank": 71
+    },
+    {
+      "player": "CAVALIERE, LEOPOLD",
+      "team": "PRS",
+      "tpm_40": 3.26,
+      "total_pm": 40.0,
+      "gp": 35,
+      "mpg": 14.0,
+      "rank": 72
+    },
+    {
+      "player": "JONES, TYRIQUE",
+      "team": "PAR",
+      "tpm_40": 3.07,
+      "total_pm": 46.0,
+      "gp": 29,
+      "mpg": 20.7,
+      "rank": 73
+    },
+    {
+      "player": "SANTOS, MARCIO",
+      "team": "TEL",
+      "tpm_40": 2.88,
+      "total_pm": 35.0,
+      "gp": 34,
+      "mpg": 14.3,
+      "rank": 74
+    },
+    {
+      "player": "MCKISSIC, SHAQUIELLE",
+      "team": "OLY",
+      "tpm_40": 2.84,
+      "total_pm": 17.0,
+      "gp": 20,
+      "mpg": 12.0,
+      "rank": 75
+    },
+    {
+      "player": "BERTANS, DAVIS",
+      "team": "DUB",
+      "tpm_40": 2.79,
+      "total_pm": 35.0,
+      "gp": 27,
+      "mpg": 18.6,
+      "rank": 76
+    },
+    {
+      "player": "PREPELIC, KLEMEN",
+      "team": "DUB",
+      "tpm_40": 2.76,
+      "total_pm": 24.0,
+      "gp": 26,
+      "mpg": 13.4,
+      "rank": 77
+    },
+    {
+      "player": "BIRUTIS, LAURYNAS",
+      "team": "ZAL",
+      "tpm_40": 2.66,
+      "total_pm": 25.0,
+      "gp": 35,
+      "mpg": 10.7,
+      "rank": 78
+    },
+    {
+      "player": "HERRERA, SEBASTIAN",
+      "team": "PRS",
+      "tpm_40": 2.6,
+      "total_pm": 36.0,
+      "gp": 34,
+      "mpg": 16.3,
+      "rank": 79
+    },
+    {
+      "player": "MALCOLM, COLLIN",
+      "team": "HTA",
+      "tpm_40": 2.55,
+      "total_pm": 56.0,
+      "gp": 35,
+      "mpg": 25.1,
+      "rank": 80
+    },
+    {
+      "player": "BITIM, ONURALP",
+      "team": "ULK",
+      "tpm_40": 2.52,
+      "total_pm": 19.0,
+      "gp": 27,
+      "mpg": 11.2,
+      "rank": 81
+    },
+    {
+      "player": "MOTIEJUNAS, DONATAS",
+      "team": "RED",
+      "tpm_40": 2.48,
+      "total_pm": 21.0,
+      "gp": 27,
+      "mpg": 12.6,
+      "rank": 82
+    },
+    {
+      "player": "VESELY, JAN",
+      "team": "BAR",
+      "tpm_40": 2.47,
+      "total_pm": 44.0,
+      "gp": 34,
+      "mpg": 21.0,
+      "rank": 83
+    },
+    {
+      "player": "MALEDON, THEO",
+      "team": "MAD",
+      "tpm_40": 2.44,
+      "total_pm": 32.0,
+      "gp": 30,
+      "mpg": 17.5,
+      "rank": 84
+    },
+    {
+      "player": "BACON, DWAYNE",
+      "team": "DUB",
+      "tpm_40": 2.39,
+      "total_pm": 51.0,
+      "gp": 29,
+      "mpg": 29.4,
+      "rank": 85
+    },
+    {
+      "player": "LUNDBERG, IFFE",
+      "team": "TEL",
+      "tpm_40": 2.36,
+      "total_pm": 23.0,
+      "gp": 16,
+      "mpg": 24.4,
+      "rank": 86
+    },
+    {
+      "player": "HERNANGOMEZ, JUANCHO",
+      "team": "PAN",
+      "tpm_40": 2.34,
+      "total_pm": 55.0,
+      "gp": 36,
+      "mpg": 26.1,
+      "rank": 87
+    },
+    {
+      "player": "RICCI, GIAMPAOLO",
+      "team": "MIL",
+      "tpm_40": 2.33,
+      "total_pm": 34.0,
+      "gp": 36,
+      "mpg": 16.2,
+      "rank": 88
+    },
+    {
+      "player": "STRAZEL, MATTHEW",
+      "team": "MCO",
+      "tpm_40": 2.23,
+      "total_pm": 46.0,
+      "gp": 35,
+      "mpg": 23.6,
+      "rank": 89
+    },
+    {
+      "player": "GARUBA, USMAN",
+      "team": "MAD",
+      "tpm_40": 2.21,
+      "total_pm": 21.0,
+      "gp": 33,
+      "mpg": 11.5,
+      "rank": 90
+    },
+    {
+      "player": "BEGARIN, JUHANN",
+      "team": "MCO",
+      "tpm_40": 2.1,
+      "total_pm": 9.0,
+      "gp": 15,
+      "mpg": 11.4,
+      "rank": 91
+    },
+    {
+      "player": "BALDWIN IV, WADE",
+      "team": "ULK",
+      "tpm_40": 1.9,
+      "total_pm": 43.0,
+      "gp": 35,
+      "mpg": 25.9,
+      "rank": 92
+    },
+    {
+      "player": "LAVI, GUR",
+      "team": "TEL",
+      "tpm_40": 1.9,
+      "total_pm": 8.0,
+      "gp": 15,
+      "mpg": 11.3,
+      "rank": 93
+    },
+    {
+      "player": "BROWN, LORENZO",
+      "team": "MIL",
+      "tpm_40": 1.84,
+      "total_pm": 8.0,
+      "gp": 12,
+      "mpg": 14.5,
+      "rank": 94
+    },
+    {
+      "player": "HALL, DONTA",
+      "team": "OLY",
+      "tpm_40": 1.79,
+      "total_pm": 22.0,
+      "gp": 31,
+      "mpg": 15.9,
+      "rank": 95
+    },
+    {
+      "player": "DA SILVA, OSCAR",
+      "team": "MUN",
+      "tpm_40": 1.69,
+      "total_pm": 22.0,
+      "gp": 33,
+      "mpg": 15.7,
+      "rank": 96
+    },
+    {
+      "player": "PUERTO, JOSEP",
+      "team": "PAM",
+      "tpm_40": 1.67,
+      "total_pm": 22.0,
+      "gp": 33,
+      "mpg": 16.0,
+      "rank": 97
+    },
+    {
+      "player": "REUVERS, NATHAN",
+      "team": "PAM",
+      "tpm_40": 1.5,
+      "total_pm": 26.0,
+      "gp": 36,
+      "mpg": 19.2,
+      "rank": 98
+    },
+    {
+      "player": "YURTSEVEN, OMER",
+      "team": "PAN",
+      "tpm_40": 1.5,
+      "total_pm": 9.0,
+      "gp": 19,
+      "mpg": 12.7,
+      "rank": 99
+    },
+    {
+      "player": "BOLMARO, LEANDRO",
+      "team": "MIL",
+      "tpm_40": 1.5,
+      "total_pm": 23.0,
+      "gp": 27,
+      "mpg": 22.8,
+      "rank": 100
+    },
+    {
+      "player": "MICIC, VASILIJE",
+      "team": "HTA",
+      "tpm_40": 1.48,
+      "total_pm": 29.0,
+      "gp": 33,
+      "mpg": 23.7,
+      "rank": 101
+    },
+    {
+      "player": "JEKIRI, TONYE",
+      "team": "PAR",
+      "tpm_40": 1.48,
+      "total_pm": 10.0,
+      "gp": 14,
+      "mpg": 19.3,
+      "rank": 102
+    },
+    {
+      "player": "MCCORMACK, DAVID",
+      "team": "MUN",
+      "tpm_40": 1.42,
+      "total_pm": 14.0,
+      "gp": 26,
+      "mpg": 15.2,
+      "rank": 103
+    },
+    {
+      "player": "ANDERSON, JUSTIN",
+      "team": "DUB",
+      "tpm_40": 1.35,
+      "total_pm": 24.0,
+      "gp": 31,
+      "mpg": 23.0,
+      "rank": 104
+    },
+    {
+      "player": "OKOBO, ELIE",
+      "team": "MCO",
+      "tpm_40": 1.34,
+      "total_pm": 29.0,
+      "gp": 34,
+      "mpg": 25.4,
+      "rank": 105
+    },
+    {
+      "player": "WILLIS, DEREK",
+      "team": "PRS",
+      "tpm_40": 1.32,
+      "total_pm": 14.0,
+      "gp": 26,
+      "mpg": 16.3,
+      "rank": 106
+    },
+    {
+      "player": "NWORA, JORDAN",
+      "team": "RED",
+      "tpm_40": 1.31,
+      "total_pm": 28.0,
+      "gp": 31,
+      "mpg": 27.5,
+      "rank": 107
+    },
+    {
+      "player": "MOORE, OMARI",
+      "team": "PAM",
+      "tpm_40": 1.23,
+      "total_pm": 21.0,
+      "gp": 36,
+      "mpg": 19.0,
+      "rank": 108
+    },
+    {
+      "player": "MOTLEY, JOHNATHAN",
+      "team": "HTA",
+      "tpm_40": 1.21,
+      "total_pm": 15.0,
+      "gp": 32,
+      "mpg": 15.6,
+      "rank": 109
+    },
+    {
+      "player": "PUNTER, KEVIN",
+      "team": "BAR",
+      "tpm_40": 1.1,
+      "total_pm": 26.0,
+      "gp": 35,
+      "mpg": 26.9,
+      "rank": 110
+    },
+    {
+      "player": "BIBEROVIC, TARIK",
+      "team": "ULK",
+      "tpm_40": 1.08,
+      "total_pm": 22.0,
+      "gp": 34,
+      "mpg": 24.0,
+      "rank": 111
+    },
+    {
+      "player": "PRADILLA, JAIME",
+      "team": "PAM",
+      "tpm_40": 1.02,
+      "total_pm": 19.0,
+      "gp": 36,
+      "mpg": 20.7,
+      "rank": 112
+    },
+    {
+      "player": "JAMES, MIKE",
+      "team": "MCO",
+      "tpm_40": 0.95,
+      "total_pm": 22.0,
+      "gp": 31,
+      "mpg": 30.0,
+      "rank": 113
+    },
+    {
+      "player": "VOIGTMANN, JOHANNES",
+      "team": "MUN",
+      "tpm_40": 0.83,
+      "total_pm": 6.0,
+      "gp": 22,
+      "mpg": 13.2,
+      "rank": 114
+    },
+    {
+      "player": "DINWIDDIE, SPENCER",
+      "team": "MUN",
+      "tpm_40": 0.79,
+      "total_pm": 5.0,
+      "gp": 11,
+      "mpg": 23.1,
+      "rank": 115
+    },
+    {
+      "player": "BROOKS, ARMONI",
+      "team": "MIL",
+      "tpm_40": 0.69,
+      "total_pm": 14.0,
+      "gp": 36,
+      "mpg": 22.5,
+      "rank": 116
+    },
+    {
+      "player": "GRANT, JERIAN",
+      "team": "PAN",
+      "tpm_40": 0.59,
+      "total_pm": 12.0,
+      "gp": 34,
+      "mpg": 23.9,
+      "rank": 117
+    },
+    {
+      "player": "VILDOZA, LUCA",
+      "team": "VIR",
+      "tpm_40": 0.55,
+      "total_pm": 9.0,
+      "gp": 31,
+      "mpg": 21.3,
+      "rank": 118
+    },
+    {
+      "player": "BIRCH, KHEM",
+      "team": "ULK",
+      "tpm_40": 0.55,
+      "total_pm": 8.0,
+      "gp": 36,
+      "mpg": 16.3,
+      "rank": 119
+    },
+    {
+      "player": "KALINIC, NIKOLA",
+      "team": "RED",
+      "tpm_40": 0.33,
+      "total_pm": 7.0,
+      "gp": 36,
+      "mpg": 23.6,
+      "rank": 120
+    },
+    {
+      "player": "MADAR, YAM",
+      "team": "HTA",
+      "tpm_40": 0.29,
+      "total_pm": 1.0,
+      "gp": 13,
+      "mpg": 10.7,
+      "rank": 121
+    },
+    {
+      "player": "PETRUSEV, FILIP",
+      "team": "DUB",
+      "tpm_40": 0.19,
+      "total_pm": 4.0,
+      "gp": 36,
+      "mpg": 23.6,
+      "rank": 122
+    },
+    {
+      "player": "CALE, MYLES",
+      "team": "BAR",
+      "tpm_40": 0.16,
+      "total_pm": 2.0,
+      "gp": 31,
+      "mpg": 15.9,
+      "rank": 123
+    },
+    {
+      "player": "DUNSTON, BRYANT",
+      "team": "MIL",
+      "tpm_40": 0.0,
+      "total_pm": 0.0,
+      "gp": 16,
+      "mpg": 11.2,
+      "rank": 124
+    },
+    {
+      "player": "HALL, DEVON",
+      "team": "ULK",
+      "tpm_40": -0.06,
+      "total_pm": -1.0,
+      "gp": 28,
+      "mpg": 24.8,
+      "rank": 125
+    },
+    {
+      "player": "MUSA, DZANAN",
+      "team": "DUB",
+      "tpm_40": -0.19,
+      "total_pm": -2.0,
+      "gp": 16,
+      "mpg": 25.9,
+      "rank": 126
+    },
+    {
+      "player": "FRISCH, CLEMENT",
+      "team": "BAS",
+      "tpm_40": -0.39,
+      "total_pm": -4.0,
+      "gp": 35,
+      "mpg": 11.7,
+      "rank": 127
+    },
+    {
+      "player": "PAJOLA, ALESSANDRO",
+      "team": "VIR",
+      "tpm_40": -0.44,
+      "total_pm": -5.0,
+      "gp": 24,
+      "mpg": 19.1,
+      "rank": 128
+    },
+    {
+      "player": "COLSON, BONZIE",
+      "team": "ULK",
+      "tpm_40": -0.46,
+      "total_pm": -7.0,
+      "gp": 33,
+      "mpg": 18.4,
+      "rank": 129
+    },
+    {
+      "player": "DOKOSSI, ALLAN",
+      "team": "PRS",
+      "tpm_40": -0.7,
+      "total_pm": -9.0,
+      "gp": 32,
+      "mpg": 16.1,
+      "rank": 130
+    },
+    {
+      "player": "HIFI, NADIR",
+      "team": "PRS",
+      "tpm_40": -0.72,
+      "total_pm": -14.0,
+      "gp": 35,
+      "mpg": 22.4,
+      "rank": 131
+    },
+    {
+      "player": "ROBINSON, JUSTIN",
+      "team": "PRS",
+      "tpm_40": -0.74,
+      "total_pm": -12.0,
+      "gp": 34,
+      "mpg": 19.0,
+      "rank": 132
+    },
+    {
+      "player": "OSMANI, ERCAN",
+      "team": "IST",
+      "tpm_40": -0.85,
+      "total_pm": -18.0,
+      "gp": 34,
+      "mpg": 24.8,
+      "rank": 133
+    },
+    {
+      "player": "CLARK III, JIMMY",
+      "team": "TEL",
+      "tpm_40": -0.86,
+      "total_pm": -15.0,
+      "gp": 35,
+      "mpg": 20.0,
+      "rank": 134
+    },
+    {
+      "player": "MANNION, NICCOLO",
+      "team": "MIL",
+      "tpm_40": -1.02,
+      "total_pm": -6.0,
+      "gp": 20,
+      "mpg": 11.8,
+      "rank": 135
+    },
+    {
+      "player": "ULANOVAS, EDGARAS",
+      "team": "ZAL",
+      "tpm_40": -1.15,
+      "total_pm": -19.0,
+      "gp": 36,
+      "mpg": 18.4,
+      "rank": 136
+    },
+    {
+      "player": "OJELEYE, SEMI",
+      "team": "RED",
+      "tpm_40": -1.15,
+      "total_pm": -24.0,
+      "gp": 36,
+      "mpg": 23.2,
+      "rank": 137
+    },
+    {
+      "player": "ELLIS, QUINN",
+      "team": "MIL",
+      "tpm_40": -1.16,
+      "total_pm": -25.0,
+      "gp": 34,
+      "mpg": 25.3,
+      "rank": 138
+    },
+    {
+      "player": "LLULL, SERGIO",
+      "team": "MAD",
+      "tpm_40": -1.19,
+      "total_pm": -11.0,
+      "gp": 32,
+      "mpg": 11.5,
+      "rank": 139
+    },
+    {
+      "player": "MITOGLOU, KONSTANTINOS",
+      "team": "PAN",
+      "tpm_40": -1.35,
+      "total_pm": -13.0,
+      "gp": 27,
+      "mpg": 14.3,
+      "rank": 140
+    },
+    {
+      "player": "ABASS, AWUDU",
+      "team": "DUB",
+      "tpm_40": -1.37,
+      "total_pm": -17.0,
+      "gp": 30,
+      "mpg": 16.6,
+      "rank": 141
+    },
+    {
+      "player": "DE LARREA, SERGIO",
+      "team": "PAM",
+      "tpm_40": -1.43,
+      "total_pm": -10.0,
+      "gp": 26,
+      "mpg": 10.7,
+      "rank": 142
+    },
+    {
+      "player": "ANGOLA, BRAIAN",
+      "team": "ASV",
+      "tpm_40": -1.44,
+      "total_pm": -10.0,
+      "gp": 12,
+      "mpg": 23.2,
+      "rank": 143
+    },
+    {
+      "player": "BRIZUELA, DARIO",
+      "team": "BAR",
+      "tpm_40": -1.44,
+      "total_pm": -19.0,
+      "gp": 34,
+      "mpg": 15.5,
+      "rank": 144
+    },
+    {
+      "player": "DIALLO, HAMIDOU",
+      "team": "BAS",
+      "tpm_40": -1.53,
+      "total_pm": -11.0,
+      "gp": 13,
+      "mpg": 22.1,
+      "rank": 145
+    },
+    {
+      "player": "WEILER-BABB, NICK",
+      "team": "IST",
+      "tpm_40": -1.58,
+      "total_pm": -39.0,
+      "gp": 34,
+      "mpg": 29.1,
+      "rank": 146
+    },
+    {
+      "player": "SHORTS, TJ",
+      "team": "PAN",
+      "tpm_40": -1.71,
+      "total_pm": -24.0,
+      "gp": 35,
+      "mpg": 16.1,
+      "rank": 147
+    },
+    {
+      "player": "MORGAN, MATTHEW",
+      "team": "VIR",
+      "tpm_40": -1.71,
+      "total_pm": -29.0,
+      "gp": 34,
+      "mpg": 19.9,
+      "rank": 148
+    },
+    {
+      "player": "BLOSSOMGAME, JARON",
+      "team": "MCO",
+      "tpm_40": -1.72,
+      "total_pm": -34.0,
+      "gp": 35,
+      "mpg": 22.6,
+      "rank": 149
+    },
+    {
+      "player": "FAYE, MOUHAMED",
+      "team": "PRS",
+      "tpm_40": -1.8,
+      "total_pm": -28.0,
+      "gp": 36,
+      "mpg": 17.3,
+      "rank": 150
+    },
+    {
+      "player": "LAPROVITTOLA, NICOLAS",
+      "team": "BAR",
+      "tpm_40": -1.9,
+      "total_pm": -16.0,
+      "gp": 20,
+      "mpg": 16.8,
+      "rank": 151
+    },
+    {
+      "player": "WILLIAMS-GOSS, NIGEL",
+      "team": "ZAL",
+      "tpm_40": -1.95,
+      "total_pm": -28.0,
+      "gp": 25,
+      "mpg": 23.0,
+      "rank": 152
+    },
+    {
+      "player": "GUDURIC, MARKO",
+      "team": "MIL",
+      "tpm_40": -2.08,
+      "total_pm": -39.0,
+      "gp": 34,
+      "mpg": 22.1,
+      "rank": 153
+    },
+    {
+      "player": "CORDINIER, ISAIA",
+      "team": "IST",
+      "tpm_40": -2.15,
+      "total_pm": -39.0,
+      "gp": 30,
+      "mpg": 24.2,
+      "rank": 154
+    },
+    {
+      "player": "CLYBURN, WILL",
+      "team": "BAR",
+      "tpm_40": -2.28,
+      "total_pm": -41.0,
+      "gp": 29,
+      "mpg": 24.8,
+      "rank": 155
+    },
+    {
+      "player": "LARKIN, SHANE",
+      "team": "IST",
+      "tpm_40": -2.3,
+      "total_pm": -20.0,
+      "gp": 11,
+      "mpg": 31.7,
+      "rank": 156
+    },
+    {
+      "player": "THEIS, DANIEL",
+      "team": "MCO",
+      "tpm_40": -2.34,
+      "total_pm": -40.0,
+      "gp": 32,
+      "mpg": 21.4,
+      "rank": 157
+    },
+    {
+      "player": "PARRA, JOEL",
+      "team": "BAR",
+      "tpm_40": -2.45,
+      "total_pm": -42.0,
+      "gp": 36,
+      "mpg": 19.1,
+      "rank": 158
+    },
+    {
+      "player": "GIEDRAITIS, DOVYDAS",
+      "team": "ZAL",
+      "tpm_40": -2.56,
+      "total_pm": -14.0,
+      "gp": 15,
+      "mpg": 14.6,
+      "rank": 159
+    },
+    {
+      "player": "OBST, ANDREAS",
+      "team": "MUN",
+      "tpm_40": -2.59,
+      "total_pm": -57.0,
+      "gp": 33,
+      "mpg": 26.6,
+      "rank": 160
+    },
+    {
+      "player": "DIOUF, MOUHAMET",
+      "team": "VIR",
+      "tpm_40": -2.68,
+      "total_pm": -39.0,
+      "gp": 31,
+      "mpg": 18.8,
+      "rank": 161
+    },
+    {
+      "player": "DIOP, KHALIFA",
+      "team": "BAS",
+      "tpm_40": -2.73,
+      "total_pm": -32.0,
+      "gp": 28,
+      "mpg": 16.7,
+      "rank": 162
+    },
+    {
+      "player": "BROWN, STERLING",
+      "team": "PAR",
+      "tpm_40": -2.8,
+      "total_pm": -68.0,
+      "gp": 34,
+      "mpg": 28.6,
+      "rank": 163
+    },
+    {
+      "player": "FARIED, KENNETH",
+      "team": "PAN",
+      "tpm_40": -2.87,
+      "total_pm": -28.0,
+      "gp": 27,
+      "mpg": 14.5,
+      "rank": 164
+    },
+    {
+      "player": "ALSTON JR. , DERRICK",
+      "team": "VIR",
+      "tpm_40": -2.87,
+      "total_pm": -56.0,
+      "gp": 35,
+      "mpg": 22.3,
+      "rank": 165
+    },
+    {
+      "player": "SHIELDS, SHAVON",
+      "team": "MIL",
+      "tpm_40": -2.9,
+      "total_pm": -64.0,
+      "gp": 33,
+      "mpg": 26.8,
+      "rank": 166
+    },
+    {
+      "player": "BIRSEN, METECAN",
+      "team": "ULK",
+      "tpm_40": -2.9,
+      "total_pm": -19.0,
+      "gp": 23,
+      "mpg": 11.4,
+      "rank": 167
+    },
+    {
+      "player": "POIRIER, VINCENT",
+      "team": "IST",
+      "tpm_40": -3.04,
+      "total_pm": -16.0,
+      "gp": 12,
+      "mpg": 17.6,
+      "rank": 168
+    },
+    {
+      "player": "LEE, SABEN",
+      "team": "OLY",
+      "tpm_40": -3.06,
+      "total_pm": -34.0,
+      "gp": 26,
+      "mpg": 17.1,
+      "rank": 169
+    },
+    {
+      "player": "BOOKER, DEVIN",
+      "team": "MIL",
+      "tpm_40": -3.07,
+      "total_pm": -52.0,
+      "gp": 34,
+      "mpg": 19.9,
+      "rank": 170
+    },
+    {
+      "player": "AVRAMOVIC, ALEKSA",
+      "team": "DUB",
+      "tpm_40": -3.17,
+      "total_pm": -27.0,
+      "gp": 20,
+      "mpg": 17.0,
+      "rank": 171
+    },
+    {
+      "player": "MIKE, ISIAHA",
+      "team": "MUN",
+      "tpm_40": -3.33,
+      "total_pm": -66.0,
+      "gp": 35,
+      "mpg": 22.7,
+      "rank": 172
+    },
+    {
+      "player": "SELJAAS, ZACHARY",
+      "team": "ASV",
+      "tpm_40": -3.44,
+      "total_pm": -59.0,
+      "gp": 33,
+      "mpg": 20.8,
+      "rank": 173
+    },
+    {
+      "player": "HERNANGOMEZ, WILLY",
+      "team": "BAR",
+      "tpm_40": -3.5,
+      "total_pm": -43.0,
+      "gp": 36,
+      "mpg": 13.7,
+      "rank": 174
+    },
+    {
+      "player": "RADZEVICIUS, GYTIS",
+      "team": "BAS",
+      "tpm_40": -3.54,
+      "total_pm": -36.0,
+      "gp": 23,
+      "mpg": 17.7,
+      "rank": 175
+    },
+    {
+      "player": "SORKIN, ROMAN",
+      "team": "TEL",
+      "tpm_40": -3.54,
+      "total_pm": -72.0,
+      "gp": 35,
+      "mpg": 23.3,
+      "rank": 176
+    },
+    {
+      "player": "DIAKITE, MAMADI",
+      "team": "BAS",
+      "tpm_40": -3.64,
+      "total_pm": -60.0,
+      "gp": 35,
+      "mpg": 18.9,
+      "rank": 177
+    },
+    {
+      "player": "KURUCS, RODIONS",
+      "team": "BAS",
+      "tpm_40": -3.69,
+      "total_pm": -49.0,
+      "gp": 25,
+      "mpg": 21.2,
+      "rank": 178
+    },
+    {
+      "player": "LEDAY, ZACH",
+      "team": "MIL",
+      "tpm_40": -3.71,
+      "total_pm": -67.0,
+      "gp": 29,
+      "mpg": 24.9,
+      "rank": 179
+    },
+    {
+      "player": "JOVIC, STEFAN",
+      "team": "MUN",
+      "tpm_40": -3.99,
+      "total_pm": -35.0,
+      "gp": 19,
+      "mpg": 18.5,
+      "rank": 180
+    },
+    {
+      "player": "WATSON, GLYNN",
+      "team": "ASV",
+      "tpm_40": -4.01,
+      "total_pm": -77.0,
+      "gp": 30,
+      "mpg": 25.6,
+      "rank": 181
+    },
+    {
+      "player": "NOWELL, MARKQUIS",
+      "team": "BAS",
+      "tpm_40": -4.07,
+      "total_pm": -40.0,
+      "gp": 27,
+      "mpg": 14.6,
+      "rank": 182
+    },
+    {
+      "player": "NDIAYE, MBAYE",
+      "team": "ASV",
+      "tpm_40": -4.11,
+      "total_pm": -75.0,
+      "gp": 31,
+      "mpg": 23.5,
+      "rank": 183
+    },
+    {
+      "player": "BONGA, ISAAC",
+      "team": "PAR",
+      "tpm_40": -4.16,
+      "total_pm": -102.0,
+      "gp": 35,
+      "mpg": 28.0,
+      "rank": 184
+    },
+    {
+      "player": "BLATT, TAMIR",
+      "team": "TEL",
+      "tpm_40": -4.17,
+      "total_pm": -71.0,
+      "gp": 35,
+      "mpg": 19.5,
+      "rank": 185
+    },
+    {
+      "player": "WALKER IV, LONNIE",
+      "team": "TEL",
+      "tpm_40": -4.23,
+      "total_pm": -60.0,
+      "gp": 25,
+      "mpg": 22.7,
+      "rank": 186
+    },
+    {
+      "player": "RHODEN, JARED",
+      "team": "PRS",
+      "tpm_40": -4.34,
+      "total_pm": -55.0,
+      "gp": 24,
+      "mpg": 21.1,
+      "rank": 187
+    },
+    {
+      "player": "DAVIDOVAC, DEJAN",
+      "team": "RED",
+      "tpm_40": -4.41,
+      "total_pm": -33.0,
+      "gp": 21,
+      "mpg": 14.2,
+      "rank": 188
+    },
+    {
+      "player": "AKELE, NICOLA",
+      "team": "VIR",
+      "tpm_40": -4.47,
+      "total_pm": -29.0,
+      "gp": 25,
+      "mpg": 10.4,
+      "rank": 189
+    },
+    {
+      "player": "GIFFEY, NIELS",
+      "team": "MUN",
+      "tpm_40": -4.5,
+      "total_pm": -45.0,
+      "gp": 30,
+      "mpg": 13.3,
+      "rank": 190
+    },
+    {
+      "player": "LOYD, JORDAN",
+      "team": "IST",
+      "tpm_40": -4.65,
+      "total_pm": -83.0,
+      "gp": 31,
+      "mpg": 23.0,
+      "rank": 191
+    },
+    {
+      "player": "AYAYI, JOEL",
+      "team": "PRS",
+      "tpm_40": -4.68,
+      "total_pm": -16.0,
+      "gp": 13,
+      "mpg": 10.5,
+      "rank": 192
+    },
+    {
+      "player": "HOWARD, MARKUS",
+      "team": "BAS",
+      "tpm_40": -4.71,
+      "total_pm": -52.0,
+      "gp": 21,
+      "mpg": 21.0,
+      "rank": 193
+    },
+    {
+      "player": "LUWAWU-CABARROT, TIMOTHE",
+      "team": "BAS",
+      "tpm_40": -4.71,
+      "total_pm": -102.0,
+      "gp": 34,
+      "mpg": 25.5,
+      "rank": 194
+    },
+    {
+      "player": "MASSA, BODIAN",
+      "team": "ASV",
+      "tpm_40": -4.84,
+      "total_pm": -63.0,
+      "gp": 32,
+      "mpg": 16.3,
+      "rank": 195
+    },
+    {
+      "player": "SPAGNOLO, MATTEO",
+      "team": "BAS",
+      "tpm_40": -4.9,
+      "total_pm": -67.0,
+      "gp": 35,
+      "mpg": 15.6,
+      "rank": 196
+    },
+    {
+      "player": "WASHINGTON, DUANE",
+      "team": "PAR",
+      "tpm_40": -4.92,
+      "total_pm": -62.0,
+      "gp": 23,
+      "mpg": 21.9,
+      "rank": 197
+    },
+    {
+      "player": "DOWTIN JR, JEFFREY",
+      "team": "TEL",
+      "tpm_40": -4.94,
+      "total_pm": -35.0,
+      "gp": 17,
+      "mpg": 16.7,
+      "rank": 198
+    },
+    {
+      "player": "FERNANDO, BRUNO",
+      "team": "MAD",
+      "tpm_40": -5.09,
+      "total_pm": -73.0,
+      "gp": 34,
+      "mpg": 16.9,
+      "rank": 199
+    },
+    {
+      "player": "M'BAYE, AMATH",
+      "team": "PRS",
+      "tpm_40": -5.11,
+      "total_pm": -71.0,
+      "gp": 32,
+      "mpg": 17.4,
+      "rank": 200
+    },
+    {
+      "player": "SMITS, ROLANDS",
+      "team": "IST",
+      "tpm_40": -5.14,
+      "total_pm": -79.0,
+      "gp": 32,
+      "mpg": 19.2,
+      "rank": 201
+    },
+    {
+      "player": "PAYNE, CAMERON",
+      "team": "PAR",
+      "tpm_40": -5.14,
+      "total_pm": -30.0,
+      "gp": 10,
+      "mpg": 23.3,
+      "rank": 202
+    },
+    {
+      "player": "KONDIC, KOSTA",
+      "team": "DUB",
+      "tpm_40": -5.33,
+      "total_pm": -24.0,
+      "gp": 14,
+      "mpg": 12.9,
+      "rank": 203
+    },
+    {
+      "player": "FORREST, TRENT",
+      "team": "BAS",
+      "tpm_40": -5.44,
+      "total_pm": -81.0,
+      "gp": 25,
+      "mpg": 23.8,
+      "rank": 204
+    },
+    {
+      "player": "BACOT JR., ARMANDO",
+      "team": "ULK",
+      "tpm_40": -5.78,
+      "total_pm": -38.0,
+      "gp": 26,
+      "mpg": 10.1,
+      "rank": 205
+    },
+    {
+      "player": "SEDEKERSKIS, TADAS",
+      "team": "BAS",
+      "tpm_40": -5.8,
+      "total_pm": -45.0,
+      "gp": 13,
+      "mpg": 23.9,
+      "rank": 206
+    },
+    {
+      "player": "LAKIC, ARIJAN",
+      "team": "PAR",
+      "tpm_40": -5.9,
+      "total_pm": -40.0,
+      "gp": 22,
+      "mpg": 12.3,
+      "rank": 207
+    },
+    {
+      "player": "DOS SANTOS, YAGO",
+      "team": "RED",
+      "tpm_40": -5.95,
+      "total_pm": -40.0,
+      "gp": 25,
+      "mpg": 10.8,
+      "rank": 208
+    },
+    {
+      "player": "HOARD, JAYLEN",
+      "team": "TEL",
+      "tpm_40": -6.02,
+      "total_pm": -139.0,
+      "gp": 32,
+      "mpg": 28.8,
+      "rank": 209
+    },
+    {
+      "player": "OUATTARA, YAKUBA",
+      "team": "PRS",
+      "tpm_40": -6.15,
+      "total_pm": -86.0,
+      "gp": 33,
+      "mpg": 17.0,
+      "rank": 210
+    },
+    {
+      "player": "JALLOW, KARIM",
+      "team": "VIR",
+      "tpm_40": -6.19,
+      "total_pm": -114.0,
+      "gp": 35,
+      "mpg": 21.0,
+      "rank": 211
+    },
+    {
+      "player": "NORRIS, MILES",
+      "team": "BAR",
+      "tpm_40": -6.24,
+      "total_pm": -60.0,
+      "gp": 32,
+      "mpg": 12.0,
+      "rank": 212
+    },
+    {
+      "player": "GABRIEL, WENYEN",
+      "team": "MUN",
+      "tpm_40": -6.26,
+      "total_pm": -91.0,
+      "gp": 34,
+      "mpg": 17.1,
+      "rank": 213
+    },
+    {
+      "player": "DIARRA, ALIOU",
+      "team": "VIR",
+      "tpm_40": -6.35,
+      "total_pm": -43.0,
+      "gp": 26,
+      "mpg": 10.4,
+      "rank": 214
+    },
+    {
+      "player": "CALATHES, NICK",
+      "team": "MCO",
+      "tpm_40": -6.39,
+      "total_pm": -85.0,
+      "gp": 28,
+      "mpg": 19.0,
+      "rank": 215
+    },
+    {
+      "player": "BRISSETT, O'SHAE J",
+      "team": "TEL",
+      "tpm_40": -6.5,
+      "total_pm": -131.0,
+      "gp": 33,
+      "mpg": 24.4,
+      "rank": 216
+    },
+    {
+      "player": "HOLLATZ, JUSTUS",
+      "team": "MUN",
+      "tpm_40": -6.6,
+      "total_pm": -65.0,
+      "gp": 24,
+      "mpg": 16.4,
+      "rank": 217
+    },
+    {
+      "player": "BOLOMBOY, JOEL",
+      "team": "RED",
+      "tpm_40": -6.61,
+      "total_pm": -30.0,
+      "gp": 12,
+      "mpg": 15.1,
+      "rank": 218
+    },
+    {
+      "player": "PARKER, JABARI",
+      "team": "PAR",
+      "tpm_40": -6.65,
+      "total_pm": -48.0,
+      "gp": 15,
+      "mpg": 19.2,
+      "rank": 219
+    },
+    {
+      "player": "LUCIC, VLADIMIR",
+      "team": "MUN",
+      "tpm_40": -6.67,
+      "total_pm": -120.0,
+      "gp": 31,
+      "mpg": 23.2,
+      "rank": 220
+    },
+    {
+      "player": "NIANG, SALIOU",
+      "team": "VIR",
+      "tpm_40": -6.77,
+      "total_pm": -131.0,
+      "gp": 36,
+      "mpg": 21.5,
+      "rank": 221
+    },
+    {
+      "player": "HAZER, SEHMUS",
+      "team": "IST",
+      "tpm_40": -6.82,
+      "total_pm": -65.0,
+      "gp": 30,
+      "mpg": 12.7,
+      "rank": 222
+    },
+    {
+      "player": "JACKSON, EDWIN",
+      "team": "ASV",
+      "tpm_40": -6.97,
+      "total_pm": -49.0,
+      "gp": 18,
+      "mpg": 15.6,
+      "rank": 223
+    },
+    {
+      "player": "EDWARDS, CARSEN",
+      "team": "VIR",
+      "tpm_40": -7.02,
+      "total_pm": -151.0,
+      "gp": 34,
+      "mpg": 25.3,
+      "rank": 224
+    },
+    {
+      "player": "TRAORE, ARMEL",
+      "team": "ASV",
+      "tpm_40": -7.19,
+      "total_pm": -99.0,
+      "gp": 33,
+      "mpg": 16.7,
+      "rank": 225
+    },
+    {
+      "player": "SIMMONS, KOBI",
+      "team": "BAS",
+      "tpm_40": -7.32,
+      "total_pm": -122.0,
+      "gp": 30,
+      "mpg": 22.2,
+      "rank": 226
+    },
+    {
+      "player": "OSETKOWSKI, DYLAN",
+      "team": "PAR",
+      "tpm_40": -7.34,
+      "total_pm": -118.0,
+      "gp": 32,
+      "mpg": 20.1,
+      "rank": 227
+    },
+    {
+      "player": "POKUSEVSKI, ALEKSEJ",
+      "team": "PAR",
+      "tpm_40": -7.59,
+      "total_pm": -53.0,
+      "gp": 24,
+      "mpg": 11.6,
+      "rank": 228
+    },
+    {
+      "player": "SMAILAGIC, ALEN",
+      "team": "VIR",
+      "tpm_40": -7.87,
+      "total_pm": -95.0,
+      "gp": 29,
+      "mpg": 16.6,
+      "rank": 229
+    },
+    {
+      "player": "JONES, KAI",
+      "team": "IST",
+      "tpm_40": -7.97,
+      "total_pm": -100.0,
+      "gp": 33,
+      "mpg": 15.2,
+      "rank": 230
+    },
+    {
+      "player": "VAUTIER, BASTIEN",
+      "team": "ASV",
+      "tpm_40": -8.04,
+      "total_pm": -91.0,
+      "gp": 35,
+      "mpg": 12.9,
+      "rank": 231
+    },
+    {
+      "player": "HARRISON, SHAQUILLE",
+      "team": "ASV",
+      "tpm_40": -8.18,
+      "total_pm": -95.0,
+      "gp": 26,
+      "mpg": 17.9,
+      "rank": 232
+    },
+    {
+      "player": "DOZIER, PJ",
+      "team": "IST",
+      "tpm_40": -8.34,
+      "total_pm": -110.0,
+      "gp": 24,
+      "mpg": 22.0,
+      "rank": 233
+    },
+    {
+      "player": "DESSERT, BRICE",
+      "team": "IST",
+      "tpm_40": -8.83,
+      "total_pm": -41.0,
+      "gp": 14,
+      "mpg": 13.3,
+      "rank": 234
+    },
+    {
+      "player": "HOMMES, DAULTON",
+      "team": "PRS",
+      "tpm_40": -9.09,
+      "total_pm": -60.0,
+      "gp": 19,
+      "mpg": 13.9,
+      "rank": 235
+    },
+    {
+      "player": "MILTON, SHAKE",
+      "team": "PAR",
+      "tpm_40": -9.16,
+      "total_pm": -84.0,
+      "gp": 20,
+      "mpg": 18.3,
+      "rank": 236
+    },
+    {
+      "player": "AJINCA, MELVIN",
+      "team": "ASV",
+      "tpm_40": -9.22,
+      "total_pm": -113.0,
+      "gp": 28,
+      "mpg": 17.5,
+      "rank": 237
+    },
+    {
+      "player": "RATHAN-MAYES, XAVIER",
+      "team": "MUN",
+      "tpm_40": -9.38,
+      "total_pm": -109.0,
+      "gp": 31,
+      "mpg": 15.0,
+      "rank": 238
+    },
+    {
+      "player": "STEVENS, LAMAR",
+      "team": "PRS",
+      "tpm_40": -9.43,
+      "total_pm": -99.0,
+      "gp": 21,
+      "mpg": 20.0,
+      "rank": 239
+    },
+    {
+      "player": "KAMENJAS, KENAN",
+      "team": "DUB",
+      "tpm_40": -9.64,
+      "total_pm": -69.0,
+      "gp": 26,
+      "mpg": 11.0,
+      "rank": 240
+    },
+    {
+      "player": "OMORUYI, EUGENE",
+      "team": "BAS",
+      "tpm_40": -9.94,
+      "total_pm": -104.0,
+      "gp": 21,
+      "mpg": 19.9,
+      "rank": 241
+    },
+    {
+      "player": "HACKETT, DANIEL",
+      "team": "VIR",
+      "tpm_40": -10.16,
+      "total_pm": -116.0,
+      "gp": 32,
+      "mpg": 14.3,
+      "rank": 242
+    },
+    {
+      "player": "BEAUBOIS, RODRIGUE",
+      "team": "IST",
+      "tpm_40": -10.63,
+      "total_pm": -59.0,
+      "gp": 18,
+      "mpg": 12.3,
+      "rank": 243
+    },
+    {
+      "player": "HEURTEL, THOMAS",
+      "team": "ASV",
+      "tpm_40": -10.74,
+      "total_pm": -124.0,
+      "gp": 23,
+      "mpg": 20.1,
+      "rank": 244
+    },
+    {
+      "player": "ATAMNA, ADAM",
+      "team": "ASV",
+      "tpm_40": -11.08,
+      "total_pm": -49.0,
+      "gp": 17,
+      "mpg": 10.4,
+      "rank": 245
+    },
+    {
+      "player": "EBOUA, PAUL",
+      "team": "ASV",
+      "tpm_40": -11.75,
+      "total_pm": -76.0,
+      "gp": 15,
+      "mpg": 17.3,
+      "rank": 246
+    },
+    {
+      "player": "MARINKOVIC, VANJA",
+      "team": "PAR",
+      "tpm_40": -12.33,
+      "total_pm": -120.0,
+      "gp": 19,
+      "mpg": 20.5,
+      "rank": 247
+    },
+    {
+      "player": "LIGHTY, DAVID",
+      "team": "ASV",
+      "tpm_40": -16.61,
+      "total_pm": -222.0,
+      "gp": 30,
+      "mpg": 17.8,
+      "rank": 248
+    },
+    {
+      "player": "NGOUAMA, MEHDY",
+      "team": "ASV",
+      "tpm_40": -22.31,
+      "total_pm": -72.0,
+      "gp": 12,
+      "mpg": 10.8,
+      "rank": 249
+    }
+  ],
+  "wir": [
+    {
+      "player": "MONTERO, JEAN",
+      "team": "PAM",
+      "wir_40": 29.92,
+      "pir_40": 29.98,
+      "wir_rank": 1,
+      "pir_rank": 6,
+      "rank_diff": 5,
+      "gp": 30,
+      "mpg": 21.8,
+      "ts_pct": 55.3
+    },
+    {
+      "player": "ROBINSON, JUSTIN",
+      "team": "PRS",
+      "wir_40": 28.82,
+      "pir_40": 28.62,
+      "wir_rank": 2,
+      "pir_rank": 11,
+      "rank_diff": 9,
+      "gp": 34,
+      "mpg": 19.0,
+      "ts_pct": 56.3
+    },
+    {
+      "player": "MILUTINOV, NIKOLA",
+      "team": "OLY",
+      "wir_40": 28.33,
+      "pir_40": 36.45,
+      "wir_rank": 3,
+      "pir_rank": 1,
+      "rank_diff": -2,
+      "gp": 33,
+      "mpg": 21.9,
+      "ts_pct": 72.8
+    },
+    {
+      "player": "IZUNDU, EBUKA",
+      "team": "RED",
+      "wir_40": 28.22,
+      "pir_40": 28.85,
+      "wir_rank": 4,
+      "pir_rank": 9,
+      "rank_diff": 5,
+      "gp": 30,
+      "mpg": 14.1,
+      "ts_pct": 74.4
+    },
+    {
+      "player": "HIFI, NADIR",
+      "team": "PRS",
+      "wir_40": 28.14,
+      "pir_40": 32.24,
+      "wir_rank": 5,
+      "pir_rank": 3,
+      "rank_diff": -2,
+      "gp": 35,
+      "mpg": 22.4,
+      "ts_pct": 56.8
+    },
+    {
+      "player": "KABENGELE, MFIONDU",
+      "team": "DUB",
+      "wir_40": 28.08,
+      "pir_40": 31.98,
+      "wir_rank": 6,
+      "pir_rank": 4,
+      "rank_diff": -2,
+      "gp": 34,
+      "mpg": 22.3,
+      "ts_pct": 64.1
+    },
+    {
+      "player": "FRANCISCO, SYLVAIN",
+      "team": "ZAL",
+      "wir_40": 27.51,
+      "pir_40": 28.64,
+      "wir_rank": 7,
+      "pir_rank": 10,
+      "rank_diff": 3,
+      "gp": 36,
+      "mpg": 27.1,
+      "ts_pct": 62.6
+    },
+    {
+      "player": "AVRAMOVIC, ALEKSA",
+      "team": "DUB",
+      "wir_40": 26.7,
+      "pir_40": 23.37,
+      "wir_rank": 8,
+      "pir_rank": 45,
+      "rank_diff": 37,
+      "gp": 20,
+      "mpg": 17.0,
+      "ts_pct": 56.7
+    },
+    {
+      "player": "THOMPSON, DARIUS",
+      "team": "PAM",
+      "wir_40": 26.64,
+      "pir_40": 22.09,
+      "wir_rank": 9,
+      "pir_rank": 59,
+      "rank_diff": 50,
+      "gp": 36,
+      "mpg": 19.3,
+      "ts_pct": 60.4
+    },
+    {
+      "player": "HALL, DONTA",
+      "team": "OLY",
+      "wir_40": 26.41,
+      "pir_40": 30.16,
+      "wir_rank": 10,
+      "pir_rank": 5,
+      "rank_diff": -5,
+      "gp": 31,
+      "mpg": 15.9,
+      "ts_pct": 78.5
+    },
+    {
+      "player": "JONES, TYRIQUE",
+      "team": "PAR",
+      "wir_40": 26.22,
+      "pir_40": 27.76,
+      "wir_rank": 11,
+      "pir_rank": 16,
+      "rank_diff": 5,
+      "gp": 29,
+      "mpg": 20.7,
+      "ts_pct": 69.2
+    },
+    {
+      "player": "SLOUKAS, KOSTAS",
+      "team": "PAN",
+      "wir_40": 25.86,
+      "pir_40": 23.84,
+      "wir_rank": 12,
+      "pir_rank": 38,
+      "rank_diff": 26,
+      "gp": 35,
+      "mpg": 21.5,
+      "ts_pct": 59.4
+    },
+    {
+      "player": "VEZENKOV, SASHA",
+      "team": "OLY",
+      "wir_40": 25.67,
+      "pir_40": 33.53,
+      "wir_rank": 13,
+      "pir_rank": 2,
+      "rank_diff": -11,
+      "gp": 32,
+      "mpg": 28.5,
+      "ts_pct": 68.7
+    },
+    {
+      "player": "LEAF, TJ",
+      "team": "TEL",
+      "wir_40": 25.66,
+      "pir_40": 27.56,
+      "wir_rank": 14,
+      "pir_rank": 18,
+      "rank_diff": 4,
+      "gp": 24,
+      "mpg": 18.2,
+      "ts_pct": 67.3
+    },
+    {
+      "player": "OTURU, DAN",
+      "team": "HTA",
+      "wir_40": 25.63,
+      "pir_40": 28.22,
+      "wir_rank": 15,
+      "pir_rank": 14,
+      "rank_diff": -1,
+      "gp": 35,
+      "mpg": 23.4,
+      "ts_pct": 73.2
+    },
+    {
+      "player": "BALDWIN IV, WADE",
+      "team": "ULK",
+      "wir_40": 25.27,
+      "pir_40": 26.09,
+      "wir_rank": 16,
+      "pir_rank": 24,
+      "rank_diff": 8,
+      "gp": 35,
+      "mpg": 25.9,
+      "ts_pct": 55.4
+    },
+    {
+      "player": "JAMES, MIKE",
+      "team": "MCO",
+      "wir_40": 25.25,
+      "pir_40": 25.15,
+      "wir_rank": 17,
+      "pir_rank": 31,
+      "rank_diff": 14,
+      "gp": 31,
+      "mpg": 30.0,
+      "ts_pct": 53.3
+    },
+    {
+      "player": "YURTSEVEN, OMER",
+      "team": "PAN",
+      "wir_40": 25.11,
+      "pir_40": 26.46,
+      "wir_rank": 18,
+      "pir_rank": 21,
+      "rank_diff": 3,
+      "gp": 19,
+      "mpg": 12.7,
+      "ts_pct": 67.9
+    },
+    {
+      "player": "DIARRA, ALIOU",
+      "team": "VIR",
+      "wir_40": 25.09,
+      "pir_40": 24.5,
+      "wir_rank": 19,
+      "pir_rank": 36,
+      "rank_diff": 17,
+      "gp": 26,
+      "mpg": 10.4,
+      "ts_pct": 68.2
+    },
+    {
+      "player": "DE COLO, NANDO",
+      "team": "ASV",
+      "wir_40": 25.0,
+      "pir_40": 29.56,
+      "wir_rank": 20,
+      "pir_rank": 7,
+      "rank_diff": -13,
+      "gp": 25,
+      "mpg": 19.6,
+      "ts_pct": 73.0
+    },
+    {
+      "player": "MIROTIC, NIKOLA",
+      "team": "MCO",
+      "wir_40": 24.99,
+      "pir_40": 26.68,
+      "wir_rank": 21,
+      "pir_rank": 20,
+      "rank_diff": -1,
+      "gp": 30,
+      "mpg": 19.0,
+      "ts_pct": 63.0
+    },
+    {
+      "player": "CLARK III, JIMMY",
+      "team": "TEL",
+      "wir_40": 24.84,
+      "pir_40": 17.97,
+      "wir_rank": 22,
+      "pir_rank": 119,
+      "rank_diff": 97,
+      "gp": 35,
+      "mpg": 20.0,
+      "ts_pct": 51.8
+    },
+    {
+      "player": "SORKIN, ROMAN",
+      "team": "TEL",
+      "wir_40": 24.83,
+      "pir_40": 25.65,
+      "wir_rank": 23,
+      "pir_rank": 26,
+      "rank_diff": 3,
+      "gp": 35,
+      "mpg": 23.3,
+      "ts_pct": 60.6
+    },
+    {
+      "player": "BUTLER, JARED",
+      "team": "RED",
+      "wir_40": 24.69,
+      "pir_40": 20.52,
+      "wir_rank": 24,
+      "pir_rank": 72,
+      "rank_diff": 48,
+      "gp": 29,
+      "mpg": 19.8,
+      "ts_pct": 54.9
+    },
+    {
+      "player": "JONES, CARLIK",
+      "team": "PAR",
+      "wir_40": 24.57,
+      "pir_40": 25.47,
+      "wir_rank": 25,
+      "pir_rank": 28,
+      "rank_diff": 3,
+      "gp": 12,
+      "mpg": 28.1,
+      "ts_pct": 59.4
+    },
+    {
+      "player": "LYLES, TREY",
+      "team": "MAD",
+      "wir_40": 24.2,
+      "pir_40": 28.61,
+      "wir_rank": 26,
+      "pir_rank": 12,
+      "rank_diff": -14,
+      "gp": 34,
+      "mpg": 20.8,
+      "ts_pct": 65.3
+    },
+    {
+      "player": "WRIGHT IV, MCKINLEY",
+      "team": "DUB",
+      "wir_40": 24.19,
+      "pir_40": 22.27,
+      "wir_rank": 27,
+      "pir_rank": 57,
+      "rank_diff": 30,
+      "gp": 36,
+      "mpg": 29.7,
+      "ts_pct": 62.6
+    },
+    {
+      "player": "CABOCLO, BRUNO",
+      "team": "DUB",
+      "wir_40": 24.01,
+      "pir_40": 23.75,
+      "wir_rank": 28,
+      "pir_rank": 39,
+      "rank_diff": 11,
+      "gp": 10,
+      "mpg": 13.5,
+      "ts_pct": 89.1
+    },
+    {
+      "player": "FORREST, TRENT",
+      "team": "BAS",
+      "wir_40": 24.01,
+      "pir_40": 24.97,
+      "wir_rank": 29,
+      "pir_rank": 33,
+      "rank_diff": 4,
+      "gp": 25,
+      "mpg": 23.8,
+      "ts_pct": 60.4
+    },
+    {
+      "player": "WRIGHT, MOSES",
+      "team": "ZAL",
+      "wir_40": 23.85,
+      "pir_40": 28.93,
+      "wir_rank": 30,
+      "pir_rank": 8,
+      "rank_diff": -22,
+      "gp": 36,
+      "mpg": 22.9,
+      "ts_pct": 64.7
+    },
+    {
+      "player": "CAMPAZZO, FACUNDO",
+      "team": "MAD",
+      "wir_40": 23.8,
+      "pir_40": 23.54,
+      "wir_rank": 31,
+      "pir_rank": 41,
+      "rank_diff": 10,
+      "gp": 36,
+      "mpg": 24.2,
+      "ts_pct": 61.8
+    },
+    {
+      "player": "MALEDON, THEO",
+      "team": "MAD",
+      "wir_40": 23.72,
+      "pir_40": 25.87,
+      "wir_rank": 32,
+      "pir_rank": 25,
+      "rank_diff": -7,
+      "gp": 30,
+      "mpg": 17.5,
+      "ts_pct": 61.0
+    },
+    {
+      "player": "MILLER-MCINTYRE, CODI",
+      "team": "RED",
+      "wir_40": 23.49,
+      "pir_40": 19.92,
+      "wir_rank": 33,
+      "pir_rank": 80,
+      "rank_diff": 47,
+      "gp": 36,
+      "mpg": 30.8,
+      "ts_pct": 52.0
+    },
+    {
+      "player": "ANGOLA, BRAIAN",
+      "team": "ASV",
+      "wir_40": 23.41,
+      "pir_40": 27.71,
+      "wir_rank": 34,
+      "pir_rank": 17,
+      "rank_diff": -17,
+      "gp": 12,
+      "mpg": 23.2,
+      "ts_pct": 57.2
+    },
+    {
+      "player": "VILDOZA, LUCA",
+      "team": "VIR",
+      "wir_40": 23.25,
+      "pir_40": 18.62,
+      "wir_rank": 35,
+      "pir_rank": 109,
+      "rank_diff": 74,
+      "gp": 31,
+      "mpg": 21.3,
+      "ts_pct": 57.8
+    },
+    {
+      "player": "WILLIAMS-GOSS, NIGEL",
+      "team": "ZAL",
+      "wir_40": 22.83,
+      "pir_40": 19.45,
+      "wir_rank": 36,
+      "pir_rank": 89,
+      "rank_diff": 53,
+      "gp": 25,
+      "mpg": 23.0,
+      "ts_pct": 54.7
+    },
+    {
+      "player": "MONEKE, CHIMA",
+      "team": "RED",
+      "wir_40": 22.81,
+      "pir_40": 28.17,
+      "wir_rank": 37,
+      "pir_rank": 15,
+      "rank_diff": -22,
+      "gp": 32,
+      "mpg": 26.9,
+      "ts_pct": 66.7
+    },
+    {
+      "player": "LUWAWU-CABARROT, TIMOTHE",
+      "team": "BAS",
+      "wir_40": 22.62,
+      "pir_40": 25.62,
+      "wir_rank": 38,
+      "pir_rank": 27,
+      "rank_diff": -11,
+      "gp": 34,
+      "mpg": 25.5,
+      "ts_pct": 64.4
+    },
+    {
+      "player": "JONES, CHRIS",
+      "team": "HTA",
+      "wir_40": 22.52,
+      "pir_40": 21.15,
+      "wir_rank": 39,
+      "pir_rank": 66,
+      "rank_diff": 27,
+      "gp": 35,
+      "mpg": 19.8,
+      "ts_pct": 58.9
+    },
+    {
+      "player": "OKOBO, ELIE",
+      "team": "MCO",
+      "wir_40": 22.43,
+      "pir_40": 18.76,
+      "wir_rank": 40,
+      "pir_rank": 105,
+      "rank_diff": 65,
+      "gp": 34,
+      "mpg": 25.4,
+      "ts_pct": 52.5
+    },
+    {
+      "player": "HORTON TUCKER, TALEN",
+      "team": "ULK",
+      "wir_40": 22.41,
+      "pir_40": 25.03,
+      "wir_rank": 41,
+      "pir_rank": 32,
+      "rank_diff": -9,
+      "gp": 34,
+      "mpg": 23.6,
+      "ts_pct": 58.5
+    },
+    {
+      "player": "TAVARES, WALTER",
+      "team": "MAD",
+      "wir_40": 22.39,
+      "pir_40": 27.44,
+      "wir_rank": 42,
+      "pir_rank": 19,
+      "rank_diff": -23,
+      "gp": 36,
+      "mpg": 23.1,
+      "ts_pct": 71.5
+    },
+    {
+      "player": "NOWELL, MARKQUIS",
+      "team": "BAS",
+      "wir_40": 22.22,
+      "pir_40": 17.0,
+      "wir_rank": 43,
+      "pir_rank": 138,
+      "rank_diff": 95,
+      "gp": 27,
+      "mpg": 14.6,
+      "ts_pct": 55.3
+    },
+    {
+      "player": "BRYANT, ELIJAH",
+      "team": "HTA",
+      "wir_40": 22.19,
+      "pir_40": 28.56,
+      "wir_rank": 44,
+      "pir_rank": 13,
+      "rank_diff": -31,
+      "gp": 31,
+      "mpg": 29.8,
+      "ts_pct": 66.4
+    },
+    {
+      "player": "MUSA, DZANAN",
+      "team": "DUB",
+      "wir_40": 22.16,
+      "pir_40": 23.73,
+      "wir_rank": 45,
+      "pir_rank": 40,
+      "rank_diff": -5,
+      "gp": 16,
+      "mpg": 25.9,
+      "ts_pct": 64.2
+    },
+    {
+      "player": "SHENGELIA, TORNIKE",
+      "team": "BAR",
+      "wir_40": 22.16,
+      "pir_40": 25.33,
+      "wir_rank": 46,
+      "pir_rank": 29,
+      "rank_diff": -17,
+      "gp": 30,
+      "mpg": 25.1,
+      "ts_pct": 64.2
+    },
+    {
+      "player": "DOKOSSI, ALLAN",
+      "team": "PRS",
+      "wir_40": 22.06,
+      "pir_40": 21.01,
+      "wir_rank": 47,
+      "pir_rank": 68,
+      "rank_diff": 21,
+      "gp": 32,
+      "mpg": 16.1,
+      "ts_pct": 67.5
+    },
+    {
+      "player": "DIMITRIJEVIC, NENO",
+      "team": "MUN",
+      "wir_40": 22.04,
+      "pir_40": 25.25,
+      "wir_rank": 48,
+      "pir_rank": 30,
+      "rank_diff": -18,
+      "gp": 14,
+      "mpg": 21.3,
+      "ts_pct": 60.7
+    },
+    {
+      "player": "NUNN, KENDRICK",
+      "team": "PAN",
+      "wir_40": 21.98,
+      "pir_40": 22.87,
+      "wir_rank": 49,
+      "pir_rank": 50,
+      "rank_diff": 1,
+      "gp": 29,
+      "mpg": 30.1,
+      "ts_pct": 61.9
+    },
+    {
+      "player": "THEIS, DANIEL",
+      "team": "MCO",
+      "wir_40": 21.93,
+      "pir_40": 23.87,
+      "wir_rank": 50,
+      "pir_rank": 37,
+      "rank_diff": -13,
+      "gp": 32,
+      "mpg": 21.4,
+      "ts_pct": 67.5
+    },
+    {
+      "player": "POIRIER, VINCENT",
+      "team": "IST",
+      "wir_40": 21.93,
+      "pir_40": 21.65,
+      "wir_rank": 51,
+      "pir_rank": 62,
+      "rank_diff": 11,
+      "gp": 12,
+      "mpg": 17.6,
+      "ts_pct": 56.2
+    },
+    {
+      "player": "HEURTEL, THOMAS",
+      "team": "ASV",
+      "wir_40": 21.92,
+      "pir_40": 18.71,
+      "wir_rank": 52,
+      "pir_rank": 107,
+      "rank_diff": 55,
+      "gp": 23,
+      "mpg": 20.1,
+      "ts_pct": 53.5
+    },
+    {
+      "player": "GARUBA, USMAN",
+      "team": "MAD",
+      "wir_40": 21.89,
+      "pir_40": 18.98,
+      "wir_rank": 53,
+      "pir_rank": 97,
+      "rank_diff": 44,
+      "gp": 33,
+      "mpg": 11.5,
+      "ts_pct": 63.5
+    },
+    {
+      "player": "PAYNE, CAMERON",
+      "team": "PAR",
+      "wir_40": 21.89,
+      "pir_40": 18.51,
+      "wir_rank": 54,
+      "pir_rank": 110,
+      "rank_diff": 56,
+      "gp": 10,
+      "mpg": 23.3,
+      "ts_pct": 56.5
+    },
+    {
+      "player": "MORGAN, MATTHEW",
+      "team": "VIR",
+      "wir_40": 21.83,
+      "pir_40": 24.55,
+      "wir_rank": 55,
+      "pir_rank": 35,
+      "rank_diff": -20,
+      "gp": 34,
+      "mpg": 19.9,
+      "ts_pct": 65.7
+    },
+    {
+      "player": "NEBO, JOSH",
+      "team": "MIL",
+      "wir_40": 21.76,
+      "pir_40": 26.43,
+      "wir_rank": 56,
+      "pir_rank": 22,
+      "rank_diff": -34,
+      "gp": 24,
+      "mpg": 21.9,
+      "ts_pct": 71.3
+    },
+    {
+      "player": "SHORTS, TJ",
+      "team": "PAN",
+      "wir_40": 21.66,
+      "pir_40": 19.36,
+      "wir_rank": 57,
+      "pir_rank": 93,
+      "rank_diff": 36,
+      "gp": 35,
+      "mpg": 16.1,
+      "ts_pct": 51.9
+    },
+    {
+      "player": "BROWN, LORENZO",
+      "team": "MIL",
+      "wir_40": 21.6,
+      "pir_40": 18.88,
+      "wir_rank": 58,
+      "pir_rank": 102,
+      "rank_diff": 44,
+      "gp": 12,
+      "mpg": 14.5,
+      "ts_pct": 52.9
+    },
+    {
+      "player": "LAPROVITTOLA, NICOLAS",
+      "team": "BAR",
+      "wir_40": 21.55,
+      "pir_40": 17.23,
+      "wir_rank": 59,
+      "pir_rank": 132,
+      "rank_diff": 73,
+      "gp": 20,
+      "mpg": 16.8,
+      "ts_pct": 58.8
+    },
+    {
+      "player": "JOVIC, STEFAN",
+      "team": "MUN",
+      "wir_40": 21.55,
+      "pir_40": 16.52,
+      "wir_rank": 60,
+      "pir_rank": 146,
+      "rank_diff": 86,
+      "gp": 19,
+      "mpg": 18.5,
+      "ts_pct": 58.6
+    },
+    {
+      "player": "WATSON, GLYNN",
+      "team": "ASV",
+      "wir_40": 21.42,
+      "pir_40": 19.6,
+      "wir_rank": 61,
+      "pir_rank": 86,
+      "rank_diff": 25,
+      "gp": 30,
+      "mpg": 25.6,
+      "ts_pct": 58.9
+    },
+    {
+      "player": "REUVERS, NATHAN",
+      "team": "PAM",
+      "wir_40": 21.37,
+      "pir_40": 23.02,
+      "wir_rank": 62,
+      "pir_rank": 47,
+      "rank_diff": -15,
+      "gp": 36,
+      "mpg": 19.2,
+      "ts_pct": 69.6
+    },
+    {
+      "player": "DORSEY, TYLER",
+      "team": "OLY",
+      "wir_40": 21.29,
+      "pir_40": 22.94,
+      "wir_rank": 63,
+      "pir_rank": 49,
+      "rank_diff": -14,
+      "gp": 36,
+      "mpg": 25.9,
+      "ts_pct": 61.7
+    },
+    {
+      "player": "DA SILVA, OSCAR",
+      "team": "MUN",
+      "wir_40": 21.14,
+      "pir_40": 19.63,
+      "wir_rank": 64,
+      "pir_rank": 84,
+      "rank_diff": 20,
+      "gp": 33,
+      "mpg": 15.7,
+      "ts_pct": 65.0
+    },
+    {
+      "player": "PETRUSEV, FILIP",
+      "team": "DUB",
+      "wir_40": 21.11,
+      "pir_40": 26.2,
+      "wir_rank": 65,
+      "pir_rank": 23,
+      "rank_diff": -42,
+      "gp": 36,
+      "mpg": 23.6,
+      "ts_pct": 65.4
+    },
+    {
+      "player": "TAYLOR, KAMERON",
+      "team": "PAM",
+      "wir_40": 21.08,
+      "pir_40": 23.45,
+      "wir_rank": 66,
+      "pir_rank": 42,
+      "rank_diff": -24,
+      "gp": 32,
+      "mpg": 23.8,
+      "ts_pct": 65.6
+    },
+    {
+      "player": "TUBELIS, AZUOLAS",
+      "team": "ZAL",
+      "wir_40": 21.08,
+      "pir_40": 22.34,
+      "wir_rank": 67,
+      "pir_rank": 56,
+      "rank_diff": -11,
+      "gp": 36,
+      "mpg": 22.1,
+      "ts_pct": 64.2
+    },
+    {
+      "player": "MOORE, OMARI",
+      "team": "PAM",
+      "wir_40": 21.06,
+      "pir_40": 19.38,
+      "wir_rank": 68,
+      "pir_rank": 91,
+      "rank_diff": 23,
+      "gp": 36,
+      "mpg": 19.0,
+      "ts_pct": 54.9
+    },
+    {
+      "player": "PAJOLA, ALESSANDRO",
+      "team": "VIR",
+      "wir_40": 21.0,
+      "pir_40": 14.41,
+      "wir_rank": 69,
+      "pir_rank": 172,
+      "rank_diff": 103,
+      "gp": 24,
+      "mpg": 19.1,
+      "ts_pct": 48.1
+    },
+    {
+      "player": "WASHINGTON, DUANE",
+      "team": "PAR",
+      "wir_40": 20.97,
+      "pir_40": 20.14,
+      "wir_rank": 70,
+      "pir_rank": 79,
+      "rank_diff": 9,
+      "gp": 23,
+      "mpg": 21.9,
+      "ts_pct": 56.8
+    },
+    {
+      "player": "FARIED, KENNETH",
+      "team": "PAN",
+      "wir_40": 20.94,
+      "pir_40": 22.55,
+      "wir_rank": 71,
+      "pir_rank": 53,
+      "rank_diff": -18,
+      "gp": 27,
+      "mpg": 14.5,
+      "ts_pct": 62.6
+    },
+    {
+      "player": "BROOKS, ARMONI",
+      "team": "MIL",
+      "wir_40": 20.89,
+      "pir_40": 18.89,
+      "wir_rank": 72,
+      "pir_rank": 101,
+      "rank_diff": 29,
+      "gp": 36,
+      "mpg": 22.5,
+      "ts_pct": 60.4
+    },
+    {
+      "player": "NEDOVIC, NEMANJA",
+      "team": "MCO",
+      "wir_40": 20.88,
+      "pir_40": 16.95,
+      "wir_rank": 73,
+      "pir_rank": 139,
+      "rank_diff": 66,
+      "gp": 32,
+      "mpg": 13.4,
+      "ts_pct": 64.9
+    },
+    {
+      "player": "DIAKITE, MAMADI",
+      "team": "BAS",
+      "wir_40": 20.88,
+      "pir_40": 20.18,
+      "wir_rank": 74,
+      "pir_rank": 77,
+      "rank_diff": 3,
+      "gp": 35,
+      "mpg": 18.9,
+      "ts_pct": 62.8
+    },
+    {
+      "player": "JEKIRI, TONYE",
+      "team": "PAR",
+      "wir_40": 20.76,
+      "pir_40": 18.76,
+      "wir_rank": 75,
+      "pir_rank": 104,
+      "rank_diff": 29,
+      "gp": 14,
+      "mpg": 19.3,
+      "ts_pct": 55.4
+    },
+    {
+      "player": "BOLOMBOY, JOEL",
+      "team": "RED",
+      "wir_40": 20.66,
+      "pir_40": 22.69,
+      "wir_rank": 76,
+      "pir_rank": 52,
+      "rank_diff": -24,
+      "gp": 12,
+      "mpg": 15.1,
+      "ts_pct": 63.0
+    },
+    {
+      "player": "DIOUF, MOUHAMET",
+      "team": "VIR",
+      "wir_40": 20.66,
+      "pir_40": 22.46,
+      "wir_rank": 77,
+      "pir_rank": 54,
+      "rank_diff": -23,
+      "gp": 31,
+      "mpg": 18.8,
+      "ts_pct": 64.0
+    },
+    {
+      "player": "WALKER IV, LONNIE",
+      "team": "TEL",
+      "wir_40": 20.65,
+      "pir_40": 21.8,
+      "wir_rank": 78,
+      "pir_rank": 61,
+      "rank_diff": -17,
+      "gp": 25,
+      "mpg": 22.7,
+      "ts_pct": 54.4
+    },
+    {
+      "player": "MOTLEY, JOHNATHAN",
+      "team": "HTA",
+      "wir_40": 20.35,
+      "pir_40": 22.98,
+      "wir_rank": 79,
+      "pir_rank": 48,
+      "rank_diff": -31,
+      "gp": 32,
+      "mpg": 15.6,
+      "ts_pct": 71.0
+    },
+    {
+      "player": "WALKUP, THOMAS",
+      "team": "OLY",
+      "wir_40": 20.22,
+      "pir_40": 15.25,
+      "wir_rank": 80,
+      "pir_rank": 162,
+      "rank_diff": 82,
+      "gp": 30,
+      "mpg": 24.3,
+      "ts_pct": 50.7
+    },
+    {
+      "player": "SIMMONS, KOBI",
+      "team": "BAS",
+      "wir_40": 20.18,
+      "pir_40": 19.68,
+      "wir_rank": 81,
+      "pir_rank": 82,
+      "rank_diff": 1,
+      "gp": 30,
+      "mpg": 22.2,
+      "ts_pct": 61.2
+    },
+    {
+      "player": "HEZONJA, MARIO",
+      "team": "MAD",
+      "wir_40": 20.18,
+      "pir_40": 21.39,
+      "wir_rank": 82,
+      "pir_rank": 63,
+      "rank_diff": -19,
+      "gp": 36,
+      "mpg": 22.0,
+      "ts_pct": 53.2
+    },
+    {
+      "player": "WILLIS, DEREK",
+      "team": "PRS",
+      "wir_40": 20.15,
+      "pir_40": 20.5,
+      "wir_rank": 83,
+      "pir_rank": 73,
+      "rank_diff": -10,
+      "gp": 26,
+      "mpg": 16.3,
+      "ts_pct": 59.2
+    },
+    {
+      "player": "BLATT, TAMIR",
+      "team": "TEL",
+      "wir_40": 20.13,
+      "pir_40": 18.73,
+      "wir_rank": 84,
+      "pir_rank": 106,
+      "rank_diff": 22,
+      "gp": 35,
+      "mpg": 19.5,
+      "ts_pct": 58.6
+    },
+    {
+      "player": "DOWTIN JR, JEFFREY",
+      "team": "TEL",
+      "wir_40": 20.12,
+      "pir_40": 17.34,
+      "wir_rank": 85,
+      "pir_rank": 130,
+      "rank_diff": 45,
+      "gp": 17,
+      "mpg": 16.7,
+      "ts_pct": 56.1
+    },
+    {
+      "player": "COLSON, BONZIE",
+      "team": "ULK",
+      "wir_40": 20.11,
+      "pir_40": 21.85,
+      "wir_rank": 86,
+      "pir_rank": 60,
+      "rank_diff": -26,
+      "gp": 33,
+      "mpg": 18.4,
+      "ts_pct": 67.9
+    },
+    {
+      "player": "HAYES, KEVARRIUS",
+      "team": "MCO",
+      "wir_40": 20.04,
+      "pir_40": 16.49,
+      "wir_rank": 87,
+      "pir_rank": 147,
+      "rank_diff": 60,
+      "gp": 32,
+      "mpg": 16.8,
+      "ts_pct": 63.2
+    },
+    {
+      "player": "NWORA, JORDAN",
+      "team": "RED",
+      "wir_40": 20.01,
+      "pir_40": 23.2,
+      "wir_rank": 88,
+      "pir_rank": 46,
+      "rank_diff": -42,
+      "gp": 31,
+      "mpg": 27.5,
+      "ts_pct": 58.3
+    },
+    {
+      "player": "HOARD, JAYLEN",
+      "team": "TEL",
+      "wir_40": 19.88,
+      "pir_40": 22.76,
+      "wir_rank": 89,
+      "pir_rank": 51,
+      "rank_diff": -38,
+      "gp": 32,
+      "mpg": 28.8,
+      "ts_pct": 62.3
+    },
+    {
+      "player": "KONDIC, KOSTA",
+      "team": "DUB",
+      "wir_40": 19.84,
+      "pir_40": 14.2,
+      "wir_rank": 90,
+      "pir_rank": 176,
+      "rank_diff": 86,
+      "gp": 14,
+      "mpg": 12.9,
+      "ts_pct": 59.7
+    },
+    {
+      "player": "VAUTIER, BASTIEN",
+      "team": "ASV",
+      "wir_40": 19.76,
+      "pir_40": 17.58,
+      "wir_rank": 91,
+      "pir_rank": 124,
+      "rank_diff": 33,
+      "gp": 35,
+      "mpg": 12.9,
+      "ts_pct": 57.9
+    },
+    {
+      "player": "DIALLO, ALPHA",
+      "team": "MCO",
+      "wir_40": 19.76,
+      "pir_40": 20.35,
+      "wir_rank": 92,
+      "pir_rank": 75,
+      "rank_diff": -17,
+      "gp": 35,
+      "mpg": 28.0,
+      "ts_pct": 61.0
+    },
+    {
+      "player": "FERNANDO, BRUNO",
+      "team": "MAD",
+      "wir_40": 19.72,
+      "pir_40": 23.42,
+      "wir_rank": 93,
+      "pir_rank": 43,
+      "rank_diff": -50,
+      "gp": 34,
+      "mpg": 16.9,
+      "ts_pct": 68.2
+    },
+    {
+      "player": "MCKISSIC, SHAQUIELLE",
+      "team": "OLY",
+      "wir_40": 19.66,
+      "pir_40": 15.86,
+      "wir_rank": 94,
+      "pir_rank": 155,
+      "rank_diff": 61,
+      "gp": 20,
+      "mpg": 12.0,
+      "ts_pct": 52.4
+    },
+    {
+      "player": "SATORANSKY, TOMAS",
+      "team": "BAR",
+      "wir_40": 19.64,
+      "pir_40": 17.96,
+      "wir_rank": 95,
+      "pir_rank": 120,
+      "rank_diff": 25,
+      "gp": 34,
+      "mpg": 25.1,
+      "ts_pct": 64.9
+    },
+    {
+      "player": "DIALLO, HAMIDOU",
+      "team": "BAS",
+      "wir_40": 19.61,
+      "pir_40": 22.38,
+      "wir_rank": 96,
+      "pir_rank": 55,
+      "rank_diff": -41,
+      "gp": 13,
+      "mpg": 22.1,
+      "ts_pct": 54.6
+    },
+    {
+      "player": "MCCORMACK, DAVID",
+      "team": "MUN",
+      "wir_40": 19.61,
+      "pir_40": 21.35,
+      "wir_rank": 97,
+      "pir_rank": 64,
+      "rank_diff": -33,
+      "gp": 26,
+      "mpg": 15.2,
+      "ts_pct": 65.7
+    },
+    {
+      "player": "LEE, SABEN",
+      "team": "OLY",
+      "wir_40": 19.58,
+      "pir_40": 19.37,
+      "wir_rank": 98,
+      "pir_rank": 92,
+      "rank_diff": -6,
+      "gp": 26,
+      "mpg": 17.1,
+      "ts_pct": 57.9
+    },
+    {
+      "player": "JONES, KAI",
+      "team": "IST",
+      "wir_40": 19.49,
+      "pir_40": 18.96,
+      "wir_rank": 99,
+      "pir_rank": 99,
+      "rank_diff": 0,
+      "gp": 33,
+      "mpg": 15.2,
+      "ts_pct": 92.2
+    },
+    {
+      "player": "KAMENJAS, KENAN",
+      "team": "DUB",
+      "wir_40": 19.44,
+      "pir_40": 21.1,
+      "wir_rank": 100,
+      "pir_rank": 67,
+      "rank_diff": -33,
+      "gp": 26,
+      "mpg": 11.0,
+      "ts_pct": 60.1
+    },
+    {
+      "player": "SAKO, NEAL",
+      "team": "PAM",
+      "wir_40": 19.4,
+      "pir_40": 19.65,
+      "wir_rank": 101,
+      "pir_rank": 83,
+      "rank_diff": -18,
+      "gp": 34,
+      "mpg": 13.2,
+      "ts_pct": 59.5
+    },
+    {
+      "player": "BOLMARO, LEANDRO",
+      "team": "MIL",
+      "wir_40": 19.4,
+      "pir_40": 18.95,
+      "wir_rank": 102,
+      "pir_rank": 100,
+      "rank_diff": -2,
+      "gp": 27,
+      "mpg": 22.8,
+      "ts_pct": 56.7
+    },
+    {
+      "player": "LUNDBERG, IFFE",
+      "team": "TEL",
+      "wir_40": 19.38,
+      "pir_40": 20.3,
+      "wir_rank": 103,
+      "pir_rank": 76,
+      "rank_diff": -27,
+      "gp": 16,
+      "mpg": 24.4,
+      "ts_pct": 57.2
+    },
+    {
+      "player": "DESSERT, BRICE",
+      "team": "IST",
+      "wir_40": 19.38,
+      "pir_40": 18.09,
+      "wir_rank": 104,
+      "pir_rank": 116,
+      "rank_diff": 12,
+      "gp": 14,
+      "mpg": 13.3,
+      "ts_pct": 67.6
+    },
+    {
+      "player": "NIANG, SALIOU",
+      "team": "VIR",
+      "wir_40": 19.37,
+      "pir_40": 19.12,
+      "wir_rank": 105,
+      "pir_rank": 96,
+      "rank_diff": -9,
+      "gp": 36,
+      "mpg": 21.5,
+      "ts_pct": 66.0
+    },
+    {
+      "player": "GUDURIC, MARKO",
+      "team": "MIL",
+      "wir_40": 19.37,
+      "pir_40": 20.38,
+      "wir_rank": 106,
+      "pir_rank": 74,
+      "rank_diff": -32,
+      "gp": 34,
+      "mpg": 22.1,
+      "ts_pct": 65.2
+    },
+    {
+      "player": "JESSUP, JUSTINIAN",
+      "team": "MUN",
+      "wir_40": 19.32,
+      "pir_40": 16.94,
+      "wir_rank": 107,
+      "pir_rank": 140,
+      "rank_diff": 33,
+      "gp": 35,
+      "mpg": 19.4,
+      "ts_pct": 63.0
+    },
+    {
+      "player": "OMORUYI, EUGENE",
+      "team": "BAS",
+      "wir_40": 19.3,
+      "pir_40": 21.31,
+      "wir_rank": 108,
+      "pir_rank": 65,
+      "rank_diff": -43,
+      "gp": 21,
+      "mpg": 19.9,
+      "ts_pct": 56.1
+    },
+    {
+      "player": "FELIZ, ANDRES",
+      "team": "MAD",
+      "wir_40": 19.29,
+      "pir_40": 14.75,
+      "wir_rank": 109,
+      "pir_rank": 165,
+      "rank_diff": 56,
+      "gp": 31,
+      "mpg": 15.6,
+      "ts_pct": 59.7
+    },
+    {
+      "player": "DUNSTON, BRYANT",
+      "team": "MIL",
+      "wir_40": 19.27,
+      "pir_40": 17.35,
+      "wir_rank": 110,
+      "pir_rank": 129,
+      "rank_diff": 19,
+      "gp": 16,
+      "mpg": 11.2,
+      "ts_pct": 67.8
+    },
+    {
+      "player": "VESELY, JAN",
+      "team": "BAR",
+      "wir_40": 19.23,
+      "pir_40": 17.45,
+      "wir_rank": 111,
+      "pir_rank": 125,
+      "rank_diff": 14,
+      "gp": 34,
+      "mpg": 21.0,
+      "ts_pct": 58.7
+    },
+    {
+      "player": "BIRUTIS, LAURYNAS",
+      "team": "ZAL",
+      "wir_40": 19.21,
+      "pir_40": 20.89,
+      "wir_rank": 112,
+      "pir_rank": 69,
+      "rank_diff": -43,
+      "gp": 35,
+      "mpg": 10.7,
+      "ts_pct": 65.0
+    },
+    {
+      "player": "BADIO, BRANCOU",
+      "team": "PAM",
+      "wir_40": 19.17,
+      "pir_40": 17.91,
+      "wir_rank": 113,
+      "pir_rank": 121,
+      "rank_diff": 8,
+      "gp": 32,
+      "mpg": 19.1,
+      "ts_pct": 56.6
+    },
+    {
+      "player": "BRIZUELA, DARIO",
+      "team": "BAR",
+      "wir_40": 19.16,
+      "pir_40": 15.19,
+      "wir_rank": 114,
+      "pir_rank": 163,
+      "rank_diff": 49,
+      "gp": 34,
+      "mpg": 15.5,
+      "ts_pct": 55.7
+    },
+    {
+      "player": "PUNTER, KEVIN",
+      "team": "BAR",
+      "wir_40": 19.12,
+      "pir_40": 19.63,
+      "wir_rank": 115,
+      "pir_rank": 85,
+      "rank_diff": -30,
+      "gp": 35,
+      "mpg": 26.9,
+      "ts_pct": 59.2
+    },
+    {
+      "player": "MICIC, VASILIJE",
+      "team": "HTA",
+      "wir_40": 19.09,
+      "pir_40": 18.12,
+      "wir_rank": 116,
+      "pir_rank": 115,
+      "rank_diff": -1,
+      "gp": 33,
+      "mpg": 23.7,
+      "ts_pct": 55.3
+    },
+    {
+      "player": "ELLIS, QUINN",
+      "team": "MIL",
+      "wir_40": 19.02,
+      "pir_40": 17.32,
+      "wir_rank": 117,
+      "pir_rank": 131,
+      "rank_diff": 14,
+      "gp": 34,
+      "mpg": 25.3,
+      "ts_pct": 59.2
+    },
+    {
+      "player": "LEDAY, ZACH",
+      "team": "MIL",
+      "wir_40": 18.98,
+      "pir_40": 24.58,
+      "wir_rank": 118,
+      "pir_rank": 34,
+      "rank_diff": -84,
+      "gp": 29,
+      "mpg": 24.9,
+      "ts_pct": 66.5
+    },
+    {
+      "player": "OKEKE, CHUMA",
+      "team": "MAD",
+      "wir_40": 18.9,
+      "pir_40": 18.62,
+      "wir_rank": 119,
+      "pir_rank": 108,
+      "rank_diff": -11,
+      "gp": 35,
+      "mpg": 17.7,
+      "ts_pct": 60.4
+    },
+    {
+      "player": "HOLMES, RICHAUN",
+      "team": "PAN",
+      "wir_40": 18.89,
+      "pir_40": 19.32,
+      "wir_rank": 120,
+      "pir_rank": 94,
+      "rank_diff": -26,
+      "gp": 19,
+      "mpg": 18.7,
+      "ts_pct": 67.0
+    },
+    {
+      "player": "VOIGTMANN, JOHANNES",
+      "team": "MUN",
+      "wir_40": 18.53,
+      "pir_40": 19.59,
+      "wir_rank": 121,
+      "pir_rank": 87,
+      "rank_diff": -34,
+      "gp": 22,
+      "mpg": 13.2,
+      "ts_pct": 55.7
+    },
+    {
+      "player": "DE LARREA, SERGIO",
+      "team": "PAM",
+      "wir_40": 18.49,
+      "pir_40": 14.61,
+      "wir_rank": 122,
+      "pir_rank": 170,
+      "rank_diff": 48,
+      "gp": 26,
+      "mpg": 10.7,
+      "ts_pct": 52.4
+    },
+    {
+      "player": "HOLLATZ, JUSTUS",
+      "team": "MUN",
+      "wir_40": 18.48,
+      "pir_40": 11.57,
+      "wir_rank": 123,
+      "pir_rank": 208,
+      "rank_diff": 85,
+      "gp": 24,
+      "mpg": 16.4,
+      "ts_pct": 57.8
+    },
+    {
+      "player": "WEILER-BABB, NICK",
+      "team": "IST",
+      "wir_40": 18.47,
+      "pir_40": 15.43,
+      "wir_rank": 124,
+      "pir_rank": 161,
+      "rank_diff": 37,
+      "gp": 34,
+      "mpg": 29.1,
+      "ts_pct": 57.5
+    },
+    {
+      "player": "CALATHES, NICK",
+      "team": "MCO",
+      "wir_40": 18.46,
+      "pir_40": 11.27,
+      "wir_rank": 125,
+      "pir_rank": 215,
+      "rank_diff": 90,
+      "gp": 28,
+      "mpg": 19.0,
+      "ts_pct": 43.2
+    },
+    {
+      "player": "SHIELDS, SHAVON",
+      "team": "MIL",
+      "wir_40": 18.42,
+      "pir_40": 18.8,
+      "wir_rank": 126,
+      "pir_rank": 103,
+      "rank_diff": -23,
+      "gp": 33,
+      "mpg": 26.8,
+      "ts_pct": 58.2
+    },
+    {
+      "player": "COSTELLO, MATTHEW",
+      "team": "PAM",
+      "wir_40": 18.35,
+      "pir_40": 18.48,
+      "wir_rank": 127,
+      "pir_rank": 111,
+      "rank_diff": -16,
+      "gp": 32,
+      "mpg": 17.0,
+      "ts_pct": 61.1
+    },
+    {
+      "player": "FOURNIER, EVAN",
+      "team": "OLY",
+      "wir_40": 18.33,
+      "pir_40": 14.55,
+      "wir_rank": 128,
+      "pir_rank": 171,
+      "rank_diff": 43,
+      "gp": 33,
+      "mpg": 21.8,
+      "ts_pct": 53.9
+    },
+    {
+      "player": "CLYBURN, WILL",
+      "team": "BAR",
+      "wir_40": 18.31,
+      "pir_40": 22.16,
+      "wir_rank": 129,
+      "pir_rank": 58,
+      "rank_diff": -71,
+      "gp": 29,
+      "mpg": 24.8,
+      "ts_pct": 57.4
+    },
+    {
+      "player": "NORRIS, MILES",
+      "team": "BAR",
+      "wir_40": 18.31,
+      "pir_40": 15.82,
+      "wir_rank": 130,
+      "pir_rank": 156,
+      "rank_diff": 26,
+      "gp": 32,
+      "mpg": 12.0,
+      "ts_pct": 61.2
+    },
+    {
+      "player": "WARD, TYSON",
+      "team": "OLY",
+      "wir_40": 18.28,
+      "pir_40": 16.78,
+      "wir_rank": 131,
+      "pir_rank": 142,
+      "rank_diff": 11,
+      "gp": 30,
+      "mpg": 20.0,
+      "ts_pct": 54.7
+    },
+    {
+      "player": "BLAKENEY, ANTONIO",
+      "team": "HTA",
+      "wir_40": 18.28,
+      "pir_40": 19.5,
+      "wir_rank": 132,
+      "pir_rank": 88,
+      "rank_diff": -44,
+      "gp": 35,
+      "mpg": 22.1,
+      "ts_pct": 63.3
+    },
+    {
+      "player": "SMAILAGIC, ALEN",
+      "team": "VIR",
+      "wir_40": 18.2,
+      "pir_40": 17.99,
+      "wir_rank": 133,
+      "pir_rank": 118,
+      "rank_diff": -15,
+      "gp": 29,
+      "mpg": 16.6,
+      "ts_pct": 59.7
+    },
+    {
+      "player": "MOTIEJUNAS, DONATAS",
+      "team": "RED",
+      "wir_40": 18.07,
+      "pir_40": 23.37,
+      "wir_rank": 134,
+      "pir_rank": 44,
+      "rank_diff": -90,
+      "gp": 27,
+      "mpg": 12.6,
+      "ts_pct": 63.2
+    },
+    {
+      "player": "RHODEN, JARED",
+      "team": "PRS",
+      "wir_40": 18.04,
+      "pir_40": 16.08,
+      "wir_rank": 135,
+      "pir_rank": 152,
+      "rank_diff": 17,
+      "gp": 24,
+      "mpg": 21.1,
+      "ts_pct": 59.5
+    },
+    {
+      "player": "PETERS, ALEC",
+      "team": "OLY",
+      "wir_40": 17.97,
+      "pir_40": 19.43,
+      "wir_rank": 136,
+      "pir_rank": 90,
+      "rank_diff": -46,
+      "gp": 36,
+      "mpg": 14.7,
+      "ts_pct": 65.6
+    },
+    {
+      "player": "LARKIN, SHANE",
+      "team": "IST",
+      "wir_40": 17.97,
+      "pir_40": 19.75,
+      "wir_rank": 137,
+      "pir_rank": 81,
+      "rank_diff": -56,
+      "gp": 11,
+      "mpg": 31.7,
+      "ts_pct": 61.7
+    },
+    {
+      "player": "LO, MAODO",
+      "team": "ZAL",
+      "wir_40": 17.95,
+      "pir_40": 16.9,
+      "wir_rank": 138,
+      "pir_rank": 141,
+      "rank_diff": 3,
+      "gp": 35,
+      "mpg": 18.3,
+      "ts_pct": 59.5
+    },
+    {
+      "player": "HERNANGOMEZ, JUANCHO",
+      "team": "PAN",
+      "wir_40": 17.95,
+      "pir_40": 20.58,
+      "wir_rank": 139,
+      "pir_rank": 71,
+      "rank_diff": -68,
+      "gp": 36,
+      "mpg": 26.1,
+      "ts_pct": 61.1
+    },
+    {
+      "player": "BONGA, ISAAC",
+      "team": "PAR",
+      "wir_40": 17.92,
+      "pir_40": 20.83,
+      "wir_rank": 140,
+      "pir_rank": 70,
+      "rank_diff": -70,
+      "gp": 35,
+      "mpg": 28.0,
+      "ts_pct": 61.4
+    },
+    {
+      "player": "BUTKEVICIUS, ARNAS",
+      "team": "ZAL",
+      "wir_40": 17.91,
+      "pir_40": 17.44,
+      "wir_rank": 141,
+      "pir_rank": 126,
+      "rank_diff": -15,
+      "gp": 32,
+      "mpg": 18.4,
+      "ts_pct": 76.9
+    },
+    {
+      "player": "SANTOS, MARCIO",
+      "team": "TEL",
+      "wir_40": 17.84,
+      "pir_40": 17.05,
+      "wir_rank": 142,
+      "pir_rank": 136,
+      "rank_diff": -6,
+      "gp": 34,
+      "mpg": 14.3,
+      "ts_pct": 65.7
+    },
+    {
+      "player": "SLEVA, DUSTIN",
+      "team": "ZAL",
+      "wir_40": 17.79,
+      "pir_40": 13.86,
+      "wir_rank": 143,
+      "pir_rank": 180,
+      "rank_diff": 37,
+      "gp": 36,
+      "mpg": 18.2,
+      "ts_pct": 57.1
+    },
+    {
+      "player": "NDIAYE, MBAYE",
+      "team": "ASV",
+      "wir_40": 17.71,
+      "pir_40": 16.57,
+      "wir_rank": 144,
+      "pir_rank": 144,
+      "rank_diff": 0,
+      "gp": 31,
+      "mpg": 23.5,
+      "ts_pct": 53.8
+    },
+    {
+      "player": "STRAZEL, MATTHEW",
+      "team": "MCO",
+      "wir_40": 17.7,
+      "pir_40": 17.36,
+      "wir_rank": 145,
+      "pir_rank": 128,
+      "rank_diff": -17,
+      "gp": 35,
+      "mpg": 23.6,
+      "ts_pct": 60.4
+    },
+    {
+      "player": "PRADILLA, JAIME",
+      "team": "PAM",
+      "wir_40": 17.67,
+      "pir_40": 18.05,
+      "wir_rank": 146,
+      "pir_rank": 117,
+      "rank_diff": -29,
+      "gp": 36,
+      "mpg": 20.7,
+      "ts_pct": 61.4
+    },
+    {
+      "player": "EDWARDS, CARSEN",
+      "team": "VIR",
+      "wir_40": 17.67,
+      "pir_40": 17.15,
+      "wir_rank": 147,
+      "pir_rank": 134,
+      "rank_diff": -13,
+      "gp": 34,
+      "mpg": 25.3,
+      "ts_pct": 50.6
+    },
+    {
+      "player": "GRANT, JERIAN",
+      "team": "PAN",
+      "wir_40": 17.64,
+      "pir_40": 14.15,
+      "wir_rank": 148,
+      "pir_rank": 177,
+      "rank_diff": 29,
+      "gp": 34,
+      "mpg": 23.9,
+      "ts_pct": 56.7
+    },
+    {
+      "player": "DOZIER, PJ",
+      "team": "IST",
+      "wir_40": 17.64,
+      "pir_40": 13.58,
+      "wir_rank": 149,
+      "pir_rank": 183,
+      "rank_diff": 34,
+      "gp": 24,
+      "mpg": 22.0,
+      "ts_pct": 47.9
+    },
+    {
+      "player": "MORGAN, JEREMY",
+      "team": "PRS",
+      "wir_40": 17.53,
+      "pir_40": 13.57,
+      "wir_rank": 150,
+      "pir_rank": 184,
+      "rank_diff": 34,
+      "gp": 31,
+      "mpg": 17.8,
+      "ts_pct": 62.1
+    },
+    {
+      "player": "DIBARTOLOMEO, JOHN",
+      "team": "TEL",
+      "wir_40": 17.51,
+      "pir_40": 13.47,
+      "wir_rank": 151,
+      "pir_rank": 187,
+      "rank_diff": 36,
+      "gp": 24,
+      "mpg": 14.4,
+      "ts_pct": 60.7
+    },
+    {
+      "player": "OSETKOWSKI, DYLAN",
+      "team": "PAR",
+      "wir_40": 17.49,
+      "pir_40": 14.24,
+      "wir_rank": 152,
+      "pir_rank": 175,
+      "rank_diff": 23,
+      "gp": 32,
+      "mpg": 20.1,
+      "ts_pct": 57.3
+    },
+    {
+      "player": "MIKE, ISIAHA",
+      "team": "MUN",
+      "wir_40": 17.39,
+      "pir_40": 15.52,
+      "wir_rank": 153,
+      "pir_rank": 159,
+      "rank_diff": 6,
+      "gp": 35,
+      "mpg": 22.7,
+      "ts_pct": 55.0
+    },
+    {
+      "player": "HARRISON, SHAQUILLE",
+      "team": "ASV",
+      "wir_40": 17.39,
+      "pir_40": 15.59,
+      "wir_rank": 154,
+      "pir_rank": 158,
+      "rank_diff": 4,
+      "gp": 26,
+      "mpg": 17.9,
+      "ts_pct": 46.6
+    },
+    {
+      "player": "HOWARD, MARKUS",
+      "team": "BAS",
+      "wir_40": 17.38,
+      "pir_40": 14.67,
+      "wir_rank": 155,
+      "pir_rank": 168,
+      "rank_diff": 13,
+      "gp": 21,
+      "mpg": 21.0,
+      "ts_pct": 55.8
+    },
+    {
+      "player": "BROWN, STERLING",
+      "team": "PAR",
+      "wir_40": 17.3,
+      "pir_40": 16.44,
+      "wir_rank": 156,
+      "pir_rank": 148,
+      "rank_diff": -8,
+      "gp": 34,
+      "mpg": 28.6,
+      "ts_pct": 59.0
+    },
+    {
+      "player": "HERNANGOMEZ, WILLY",
+      "team": "BAR",
+      "wir_40": 17.24,
+      "pir_40": 20.16,
+      "wir_rank": 157,
+      "pir_rank": 78,
+      "rank_diff": -79,
+      "gp": 36,
+      "mpg": 13.7,
+      "ts_pct": 56.3
+    },
+    {
+      "player": "BACON, DWAYNE",
+      "team": "DUB",
+      "wir_40": 17.15,
+      "pir_40": 18.97,
+      "wir_rank": 158,
+      "pir_rank": 98,
+      "rank_diff": -60,
+      "gp": 29,
+      "mpg": 29.4,
+      "ts_pct": 52.5
+    },
+    {
+      "player": "FAYE, MOUHAMED",
+      "team": "PRS",
+      "wir_40": 17.04,
+      "pir_40": 15.65,
+      "wir_rank": 159,
+      "pir_rank": 157,
+      "rank_diff": -2,
+      "gp": 36,
+      "mpg": 17.3,
+      "ts_pct": 62.4
+    },
+    {
+      "player": "BEAUBOIS, RODRIGUE",
+      "team": "IST",
+      "wir_40": 16.99,
+      "pir_40": 13.33,
+      "wir_rank": 160,
+      "pir_rank": 188,
+      "rank_diff": 28,
+      "gp": 18,
+      "mpg": 12.3,
+      "ts_pct": 54.7
+    },
+    {
+      "player": "TRAORE, ARMEL",
+      "team": "ASV",
+      "wir_40": 16.83,
+      "pir_40": 16.13,
+      "wir_rank": 161,
+      "pir_rank": 151,
+      "rank_diff": -10,
+      "gp": 33,
+      "mpg": 16.7,
+      "ts_pct": 65.8
+    },
+    {
+      "player": "MITOGLOU, KONSTANTINOS",
+      "team": "PAN",
+      "wir_40": 16.77,
+      "pir_40": 17.08,
+      "wir_rank": 162,
+      "pir_rank": 135,
+      "rank_diff": -27,
+      "gp": 27,
+      "mpg": 14.3,
+      "ts_pct": 53.7
+    },
+    {
+      "player": "SPAGNOLO, MATTEO",
+      "team": "BAS",
+      "wir_40": 16.7,
+      "pir_40": 16.53,
+      "wir_rank": 163,
+      "pir_rank": 145,
+      "rank_diff": -18,
+      "gp": 35,
+      "mpg": 15.6,
+      "ts_pct": 56.8
+    },
+    {
+      "player": "FRISCH, CLEMENT",
+      "team": "BAS",
+      "wir_40": 16.67,
+      "pir_40": 16.05,
+      "wir_rank": 164,
+      "pir_rank": 154,
+      "rank_diff": -10,
+      "gp": 35,
+      "mpg": 11.7,
+      "ts_pct": 69.2
+    },
+    {
+      "player": "KEY, BRAXTON",
+      "team": "PAM",
+      "wir_40": 16.64,
+      "pir_40": 13.48,
+      "wir_rank": 165,
+      "pir_rank": 186,
+      "rank_diff": 21,
+      "gp": 26,
+      "mpg": 15.9,
+      "ts_pct": 51.8
+    },
+    {
+      "player": "DIOP, KHALIFA",
+      "team": "BAS",
+      "wir_40": 16.64,
+      "pir_40": 14.68,
+      "wir_rank": 166,
+      "pir_rank": 167,
+      "rank_diff": 1,
+      "gp": 28,
+      "mpg": 16.7,
+      "ts_pct": 68.2
+    },
+    {
+      "player": "LOYD, JORDAN",
+      "team": "IST",
+      "wir_40": 16.64,
+      "pir_40": 17.38,
+      "wir_rank": 167,
+      "pir_rank": 127,
+      "rank_diff": -40,
+      "gp": 31,
+      "mpg": 23.0,
+      "ts_pct": 56.2
+    },
+    {
+      "player": "MADAR, YAM",
+      "team": "HTA",
+      "wir_40": 16.59,
+      "pir_40": 11.54,
+      "wir_rank": 168,
+      "pir_rank": 209,
+      "rank_diff": 41,
+      "gp": 13,
+      "mpg": 10.7,
+      "ts_pct": 39.5
+    },
+    {
+      "player": "DOBRIC, OGNJEN",
+      "team": "RED",
+      "wir_40": 16.57,
+      "pir_40": 14.61,
+      "wir_rank": 169,
+      "pir_rank": 169,
+      "rank_diff": 0,
+      "gp": 23,
+      "mpg": 12.6,
+      "ts_pct": 62.3
+    },
+    {
+      "player": "OSMAN, CEDI",
+      "team": "PAN",
+      "wir_40": 16.49,
+      "pir_40": 18.13,
+      "wir_rank": 170,
+      "pir_rank": 114,
+      "rank_diff": -56,
+      "gp": 31,
+      "mpg": 27.5,
+      "ts_pct": 61.6
+    },
+    {
+      "player": "AKELE, NICOLA",
+      "team": "VIR",
+      "wir_40": 16.48,
+      "pir_40": 13.26,
+      "wir_rank": 171,
+      "pir_rank": 191,
+      "rank_diff": 20,
+      "gp": 25,
+      "mpg": 10.4,
+      "ts_pct": 64.9
+    },
+    {
+      "player": "HERRERA, SEBASTIAN",
+      "team": "PRS",
+      "wir_40": 16.46,
+      "pir_40": 11.53,
+      "wir_rank": 172,
+      "pir_rank": 210,
+      "rank_diff": 38,
+      "gp": 34,
+      "mpg": 16.3,
+      "ts_pct": 56.5
+    },
+    {
+      "player": "MELLI, NICOLO",
+      "team": "ULK",
+      "wir_40": 16.46,
+      "pir_40": 16.38,
+      "wir_rank": 173,
+      "pir_rank": 149,
+      "rank_diff": -24,
+      "gp": 28,
+      "mpg": 22.6,
+      "ts_pct": 57.6
+    },
+    {
+      "player": "GABRIEL, WENYEN",
+      "team": "MUN",
+      "wir_40": 16.36,
+      "pir_40": 13.2,
+      "wir_rank": 174,
+      "pir_rank": 192,
+      "rank_diff": 18,
+      "gp": 34,
+      "mpg": 17.1,
+      "ts_pct": 55.5
+    },
+    {
+      "player": "BEGARIN, JUHANN",
+      "team": "MCO",
+      "wir_40": 16.25,
+      "pir_40": 13.76,
+      "wir_rank": 175,
+      "pir_rank": 181,
+      "rank_diff": 6,
+      "gp": 15,
+      "mpg": 11.4,
+      "ts_pct": 56.1
+    },
+    {
+      "player": "BOOKER, DEVIN",
+      "team": "MIL",
+      "wir_40": 16.19,
+      "pir_40": 19.17,
+      "wir_rank": 176,
+      "pir_rank": 95,
+      "rank_diff": -81,
+      "gp": 34,
+      "mpg": 19.9,
+      "ts_pct": 58.5
+    },
+    {
+      "player": "BRISSETT, O'SHAE J",
+      "team": "TEL",
+      "wir_40": 16.15,
+      "pir_40": 16.14,
+      "wir_rank": 177,
+      "pir_rank": 150,
+      "rank_diff": -27,
+      "gp": 33,
+      "mpg": 24.4,
+      "ts_pct": 56.2
+    },
+    {
+      "player": "RATHAN-MAYES, XAVIER",
+      "team": "MUN",
+      "wir_40": 16.11,
+      "pir_40": 13.0,
+      "wir_rank": 178,
+      "pir_rank": 196,
+      "rank_diff": 18,
+      "gp": 31,
+      "mpg": 15.0,
+      "ts_pct": 45.0
+    },
+    {
+      "player": "OBST, ANDREAS",
+      "team": "MUN",
+      "wir_40": 15.9,
+      "pir_40": 18.2,
+      "wir_rank": 179,
+      "pir_rank": 112,
+      "rank_diff": -67,
+      "gp": 33,
+      "mpg": 26.6,
+      "ts_pct": 58.6
+    },
+    {
+      "player": "STEVENS, LAMAR",
+      "team": "PRS",
+      "wir_40": 15.85,
+      "pir_40": 14.39,
+      "wir_rank": 180,
+      "pir_rank": 173,
+      "rank_diff": -7,
+      "gp": 21,
+      "mpg": 20.0,
+      "ts_pct": 53.6
+    },
+    {
+      "player": "AYAYI, JOEL",
+      "team": "PRS",
+      "wir_40": 15.81,
+      "pir_40": 10.23,
+      "wir_rank": 181,
+      "pir_rank": 225,
+      "rank_diff": 44,
+      "gp": 13,
+      "mpg": 10.5,
+      "ts_pct": 44.6
+    },
+    {
+      "player": "KURUCS, RODIONS",
+      "team": "BAS",
+      "wir_40": 15.8,
+      "pir_40": 13.49,
+      "wir_rank": 182,
+      "pir_rank": 185,
+      "rank_diff": 3,
+      "gp": 25,
+      "mpg": 21.2,
+      "ts_pct": 57.6
+    },
+    {
+      "player": "DECK, GABRIEL",
+      "team": "MAD",
+      "wir_40": 15.8,
+      "pir_40": 17.89,
+      "wir_rank": 183,
+      "pir_rank": 123,
+      "rank_diff": -60,
+      "gp": 33,
+      "mpg": 20.4,
+      "ts_pct": 66.9
+    },
+    {
+      "player": "PARRA, JOEL",
+      "team": "BAR",
+      "wir_40": 15.75,
+      "pir_40": 14.91,
+      "wir_rank": 184,
+      "pir_rank": 164,
+      "rank_diff": -20,
+      "gp": 36,
+      "mpg": 19.1,
+      "ts_pct": 57.8
+    },
+    {
+      "player": "BLOSSOMGAME, JARON",
+      "team": "MCO",
+      "wir_40": 15.67,
+      "pir_40": 17.17,
+      "wir_rank": 185,
+      "pir_rank": 133,
+      "rank_diff": -52,
+      "gp": 35,
+      "mpg": 22.6,
+      "ts_pct": 61.3
+    },
+    {
+      "player": "MILTON, SHAKE",
+      "team": "PAR",
+      "wir_40": 15.36,
+      "pir_40": 11.45,
+      "wir_rank": 186,
+      "pir_rank": 213,
+      "rank_diff": 27,
+      "gp": 20,
+      "mpg": 18.3,
+      "ts_pct": 49.3
+    },
+    {
+      "player": "HALL, DEVON",
+      "team": "ULK",
+      "wir_40": 15.34,
+      "pir_40": 15.44,
+      "wir_rank": 187,
+      "pir_rank": 160,
+      "rank_diff": -27,
+      "gp": 28,
+      "mpg": 24.8,
+      "ts_pct": 56.3
+    },
+    {
+      "player": "LUCIC, VLADIMIR",
+      "team": "MUN",
+      "wir_40": 15.2,
+      "pir_40": 17.9,
+      "wir_rank": 188,
+      "pir_rank": 122,
+      "rank_diff": -66,
+      "gp": 31,
+      "mpg": 23.2,
+      "ts_pct": 60.5
+    },
+    {
+      "player": "ODIASE, TAI",
+      "team": "HTA",
+      "wir_40": 15.17,
+      "pir_40": 14.09,
+      "wir_rank": 189,
+      "pir_rank": 179,
+      "rank_diff": -10,
+      "gp": 22,
+      "mpg": 11.9,
+      "ts_pct": 66.0
+    },
+    {
+      "player": "CORDINIER, ISAIA",
+      "team": "IST",
+      "wir_40": 15.17,
+      "pir_40": 14.32,
+      "wir_rank": 190,
+      "pir_rank": 174,
+      "rank_diff": -16,
+      "gp": 30,
+      "mpg": 24.2,
+      "ts_pct": 55.5
+    },
+    {
+      "player": "HOMMES, DAULTON",
+      "team": "PRS",
+      "wir_40": 15.16,
+      "pir_40": 13.03,
+      "wir_rank": 191,
+      "pir_rank": 194,
+      "rank_diff": 3,
+      "gp": 19,
+      "mpg": 13.9,
+      "ts_pct": 66.0
+    },
+    {
+      "player": "OSMANI, ERCAN",
+      "team": "IST",
+      "wir_40": 15.06,
+      "pir_40": 18.13,
+      "wir_rank": 192,
+      "pir_rank": 113,
+      "rank_diff": -79,
+      "gp": 34,
+      "mpg": 24.8,
+      "ts_pct": 60.7
+    },
+    {
+      "player": "DINWIDDIE, SPENCER",
+      "team": "MUN",
+      "wir_40": 15.06,
+      "pir_40": 17.03,
+      "wir_rank": 193,
+      "pir_rank": 137,
+      "rank_diff": -56,
+      "gp": 11,
+      "mpg": 23.1,
+      "ts_pct": 55.5
+    },
+    {
+      "player": "ALSTON JR. , DERRICK",
+      "team": "VIR",
+      "wir_40": 15.06,
+      "pir_40": 14.73,
+      "wir_rank": 194,
+      "pir_rank": 166,
+      "rank_diff": -28,
+      "gp": 35,
+      "mpg": 22.3,
+      "ts_pct": 62.7
+    },
+    {
+      "player": "GIFFEY, NIELS",
+      "team": "MUN",
+      "wir_40": 14.95,
+      "pir_40": 11.59,
+      "wir_rank": 195,
+      "pir_rank": 207,
+      "rank_diff": 12,
+      "gp": 30,
+      "mpg": 13.3,
+      "ts_pct": 58.3
+    },
+    {
+      "player": "SELJAAS, ZACHARY",
+      "team": "ASV",
+      "wir_40": 14.93,
+      "pir_40": 12.59,
+      "wir_rank": 196,
+      "pir_rank": 199,
+      "rank_diff": 3,
+      "gp": 33,
+      "mpg": 20.8,
+      "ts_pct": 53.0
+    },
+    {
+      "player": "EBOUA, PAUL",
+      "team": "ASV",
+      "wir_40": 14.9,
+      "pir_40": 16.07,
+      "wir_rank": 197,
+      "pir_rank": 153,
+      "rank_diff": -44,
+      "gp": 15,
+      "mpg": 17.3,
+      "ts_pct": 60.1
+    },
+    {
+      "player": "PREPELIC, KLEMEN",
+      "team": "DUB",
+      "wir_40": 14.85,
+      "pir_40": 9.89,
+      "wir_rank": 198,
+      "pir_rank": 228,
+      "rank_diff": 30,
+      "gp": 26,
+      "mpg": 13.4,
+      "ts_pct": 59.3
+    },
+    {
+      "player": "CAVALIERE, LEOPOLD",
+      "team": "PRS",
+      "wir_40": 14.84,
+      "pir_40": 12.95,
+      "wir_rank": 199,
+      "pir_rank": 197,
+      "rank_diff": -2,
+      "gp": 35,
+      "mpg": 14.0,
+      "ts_pct": 53.3
+    },
+    {
+      "player": "M'BAYE, AMATH",
+      "team": "PRS",
+      "wir_40": 14.78,
+      "pir_40": 14.1,
+      "wir_rank": 200,
+      "pir_rank": 178,
+      "rank_diff": -22,
+      "gp": 32,
+      "mpg": 17.4,
+      "ts_pct": 57.8
+    },
+    {
+      "player": "ROGKAVOPOULOS, NIKOLAOS",
+      "team": "PAN",
+      "wir_40": 14.73,
+      "pir_40": 12.46,
+      "wir_rank": 201,
+      "pir_rank": 200,
+      "rank_diff": -1,
+      "gp": 27,
+      "mpg": 11.8,
+      "ts_pct": 53.4
+    },
+    {
+      "player": "BOSTON JR., BRANDON",
+      "team": "ULK",
+      "wir_40": 14.67,
+      "pir_40": 11.18,
+      "wir_rank": 202,
+      "pir_rank": 216,
+      "rank_diff": 14,
+      "gp": 24,
+      "mpg": 11.8,
+      "ts_pct": 52.1
+    },
+    {
+      "player": "BERTANS, DAVIS",
+      "team": "DUB",
+      "wir_40": 14.65,
+      "pir_40": 11.41,
+      "wir_rank": 203,
+      "pir_rank": 214,
+      "rank_diff": 11,
+      "gp": 27,
+      "mpg": 18.6,
+      "ts_pct": 53.4
+    },
+    {
+      "player": "ABALDE, ALBERTO",
+      "team": "MAD",
+      "wir_40": 14.61,
+      "pir_40": 10.48,
+      "wir_rank": 204,
+      "pir_rank": 223,
+      "rank_diff": 19,
+      "gp": 34,
+      "mpg": 16.3,
+      "ts_pct": 60.6
+    },
+    {
+      "player": "BIBEROVIC, TARIK",
+      "team": "ULK",
+      "wir_40": 14.59,
+      "pir_40": 13.32,
+      "wir_rank": 205,
+      "pir_rank": 190,
+      "rank_diff": -15,
+      "gp": 34,
+      "mpg": 24.0,
+      "ts_pct": 59.2
+    },
+    {
+      "player": "SEDEKERSKIS, TADAS",
+      "team": "BAS",
+      "wir_40": 14.56,
+      "pir_40": 16.75,
+      "wir_rank": 206,
+      "pir_rank": 143,
+      "rank_diff": -63,
+      "gp": 13,
+      "mpg": 23.9,
+      "ts_pct": 58.6
+    },
+    {
+      "player": "RICCI, GIAMPAOLO",
+      "team": "MIL",
+      "wir_40": 14.52,
+      "pir_40": 10.19,
+      "wir_rank": 207,
+      "pir_rank": 226,
+      "rank_diff": 19,
+      "gp": 36,
+      "mpg": 16.2,
+      "ts_pct": 62.7
+    },
+    {
+      "player": "LAKIC, ARIJAN",
+      "team": "PAR",
+      "wir_40": 14.5,
+      "pir_40": 10.48,
+      "wir_rank": 208,
+      "pir_rank": 222,
+      "rank_diff": 14,
+      "gp": 22,
+      "mpg": 12.3,
+      "ts_pct": 55.7
+    },
+    {
+      "player": "SMITS, ROLANDS",
+      "team": "IST",
+      "wir_40": 14.39,
+      "pir_40": 13.66,
+      "wir_rank": 209,
+      "pir_rank": 182,
+      "rank_diff": -27,
+      "gp": 32,
+      "mpg": 19.2,
+      "ts_pct": 61.1
+    },
+    {
+      "player": "MANNION, NICCOLO",
+      "team": "MIL",
+      "wir_40": 14.26,
+      "pir_40": 11.53,
+      "wir_rank": 210,
+      "pir_rank": 212,
+      "rank_diff": 2,
+      "gp": 20,
+      "mpg": 11.8,
+      "ts_pct": 47.8
+    },
+    {
+      "player": "ULANOVAS, EDGARAS",
+      "team": "ZAL",
+      "wir_40": 14.21,
+      "pir_40": 13.32,
+      "wir_rank": 211,
+      "pir_rank": 189,
+      "rank_diff": -22,
+      "gp": 36,
+      "mpg": 18.4,
+      "ts_pct": 58.0
+    },
+    {
+      "player": "OJELEYE, SEMI",
+      "team": "RED",
+      "wir_40": 14.07,
+      "pir_40": 13.01,
+      "wir_rank": 212,
+      "pir_rank": 195,
+      "rank_diff": -17,
+      "gp": 36,
+      "mpg": 23.2,
+      "ts_pct": 57.3
+    },
+    {
+      "player": "ANDERSON, JUSTIN",
+      "team": "DUB",
+      "wir_40": 13.85,
+      "pir_40": 11.01,
+      "wir_rank": 213,
+      "pir_rank": 217,
+      "rank_diff": 4,
+      "gp": 31,
+      "mpg": 23.0,
+      "ts_pct": 62.2
+    },
+    {
+      "player": "MASSA, BODIAN",
+      "team": "ASV",
+      "wir_40": 13.74,
+      "pir_40": 11.69,
+      "wir_rank": 214,
+      "pir_rank": 205,
+      "rank_diff": -9,
+      "gp": 32,
+      "mpg": 16.3,
+      "ts_pct": 51.0
+    },
+    {
+      "player": "PUERTO, JOSEP",
+      "team": "PAM",
+      "wir_40": 13.72,
+      "pir_40": 13.05,
+      "wir_rank": 215,
+      "pir_rank": 193,
+      "rank_diff": -22,
+      "gp": 33,
+      "mpg": 16.0,
+      "ts_pct": 60.3
+    },
+    {
+      "player": "SIRVYDIS, DEIVIDAS",
+      "team": "ZAL",
+      "wir_40": 13.63,
+      "pir_40": 11.74,
+      "wir_rank": 216,
+      "pir_rank": 204,
+      "rank_diff": -12,
+      "gp": 24,
+      "mpg": 13.3,
+      "ts_pct": 51.1
+    },
+    {
+      "player": "MALCOLM, COLLIN",
+      "team": "HTA",
+      "wir_40": 13.43,
+      "pir_40": 12.85,
+      "wir_rank": 217,
+      "pir_rank": 198,
+      "rank_diff": -19,
+      "gp": 35,
+      "mpg": 25.1,
+      "ts_pct": 59.8
+    },
+    {
+      "player": "POKUSEVSKI, ALEKSEJ",
+      "team": "PAR",
+      "wir_40": 13.4,
+      "pir_40": 8.73,
+      "wir_rank": 218,
+      "pir_rank": 235,
+      "rank_diff": 17,
+      "gp": 24,
+      "mpg": 11.6,
+      "ts_pct": 49.5
+    },
+    {
+      "player": "OUATTARA, YAKUBA",
+      "team": "PRS",
+      "wir_40": 13.35,
+      "pir_40": 9.87,
+      "wir_rank": 219,
+      "pir_rank": 229,
+      "rank_diff": 10,
+      "gp": 33,
+      "mpg": 17.0,
+      "ts_pct": 50.9
+    },
+    {
+      "player": "LAVI, GUR",
+      "team": "TEL",
+      "wir_40": 13.27,
+      "pir_40": 11.85,
+      "wir_rank": 220,
+      "pir_rank": 203,
+      "rank_diff": -17,
+      "gp": 15,
+      "mpg": 11.3,
+      "ts_pct": 69.6
+    },
+    {
+      "player": "JANTUNEN, MIKAEL",
+      "team": "ULK",
+      "wir_40": 13.21,
+      "pir_40": 10.69,
+      "wir_rank": 221,
+      "pir_rank": 220,
+      "rank_diff": -1,
+      "gp": 29,
+      "mpg": 19.0,
+      "ts_pct": 56.2
+    },
+    {
+      "player": "RADZEVICIUS, GYTIS",
+      "team": "BAS",
+      "wir_40": 13.06,
+      "pir_40": 12.08,
+      "wir_rank": 222,
+      "pir_rank": 202,
+      "rank_diff": -20,
+      "gp": 23,
+      "mpg": 17.7,
+      "ts_pct": 63.5
+    },
+    {
+      "player": "KALINIC, NIKOLA",
+      "team": "RED",
+      "wir_40": 13.0,
+      "pir_40": 11.53,
+      "wir_rank": 223,
+      "pir_rank": 211,
+      "rank_diff": -12,
+      "gp": 36,
+      "mpg": 23.6,
+      "ts_pct": 58.0
+    },
+    {
+      "player": "CALE, MYLES",
+      "team": "BAR",
+      "wir_40": 12.98,
+      "pir_40": 8.92,
+      "wir_rank": 224,
+      "pir_rank": 234,
+      "rank_diff": 10,
+      "gp": 31,
+      "mpg": 15.9,
+      "ts_pct": 51.1
+    },
+    {
+      "player": "HAZER, SEHMUS",
+      "team": "IST",
+      "wir_40": 12.92,
+      "pir_40": 10.39,
+      "wir_rank": 225,
+      "pir_rank": 224,
+      "rank_diff": -1,
+      "gp": 30,
+      "mpg": 12.7,
+      "ts_pct": 50.0
+    },
+    {
+      "player": "NTILIKINA, FRANK",
+      "team": "OLY",
+      "wir_40": 12.71,
+      "pir_40": 7.26,
+      "wir_rank": 226,
+      "pir_rank": 241,
+      "rank_diff": 15,
+      "gp": 23,
+      "mpg": 16.5,
+      "ts_pct": 53.2
+    },
+    {
+      "player": "LLULL, SERGIO",
+      "team": "MAD",
+      "wir_40": 12.54,
+      "pir_40": 7.9,
+      "wir_rank": 227,
+      "pir_rank": 239,
+      "rank_diff": 12,
+      "gp": 32,
+      "mpg": 11.5,
+      "ts_pct": 43.9
+    },
+    {
+      "player": "BRAZDEIKIS, IGNAS",
+      "team": "ZAL",
+      "wir_40": 12.42,
+      "pir_40": 9.28,
+      "wir_rank": 228,
+      "pir_rank": 231,
+      "rank_diff": 3,
+      "gp": 34,
+      "mpg": 15.5,
+      "ts_pct": 45.7
+    },
+    {
+      "player": "BIRCH, KHEM",
+      "team": "ULK",
+      "wir_40": 12.37,
+      "pir_40": 10.83,
+      "wir_rank": 229,
+      "pir_rank": 219,
+      "rank_diff": -10,
+      "gp": 36,
+      "mpg": 16.3,
+      "ts_pct": 65.1
+    },
+    {
+      "player": "JACKSON, EDWIN",
+      "team": "ASV",
+      "wir_40": 12.28,
+      "pir_40": 12.23,
+      "wir_rank": 230,
+      "pir_rank": 201,
+      "rank_diff": -29,
+      "gp": 18,
+      "mpg": 15.6,
+      "ts_pct": 55.0
+    },
+    {
+      "player": "HACKETT, DANIEL",
+      "team": "VIR",
+      "wir_40": 12.24,
+      "pir_40": 11.64,
+      "wir_rank": 231,
+      "pir_rank": 206,
+      "rank_diff": -25,
+      "gp": 32,
+      "mpg": 14.3,
+      "ts_pct": 54.9
+    },
+    {
+      "player": "DOS SANTOS, YAGO",
+      "team": "RED",
+      "wir_40": 12.04,
+      "pir_40": 5.65,
+      "wir_rank": 232,
+      "pir_rank": 245,
+      "rank_diff": 13,
+      "gp": 25,
+      "mpg": 10.8,
+      "ts_pct": 36.5
+    },
+    {
+      "player": "PARKER, JABARI",
+      "team": "PAR",
+      "wir_40": 12.02,
+      "pir_40": 10.53,
+      "wir_rank": 233,
+      "pir_rank": 221,
+      "rank_diff": -12,
+      "gp": 15,
+      "mpg": 19.2,
+      "ts_pct": 49.0
+    },
+    {
+      "player": "DAVIDOVAC, DEJAN",
+      "team": "RED",
+      "wir_40": 12.01,
+      "pir_40": 9.77,
+      "wir_rank": 234,
+      "pir_rank": 230,
+      "rank_diff": -4,
+      "gp": 21,
+      "mpg": 14.2,
+      "ts_pct": 64.2
+    },
+    {
+      "player": "RAYMAN, WILLIAM",
+      "team": "TEL",
+      "wir_40": 11.8,
+      "pir_40": 8.28,
+      "wir_rank": 235,
+      "pir_rank": 236,
+      "rank_diff": 1,
+      "gp": 35,
+      "mpg": 11.6,
+      "ts_pct": 54.8
+    },
+    {
+      "player": "LIGHTY, DAVID",
+      "team": "ASV",
+      "wir_40": 11.79,
+      "pir_40": 9.21,
+      "wir_rank": 236,
+      "pir_rank": 232,
+      "rank_diff": -4,
+      "gp": 30,
+      "mpg": 17.8,
+      "ts_pct": 53.3
+    },
+    {
+      "player": "WAINRIGHT, ISH",
+      "team": "HTA",
+      "wir_40": 11.72,
+      "pir_40": 8.16,
+      "wir_rank": 237,
+      "pir_rank": 237,
+      "rank_diff": 0,
+      "gp": 35,
+      "mpg": 24.1,
+      "ts_pct": 52.8
+    },
+    {
+      "player": "GIEDRAITIS, DOVYDAS",
+      "team": "ZAL",
+      "wir_40": 11.66,
+      "pir_40": 6.94,
+      "wir_rank": 238,
+      "pir_rank": 242,
+      "rank_diff": 4,
+      "gp": 15,
+      "mpg": 14.6,
+      "ts_pct": 50.4
+    },
+    {
+      "player": "BIRSEN, METECAN",
+      "team": "ULK",
+      "wir_40": 11.55,
+      "pir_40": 9.92,
+      "wir_rank": 239,
+      "pir_rank": 227,
+      "rank_diff": -12,
+      "gp": 23,
+      "mpg": 11.4,
+      "ts_pct": 54.4
+    },
+    {
+      "player": "BITIM, ONURALP",
+      "team": "ULK",
+      "wir_40": 11.43,
+      "pir_40": 9.0,
+      "wir_rank": 240,
+      "pir_rank": 233,
+      "rank_diff": -7,
+      "gp": 27,
+      "mpg": 11.2,
+      "ts_pct": 60.8
+    },
+    {
+      "player": "BACOT JR., ARMANDO",
+      "team": "ULK",
+      "wir_40": 11.42,
+      "pir_40": 5.32,
+      "wir_rank": 241,
+      "pir_rank": 246,
+      "rank_diff": 5,
+      "gp": 26,
+      "mpg": 10.1,
+      "ts_pct": 50.0
+    },
+    {
+      "player": "JALLOW, KARIM",
+      "team": "VIR",
+      "wir_40": 10.92,
+      "pir_40": 10.92,
+      "wir_rank": 242,
+      "pir_rank": 218,
+      "rank_diff": -24,
+      "gp": 35,
+      "mpg": 21.0,
+      "ts_pct": 54.2
+    },
+    {
+      "player": "AJINCA, MELVIN",
+      "team": "ASV",
+      "wir_40": 10.73,
+      "pir_40": 7.67,
+      "wir_rank": 243,
+      "pir_rank": 240,
+      "rank_diff": -3,
+      "gp": 28,
+      "mpg": 17.5,
+      "ts_pct": 48.4
+    },
+    {
+      "player": "PAPANIKOLAOU, KOSTAS",
+      "team": "OLY",
+      "wir_40": 10.71,
+      "pir_40": 6.18,
+      "wir_rank": 244,
+      "pir_rank": 243,
+      "rank_diff": -1,
+      "gp": 29,
+      "mpg": 14.1,
+      "ts_pct": 46.1
+    },
+    {
+      "player": "NGOUAMA, MEHDY",
+      "team": "ASV",
+      "wir_40": 10.57,
+      "pir_40": 0.93,
+      "wir_rank": 245,
+      "pir_rank": 249,
+      "rank_diff": 4,
+      "gp": 12,
+      "mpg": 10.8,
+      "ts_pct": 32.2
+    },
+    {
+      "player": "MARINKOVIC, VANJA",
+      "team": "PAR",
+      "wir_40": 10.28,
+      "pir_40": 8.12,
+      "wir_rank": 246,
+      "pir_rank": 238,
+      "rank_diff": -8,
+      "gp": 19,
+      "mpg": 20.5,
+      "ts_pct": 51.9
+    },
+    {
+      "player": "ATAMNA, ADAM",
+      "team": "ASV",
+      "wir_40": 10.13,
+      "pir_40": 1.81,
+      "wir_rank": 247,
+      "pir_rank": 248,
+      "rank_diff": 1,
+      "gp": 17,
+      "mpg": 10.4,
+      "ts_pct": 21.9
+    },
+    {
+      "player": "KRAMER, DAVID",
+      "team": "MAD",
+      "wir_40": 10.01,
+      "pir_40": 3.02,
+      "wir_rank": 248,
+      "pir_rank": 247,
+      "rank_diff": -1,
+      "gp": 14,
+      "mpg": 11.3,
+      "ts_pct": 45.3
+    },
+    {
+      "player": "ABASS, AWUDU",
+      "team": "DUB",
+      "wir_40": 9.96,
+      "pir_40": 5.78,
+      "wir_rank": 249,
+      "pir_rank": 244,
+      "rank_diff": -5,
+      "gp": 30,
+      "mpg": 16.6,
+      "ts_pct": 52.7
     }
   ],
   "oracle": {

@@ -314,6 +314,13 @@
         .oracle-mini-detail { color: var(--text-secondary); }
         .oracle-mini-detail strong { color: var(--text-primary); }
 
+        /* ── Responsive ──────────────────────────────────────── */
+        @media (max-width: 480px) {
+            .round-nav-label { font-size: 1rem; min-width: 6rem; }
+            .game-grid { grid-template-columns: 1fr; }
+            .game-score-row { font-size: 1.1rem; }
+        }
+
         /* ── Round summary bar ────────────────────────────────── */
         .round-summary {
             display: flex;
@@ -385,7 +392,8 @@
         <div>19 seasons · 7,000+ games · Updated daily</div>
     </footer>
 
-    <script src="recap.js"></script>
+    <script src="constants.js"></script>
+<script src="recap.js"></script>
 </body>
 
 </html>

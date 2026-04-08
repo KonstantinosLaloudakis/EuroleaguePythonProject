@@ -268,10 +268,10 @@
             <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.75rem">
                 How players and teams finish in the paint (zones A/B/C). Left, center, right determined by shot X-coordinate. Min 30 attempts.
             </p>
-            <div class="tab-bar" id="paint-tabs" style="margin-bottom:1rem">
-                <button class="tab-btn active" onclick="switchPaintTab('players', this)">Players</button>
-                <button class="tab-btn" onclick="switchPaintTab('teams', this)">Teams</button>
-                <button class="tab-btn" onclick="switchPaintTab('defense', this)">Team Defense</button>
+            <div class="tab-bar" id="paint-tabs" role="tablist" style="margin-bottom:1rem">
+                <button class="tab-btn active" onclick="switchTab('paint-players', PAINT_TABS, PAINT_TAB_OPTS)">Players</button>
+                <button class="tab-btn" onclick="switchTab('paint-teams', PAINT_TABS, PAINT_TAB_OPTS)">Teams</button>
+                <button class="tab-btn" onclick="switchTab('paint-defense', PAINT_TABS, PAINT_TAB_OPTS)">Team Defense</button>
             </div>
 
             <!-- Player detail paint court -->
@@ -299,7 +299,7 @@
                     </table>
                 </div>
             </div>
-            <div id="paint-teams" class="paint-tab-content" style="display:none">
+            <div id="paint-teams" class="paint-tab-content hidden">
                 <div class="paint-table-wrap">
                     <table class="zone-tbl">
                         <thead>
@@ -318,7 +318,7 @@
                     </table>
                 </div>
             </div>
-            <div id="paint-defense" class="paint-tab-content" style="display:none">
+            <div id="paint-defense" class="paint-tab-content hidden">
                 <div class="paint-table-wrap">
                     <table class="zone-tbl">
                         <thead>
@@ -349,7 +349,8 @@
         <div>19 seasons · 7,000+ games · Updated daily</div>
     </footer>
 
-    <script src="shots.js"></script>
+    <script src="constants.js"></script>
+<script src="shots.js"></script>
 </body>
 
 </html>

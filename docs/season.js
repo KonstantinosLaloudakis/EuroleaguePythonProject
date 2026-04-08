@@ -6,16 +6,6 @@
 
 'use strict';
 
-// ── Team color lookup ─────────────────────────────────────────────────────
-const TEAM_COLORS = {
-    'OLY': '#E2001A', 'ULK': '#003366', 'PAN': '#007F3D', 'MAD': '#6d4c94',
-    'BAR': '#004D98', 'MCO': '#D4AF37', 'ZAL': '#006233', 'DUB': '#555555',
-    'IST': '#003366', 'HTA': '#cc0000', 'PAR': '#333333', 'RED': '#CC0000',
-    'TEL': '#F6C300', 'BAS': '#B50031', 'MUN': '#0066B2', 'VIR': '#1a1a1a',
-    'PAM': '#EB7622', 'ASV': '#222222', 'PRS': '#1a1a2e', 'BER': '#005CA9',
-    'MIL': '#C8102E',
-};
-
 // ── Sort state ────────────────────────────────────────────────────────────
 let sortState = { col: 'wins', asc: false };
 
@@ -52,7 +42,7 @@ async function init() {
         // Restore tab from URL hash
         const hash = location.hash.replace('#', '');
         if (hash === 'tab-oracle' || hash === 'tab-standings') {
-            switchTab(hash);
+            switchTab(hash, SEASON_TABS, SEASON_TAB_OPTS);
         }
 
     } catch (err) {
@@ -65,29 +55,18 @@ async function init() {
     }
 }
 
-// ── Tab switching ──────────────────────────────────────────────────────────
-function switchTab(tabId) {
-    const tabs = ['tab-standings', 'tab-oracle'];
-    tabs.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.classList.toggle('hidden', id !== tabId);
-    });
-
-    document.querySelectorAll('.tab-btn').forEach((btn, i) => {
-        btn.classList.toggle('active', tabs[i] === tabId);
-    });
-
-    // Persist tab in URL hash
-    history.replaceState(null, '', '#' + tabId);
-
-    // Trigger Plotly resize so charts fill their containers correctly
-    if (tabId === 'tab-oracle') {
-        setTimeout(() => {
-            const calibEl = document.getElementById('calibration-chart');
-            if (calibEl && calibEl._plotly) Plotly.Plots.resize(calibEl);
-        }, 50);
+// ── Tab config ────────────────────────────────────────────────────────────
+const SEASON_TABS = ['tab-standings', 'tab-oracle'];
+const SEASON_TAB_OPTS = {
+    onSwitch(tabId) {
+        if (tabId === 'tab-oracle') {
+            setTimeout(() => {
+                const calibEl = document.getElementById('calibration-chart');
+                if (calibEl && calibEl._plotly) Plotly.Plots.resize(calibEl);
+            }, 50);
+        }
     }
-}
+};
 
 // ── Standings table ───────────────────────────────────────────────────────
 function renderStandings(teams) {

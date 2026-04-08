@@ -44,11 +44,11 @@
 
     <main>
         <!-- Tab Bar -->
-        <div class="tab-bar">
-            <button class="tab-btn active" onclick="switchTab('tab-standings')">
+        <div class="tab-bar" role="tablist">
+            <button class="tab-btn active" onclick="switchTab('tab-standings', SEASON_TABS, SEASON_TAB_OPTS)">
                 🏆 Standings &amp; Odds
             </button>
-            <button class="tab-btn" onclick="switchTab('tab-oracle')">
+            <button class="tab-btn" onclick="switchTab('tab-oracle', SEASON_TABS, SEASON_TAB_OPTS)">
                 🔮 Oracle Forecast
             </button>
         </div>
@@ -160,7 +160,8 @@
         <div>19 seasons · 7,000+ games · Updated daily</div>
     </footer>
 
-    <script src="season.js"></script>
+    <script src="constants.js"></script>
+<script src="season.js"></script>
 </body>
 
 </html>

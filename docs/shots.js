@@ -1,23 +1,5 @@
 /* ── shots.js — Shot Lab ─────────────────────────────────────────────────── */
 
-const TEAM_COLORS = {
-    BER:'#005CA9', IST:'#E30613', MCO:'#E30613', BAS:'#006633',
-    RED:'#CC0000', MIL:'#CC0000', BAR:'#A50044', MUN:'#DC052D',
-    ULK:'#003DA5', ASV:'#FFD700', TEL:'#005BAA', OLY:'#CC0000',
-    PAN:'#007A33', PAR:'#000000', PRS:'#001489', MAD:'#FEBE10',
-    PAM:'#FF6B00', VIR:'#003DA5', ZAL:'#006600', DUB:'#00843D',
-    HTA:'#CC0000',
-};
-
-const TEAM_NAMES = {
-    BER:'ALBA Berlin', IST:'Anadolu Efes', MCO:'AS Monaco', BAS:'Baskonia',
-    RED:'Crvena Zvezda', MIL:'EA7 Milan', BAR:'FC Barcelona', MUN:'Bayern Munich',
-    ULK:'Fenerbahce', ASV:'ASVEL', TEL:'Maccabi Tel Aviv', OLY:'Olympiacos',
-    PAN:'Panathinaikos', PAR:'Partizan', PRS:'Paris Basketball', MAD:'Real Madrid',
-    PAM:'Valencia Basket', VIR:'Virtus Bologna', ZAL:'Zalgiris', DUB:'Dubai Basketball',
-    HTA:'Hapoel Tel Aviv',
-};
-
 let _data = null;
 let _paintData = null;
 let _paintTab = 'players';
@@ -26,8 +8,8 @@ const ZONES = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
 
 // ── Boot ──────────────────────────────────────────────────────────────────
 Promise.all([
-    fetch('data/current/shot_stats.json').then(r => r.json()),
-    fetch('data/current/paint_profiles.json').then(r => r.json()).catch(() => null),
+    fetchJSON('data/current/shot_stats.json'),
+    fetchJSON('data/current/paint_profiles.json').catch(() => null),
 ]).then(([shotData, paintData]) => {
     _data = shotData;
     _paintData = paintData;
@@ -439,15 +421,16 @@ function renderDistChart(zones, label) {
 // ── Paint Finishing Profiles ─────────────────────────────────────────────
 // ══════════════════════════════════════════════════════════════════════════
 
-function switchPaintTab(tab, btn) {
-    _paintTab = tab;
-    _paintSelectedPlayer = null;
-    document.getElementById('paint-detail').classList.remove('visible');
-    document.querySelectorAll('.paint-tab-content').forEach(el => el.style.display = 'none');
-    document.getElementById(`paint-${tab}`).style.display = '';
-    document.querySelectorAll('#paint-tabs .tab-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-}
+const PAINT_TABS = ['paint-players', 'paint-teams', 'paint-defense'];
+const PAINT_TAB_OPTS = {
+    scope: '#paint-tabs',
+    hash: false,
+    onSwitch(tabId) {
+        _paintTab = tabId.replace('paint-', '');
+        _paintSelectedPlayer = null;
+        document.getElementById('paint-detail').classList.remove('visible');
+    }
+};
 
 function renderPaintProfiles() {
     renderPaintPlayers();

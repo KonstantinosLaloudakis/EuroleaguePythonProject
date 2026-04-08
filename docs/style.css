@@ -665,6 +665,18 @@ footer {
     display: none !important;
 }
 
+/* ── Sortable table headers (reusable) ────────────────────── */
+.sortable-th {
+    cursor: pointer;
+    user-select: none;
+}
+.sortable-th:hover {
+    color: var(--text-primary);
+}
+.sort-active {
+    color: var(--accent-purple);
+}
+
 /* ── Season grid (2-col layout) ──────────────────────────── */
 .season-grid {
     display: grid;

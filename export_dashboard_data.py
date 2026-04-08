@@ -833,6 +833,8 @@ def main():
                 'home_games': row.get('Home_Games', 0),
                 'away_games': row.get('Away_Games', 0),
                 'remaining_opponents': row.get('Remaining_Opponents', []),
+                'win_distribution': mc.get('Win_Distribution', {}),
+                'seed_distribution': mc.get('Seed_Distribution', {}),
             })
 
     # Sort: wins desc, then adj_net desc
@@ -874,6 +876,55 @@ def main():
     else:
         rapm_data = []
 
+    # ── Load WPA ratings (normalize keys) ──────────────────────────────────
+    wpa_raw = load_with_fallback(suffix, 'wpa_ratings.json')
+    wpa_data = []
+    if wpa_raw:
+        for r in wpa_raw:
+            wpa_data.append({
+                'player': r.get('Player', ''),
+                'team': r.get('Team', ''),
+                'wpa': round(r.get('Action_WPA', 0.0), 2),
+                'plays': r.get('Plays', 0),
+                'rank': r.get('WPA_Rank', 0),
+            })
+        print(f"  WPA ratings: {len(wpa_data)} players")
+
+    # ── Load TPM ratings (normalize keys) ──────────────────────────────────
+    tpm_raw = load_with_fallback(suffix, 'tpm_ratings.json')
+    tpm_data = []
+    if tpm_raw:
+        for r in tpm_raw:
+            tpm_data.append({
+                'player': r.get('player.name', ''),
+                'team': r.get('player.team.code', ''),
+                'tpm_40': round(r.get('TPM_40', 0.0), 2),
+                'total_pm': round(r.get('Total_PM', 0.0), 1),
+                'gp': r.get('gamesPlayed', 0),
+                'mpg': round(r.get('mins_played', 0.0), 1),
+                'rank': r.get('TPM_Rank', 0),
+            })
+        print(f"  TPM ratings: {len(tpm_data)} players")
+
+    # ── Load WIR ratings (normalize keys) ──────────────────────────────────
+    wir_raw = load_with_fallback(suffix, 'wir_ratings.json')
+    wir_data = []
+    if wir_raw:
+        for r in wir_raw:
+            wir_data.append({
+                'player': r.get('player.name', ''),
+                'team': r.get('player.team.code', ''),
+                'wir_40': round(r.get('WIR_40', 0.0), 2),
+                'pir_40': round(r.get('PIR_40', 0.0), 2),
+                'wir_rank': r.get('WIR_Rank', 0),
+                'pir_rank': r.get('PIR_Rank', 0),
+                'rank_diff': r.get('Rank_Diff', 0),
+                'gp': r.get('gamesPlayed', 0),
+                'mpg': round(r.get('mins_played', 0.0), 1),
+                'ts_pct': round(r.get('TS%', 0.0), 1),
+            })
+        print(f"  WIR ratings: {len(wir_data)} players")
+
     # ── Build output ─────────────────────────────────────────────────────────
     from datetime import datetime
     output = {
@@ -884,6 +935,9 @@ def main():
         'mvp_race': mvp_race,
         'player_stats': player_stats,
         'rapm': rapm_data,
+        'wpa': wpa_data,
+        'tpm': tpm_data,
+        'wir': wir_data,
         'oracle': oracle_data,
         'accuracy': accuracy_data,
     }
@@ -901,6 +955,9 @@ def main():
     print(f"  Round: {round_num}")
     print(f"  Teams: {len(teams)}")
     print(f"  MVP entries: {len(mvp_list)}")
+    print(f"  WPA ratings: {len(wpa_data)} players")
+    print(f"  TPM ratings: {len(tpm_data)} players")
+    print(f"  WIR ratings: {len(wir_data)} players")
     if oracle_data:
         preds = oracle_data.get('predictions', [])
         print(f"  Oracle predictions: {len(preds)} (Round {oracle_data.get('round', '?')})")

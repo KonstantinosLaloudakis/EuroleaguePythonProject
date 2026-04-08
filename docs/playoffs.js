@@ -13,15 +13,6 @@
 
 'use strict';
 
-const TEAM_COLORS = {
-    BER:'#005CA9', IST:'#E30613', MCO:'#D4AF37', BAS:'#B50031',
-    RED:'#CC0000', MIL:'#C8102E', BAR:'#004D98', MUN:'#0066B2',
-    ULK:'#003366', ASV:'#222222', TEL:'#F6C300', OLY:'#E2001A',
-    PAN:'#007F3D', PAR:'#333333', PRS:'#1a1a2e', MAD:'#6d4c94',
-    PAM:'#EB7622', VIR:'#1a1a1a', ZAL:'#006233', DUB:'#555555',
-    HTA:'#cc0000',
-};
-
 const ELO_HCA = 50;
 const MC_ITERATIONS = 10000;
 

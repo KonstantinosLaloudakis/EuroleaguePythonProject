@@ -1,23 +1,5 @@
 /* ── players.js — Player Stats Hub ─────────────────────────────────────── */
 
-const TEAM_NAMES = {
-    BER:'ALBA Berlin', IST:'Anadolu Efes', MCO:'AS Monaco', BAS:'Baskonia',
-    RED:'Crvena Zvezda', MIL:'EA7 Milan', BAR:'FC Barcelona', MUN:'Bayern Munich',
-    ULK:'Fenerbahce', ASV:'ASVEL', TEL:'Maccabi Tel Aviv', OLY:'Olympiacos',
-    PAN:'Panathinaikos', PAR:'Partizan', PRS:'Paris Basketball', MAD:'Real Madrid',
-    PAM:'Valencia Basket', VIR:'Virtus Bologna', ZAL:'Zalgiris', DUB:'Dubai Basketball',
-    HTA:'Hapoel Tel Aviv',
-};
-
-const TEAM_COLORS = {
-    BER:'#005CA9', IST:'#E30613', MCO:'#E30613', BAS:'#006633',
-    RED:'#CC0000', MIL:'#CC0000', BAR:'#A50044', MUN:'#DC052D',
-    ULK:'#003DA5', ASV:'#FFD700', TEL:'#005BAA', OLY:'#CC0000',
-    PAN:'#007A33', PAR:'#000000', PRS:'#001489', MAD:'#FEBE10',
-    PAM:'#FF6B00', VIR:'#003DA5', ZAL:'#006600', DUB:'#00843D',
-    HTA:'#CC0000',
-};
-
 // ── State ─────────────────────────────────────────────────────────────────
 let _players = [];
 let _mvpList  = [];
@@ -31,19 +13,11 @@ let _rapmShowAll = false;
 let _cmpPlayerA = null;
 let _cmpPlayerB = null;
 
-// ── Tab switching ─────────────────────────────────────────────────────────
-function switchTab(id) {
-    document.querySelectorAll('[id^="tab-"]').forEach(el => el.style.display = 'none');
-    document.getElementById(id).style.display = '';
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    const idx = ['tab-leaderboards','tab-mvp','tab-rapm','tab-compare'].indexOf(id);
-    document.querySelectorAll('.tab-btn')[idx]?.classList.add('active');
-    history.replaceState(null, '', '#' + id);
-}
+// ── Tab config ────────────────────────────────────────────────────────────
+const PLAYER_TABS = ['tab-leaderboards', 'tab-mvp', 'tab-rapm', 'tab-compare'];
 
 // ── Boot ──────────────────────────────────────────────────────────────────
-fetch('data/current/dashboard.json')
-    .then(r => r.json())
+fetchJSON('data/current/dashboard.json')
     .then(data => {
         _players = data.player_stats || [];
         _mvpList  = data.mvp || [];
@@ -90,7 +64,7 @@ fetch('data/current/dashboard.json')
 
         // Restore tab from hash
         const hash = location.hash.replace('#','');
-        if (hash && document.getElementById(hash)) switchTab(hash);
+        if (hash && document.getElementById(hash)) switchTab(hash, PLAYER_TABS);
     })
     .catch(err => {
         document.getElementById('leaderboard-table').innerHTML =
