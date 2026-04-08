@@ -531,6 +531,196 @@ def build_paint_profiles():
     return output
 
 
+def build_assist_network():
+    """Build passer→scorer assist network from play-by-play data."""
+    import csv
+    from collections import defaultdict
+
+    pbp_file = 'data_cache/pbp_2025.csv'
+    if not os.path.exists(pbp_file):
+        print("  No PBP data found — skipping assist network.")
+        return None
+
+    print(f"\n--- Building assist network from {pbp_file} ---")
+
+    # ── Phase 1: Read PBP, link assists to made field goals ──────────────────
+    rows = []
+    with open(pbp_file, encoding='utf-8') as f:
+        for row in csv.DictReader(f):
+            rows.append(row)
+
+    # Sort by Gamecode, NUMBEROFPLAY to ensure correct linking order
+    rows.sort(key=lambda r: (r.get('Gamecode', ''), int(r.get('NUMBEROFPLAY', 0)) if r.get('NUMBEROFPLAY', '').isdigit() else 0))
+
+    # Track GP per player (unique gamecodes where they appear)
+    player_games = defaultdict(set)
+    for row in rows:
+        pid = row.get('PLAYER_ID', '').strip()
+        gc = row.get('Gamecode', '').strip()
+        if pid and gc:
+            player_games[pid].add(gc)
+
+    # Link assists: AS row follows a 2FGM/3FGM row with consecutive NUMBEROFPLAY
+    edges_raw = []  # list of (passer_id, passer_name, scorer_id, scorer_name, team, shot_type, gamecode)
+    for i, row in enumerate(rows):
+        if row.get('PLAYTYPE') != 'AS':
+            continue
+        if i == 0:
+            continue
+        prev = rows[i - 1]
+        if prev.get('Gamecode') != row.get('Gamecode'):
+            continue
+        if prev.get('PLAYTYPE') not in ('2FGM', '3FGM'):
+            continue
+        # Verify consecutive NUMBEROFPLAY
+        try:
+            nop_cur = int(row.get('NUMBEROFPLAY', 0))
+            nop_prev = int(prev.get('NUMBEROFPLAY', 0))
+        except (ValueError, TypeError):
+            continue
+        if nop_cur != nop_prev + 1:
+            continue
+
+        passer_id = row.get('PLAYER_ID', '').strip()
+        passer_name = row.get('PLAYER', '').strip()
+        scorer_id = prev.get('PLAYER_ID', '').strip()
+        scorer_name = prev.get('PLAYER', '').strip()
+        team = row.get('CODETEAM', '').strip()
+        shot_type = prev.get('PLAYTYPE')  # '2FGM' or '3FGM'
+        gamecode = row.get('Gamecode', '').strip()
+
+        if passer_id and scorer_id and team:
+            edges_raw.append((passer_id, passer_name, scorer_id, scorer_name, team, shot_type, gamecode))
+
+    print(f"  Linked assists: {len(edges_raw)}")
+
+    # ── Phase 2: Aggregate edges ─────────────────────────────────────────────
+    # Edge key: (passer_id, scorer_id)
+    edge_agg = defaultdict(lambda: {'count': 0, 'fg2': 0, 'fg3': 0, 'team': '', 'passer_name': '', 'scorer_name': ''})
+    # Per-player totals
+    player_ast_given = defaultdict(lambda: {'name': '', 'team': '', 'count': 0, 'targets': set()})
+    player_ast_received = defaultdict(lambda: {'name': '', 'team': '', 'count': 0, 'feeders': set()})
+
+    for passer_id, passer_name, scorer_id, scorer_name, team, shot_type, gamecode in edges_raw:
+        key = (passer_id, scorer_id)
+        e = edge_agg[key]
+        e['count'] += 1
+        e['team'] = team
+        e['passer_name'] = passer_name
+        e['scorer_name'] = scorer_name
+        if shot_type == '2FGM':
+            e['fg2'] += 1
+        else:
+            e['fg3'] += 1
+
+        g = player_ast_given[passer_id]
+        g['name'] = passer_name
+        g['team'] = team
+        g['count'] += 1
+        g['targets'].add(scorer_id)
+
+        r = player_ast_received[scorer_id]
+        r['name'] = scorer_name
+        r['team'] = team
+        r['count'] += 1
+        r['feeders'].add(passer_id)
+
+    # ── Phase 3: Build per-team structures ───────────────────────────────────
+    team_players = defaultdict(dict)  # team -> {player_id: {info}}
+    team_edges = defaultdict(list)    # team -> [edge dicts]
+
+    for (passer_id, scorer_id), e in edge_agg.items():
+        team = e['team']
+        team_edges[team].append({
+            'from': passer_id,
+            'to': scorer_id,
+            'count': e['count'],
+            'fg2': e['fg2'],
+            'fg3': e['fg3'],
+        })
+
+        # Ensure both players exist in the team's player dict
+        for pid, pname in [(passer_id, e['passer_name']), (scorer_id, e['scorer_name'])]:
+            if pid not in team_players[team]:
+                gp = len(player_games.get(pid, set()))
+                ast_g = player_ast_given.get(pid, {}).get('count', 0)
+                ast_r = player_ast_received.get(pid, {}).get('count', 0)
+                targets = len(player_ast_given.get(pid, {}).get('targets', set()))
+                team_players[team][pid] = {
+                    'id': pid,
+                    'name': pname,
+                    'ast_given': ast_g,
+                    'ast_received': ast_r,
+                    'gp': gp,
+                    'ast_per_game': round(ast_g / gp, 1) if gp > 0 else 0.0,
+                    'unique_targets': targets,
+                }
+
+    # Assemble teams dict
+    teams_out = {}
+    for team_code in sorted(team_players.keys()):
+        players_list = sorted(team_players[team_code].values(), key=lambda p: p['ast_given'] + p['ast_received'], reverse=True)
+        teams_out[team_code] = {
+            'players': players_list,
+            'edges': team_edges[team_code],
+        }
+
+    # ── Phase 4: Build league-wide tables ────────────────────────────────────
+    # Top 20 assist combos
+    all_combos = []
+    for (passer_id, scorer_id), e in edge_agg.items():
+        passer_gp = len(player_games.get(passer_id, set()))
+        all_combos.append({
+            'passer': e['passer_name'],
+            'passer_id': passer_id,
+            'scorer': e['scorer_name'],
+            'scorer_id': scorer_id,
+            'team': e['team'],
+            'count': e['count'],
+            'fg2': e['fg2'],
+            'fg3': e['fg3'],
+            'per_game': round(e['count'] / passer_gp, 2) if passer_gp > 0 else 0.0,
+        })
+    all_combos.sort(key=lambda x: x['count'], reverse=True)
+    top_combos = all_combos[:20]
+
+    # Top 20 playmakers
+    all_playmakers = []
+    for pid, info in player_ast_given.items():
+        if info['count'] < 5:
+            continue  # skip very low-volume
+        gp = len(player_games.get(pid, set()))
+        # Find top target
+        best_target = ''
+        best_target_count = 0
+        for (p_id, s_id), e in edge_agg.items():
+            if p_id == pid and e['count'] > best_target_count:
+                best_target_count = e['count']
+                best_target = e['scorer_name']
+        all_playmakers.append({
+            'player': info['name'],
+            'player_id': pid,
+            'team': info['team'],
+            'ast': info['count'],
+            'per_game': round(info['count'] / gp, 1) if gp > 0 else 0.0,
+            'unique_targets': len(info['targets']),
+            'top_target': best_target,
+            'top_target_count': best_target_count,
+        })
+    all_playmakers.sort(key=lambda x: x['ast'], reverse=True)
+    top_playmakers = all_playmakers[:20]
+
+    print(f"  Teams: {len(teams_out)}")
+    print(f"  Total edges: {sum(len(t['edges']) for t in teams_out.values())}")
+    print(f"  Top combo: {top_combos[0]['passer']} -> {top_combos[0]['scorer']} ({top_combos[0]['count']})" if top_combos else "  No combos")
+
+    return {
+        'teams': teams_out,
+        'top_combos': top_combos,
+        'top_playmakers': top_playmakers,
+    }
+
+
 def build_game_recaps():
     """Build per-round game recaps with box scores from game stats + backtest."""
     all_stats = load_json('mvp_all_game_stats_2025.json')
@@ -990,6 +1180,17 @@ def main():
         n_teams = len(paint_profiles.get('teams', {}))
         n_def = len(paint_profiles.get('team_defense', {}))
         print(f"  Paint profiles: {n_players} players, {n_teams} teams, {n_def} team defense -> {paint_path}")
+
+    # ── Assist network export ─────────────────────────────────────────────
+    print("\n--- Building assist network ---")
+    assist_network = build_assist_network()
+    if assist_network:
+        assist_path = os.path.join(out_dir, 'assist_network.json')
+        with open(assist_path, 'w', encoding='utf-8') as f:
+            json.dump(assist_network, f, ensure_ascii=False, indent=2)
+        n_teams = len(assist_network.get('teams', {}))
+        n_combos = len(assist_network.get('top_combos', []))
+        print(f"  Assist network: {n_teams} teams, {n_combos} top combos -> {assist_path}")
 
     # ── Game recaps export ─────────────────────────────────────────────────
     print("\n--- Building game recaps ---")

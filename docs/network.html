@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playmaking Network — Euroleague Analytics</title>
+    <meta name="description"
+        content="Interactive assist network visualization for all 20 Euroleague teams. Chord diagrams, top assist combos, and playmaker leaders.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── Team selector grid (reused pattern from team.html) ── */
+        .team-selector-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 900px) { .team-selector-grid { grid-template-columns: repeat(4, 1fr); } }
+        @media (max-width: 600px) { .team-selector-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        .team-chip {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.45rem 0.4rem;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .team-chip:hover { border-color: #4b5563; background: var(--bg-card); }
+
+        .team-chip.selected {
+            border-color: var(--accent-purple);
+            background: rgba(168, 85, 247, 0.08);
+        }
+
+        .team-chip-name {
+            font-weight: 700;
+            font-size: 0.82rem;
+            display: block;
+        }
+
+        /* ── Chord diagram container ─────────────────────────── */
+        .chord-wrap {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+        }
+
+        #chord-svg {
+            max-width: 540px;
+            width: 100%;
+            height: auto;
+        }
+
+        /* ── Chord interactions ───────────────────────────────── */
+        .chord-ribbon {
+            transition: opacity 0.2s ease;
+            cursor: pointer;
+        }
+
+        .chord-arc {
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        .chord-label {
+            font-family: 'Inter', sans-serif;
+            fill: var(--text-secondary);
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        /* ── Tooltip ──────────────────────────────────────────── */
+        .chord-tooltip {
+            position: fixed;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.8rem;
+            color: var(--text-primary);
+            pointer-events: none;
+            z-index: 200;
+            display: none;
+            max-width: 260px;
+            line-height: 1.5;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+        }
+
+        .chord-tooltip .tt-title {
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            font-size: 0.85rem;
+        }
+
+        .chord-tooltip .tt-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .chord-tooltip .tt-label { color: var(--text-muted); }
+        .chord-tooltip .tt-value { font-weight: 600; }
+
+        /* ── Player detail card ───────────────────────────────── */
+        #player-detail {
+            display: none;
+            margin-top: 1rem;
+        }
+
+        #player-detail.visible { display: block; }
+
+        .pd-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .pd-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+
+        .pd-team-badge {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .pd-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @media (max-width: 600px) { .pd-grid { grid-template-columns: 1fr; } }
+
+        .pd-section h4 {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .pd-stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.3rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.82rem;
+        }
+
+        .pd-stat-row:last-child { border-bottom: none; }
+
+        .pd-stat-label { color: var(--text-secondary); }
+        .pd-stat-value { font-weight: 600; }
+
+        .pd-target-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pd-target-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.25rem 0;
+            font-size: 0.82rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pd-target-list li:last-child { border-bottom: none; }
+
+        /* ── League tables ────────────────────────────────────── */
+        .league-tables {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 768px) { .league-tables { grid-template-columns: 1fr; } }
+
+        .league-table-wrap { overflow-x: auto; }
+
+        .assist-tbl {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .assist-tbl th {
+            background: var(--bg-secondary);
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.68rem;
+            padding: 0.55rem 0.6rem;
+            border-bottom: 2px solid var(--border);
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .assist-tbl th:hover { color: var(--text-primary); }
+
+        .assist-tbl td {
+            padding: 0.45rem 0.6rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-primary);
+        }
+
+        .assist-tbl tbody tr {
+            cursor: pointer;
+            transition: background var(--transition);
+        }
+
+        .assist-tbl tbody tr:hover {
+            background: rgba(168, 85, 247, 0.07);
+        }
+
+        .tbl-team-badge {
+            display: inline-block;
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="site-nav">
+        <span class="site-nav-brand">🏀 Euroleague Analytics</span>
+        <a href="index.html" class="nav-link">Season Hub</a>
+        <a href="team.html" class="nav-link">Team Deep-Dive</a>
+        <a href="players.html" class="nav-link">Player Stats</a>
+        <a href="h2h.html" class="nav-link">Head-to-Head</a>
+        <a href="recap.html" class="nav-link">Game Recap</a>
+        <a href="shots.html" class="nav-link">Shot Lab</a>
+        <a href="network.html" class="nav-link active">Playmaking</a>
+        <a href="replay.html" class="nav-link">Game Replay</a>
+        <a href="playoffs.html" class="nav-link">Playoffs</a>
+        <a href="mvp.html" class="nav-link">MVP Race</a>
+        <a href="about.html" class="nav-link">About</a>
+    </nav>
+
+    <header>
+        <h1>🎯 Playmaking Network</h1>
+        <p class="subtitle">Assist relationships · Chord diagrams · Top combos · Playmaker leaders</p>
+    </header>
+
+    <main>
+        <!-- Team selector -->
+        <div class="stat-card">
+            <h3>Select a Team</h3>
+            <div id="team-grid" class="team-selector-grid">
+                <div class="loading-placeholder"><span class="loading-spinner"></span> Loading teams…</div>
+            </div>
+        </div>
+
+        <!-- Chord diagram -->
+        <div class="stat-card" id="chord-card" style="display:none">
+            <h3 id="chord-title">Assist Network</h3>
+            <p style="color:var(--text-muted);font-size:0.8rem;margin-bottom:0.5rem;">
+                Top 8 players by assist involvement. Hover a ribbon for details, click a player arc to pin.
+            </p>
+            <div class="chord-wrap">
+                <svg id="chord-svg" viewBox="0 0 540 540"></svg>
+            </div>
+
+            <!-- Player detail card -->
+            <div id="player-detail" class="stat-card" style="background:var(--bg-secondary);">
+                <div class="pd-header">
+                    <span class="pd-name" id="pd-name"></span>
+                    <span class="pd-team-badge" id="pd-badge"></span>
+                </div>
+                <div class="pd-grid">
+                    <div class="pd-section">
+                        <h4>Assists Given</h4>
+                        <div id="pd-given"></div>
+                    </div>
+                    <div class="pd-section">
+                        <h4>Assists Received</h4>
+                        <div id="pd-received"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- League-wide tables -->
+        <div class="league-tables">
+            <div class="stat-card">
+                <h3>Top 20 Assist Combos</h3>
+                <div class="league-table-wrap">
+                    <table class="assist-tbl" id="combos-table">
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="stat-card">
+                <h3>Top 20 Playmakers</h3>
+                <div class="league-table-wrap">
+                    <table class="assist-tbl" id="playmakers-table">
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error -->
+        <div id="load-error" class="hidden" style="text-align:center;padding:3rem 1rem;">
+            <div style="font-size:3rem;margin-bottom:1rem;">⚠️</div>
+            <p style="color:var(--text-muted);font-size:1rem;">
+                Could not load assist network data. Run
+                <code>python export_dashboard_data.py</code> to generate it.
+            </p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="about.html">About & Methodology</a>
+            <span class="footer-sep">·</span>
+            <a href="https://github.com/giasemidis/euroleague_api" target="_blank" rel="noopener">Data: Euroleague API</a>
+            <span class="footer-sep">·</span>
+            <a href="https://github.com/KonstantinosLaloudakis" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div>19 seasons · 7,000+ games · Updated daily</div>
+    </footer>
+
+    <!-- Tooltip (positioned via JS) -->
+    <div class="chord-tooltip" id="chord-tooltip"></div>
+
+    <script src="constants.js"></script>
+    <script src="network.js"></script>
+</body>
+
+</html>
