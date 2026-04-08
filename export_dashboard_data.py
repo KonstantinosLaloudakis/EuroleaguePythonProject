@@ -549,6 +549,9 @@ def build_assist_network():
         for row in csv.DictReader(f):
             rows.append(row)
 
+    # Sort by Gamecode, NUMBEROFPLAY to ensure correct linking order
+    rows.sort(key=lambda r: (r.get('Gamecode', ''), int(r.get('NUMBEROFPLAY', 0)) if r.get('NUMBEROFPLAY', '').isdigit() else 0))
+
     # Track GP per player (unique gamecodes where they appear)
     player_games = defaultdict(set)
     for row in rows:

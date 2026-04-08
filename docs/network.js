@@ -366,7 +366,7 @@ function showTooltip(edge, fromArc, toArc, evt) {
         <div class="tt-row"><span class="tt-label">2PT / 3PT</span><span class="tt-value">${edge.fg2} / ${edge.fg3}</span></div>
         <div class="tt-row"><span class="tt-label">Per game</span><span class="tt-value">${perGame}</span></div>
         <div class="tt-row"><span class="tt-label">% of ${passer}'s AST</span><span class="tt-value">${passerPct}%</span></div>
-        <div class="tt-row"><span class="tt-label">% of ${scorer}'s baskets</span><span class="tt-value">${scorerPct}%</span></div>
+        <div class="tt-row"><span class="tt-label">% of ${scorer}'s assisted FG</span><span class="tt-value">${scorerPct}%</span></div>
     `;
     tip.style.display = 'block';
     moveTooltip(evt);
