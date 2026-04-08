@@ -1,0 +1,220 @@
+{
+  "n_games": 425,
+  "accuracy": 64.0,
+  "brier_score": 0.2094,
+  "log_loss": 0.6023,
+  "calibration": [
+    {
+      "Bucket": "50-60%",
+      "Count": 144,
+      "Accuracy": 50.0,
+      "AvgConfidence": 56.3
+    },
+    {
+      "Bucket": "60-70%",
+      "Count": 125,
+      "Accuracy": 56.8,
+      "AvgConfidence": 65.0
+    },
+    {
+      "Bucket": "70-80%",
+      "Count": 97,
+      "Accuracy": 76.3,
+      "AvgConfidence": 75.9
+    },
+    {
+      "Bucket": "80-90%",
+      "Count": 39,
+      "Accuracy": 94.9,
+      "AvgConfidence": 84.3
+    },
+    {
+      "Bucket": "90%+",
+      "Count": 20,
+      "Accuracy": 90.0,
+      "AvgConfidence": 92.6
+    }
+  ],
+  "per_round": [
+    {
+      "Round": 1,
+      "Games": 10,
+      "Accuracy": 60.0
+    },
+    {
+      "Round": 2,
+      "Games": 10,
+      "Accuracy": 70.0
+    },
+    {
+      "Round": 3,
+      "Games": 10,
+      "Accuracy": 80.0
+    },
+    {
+      "Round": 4,
+      "Games": 10,
+      "Accuracy": 50.0
+    },
+    {
+      "Round": 5,
+      "Games": 10,
+      "Accuracy": 70.0
+    },
+    {
+      "Round": 6,
+      "Games": 10,
+      "Accuracy": 40.0
+    },
+    {
+      "Round": 7,
+      "Games": 10,
+      "Accuracy": 60.0
+    },
+    {
+      "Round": 8,
+      "Games": 10,
+      "Accuracy": 90.0
+    },
+    {
+      "Round": 9,
+      "Games": 10,
+      "Accuracy": 40.0
+    },
+    {
+      "Round": 10,
+      "Games": 10,
+      "Accuracy": 80.0
+    },
+    {
+      "Round": 11,
+      "Games": 10,
+      "Accuracy": 50.0
+    },
+    {
+      "Round": 12,
+      "Games": 10,
+      "Accuracy": 70.0
+    },
+    {
+      "Round": 13,
+      "Games": 10,
+      "Accuracy": 80.0
+    },
+    {
+      "Round": 14,
+      "Games": 10,
+      "Accuracy": 60.0
+    },
+    {
+      "Round": 15,
+      "Games": 10,
+      "Accuracy": 70.0
+    },
+    {
+      "Round": 16,
+      "Games": 10,
+      "Accuracy": 20.0
+    },
+    {
+      "Round": 17,
+      "Games": 10,
+      "Accuracy": 100.0
+    },
+    {
+      "Round": 18,
+      "Games": 10,
+      "Accuracy": 70.0
+    },
+    {
+      "Round": 19,
+      "Games": 10,
+      "Accuracy": 40.0
+    },
+    {
+      "Round": 20,
+      "Games": 10,
+      "Accuracy": 60.0
+    },
+    {
+      "Round": 21,
+      "Games": 10,
+      "Accuracy": 90.0
+    },
+    {
+      "Round": 22,
+      "Games": 10,
+      "Accuracy": 50.0
+    },
+    {
+      "Round": 23,
+      "Games": 10,
+      "Accuracy": 80.0
+    },
+    {
+      "Round": 24,
+      "Games": 10,
+      "Accuracy": 70.0
+    },
+    {
+      "Round": 25,
+      "Games": 10,
+      "Accuracy": 60.0
+    },
+    {
+      "Round": 26,
+      "Games": 10,
+      "Accuracy": 60.0
+    },
+    {
+      "Round": 27,
+      "Games": 10,
+      "Accuracy": 40.0
+    },
+    {
+      "Round": 28,
+      "Games": 10,
+      "Accuracy": 70.0
+    },
+    {
+      "Round": 29,
+      "Games": 10,
+      "Accuracy": 60.0
+    },
+    {
+      "Round": 30,
+      "Games": 9,
+      "Accuracy": 55.6
+    },
+    {
+      "Round": 31,
+      "Games": 10,
+      "Accuracy": 70.0
+    },
+    {
+      "Round": 32,
+      "Games": 30,
+      "Accuracy": 63.3
+    },
+    {
+      "Round": 33,
+      "Games": 20,
+      "Accuracy": 65.0
+    },
+    {
+      "Round": 34,
+      "Games": 20,
+      "Accuracy": 70.0
+    },
+    {
+      "Round": 35,
+      "Games": 30,
+      "Accuracy": 70.0
+    },
+    {
+      "Round": 36,
+      "Games": 16,
+      "Accuracy": 56.2
+    }
+  ]
+}
