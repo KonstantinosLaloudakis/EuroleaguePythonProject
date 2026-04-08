@@ -77,3 +77,387 @@ function selectTeam(code) {
     updateURL(code);
     renderChord(_data.teams[code], code);
 }
+
+// ── Chord diagram rendering ──────────────────────────────────────────────────
+
+function renderChord(teamData, teamCode) {
+    const svg = document.getElementById('chord-svg');
+    svg.innerHTML = '';
+
+    const cx = 270, cy = 270, outerR = 240, innerR = 220;
+    const teamColor = TEAM_COLORS[teamCode] || '#6b7280';
+
+    // Top 8 by assist involvement
+    const players = teamData.players
+        .map(p => ({ ...p, involvement: p.ast_given + p.ast_received }))
+        .sort((a, b) => b.involvement - a.involvement)
+        .slice(0, 8);
+
+    const playerIds = new Set(players.map(p => p.id));
+
+    // Filter edges to only include top-8 players on both sides
+    const edges = teamData.edges.filter(e => playerIds.has(e.from) && playerIds.has(e.to));
+
+    const totalInvolvement = players.reduce((s, p) => s + p.involvement, 0);
+    if (totalInvolvement === 0) {
+        svg.innerHTML = '<text x="270" y="270" text-anchor="middle" fill="#6b7280" font-size="14">No assist data</text>';
+        return;
+    }
+
+    // ── Compute arc angles ───────────────────────────────────────────────────
+    const GAP_DEG = 3;
+    const totalGap = GAP_DEG * players.length;
+    const availableDeg = 360 - totalGap;
+
+    let angle = 0;
+    const arcs = players.map(p => {
+        const span = (p.involvement / totalInvolvement) * availableDeg;
+        const start = angle;
+        const end = angle + span;
+        angle = end + GAP_DEG;
+        return { ...p, startDeg: start, endDeg: end, midDeg: (start + end) / 2 };
+    });
+
+    // Player color: HSL rotation from team base hue
+    const baseHue = getHue(teamColor);
+    arcs.forEach((a, i) => {
+        const hueOffset = (i * 37) % 360; // golden-angle-ish spread
+        a.color = `hsl(${(baseHue + hueOffset) % 360}, 65%, 55%)`;
+    });
+
+    const arcById = {};
+    arcs.forEach(a => { arcById[a.id] = a; });
+
+    // ── Draw outer arcs ──────────────────────────────────────────────────────
+    const arcGroup = svgEl('g', { class: 'chord-arcs' });
+    arcs.forEach(a => {
+        const path = describeArc(cx, cy, outerR, innerR, a.startDeg, a.endDeg);
+        const el = svgEl('path', {
+            d: path,
+            fill: a.color,
+            class: 'chord-arc',
+            'data-player': a.id,
+        });
+        el.addEventListener('mouseenter', () => highlightPlayer(a.id, false));
+        el.addEventListener('mouseleave', () => { if (_pinned !== a.id) clearHighlight(); });
+        el.addEventListener('click', () => pinPlayer(a.id));
+        arcGroup.appendChild(el);
+    });
+    svg.appendChild(arcGroup);
+
+    // ── Draw ribbons ─────────────────────────────────────────────────────────
+    const ribbonGroup = svgEl('g', { class: 'chord-ribbons' });
+
+    // Pre-compute sub-arc positions: each edge eats a portion of the player's arc
+    const arcUsed = {};
+    arcs.forEach(a => { arcUsed[a.id] = a.startDeg; });
+
+    // Sort edges by count descending so larger ribbons draw first (behind)
+    const sortedEdges = [...edges].sort((a, b) => b.count - a.count);
+
+    sortedEdges.forEach(e => {
+        const fromArc = arcById[e.from];
+        const toArc = arcById[e.to];
+        if (!fromArc || !toArc) return;
+
+        // Width on passer side: proportional to count / passer involvement
+        const fromSpan = ((e.count / fromArc.involvement) * (fromArc.endDeg - fromArc.startDeg));
+        const fromStart = arcUsed[e.from];
+        const fromEnd = fromStart + fromSpan;
+        arcUsed[e.from] = fromEnd;
+
+        // Width on scorer side
+        const toSpan = ((e.count / toArc.involvement) * (toArc.endDeg - toArc.startDeg));
+        const toStart = arcUsed[e.to];
+        const toEnd = toStart + toSpan;
+        arcUsed[e.to] = toEnd;
+
+        const d = describeRibbon(cx, cy, innerR, fromStart, fromEnd, toStart, toEnd);
+        const ribbon = svgEl('path', {
+            d: d,
+            fill: fromArc.color,
+            'fill-opacity': '0.35',
+            stroke: fromArc.color,
+            'stroke-width': '0.5',
+            class: 'chord-ribbon',
+            'data-from': e.from,
+            'data-to': e.to,
+        });
+        ribbon.addEventListener('mouseenter', (evt) => showTooltip(e, fromArc, toArc, evt));
+        ribbon.addEventListener('mousemove', (evt) => moveTooltip(evt));
+        ribbon.addEventListener('mouseleave', hideTooltip);
+        ribbonGroup.appendChild(ribbon);
+    });
+    svg.appendChild(ribbonGroup);
+
+    // ── Draw labels ──────────────────────────────────────────────────────────
+    const labelGroup = svgEl('g', { class: 'chord-labels' });
+    arcs.forEach(a => {
+        const labelR = outerR + 14;
+        const midRad = degToRad(a.midDeg);
+        const x = cx + labelR * Math.cos(midRad);
+        const y = cy + labelR * Math.sin(midRad);
+        const anchor = (a.midDeg > 90 && a.midDeg < 270) ? 'end' : 'start';
+
+        // Format name: "LAST, F." → "Last"
+        const display = formatPlayerName(a.name);
+        const rot = (a.midDeg > 90 && a.midDeg < 270) ? a.midDeg + 180 : a.midDeg;
+
+        const label = svgEl('text', {
+            x: x, y: y,
+            'text-anchor': anchor,
+            'dominant-baseline': 'central',
+            transform: `rotate(${rot},${x},${y})`,
+            class: 'chord-label',
+            'data-player': a.id,
+            fill: a.color,
+        });
+        label.textContent = display;
+        label.addEventListener('mouseenter', () => highlightPlayer(a.id, false));
+        label.addEventListener('mouseleave', () => { if (_pinned !== a.id) clearHighlight(); });
+        label.addEventListener('click', () => pinPlayer(a.id));
+        labelGroup.appendChild(label);
+    });
+    svg.appendChild(labelGroup);
+}
+
+// ── SVG geometry helpers ─────────────────────────────────────────────────────
+
+function degToRad(deg) { return (deg - 90) * Math.PI / 180; }
+
+function polarToCart(cx, cy, r, deg) {
+    const rad = degToRad(deg);
+    return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
+}
+
+function describeArc(cx, cy, outerR, innerR, startDeg, endDeg) {
+    const s1 = polarToCart(cx, cy, outerR, startDeg);
+    const e1 = polarToCart(cx, cy, outerR, endDeg);
+    const s2 = polarToCart(cx, cy, innerR, endDeg);
+    const e2 = polarToCart(cx, cy, innerR, startDeg);
+    const large = (endDeg - startDeg) > 180 ? 1 : 0;
+    return [
+        `M ${s1.x} ${s1.y}`,
+        `A ${outerR} ${outerR} 0 ${large} 1 ${e1.x} ${e1.y}`,
+        `L ${s2.x} ${s2.y}`,
+        `A ${innerR} ${innerR} 0 ${large} 0 ${e2.x} ${e2.y}`,
+        'Z',
+    ].join(' ');
+}
+
+function describeRibbon(cx, cy, r, fromStart, fromEnd, toStart, toEnd) {
+    const p1 = polarToCart(cx, cy, r, fromStart);
+    const p2 = polarToCart(cx, cy, r, fromEnd);
+    const p3 = polarToCart(cx, cy, r, toStart);
+    const p4 = polarToCart(cx, cy, r, toEnd);
+    return [
+        `M ${p1.x} ${p1.y}`,
+        `Q ${cx} ${cy} ${p3.x} ${p3.y}`,
+        `A ${r} ${r} 0 0 1 ${p4.x} ${p4.y}`,
+        `Q ${cx} ${cy} ${p2.x} ${p2.y}`,
+        `A ${r} ${r} 0 0 1 ${p1.x} ${p1.y}`,
+        'Z',
+    ].join(' ');
+}
+
+function svgEl(tag, attrs) {
+    const el = document.createElementNS('http://www.w3.org/2000/svg', tag);
+    for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v);
+    return el;
+}
+
+function getHue(hex) {
+    const r = parseInt(hex.slice(1, 3), 16) / 255;
+    const g = parseInt(hex.slice(3, 5), 16) / 255;
+    const b = parseInt(hex.slice(5, 7), 16) / 255;
+    const max = Math.max(r, g, b), min = Math.min(r, g, b);
+    let h = 0;
+    if (max !== min) {
+        const d = max - min;
+        if (max === r) h = ((g - b) / d + (g < b ? 6 : 0)) / 6;
+        else if (max === g) h = ((b - r) / d + 2) / 6;
+        else h = ((r - g) / d + 4) / 6;
+    }
+    return Math.round(h * 360);
+}
+
+function formatPlayerName(raw) {
+    // "SLOUKAS, KOSTAS" → "Sloukas"
+    const parts = raw.split(',');
+    const last = (parts[0] || '').trim();
+    return last.charAt(0).toUpperCase() + last.slice(1).toLowerCase();
+}
+
+// ── Highlight / pin ──────────────────────────────────────────────────────────
+
+function highlightPlayer(playerId, isPinned) {
+    const svg = document.getElementById('chord-svg');
+
+    // Fade all ribbons, then highlight connected ones
+    svg.querySelectorAll('.chord-ribbon').forEach(r => {
+        const from = r.getAttribute('data-from');
+        const to = r.getAttribute('data-to');
+        if (from === playerId || to === playerId) {
+            r.style.opacity = '1';
+            r.setAttribute('fill-opacity', '0.55');
+        } else {
+            r.style.opacity = '0.08';
+        }
+    });
+
+    // Fade arcs not connected to this player
+    const connectedIds = new Set([playerId]);
+    svg.querySelectorAll('.chord-ribbon').forEach(r => {
+        const from = r.getAttribute('data-from');
+        const to = r.getAttribute('data-to');
+        if (from === playerId) connectedIds.add(to);
+        if (to === playerId) connectedIds.add(from);
+    });
+
+    svg.querySelectorAll('.chord-arc').forEach(a => {
+        a.style.opacity = connectedIds.has(a.getAttribute('data-player')) ? '1' : '0.2';
+    });
+
+    svg.querySelectorAll('.chord-label').forEach(l => {
+        l.style.opacity = connectedIds.has(l.getAttribute('data-player')) ? '1' : '0.2';
+    });
+}
+
+function clearHighlight() {
+    if (_pinned) return; // don't clear if a player is pinned
+    const svg = document.getElementById('chord-svg');
+    svg.querySelectorAll('.chord-ribbon').forEach(r => {
+        r.style.opacity = '';
+        r.setAttribute('fill-opacity', '0.35');
+    });
+    svg.querySelectorAll('.chord-arc').forEach(a => { a.style.opacity = ''; });
+    svg.querySelectorAll('.chord-label').forEach(l => { l.style.opacity = ''; });
+}
+
+function pinPlayer(playerId) {
+    if (_pinned === playerId) {
+        // Unpin
+        _pinned = null;
+        clearHighlight();
+        document.getElementById('player-detail').classList.remove('visible');
+        return;
+    }
+    _pinned = playerId;
+    highlightPlayer(playerId, true);
+    showPlayerDetail(playerId);
+}
+
+// ── Tooltip ──────────────────────────────────────────────────────────────────
+
+function showTooltip(edge, fromArc, toArc, evt) {
+    const tip = document.getElementById('chord-tooltip');
+    const passer = formatPlayerName(fromArc.name);
+    const scorer = formatPlayerName(toArc.name);
+
+    // Compute percentages
+    const passerPct = fromArc.ast_given > 0 ? (edge.count / fromArc.ast_given * 100).toFixed(1) : '0.0';
+    const scorerPct = toArc.ast_received > 0 ? (edge.count / toArc.ast_received * 100).toFixed(1) : '0.0';
+    const passerGP = fromArc.gp || 1;
+    const perGame = (edge.count / passerGP).toFixed(1);
+
+    tip.innerHTML = `
+        <div class="tt-title">${passer} → ${scorer}</div>
+        <div class="tt-row"><span class="tt-label">Assists</span><span class="tt-value">${edge.count}</span></div>
+        <div class="tt-row"><span class="tt-label">2PT / 3PT</span><span class="tt-value">${edge.fg2} / ${edge.fg3}</span></div>
+        <div class="tt-row"><span class="tt-label">Per game</span><span class="tt-value">${perGame}</span></div>
+        <div class="tt-row"><span class="tt-label">% of ${passer}'s AST</span><span class="tt-value">${passerPct}%</span></div>
+        <div class="tt-row"><span class="tt-label">% of ${scorer}'s baskets</span><span class="tt-value">${scorerPct}%</span></div>
+    `;
+    tip.style.display = 'block';
+    moveTooltip(evt);
+}
+
+function moveTooltip(evt) {
+    const tip = document.getElementById('chord-tooltip');
+    const pad = 12;
+    let x = evt.clientX + pad;
+    let y = evt.clientY + pad;
+    // Keep on screen
+    const rect = tip.getBoundingClientRect();
+    if (x + rect.width > window.innerWidth) x = evt.clientX - rect.width - pad;
+    if (y + rect.height > window.innerHeight) y = evt.clientY - rect.height - pad;
+    tip.style.left = x + 'px';
+    tip.style.top = y + 'px';
+}
+
+function hideTooltip() {
+    document.getElementById('chord-tooltip').style.display = 'none';
+}
+
+// ── Player detail card ───────────────────────────────────────────────────────
+
+function showPlayerDetail(playerId) {
+    if (!_data || !_selected) return;
+    const team = _data.teams[_selected];
+    const player = team.players.find(p => p.id === playerId);
+    if (!player) return;
+
+    const color = TEAM_COLORS[_selected] || '#6b7280';
+    const teamName = TEAM_NAMES[_selected] || _selected;
+
+    document.getElementById('pd-name').textContent = formatPlayerName(player.name);
+    const badge = document.getElementById('pd-badge');
+    badge.textContent = teamName;
+    badge.style.background = color + '22';
+    badge.style.color = color;
+
+    // Assists given section
+    const givenEdges = team.edges
+        .filter(e => e.from === playerId)
+        .sort((a, b) => b.count - a.count);
+
+    const givenHTML = `
+        <div class="pd-stat-row">
+            <span class="pd-stat-label">Total</span>
+            <span class="pd-stat-value">${player.ast_given}</span>
+        </div>
+        <div class="pd-stat-row">
+            <span class="pd-stat-label">Per game</span>
+            <span class="pd-stat-value">${player.ast_per_game}</span>
+        </div>
+        <div class="pd-stat-row">
+            <span class="pd-stat-label">Unique targets</span>
+            <span class="pd-stat-value">${player.unique_targets}</span>
+        </div>
+        <h4 style="margin-top:0.75rem;">Top Targets</h4>
+        <ul class="pd-target-list">
+            ${givenEdges.slice(0, 5).map(e => {
+                const scorer = team.players.find(p => p.id === e.to);
+                const name = scorer ? formatPlayerName(scorer.name) : '?';
+                return `<li><span>${name}</span><span class="pd-stat-value">${e.count} (${e.fg2}×2PT, ${e.fg3}×3PT)</span></li>`;
+            }).join('')}
+        </ul>
+    `;
+    document.getElementById('pd-given').innerHTML = givenHTML;
+
+    // Assists received section
+    const receivedEdges = team.edges
+        .filter(e => e.to === playerId)
+        .sort((a, b) => b.count - a.count);
+
+    const totalReceived = receivedEdges.reduce((s, e) => s + e.count, 0);
+
+    const receivedHTML = `
+        <div class="pd-stat-row">
+            <span class="pd-stat-label">Assisted baskets</span>
+            <span class="pd-stat-value">${totalReceived}</span>
+        </div>
+        <h4 style="margin-top:0.75rem;">Top Feeders</h4>
+        <ul class="pd-target-list">
+            ${receivedEdges.slice(0, 5).map(e => {
+                const passer = team.players.find(p => p.id === e.from);
+                const name = passer ? formatPlayerName(passer.name) : '?';
+                return `<li><span>${name}</span><span class="pd-stat-value">${e.count}</span></li>`;
+            }).join('')}
+        </ul>
+    `;
+    document.getElementById('pd-received').innerHTML = receivedHTML;
+
+    document.getElementById('player-detail').classList.add('visible');
+    document.getElementById('player-detail').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
