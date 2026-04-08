@@ -461,3 +461,98 @@ function showPlayerDetail(playerId) {
     document.getElementById('player-detail').classList.add('visible');
     document.getElementById('player-detail').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
+
+// ── League-wide tables ───────────────────────────────────────────────────────
+
+const COMBO_COLS = [
+    { key: '#',        label: '#',       fmt: (_, i) => i + 1 },
+    { key: 'passer',   label: 'Passer',  fmt: v => formatPlayerName(v) },
+    { key: 'scorer',   label: 'Scorer',  fmt: v => formatPlayerName(v) },
+    { key: 'team',     label: 'Team',    fmt: v => `<span class="tbl-team-badge" style="background:${(TEAM_COLORS[v]||'#555')}22;color:${TEAM_COLORS[v]||'#999'}">${v}</span>` },
+    { key: 'count',    label: 'AST',     fmt: v => v },
+    { key: 'fg2',      label: '2PT',     fmt: v => v },
+    { key: 'fg3',      label: '3PT',     fmt: v => v },
+    { key: 'per_game', label: '/Game',   fmt: v => v.toFixed(2) },
+];
+
+const PLAYMAKER_COLS = [
+    { key: '#',              label: '#',          fmt: (_, i) => i + 1 },
+    { key: 'player',         label: 'Player',     fmt: v => formatPlayerName(v) },
+    { key: 'team',           label: 'Team',       fmt: v => `<span class="tbl-team-badge" style="background:${(TEAM_COLORS[v]||'#555')}22;color:${TEAM_COLORS[v]||'#999'}">${v}</span>` },
+    { key: 'ast',            label: 'AST',        fmt: v => v },
+    { key: 'per_game',       label: '/Game',      fmt: v => v.toFixed(1) },
+    { key: 'unique_targets', label: 'Targets',    fmt: v => v },
+    { key: 'top_target',     label: 'Top Target', fmt: v => formatPlayerName(v) },
+];
+
+let _comboSort  = { key: 'count', asc: false };
+let _makerSort  = { key: 'ast',   asc: false };
+
+function renderCombosTable(data) {
+    renderSortableTable('combos-table', data, COMBO_COLS, _comboSort, (newKey) => {
+        if (_comboSort.key === newKey) _comboSort.asc = !_comboSort.asc;
+        else { _comboSort.key = newKey; _comboSort.asc = false; }
+        renderCombosTable(_data.top_combos);
+    }, (row) => {
+        // Click row → navigate to team and highlight passer
+        selectTeam(row.team);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        setTimeout(() => pinPlayer(row.passer_id), 100);
+    });
+}
+
+function renderPlaymakersTable(data) {
+    renderSortableTable('playmakers-table', data, PLAYMAKER_COLS, _makerSort, (newKey) => {
+        if (_makerSort.key === newKey) _makerSort.asc = !_makerSort.asc;
+        else { _makerSort.key = newKey; _makerSort.asc = false; }
+        renderPlaymakersTable(_data.top_playmakers);
+    }, (row) => {
+        // Click row → navigate to team and highlight player
+        selectTeam(row.team);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        setTimeout(() => pinPlayer(row.player_id), 100);
+    });
+}
+
+function renderSortableTable(tableId, data, cols, sortState, onSort, onRowClick) {
+    const table = document.getElementById(tableId);
+    const thead = table.querySelector('thead');
+    const tbody = table.querySelector('tbody');
+
+    // Sort data
+    const sorted = [...data];
+    const sk = sortState.key;
+    if (sk && sk !== '#') {
+        sorted.sort((a, b) => {
+            const va = a[sk], vb = b[sk];
+            if (typeof va === 'number') return sortState.asc ? va - vb : vb - va;
+            return sortState.asc ? String(va).localeCompare(String(vb)) : String(vb).localeCompare(String(va));
+        });
+    }
+
+    // Render thead
+    thead.innerHTML = '<tr>' + cols.map(c => {
+        const active = sortState.key === c.key ? ' sort-active' : '';
+        const arrow = sortState.key === c.key ? (sortState.asc ? ' ▲' : ' ▼') : '';
+        if (c.key === '#') return `<th>${c.label}</th>`;
+        return `<th class="sortable-th${active}" data-key="${c.key}">${c.label}${arrow}</th>`;
+    }).join('') + '</tr>';
+
+    // Attach sort listeners
+    thead.querySelectorAll('.sortable-th').forEach(th => {
+        th.addEventListener('click', () => onSort(th.dataset.key));
+    });
+
+    // Render tbody
+    tbody.innerHTML = sorted.map((row, i) => {
+        const cells = cols.map(c => `<td>${c.fmt(row[c.key], i)}</td>`).join('');
+        return `<tr>${cells}</tr>`;
+    }).join('');
+
+    // Attach row click
+    if (onRowClick) {
+        tbody.querySelectorAll('tr').forEach((tr, i) => {
+            tr.addEventListener('click', () => onRowClick(sorted[i]));
+        });
+    }
+}
