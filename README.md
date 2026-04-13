@@ -1,4 +1,4 @@
-# 🏀 EuroleaguePythonProject
+# 🏀 Euroleague Analytics
 
 A comprehensive Euroleague basketball analytics suite built in Python. This project analyzes 19 seasons (2007–2025) of play-by-play and shot data to produce advanced metrics, custom visualizations, and data-driven narratives.
 
@@ -248,8 +248,8 @@ Same comprehensive analysis for the rival club.
 
 ```bash
 # Clone the repository
-git clone https://github.com/KonstantinosLaloudakis/EuroleaguePythonProject.git
-cd EuroleaguePythonProject
+git clone https://github.com/KonstantinosLaloudakis/euroleague-analytics.git
+cd euroleague-analytics
 
 # Create virtual environment
 python -m venv .venv
