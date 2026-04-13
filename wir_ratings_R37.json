@@ -186,8 +186,8 @@
         "WIR":12.7243243243,
         "WIR_40":26.4166647184,
         "WIR_Rank":10,
-        "PIR_Rank":59,
-        "Rank_Diff":49
+        "PIR_Rank":60,
+        "Rank_Diff":50
     },
     {
         "player.code":"011981",
@@ -205,8 +205,8 @@
         "WIR":13.5517241379,
         "WIR_40":26.221851543,
         "WIR_Rank":11,
-        "PIR_Rank":17,
-        "Rank_Diff":6
+        "PIR_Rank":16,
+        "Rank_Diff":5
     },
     {
         "player.code":"001926",
@@ -243,8 +243,8 @@
         "WIR":12.7066666667,
         "WIR_40":25.7003202427,
         "WIR_Rank":13,
-        "PIR_Rank":58,
-        "Rank_Diff":45
+        "PIR_Rank":59,
+        "Rank_Diff":46
     },
     {
         "player.code":"014012",
@@ -266,25 +266,6 @@
         "Rank_Diff":4
     },
     {
-        "player.code":"012788",
-        "player.name":"OTURU, DAN",
-        "player.team.name":"HTA",
-        "player.team.code":"HTA",
-        "gamesPlayed":36,
-        "mins_played":23.4273148148,
-        "pointsScored":13.4722222222,
-        "assists":0.9166666667,
-        "totalRebounds":5.4166666667,
-        "TS%":72.630885348,
-        "pir":16.3611111111,
-        "PIR_40":27.9351026619,
-        "WIR":14.9805555556,
-        "WIR_40":25.5779301622,
-        "WIR_Rank":15,
-        "PIR_Rank":16,
-        "Rank_Diff":1
-    },
-    {
         "player.code":"010465",
         "player.name":"ANGOLA, BRAIAN",
         "player.team.name":"ASV",
@@ -299,9 +280,28 @@
         "PIR_40":29.3474992483,
         "WIR":15.1357142857,
         "WIR_40":25.4866192242,
-        "WIR_Rank":16,
+        "WIR_Rank":15,
         "PIR_Rank":9,
-        "Rank_Diff":-7
+        "Rank_Diff":-6
+    },
+    {
+        "player.code":"012788",
+        "player.name":"OTURU, DAN",
+        "player.team.name":"HTA",
+        "player.team.code":"HTA",
+        "gamesPlayed":37,
+        "mins_played":23.2792792793,
+        "pointsScored":13.3783783784,
+        "assists":0.8918918919,
+        "totalRebounds":5.2972972973,
+        "TS%":72.9658018868,
+        "pir":16.1351351351,
+        "PIR_40":27.7244582043,
+        "WIR":14.7810810811,
+        "WIR_40":25.3978328173,
+        "WIR_Rank":16,
+        "PIR_Rank":17,
+        "Rank_Diff":1
     },
     {
         "player.code":"003469",
@@ -418,44 +418,6 @@
         "Rank_Diff":-2
     },
     {
-        "player.code":"011219",
-        "player.name":"SORKIN, ROMAN",
-        "player.team.name":"TEL",
-        "player.team.code":"TEL",
-        "gamesPlayed":36,
-        "mins_played":22.9194444444,
-        "pointsScored":13.5555555556,
-        "assists":1.8055555556,
-        "totalRebounds":4.1944444444,
-        "TS%":59.8508634223,
-        "pir":14.4444444444,
-        "PIR_40":25.2090655678,
-        "WIR":14.0944444444,
-        "WIR_40":24.5982305175,
-        "WIR_Rank":23,
-        "PIR_Rank":28,
-        "Rank_Diff":5
-    },
-    {
-        "player.code":"013699",
-        "player.name":"CLARK III, JIMMY",
-        "player.team.name":"TEL",
-        "player.team.code":"TEL",
-        "gamesPlayed":36,
-        "mins_played":19.6847222222,
-        "pointsScored":9.4722222222,
-        "assists":4.3333333333,
-        "totalRebounds":1.8611111111,
-        "TS%":51.6353725015,
-        "pir":8.6944444444,
-        "PIR_40":17.6673957525,
-        "WIR":12.1,
-        "WIR_40":24.5875961335,
-        "WIR_Rank":24,
-        "PIR_Rank":125,
-        "Rank_Diff":101
-    },
-    {
         "player.code":"014108",
         "player.name":"DIARRA, ALIOU",
         "player.team.name":"VIR",
@@ -470,9 +432,47 @@
         "PIR_40":23.8314361831,
         "WIR":6.2666666667,
         "WIR_40":24.5870670865,
-        "WIR_Rank":25,
+        "WIR_Rank":23,
         "PIR_Rank":36,
-        "Rank_Diff":11
+        "Rank_Diff":13
+    },
+    {
+        "player.code":"013699",
+        "player.name":"CLARK III, JIMMY",
+        "player.team.name":"TEL",
+        "player.team.code":"TEL",
+        "gamesPlayed":37,
+        "mins_played":19.7193693694,
+        "pointsScored":9.5135135135,
+        "assists":4.3243243243,
+        "totalRebounds":1.8108108108,
+        "TS%":51.4319111631,
+        "pir":8.5945945946,
+        "PIR_40":17.4338122759,
+        "WIR":12.0378378378,
+        "WIR_40":24.418301848,
+        "WIR_Rank":24,
+        "PIR_Rank":126,
+        "Rank_Diff":102
+    },
+    {
+        "player.code":"011219",
+        "player.name":"SORKIN, ROMAN",
+        "player.team.name":"TEL",
+        "player.team.code":"TEL",
+        "gamesPlayed":37,
+        "mins_played":22.9121621622,
+        "pointsScored":13.5945945946,
+        "assists":1.7567567568,
+        "totalRebounds":4.2702702703,
+        "TS%":59.6933447261,
+        "pir":14.3513513514,
+        "PIR_40":25.0545561781,
+        "WIR":13.9216216216,
+        "WIR_40":24.3043350044,
+        "WIR_Rank":25,
+        "PIR_Rank":29,
+        "Rank_Diff":4
     },
     {
         "player.code":"013367",
@@ -570,6 +570,25 @@
         "Rank_Diff":10
     },
     {
+        "player.code":"010568",
+        "player.name":"JONES, CHRIS",
+        "player.team.name":"HTA",
+        "player.team.code":"HTA",
+        "gamesPlayed":37,
+        "mins_played":19.9662162162,
+        "pointsScored":9.4594594595,
+        "assists":4.0540540541,
+        "totalRebounds":1.9459459459,
+        "TS%":58.638252245,
+        "pir":11.1351351351,
+        "PIR_40":22.3079526227,
+        "WIR":11.8378378378,
+        "WIR_40":23.7157360406,
+        "WIR_Rank":31,
+        "PIR_Rank":57,
+        "Rank_Diff":26
+    },
+    {
         "player.code":"013369",
         "player.name":"JONES, CARLIK",
         "player.team.name":"PAR",
@@ -584,9 +603,9 @@
         "PIR_40":23.335297584,
         "WIR":16.6142857143,
         "WIR_40":23.4969273508,
-        "WIR_Rank":31,
+        "WIR_Rank":32,
         "PIR_Rank":44,
-        "Rank_Diff":13
+        "Rank_Diff":12
     },
     {
         "player.code":"009048",
@@ -603,9 +622,9 @@
         "PIR_40":19.8980037884,
         "WIR":18.0945945946,
         "WIR_40":23.4125018214,
-        "WIR_Rank":32,
+        "WIR_Rank":33,
         "PIR_Rank":81,
-        "Rank_Diff":49
+        "Rank_Diff":48
     },
     {
         "player.code":"012096",
@@ -622,8 +641,8 @@
         "PIR_40":21.9947631516,
         "WIR":7.4090909091,
         "WIR_40":23.2801713878,
-        "WIR_Rank":33,
-        "PIR_Rank":60,
+        "WIR_Rank":34,
+        "PIR_Rank":61,
         "Rank_Diff":27
     },
     {
@@ -641,9 +660,9 @@
         "PIR_40":18.6164030522,
         "WIR":12.3677419355,
         "WIR_40":23.249279903,
-        "WIR_Rank":34,
+        "WIR_Rank":35,
         "PIR_Rank":108,
-        "Rank_Diff":74
+        "Rank_Diff":73
     },
     {
         "player.code":"007027",
@@ -660,9 +679,9 @@
         "PIR_40":25.3952538597,
         "WIR":10.0870967742,
         "WIR_40":23.2195786021,
-        "WIR_Rank":35,
+        "WIR_Rank":36,
         "PIR_Rank":27,
-        "Rank_Diff":-8
+        "Rank_Diff":-9
     },
     {
         "player.code":"012201",
@@ -679,28 +698,9 @@
         "PIR_40":28.1332906843,
         "WIR":15.503030303,
         "WIR_40":23.1027151109,
-        "WIR_Rank":36,
-        "PIR_Rank":15,
-        "Rank_Diff":-21
-    },
-    {
-        "player.code":"010568",
-        "player.name":"JONES, CHRIS",
-        "player.team.name":"HTA",
-        "player.team.code":"HTA",
-        "gamesPlayed":36,
-        "mins_played":19.874537037,
-        "pointsScored":9.3611111111,
-        "assists":3.8611111111,
-        "totalRebounds":1.8055555556,
-        "TS%":58.8009491904,
-        "pir":10.7222222222,
-        "PIR_40":21.5798178388,
-        "WIR":11.4666666667,
-        "WIR_40":23.0781057094,
         "WIR_Rank":37,
-        "PIR_Rank":64,
-        "Rank_Diff":27
+        "PIR_Rank":14,
+        "Rank_Diff":-23
     },
     {
         "player.code":"011212",
@@ -813,8 +813,8 @@
         "WIR":13.8903225806,
         "WIR_40":22.2839399689,
         "WIR_Rank":43,
-        "PIR_Rank":29,
-        "Rank_Diff":-14
+        "PIR_Rank":28,
+        "Rank_Diff":-15
     },
     {
         "player.code":"014124",
@@ -912,6 +912,25 @@
         "Rank_Diff":19
     },
     {
+        "player.code":"009846",
+        "player.name":"BRYANT, ELIJAH",
+        "player.team.name":"HTA",
+        "player.team.code":"HTA",
+        "gamesPlayed":33,
+        "mins_played":29.9550505051,
+        "pointsScored":16.0909090909,
+        "assists":3.4545454545,
+        "totalRebounds":5.4242424242,
+        "TS%":66.0447761194,
+        "pir":21.0606060606,
+        "PIR_40":28.1229451535,
+        "WIR":16.4818181818,
+        "WIR_40":22.0087336245,
+        "WIR_Rank":49,
+        "PIR_Rank":15,
+        "Rank_Diff":-34
+    },
+    {
         "player.code":"004132",
         "player.name":"THEIS, DANIEL",
         "player.team.name":"MCO",
@@ -926,9 +945,9 @@
         "PIR_40":23.9977199316,
         "WIR":11.6606060606,
         "WIR_40":21.9342580277,
-        "WIR_Rank":49,
+        "WIR_Rank":50,
         "PIR_Rank":35,
-        "Rank_Diff":-14
+        "Rank_Diff":-15
     },
     {
         "player.code":"014213",
@@ -945,28 +964,9 @@
         "PIR_40":18.5129633598,
         "WIR":12.77,
         "WIR_40":21.8898650096,
-        "WIR_Rank":50,
-        "PIR_Rank":112,
-        "Rank_Diff":62
-    },
-    {
-        "player.code":"009846",
-        "player.name":"BRYANT, ELIJAH",
-        "player.team.name":"HTA",
-        "player.team.code":"HTA",
-        "gamesPlayed":32,
-        "mins_played":29.803125,
-        "pointsScored":16.0,
-        "assists":3.375,
-        "totalRebounds":5.4375,
-        "TS%":66.1088730503,
-        "pir":20.96875,
-        "PIR_40":28.1430219146,
-        "WIR":16.296875,
-        "WIR_40":21.8727063018,
         "WIR_Rank":51,
-        "PIR_Rank":14,
-        "Rank_Diff":-37
+        "PIR_Rank":112,
+        "Rank_Diff":61
     },
     {
         "player.code":"012585",
@@ -1022,8 +1022,8 @@
         "WIR":16.1533333333,
         "WIR_40":21.625883228,
         "WIR_Rank":54,
-        "PIR_Rank":54,
-        "Rank_Diff":0
+        "PIR_Rank":55,
+        "Rank_Diff":1
     },
     {
         "player.code":"007630",
@@ -1117,8 +1117,8 @@
         "WIR":9.9526315789,
         "WIR_40":21.5457652867,
         "WIR_Rank":59,
-        "PIR_Rank":147,
-        "Rank_Diff":88
+        "PIR_Rank":148,
+        "Rank_Diff":89
     },
     {
         "player.code":"012608",
@@ -1193,8 +1193,8 @@
         "WIR":11.6054054054,
         "WIR_40":21.2635662114,
         "WIR_Rank":63,
-        "PIR_Rank":53,
-        "Rank_Diff":-10
+        "PIR_Rank":54,
+        "Rank_Diff":-9
     },
     {
         "player.code":"011217",
@@ -1345,8 +1345,8 @@
         "WIR":7.3678571429,
         "WIR_40":20.8929023546,
         "WIR_Rank":71,
-        "PIR_Rank":52,
-        "Rank_Diff":-19
+        "PIR_Rank":53,
+        "Rank_Diff":-18
     },
     {
         "player.code":"013384",
@@ -1429,19 +1429,19 @@
         "player.name":"WALKER IV, LONNIE",
         "player.team.name":"TEL",
         "player.team.code":"TEL",
-        "gamesPlayed":26,
-        "mins_played":22.4583333333,
-        "pointsScored":14.7692307692,
-        "assists":2.1923076923,
-        "totalRebounds":2.6153846154,
-        "TS%":54.2618132489,
-        "pir":12.2692307692,
-        "PIR_40":21.852433281,
-        "WIR":11.6038461538,
-        "WIR_40":20.6673326673,
+        "gamesPlayed":27,
+        "mins_played":22.8148148148,
+        "pointsScored":14.8518518519,
+        "assists":2.2592592593,
+        "totalRebounds":2.6296296296,
+        "TS%":54.2302282809,
+        "pir":12.2962962963,
+        "PIR_40":21.5584415584,
+        "WIR":11.8,
+        "WIR_40":20.6883116883,
         "WIR_Rank":76,
-        "PIR_Rank":61,
-        "Rank_Diff":-15
+        "PIR_Rank":64,
+        "Rank_Diff":-12
     },
     {
         "player.code":"014027",
@@ -1554,8 +1554,8 @@
         "WIR":12.2129032258,
         "WIR_40":20.2486963498,
         "WIR_Rank":82,
-        "PIR_Rank":163,
-        "Rank_Diff":81
+        "PIR_Rank":164,
+        "Rank_Diff":82
     },
     {
         "player.code":"010390",
@@ -1573,8 +1573,8 @@
         "WIR":8.6941176471,
         "WIR_40":20.2177258478,
         "WIR_Rank":83,
-        "PIR_Rank":143,
-        "Rank_Diff":60
+        "PIR_Rank":144,
+        "Rank_Diff":61
     },
     {
         "player.code":"014152",
@@ -1630,8 +1630,8 @@
         "WIR":6.4875,
         "WIR_40":20.0531272639,
         "WIR_Rank":86,
-        "PIR_Rank":117,
-        "Rank_Diff":31
+        "PIR_Rank":116,
+        "Rank_Diff":30
     },
     {
         "player.code":"014123",
@@ -1649,8 +1649,8 @@
         "WIR":8.45,
         "WIR_40":20.006576784,
         "WIR_Rank":87,
-        "PIR_Rank":126,
-        "Rank_Diff":39
+        "PIR_Rank":125,
+        "Rank_Diff":38
     },
     {
         "player.code":"014207",
@@ -1668,8 +1668,8 @@
         "WIR":10.0681818182,
         "WIR_40":19.9213041034,
         "WIR_Rank":88,
-        "PIR_Rank":57,
-        "Rank_Diff":-31
+        "PIR_Rank":58,
+        "Rank_Diff":-30
     },
     {
         "player.code":"009783",
@@ -1710,23 +1710,23 @@
         "Rank_Diff":-5
     },
     {
-        "player.code":"011193",
-        "player.name":"BLATT, TAMIR",
+        "player.code":"006835",
+        "player.name":"HOARD, JAYLEN",
         "player.team.name":"TEL",
         "player.team.code":"TEL",
-        "gamesPlayed":36,
-        "mins_played":19.387037037,
-        "pointsScored":7.1666666667,
-        "assists":5.0833333333,
-        "totalRebounds":1.8333333333,
-        "TS%":57.2824156306,
-        "pir":8.8055555556,
-        "PIR_40":18.1679243481,
-        "WIR":9.5388888889,
-        "WIR_40":19.6809628427,
+        "gamesPlayed":34,
+        "mins_played":28.9049019608,
+        "pointsScored":11.9117647059,
+        "assists":1.2941176471,
+        "totalRebounds":6.9705882353,
+        "TS%":61.6626065773,
+        "pir":16.3235294118,
+        "PIR_40":22.5892887427,
+        "WIR":14.2264705882,
+        "WIR_40":19.6872774141,
         "WIR_Rank":91,
-        "PIR_Rank":116,
-        "Rank_Diff":25
+        "PIR_Rank":52,
+        "Rank_Diff":-39
     },
     {
         "player.code":"002939",
@@ -1767,6 +1767,25 @@
         "Rank_Diff":-37
     },
     {
+        "player.code":"011193",
+        "player.name":"BLATT, TAMIR",
+        "player.team.name":"TEL",
+        "player.team.code":"TEL",
+        "gamesPlayed":37,
+        "mins_played":19.3797297297,
+        "pointsScored":7.1081081081,
+        "assists":5.0540540541,
+        "totalRebounds":1.8648648649,
+        "TS%":56.4183971169,
+        "pir":8.7297297297,
+        "PIR_40":18.0182692978,
+        "WIR":9.5027027027,
+        "WIR_40":19.6136950003,
+        "WIR_Rank":94,
+        "PIR_Rank":119,
+        "Rank_Diff":25
+    },
+    {
         "player.code":"008325",
         "player.name":"KAMENJAS, KENAN",
         "player.team.name":"DUB",
@@ -1781,9 +1800,9 @@
         "PIR_40":21.5353938185,
         "WIR":5.462962963,
         "WIR_40":19.6078431373,
-        "WIR_Rank":94,
+        "WIR_Rank":95,
         "PIR_Rank":65,
-        "Rank_Diff":-29
+        "Rank_Diff":-30
     },
     {
         "player.code":"013389",
@@ -1800,28 +1819,9 @@
         "PIR_40":19.3722781198,
         "WIR":8.3576923077,
         "WIR_40":19.5795164439,
-        "WIR_Rank":95,
-        "PIR_Rank":94,
-        "Rank_Diff":-1
-    },
-    {
-        "player.code":"006835",
-        "player.name":"HOARD, JAYLEN",
-        "player.team.name":"TEL",
-        "player.team.code":"TEL",
-        "gamesPlayed":33,
-        "mins_played":28.7297979798,
-        "pointsScored":11.9090909091,
-        "assists":1.303030303,
-        "totalRebounds":6.9090909091,
-        "TS%":61.4754098361,
-        "pir":16.0909090909,
-        "PIR_40":22.4030939615,
-        "WIR":14.0606060606,
-        "WIR_40":19.5763382262,
         "WIR_Rank":96,
-        "PIR_Rank":55,
-        "Rank_Diff":-41
+        "PIR_Rank":93,
+        "Rank_Diff":-3
     },
     {
         "player.code":"007853",
@@ -1957,25 +1957,6 @@
         "Rank_Diff":-5
     },
     {
-        "player.code":"002580",
-        "player.name":"MICIC, VASILIJE",
-        "player.team.name":"HTA",
-        "player.team.code":"HTA",
-        "gamesPlayed":34,
-        "mins_played":23.9715686275,
-        "pointsScored":11.6764705882,
-        "assists":4.3529411765,
-        "totalRebounds":2.5,
-        "TS%":55.8651356524,
-        "pir":11.0588235294,
-        "PIR_40":18.4532329966,
-        "WIR":11.6117647059,
-        "WIR_40":19.3758946464,
-        "WIR_Rank":104,
-        "PIR_Rank":113,
-        "Rank_Diff":9
-    },
-    {
         "player.code":"014031",
         "player.name":"KONDIC, KOSTA",
         "player.team.name":"DUB",
@@ -1990,9 +1971,9 @@
         "PIR_40":13.5100780824,
         "WIR":5.9266666667,
         "WIR_40":19.3717087343,
-        "WIR_Rank":105,
+        "WIR_Rank":104,
         "PIR_Rank":186,
-        "Rank_Diff":81
+        "Rank_Diff":82
     },
     {
         "player.code":"012593",
@@ -2009,9 +1990,9 @@
         "PIR_40":17.8065682434,
         "WIR":12.24,
         "WIR_40":19.3612533896,
-        "WIR_Rank":106,
+        "WIR_Rank":105,
         "PIR_Rank":122,
-        "Rank_Diff":16
+        "Rank_Diff":17
     },
     {
         "player.code":"004004",
@@ -2028,9 +2009,9 @@
         "PIR_40":20.2229712212,
         "WIR":10.6657142857,
         "WIR_40":19.3570132227,
-        "WIR_Rank":107,
+        "WIR_Rank":106,
         "PIR_Rank":75,
-        "Rank_Diff":-32
+        "Rank_Diff":-31
     },
     {
         "player.code":"011226",
@@ -2047,9 +2028,9 @@
         "PIR_40":19.7691035502,
         "WIR":13.5648648649,
         "WIR_40":19.3413510172,
-        "WIR_Rank":108,
+        "WIR_Rank":107,
         "PIR_Rank":83,
-        "Rank_Diff":-25
+        "Rank_Diff":-24
     },
     {
         "player.code":"009992",
@@ -2066,9 +2047,9 @@
         "PIR_40":15.5276107162,
         "WIR":7.5685714286,
         "WIR_40":19.3110989612,
-        "WIR_Rank":109,
-        "PIR_Rank":159,
-        "Rank_Diff":50
+        "WIR_Rank":108,
+        "PIR_Rank":160,
+        "Rank_Diff":52
     },
     {
         "player.code":"010545",
@@ -2085,9 +2066,9 @@
         "PIR_40":19.5538818076,
         "WIR":6.34,
         "WIR_40":19.2844727694,
-        "WIR_Rank":110,
+        "WIR_Rank":109,
         "PIR_Rank":91,
-        "Rank_Diff":-19
+        "Rank_Diff":-18
     },
     {
         "player.code":"003048",
@@ -2104,9 +2085,28 @@
         "PIR_40":17.3542226754,
         "WIR":5.4125,
         "WIR_40":19.2676369704,
-        "WIR_Rank":111,
+        "WIR_Rank":110,
         "PIR_Rank":130,
-        "Rank_Diff":19
+        "Rank_Diff":20
+    },
+    {
+        "player.code":"002580",
+        "player.name":"MICIC, VASILIJE",
+        "player.team.name":"HTA",
+        "player.team.code":"HTA",
+        "gamesPlayed":35,
+        "mins_played":23.829047619,
+        "pointsScored":11.6,
+        "assists":4.3142857143,
+        "totalRebounds":2.5714285714,
+        "TS%":55.6530321307,
+        "pir":11.0,
+        "PIR_40":18.4648588158,
+        "WIR":11.4571428571,
+        "WIR_40":19.2322295718,
+        "WIR_Rank":111,
+        "PIR_Rank":113,
+        "Rank_Diff":2
     },
     {
         "player.code":"013667",
@@ -2143,8 +2143,8 @@
         "WIR":9.3277777778,
         "WIR_40":19.1389014225,
         "WIR_Rank":113,
-        "PIR_Rank":140,
-        "Rank_Diff":27
+        "PIR_Rank":141,
+        "Rank_Diff":28
     },
     {
         "player.code":"014014",
@@ -2162,8 +2162,8 @@
         "WIR":6.0648648649,
         "WIR_40":19.0236665489,
         "WIR_Rank":114,
-        "PIR_Rank":145,
-        "Rank_Diff":31
+        "PIR_Rank":146,
+        "Rank_Diff":32
     },
     {
         "player.code":"011247",
@@ -2238,8 +2238,8 @@
         "WIR":8.8526315789,
         "WIR_40":18.8891488466,
         "WIR_Rank":118,
-        "PIR_Rank":95,
-        "Rank_Diff":-23
+        "PIR_Rank":94,
+        "Rank_Diff":-24
     },
     {
         "player.code":"000925",
@@ -2314,8 +2314,8 @@
         "WIR":5.785,
         "WIR_40":18.6851490478,
         "WIR_Rank":122,
-        "PIR_Rank":162,
-        "Rank_Diff":40
+        "PIR_Rank":163,
+        "Rank_Diff":41
     },
     {
         "player.code":"010391",
@@ -2333,8 +2333,8 @@
         "WIR":13.5111111111,
         "WIR_40":18.6018643933,
         "WIR_Rank":123,
-        "PIR_Rank":161,
-        "Rank_Diff":38
+        "PIR_Rank":162,
+        "Rank_Diff":39
     },
     {
         "player.code":"012731",
@@ -2428,8 +2428,8 @@
         "WIR":4.9653846154,
         "WIR_40":18.493494091,
         "WIR_Rank":128,
-        "PIR_Rank":170,
-        "Rank_Diff":42
+        "PIR_Rank":171,
+        "Rank_Diff":43
     },
     {
         "player.code":"007831",
@@ -2508,25 +2508,6 @@
         "Rank_Diff":24
     },
     {
-        "player.code":"013402",
-        "player.name":"BLAKENEY, ANTONIO",
-        "player.team.name":"HTA",
-        "player.team.code":"HTA",
-        "gamesPlayed":36,
-        "mins_played":22.175,
-        "pointsScored":13.2222222222,
-        "assists":0.9444444444,
-        "totalRebounds":2.2777777778,
-        "TS%":63.2373259645,
-        "pir":10.75,
-        "PIR_40":19.3912063134,
-        "WIR":10.1222222222,
-        "WIR_40":18.2587999499,
-        "WIR_Rank":133,
-        "PIR_Rank":93,
-        "Rank_Diff":-40
-    },
-    {
         "player.code":"012610",
         "player.name":"WARD, TYSON",
         "player.team.name":"OLY",
@@ -2541,9 +2522,9 @@
         "PIR_40":16.9214976498,
         "WIR":9.0838709677,
         "WIR_40":18.257064131,
-        "WIR_Rank":134,
+        "WIR_Rank":133,
         "PIR_Rank":139,
-        "Rank_Diff":5
+        "Rank_Diff":6
     },
     {
         "player.code":"001932",
@@ -2560,28 +2541,28 @@
         "PIR_40":11.6028776978,
         "WIR":8.8066666667,
         "WIR_40":18.2469064748,
-        "WIR_Rank":135,
+        "WIR_Rank":134,
         "PIR_Rank":209,
-        "Rank_Diff":74
+        "Rank_Diff":75
     },
     {
-        "player.code":"013289",
-        "player.name":"SANTOS, MARCIO",
-        "player.team.name":"TEL",
-        "player.team.code":"TEL",
-        "gamesPlayed":35,
-        "mins_played":14.270952381,
-        "pointsScored":7.1142857143,
-        "assists":0.6571428571,
-        "totalRebounds":1.6571428571,
-        "TS%":65.873015873,
-        "pir":6.2571428571,
-        "PIR_40":17.5381227268,
-        "WIR":6.4828571429,
-        "WIR_40":18.170776469,
-        "WIR_Rank":136,
-        "PIR_Rank":127,
-        "Rank_Diff":-9
+        "player.code":"013402",
+        "player.name":"BLAKENEY, ANTONIO",
+        "player.team.name":"HTA",
+        "player.team.code":"HTA",
+        "gamesPlayed":37,
+        "mins_played":22.3391891892,
+        "pointsScored":13.2432432432,
+        "assists":0.972972973,
+        "totalRebounds":2.2972972973,
+        "TS%":62.6919140225,
+        "pir":10.7027027027,
+        "PIR_40":19.1639949186,
+        "WIR":10.1351351351,
+        "WIR_40":18.1477224608,
+        "WIR_Rank":135,
+        "PIR_Rank":96,
+        "Rank_Diff":-39
     },
     {
         "player.code":"009513",
@@ -2598,9 +2579,9 @@
         "PIR_40":11.3307193726,
         "WIR":7.552,
         "WIR_40":18.1291509962,
-        "WIR_Rank":137,
+        "WIR_Rank":136,
         "PIR_Rank":214,
-        "Rank_Diff":77
+        "Rank_Diff":78
     },
     {
         "player.code":"LCZ",
@@ -2617,9 +2598,9 @@
         "PIR_40":23.372024395,
         "WIR":5.6703703704,
         "WIR_40":18.0720047216,
-        "WIR_Rank":138,
+        "WIR_Rank":137,
         "PIR_Rank":43,
-        "Rank_Diff":-95
+        "Rank_Diff":-94
     },
     {
         "player.code":"014178",
@@ -2636,9 +2617,28 @@
         "PIR_40":16.2488978461,
         "WIR":9.528,
         "WIR_40":18.0022672881,
-        "WIR_Rank":139,
+        "WIR_Rank":138,
         "PIR_Rank":151,
-        "Rank_Diff":12
+        "Rank_Diff":13
+    },
+    {
+        "player.code":"013289",
+        "player.name":"SANTOS, MARCIO",
+        "player.team.name":"TEL",
+        "player.team.code":"TEL",
+        "gamesPlayed":36,
+        "mins_played":14.024537037,
+        "pointsScored":6.9444444444,
+        "assists":0.6388888889,
+        "totalRebounds":1.6388888889,
+        "TS%":65.486169321,
+        "pir":6.1111111111,
+        "PIR_40":17.4297692536,
+        "WIR":6.3083333333,
+        "WIR_40":17.9922754432,
+        "WIR_Rank":139,
+        "PIR_Rank":127,
+        "Rank_Diff":-12
     },
     {
         "player.code":"004888",
@@ -2751,8 +2751,8 @@
         "WIR":8.1111111111,
         "WIR_40":17.8048780488,
         "WIR_Rank":145,
-        "PIR_Rank":146,
-        "Rank_Diff":1
+        "PIR_Rank":147,
+        "Rank_Diff":2
     },
     {
         "player.code":"010581",
@@ -2865,8 +2865,8 @@
         "WIR":5.4176470588,
         "WIR_40":17.4873417722,
         "WIR_Rank":151,
-        "PIR_Rank":169,
-        "Rank_Diff":18
+        "PIR_Rank":170,
+        "Rank_Diff":19
     },
     {
         "player.code":"012403",
@@ -2922,8 +2922,8 @@
         "WIR":11.0371428571,
         "WIR_40":17.3539982031,
         "WIR_Rank":154,
-        "PIR_Rank":142,
-        "Rank_Diff":-12
+        "PIR_Rank":143,
+        "Rank_Diff":-11
     },
     {
         "player.code":"003196",
@@ -2979,8 +2979,8 @@
         "WIR":9.4038461538,
         "WIR_40":17.1418555737,
         "WIR_Rank":157,
-        "PIR_Rank":196,
-        "Rank_Diff":39
+        "PIR_Rank":197,
+        "Rank_Diff":40
     },
     {
         "player.code":"010431",
@@ -2998,27 +2998,8 @@
         "WIR":7.55625,
         "WIR_40":17.0637184275,
         "WIR_Rank":158,
-        "PIR_Rank":193,
-        "Rank_Diff":35
-    },
-    {
-        "player.code":"007990",
-        "player.name":"DIBARTOLOMEO, JOHN",
-        "player.team.name":"TEL",
-        "player.team.code":"TEL",
-        "gamesPlayed":25,
-        "mins_played":14.5546666667,
-        "pointsScored":4.16,
-        "assists":0.96,
-        "totalRebounds":1.92,
-        "TS%":59.9907706507,
-        "pir":4.64,
-        "PIR_40":12.7519237816,
-        "WIR":6.208,
-        "WIR_40":17.0611945768,
-        "WIR_Rank":159,
-        "PIR_Rank":199,
-        "Rank_Diff":40
+        "PIR_Rank":194,
+        "Rank_Diff":36
     },
     {
         "player.code":"012611",
@@ -3035,9 +3016,9 @@
         "PIR_40":12.2243445043,
         "WIR":6.9828571429,
         "WIR_40":16.9751693002,
-        "WIR_Rank":160,
+        "WIR_Rank":159,
         "PIR_Rank":203,
-        "Rank_Diff":43
+        "Rank_Diff":44
     },
     {
         "player.code":"013383",
@@ -3054,9 +3035,9 @@
         "PIR_40":13.5926122255,
         "WIR":7.2342857143,
         "WIR_40":16.9539380074,
-        "WIR_Rank":161,
+        "WIR_Rank":160,
         "PIR_Rank":185,
-        "Rank_Diff":24
+        "Rank_Diff":25
     },
     {
         "player.code":"011948",
@@ -3073,9 +3054,9 @@
         "PIR_40":13.91455593,
         "WIR":8.8363636364,
         "WIR_40":16.9061854549,
-        "WIR_Rank":162,
+        "WIR_Rank":161,
         "PIR_Rank":183,
-        "Rank_Diff":21
+        "Rank_Diff":22
     },
     {
         "player.code":"008173",
@@ -3092,9 +3073,9 @@
         "PIR_40":16.5546641404,
         "WIR":6.5944444444,
         "WIR_40":16.8672844075,
-        "WIR_Rank":163,
-        "PIR_Rank":144,
-        "Rank_Diff":-19
+        "WIR_Rank":162,
+        "PIR_Rank":145,
+        "Rank_Diff":-17
     },
     {
         "player.code":"009754",
@@ -3111,9 +3092,9 @@
         "PIR_40":18.2985138919,
         "WIR":9.8818181818,
         "WIR_40":16.8563428818,
-        "WIR_Rank":164,
+        "WIR_Rank":163,
         "PIR_Rank":114,
-        "Rank_Diff":-50
+        "Rank_Diff":-49
     },
     {
         "player.code":"012720",
@@ -3130,9 +3111,9 @@
         "PIR_40":15.8119868233,
         "WIR":11.8888888889,
         "WIR_40":16.8346526378,
-        "WIR_Rank":165,
+        "WIR_Rank":164,
         "PIR_Rank":157,
-        "Rank_Diff":-8
+        "Rank_Diff":-7
     },
     {
         "player.code":"007866",
@@ -3149,9 +3130,9 @@
         "PIR_40":17.0763260026,
         "WIR":6.0,
         "WIR_40":16.765847348,
-        "WIR_Rank":166,
+        "WIR_Rank":165,
         "PIR_Rank":136,
-        "Rank_Diff":-30
+        "Rank_Diff":-29
     },
     {
         "player.code":"014168",
@@ -3168,9 +3149,47 @@
         "PIR_40":13.9968537774,
         "WIR":6.7185185185,
         "WIR_40":16.7041399685,
-        "WIR_Rank":167,
+        "WIR_Rank":166,
         "PIR_Rank":182,
-        "Rank_Diff":15
+        "Rank_Diff":16
+    },
+    {
+        "player.code":"007990",
+        "player.name":"DIBARTOLOMEO, JOHN",
+        "player.team.name":"TEL",
+        "player.team.code":"TEL",
+        "gamesPlayed":26,
+        "mins_played":14.1576923077,
+        "pointsScored":4.0,
+        "assists":0.9230769231,
+        "totalRebounds":1.8461538462,
+        "TS%":59.9907706507,
+        "pir":4.4230769231,
+        "PIR_40":12.4966041836,
+        "WIR":5.9115384615,
+        "WIR_40":16.7019831568,
+        "WIR_Rank":167,
+        "PIR_Rank":201,
+        "Rank_Diff":34
+    },
+    {
+        "player.code":"014127",
+        "player.name":"BRISSETT, O'SHAE J",
+        "player.team.name":"TEL",
+        "player.team.code":"TEL",
+        "gamesPlayed":35,
+        "mins_played":24.580952381,
+        "pointsScored":8.6571428571,
+        "assists":0.8285714286,
+        "totalRebounds":5.1714285714,
+        "TS%":56.5298507463,
+        "pir":10.3714285714,
+        "PIR_40":16.8771793878,
+        "WIR":10.26,
+        "WIR_40":16.69585432,
+        "WIR_Rank":168,
+        "PIR_Rank":140,
+        "Rank_Diff":-28
     },
     {
         "player.code":"002849",
@@ -3187,8 +3206,8 @@
         "PIR_40":16.5144577399,
         "WIR":9.4689655172,
         "WIR_40":16.6723165271,
-        "WIR_Rank":168,
-        "PIR_Rank":148,
+        "WIR_Rank":169,
+        "PIR_Rank":149,
         "Rank_Diff":-20
     },
     {
@@ -3206,8 +3225,8 @@
         "PIR_40":14.6841206602,
         "WIR":6.9607142857,
         "WIR_40":16.6391576551,
-        "WIR_Rank":169,
-        "PIR_Rank":167,
+        "WIR_Rank":170,
+        "PIR_Rank":168,
         "Rank_Diff":-2
     },
     {
@@ -3225,9 +3244,9 @@
         "PIR_40":16.020870099,
         "WIR":5.0055555556,
         "WIR_40":16.5917286887,
-        "WIR_Rank":170,
+        "WIR_Rank":171,
         "PIR_Rank":153,
-        "Rank_Diff":-17
+        "Rank_Diff":-18
     },
     {
         "player.code":"011052",
@@ -3244,9 +3263,9 @@
         "PIR_40":11.5384615385,
         "WIR":4.4230769231,
         "WIR_40":16.5865384615,
-        "WIR_Rank":171,
+        "WIR_Rank":172,
         "PIR_Rank":211,
-        "Rank_Diff":40
+        "Rank_Diff":39
     },
     {
         "player.code":"004088",
@@ -3263,9 +3282,9 @@
         "PIR_40":18.1353383459,
         "WIR":11.396875,
         "WIR_40":16.4526315789,
-        "WIR_Rank":172,
-        "PIR_Rank":119,
-        "Rank_Diff":-53
+        "WIR_Rank":173,
+        "PIR_Rank":118,
+        "Rank_Diff":-55
     },
     {
         "player.code":"010319",
@@ -3282,9 +3301,9 @@
         "PIR_40":15.674330063,
         "WIR":6.6771428571,
         "WIR_40":16.4264167521,
-        "WIR_Rank":173,
+        "WIR_Rank":174,
         "PIR_Rank":158,
-        "Rank_Diff":-15
+        "Rank_Diff":-16
     },
     {
         "player.code":"004508",
@@ -3301,28 +3320,9 @@
         "PIR_40":18.5232827373,
         "WIR":10.9029411765,
         "WIR_40":16.3490021684,
-        "WIR_Rank":174,
-        "PIR_Rank":111,
-        "Rank_Diff":-63
-    },
-    {
-        "player.code":"014127",
-        "player.name":"BRISSETT, O'SHAE J",
-        "player.team.name":"TEL",
-        "player.team.code":"TEL",
-        "gamesPlayed":34,
-        "mins_played":24.3617647059,
-        "pointsScored":8.5294117647,
-        "assists":0.7647058824,
-        "totalRebounds":5.0588235294,
-        "TS%":56.5610859729,
-        "pir":10.0294117647,
-        "PIR_40":16.4674634794,
-        "WIR":9.95,
-        "WIR_40":16.3370759387,
         "WIR_Rank":175,
-        "PIR_Rank":149,
-        "Rank_Diff":-26
+        "PIR_Rank":111,
+        "Rank_Diff":-64
     },
     {
         "player.code":"004007",
@@ -3378,8 +3378,8 @@
         "WIR":8.0914285714,
         "WIR_40":16.1670749982,
         "WIR_Rank":178,
-        "PIR_Rank":96,
-        "Rank_Diff":-82
+        "PIR_Rank":95,
+        "Rank_Diff":-83
     },
     {
         "player.code":"014009",
@@ -3397,8 +3397,8 @@
         "WIR":7.9818181818,
         "WIR_40":16.1366159972,
         "WIR_Rank":179,
-        "PIR_Rank":165,
-        "Rank_Diff":-14
+        "PIR_Rank":166,
+        "Rank_Diff":-13
     },
     {
         "player.code":"013378",
@@ -3416,8 +3416,8 @@
         "WIR":6.035483871,
         "WIR_40":16.107902572,
         "WIR_Rank":180,
-        "PIR_Rank":195,
-        "Rank_Diff":15
+        "PIR_Rank":196,
+        "Rank_Diff":16
     },
     {
         "player.code":"014016",
@@ -3435,8 +3435,27 @@
         "WIR":4.908,
         "WIR_40":16.0374686853,
         "WIR_Rank":181,
-        "PIR_Rank":192,
-        "Rank_Diff":11
+        "PIR_Rank":193,
+        "Rank_Diff":12
+    },
+    {
+        "player.code":"011823",
+        "player.name":"ODIASE, TAI",
+        "player.team.name":"HTA",
+        "player.team.code":"HTA",
+        "gamesPlayed":24,
+        "mins_played":12.4583333333,
+        "pointsScored":4.0416666667,
+        "assists":0.4166666667,
+        "totalRebounds":1.9583333333,
+        "TS%":68.3098591549,
+        "pir":4.875,
+        "PIR_40":15.652173913,
+        "WIR":4.9708333333,
+        "WIR_40":15.9598662207,
+        "WIR_Rank":182,
+        "PIR_Rank":159,
+        "Rank_Diff":-23
     },
     {
         "player.code":"009005",
@@ -3453,9 +3472,9 @@
         "PIR_40":17.7850967476,
         "WIR":8.0117647059,
         "WIR_40":15.8322233793,
-        "WIR_Rank":182,
+        "WIR_Rank":183,
         "PIR_Rank":124,
-        "Rank_Diff":-58
+        "Rank_Diff":-59
     },
     {
         "player.code":"006904",
@@ -3472,9 +3491,9 @@
         "PIR_40":10.2289332684,
         "WIR":4.1615384615,
         "WIR_40":15.8110082806,
-        "WIR_Rank":183,
+        "WIR_Rank":184,
         "PIR_Rank":226,
-        "Rank_Diff":43
+        "Rank_Diff":42
     },
     {
         "player.code":"005713",
@@ -3491,9 +3510,9 @@
         "PIR_40":13.4890730972,
         "WIR":8.388,
         "WIR_40":15.8025621703,
-        "WIR_Rank":184,
+        "WIR_Rank":185,
         "PIR_Rank":187,
-        "Rank_Diff":3
+        "Rank_Diff":2
     },
     {
         "player.code":"014007",
@@ -3510,9 +3529,9 @@
         "PIR_40":12.0607902736,
         "WIR":7.3409090909,
         "WIR_40":15.7082066869,
-        "WIR_Rank":185,
+        "WIR_Rank":186,
         "PIR_Rank":204,
-        "Rank_Diff":19
+        "Rank_Diff":18
     },
     {
         "player.code":"007464",
@@ -3529,9 +3548,9 @@
         "PIR_40":14.4349836073,
         "WIR":7.4513513514,
         "WIR_40":15.6067646296,
-        "WIR_Rank":186,
+        "WIR_Rank":187,
         "PIR_Rank":175,
-        "Rank_Diff":-11
+        "Rank_Diff":-12
     },
     {
         "player.code":"011231",
@@ -3548,28 +3567,9 @@
         "PIR_40":17.3480270174,
         "WIR":8.8810810811,
         "WIR_40":15.5753051309,
-        "WIR_Rank":187,
-        "PIR_Rank":131,
-        "Rank_Diff":-56
-    },
-    {
-        "player.code":"011823",
-        "player.name":"ODIASE, TAI",
-        "player.team.name":"HTA",
-        "player.team.code":"HTA",
-        "gamesPlayed":23,
-        "mins_played":12.0449275362,
-        "pointsScored":3.652173913,
-        "assists":0.4347826087,
-        "totalRebounds":2.0,
-        "TS%":67.1355498721,
-        "pir":4.3913043478,
-        "PIR_40":14.5830826615,
-        "WIR":4.6739130435,
-        "WIR_40":15.5215978823,
         "WIR_Rank":188,
-        "PIR_Rank":171,
-        "Rank_Diff":-17
+        "PIR_Rank":131,
+        "Rank_Diff":-57
     },
     {
         "player.code":"012710",
@@ -3606,8 +3606,8 @@
         "WIR":5.9,
         "WIR_40":15.4214768024,
         "WIR_Rank":190,
-        "PIR_Rank":168,
-        "Rank_Diff":-22
+        "PIR_Rank":169,
+        "Rank_Diff":-21
     },
     {
         "player.code":"014005",
@@ -3625,8 +3625,8 @@
         "WIR":8.5888888889,
         "WIR_40":15.3544382371,
         "WIR_Rank":191,
-        "PIR_Rank":164,
-        "Rank_Diff":-27
+        "PIR_Rank":165,
+        "Rank_Diff":-26
     },
     {
         "player.code":"007993",
@@ -3663,8 +3663,8 @@
         "WIR":8.8625,
         "WIR_40":15.2268456376,
         "WIR_Rank":193,
-        "PIR_Rank":118,
-        "Rank_Diff":-75
+        "PIR_Rank":117,
+        "Rank_Diff":-76
     },
     {
         "player.code":"009549",
@@ -3758,8 +3758,8 @@
         "WIR":9.2965517241,
         "WIR_40":14.8950276243,
         "WIR_Rank":198,
-        "PIR_Rank":166,
-        "Rank_Diff":-32
+        "PIR_Rank":167,
+        "Rank_Diff":-31
     },
     {
         "player.code":"002661",
@@ -3796,8 +3796,8 @@
         "WIR":5.1916666667,
         "WIR_40":14.8460978354,
         "WIR_Rank":200,
-        "PIR_Rank":194,
-        "Rank_Diff":-6
+        "PIR_Rank":195,
+        "Rank_Diff":-5
     },
     {
         "player.code":"006725",
@@ -3815,8 +3815,8 @@
         "WIR":6.6823529412,
         "WIR_40":14.7420785119,
         "WIR_Rank":201,
-        "PIR_Rank":160,
-        "Rank_Diff":-41
+        "PIR_Rank":161,
+        "Rank_Diff":-40
     },
     {
         "player.code":"011085",
@@ -3891,8 +3891,8 @@
         "WIR":5.12,
         "WIR_40":14.6024955437,
         "WIR_Rank":205,
-        "PIR_Rank":201,
-        "Rank_Diff":-4
+        "PIR_Rank":200,
+        "Rank_Diff":-5
     },
     {
         "player.code":"007230",
@@ -3910,8 +3910,8 @@
         "WIR":8.6923076923,
         "WIR_40":14.5595103881,
         "WIR_Rank":206,
-        "PIR_Rank":141,
-        "Rank_Diff":-65
+        "PIR_Rank":142,
+        "Rank_Diff":-64
     },
     {
         "player.code":"014088",
@@ -3948,8 +3948,8 @@
         "WIR":8.62,
         "WIR_40":14.5167304878,
         "WIR_Rank":208,
-        "PIR_Rank":191,
-        "Rank_Diff":-17
+        "PIR_Rank":192,
+        "Rank_Diff":-16
     },
     {
         "player.code":"011982",
@@ -4009,6 +4009,25 @@
         "Rank_Diff":-22
     },
     {
+        "player.code":"012609",
+        "player.name":"MALCOLM, COLLIN",
+        "player.team.name":"HTA",
+        "player.team.code":"HTA",
+        "gamesPlayed":37,
+        "mins_played":25.3378378378,
+        "pointsScored":6.7567567568,
+        "assists":0.972972973,
+        "totalRebounds":3.5945945946,
+        "TS%":60.8924395947,
+        "pir":8.4594594595,
+        "PIR_40":13.3546666667,
+        "WIR":8.7837837838,
+        "WIR_40":13.8666666667,
+        "WIR_Rank":212,
+        "PIR_Rank":191,
+        "Rank_Diff":-21
+    },
+    {
         "player.code":"006643",
         "player.name":"PUERTO, JOSEP",
         "player.team.name":"PAM",
@@ -4023,9 +4042,9 @@
         "PIR_40":13.3889161354,
         "WIR":5.5294117647,
         "WIR_40":13.830308975,
-        "WIR_Rank":212,
+        "WIR_Rank":213,
         "PIR_Rank":188,
-        "Rank_Diff":-24
+        "Rank_Diff":-25
     },
     {
         "player.code":"012795",
@@ -4042,9 +4061,9 @@
         "PIR_40":10.8861777718,
         "WIR":7.9875,
         "WIR_40":13.706931224,
-        "WIR_Rank":213,
+        "WIR_Rank":214,
         "PIR_Rank":217,
-        "Rank_Diff":4
+        "Rank_Diff":3
     },
     {
         "player.code":"007029",
@@ -4061,9 +4080,9 @@
         "PIR_40":11.7359413203,
         "WIR":4.55,
         "WIR_40":13.6336680019,
-        "WIR_Rank":214,
+        "WIR_Rank":215,
         "PIR_Rank":208,
-        "Rank_Diff":-6
+        "Rank_Diff":-7
     },
     {
         "player.code":"011064",
@@ -4080,28 +4099,9 @@
         "PIR_40":10.7861439535,
         "WIR":3.9095238095,
         "WIR_40":13.6237295167,
-        "WIR_Rank":215,
-        "PIR_Rank":219,
-        "Rank_Diff":4
-    },
-    {
-        "player.code":"012609",
-        "player.name":"MALCOLM, COLLIN",
-        "player.team.name":"HTA",
-        "player.team.code":"HTA",
-        "gamesPlayed":36,
-        "mins_played":25.2560185185,
-        "pointsScored":6.5,
-        "assists":1.0,
-        "totalRebounds":3.5555555556,
-        "TS%":59.5723014257,
-        "pir":8.1666666667,
-        "PIR_40":12.9342107675,
-        "WIR":8.5,
-        "WIR_40":13.4621377376,
         "WIR_Rank":216,
-        "PIR_Rank":197,
-        "Rank_Diff":-19
+        "PIR_Rank":219,
+        "Rank_Diff":3
     },
     {
         "player.code":"008232",
@@ -4119,8 +4119,8 @@
         "WIR":3.9807692308,
         "WIR_40":13.3987809483,
         "WIR_Rank":217,
-        "PIR_Rank":235,
-        "Rank_Diff":18
+        "PIR_Rank":236,
+        "Rank_Diff":19
     },
     {
         "player.code":"012618",
@@ -4252,8 +4252,8 @@
         "WIR":4.6606060606,
         "WIR_40":12.9579442533,
         "WIR_Rank":224,
-        "PIR_Rank":200,
-        "Rank_Diff":-24
+        "PIR_Rank":199,
+        "Rank_Diff":-25
     },
     {
         "player.code":"007736",
@@ -4271,8 +4271,8 @@
         "WIR":4.1958333333,
         "WIR_40":12.9137055838,
         "WIR_Rank":225,
-        "PIR_Rank":234,
-        "Rank_Diff":9
+        "PIR_Rank":235,
+        "Rank_Diff":10
     },
     {
         "player.code":"013269",
@@ -4290,8 +4290,8 @@
         "WIR":5.015625,
         "WIR_40":12.8592889334,
         "WIR_Rank":226,
-        "PIR_Rank":233,
-        "Rank_Diff":7
+        "PIR_Rank":234,
+        "Rank_Diff":8
     },
     {
         "player.code":"006591",
@@ -4332,6 +4332,25 @@
         "Rank_Diff":-15
     },
     {
+        "player.code":"013381",
+        "player.name":"RAYMAN, WILLIAM",
+        "player.team.name":"TEL",
+        "player.team.code":"TEL",
+        "gamesPlayed":37,
+        "mins_played":11.9144144144,
+        "pointsScored":3.1081081081,
+        "assists":0.1891891892,
+        "totalRebounds":2.0540540541,
+        "TS%":55.5877803558,
+        "pir":2.6756756757,
+        "PIR_40":8.9829867675,
+        "WIR":3.7324324324,
+        "WIR_40":12.5308128544,
+        "WIR_Rank":229,
+        "PIR_Rank":233,
+        "Rank_Diff":4
+    },
+    {
         "player.code":"011983",
         "player.name":"BRAZDEIKIS, IGNAS",
         "player.team.name":"ZAL",
@@ -4346,9 +4365,9 @@
         "PIR_40":9.2157404847,
         "WIR":4.7714285714,
         "WIR_40":12.3122292876,
-        "WIR_Rank":229,
+        "WIR_Rank":230,
         "PIR_Rank":231,
-        "Rank_Diff":2
+        "Rank_Diff":1
     },
     {
         "player.code":"007182",
@@ -4365,9 +4384,9 @@
         "PIR_40":10.6568364611,
         "WIR":4.927027027,
         "WIR_40":12.2184986595,
-        "WIR_Rank":230,
+        "WIR_Rank":231,
         "PIR_Rank":221,
-        "Rank_Diff":-9
+        "Rank_Diff":-10
     },
     {
         "player.code":"012044",
@@ -4384,9 +4403,9 @@
         "PIR_40":5.6481080077,
         "WIR":3.24,
         "WIR_40":12.0393881216,
-        "WIR_Rank":231,
+        "WIR_Rank":232,
         "PIR_Rank":246,
-        "Rank_Diff":15
+        "Rank_Diff":14
     },
     {
         "player.code":"012745",
@@ -4403,9 +4422,9 @@
         "PIR_40":10.5323940409,
         "WIR":5.78,
         "WIR_40":12.0152442545,
-        "WIR_Rank":232,
+        "WIR_Rank":233,
         "PIR_Rank":224,
-        "Rank_Diff":-8
+        "Rank_Diff":-9
     },
     {
         "player.code":"007960",
@@ -4422,9 +4441,9 @@
         "PIR_40":9.7658862876,
         "WIR":4.2761904762,
         "WIR_40":12.0133779264,
-        "WIR_Rank":233,
+        "WIR_Rank":234,
         "PIR_Rank":229,
-        "Rank_Diff":-4
+        "Rank_Diff":-5
     },
     {
         "player.code":"TGB",
@@ -4441,9 +4460,9 @@
         "PIR_40":7.5356504295,
         "WIR":3.4727272727,
         "WIR_40":11.9942436004,
-        "WIR_Rank":234,
+        "WIR_Rank":235,
         "PIR_Rank":241,
-        "Rank_Diff":7
+        "Rank_Diff":6
     },
     {
         "player.code":"000229",
@@ -4460,47 +4479,28 @@
         "PIR_40":11.7726028812,
         "WIR":4.8,
         "WIR_40":11.8965250168,
-        "WIR_Rank":235,
+        "WIR_Rank":236,
         "PIR_Rank":207,
-        "Rank_Diff":-28
+        "Rank_Diff":-29
     },
     {
         "player.code":"013284",
         "player.name":"WAINRIGHT, ISH",
         "player.team.name":"HTA",
         "player.team.code":"HTA",
-        "gamesPlayed":36,
-        "mins_played":23.8083333333,
-        "pointsScored":4.4166666667,
-        "assists":1.2222222222,
-        "totalRebounds":2.6944444444,
-        "TS%":52.0969855832,
-        "pir":4.8333333333,
-        "PIR_40":8.1204060203,
-        "WIR":6.9694444444,
-        "WIR_40":11.7092521293,
-        "WIR_Rank":236,
-        "PIR_Rank":238,
-        "Rank_Diff":2
-    },
-    {
-        "player.code":"013381",
-        "player.name":"RAYMAN, WILLIAM",
-        "player.team.name":"TEL",
-        "player.team.code":"TEL",
-        "gamesPlayed":36,
-        "mins_played":11.8569444444,
-        "pointsScored":2.9166666667,
-        "assists":0.1666666667,
-        "totalRebounds":1.9722222222,
-        "TS%":55.123897522,
-        "pir":2.4444444444,
-        "PIR_40":8.2464566007,
-        "WIR":3.4694444444,
-        "WIR_40":11.7043457889,
+        "gamesPlayed":37,
+        "mins_played":23.5463963964,
+        "pointsScored":4.3513513514,
+        "assists":1.2432432432,
+        "totalRebounds":2.6756756757,
+        "TS%":51.735218509,
+        "pir":4.7567567568,
+        "PIR_40":8.0806534922,
+        "WIR":6.9918918919,
+        "WIR_40":11.8776423775,
         "WIR_Rank":237,
-        "PIR_Rank":237,
-        "Rank_Diff":0
+        "PIR_Rank":239,
+        "Rank_Diff":2
     },
     {
         "player.code":"007513",
@@ -4594,8 +4594,8 @@
         "WIR":5.06875,
         "WIR_40":11.1711194651,
         "WIR_Rank":242,
-        "PIR_Rank":236,
-        "Rank_Diff":-6
+        "PIR_Rank":237,
+        "Rank_Diff":-5
     },
     {
         "player.code":"001255",
@@ -4689,8 +4689,8 @@
         "WIR":5.2684210526,
         "WIR_40":10.2838063439,
         "WIR_Rank":247,
-        "PIR_Rank":239,
-        "Rank_Diff":-8
+        "PIR_Rank":238,
+        "Rank_Diff":-9
     },
     {
         "player.code":"012268",

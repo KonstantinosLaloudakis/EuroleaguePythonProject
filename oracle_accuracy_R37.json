@@ -1,38 +1,38 @@
 {
-  "n_games": 459,
-  "accuracy": 65.1,
-  "brier_score": 0.2133,
-  "log_loss": 0.6114,
+  "n_games": 460,
+  "accuracy": 65.2,
+  "brier_score": 0.2148,
+  "log_loss": 0.6144,
   "calibration": [
     {
       "Bucket": "50-60%",
-      "Count": 150,
-      "Accuracy": 52.7,
-      "AvgConfidence": 56.2
+      "Count": 145,
+      "Accuracy": 53.8,
+      "AvgConfidence": 56.1
     },
     {
       "Bucket": "60-70%",
-      "Count": 139,
-      "Accuracy": 63.3,
-      "AvgConfidence": 64.8
+      "Count": 149,
+      "Accuracy": 63.1,
+      "AvgConfidence": 64.7
     },
     {
       "Bucket": "70-80%",
-      "Count": 112,
-      "Accuracy": 69.6,
+      "Count": 105,
+      "Accuracy": 67.6,
       "AvgConfidence": 75.7
     },
     {
       "Bucket": "80-90%",
-      "Count": 39,
-      "Accuracy": 94.9,
-      "AvgConfidence": 84.8
+      "Count": 38,
+      "Accuracy": 94.7,
+      "AvgConfidence": 84.3
     },
     {
       "Bucket": "90%+",
-      "Count": 19,
-      "Accuracy": 89.5,
-      "AvgConfidence": 93.3
+      "Count": 23,
+      "Accuracy": 91.3,
+      "AvgConfidence": 93.1
     }
   ],
   "per_round": [
@@ -49,7 +49,7 @@
     {
       "Round": 3,
       "Games": 10,
-      "Accuracy": 80.0
+      "Accuracy": 70.0
     },
     {
       "Round": 4,
@@ -59,7 +59,7 @@
     {
       "Round": 5,
       "Games": 10,
-      "Accuracy": 60.0
+      "Accuracy": 70.0
     },
     {
       "Round": 6,
@@ -79,7 +79,7 @@
     {
       "Round": 9,
       "Games": 10,
-      "Accuracy": 70.0
+      "Accuracy": 60.0
     },
     {
       "Round": 10,
@@ -94,7 +94,7 @@
     {
       "Round": 12,
       "Games": 10,
-      "Accuracy": 70.0
+      "Accuracy": 80.0
     },
     {
       "Round": 13,
@@ -109,7 +109,7 @@
     {
       "Round": 15,
       "Games": 10,
-      "Accuracy": 60.0
+      "Accuracy": 70.0
     },
     {
       "Round": 16,
@@ -183,8 +183,8 @@
     },
     {
       "Round": 30,
-      "Games": 9,
-      "Accuracy": 66.7
+      "Games": 10,
+      "Accuracy": 60.0
     },
     {
       "Round": 31,

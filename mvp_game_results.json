@@ -2337,11 +2337,11 @@
     },
     {
         "GameCode":293,
-        "LocalTeam":"UNKNOWN",
-        "RoadTeam":"UNKNOWN",
-        "LocalScore":0.0,
-        "RoadScore":0.0,
-        "Winner":"UNKNOWN"
+        "LocalTeam":"TEL",
+        "RoadTeam":"HTA",
+        "LocalScore":88.0,
+        "RoadScore":99.0,
+        "Winner":"HTA"
     },
     {
         "GameCode":294,
