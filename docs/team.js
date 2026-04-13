@@ -275,22 +275,28 @@ function renderFixtures(team, allTeams) {
     const max  = Math.max(...allWinPcts);
 
     el.innerHTML = `<div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.5rem">Opponent strength by season win%</div>` +
-    opps.map(opp => {
-        const t        = teamLookup[opp];
+    opps.map(raw => {
+        // Support both new {team, loc} format and legacy string format
+        const oppCode  = typeof raw === 'object' ? raw.team : raw;
+        const loc      = typeof raw === 'object' ? raw.loc : null;
+        const t        = teamLookup[oppCode];
         const wp       = t ? t.win_pct : 50;
         const isHard   = wp >= mean + 10;
         const isEasy   = wp < mean - 10;
         const color    = isHard ? 'var(--accent-red)' : isEasy ? 'var(--accent-green)' : 'var(--accent-gold)';
         const diffLabel = isHard ? 'Hard' : isEasy ? 'Easy' : 'Average';
         const barW     = Math.round((wp / max) * 100);
-        const oppColor = getTeamColor(opp);
+        const oppColor = getTeamColor(oppCode);
+        const locBadge = loc === 'home' ? '<span style="font-size:0.65rem;color:var(--accent-green);margin-left:0.35rem;font-weight:600" title="Home game">H</span>'
+                       : loc === 'away' ? '<span style="font-size:0.65rem;color:var(--accent-red);margin-left:0.35rem;font-weight:600" title="Away game">A</span>'
+                       : '';
         return `<div class="fixture-row">
             <div>
                 <div class="fixture-opp">
-                    <span style="color:${oppColor};font-weight:700">${opp}</span>
+                    <span style="color:${oppColor};font-weight:700">${oppCode}</span>${locBadge}
                     <span style="font-size:0.72rem;color:${color};margin-left:0.4rem;font-weight:600">${diffLabel}</span>
                 </div>
-                <div class="fixture-opp-full">${TEAM_NAMES[opp] || opp}</div>
+                <div class="fixture-opp-full">${TEAM_NAMES[oppCode] || oppCode}</div>
             </div>
             <div class="fixture-sos-bar-wrap">
                 <div class="fixture-sos-bar" style="width:${barW}%;background:${color}"></div>

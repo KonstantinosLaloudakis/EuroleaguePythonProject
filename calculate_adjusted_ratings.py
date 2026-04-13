@@ -272,7 +272,7 @@ def calculate_remaining_sos(adj_net, teams):
             
             for g in games:
                 opp = g['opponent']
-                opponents_list.append(opp)
+                opponents_list.append({'team': opp, 'loc': g['location']})
                 if opp not in teams:
                     continue
                     

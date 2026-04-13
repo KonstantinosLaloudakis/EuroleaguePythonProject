@@ -15,7 +15,10 @@
         "Home_Games": 1,
         "Away_Games": 0,
         "Remaining_Opponents": [
-            "MIL"
+            {
+                "team": "MIL",
+                "loc": "home"
+            }
         ]
     },
     {
@@ -34,7 +37,10 @@
         "Home_Games": 1,
         "Away_Games": 0,
         "Remaining_Opponents": [
-            "PRS"
+            {
+                "team": "PRS",
+                "loc": "home"
+            }
         ]
     },
     {
@@ -53,7 +59,10 @@
         "Home_Games": 1,
         "Away_Games": 0,
         "Remaining_Opponents": [
-            "RED"
+            {
+                "team": "RED",
+                "loc": "home"
+            }
         ]
     },
     {
@@ -72,7 +81,10 @@
         "Home_Games": 0,
         "Away_Games": 1,
         "Remaining_Opponents": [
-            "DUB"
+            {
+                "team": "DUB",
+                "loc": "away"
+            }
         ]
     },
     {
@@ -91,7 +103,10 @@
         "Home_Games": 0,
         "Away_Games": 1,
         "Remaining_Opponents": [
-            "MCO"
+            {
+                "team": "MCO",
+                "loc": "away"
+            }
         ]
     },
     {
@@ -110,7 +125,10 @@
         "Home_Games": 1,
         "Away_Games": 0,
         "Remaining_Opponents": [
-            "HTA"
+            {
+                "team": "HTA",
+                "loc": "home"
+            }
         ]
     },
     {
@@ -129,7 +147,10 @@
         "Home_Games": 0,
         "Away_Games": 1,
         "Remaining_Opponents": [
-            "MAD"
+            {
+                "team": "MAD",
+                "loc": "away"
+            }
         ]
     },
     {
@@ -148,7 +169,10 @@
         "Home_Games": 1,
         "Away_Games": 0,
         "Remaining_Opponents": [
-            "IST"
+            {
+                "team": "IST",
+                "loc": "home"
+            }
         ]
     },
     {
@@ -167,7 +191,10 @@
         "Home_Games": 0,
         "Away_Games": 1,
         "Remaining_Opponents": [
-            "ASV"
+            {
+                "team": "ASV",
+                "loc": "away"
+            }
         ]
     },
     {
@@ -186,7 +213,10 @@
         "Home_Games": 1,
         "Away_Games": 0,
         "Remaining_Opponents": [
-            "PAM"
+            {
+                "team": "PAM",
+                "loc": "home"
+            }
         ]
     },
     {
@@ -205,7 +235,10 @@
         "Home_Games": 1,
         "Away_Games": 0,
         "Remaining_Opponents": [
-            "MUN"
+            {
+                "team": "MUN",
+                "loc": "home"
+            }
         ]
     },
     {
@@ -224,7 +257,10 @@
         "Home_Games": 0,
         "Away_Games": 1,
         "Remaining_Opponents": [
-            "ZAL"
+            {
+                "team": "ZAL",
+                "loc": "away"
+            }
         ]
     },
     {
@@ -243,7 +279,10 @@
         "Home_Games": 0,
         "Away_Games": 1,
         "Remaining_Opponents": [
-            "OLY"
+            {
+                "team": "OLY",
+                "loc": "away"
+            }
         ]
     },
     {
@@ -262,7 +301,10 @@
         "Home_Games": 0,
         "Away_Games": 1,
         "Remaining_Opponents": [
-            "BAR"
+            {
+                "team": "BAR",
+                "loc": "away"
+            }
         ]
     },
     {
@@ -281,7 +323,10 @@
         "Home_Games": 1,
         "Away_Games": 0,
         "Remaining_Opponents": [
-            "VIR"
+            {
+                "team": "VIR",
+                "loc": "home"
+            }
         ]
     },
     {
@@ -300,7 +345,10 @@
         "Home_Games": 0,
         "Away_Games": 1,
         "Remaining_Opponents": [
-            "PAN"
+            {
+                "team": "PAN",
+                "loc": "away"
+            }
         ]
     },
     {
@@ -319,7 +367,10 @@
         "Home_Games": 0,
         "Away_Games": 1,
         "Remaining_Opponents": [
-            "PAR"
+            {
+                "team": "PAR",
+                "loc": "away"
+            }
         ]
     },
     {
@@ -338,7 +389,10 @@
         "Home_Games": 0,
         "Away_Games": 1,
         "Remaining_Opponents": [
-            "TEL"
+            {
+                "team": "TEL",
+                "loc": "away"
+            }
         ]
     },
     {
@@ -357,7 +411,10 @@
         "Home_Games": 1,
         "Away_Games": 0,
         "Remaining_Opponents": [
-            "BAS"
+            {
+                "team": "BAS",
+                "loc": "home"
+            }
         ]
     },
     {
@@ -376,7 +433,10 @@
         "Home_Games": 1,
         "Away_Games": 0,
         "Remaining_Opponents": [
-            "ULK"
+            {
+                "team": "ULK",
+                "loc": "home"
+            }
         ]
     }
 ]
