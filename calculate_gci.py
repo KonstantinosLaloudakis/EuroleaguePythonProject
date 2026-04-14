@@ -10,7 +10,6 @@ Usage:
 
 import json
 import os
-import math
 import statistics
 
 
@@ -362,7 +361,6 @@ def find_superlatives(game_results, game_metrics, wp_timelines):
             'away': g['away'],
             'home_score': g['home_score'],
             'away_score': g['away_score'],
-            'wp_curve': wp_timelines.get(gc, []),
         }
 
         abs_dom = abs(metrics['dominance'])
