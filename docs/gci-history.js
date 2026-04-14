@@ -322,6 +322,7 @@ function renderComparison() {
     const layout = Object.assign({}, PLOTLY_THEME, {
         xaxis: Object.assign({}, PLOTLY_THEME.xaxis, {
             title: '',
+            type: 'category',
             tickangle: -35,
             automargin: true,
         }),
