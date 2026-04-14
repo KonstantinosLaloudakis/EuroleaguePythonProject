@@ -329,11 +329,11 @@ function renderTeamDetail(code) {
         </div>`;
     }).join('');
 
-    // Home vs Away dominance bar
-    const homeGci = t.home_gci ?? 0;
-    const awayGci = t.away_gci ?? 0;
-    const total = Math.abs(homeGci) + Math.abs(awayGci);
-    const homePct = total > 0 ? Math.max(0, Math.min(100, (Math.max(0, homeGci) / total * 100))).toFixed(0) : 50;
+    // Home vs Away GCI bar (both are 0-100 scores)
+    const homeGci = t.home_gci ?? 50;
+    const awayGci = t.away_gci ?? 50;
+    const gciTotal = homeGci + awayGci || 1;
+    const homePct = Math.max(5, Math.min(95, (homeGci / gciTotal * 100))).toFixed(0);
     const awayPct = (100 - homePct);
 
     wrap.innerHTML = `

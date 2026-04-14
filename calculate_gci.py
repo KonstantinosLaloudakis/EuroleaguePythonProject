@@ -239,13 +239,13 @@ def compute_gci_ratings(team_profiles):
 
     # Z-normalize to 0-100 scale
     if len(raw_scores) < 2:
-        return {t: 50.0 for t in raw_scores}, components
+        return {t: 50.0 for t in raw_scores}, components, (0.0, 1.0)
 
     values = list(raw_scores.values())
     mu = statistics.mean(values)
     sigma = statistics.stdev(values)
     if sigma == 0:
-        return {t: 50.0 for t in raw_scores}, components
+        return {t: 50.0 for t in raw_scores}, components, (0.0, 1.0)
 
     gci_ratings = {}
     for team, raw in raw_scores.items():
@@ -254,7 +254,7 @@ def compute_gci_ratings(team_profiles):
         gci = max(0.0, min(100.0, 50.0 + z * 16.67))
         gci_ratings[team] = round(gci, 1)
 
-    return gci_ratings, components
+    return gci_ratings, components, (mu, sigma)
 
 
 def generate_storylines(team_profiles, gci_ratings, components):
@@ -416,7 +416,7 @@ def main():
     print(f"  {len(team_profiles)} teams")
 
     # Compute GCI ratings
-    gci_ratings, components = compute_gci_ratings(team_profiles)
+    gci_ratings, components, (gci_mu, gci_sigma) = compute_gci_ratings(team_profiles)
 
     # Determine round
     round_num = determine_round(game_results, game_metrics)
@@ -436,11 +436,26 @@ def main():
         comeback_count = sum(1 for g in wins if g['comeback'] > 0.80)
         comeback_rating = statistics.mean(g['comeback'] for g in wins) if wins else 0.0
 
-        # Home vs away GCI (simplified: average dominance)
-        home_doms = [g['dominance'] for g in profile['home_games']]
-        away_doms = [g['dominance'] for g in profile['away_games']]
-        home_gci = statistics.mean(home_doms) if home_doms else 0.0
-        away_gci = statistics.mean(away_doms) if away_doms else 0.0
+        # Home vs away GCI: same weighted composite, z-normalized on the same scale
+        def venue_raw(game_list):
+            if not game_list:
+                return None
+            return (0.35 * statistics.mean(g['dominance'] for g in game_list)
+                  + 0.25 * statistics.mean(g['control'] for g in game_list)
+                  + 0.20 * statistics.mean(g['crunch'] for g in game_list)
+                  + 0.20 * statistics.mean(g['killer'] for g in game_list))
+
+        home_raw = venue_raw(profile['home_games'])
+        away_raw = venue_raw(profile['away_games'])
+
+        def raw_to_gci(raw):
+            if raw is None or gci_sigma == 0:
+                return 50.0
+            z = (raw - gci_mu) / gci_sigma
+            return round(max(0.0, min(100.0, 50.0 + z * 16.67)), 1)
+
+        home_gci = raw_to_gci(home_raw)
+        away_gci = raw_to_gci(away_raw)
 
         # Win quality histogram: 5 bins [0-0.1), [0.1-0.2), [0.2-0.3), [0.3-0.4), [0.4+)
         bins = [0.0, 0.1, 0.2, 0.3, 0.4, float('inf')]
