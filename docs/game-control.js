@@ -118,13 +118,15 @@ function renderGameOfRound() {
     tagsHtml += `<span class="gor-tag" style="background:rgba(78,205,196,0.12);color:#4ecdc4">Crunch: ${g.crunch_home > 0 ? '+' : ''}${g.crunch_home.toFixed(2)}</span>`;
 
     const replayLink = g.gamecode
-        ? `<a href="replay.html?season=2025&game=${g.gamecode}" style="font-size:0.72rem;color:#4ecdc4;text-decoration:none;font-weight:600;">Watch Replay &rarr;</a>`
+        ? `<a href="replay.html?season=2025&game=${g.gamecode}"
+              style="display:inline-block;margin-top:0.8rem;padding:0.5rem 1.2rem;background:linear-gradient(135deg,#4ecdc4,#45b7aa);color:#0f1117;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.78rem;transition:opacity 0.2s;"
+              onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+              ▶ Watch Full WP Replay</a>`
         : '';
 
     wrap.innerHTML = `<div class="gor-card">
         <div class="gor-header">
             <span style="font-size:0.75rem;color:var(--text-muted);font-weight:600;">Round ${g.round || ''}</span>
-            ${replayLink}
         </div>
         <div class="gor-body">
             <div class="gor-score">
@@ -142,6 +144,7 @@ function renderGameOfRound() {
             </div>
         </div>
         <div class="gor-tags">${tagsHtml}</div>
+        ${replayLink}
     </div>`;
 }
 

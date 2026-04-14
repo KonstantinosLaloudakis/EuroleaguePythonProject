@@ -258,11 +258,21 @@ def compute_gci_ratings(team_profiles):
 
 
 def generate_storylines(team_profiles, gci_ratings, components):
-    """Generate auto-storylines for the top teams in each category."""
+    """Generate auto-storylines for the top teams in each category.
+    Each team can only win one storyline — runner-up gets the award if taken."""
     storylines = []
+    used_teams = set()
+
+    def pick_top(rankings, exclude):
+        """Pick the highest-ranked team not in exclude set."""
+        for team in sorted(rankings, key=rankings.get, reverse=True):
+            if team not in exclude:
+                return team
+        return max(rankings, key=rankings.get)  # fallback: ignore exclusion
 
     # Dominant Force: highest GCI
-    top_gci = max(gci_ratings, key=gci_ratings.get)
+    top_gci = pick_top(gci_ratings, used_teams)
+    used_teams.add(top_gci)
     ctrl = components[top_gci]['control_pct']
     n_dominant_wins = sum(1 for g in team_profiles[top_gci]['wins'] if g['dominance'] > 0.15)
     storylines.append({
@@ -278,7 +288,8 @@ def generate_storylines(team_profiles, gci_ratings, components):
     # Drama Magnets: highest average drama
     drama_avgs = {t: statistics.mean(g['drama'] for g in p['games'])
                   for t, p in team_profiles.items() if p['games']}
-    top_drama = max(drama_avgs, key=drama_avgs.get)
+    top_drama = pick_top(drama_avgs, used_teams)
+    used_teams.add(top_drama)
     close_games = sum(1 for g in team_profiles[top_drama]['games'] if g['drama'] > 3.0)
     storylines.append({
         'label': 'Drama Magnets',
@@ -295,8 +306,9 @@ def generate_storylines(team_profiles, gci_ratings, components):
     for team, profile in team_profiles.items():
         count = sum(1 for g in profile['wins'] if g['comeback'] > 0.80)
         comeback_counts[team] = count
-    top_comeback = max(comeback_counts, key=comeback_counts.get)
+    top_comeback = pick_top(comeback_counts, used_teams)
     if comeback_counts[top_comeback] > 0:
+        used_teams.add(top_comeback)
         max_cb = max((g['comeback'] for g in team_profiles[top_comeback]['wins']), default=0)
         storylines.append({
             'label': 'Comeback Kings',
@@ -311,7 +323,8 @@ def generate_storylines(team_profiles, gci_ratings, components):
     # The Closers: highest killer instinct
     killer_avgs = {t: components[t]['killer_instinct']
                    for t in components}
-    top_killer = max(killer_avgs, key=killer_avgs.get)
+    top_killer = pick_top(killer_avgs, used_teams)
+    used_teams.add(top_killer)
     storylines.append({
         'label': 'The Closers',
         'team': top_killer,
@@ -332,7 +345,8 @@ def generate_storylines(team_profiles, gci_ratings, components):
             away_dom = statistics.mean(g['dominance'] for g in away_games)
             home_away_gap[team] = home_dom - away_dom
     if home_away_gap:
-        top_fortress = max(home_away_gap, key=home_away_gap.get)
+        top_fortress = pick_top(home_away_gap, used_teams)
+        used_teams.add(top_fortress)
         gap = home_away_gap[top_fortress]
         storylines.append({
             'label': 'Fortress',
