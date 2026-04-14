@@ -59,6 +59,46 @@ header h1 {
     font-size: 1rem;
 }
 
+.hero-intro {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0.75rem auto 0;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.25rem;
+}
+
+.hero-stat {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.875rem 1.5rem;
+    text-align: center;
+}
+
+.hero-stat-number {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #a855f7, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-stat-label {
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
 /* ── Controls ────────────────────────────────────────── */
 main {
     max-width: 1200px;
@@ -1421,6 +1461,22 @@ footer {
     .playoff-tile {
         width: 60px;
         font-size: 0.68rem;
+    }
+
+    .hero-intro {
+        font-size: 0.85rem;
+    }
+
+    .hero-stats {
+        gap: 0.6rem;
+    }
+
+    .hero-stat {
+        padding: 0.6rem 0.8rem;
+    }
+
+    .hero-stat-number {
+        font-size: 1.3rem;
     }
 }
 
