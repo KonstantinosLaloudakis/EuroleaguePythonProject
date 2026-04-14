@@ -142,3 +142,436 @@ def extract_wp_curve(timeline, max_points=40):
         if curve[-1] != last:
             curve.append(last)
     return curve
+
+
+def determine_round(game_results, game_metrics):
+    """Determine the current round number from game data."""
+    try:
+        with open('mvp_standings_derived.json', 'r', encoding='utf-8') as f:
+            standings = json.load(f)
+        return max((t.get('GP', 0) for t in standings.values()), default=0)
+    except Exception:
+        # Fallback: count max games per team
+        team_counts = {}
+        for gc in game_metrics:
+            g = game_results.get(gc, {})
+            for t in [g.get('home'), g.get('away')]:
+                if t:
+                    team_counts[t] = team_counts.get(t, 0) + 1
+        return max(team_counts.values(), default=0) if team_counts else 0
+
+
+def aggregate_team_profiles(game_results, game_metrics):
+    """Aggregate per-game metrics into team season profiles."""
+    teams = {}
+    for gc, metrics in game_metrics.items():
+        g = game_results[gc]
+        home, away = g['home'], g['away']
+        winner = g['winner']
+
+        for team in [home, away]:
+            if team not in teams:
+                teams[team] = {
+                    'games': [],
+                    'wins': [],
+                    'losses': [],
+                    'home_games': [],
+                    'away_games': [],
+                }
+            is_home = (team == home)
+            is_winner = (team == winner)
+
+            # Team-perspective dominance: positive = team dominated
+            team_dominance = metrics['dominance'] if is_home else -metrics['dominance']
+
+            game_entry = {
+                'gamecode': gc,
+                'round': gc,  # gamecodes approximate round ordering
+                'opponent': away if is_home else home,
+                'is_home': is_home,
+                'is_win': is_winner,
+                'dominance': team_dominance,
+                'control': metrics['control_home'] if is_home else metrics['control_away'],
+                'drama': metrics['drama'],
+                'comeback': metrics['comeback'] if is_winner else 0.0,
+                'crunch': metrics['crunch_home'] if is_home else metrics['crunch_away'],
+                'killer': metrics['killer_home'] if is_home else metrics['killer_away'],
+                'home_score': g['home_score'],
+                'away_score': g['away_score'],
+            }
+
+            teams[team]['games'].append(game_entry)
+            if is_winner:
+                teams[team]['wins'].append(game_entry)
+            else:
+                teams[team]['losses'].append(game_entry)
+            if is_home:
+                teams[team]['home_games'].append(game_entry)
+            else:
+                teams[team]['away_games'].append(game_entry)
+
+    return teams
+
+
+def compute_gci_ratings(team_profiles):
+    """
+    Compute GCI Rating per team: weighted composite, z-normalized to 0-100.
+    Weights: Dominance(35%) + Control(25%) + Crunch(20%) + Killer(20%)
+    """
+    raw_scores = {}
+    components = {}
+    for team, profile in team_profiles.items():
+        games = profile['games']
+        if not games:
+            continue
+        dom_avg = statistics.mean(g['dominance'] for g in games)
+        ctrl_avg = statistics.mean(g['control'] for g in games)
+        crunch_avg = statistics.mean(g['crunch'] for g in games)
+        killer_avg = statistics.mean(g['killer'] for g in games)
+
+        raw = 0.35 * dom_avg + 0.25 * ctrl_avg + 0.20 * crunch_avg + 0.20 * killer_avg
+        raw_scores[team] = raw
+        components[team] = {
+            'dominance_avg': dom_avg,
+            'control_pct': ctrl_avg,
+            'crunch_swing_avg': crunch_avg,
+            'killer_instinct': killer_avg,
+        }
+
+    # Z-normalize to 0-100 scale
+    if len(raw_scores) < 2:
+        return {t: 50.0 for t in raw_scores}, components
+
+    values = list(raw_scores.values())
+    mu = statistics.mean(values)
+    sigma = statistics.stdev(values)
+    if sigma == 0:
+        return {t: 50.0 for t in raw_scores}, components
+
+    gci_ratings = {}
+    for team, raw in raw_scores.items():
+        z = (raw - mu) / sigma
+        # Map z-score to 0-100 (mean=50, ±3σ covers 0-100)
+        gci = max(0.0, min(100.0, 50.0 + z * 16.67))
+        gci_ratings[team] = round(gci, 1)
+
+    return gci_ratings, components
+
+
+def generate_storylines(team_profiles, gci_ratings, components):
+    """Generate auto-storylines for the top teams in each category."""
+    storylines = []
+
+    # Dominant Force: highest GCI
+    top_gci = max(gci_ratings, key=gci_ratings.get)
+    ctrl = components[top_gci]['control_pct']
+    n_dominant_wins = sum(1 for g in team_profiles[top_gci]['wins'] if g['dominance'] > 0.15)
+    storylines.append({
+        'label': 'Dominant Force',
+        'team': top_gci,
+        'color': '#4ecdc4',
+        'text': f"Controlled {ctrl * 100:.0f}% of game time on average. "
+                f"{n_dominant_wins} dominant wins this season.",
+        'stat_label': f"GCI {gci_ratings[top_gci]}",
+        'stat_sub': '#1 Overall',
+    })
+
+    # Drama Magnets: highest average drama
+    drama_avgs = {t: statistics.mean(g['drama'] for g in p['games'])
+                  for t, p in team_profiles.items() if p['games']}
+    top_drama = max(drama_avgs, key=drama_avgs.get)
+    close_games = sum(1 for g in team_profiles[top_drama]['games'] if g['drama'] > 3.0)
+    storylines.append({
+        'label': 'Drama Magnets',
+        'team': top_drama,
+        'color': '#ff6b6b',
+        'text': f"Highest drama index in the league. "
+                f"{close_games} high-drama games this season.",
+        'stat_label': f"Drama {drama_avgs[top_drama]:.2f}",
+        'stat_sub': '#1 Volatility',
+    })
+
+    # Comeback Kings: most comeback wins from below 20% WP
+    comeback_counts = {}
+    for team, profile in team_profiles.items():
+        count = sum(1 for g in profile['wins'] if g['comeback'] > 0.80)
+        comeback_counts[team] = count
+    top_comeback = max(comeback_counts, key=comeback_counts.get)
+    if comeback_counts[top_comeback] > 0:
+        max_cb = max((g['comeback'] for g in team_profiles[top_comeback]['wins']), default=0)
+        storylines.append({
+            'label': 'Comeback Kings',
+            'team': top_comeback,
+            'color': '#ffd700',
+            'text': f"{comeback_counts[top_comeback]} wins from below 20% WP. "
+                    f"Largest comeback from {(1.0 - max_cb) * 100:.0f}% WP.",
+            'stat_label': f"{comeback_counts[top_comeback]} Comebacks",
+            'stat_sub': f"Min WP: {(1.0 - max_cb) * 100:.0f}%",
+        })
+
+    # The Closers: highest killer instinct
+    killer_avgs = {t: components[t]['killer_instinct']
+                   for t in components}
+    top_killer = max(killer_avgs, key=killer_avgs.get)
+    storylines.append({
+        'label': 'The Closers',
+        'team': top_killer,
+        'color': '#a8e6cf',
+        'text': f"Highest killer instinct rating. When ahead in Q4, "
+                f"WP rises +{killer_avgs[top_killer]:.2f} on average.",
+        'stat_label': f"Killer {killer_avgs[top_killer]:.2f}",
+        'stat_sub': '#1 Closer',
+    })
+
+    # Fortress: largest home vs away GCI gap
+    home_away_gap = {}
+    for team, profile in team_profiles.items():
+        home_games = profile['home_games']
+        away_games = profile['away_games']
+        if home_games and away_games:
+            home_dom = statistics.mean(g['dominance'] for g in home_games)
+            away_dom = statistics.mean(g['dominance'] for g in away_games)
+            home_away_gap[team] = home_dom - away_dom
+    if home_away_gap:
+        top_fortress = max(home_away_gap, key=home_away_gap.get)
+        gap = home_away_gap[top_fortress]
+        storylines.append({
+            'label': 'Fortress',
+            'team': top_fortress,
+            'color': '#a855f7',
+            'text': f"Strongest home court advantage. "
+                    f"Dominance gap of {gap:.2f} between home and away.",
+            'stat_label': f"Gap {gap:.2f}",
+            'stat_sub': '#1 Home Court',
+        })
+
+    return storylines
+
+
+def find_superlatives(game_results, game_metrics, wp_timelines):
+    """Find season-best single-game performances."""
+    most_dominant = None
+    most_dramatic = None
+    biggest_comeback = None
+
+    for gc, metrics in game_metrics.items():
+        g = game_results[gc]
+        entry = {
+            'gamecode': gc,
+            'home': g['home'],
+            'away': g['away'],
+            'home_score': g['home_score'],
+            'away_score': g['away_score'],
+            'wp_curve': wp_timelines.get(gc, []),
+        }
+
+        abs_dom = abs(metrics['dominance'])
+        if most_dominant is None or abs_dom > abs(most_dominant['dominance']):
+            most_dominant = {**entry, 'dominance': metrics['dominance'], 'value': abs_dom}
+
+        if most_dramatic is None or metrics['drama'] > most_dramatic['drama']:
+            most_dramatic = {**entry, 'drama': metrics['drama']}
+
+        if metrics['comeback'] > 0.5:  # meaningful comeback
+            if biggest_comeback is None or metrics['comeback'] > biggest_comeback['comeback']:
+                winner = g['winner']
+                biggest_comeback = {**entry, 'comeback': metrics['comeback'], 'winner': winner}
+
+    return {
+        'most_dominant': most_dominant,
+        'most_dramatic': most_dramatic,
+        'biggest_comeback': biggest_comeback,
+    }
+
+
+def main():
+    print("\n=== Computing Game Control Index (GCI) ===")
+
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+
+    # Load data
+    print("  Loading game results...")
+    game_results = load_game_results()
+    print(f"  Found {len(game_results)} completed games")
+
+    # Compute per-game metrics
+    print("  Computing per-game metrics from WP data...")
+    game_metrics = {}
+    wp_timelines = {}
+    skipped = 0
+    for gc in sorted(game_results.keys()):
+        timeline, ta, tb = load_wp_timeline(gc)
+        if not timeline:
+            skipped += 1
+            continue
+        g = game_results[gc]
+        winner_is_home = (g['winner'] == g['home'])
+        metrics = compute_game_metrics(timeline, winner_is_home)
+        if metrics:
+            game_metrics[gc] = metrics
+            wp_timelines[gc] = extract_wp_curve(timeline)
+    print(f"  Computed metrics for {len(game_metrics)} games ({skipped} skipped)")
+
+    # Aggregate team profiles
+    print("  Aggregating team profiles...")
+    team_profiles = aggregate_team_profiles(game_results, game_metrics)
+    print(f"  {len(team_profiles)} teams")
+
+    # Compute GCI ratings
+    gci_ratings, components = compute_gci_ratings(team_profiles)
+
+    # Determine round
+    round_num = determine_round(game_results, game_metrics)
+    print(f"  Round: {round_num}")
+
+    # Build per-team output
+    teams_output = {}
+    for team in sorted(team_profiles.keys()):
+        profile = team_profiles[team]
+        games = profile['games']
+        wins = profile['wins']
+        losses = profile['losses']
+        if not games:
+            continue
+
+        drama_avg = statistics.mean(g['drama'] for g in games)
+        comeback_count = sum(1 for g in wins if g['comeback'] > 0.80)
+        comeback_rating = statistics.mean(g['comeback'] for g in wins) if wins else 0.0
+
+        # Home vs away GCI (simplified: average dominance)
+        home_doms = [g['dominance'] for g in profile['home_games']]
+        away_doms = [g['dominance'] for g in profile['away_games']]
+        home_gci = statistics.mean(home_doms) if home_doms else 0.0
+        away_gci = statistics.mean(away_doms) if away_doms else 0.0
+
+        # Win quality histogram: 5 bins [0-0.1), [0.1-0.2), [0.2-0.3), [0.3-0.4), [0.4+)
+        bins = [0.0, 0.1, 0.2, 0.3, 0.4, float('inf')]
+        win_hist = [0] * 5
+        for g in wins:
+            d = abs(g['dominance'])
+            for i in range(5):
+                if bins[i] <= d < bins[i + 1]:
+                    win_hist[i] += 1
+                    break
+        loss_hist = [0] * 5
+        for g in losses:
+            d = abs(g['dominance'])
+            for i in range(5):
+                if bins[i] <= d < bins[i + 1]:
+                    loss_hist[i] += 1
+                    break
+
+        # Game log (sorted by gamecode as proxy for chronological order)
+        game_log = []
+        for g in sorted(games, key=lambda x: x['gamecode']):
+            game_log.append({
+                'gamecode': g['gamecode'],
+                'opponent': g['opponent'],
+                'is_home': g['is_home'],
+                'is_win': g['is_win'],
+                'dominance': round(g['dominance'], 3),
+                'drama': round(g['drama'], 3),
+                'home_score': g['home_score'],
+                'away_score': g['away_score'],
+            })
+
+        teams_output[team] = {
+            'gci': gci_ratings.get(team, 50.0),
+            'dominance_avg': round(components.get(team, {}).get('dominance_avg', 0.0), 4),
+            'control_pct': round(components.get(team, {}).get('control_pct', 0.0), 4),
+            'crunch_swing_avg': round(components.get(team, {}).get('crunch_swing_avg', 0.0), 4),
+            'killer_instinct': round(components.get(team, {}).get('killer_instinct', 0.0), 4),
+            'drama_avg': round(drama_avg, 4),
+            'comeback_rating': round(comeback_rating, 4),
+            'comeback_count': comeback_count,
+            'home_gci': round(home_gci, 4),
+            'away_gci': round(away_gci, 4),
+            'win_quality_hist': win_hist,
+            'loss_quality_hist': loss_hist,
+            'game_log': game_log,
+        }
+
+    # Generate storylines
+    storylines = generate_storylines(team_profiles, gci_ratings, components)
+    print(f"  Generated {len(storylines)} storylines")
+
+    # Find superlatives
+    superlatives = find_superlatives(game_results, game_metrics, wp_timelines)
+    print(f"  Found superlatives")
+
+    # Build games array for frontend
+    games_output = []
+    for gc in sorted(game_metrics.keys()):
+        g = game_results[gc]
+        m = game_metrics[gc]
+        games_output.append({
+            'gamecode': gc,
+            'home': g['home'],
+            'away': g['away'],
+            'home_score': g['home_score'],
+            'away_score': g['away_score'],
+            'winner': g['winner'],
+            'dominance': m['dominance'],
+            'drama': m['drama'],
+            'comeback': m['comeback'],
+            'control_home': m['control_home'],
+            'control_away': m['control_away'],
+            'crunch_home': m['crunch_home'],
+            'crunch_away': m['crunch_away'],
+        })
+
+    # Game of the Round: highest drama in the latest round's games
+    # Approximate latest round: last 10 gamecodes
+    latest_gcs = sorted(game_metrics.keys())[-10:]
+    gor_gc = max(latest_gcs, key=lambda gc: game_metrics[gc]['drama'])
+    gor_game = game_results[gor_gc]
+    gor_metrics = game_metrics[gor_gc]
+    game_of_round = {
+        'gamecode': gor_gc,
+        'home': gor_game['home'],
+        'away': gor_game['away'],
+        'home_score': gor_game['home_score'],
+        'away_score': gor_game['away_score'],
+        'winner': gor_game['winner'],
+        'drama': gor_metrics['drama'],
+        'comeback': gor_metrics['comeback'],
+        'crunch_home': gor_metrics['crunch_home'],
+        'dominance': gor_metrics['dominance'],
+        'wp_curve': wp_timelines.get(gor_gc, []),
+    }
+
+    # Also add wp_curve to superlatives
+    for key in ['most_dominant', 'most_dramatic', 'biggest_comeback']:
+        if superlatives.get(key) and superlatives[key].get('gamecode'):
+            sc_gc = superlatives[key]['gamecode']
+            superlatives[key]['wp_curve'] = wp_timelines.get(sc_gc, [])
+
+    # Build final output
+    output = {
+        'season': SEASON,
+        'round': round_num,
+        'teams': teams_output,
+        'games': games_output,
+        'storylines': storylines,
+        'game_of_round': game_of_round,
+        'superlatives': superlatives,
+    }
+
+    # Write output
+    outfile = f"gci_ratings{round_suffix}.json"
+    with open(outfile, 'w', encoding='utf-8') as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+    print(f"\n  Output: {outfile}")
+    print(f"  Teams: {len(teams_output)}")
+    print(f"  Games: {len(games_output)}")
+
+    # Also write without suffix for fallback
+    if round_suffix:
+        with open('gci_ratings.json', 'w', encoding='utf-8') as f:
+            json.dump(output, f, ensure_ascii=False, indent=2)
+
+    print("\n=== GCI computation complete ===")
+
+
+if __name__ == '__main__':
+    main()
