@@ -42,6 +42,27 @@ async function init() {
             seasonSelect.appendChild(opt);
         });
         seasonSelect.disabled = false;
+
+        // Auto-select from URL params (e.g. ?season=2023&game=170)
+        const params = new URLSearchParams(window.location.search);
+        const urlSeason = params.get('season');
+        const urlGame = params.get('game');
+        if (urlSeason && seasonSelect.querySelector(`option[value="${urlSeason}"]`)) {
+            seasonSelect.value = urlSeason;
+            seasonSelect.dispatchEvent(new Event('change'));
+            if (urlGame) {
+                // Wait for the season change handler to load games, then select
+                const waitForGames = setInterval(() => {
+                    if (gameSelect.querySelector(`option[value="${urlGame}"]`)) {
+                        clearInterval(waitForGames);
+                        gameSelect.value = urlGame;
+                        gameSelect.dispatchEvent(new Event('change'));
+                    }
+                }, 50);
+                // Safety timeout: stop polling after 5s
+                setTimeout(() => clearInterval(waitForGames), 5000);
+            }
+        }
     } catch (err) {
         seasonSelect.innerHTML = '<option value="">Error loading seasons</option>';
         console.error('Failed to load seasons:', err);
