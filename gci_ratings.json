@@ -3,11 +3,11 @@
   "round": 37,
   "teams": {
     "ASV": {
-      "gci": 13.5,
+      "gci": 16.5,
       "dominance_avg": -0.1135,
       "control_pct": 0.1426,
       "crunch_swing_avg": -0.0774,
-      "killer_instinct": -0.0062,
+      "killer_instinct": -0.0439,
       "drama_avg": 3.9102,
       "comeback_rating": 0.74,
       "comeback_count": 3,
@@ -401,11 +401,11 @@
       ]
     },
     "BAR": {
-      "gci": 51.5,
+      "gci": 48.7,
       "dominance_avg": -0.0128,
       "control_pct": 0.3081,
       "crunch_swing_avg": 0.0613,
-      "killer_instinct": -0.0088,
+      "killer_instinct": -0.0731,
       "drama_avg": 3.9305,
       "comeback_rating": 0.6388,
       "comeback_count": 1,
@@ -799,11 +799,11 @@
       ]
     },
     "BAS": {
-      "gci": 36.3,
+      "gci": 35.6,
       "dominance_avg": -0.0497,
       "control_pct": 0.2652,
       "crunch_swing_avg": -0.0299,
-      "killer_instinct": -0.0074,
+      "killer_instinct": -0.0646,
       "drama_avg": 4.2677,
       "comeback_rating": 0.6417,
       "comeback_count": 2,
@@ -1197,11 +1197,11 @@
       ]
     },
     "DUB": {
-      "gci": 54.0,
+      "gci": 52.0,
       "dominance_avg": 0.021,
       "control_pct": 0.3611,
       "crunch_swing_avg": -0.024,
-      "killer_instinct": -0.0137,
+      "killer_instinct": -0.0636,
       "drama_avg": 4.1339,
       "comeback_rating": 0.6464,
       "comeback_count": 4,
@@ -1595,11 +1595,11 @@
       ]
     },
     "HTA": {
-      "gci": 66.5,
+      "gci": 64.1,
       "dominance_avg": 0.0542,
       "control_pct": 0.396,
       "crunch_swing_avg": 0.034,
-      "killer_instinct": -0.0037,
+      "killer_instinct": -0.0373,
       "drama_avg": 3.9834,
       "comeback_rating": 0.6436,
       "comeback_count": 2,
@@ -1993,11 +1993,11 @@
       ]
     },
     "IST": {
-      "gci": 29.1,
+      "gci": 26.8,
       "dominance_avg": -0.0553,
       "control_pct": 0.227,
       "crunch_swing_avg": -0.0569,
-      "killer_instinct": -0.0205,
+      "killer_instinct": -0.1137,
       "drama_avg": 4.0365,
       "comeback_rating": 0.6636,
       "comeback_count": 3,
@@ -2391,11 +2391,11 @@
       ]
     },
     "MAD": {
-      "gci": 70.1,
+      "gci": 72.1,
       "dominance_avg": 0.0648,
       "control_pct": 0.4191,
       "crunch_swing_avg": 0.0457,
-      "killer_instinct": -0.0127,
+      "killer_instinct": 0.0247,
       "drama_avg": 3.7333,
       "comeback_rating": 0.608,
       "comeback_count": 1,
@@ -2789,11 +2789,11 @@
       ]
     },
     "MCO": {
-      "gci": 59.3,
+      "gci": 58.4,
       "dominance_avg": 0.0242,
       "control_pct": 0.3671,
       "crunch_swing_avg": 0.0275,
-      "killer_instinct": -0.0065,
+      "killer_instinct": -0.0306,
       "drama_avg": 3.8914,
       "comeback_rating": 0.6277,
       "comeback_count": 3,
@@ -3187,11 +3187,11 @@
       ]
     },
     "MIL": {
-      "gci": 48.4,
+      "gci": 51.8,
       "dominance_avg": 0.0055,
       "control_pct": 0.3534,
       "crunch_swing_avg": -0.0764,
-      "killer_instinct": -0.0015,
+      "killer_instinct": 0.0234,
       "drama_avg": 3.6713,
       "comeback_rating": 0.6102,
       "comeback_count": 1,
@@ -3585,11 +3585,11 @@
       ]
     },
     "MUN": {
-      "gci": 45.7,
+      "gci": 49.8,
       "dominance_avg": -0.0168,
       "control_pct": 0.299,
       "crunch_swing_avg": -0.0036,
-      "killer_instinct": -0.0038,
+      "killer_instinct": 0.027,
       "drama_avg": 3.6101,
       "comeback_rating": 0.6475,
       "comeback_count": 2,
@@ -3983,11 +3983,11 @@
       ]
     },
     "OLY": {
-      "gci": 80.4,
+      "gci": 78.7,
       "dominance_avg": 0.103,
       "control_pct": 0.493,
       "crunch_swing_avg": 0.0321,
-      "killer_instinct": -0.0187,
+      "killer_instinct": -0.0196,
       "drama_avg": 4.0447,
       "comeback_rating": 0.6193,
       "comeback_count": 1,
@@ -4381,11 +4381,11 @@
       ]
     },
     "PAM": {
-      "gci": 64.5,
+      "gci": 63.1,
       "dominance_avg": 0.0445,
       "control_pct": 0.3795,
       "crunch_swing_avg": 0.0512,
-      "killer_instinct": -0.0103,
+      "killer_instinct": -0.0331,
       "drama_avg": 4.067,
       "comeback_rating": 0.6291,
       "comeback_count": 3,
@@ -4779,11 +4779,11 @@
       ]
     },
     "PAN": {
-      "gci": 52.5,
+      "gci": 56.8,
       "dominance_avg": 0.0161,
       "control_pct": 0.3354,
       "crunch_swing_avg": -0.0151,
-      "killer_instinct": -0.0033,
+      "killer_instinct": 0.0416,
       "drama_avg": 3.7358,
       "comeback_rating": 0.6412,
       "comeback_count": 3,
@@ -5177,11 +5177,11 @@
       ]
     },
     "PAR": {
-      "gci": 33.4,
+      "gci": 23.6,
       "dominance_avg": -0.0627,
       "control_pct": 0.2328,
       "crunch_swing_avg": 0.0042,
-      "killer_instinct": -0.0171,
+      "killer_instinct": -0.2183,
       "drama_avg": 4.1986,
       "comeback_rating": 0.6911,
       "comeback_count": 4,
@@ -5575,11 +5575,11 @@
       ]
     },
     "PRS": {
-      "gci": 43.8,
+      "gci": 45.9,
       "dominance_avg": -0.0073,
       "control_pct": 0.3179,
       "crunch_swing_avg": -0.0601,
-      "killer_instinct": -0.0143,
+      "killer_instinct": -0.0164,
       "drama_avg": 3.8259,
       "comeback_rating": 0.6078,
       "comeback_count": 1,
@@ -5973,11 +5973,11 @@
       ]
     },
     "RED": {
-      "gci": 56.5,
+      "gci": 55.1,
       "dominance_avg": 0.0222,
       "control_pct": 0.3323,
       "crunch_swing_avg": 0.0445,
-      "killer_instinct": -0.0152,
+      "killer_instinct": -0.0499,
       "drama_avg": 4.1328,
       "comeback_rating": 0.6727,
       "comeback_count": 4,
@@ -6371,11 +6371,11 @@
       ]
     },
     "TEL": {
-      "gci": 45.9,
+      "gci": 45.1,
       "dominance_avg": -0.0297,
       "control_pct": 0.2911,
       "crunch_swing_avg": 0.0387,
-      "killer_instinct": -0.0116,
+      "killer_instinct": -0.0552,
       "drama_avg": 4.2369,
       "comeback_rating": 0.6654,
       "comeback_count": 3,
@@ -6769,11 +6769,11 @@
       ]
     },
     "ULK": {
-      "gci": 57.6,
+      "gci": 62.1,
       "dominance_avg": 0.0073,
       "control_pct": 0.3448,
       "crunch_swing_avg": 0.0495,
-      "killer_instinct": 0.005,
+      "killer_instinct": 0.0623,
       "drama_avg": 3.6778,
       "comeback_rating": 0.6416,
       "comeback_count": 3,
@@ -7167,11 +7167,11 @@
       ]
     },
     "VIR": {
-      "gci": 24.3,
+      "gci": 28.5,
       "dominance_avg": -0.0709,
       "control_pct": 0.1961,
       "crunch_swing_avg": -0.065,
-      "killer_instinct": -0.0128,
+      "killer_instinct": -0.0136,
       "drama_avg": 3.6888,
       "comeback_rating": 0.6363,
       "comeback_count": 0,
@@ -7565,11 +7565,11 @@
       ]
     },
     "ZAL": {
-      "gci": 66.9,
+      "gci": 65.2,
       "dominance_avg": 0.0558,
       "control_pct": 0.4108,
       "crunch_swing_avg": 0.0197,
-      "killer_instinct": -0.0049,
+      "killer_instinct": -0.0281,
       "drama_avg": 3.7424,
       "comeback_rating": 0.6031,
       "comeback_count": 1,
@@ -13521,7 +13521,7 @@
       "team": "OLY",
       "color": "#4ecdc4",
       "text": "Controlled 49% of game time on average. 17 dominant wins this season.",
-      "stat_label": "GCI 80.4",
+      "stat_label": "GCI 78.7",
       "stat_sub": "#1 Overall"
     },
     {
@@ -13544,8 +13544,8 @@
       "label": "The Closers",
       "team": "ULK",
       "color": "#a8e6cf",
-      "text": "Highest killer instinct rating. When ahead in Q4, WP rises +0.01 on average.",
-      "stat_label": "Killer 0.01",
+      "text": "Best at closing out games. Average net WP gain of +0.06 per game when leading in Q4.",
+      "stat_label": "Killer +0.06",
       "stat_sub": "#1 Closer"
     },
     {

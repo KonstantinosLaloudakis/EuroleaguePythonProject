@@ -21,7 +21,7 @@ All metrics are derived from the WP replay data (`docs/data/{season}/{gamecode}.
 | **Drama Index** | Total variation of WP curve: `sum(abs(WP[i+1] - WP[i]))` for consecutive plays | 0 to ~8+ |
 | **Comeback Magnitude** | For wins: `1.0 - min(winner_WP)`. For losses: 0 | 0 to 1.0 |
 | **Crunch-Time Swing** | Net WP change per team in the final 5 minutes of game clock (Q4 from 5:00 to 0:00, plus overtime if applicable). Computed as `WP_final - WP_at_5min_mark`. | -1.0 to +1.0 |
-| **Killer Instinct** | Average WP delta in Q4 when leading with WP > 0.6. Measures ability to close out games. | -0.5 to +0.5 |
+| **Killer Instinct** | Net WP change during Q4 plays when leading (WP > 0.55 for home, < 0.45 for away). Sum of deltas, not average — captures total close-out pressure. Positive = extended lead. | -0.5 to +0.5 |
 
 ### Team Season Aggregates
 

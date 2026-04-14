@@ -95,20 +95,20 @@ def compute_game_metrics(timeline, winner_is_home):
         crunch_home = 0.0
         crunch_away = 0.0
 
-    # 6. Killer Instinct: avg WP delta in Q4+ when leading with WP > 0.6
+    # 6. Killer Instinct: net WP change in Q4+ during plays where team was leading.
+    #    Sum (not average) of WP deltas when leading — captures total close-out pressure.
+    #    Positive = team extended their lead in Q4; Negative = team surrendered it.
     q4_plays = [p for p in timeline if p['p'] >= 4]
-    killer_home_deltas = []
-    killer_away_deltas = []
+    killer_home = 0.0
+    killer_away = 0.0
     for i in range(len(q4_plays) - 1):
         wp_now = q4_plays[i]['w']
         wp_next = q4_plays[i + 1]['w']
-        if wp_now > 0.6:
-            killer_home_deltas.append(wp_next - wp_now)
-        if wp_now < 0.4:
-            killer_away_deltas.append(wp_now - wp_next)
-
-    killer_home = statistics.mean(killer_home_deltas) if killer_home_deltas else 0.0
-    killer_away = statistics.mean(killer_away_deltas) if killer_away_deltas else 0.0
+        delta = wp_next - wp_now
+        if wp_now > 0.55:   # home leading
+            killer_home += delta
+        if wp_now < 0.45:   # away leading
+            killer_away -= delta  # flip sign: positive = away extended lead
 
     return {
         'dominance': round(dominance, 4),
@@ -316,9 +316,9 @@ def generate_storylines(team_profiles, gci_ratings, components):
         'label': 'The Closers',
         'team': top_killer,
         'color': '#a8e6cf',
-        'text': f"Highest killer instinct rating. When ahead in Q4, "
-                f"WP rises +{killer_avgs[top_killer]:.2f} on average.",
-        'stat_label': f"Killer {killer_avgs[top_killer]:.2f}",
+        'text': f"Best at closing out games. Average net WP gain of "
+                f"+{killer_avgs[top_killer]:.2f} per game when leading in Q4.",
+        'stat_label': f"Killer +{killer_avgs[top_killer]:.2f}",
         'stat_sub': '#1 Closer',
     })
 
