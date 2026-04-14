@@ -199,19 +199,11 @@ function initTeamPills() {
         return na.localeCompare(nb);
     });
 
-    // Pre-select top 3 by GCI in latest season (2025 if available)
-    const teamsWithLatestGci = allTeams
-        .map(code => {
-            const td = _hist.team_trends[code];
-            const lastIdx = td.seasons.indexOf(2025) !== -1
-                ? td.seasons.indexOf(2025)
-                : td.seasons.length - 1;
-            return { code, gci: td.gci[lastIdx] || 0 };
-        })
-        .sort((a, b) => b.gci - a.gci);
-
-    // Pre-select top 3
-    teamsWithLatestGci.slice(0, 3).forEach(t => _activePills.add(t.code));
+    // Default selection: 5 legacy teams with distinct trajectories
+    const DEFAULT_SELECTED = ['OLY', 'BAR', 'MAD', 'PAN', 'ULK'];
+    DEFAULT_SELECTED.forEach(code => {
+        if (_hist.team_trends[code]) _activePills.add(code);
+    });
 
     const pillRow = document.getElementById('pill-row');
     let showAllVisible = false;
@@ -261,7 +253,7 @@ function togglePill(code) {
         if (_activePills.size <= 1) return; // must have at least 1
         _activePills.delete(code);
     } else {
-        if (_activePills.size >= 5) return; // max 5
+        if (_activePills.size >= 8) return; // max 8
         _activePills.add(code);
     }
     if (window._rebuildPills) window._rebuildPills();
