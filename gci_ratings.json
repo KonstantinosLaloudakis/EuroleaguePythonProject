@@ -13559,6 +13559,7 @@
   ],
   "game_of_round": {
     "gamecode": 363,
+    "round": 37,
     "home": "HTA",
     "away": "OLY",
     "home_score": 85,
@@ -13742,6 +13743,8 @@
       "away": "PAM",
       "home_score": 79,
       "away_score": 108,
+      "dominance": -0.3952,
+      "value": 0.3952,
       "wp_curve": [
         [
           0.0,
@@ -13907,9 +13910,7 @@
           1.0,
           0.0
         ]
-      ],
-      "dominance": -0.3952,
-      "value": 0.3952
+      ]
     },
     "most_dramatic": {
       "gamecode": 168,
@@ -13917,6 +13918,7 @@
       "away": "BAS",
       "home_score": 134,
       "away_score": 124,
+      "drama": 16.4536,
       "wp_curve": [
         [
           0.0,
@@ -14082,8 +14084,7 @@
           1.0,
           1.0
         ]
-      ],
-      "drama": 16.4536
+      ]
     },
     "biggest_comeback": {
       "gamecode": 239,
@@ -14091,6 +14092,8 @@
       "away": "HTA",
       "home_score": 104,
       "away_score": 101,
+      "comeback": 0.9507,
+      "winner": "PAR",
       "wp_curve": [
         [
           0.0,
@@ -14256,9 +14259,7 @@
           1.0,
           1.0
         ]
-      ],
-      "comeback": 0.9507,
-      "winner": "PAR"
+      ]
     }
   }
 }
