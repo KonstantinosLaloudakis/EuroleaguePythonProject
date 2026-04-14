@@ -233,8 +233,8 @@ function initTeamPills() {
                 pill.style.borderColor = color;
                 pill.style.background = `${color}18`;
             }
-            pill.textContent = code;
-            pill.title = name;
+            pill.textContent = name;
+            pill.title = code;
             pill.onclick = () => togglePill(code);
             pillRow.appendChild(pill);
         });
@@ -413,8 +413,10 @@ function renderSuperlatives() {
                 if (!d) return null;
                 const homeColor = getTeamColor(d.home);
                 const awayColor = getTeamColor(d.away);
+                const homeName = TEAM_NAMES[d.home] || d.home;
+                const awayName = TEAM_NAMES[d.away] || d.away;
                 return {
-                    matchup: `<span style="color:${homeColor}">${d.home}</span> ${d.home_score}–${d.away_score} <span style="color:${awayColor}">${d.away}</span>`,
+                    matchup: `<span style="color:${homeColor}">${homeName}</span> ${d.home_score}–${d.away_score} <span style="color:${awayColor}">${awayName}</span>`,
                     value: `Drama ${d.drama.toFixed(2)}`,
                     season: seasonLabel(d.season),
                     link: `replay.html?season=${d.season}&game=${d.gamecode}`,
@@ -430,12 +432,14 @@ function renderSuperlatives() {
                 if (!d) return null;
                 const homeColor = getTeamColor(d.home);
                 const awayColor = getTeamColor(d.away);
+                const homeName = TEAM_NAMES[d.home] || d.home;
+                const awayName = TEAM_NAMES[d.away] || d.away;
                 const winnerName = TEAM_NAMES[d.winner] || d.winner;
                 const fromPct = d.comeback !== undefined
                     ? `From ${((1 - d.comeback) * 100).toFixed(0)}% WP`
                     : '';
                 return {
-                    matchup: `<span style="color:${homeColor}">${d.home}</span> ${d.home_score}–${d.away_score} <span style="color:${awayColor}">${d.away}</span>`,
+                    matchup: `<span style="color:${homeColor}">${homeName}</span> ${d.home_score}–${d.away_score} <span style="color:${awayColor}">${awayName}</span>`,
                     value: `${winnerName} wins · ${fromPct}`,
                     season: seasonLabel(d.season),
                     link: `replay.html?season=${d.season}&game=${d.gamecode}`,
@@ -451,8 +455,10 @@ function renderSuperlatives() {
                 if (!d) return null;
                 const homeColor = getTeamColor(d.home);
                 const awayColor = getTeamColor(d.away);
+                const homeName = TEAM_NAMES[d.home] || d.home;
+                const awayName = TEAM_NAMES[d.away] || d.away;
                 return {
-                    matchup: `<span style="color:${homeColor}">${d.home}</span> ${d.home_score}–${d.away_score} <span style="color:${awayColor}">${d.away}</span>`,
+                    matchup: `<span style="color:${homeColor}">${homeName}</span> ${d.home_score}–${d.away_score} <span style="color:${awayColor}">${awayName}</span>`,
                     value: `Dominance ${d.dominance.toFixed(3)}`,
                     season: seasonLabel(d.season),
                     link: `replay.html?season=${d.season}&game=${d.gamecode}`,

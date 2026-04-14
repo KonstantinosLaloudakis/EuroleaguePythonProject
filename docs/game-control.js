@@ -130,7 +130,7 @@ function renderGameOfRound() {
         </div>
         <div class="gor-body">
             <div class="gor-score">
-                <div class="gor-team-code" style="color:${homeColor}">${g.home}</div>
+                <div class="gor-team-code" style="color:${homeColor}">${homeName}</div>
                 <div class="gor-pts">${g.home_score ?? '—'}</div>
                 <div class="gor-venue">HOME</div>
             </div>
@@ -138,7 +138,7 @@ function renderGameOfRound() {
                 ${wpSvg || '<div style="text-align:center;color:var(--text-muted);font-size:0.75rem;">No WP curve</div>'}
             </div>
             <div class="gor-score">
-                <div class="gor-team-code" style="color:${awayColor}">${g.away}</div>
+                <div class="gor-team-code" style="color:${awayColor}">${awayName}</div>
                 <div class="gor-pts">${g.away_score ?? '—'}</div>
                 <div class="gor-venue">AWAY</div>
             </div>
@@ -161,7 +161,7 @@ function renderScatter() {
         x, y,
         mode: 'markers+text',
         type: 'scatter',
-        text: codes,
+        text: names,
         textposition: 'top center',
         textfont: { size: 9, color: '#9ca3af' },
         marker: { size: 12, color: colors, line: { width: 1, color: '#1a1b26' } },
@@ -327,7 +327,7 @@ function renderTeamDetail(code) {
         const prefix = g.is_home ? 'vs' : '@';
         const score = g.is_home ? `${g.home_score}-${g.away_score}` : `${g.away_score}-${g.home_score}`;
         return `<div class="game-log-row">
-            <span style="color:var(--text-muted)">${prefix} <span style="color:${oppColor};font-weight:600">${g.opponent}</span></span>
+            <span style="color:var(--text-muted)">${prefix} <span style="color:${oppColor};font-weight:600">${opp}</span></span>
             <span><span style="color:${resultColor};font-weight:600">${result}</span> ${score} · <span style="color:var(--text-muted)">${g.dominance.toFixed(2)}</span></span>
         </div>`;
     }).join('');
@@ -496,7 +496,7 @@ function renderSuperlatives() {
         return `<div class="superlative-card">
             <div class="superlative-icon" style="color:${c.color}">${c.icon}</div>
             <div class="superlative-label">${c.label}</div>
-            <div class="superlative-matchup">${c.data.home} ${score} ${c.data.away}</div>
+            <div class="superlative-matchup">${TEAM_NAMES[c.data.home] || c.data.home} ${score} ${TEAM_NAMES[c.data.away] || c.data.away}</div>
             <div style="color:${c.color};font-size:0.8rem;">${c.metric(c.data)}</div>
         </div>`;
     }).join('');
