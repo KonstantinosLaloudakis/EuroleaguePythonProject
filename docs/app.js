@@ -623,7 +623,9 @@ function renderChart(data, taName, tbName) {
         }
 
         // 7. Shot Chart with Zone Efficiency
+        const shotChartCard = document.getElementById('shot-chart-card');
         if (data.adv.s && data.adv.s.length > 0) {
+            if (shotChartCard) shotChartCard.style.display = '';
             const shotData = data.adv.s;
 
             function classifyZone(x, y) {
@@ -738,6 +740,8 @@ function renderChart(data, taName, tbName) {
             btnTb.textContent = tbName;
             btnTa.onclick = () => { btnTa.classList.add('active'); btnTb.classList.remove('active'); renderShotChart(ta); };
             btnTb.onclick = () => { btnTb.classList.add('active'); btnTa.classList.remove('active'); renderShotChart(tb); };
+        } else {
+            if (shotChartCard) shotChartCard.style.display = 'none';
         }
 
         // 8. Advanced Box Score
