@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f1117">
+    <title>GCI History — Euroleague Analytics</title>
+    <meta name="description"
+        content="19 seasons of Game Control Index history. How Euroleague basketball evolved in drama, comebacks, and team dominance from 2007 to 2025.">
+    <meta property="og:title" content="GCI History — Euroleague Analytics">
+    <meta property="og:description"
+        content="19 seasons of Euroleague basketball evolution through the lens of Game Control Index — drama, comebacks, and team dominance trends.">
+    <meta property="og:image" content="og-image.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Section labels */
+        .section-label { font-size:0.68rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.3rem; }
+        .section-title { font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:700;color:var(--text-primary);margin-bottom:0.8rem; }
+
+        /* Hero metric cards */
+        .hero-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.2rem; }
+        @media(max-width:640px){ .hero-grid { grid-template-columns:1fr; } }
+        .hero-card { background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary));border-radius:var(--radius);padding:1.3rem 1.2rem 1rem;border:1px solid var(--border);text-align:center; }
+        .hero-card-label { font-size:0.65rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.4rem; }
+        .hero-card-value { font-family:'Outfit',sans-serif;font-size:2rem;font-weight:800;line-height:1; }
+        .hero-card-sub { font-size:0.72rem;color:var(--text-muted);margin-top:0.35rem;margin-bottom:0.6rem; }
+        .hero-sparkline { width:100%;height:40px;display:block; }
+
+        /* Summary banner */
+        .hero-banner { text-align:center;padding:0.8rem 1rem;background:var(--bg-secondary);border-radius:8px;color:var(--text-muted);font-size:0.82rem;border:1px solid var(--border); }
+        .hero-banner strong { color:var(--text-primary); }
+
+        /* Team comparison */
+        .pill-row { display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.8rem;align-items:center; }
+        .team-pill { padding:0.25rem 0.65rem;border-radius:20px;border:1px solid var(--border);background:var(--bg-secondary);font-size:0.75rem;font-weight:600;cursor:pointer;transition:var(--transition);white-space:nowrap; }
+        .team-pill:hover { border-color:var(--border-hover);background:var(--bg-card); }
+        .team-pill.active { border-color:currentColor;background:rgba(255,255,255,0.06); }
+        .team-pill.hidden-pill { display:none; }
+        .pill-showmore { padding:0.25rem 0.65rem;border-radius:20px;border:1px solid var(--border);background:transparent;font-size:0.72rem;font-weight:600;cursor:pointer;color:var(--text-muted);transition:var(--transition); }
+        .pill-showmore:hover { color:var(--text-primary);border-color:var(--border-hover); }
+
+        .comparison-controls { display:flex;gap:0.8rem;align-items:center;margin-bottom:0.8rem;flex-wrap:wrap; }
+        .metric-select { background:var(--bg-secondary);border:1px solid var(--border);color:var(--text-primary);padding:0.35rem 0.7rem;border-radius:8px;font-size:0.78rem;font-family:inherit;cursor:pointer; }
+        .metric-select:focus { outline:none;border-color:var(--border-hover); }
+
+        #comparison-chart { width:100%;height:380px; }
+
+        /* Era cards */
+        .era-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem; }
+        @media(max-width:768px){ .era-grid { grid-template-columns:1fr; } }
+        .era-card { background:var(--bg-secondary);border-radius:var(--radius);padding:1.2rem 1.1rem;border:1px solid var(--border);border-top-width:3px; }
+        .era-name { font-family:'Outfit',sans-serif;font-size:1rem;font-weight:800;color:var(--text-primary);margin-bottom:0.2rem; }
+        .era-years { font-size:0.72rem;color:var(--text-muted);margin-bottom:0.8rem; }
+        .era-stat { display:flex;justify-content:space-between;align-items:baseline;padding:0.3rem 0;border-bottom:1px solid var(--border); }
+        .era-stat:last-child { border-bottom:none; }
+        .era-stat-label { font-size:0.72rem;color:var(--text-muted); }
+        .era-stat-value { font-size:0.88rem;font-weight:700;color:var(--text-primary); }
+
+        /* Superlatives 2x2 */
+        .superlative-grid { display:grid;grid-template-columns:1fr 1fr;gap:0.8rem; }
+        @media(max-width:640px){ .superlative-grid { grid-template-columns:1fr; } }
+        .superlative-card { background:var(--bg-secondary);border-radius:var(--radius);padding:1.1rem 1rem;border:1px solid var(--border);border-left-width:3px; }
+        .superlative-card a.game-link { text-decoration:none;color:inherit;display:block; }
+        .superlative-card a.game-link:hover .superlative-matchup { text-decoration:underline;text-decoration-color:var(--border-hover); }
+        .superlative-icon { font-size:1.3rem;margin-bottom:0.25rem; }
+        .superlative-label { font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:0.2rem; }
+        .superlative-matchup { font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;color:var(--text-primary);margin-bottom:0.25rem; }
+        .superlative-value { font-size:0.8rem;font-weight:600; }
+        .superlative-season { font-size:0.68rem;color:var(--text-muted);margin-top:0.2rem; }
+    </style>
+</head>
+
+<body>
+
+    <nav class="site-nav">
+        <span class="site-nav-brand">🏀 Euroleague Analytics</span>
+        <a href="index.html" class="nav-link">Season Hub</a>
+        <a href="team.html" class="nav-link">Team Deep-Dive</a>
+        <a href="players.html" class="nav-link">Player Stats</a>
+        <a href="h2h.html" class="nav-link">Head-to-Head</a>
+        <a href="recap.html" class="nav-link">Game Recap</a>
+        <a href="shots.html" class="nav-link">Shot Lab</a>
+        <a href="network.html" class="nav-link">Playmaking</a>
+        <a href="replay.html" class="nav-link">Game Replay</a>
+        <a href="playoffs.html" class="nav-link">Playoffs</a>
+        <a href="mvp.html" class="nav-link">MVP Race</a>
+        <a href="game-control.html" class="nav-link">Game Control</a>
+        <a href="gci-history.html" class="nav-link active">GCI History</a>
+        <a href="about.html" class="nav-link">About</a>
+    </nav>
+
+    <header>
+        <h1>GCI History</h1>
+        <p class="subtitle">How the Euroleague Evolved — 19 seasons of drama, dominance &amp; comebacks</p>
+    </header>
+
+    <main>
+
+        <!-- Loading -->
+        <div id="loading" class="stat-card" style="text-align:center;padding:3rem 1rem;">
+            <span class="loading-spinner"></span> Loading historical GCI data...
+        </div>
+
+        <!-- Error (hidden) -->
+        <div id="load-error" class="hidden" style="text-align:center;padding:3rem 1rem;">
+            <div style="font-size:3rem;margin-bottom:1rem;">&#9888;&#65039;</div>
+            <p style="color:var(--text-muted);font-size:1rem;">
+                Could not load GCI history data. Make sure
+                <code>gci_historical.json</code> and <code>data/current/dashboard.json</code> are present.
+            </p>
+        </div>
+
+        <!-- Content wrapper (hidden until loaded) -->
+        <div id="content" class="hidden">
+
+            <!-- Section 1: Hero -->
+            <div class="stat-card">
+                <p class="section-label">League evolution</p>
+                <h3 class="section-title">How the Game Changed</h3>
+                <div id="hero-cards" class="hero-grid"></div>
+                <div id="hero-banner" class="hero-banner"></div>
+            </div>
+
+            <!-- Section 2: Team Comparison -->
+            <div class="stat-card">
+                <p class="section-label">Season-by-season</p>
+                <h3 class="section-title">Team Comparison</h3>
+                <div class="comparison-controls">
+                    <label style="font-size:0.75rem;color:var(--text-muted);font-weight:600;">Metric:</label>
+                    <select id="metric-select" class="metric-select" onchange="onMetricChange()">
+                        <option value="gci">GCI Rating</option>
+                        <option value="avg_drama">Drama Index</option>
+                        <option value="win_pct">Win %</option>
+                    </select>
+                </div>
+                <div id="pill-row" class="pill-row"></div>
+                <div id="comparison-chart"></div>
+            </div>
+
+            <!-- Section 3: Era Breakdown -->
+            <div class="stat-card">
+                <p class="section-label">Historical context</p>
+                <h3 class="section-title">Era Breakdown</h3>
+                <div id="era-grid" class="era-grid"></div>
+            </div>
+
+            <!-- Section 4: Historical Superlatives -->
+            <div class="stat-card">
+                <p class="section-label">All-time records</p>
+                <h3 class="section-title">Historical Superlatives</h3>
+                <div id="superlatives" class="superlative-grid"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="about.html">About &amp; Methodology</a>
+            <span class="footer-sep">·</span>
+            <a href="https://github.com/giasemidis/euroleague_api" target="_blank" rel="noopener">Data: Euroleague API</a>
+            <span class="footer-sep">·</span>
+            <a href="https://github.com/KonstantinosLaloudakis" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div>19 seasons · 5,000+ games · Every Play Analyzed</div>
+    </footer>
+
+    <script src="constants.js"></script>
+    <script src="gci-history.js"></script>
+</body>
+
+</html>
