@@ -83,6 +83,9 @@ function merge2025(hist, dashboard) {
             hist.team_trends[code].gci.push(parseFloat((t.gci || 0).toFixed(1)));
             hist.team_trends[code].win_pct.push(winPct !== null ? parseFloat(winPct.toFixed(4)) : null);
             hist.team_trends[code].avg_drama.push(parseFloat((t.drama_avg || 0).toFixed(4)));
+            hist.team_trends[code].dominance_avg.push(parseFloat((t.dominance_avg || 0).toFixed(4)));
+            hist.team_trends[code].killer_instinct.push(parseFloat((t.killer_instinct || 0).toFixed(4)));
+            hist.team_trends[code].comeback_count.push(t.comeback_count || 0);
         } else {
             // New team not in historical data
             hist.team_trends[code] = {
@@ -90,6 +93,9 @@ function merge2025(hist, dashboard) {
                 gci: [parseFloat((t.gci || 0).toFixed(1))],
                 win_pct: [winPct !== null ? parseFloat(winPct.toFixed(4)) : null],
                 avg_drama: [parseFloat((t.drama_avg || 0).toFixed(4))],
+                dominance_avg: [parseFloat((t.dominance_avg || 0).toFixed(4))],
+                killer_instinct: [parseFloat((t.killer_instinct || 0).toFixed(4))],
+                comeback_count: [t.comeback_count || 0],
             };
         }
     });
@@ -269,7 +275,14 @@ function onMetricChange() {
 
 function renderComparison() {
     const metricKey = _activeMetric;
-    const metricLabels = { gci: 'GCI Rating', avg_drama: 'Drama Index', win_pct: 'Win %' };
+    const metricLabels = {
+        gci: 'GCI Rating',
+        avg_drama: 'Drama Index',
+        dominance_avg: 'Dominance Score',
+        killer_instinct: 'Killer Instinct',
+        comeback_count: 'Comebacks',
+        win_pct: 'Win %',
+    };
     const yLabel = metricLabels[metricKey] || metricKey;
 
     const traces = [];
@@ -290,6 +303,7 @@ function renderComparison() {
         }
         const xVals = td.seasons.map(seasonLabel);
 
+        const hoverFmt = metricKey === 'comeback_count' ? '%{y:.0f}' : '%{y:.2f}';
         traces.push({
             x: xVals,
             y: yVals,
@@ -299,7 +313,7 @@ function renderComparison() {
             line: { color, width: 2 },
             marker: { color, size: 6 },
             connectgaps: false,
-            hovertemplate: `<b>${name}</b><br>%{x}<br>${yLabel}: %{y:.1f}<extra></extra>`,
+            hovertemplate: `<b>${name}</b><br>%{x}<br>${yLabel}: ${hoverFmt}<extra></extra>`,
         });
     });
 

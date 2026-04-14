@@ -82,11 +82,28 @@ def load_season_games(season_dir):
         if not timeline or len(timeline) < 3 or not ta or not tb:
             continue
 
-        # Derive result from the final timeline entry
+        # Derive result from the final timeline entry.
+        # Some replay files have a corrupted "Final Buzzer" entry where
+        # scores drop below the penultimate entry.  In those cases, use
+        # the penultimate entry for scores and the final entry only for WP.
         last = timeline[-1]
         home_score = last.get('a', 0)
         away_score = last.get('b', 0)
         final_wp = last.get('w', 0.5)
+
+        if len(timeline) >= 2:
+            prev = timeline[-2]
+            prev_a = prev.get('a', 0)
+            prev_b = prev.get('b', 0)
+            if home_score < prev_a or away_score < prev_b:
+                # Corrupted "Final Buzzer" entry — take scores and WP
+                # from the penultimate entry, and strip the bad entry
+                # from the timeline so compute_game_metrics doesn't
+                # see the spurious WP jump.
+                home_score = prev_a
+                away_score = prev_b
+                final_wp = prev.get('w', final_wp)
+                timeline = timeline[:-1]
 
         # Winner determined by final WP: 1.0 → home won, 0.0 → away won
         # For OT games the model also converges to 1 or 0.
@@ -261,22 +278,28 @@ def compute_team_trends(season_results, min_seasons=3):
 
     Returns:
         dict team_code → {
-            seasons:   list[int]   (sorted)
-            gci:       list[float]
-            win_pct:   list[float]
-            avg_drama: list[float]
+            seasons:         list[int]   (sorted)
+            gci:             list[float]
+            win_pct:         list[float]
+            avg_drama:       list[float]
+            dominance_avg:   list[float]
+            killer_instinct: list[float]
+            comeback_count:  list[int]
         }
     """
     # Collect all team data points keyed by (team, season)
-    team_data = {}  # team → list of (season, gci, win_pct, avg_drama)
+    # Each entry: (season, gci, win_pct, avg_drama, dominance_avg, killer_instinct, comeback_count)
+    team_data = {}
 
     for season in sorted(season_results.keys()):
         sr = season_results[season]
         ratings = sr.get('gci_ratings', {})
         profiles = sr.get('team_profiles', {})
+        components = sr.get('components', {})
 
         for team, gci in ratings.items():
             profile = profiles.get(team, {})
+            comp = components.get(team, {})
             all_games = profile.get('games', [])
             wins = profile.get('wins', [])
 
@@ -286,9 +309,21 @@ def compute_team_trends(season_results, min_seasons=3):
             dramas = [g['drama'] for g in all_games]
             avg_drama = statistics.mean(dramas) if dramas else 0.0
 
+            dominance_avg = comp.get('dominance_avg', 0.0)
+            killer_instinct = comp.get('killer_instinct', 0.0)
+            comeback_count = sum(1 for g in wins if g.get('comeback', 0) > 0.80)
+
             if team not in team_data:
                 team_data[team] = []
-            team_data[team].append((season, round(gci, 1), round(win_pct, 4), round(avg_drama, 4)))
+            team_data[team].append((
+                season,
+                round(gci, 1),
+                round(win_pct, 4),
+                round(avg_drama, 4),
+                round(dominance_avg, 4),
+                round(killer_instinct, 4),
+                comeback_count,
+            ))
 
     # Filter by min_seasons and build output arrays
     result = {}
@@ -297,10 +332,13 @@ def compute_team_trends(season_results, min_seasons=3):
             continue
         entries_sorted = sorted(entries, key=lambda x: x[0])
         result[team] = {
-            'seasons':   [e[0] for e in entries_sorted],
-            'gci':       [e[1] for e in entries_sorted],
-            'win_pct':   [e[2] for e in entries_sorted],
-            'avg_drama': [e[3] for e in entries_sorted],
+            'seasons':         [e[0] for e in entries_sorted],
+            'gci':             [e[1] for e in entries_sorted],
+            'win_pct':         [e[2] for e in entries_sorted],
+            'avg_drama':       [e[3] for e in entries_sorted],
+            'dominance_avg':   [e[4] for e in entries_sorted],
+            'killer_instinct': [e[5] for e in entries_sorted],
+            'comeback_count':  [e[6] for e in entries_sorted],
         }
 
     return result
