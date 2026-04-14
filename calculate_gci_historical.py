@@ -491,3 +491,75 @@ def build_season_leaderboards(season_results, top_n=5):
         }
 
     return leaderboards
+
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
+
+def main():
+    print("\n=== Computing Historical GCI Trends ===")
+    print(f"  Seasons: {SEASONS[0]}–{SEASONS[-1]} ({len(SEASONS)} seasons)")
+
+    season_results = {}
+    total_games = 0
+
+    for season in SEASONS:
+        season_dir = os.path.join(WP_DATA_ROOT, str(season))
+        if not os.path.exists(season_dir):
+            print(f"  {season}: directory not found, skipping")
+            continue
+
+        games, timelines = load_season_games(season_dir)
+        if not games:
+            print(f"  {season}: no valid games, skipping")
+            continue
+
+        result = compute_season_gci(games, timelines)
+        season_results[season] = result
+        n_games = len(result['game_metrics'])
+        n_teams = len(result['gci_ratings'])
+        total_games += n_games
+        print(f"  {season}: {n_games} games, {n_teams} teams")
+
+    print(f"\n  Total: {total_games} games across {len(season_results)} seasons")
+
+    # Cross-season aggregation
+    print("  Computing league trends...")
+    league_trends = compute_league_trends(season_results)
+
+    print("  Computing team trends...")
+    team_trends = compute_team_trends(season_results, min_seasons=3)
+    print(f"  {len(team_trends)} teams with 3+ seasons")
+
+    print("  Computing era breakdowns...")
+    eras = compute_era_breakdowns(season_results)
+
+    print("  Finding historical superlatives...")
+    superlatives = find_historical_superlatives(season_results)
+
+    print("  Building season leaderboards...")
+    leaderboards = build_season_leaderboards(season_results)
+
+    # Build output
+    from datetime import date
+    output = {
+        'generated': date.today().isoformat(),
+        'seasons_computed': sorted(season_results.keys()),
+        'total_games': total_games,
+        'league_trends': league_trends,
+        'eras': eras,
+        'team_trends': team_trends,
+        'season_leaderboards': leaderboards,
+        'superlatives': superlatives,
+    }
+
+    with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+    print(f"\n  Output: {OUTPUT_PATH}")
+    print(f"  File size: {os.path.getsize(OUTPUT_PATH) / 1024:.0f} KB")
+    print("\n=== Historical GCI computation complete ===")
+
+
+if __name__ == '__main__':
+    main()
