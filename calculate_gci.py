@@ -526,6 +526,7 @@ def main():
     gor_metrics = game_metrics[gor_gc]
     game_of_round = {
         'gamecode': gor_gc,
+        'round': round_num,
         'home': gor_game['home'],
         'away': gor_game['away'],
         'home_score': gor_game['home_score'],

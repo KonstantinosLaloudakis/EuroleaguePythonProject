@@ -14,11 +14,11 @@ let _sortAsc = false;
 /* ── Column definitions for leaderboard ────────────────────────────────── */
 const COLS = [
     { key: 'gci',           label: 'GCI',       fmt: v => v.toFixed(1) },
-    { key: 'dominance_avg', label: 'Dominance',  fmt: v => v.toFixed(1) },
+    { key: 'dominance_avg', label: 'Dominance',  fmt: v => v.toFixed(3) },
     { key: 'control_pct',   label: 'Control%',   fmt: v => (v * 100).toFixed(0) + '%' },
-    { key: 'drama_avg',     label: 'Drama',      fmt: v => v.toFixed(1) },
-    { key: 'crunch_swing_avg', label: 'Crunch',  fmt: v => v.toFixed(1) },
-    { key: 'killer_instinct',  label: 'Killer',  fmt: v => v.toFixed(2) },
+    { key: 'drama_avg',     label: 'Drama',      fmt: v => v.toFixed(2) },
+    { key: 'crunch_swing_avg', label: 'Crunch',  fmt: v => { const s = v >= 0 ? '+' : ''; const c = v >= 0 ? '#4ecdc4' : '#ff6b6b'; return `<span style="color:${c}">${s}${v.toFixed(3)}</span>`; } },
+    { key: 'killer_instinct',  label: 'Killer',  fmt: v => v.toFixed(3) },
     { key: 'comeback_count',   label: 'Comebacks', fmt: v => v },
 ];
 
@@ -70,7 +70,7 @@ function renderStorylines() {
     wrap.innerHTML = _gc.storylines.map(s => {
         const name = TEAM_NAMES[s.team] || s.team;
         const color = getTeamColor(s.team);
-        const badges = (s.badges || []).map(b =>
+        const badges = [s.stat_label, s.stat_sub].filter(Boolean).map(b =>
             `<span class="storyline-badge" style="background:${color}22;color:${color}">${b}</span>`
         ).join('');
         return `<div class="storyline-card" style="border-left-color:${color}" onclick="selectTeam('${s.team}')">
@@ -102,17 +102,20 @@ function renderGameOfRound() {
         const pts = g.wp_curve;
         const w = 300, h = 70;
         const step = w / (pts.length - 1);
-        const coords = pts.map((v, i) => `${(i * step).toFixed(1)},${(h - v * h).toFixed(1)}`).join(' ');
+        const coords = pts.map((v, i) => `${(i * step).toFixed(1)},${(h - v[1] * h).toFixed(1)}`).join(' ');
         wpSvg = `<svg viewBox="0 0 ${w} ${h}" style="width:100%;height:70px;" preserveAspectRatio="none">
             <line x1="0" y1="${h / 2}" x2="${w}" y2="${h / 2}" stroke="#4b5563" stroke-width="0.5" stroke-dasharray="4"/>
             <polyline points="${coords}" fill="none" stroke="#4ecdc4" stroke-width="2"/>
         </svg>`;
     }
 
-    // Tags
-    const tags = (g.tags || []).map(t =>
-        `<span class="gor-tag" style="background:rgba(78,205,196,0.15);color:#4ecdc4">${t}</span>`
-    ).join('');
+    // Metric tags
+    let tagsHtml = '';
+    tagsHtml += `<span class="gor-tag" style="background:rgba(255,107,107,0.15);color:#ff6b6b">Drama: ${g.drama.toFixed(2)}</span>`;
+    if (g.comeback > 0.5) {
+        tagsHtml += `<span class="gor-tag" style="background:rgba(255,215,0,0.12);color:#ffd700">Comeback: ${(g.comeback * 100).toFixed(0)}%</span>`;
+    }
+    tagsHtml += `<span class="gor-tag" style="background:rgba(78,205,196,0.12);color:#4ecdc4">Crunch: ${g.crunch_home > 0 ? '+' : ''}${g.crunch_home.toFixed(2)}</span>`;
 
     const replayLink = g.gamecode
         ? `<a href="replay.html?season=2025&game=${g.gamecode}" style="font-size:0.72rem;color:#4ecdc4;text-decoration:none;font-weight:600;">Watch Replay &rarr;</a>`
@@ -138,7 +141,7 @@ function renderGameOfRound() {
                 <div class="gor-venue">AWAY</div>
             </div>
         </div>
-        <div class="gor-tags">${tags}</div>
+        <div class="gor-tags">${tagsHtml}</div>
     </div>`;
 }
 
@@ -315,20 +318,22 @@ function renderTeamDetail(code) {
     const gameLog = (t.game_log || []).slice(-10).reverse();
     const logRows = gameLog.map(g => {
         const opp = TEAM_NAMES[g.opponent] || g.opponent;
-        const result = g.win ? 'W' : 'L';
-        const resultColor = g.win ? '#4ecdc4' : '#f87171';
+        const oppColor = getTeamColor(g.opponent);
+        const result = g.is_win ? 'W' : 'L';
+        const resultColor = g.is_win ? '#4ecdc4' : '#f87171';
+        const prefix = g.is_home ? 'vs' : '@';
+        const score = g.is_home ? `${g.home_score}-${g.away_score}` : `${g.away_score}-${g.home_score}`;
         return `<div class="game-log-row">
-            <span>${g.home ? 'vs' : '@'} ${opp}</span>
-            <span style="color:${resultColor};font-weight:700;">${result} ${g.score || ''}</span>
-            <span style="color:var(--text-muted)">GCI ${(g.gci ?? 0).toFixed(1)}</span>
+            <span style="color:var(--text-muted)">${prefix} <span style="color:${oppColor};font-weight:600">${g.opponent}</span></span>
+            <span><span style="color:${resultColor};font-weight:600">${result}</span> ${score} · <span style="color:var(--text-muted)">${g.dominance.toFixed(2)}</span></span>
         </div>`;
     }).join('');
 
     // Home vs Away dominance bar
     const homeGci = t.home_gci ?? 0;
     const awayGci = t.away_gci ?? 0;
-    const total = homeGci + awayGci || 1;
-    const homePct = ((homeGci / total) * 100).toFixed(0);
+    const total = Math.abs(homeGci) + Math.abs(awayGci);
+    const homePct = total > 0 ? Math.max(0, Math.min(100, (Math.max(0, homeGci) / total * 100))).toFixed(0) : 50;
     const awayPct = (100 - homePct);
 
     wrap.innerHTML = `
@@ -367,7 +372,7 @@ function renderTeamDetail(code) {
 function renderWinLossHistogram(t) {
     const winHist = t.win_quality_hist || [0, 0, 0, 0, 0];
     const lossHist = t.loss_quality_hist || [0, 0, 0, 0, 0];
-    const labels = ['Blowout', 'Comfortable', 'Solid', 'Close', 'Nail-biter'];
+    const labels = ['Grind', 'Close', 'Solid', 'Comfort', 'Blowout'];
 
     const traceWin = {
         x: labels,
@@ -472,25 +477,24 @@ function renderSuperlatives() {
     }
 
     const cards = [
-        { icon: '\u2605', label: 'Most Dominant Win', data: s.most_dominant },
-        { icon: '\u26A1', label: 'Most Dramatic Game', data: s.most_dramatic },
-        { icon: '\u21BB', label: 'Biggest Comeback', data: s.biggest_comeback },
+        { icon: '\u2605', label: 'Most Dominant Game', data: s.most_dominant, color: '#4ecdc4',
+          metric: d => `Dominance: ${Math.abs(d.dominance).toFixed(2)}` },
+        { icon: '\u26A1', label: 'Most Dramatic Game', data: s.most_dramatic, color: '#ff6b6b',
+          metric: d => `Drama: ${d.drama.toFixed(2)}` },
+        { icon: '\u21BB', label: 'Biggest Comeback', data: s.biggest_comeback, color: '#ffd700',
+          metric: d => `From ${((1 - d.comeback) * 100).toFixed(0)}% WP` },
     ];
 
     wrap.innerHTML = cards.map(c => {
         if (!c.data) return '';
-        const home = TEAM_NAMES[c.data.home] || c.data.home;
-        const away = TEAM_NAMES[c.data.away] || c.data.away;
         const score = (c.data.home_score != null && c.data.away_score != null)
             ? `${c.data.home_score} - ${c.data.away_score}`
             : '';
-        const detail = c.data.detail || '';
         return `<div class="superlative-card">
-            <div class="superlative-icon">${c.icon}</div>
+            <div class="superlative-icon" style="color:${c.color}">${c.icon}</div>
             <div class="superlative-label">${c.label}</div>
-            <div class="superlative-matchup">${home} vs ${away}</div>
-            <div style="font-size:0.8rem;color:var(--text-secondary);margin-bottom:0.2rem;">${score}</div>
-            <div style="font-size:0.7rem;color:var(--text-muted);">${detail}</div>
+            <div class="superlative-matchup">${c.data.home} ${score} ${c.data.away}</div>
+            <div style="color:${c.color};font-size:0.8rem;">${c.metric(c.data)}</div>
         </div>`;
     }).join('');
 }
