@@ -143,6 +143,10 @@ def main():
             'Computing Regularized Adjusted Plus-Minus (RAPM)',
             'calculate_rapm.py'
         )))
+        results.append(('GCI Ratings', run_step(
+            'Computing Game Control Index (GCI)',
+            'calculate_gci.py'
+        )))
     else:
         print(f"\n{YELLOW}⏭️  Skipping compute engines{RESET}")
     

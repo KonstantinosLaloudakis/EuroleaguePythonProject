@@ -1115,6 +1115,26 @@ def main():
             })
         print(f"  WIR ratings: {len(wir_data)} players")
 
+    # ── Load GCI ratings ─────────────────────────────────────────────────
+    gci_raw = load_with_fallback(suffix, 'gci_ratings.json')
+    gci_data = None
+    if gci_raw:
+        gci_data = {
+            'teams': gci_raw.get('teams', {}),
+            'games': gci_raw.get('games', []),
+            'storylines': gci_raw.get('storylines', []),
+            'game_of_round': gci_raw.get('game_of_round', {}),
+            'superlatives': gci_raw.get('superlatives', {}),
+        }
+        # Also add GCI to each team object
+        for team_obj in teams:
+            code = team_obj['team']
+            tgci = gci_raw.get('teams', {}).get(code, {})
+            team_obj['gci'] = tgci.get('gci', 0.0)
+            team_obj['drama_avg'] = round(tgci.get('drama_avg', 0.0), 2)
+            team_obj['comeback_count'] = tgci.get('comeback_count', 0)
+        print(f"  GCI ratings: {len(gci_raw.get('teams', {}))} teams")
+
     # ── Build output ─────────────────────────────────────────────────────────
     from datetime import datetime
     output = {
@@ -1130,6 +1150,7 @@ def main():
         'wir': wir_data,
         'oracle': oracle_data,
         'accuracy': accuracy_data,
+        'game_control': gci_data,
     }
 
     # ── Write output ─────────────────────────────────────────────────────────
