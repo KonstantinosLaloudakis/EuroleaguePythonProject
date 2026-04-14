@@ -213,6 +213,7 @@
         <a href="replay.html" class="nav-link">Game Replay</a>
         <a href="playoffs.html" class="nav-link">Playoffs</a>
         <a href="mvp.html" class="nav-link">MVP Race</a>
+        <a href="game-control.html" class="nav-link">Game Control</a>
         <a href="about.html" class="nav-link active">About</a>
     </nav>
 
@@ -273,6 +274,7 @@
                 <li><span class="metric-name">Game Replay</span> — Win probability timelines for every game, showing how the probability shifted play-by-play. Hover any moment to see the exact game state.</li>
                 <li><span class="metric-name">Playoffs</span> — Playoff bracket visualization with series matchups, Monte Carlo advancement probabilities, and projected seedings.</li>
                 <li><span class="metric-name">MVP Race</span> — Composite MVP rankings with sortable columns, plus a race chart showing how rankings evolved across rounds.</li>
+                <li><span class="metric-name">Game Control</span> — How teams win, not just that they win. The Game Control Index (GCI) uses Win Probability trajectory analysis to measure dominance, drama, comeback resilience, crunch-time performance, and killer instinct for every game and team.</li>
             </ul>
         </div>
 
@@ -427,6 +429,72 @@
                     Pass 1 uses low regularization (alpha=100) to generate training targets for the box-score prior model.
                     Pass 2 uses full cross-validated alpha with the prior as the regularization center.
                     Sparse design matrix with ~335 player columns + HCA indicator, weighted by possession count per stint.
+                </li>
+            </ul>
+        </div>
+
+        <!-- Game Control Metrics -->
+        <div class="about-section">
+            <h3>Game Control Metrics</h3>
+            <p>
+                The Game Control Index (GCI) analyzes Win Probability trajectories — the second-by-second likelihood
+                of each team winning — to measure <em>how</em> teams win, not just whether they did.
+                Built from WP replay data across every game this season.
+            </p>
+            <ul>
+                <li>
+                    <span class="metric-name">Dominance Score</span>
+                    <span class="metric-tag team">Team</span>
+                    <span class="metric-tag game">Game</span>
+                    <br>
+                    Average distance of WP from 50% across all plays: <code>mean(WP - 0.5)</code>.
+                    Positive means the home team controlled the game; negative means the away team did.
+                    Range: -0.5 to +0.5.
+                </li>
+                <li>
+                    <span class="metric-name">Control Duration</span>
+                    <span class="metric-tag team">Team</span>
+                    <span class="metric-tag game">Game</span>
+                    <br>
+                    Percentage of plays where the eventual winner held WP above 60%.
+                    100% means wire-to-wire cruise control; lower values indicate a contested game.
+                </li>
+                <li>
+                    <span class="metric-name">Drama Index</span>
+                    <span class="metric-tag game">Game</span>
+                    <br>
+                    Total variation of the WP curve: sum of absolute WP changes between consecutive plays.
+                    Higher values indicate more momentum swings and lead changes.
+                </li>
+                <li>
+                    <span class="metric-name">Comeback Magnitude</span>
+                    <span class="metric-tag game">Game</span>
+                    <br>
+                    For wins: <code>1.0 - min(winner WP)</code>. Measures how deep a deficit the winning team
+                    overcame. A comeback from 10% WP scores 0.90.
+                </li>
+                <li>
+                    <span class="metric-name">Crunch-Time Swing</span>
+                    <span class="metric-tag team">Team</span>
+                    <span class="metric-tag game">Game</span>
+                    <br>
+                    Net WP change in the final 5 minutes of game clock (Q4 from 5:00 to buzzer, plus overtime).
+                    Positive means the team gained control in the clutch.
+                </li>
+                <li>
+                    <span class="metric-name">Killer Instinct</span>
+                    <span class="metric-tag team">Team</span>
+                    <br>
+                    Average WP change per play in Q4 when leading with WP above 60%.
+                    Measures the ability to close out games rather than letting opponents back in.
+                </li>
+                <li>
+                    <span class="metric-name">GCI Rating</span>
+                    <span class="metric-tag team">Team</span>
+                    <br>
+                    Weighted composite of Dominance (35%), Control Duration (25%), Crunch-Time Swing (20%),
+                    and Killer Instinct (20%), z-normalized to a 0–100 scale across the league.
+                    Higher = more dominant game control profile.
                 </li>
             </ul>
         </div>

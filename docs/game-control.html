@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f1117">
+    <title>Game Control Index — Euroleague Analytics</title>
+    <meta name="description"
+        content="How teams win, not just that they win. Game Control Index with dominance, drama, comebacks, and crunch-time metrics for all 20 Euroleague teams.">
+    <meta property="og:title" content="Game Control Index — Euroleague Analytics">
+    <meta property="og:description"
+        content="How teams win, not just that they win. Game Control Index with dominance, drama, comebacks, and crunch-time metrics.">
+    <meta property="og:image" content="og-image.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Storyline cards */
+        .storyline-scroll { display:flex;gap:0.75rem;overflow-x:auto;padding-bottom:0.5rem;scroll-snap-type:x mandatory; }
+        .storyline-card { min-width:240px;flex:1;background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary));border-radius:var(--radius);padding:1.1rem;border-left:3px solid var(--accent-purple);scroll-snap-align:start;cursor:pointer;transition:var(--transition); }
+        .storyline-card:hover { transform:translateY(-2px); }
+        .storyline-label { font-size:0.65rem;font-weight:700;letter-spacing:0.5px;text-transform:uppercase; }
+        .storyline-team { font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:800;color:var(--text-primary);margin:0.3rem 0 0.2rem; }
+        .storyline-text { font-size:0.78rem;color:var(--text-secondary);line-height:1.45; }
+        .storyline-badges { display:flex;gap:0.4rem;margin-top:0.6rem;flex-wrap:wrap; }
+        .storyline-badge { padding:0.15rem 0.45rem;border-radius:4px;font-size:0.65rem;font-weight:600; }
+
+        /* Game of the Round */
+        .gor-card { background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary));border-radius:var(--radius);padding:1.2rem;border:1px solid var(--border); }
+        .gor-header { display:flex;justify-content:space-between;align-items:center;margin-bottom:0.8rem; }
+        .gor-body { display:flex;gap:1rem;align-items:center; }
+        .gor-score { text-align:center;flex:0 0 auto; }
+        .gor-team-code { font-size:0.85rem;font-weight:700; }
+        .gor-pts { font-family:'Outfit',sans-serif;font-size:1.8rem;font-weight:800;color:var(--text-primary); }
+        .gor-venue { font-size:0.65rem;color:var(--text-muted);text-transform:uppercase; }
+        .gor-wp-wrap { flex:1;background:rgba(0,0,0,0.3);border-radius:8px;padding:0.6rem; }
+        .gor-tags { display:flex;gap:0.4rem;margin-top:0.7rem;flex-wrap:wrap; }
+        .gor-tag { padding:0.2rem 0.5rem;border-radius:5px;font-size:0.68rem;font-weight:600; }
+
+        /* Scatter */
+        #scatter-plot { width:100%;height:420px; }
+
+        /* Leaderboard */
+        .gci-tbl { width:100%;border-collapse:collapse;font-size:0.8rem;white-space:nowrap; }
+        .gci-tbl th { background:var(--bg-secondary);color:var(--text-muted);font-weight:600;text-transform:uppercase;font-size:0.68rem;padding:0.55rem 0.6rem;border-bottom:2px solid var(--border);cursor:pointer;user-select:none; }
+        .gci-tbl th:hover { color:var(--text-primary); }
+        .gci-tbl th.sorted-asc::after { content:' \25B2'; }
+        .gci-tbl th.sorted-desc::after { content:' \25BC'; }
+        .gci-tbl td { padding:0.45rem 0.6rem;border-bottom:1px solid var(--border);color:var(--text-primary); }
+        .gci-tbl tbody tr { cursor:pointer;transition:background var(--transition); }
+        .gci-tbl tbody tr:hover { background:rgba(78,205,196,0.07); }
+        .gci-tbl tbody tr.selected { background:rgba(78,205,196,0.12); }
+
+        /* Team deep-dive */
+        .team-selector-grid { display:grid;grid-template-columns:repeat(5,1fr);gap:0.5rem;margin-bottom:1.2rem; }
+        @media(max-width:900px){.team-selector-grid{grid-template-columns:repeat(4,1fr);}}
+        @media(max-width:600px){.team-selector-grid{grid-template-columns:repeat(2,1fr);}}
+        .team-chip { background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;padding:0.45rem 0.4rem;text-align:center;cursor:pointer;transition:var(--transition); }
+        .team-chip:hover { border-color:#4b5563;background:var(--bg-card); }
+        .team-chip.selected { border-color:#4ecdc4;background:rgba(78,205,196,0.08); }
+        .team-chip-name { font-weight:700;font-size:0.82rem;display:block; }
+        .deep-dive-grid { display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.75rem;margin-bottom:0.75rem; }
+        @media(max-width:768px){.deep-dive-grid{grid-template-columns:1fr;}}
+        .dd-panel { background:var(--bg-secondary);border-radius:8px;padding:0.8rem;border:1px solid var(--border); }
+        .dd-panel-title { font-size:0.65rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:0.5rem; }
+        #dd-histogram { width:100%;height:200px; }
+        .game-log-row { display:flex;justify-content:space-between;padding:0.3rem 0;border-bottom:1px solid var(--border);font-size:0.75rem; }
+        .home-away-bar { height:8px;background:var(--bg-card);border-radius:4px;overflow:hidden;display:flex;margin-top:0.5rem; }
+
+        /* Superlatives */
+        .superlative-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem; }
+        @media(max-width:768px){.superlative-grid{grid-template-columns:1fr;}}
+        .superlative-card { background:var(--bg-secondary);border-radius:var(--radius);padding:1rem;text-align:center;border:1px solid var(--border); }
+        .superlative-icon { font-size:1.5rem;margin-bottom:0.3rem; }
+        .superlative-label { font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px; }
+        .superlative-matchup { font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:700;color:var(--text-primary);margin:0.3rem 0; }
+
+        /* Section labels */
+        .section-label { font-size:0.68rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.3rem; }
+        .section-title { font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:700;color:var(--text-primary);margin-bottom:0.8rem; }
+    </style>
+</head>
+
+<body>
+
+    <nav class="site-nav">
+        <span class="site-nav-brand">🏀 Euroleague Analytics</span>
+        <a href="index.html" class="nav-link">Season Hub</a>
+        <a href="team.html" class="nav-link">Team Deep-Dive</a>
+        <a href="players.html" class="nav-link">Player Stats</a>
+        <a href="h2h.html" class="nav-link">Head-to-Head</a>
+        <a href="recap.html" class="nav-link">Game Recap</a>
+        <a href="shots.html" class="nav-link">Shot Lab</a>
+        <a href="network.html" class="nav-link">Playmaking</a>
+        <a href="replay.html" class="nav-link">Game Replay</a>
+        <a href="playoffs.html" class="nav-link">Playoffs</a>
+        <a href="mvp.html" class="nav-link">MVP Race</a>
+        <a href="game-control.html" class="nav-link active">Game Control</a>
+        <a href="about.html" class="nav-link">About</a>
+    </nav>
+
+    <header>
+        <h1>Game Control Index</h1>
+        <p class="subtitle">How teams win, not just that they win — dominance, drama, comebacks & crunch-time performance</p>
+    </header>
+
+    <main>
+        <!-- Loading -->
+        <div id="loading" class="stat-card" style="text-align:center;padding:3rem 1rem;">
+            <span class="loading-spinner"></span> Loading Game Control data...
+        </div>
+
+        <!-- Error (hidden) -->
+        <div id="load-error" class="hidden" style="text-align:center;padding:3rem 1rem;">
+            <div style="font-size:3rem;margin-bottom:1rem;">&#9888;&#65039;</div>
+            <p style="color:var(--text-muted);font-size:1rem;">
+                Could not load Game Control data. Run
+                <code>python export_dashboard_data.py</code> to generate it.
+            </p>
+        </div>
+
+        <!-- Content wrapper (hidden until loaded) -->
+        <div id="content" class="hidden">
+
+            <!-- Section 1: Storyline Hero Cards -->
+            <div class="stat-card">
+                <p class="section-label">Season narratives</p>
+                <h3 class="section-title">Storylines</h3>
+                <div id="storylines" class="storyline-scroll"></div>
+            </div>
+
+            <!-- Section 2: Game of the Round -->
+            <div class="stat-card">
+                <p class="section-label">Latest round highlight</p>
+                <h3 class="section-title">Game of the Round</h3>
+                <div id="game-of-round"></div>
+            </div>
+
+            <!-- Section 3: Scatter Plot -->
+            <div class="stat-card">
+                <p class="section-label">Team landscape</p>
+                <h3 class="section-title">Control vs Drama</h3>
+                <div id="scatter-plot"></div>
+            </div>
+
+            <!-- Section 4: Leaderboard -->
+            <div class="stat-card">
+                <p class="section-label">All teams ranked</p>
+                <h3 class="section-title">GCI Leaderboard</h3>
+                <div style="overflow-x:auto;">
+                    <table class="gci-tbl" id="leaderboard">
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Section 5: Team Deep-Dive -->
+            <div class="stat-card" id="team-section">
+                <p class="section-label">Team breakdown</p>
+                <h3 class="section-title">Team Deep-Dive</h3>
+                <div id="team-grid" class="team-selector-grid"></div>
+                <div id="team-detail"></div>
+            </div>
+
+            <!-- Section 6: Superlatives -->
+            <div class="stat-card">
+                <p class="section-label">Season awards</p>
+                <h3 class="section-title">Superlatives</h3>
+                <div id="superlatives" class="superlative-grid"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="about.html">About & Methodology</a>
+            <span class="footer-sep">·</span>
+            <a href="https://github.com/giasemidis/euroleague_api" target="_blank" rel="noopener">Data: Euroleague API</a>
+            <span class="footer-sep">·</span>
+            <a href="https://github.com/KonstantinosLaloudakis" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div>19 seasons · 7,000+ games · Updated daily</div>
+    </footer>
+
+    <script src="constants.js"></script>
+    <script src="game-control.js"></script>
+</body>
+
+</html>
