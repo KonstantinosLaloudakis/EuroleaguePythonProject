@@ -153,7 +153,7 @@ async function init() {
         const data = await resp.json();
 
         _teams = (data.teams || []).sort((a, b) =>
-            b.wins - a.wins || a.losses - b.losses || b.elo - a.elo
+            b.wins - a.wins || b.adj_net - a.adj_net
         );
 
         if (data.updated) {

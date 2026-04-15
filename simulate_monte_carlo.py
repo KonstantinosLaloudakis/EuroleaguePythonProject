@@ -254,7 +254,7 @@ def run_monte_carlo(num_simulations=10000):
         # Win distribution: P(wins >= threshold) for each threshold
         win_dist = {}
         for threshold in range(15, 31):
-            pct = int(np.sum(sim_wins[:, i] >= threshold) / num_simulations * 100)
+            pct = round(np.sum(sim_wins[:, i] >= threshold) / num_simulations * 100)
             win_dist[str(threshold)] = pct
         
         # Seed distribution: P(finishing in position N) for N=1..num_teams
