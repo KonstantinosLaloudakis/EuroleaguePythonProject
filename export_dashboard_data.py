@@ -12,6 +12,7 @@ import json
 import os
 import glob
 import re
+import pandas as pd
 
 # ── Team name mapping ────────────────────────────────────────────────────────
 TEAM_NAMES = {
@@ -1135,6 +1136,79 @@ def main():
             team_obj['comeback_count'] = tgci.get('comeback_count', 0)
         print(f"  GCI ratings: {len(gci_raw.get('teams', {}))} teams")
 
+    # ── Compute pairwise playoff matchup probabilities ────────────────────────
+    playoff_matchup_probs = {}
+    top10 = teams[:10]
+    if len(top10) >= 10:
+        try:
+            from wp_model_utils import predict_wp
+
+            # Load game results for HCA data (mirrors simulate_monte_carlo.py)
+            game_results = load_json('mvp_game_results.json')
+            hca_global = 0.0
+            home_net_map = {}   # team code → home net rating per game
+            net_map = {}        # team code → overall net rating per game
+            if game_results:
+                gdf = pd.DataFrame(game_results)
+                played = gdf[(gdf['LocalScore'] > 0) & (gdf['RoadScore'] > 0)]
+                hca_global = (played['LocalScore'] - played['RoadScore']).mean()
+
+                td = {}
+                for _, row in played.iterrows():
+                    loc, road = row['LocalTeam'], row['RoadTeam']
+                    lp, rp = row['LocalScore'], row['RoadScore']
+                    for t in (loc, road):
+                        if t not in td:
+                            td[t] = {'HP': 0, 'HA': 0, 'HG': 0, 'AP': 0, 'AA': 0, 'AG': 0}
+                    td[loc]['HP'] += lp; td[loc]['HA'] += rp; td[loc]['HG'] += 1
+                    td[road]['AP'] += rp; td[road]['AA'] += lp; td[road]['AG'] += 1
+                for t, s in td.items():
+                    gp = s['HG'] + s['AG']
+                    net_map[t] = ((s['HP'] + s['AP']) - (s['HA'] + s['AA'])) / gp if gp > 0 else 0
+                    home_net_map[t] = (s['HP'] - s['HA']) / s['HG'] if s['HG'] > 0 else 0
+
+            def _matchup_prob(team_a, team_b, venue):
+                """P(team_a wins) under given venue: 'home', 'away', 'neutral'."""
+                a_adj, b_adj = team_a['adj_net'], team_b['adj_net']
+                a_elo, b_elo = team_a['elo'], team_b['elo']
+
+                if venue == 'home':
+                    # A is home — mirror simulate_monte_carlo formula
+                    elo_margin = (a_elo - b_elo + 50) / 25
+                    margin_raw = (a_adj - b_adj) * 0.75 + elo_margin * 0.25
+                    team_hca = home_net_map.get(team_a['team'], 0) - net_map.get(team_a['team'], 0)
+                    blended_hca = (hca_global * 0.7 + team_hca * 0.3) * 0.5
+                    pred_margin = margin_raw + blended_hca
+                    return predict_wp(margin=pred_margin, seconds_remaining=2400, elo_diff=a_elo - b_elo)
+
+                elif venue == 'away':
+                    # B is home — compute P(B wins) then invert
+                    return 1.0 - _matchup_prob(team_b, team_a, 'home')
+
+                else:  # neutral — average both perspectives to cancel is_home bias
+                    elo_margin = (a_elo - b_elo) / 25
+                    margin_raw = (a_adj - b_adj) * 0.75 + elo_margin * 0.25
+                    p_a = predict_wp(margin=margin_raw, seconds_remaining=2400, elo_diff=a_elo - b_elo)
+                    p_b = predict_wp(margin=-margin_raw, seconds_remaining=2400, elo_diff=b_elo - a_elo)
+                    return (p_a + (1.0 - p_b)) / 2.0
+
+            for ta in top10:
+                inner = {}
+                for tb in top10:
+                    if ta['team'] == tb['team']:
+                        continue
+                    inner[tb['team']] = {
+                        'home':    round(_matchup_prob(ta, tb, 'home'), 4),
+                        'away':    round(_matchup_prob(ta, tb, 'away'), 4),
+                        'neutral': round(_matchup_prob(ta, tb, 'neutral'), 4),
+                    }
+                playoff_matchup_probs[ta['team']] = inner
+
+            print(f"  Playoff matchup probs: {len(top10)} teams, {len(top10) * (len(top10) - 1)} pairs")
+
+        except Exception as e:
+            print(f"  Warning: Could not compute playoff matchup probs: {e}")
+
     # ── Build output ─────────────────────────────────────────────────────────
     from datetime import datetime
     output = {
@@ -1151,6 +1225,7 @@ def main():
         'oracle': oracle_data,
         'accuracy': accuracy_data,
         'game_control': gci_data,
+        'playoff_matchup_probs': playoff_matchup_probs,
     }
 
     # ── Write output ─────────────────────────────────────────────────────────

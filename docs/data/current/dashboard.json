@@ -1,6 +1,6 @@
 {
   "round": 37,
-  "updated": "2026-04-14T09:09:20Z",
+  "updated": "2026-04-15T08:27:17Z",
   "teams": [
     {
       "team": "OLY",
@@ -45350,6 +45350,478 @@
             1.0
           ]
         ]
+      }
+    }
+  },
+  "playoff_matchup_probs": {
+    "OLY": {
+      "PAM": {
+        "home": 0.7225,
+        "away": 0.336,
+        "neutral": 0.5405
+      },
+      "MAD": {
+        "home": 0.5851,
+        "away": 0.3577,
+        "neutral": 0.4849
+      },
+      "ULK": {
+        "home": 0.5968,
+        "away": 0.4149,
+        "neutral": 0.5029
+      },
+      "HTA": {
+        "home": 0.6001,
+        "away": 0.4149,
+        "neutral": 0.5257
+      },
+      "ZAL": {
+        "home": 0.6097,
+        "away": 0.3903,
+        "neutral": 0.5
+      },
+      "MCO": {
+        "home": 0.5968,
+        "away": 0.4149,
+        "neutral": 0.5229
+      },
+      "RED": {
+        "home": 0.6906,
+        "away": 0.4149,
+        "neutral": 0.5652
+      },
+      "PAN": {
+        "home": 0.6423,
+        "away": 0.4691,
+        "neutral": 0.5521
+      },
+      "BAR": {
+        "home": 0.6906,
+        "away": 0.4149,
+        "neutral": 0.544
+      }
+    },
+    "PAM": {
+      "OLY": {
+        "home": 0.664,
+        "away": 0.2775,
+        "neutral": 0.4595
+      },
+      "MAD": {
+        "home": 0.5851,
+        "away": 0.4032,
+        "neutral": 0.5076
+      },
+      "ULK": {
+        "home": 0.5968,
+        "away": 0.4032,
+        "neutral": 0.5
+      },
+      "HTA": {
+        "home": 0.6423,
+        "away": 0.4149,
+        "neutral": 0.5277
+      },
+      "ZAL": {
+        "home": 0.6097,
+        "away": 0.336,
+        "neutral": 0.4935
+      },
+      "MCO": {
+        "home": 0.6655,
+        "away": 0.4149,
+        "neutral": 0.5277
+      },
+      "RED": {
+        "home": 0.664,
+        "away": 0.4149,
+        "neutral": 0.5277
+      },
+      "PAN": {
+        "home": 0.6906,
+        "away": 0.5257,
+        "neutral": 0.6168
+      },
+      "BAR": {
+        "home": 0.6423,
+        "away": 0.4149,
+        "neutral": 0.5394
+      }
+    },
+    "MAD": {
+      "OLY": {
+        "home": 0.6423,
+        "away": 0.4149,
+        "neutral": 0.5151
+      },
+      "PAM": {
+        "home": 0.5968,
+        "away": 0.4149,
+        "neutral": 0.4924
+      },
+      "ULK": {
+        "home": 0.5699,
+        "away": 0.3345,
+        "neutral": 0.4208
+      },
+      "HTA": {
+        "home": 0.6906,
+        "away": 0.4032,
+        "neutral": 0.5471
+      },
+      "ZAL": {
+        "home": 0.6906,
+        "away": 0.3903,
+        "neutral": 0.5336
+      },
+      "MCO": {
+        "home": 0.6001,
+        "away": 0.4457,
+        "neutral": 0.5397
+      },
+      "RED": {
+        "home": 0.7225,
+        "away": 0.3999,
+        "neutral": 0.5557
+      },
+      "PAN": {
+        "home": 0.6423,
+        "away": 0.4457,
+        "neutral": 0.5307
+      },
+      "BAR": {
+        "home": 0.7214,
+        "away": 0.4149,
+        "neutral": 0.5781
+      }
+    },
+    "ULK": {
+      "OLY": {
+        "home": 0.5851,
+        "away": 0.4032,
+        "neutral": 0.4971
+      },
+      "PAM": {
+        "home": 0.5968,
+        "away": 0.4032,
+        "neutral": 0.5
+      },
+      "MAD": {
+        "home": 0.6655,
+        "away": 0.4301,
+        "neutral": 0.5792
+      },
+      "HTA": {
+        "home": 0.7473,
+        "away": 0.4149,
+        "neutral": 0.5792
+      },
+      "ZAL": {
+        "home": 0.6906,
+        "away": 0.4149,
+        "neutral": 0.5424
+      },
+      "MCO": {
+        "home": 0.7214,
+        "away": 0.4944,
+        "neutral": 0.6082
+      },
+      "RED": {
+        "home": 0.7473,
+        "away": 0.4149,
+        "neutral": 0.5682
+      },
+      "PAN": {
+        "home": 0.751,
+        "away": 0.5257,
+        "neutral": 0.6327
+      },
+      "BAR": {
+        "home": 0.751,
+        "away": 0.4032,
+        "neutral": 0.5629
+      }
+    },
+    "HTA": {
+      "OLY": {
+        "home": 0.5851,
+        "away": 0.3999,
+        "neutral": 0.4743
+      },
+      "PAM": {
+        "home": 0.5851,
+        "away": 0.3577,
+        "neutral": 0.4723
+      },
+      "MAD": {
+        "home": 0.5968,
+        "away": 0.3094,
+        "neutral": 0.4529
+      },
+      "ULK": {
+        "home": 0.5851,
+        "away": 0.2527,
+        "neutral": 0.4208
+      },
+      "ZAL": {
+        "home": 0.6097,
+        "away": 0.3094,
+        "neutral": 0.4664
+      },
+      "MCO": {
+        "home": 0.6655,
+        "away": 0.3903,
+        "neutral": 0.5211
+      },
+      "RED": {
+        "home": 0.687,
+        "away": 0.4032,
+        "neutral": 0.5123
+      },
+      "PAN": {
+        "home": 0.687,
+        "away": 0.4032,
+        "neutral": 0.5471
+      },
+      "BAR": {
+        "home": 0.6097,
+        "away": 0.3903,
+        "neutral": 0.4935
+      }
+    },
+    "ZAL": {
+      "OLY": {
+        "home": 0.6097,
+        "away": 0.3903,
+        "neutral": 0.5
+      },
+      "PAM": {
+        "home": 0.664,
+        "away": 0.3903,
+        "neutral": 0.5065
+      },
+      "MAD": {
+        "home": 0.6097,
+        "away": 0.3094,
+        "neutral": 0.4664
+      },
+      "ULK": {
+        "home": 0.5851,
+        "away": 0.3094,
+        "neutral": 0.4576
+      },
+      "HTA": {
+        "home": 0.6906,
+        "away": 0.3903,
+        "neutral": 0.5336
+      },
+      "MCO": {
+        "home": 0.6906,
+        "away": 0.3903,
+        "neutral": 0.5395
+      },
+      "RED": {
+        "home": 0.6906,
+        "away": 0.3903,
+        "neutral": 0.5469
+      },
+      "PAN": {
+        "home": 0.7225,
+        "away": 0.4301,
+        "neutral": 0.5835
+      },
+      "BAR": {
+        "home": 0.7865,
+        "away": 0.4149,
+        "neutral": 0.5946
+      }
+    },
+    "MCO": {
+      "OLY": {
+        "home": 0.5851,
+        "away": 0.4032,
+        "neutral": 0.4771
+      },
+      "PAM": {
+        "home": 0.5851,
+        "away": 0.3345,
+        "neutral": 0.4723
+      },
+      "MAD": {
+        "home": 0.5543,
+        "away": 0.3999,
+        "neutral": 0.4603
+      },
+      "ULK": {
+        "home": 0.5056,
+        "away": 0.2786,
+        "neutral": 0.3918
+      },
+      "HTA": {
+        "home": 0.6097,
+        "away": 0.3345,
+        "neutral": 0.4789
+      },
+      "ZAL": {
+        "home": 0.6097,
+        "away": 0.3094,
+        "neutral": 0.4605
+      },
+      "RED": {
+        "home": 0.6423,
+        "away": 0.3903,
+        "neutral": 0.5065
+      },
+      "PAN": {
+        "home": 0.751,
+        "away": 0.3903,
+        "neutral": 0.5643
+      },
+      "BAR": {
+        "home": 0.664,
+        "away": 0.3903,
+        "neutral": 0.5048
+      }
+    },
+    "RED": {
+      "OLY": {
+        "home": 0.5851,
+        "away": 0.3094,
+        "neutral": 0.4348
+      },
+      "PAM": {
+        "home": 0.5851,
+        "away": 0.336,
+        "neutral": 0.4723
+      },
+      "MAD": {
+        "home": 0.6001,
+        "away": 0.2775,
+        "neutral": 0.4443
+      },
+      "ULK": {
+        "home": 0.5851,
+        "away": 0.2527,
+        "neutral": 0.4318
+      },
+      "HTA": {
+        "home": 0.5968,
+        "away": 0.313,
+        "neutral": 0.4877
+      },
+      "ZAL": {
+        "home": 0.6097,
+        "away": 0.3094,
+        "neutral": 0.4531
+      },
+      "MCO": {
+        "home": 0.6097,
+        "away": 0.3577,
+        "neutral": 0.4935
+      },
+      "PAN": {
+        "home": 0.6906,
+        "away": 0.4032,
+        "neutral": 0.5471
+      },
+      "BAR": {
+        "home": 0.6906,
+        "away": 0.4149,
+        "neutral": 0.5652
+      }
+    },
+    "PAN": {
+      "OLY": {
+        "home": 0.5309,
+        "away": 0.3577,
+        "neutral": 0.4479
+      },
+      "PAM": {
+        "home": 0.4743,
+        "away": 0.3094,
+        "neutral": 0.3832
+      },
+      "MAD": {
+        "home": 0.5543,
+        "away": 0.3577,
+        "neutral": 0.4693
+      },
+      "ULK": {
+        "home": 0.4743,
+        "away": 0.249,
+        "neutral": 0.3673
+      },
+      "HTA": {
+        "home": 0.5968,
+        "away": 0.313,
+        "neutral": 0.4529
+      },
+      "ZAL": {
+        "home": 0.5699,
+        "away": 0.2775,
+        "neutral": 0.4165
+      },
+      "MCO": {
+        "home": 0.6097,
+        "away": 0.249,
+        "neutral": 0.4357
+      },
+      "RED": {
+        "home": 0.5968,
+        "away": 0.3094,
+        "neutral": 0.4529
+      },
+      "BAR": {
+        "home": 0.6097,
+        "away": 0.3094,
+        "neutral": 0.4664
+      }
+    },
+    "BAR": {
+      "OLY": {
+        "home": 0.5851,
+        "away": 0.3094,
+        "neutral": 0.456
+      },
+      "PAM": {
+        "home": 0.5851,
+        "away": 0.3577,
+        "neutral": 0.4606
+      },
+      "MAD": {
+        "home": 0.5851,
+        "away": 0.2786,
+        "neutral": 0.4219
+      },
+      "ULK": {
+        "home": 0.5968,
+        "away": 0.249,
+        "neutral": 0.4371
+      },
+      "HTA": {
+        "home": 0.6097,
+        "away": 0.3903,
+        "neutral": 0.5065
+      },
+      "ZAL": {
+        "home": 0.5851,
+        "away": 0.2135,
+        "neutral": 0.4054
+      },
+      "MCO": {
+        "home": 0.6097,
+        "away": 0.336,
+        "neutral": 0.4952
+      },
+      "RED": {
+        "home": 0.5851,
+        "away": 0.3094,
+        "neutral": 0.4348
+      },
+      "PAN": {
+        "home": 0.6906,
+        "away": 0.3903,
+        "neutral": 0.5336
       }
     }
   }

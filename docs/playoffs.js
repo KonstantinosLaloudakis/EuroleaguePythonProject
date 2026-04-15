@@ -21,35 +21,26 @@ let _teams = [];
 let _seeded = [];    // top 10 teams by seed
 let _bracket = {};   // round → matchup index → { a, b, winner }
 let _champion = null;
+let _matchupProbs = {};  // pre-computed pairwise probabilities from backend
 
-// ── Elo win probability ──────────────────────────────────────────────────
+// ── Elo win probability (fallback) ──────────────────────────────────────
 function eloWinProb(eloA, eloB, neutral = false) {
     const hca = neutral ? 0 : ELO_HCA;
     return 1 / (1 + Math.pow(10, (eloB - eloA - hca) / 400));
 }
 
-// Best-of-N series probability (team A wins >=ceil(n/2) games)
-function seriesProb(pGame, n) {
-    const need = Math.ceil(n / 2);
-    const q = 1 - pGame;
-    let prob = 0;
-    for (let l = 0; l < need; l++) {
-        prob += comb(need - 1 + l, l) * Math.pow(pGame, need) * Math.pow(q, l);
-    }
-    return prob;
-}
-
-function comb(n, k) {
-    if (k > n) return 0;
-    if (k === 0 || k === n) return 1;
-    let r = 1;
-    for (let i = 0; i < k; i++) r = r * (n - i) / (i + 1);
-    return r;
+// ── Pre-computed matchup probability lookup ─────────────────────────────
+// venue: 'home' (A is home), 'away' (B is home), 'neutral'
+function matchupProb(teamA, teamB, venue) {
+    const entry = (_matchupProbs[teamA.team] || {})[teamB.team];
+    if (entry) return entry[venue];
+    // Fallback to Elo
+    return eloWinProb(teamA.elo, teamB.elo, venue === 'neutral');
 }
 
 // Best-of-N series probability with alternating home court (2-2-1 pattern)
 // Higher seed (team A) is home for games 1, 2, 5; away for games 3, 4
-function seriesProbHCA(eloA, eloB, n) {
+function seriesProbHCA(teamA, teamB, n) {
     const need = Math.ceil(n / 2);
     const homePattern = [true, true, false, false, true];
 
@@ -57,8 +48,8 @@ function seriesProbHCA(eloA, eloB, n) {
     const gameProbs = [];
     for (let g = 0; g < n; g++) {
         gameProbs.push(homePattern[g]
-            ? eloWinProb(eloA, eloB, false)             // A home → A gets HCA
-            : 1 - eloWinProb(eloB, eloA, false));       // B home → invert B's HCA prob
+            ? matchupProb(teamA, teamB, 'home')
+            : matchupProb(teamA, teamB, 'away'));
     }
 
     // DP: walk through games, tracking P(winsA, winsB) states
@@ -98,15 +89,15 @@ function seriesProbHCA(eloA, eloB, n) {
 }
 
 // Compute probability of each possible series outcome (e.g. 3-0, 3-1, 3-2, 0-3, ...)
-function seriesOutcomeProbs(eloA, eloB, n) {
+function seriesOutcomeProbs(teamA, teamB, n) {
     const need = Math.ceil(n / 2);
     const homePattern = [true, true, false, false, true];
 
     const gameProbs = [];
     for (let g = 0; g < n; g++) {
         gameProbs.push(homePattern[g]
-            ? eloWinProb(eloA, eloB, false)
-            : 1 - eloWinProb(eloB, eloA, false));
+            ? matchupProb(teamA, teamB, 'home')
+            : matchupProb(teamA, teamB, 'away'));
     }
 
     let states = new Map();
@@ -165,6 +156,8 @@ async function init() {
             }
         }
 
+        _matchupProbs = data.playoff_matchup_probs || {};
+
         // Top 10 teams seeded 1-10
         _seeded = _teams.slice(0, 10).map((t, i) => ({
             ...t,
@@ -219,6 +212,7 @@ function resetBracket() {
     _bracket.quarters[3].b = _seeded[4]; // 5
 
     renderBracket();
+    runMonteCarlo();
     updateURL();
 }
 
@@ -274,9 +268,9 @@ function renderMatchup(round, idx, seriesLen, neutral, label) {
     let probA = null, probB = null;
     if (teamA && teamB) {
         if (seriesLen > 1) {
-            probA = seriesProbHCA(teamA.elo, teamB.elo, seriesLen);
+            probA = seriesProbHCA(teamA, teamB, seriesLen);
         } else {
-            probA = eloWinProb(teamA.elo, teamB.elo, neutral);
+            probA = matchupProb(teamA, teamB, neutral ? 'neutral' : 'home');
         }
         probB = 1 - probA;
     }
@@ -351,7 +345,7 @@ function probColor(p) {
 
 // Series length distribution: mini bar chart showing P(in 3), P(in 4), P(in 5)
 function getPredictedScore(teamA, teamB, seriesLen) {
-    const outcomes = seriesOutcomeProbs(teamA.elo, teamB.elo, seriesLen);
+    const outcomes = seriesOutcomeProbs(teamA, teamB, seriesLen);
     const need = Math.ceil(seriesLen / 2);
 
     // Group by series length (combine both winners)
@@ -416,6 +410,7 @@ function pickWinner(round, idx, side) {
     cascadeForward(round, idx, side);
 
     renderBracket();
+    runMonteCarlo();
     updateURL();
 }
 
@@ -491,6 +486,7 @@ function undoPick(round, idx) {
     }
 
     renderBracket();
+    runMonteCarlo();
     updateURL();
 }
 
@@ -534,8 +530,8 @@ function autoFill() {
             const m = _bracket[round][idx];
             if (!m.a || !m.b || m.winner) continue;
             const pA = seriesLen > 1
-                ? seriesProbHCA(m.a.elo, m.b.elo, seriesLen)
-                : eloWinProb(m.a.elo, m.b.elo, neutral);
+                ? seriesProbHCA(m.a, m.b, seriesLen)
+                : matchupProb(m.a, m.b, neutral ? 'neutral' : 'home');
             const side = pA >= 0.5 ? 'a' : 'b';
             m.winner = side === 'a' ? m.a : m.b;
             cascadeForward(round, idx, side);
@@ -543,6 +539,7 @@ function autoFill() {
     }
 
     renderBracket();
+    runMonteCarlo();
     updateURL();
 }
 
@@ -564,50 +561,56 @@ function runMonteCarlo() {
 function simulateOnce() {
     const s = _seeded;
 
-    // Play-In
-    const pA = eloWinProb(s[6].elo, s[7].elo);
-    const gameAWinner = Math.random() < pA ? s[6] : s[7];
-    const gameALoser  = gameAWinner === s[6] ? s[7] : s[6];
+    // Play-In Game A: 7 vs 8
+    let gameAWinner, gameALoser;
+    if (_bracket.playin[0].winner) {
+        gameAWinner = _bracket.playin[0].winner;
+        gameALoser = gameAWinner.team === s[6].team ? s[7] : s[6];
+    } else {
+        const pA = matchupProb(s[6], s[7], 'home');
+        gameAWinner = Math.random() < pA ? s[6] : s[7];
+        gameALoser = gameAWinner === s[6] ? s[7] : s[6];
+    }
 
-    const pB = eloWinProb(s[8].elo, s[9].elo);
-    const gameBWinner = Math.random() < pB ? s[8] : s[9];
+    // Play-In Game B: 9 vs 10
+    const gameBWinner = _bracket.playin[1].winner
+        || (Math.random() < matchupProb(s[8], s[9], 'home') ? s[8] : s[9]);
 
-    const pC = eloWinProb(gameALoser.elo, gameBWinner.elo);
-    const gameCWinner = Math.random() < pC ? gameALoser : gameBWinner;
+    // Play-In Game C: Loser(A) vs Winner(B)
+    const gameCWinner = _bracket.playin[2].winner
+        || (Math.random() < matchupProb(gameALoser, gameBWinner, 'home') ? gameALoser : gameBWinner);
 
     const seed7 = gameAWinner;  // → QF vs seed 2
     const seed8 = gameCWinner;  // → QF vs seed 1
 
     // Quarterfinals (best-of-5)
-    const qf = [
-        simSeries(s[0], seed8, 5, false),   // 1 vs 8
-        simSeries(s[1], seed7, 5, false),   // 2 vs 7
-        simSeries(s[2], s[5], 5, false),    // 3 vs 6
-        simSeries(s[3], s[4], 5, false),    // 4 vs 5
-    ];
+    const qfPairs = [[s[0], seed8], [s[1], seed7], [s[2], s[5]], [s[3], s[4]]];
+    const qf = qfPairs.map((pair, i) =>
+        _bracket.quarters[i].winner || simSeries(pair[0], pair[1], 5)
+    );
 
-    // Final Four (neutral)
-    const sf1 = simGame(qf[0], qf[3], true);
-    const sf2 = simGame(qf[1], qf[2], true);
+    // Final Four — Semis (neutral)
+    const sf1 = _bracket.semis[0].winner || simGame(qf[0], qf[3], true);
+    const sf2 = _bracket.semis[1].winner || simGame(qf[1], qf[2], true);
 
     // Final (neutral)
-    return simGame(sf1, sf2, true);
+    return _bracket.final[0].winner || simGame(sf1, sf2, true);
 }
 
 function simGame(a, b, neutral) {
-    const p = eloWinProb(a.elo, b.elo, neutral);
+    const p = matchupProb(a, b, neutral ? 'neutral' : 'home');
     return Math.random() < p ? a : b;
 }
 
-function simSeries(a, b, n, neutral) {
+function simSeries(a, b, n) {
     const need = Math.ceil(n / 2);
     // 2-2-1 home court pattern: higher seed (a) home for games 1, 2, 5
     const homePattern = [true, true, false, false, true];
     let wA = 0, wB = 0, game = 0;
     while (wA < need && wB < need) {
         const p = homePattern[game]
-            ? eloWinProb(a.elo, b.elo, false)
-            : 1 - eloWinProb(b.elo, a.elo, false);
+            ? matchupProb(a, b, 'home')
+            : matchupProb(a, b, 'away');
         if (Math.random() < p) wA++; else wB++;
         game++;
     }
@@ -656,8 +659,8 @@ function computeChampionPath() {
             if (m.winner && m.winner.team === _champion.team && m.a && m.b) {
                 const len = seriesLens[round];
                 const pA = len > 1
-                    ? seriesProbHCA(m.a.elo, m.b.elo, len)
-                    : eloWinProb(m.a.elo, m.b.elo, neutrals[round]);
+                    ? seriesProbHCA(m.a, m.b, len)
+                    : matchupProb(m.a, m.b, neutrals[round] ? 'neutral' : 'home');
                 const side = m.winner.team === m.a.team ? pA : 1 - pA;
                 prob *= side;
             }
