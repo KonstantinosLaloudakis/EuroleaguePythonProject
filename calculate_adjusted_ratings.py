@@ -14,8 +14,9 @@ import numpy as np
 
 
 # --- Configuration ---
-NUM_ITERATIONS = 20  # Number of convergence passes
+NUM_ITERATIONS = 50  # Number of convergence passes
 LEAGUE_AVG_PPG = 80.0  # Approximate league average PPG (will be calculated)
+RECENCY_DECAY = 0.97  # Per-round exponential decay (0.97 = game from 20 rounds ago counts 54%)
 
 # Team name to code mapping (shared with other scripts)
 NAME_TO_CODE = {
@@ -57,7 +58,8 @@ def calculate_raw_ratings(games):
     for g in games:
         home, away = g['LocalTeam'], g['RoadTeam']
         h_pts, a_pts = g['LocalScore'], g['RoadScore']
-        
+        game_round = g.get('GameCode', 0)
+
         for t in (home, away):
             if t not in teams:
                 teams[t] = {
@@ -66,10 +68,11 @@ def calculate_raw_ratings(games):
                     'wins': 0, 'losses': 0,
                     'home_w': 0, 'home_l': 0, 'away_w': 0, 'away_l': 0
                 }
-        
+
         # Home team data
         teams[home]['games'].append({
-            'opponent': away, 'pts_scored': h_pts, 'pts_allowed': a_pts, 'location': 'home'
+            'opponent': away, 'pts_scored': h_pts, 'pts_allowed': a_pts,
+            'location': 'home', 'round': game_round
         })
         teams[home]['total_pts_scored'] += h_pts
         teams[home]['total_pts_allowed'] += a_pts
@@ -83,7 +86,8 @@ def calculate_raw_ratings(games):
         
         # Away team data
         teams[away]['games'].append({
-            'opponent': home, 'pts_scored': a_pts, 'pts_allowed': h_pts, 'location': 'away'
+            'opponent': home, 'pts_scored': a_pts, 'pts_allowed': h_pts,
+            'location': 'away', 'round': game_round
         })
         teams[away]['total_pts_scored'] += a_pts
         teams[away]['total_pts_allowed'] += h_pts
@@ -108,57 +112,66 @@ def calculate_raw_ratings(games):
 
 def run_iterative_adjustment(teams, league_avg, num_iterations=NUM_ITERATIONS):
     """
-    Run the KenPom-style iterative convergence algorithm.
-    
+    Run the KenPom-style iterative convergence algorithm with recency weighting.
+
     For each iteration:
     1. For each team, adjust their offensive rating by the quality of defenses faced.
     2. For each team, adjust their defensive rating by the quality of offenses faced.
-    3. Repeat until convergence.
+    3. Weight each game by recency (exponential decay from most recent round).
+    4. Repeat until convergence.
     """
     team_list = sorted(teams.keys())
-    
-    # Initialize adjusted ratings with raw values
+
+    # Compute per-game recency weights: weight = RECENCY_DECAY ^ (max_round - game_round)
+    max_round = max(g['round'] for t in teams.values() for g in t['games'])
+    for t in team_list:
+        for game in teams[t]['games']:
+            game['weight'] = RECENCY_DECAY ** (max_round - game['round'])
+
+    # Initialize adjusted ratings with recency-weighted raw values
     adj_off = {}
     adj_def = {}
     for t in team_list:
-        adj_off[t] = teams[t]['total_pts_scored'] / teams[t]['gp']
-        adj_def[t] = teams[t]['total_pts_allowed'] / teams[t]['gp']
-    
-    print(f"\nRunning {num_iterations} convergence iterations...")
-    
+        w_total = sum(g['weight'] for g in teams[t]['games'])
+        adj_off[t] = sum(g['pts_scored'] * g['weight'] for g in teams[t]['games']) / w_total
+        adj_def[t] = sum(g['pts_allowed'] * g['weight'] for g in teams[t]['games']) / w_total
+
+    print(f"\nRunning {num_iterations} convergence iterations (recency decay={RECENCY_DECAY})...")
+
     for iteration in range(num_iterations):
         new_adj_off = {}
         new_adj_def = {}
-        
+
         for t in team_list:
             # --- Adjust Offensive Rating ---
             # For each game, what SHOULD this team have scored against a league-average defense?
             # actual_scored * (league_avg_defense / opponent_adj_defense)
             adjusted_scored_total = 0
             adjusted_allowed_total = 0
-            
+
             for game in teams[t]['games']:
                 opp = game['opponent']
-                
-                # Offensive adjustment: 
+                w = game['weight']
+
+                # Offensive adjustment:
                 # Scale points scored by how good/bad the opponent's defense is vs average
                 opp_def_factor = adj_def[opp] / league_avg  # >1 = weak defense, <1 = strong defense
                 # If opponent has a weak defense (allows more), our actual scoring is less impressive
                 # So we divide by the factor to normalize
                 adjusted_scored = game['pts_scored'] / opp_def_factor
-                adjusted_scored_total += adjusted_scored
-                
+                adjusted_scored_total += adjusted_scored * w
+
                 # Defensive adjustment:
                 # Scale points allowed by how good/bad the opponent's offense is vs average
                 opp_off_factor = adj_off[opp] / league_avg  # >1 = strong offense, <1 = weak offense
                 # If opponent has a strong offense, allowing them points is more understandable
                 # So we divide by the factor to normalize
                 adjusted_allowed = game['pts_allowed'] / opp_off_factor
-                adjusted_allowed_total += adjusted_allowed
-            
-            gp = teams[t]['gp']
-            new_adj_off[t] = adjusted_scored_total / gp
-            new_adj_def[t] = adjusted_allowed_total / gp
+                adjusted_allowed_total += adjusted_allowed * w
+
+            w_total = sum(g['weight'] for g in teams[t]['games'])
+            new_adj_off[t] = adjusted_scored_total / w_total
+            new_adj_def[t] = adjusted_allowed_total / w_total
         
         # Check convergence (max change across all teams)
         max_change = 0
