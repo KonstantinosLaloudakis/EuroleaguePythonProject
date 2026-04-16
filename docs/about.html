@@ -273,7 +273,7 @@
                 <li><span class="metric-name">Shot Lab</span> — Interactive shot charts with heatmaps by court location, zone breakdown tables (At Rim, Paint, Mid-Range, 3PT), shot distribution analysis, and paint finishing profiles showing how players and teams score inside.</li>
                 <li><span class="metric-name">Playmaking Network</span> — Interactive chord diagrams showing who assists whom within each team. Top 8 players by assist involvement connected by ribbons proportional to assist frequency. Hover for rich tooltips (count, 2PT/3PT split, per-game rate, percentage breakdowns). Click to pin a player and see detailed assist given/received breakdowns. League-wide tables for top 20 assist combos and top 20 playmakers.</li>
                 <li><span class="metric-name">Game Replay</span> — Win probability timelines for every game, showing how the probability shifted play-by-play. Hover any moment to see the exact game state.</li>
-                <li><span class="metric-name">Playoffs</span> — Playoff bracket visualization with series matchups, Monte Carlo advancement probabilities, and projected seedings.</li>
+                <li><span class="metric-name">Playoffs</span> — Interactive playoff bracket simulator. Click to pick winners through Play-In, Quarterfinals (best-of-5 with 2-2-1 HCA), and Final Four (neutral venue). Probabilities use pre-computed model-based matchup odds (adjusted ratings + Elo + ML win probability). A 10,000-run Monte Carlo simulates championship odds and updates live as you fill in the bracket. Share your bracket via URL.</li>
                 <li><span class="metric-name">MVP Race</span> — Composite MVP rankings with sortable columns, plus a race chart showing how rankings evolved across rounds.</li>
                 <li><span class="metric-name">Game Control</span> — How teams win, not just that they win. The Game Control Index (GCI) uses Win Probability trajectory analysis to measure dominance, drama, comeback resilience, crunch-time performance, and killer instinct for every game and team.</li>
                 <li><span class="metric-name">GCI History</span> — 19 seasons of Euroleague evolution through the GCI lens. Hero trend cards with sparklines show how drama, comebacks, and GCI spread changed from 2007 to 2025. Interactive team comparison chart across all 33 historical teams, era breakdown (Expansion, Contraction, Modern), and all-time superlatives for most dramatic game, biggest comeback, most dominant game, and highest single-season GCI.</li>
@@ -350,9 +350,10 @@
                     <span class="metric-name">Adjusted Ratings</span>
                     <span class="metric-tag team">Team</span>
                     <br>
-                    <strong>KenPom-style Four Factors</strong> — Offensive and defensive efficiency adjusted for strength of schedule.
-                    Breaks team performance into four components: effective shooting, turnover rate, rebounding rate, and free throw rate.
-                    Adj_Net = Adj_Off - Adj_Def, measured in points per 100 possessions.
+                    <strong>KenPom-style Four Factors</strong> — Offensive and defensive efficiency adjusted for strength of schedule
+                    with recency weighting (exponential decay, 0.97 per round). Recent games count more than early-season games,
+                    so the ratings reflect current form — not just season averages.
+                    Adj_Net = Adj_Off - Adj_Def, measured in points per game.
                 </li>
 
                 <li>
@@ -418,9 +419,11 @@
                     <span class="metric-tag model">Simulation</span>
                     <br>
                     Simulates the remainder of the season 10,000 times to generate probability distributions for final standings.
-                    Each unplayed game is resolved using a blend of adjusted ratings (75%) and Elo margin (25%), with team-specific
-                    home court advantage. Outputs playoff probabilities (Top 4, Top 6, Top 10), projected win totals,
-                    and seed distributions for every team.
+                    Each unplayed game is resolved using a blend of recency-weighted adjusted ratings (75%) and Elo margin (25%),
+                    with team-specific home court advantage, fed into the ML win probability model.
+                    Outputs playoff probabilities (Top 4, Top 6, Top 10), projected win totals,
+                    and seed distributions for every team. Pre-computed pairwise matchup probabilities for all playoff
+                    team pairs are exported to power the interactive bracket simulator.
                 </li>
 
                 <li>
