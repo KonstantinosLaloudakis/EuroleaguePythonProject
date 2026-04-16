@@ -6,6 +6,92 @@ import os
 
 from wp_model_utils import predict_wp
 
+
+# ── Euroleague tiebreaker helpers ────────────────────────────────────
+def _resolve_tie(group, h2h_wins, h2h_pd, overall_pd):
+    """Resolve a tie among `group` (list of team indices) using Euroleague rules:
+    1. H2H win-loss record among all tied teams (mini-table)
+    2. H2H point differential among tied teams
+    3. Overall point differential
+    """
+    if len(group) <= 1:
+        return group
+
+    # --- Two-way tie: direct comparison ---
+    if len(group) == 2:
+        i, j = group
+        if h2h_wins[i, j] > h2h_wins[j, i]:
+            return [i, j]
+        if h2h_wins[j, i] > h2h_wins[i, j]:
+            return [j, i]
+        if h2h_pd[i, j] > h2h_pd[j, i]:
+            return [i, j]
+        if h2h_pd[j, i] > h2h_pd[i, j]:
+            return [j, i]
+        if overall_pd[i] >= overall_pd[j]:
+            return [i, j]
+        return [j, i]
+
+    # --- Multi-way tie: mini-table h2h wins within the group ---
+    group_wins = {t: sum(h2h_wins[t, o] for o in group if o != t) for t in group}
+    sorted_teams = sorted(group, key=lambda t: group_wins[t], reverse=True)
+
+    result = []
+    i = 0
+    while i < len(sorted_teams):
+        # collect sub-group with equal h2h wins
+        j = i + 1
+        while j < len(sorted_teams) and group_wins[sorted_teams[j]] == group_wins[sorted_teams[i]]:
+            j += 1
+        sub = sorted_teams[i:j]
+        if len(sub) == 1:
+            result.append(sub[0])
+        elif len(sub) < len(group):
+            # smaller sub-group → re-apply h2h among just these teams
+            result.extend(_resolve_tie(sub, h2h_wins, h2h_pd, overall_pd))
+        else:
+            # all equal h2h wins → fall through to h2h PD within group
+            group_pd = {t: sum(h2h_pd[t, o] for o in sub if o != t) for t in sub}
+            pd_sorted = sorted(sub, key=lambda t: (group_pd[t], overall_pd[t]), reverse=True)
+            result.extend(pd_sorted)
+        i = j
+
+    return result
+
+
+def _rank_with_h2h(sim_wins, sim_pd, sim_h2h_wins, sim_h2h_pd, num_teams, num_simulations):
+    """Rank all teams per simulation using Euroleague tiebreaker rules."""
+    team_ranks = np.zeros((num_simulations, num_teams), dtype=int)
+
+    for sim in range(num_simulations):
+        wins = sim_wins[sim]
+        pd_arr = sim_pd[sim]
+        h2h_w = sim_h2h_wins[sim]
+        h2h_p = sim_h2h_pd[sim]
+
+        # group teams by win count
+        win_groups = {}
+        for t in range(num_teams):
+            w = int(wins[t])
+            if w not in win_groups:
+                win_groups[w] = []
+            win_groups[w].append(t)
+
+        rank = 0
+        for w in sorted(win_groups.keys(), reverse=True):
+            group = win_groups[w]
+            if len(group) == 1:
+                team_ranks[sim, group[0]] = rank
+                rank += 1
+            else:
+                ordered = _resolve_tie(group, h2h_w, h2h_p, pd_arr)
+                for t in ordered:
+                    team_ranks[sim, t] = rank
+                    rank += 1
+
+    return team_ranks
+
+
 def run_monte_carlo(num_simulations=10000):
     print("--- 🏀 Euroleague Monte Carlo Playoff Matrix 🏀 ---")
     print(f"Running {num_simulations} simulations of the remaining season...")
@@ -119,6 +205,23 @@ def run_monte_carlo(num_simulations=10000):
         adj_net_ratings[idx]  = adj_net_lookup.get(t, 0)
         elo_ratings[idx]      = elo_lookup.get(t, 1500)
 
+    # 1e. Build head-to-head record matrix from played games
+    base_h2h_wins = np.zeros((num_teams, num_teams))
+    base_h2h_pd   = np.zeros((num_teams, num_teams))
+    for _, row in played.iterrows():
+        local, road = row['LocalTeam'], row['RoadTeam']
+        l_idx, r_idx = team_to_idx.get(local), team_to_idx.get(road)
+        if l_idx is None or r_idx is None:
+            continue
+        l_pts, r_pts = int(row['LocalScore']), int(row['RoadScore'])
+        if l_pts > r_pts:
+            base_h2h_wins[l_idx, r_idx] += 1
+        else:
+            base_h2h_wins[r_idx, l_idx] += 1
+        base_h2h_pd[l_idx, r_idx] += (l_pts - r_pts)
+        base_h2h_pd[r_idx, l_idx] += (r_pts - l_pts)
+    print(f"Built head-to-head matrix ({num_teams}x{num_teams}) from played games.")
+
     # 2. Extract Unplayed Games
     name_to_code = {
         'ALBA BERLIN': 'BER', 'ANADOLU EFES ISTANBUL': 'IST', 'AS MONACO': 'MCO',
@@ -188,6 +291,8 @@ def run_monte_carlo(num_simulations=10000):
     
     sim_wins = np.tile(base_wins, (num_simulations, 1))
     sim_pd = np.tile(base_pd, (num_simulations, 1))
+    sim_h2h_wins = np.tile(base_h2h_wins, (num_simulations, 1, 1))
+    sim_h2h_pd   = np.tile(base_h2h_pd,   (num_simulations, 1, 1))
 
     for h_code, a_code in remaining_games:
         h_idx = team_to_idx[h_code]
@@ -231,14 +336,18 @@ def run_monte_carlo(num_simulations=10000):
         sim_pd[:, h_idx]   += margins
         sim_pd[:, a_idx]   -= margins
 
+        # Track head-to-head results for tiebreaking
+        sim_h2h_wins[:, h_idx, a_idx] += home_wins
+        sim_h2h_wins[:, a_idx, h_idx] += away_wins
+        sim_h2h_pd[:, h_idx, a_idx]   += margins
+        sim_h2h_pd[:, a_idx, h_idx]   -= margins
+
     # 4. Rank and Aggregate
     print("Aggregating ranks...")
     
-    # Sort primarily by Wins, secondarily by PD
-    combine_score = sim_wins * 10000 + sim_pd
-    
-    ranks_idx = np.argsort(-combine_score, axis=1) 
-    team_ranks = np.argsort(ranks_idx, axis=1) 
+    # Rank using Euroleague tiebreaker rules (h2h → h2h PD → overall PD)
+    team_ranks = _rank_with_h2h(sim_wins, sim_pd, sim_h2h_wins, sim_h2h_pd,
+                                num_teams, num_simulations)
     
     results = {}
     for i, t in enumerate(team_list):

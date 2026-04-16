@@ -421,6 +421,9 @@
                     Simulates the remainder of the season 10,000 times to generate probability distributions for final standings.
                     Each unplayed game is resolved using a blend of recency-weighted adjusted ratings (75%) and Elo margin (25%),
                     with team-specific home court advantage, fed into the ML win probability model.
+                    Teams are ranked using official Euroleague tiebreaker rules: head-to-head record among tied teams,
+                    then head-to-head point differential, then overall point differential.
+                    A full head-to-head matrix is tracked across all 10,000 simulations.
                     Outputs playoff probabilities (Top 4, Top 6, Top 10), projected win totals,
                     and seed distributions for every team. Pre-computed pairwise matchup probabilities for all playoff
                     team pairs are exported to power the interactive bracket simulator.
