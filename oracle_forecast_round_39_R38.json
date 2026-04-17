@@ -1,0 +1,33 @@
+{
+  "round": 39,
+  "predictions": [
+    {
+      "Round": 39,
+      "Local": "UNKNOWN",
+      "LocalName": "UNKNOWN",
+      "Road": "UNKNOWN",
+      "RoadName": "UNKNOWN",
+      "Margin": 1.67,
+      "Winner": "UNKNOWN",
+      "WinnerName": "UNKNOWN",
+      "HomeWinProb": 64.2,
+      "Conf": 64.2,
+      "Insight": "\u2696\ufe0f Evenly matched (Adj Net gap: 0.0)\nAdj Net: +0.0 v +0.0  |  Elo: 1500 v 1500\nL5: 0-5 v 0-5  |  H: 0-1 v A: 0-1"
+    },
+    {
+      "Round": 39,
+      "Local": "UNKNOWN",
+      "LocalName": "UNKNOWN",
+      "Road": "UNKNOWN",
+      "RoadName": "UNKNOWN",
+      "Margin": 1.67,
+      "Winner": "UNKNOWN",
+      "WinnerName": "UNKNOWN",
+      "HomeWinProb": 64.2,
+      "Conf": 64.2,
+      "Insight": "\u2696\ufe0f Evenly matched (Adj Net gap: 0.0)\nAdj Net: +0.0 v +0.0  |  Elo: 1500 v 1500\nL5: 0-5 v 0-5  |  H: 0-1 v A: 0-1"
+    }
+  ],
+  "mvp_candidates": [],
+  "player_forecasts": []
+}
