@@ -1246,7 +1246,6 @@ function renderPathDetailTree(entry, container) {
     const colCount = rounds.length + 2; // team + rounds + trophy
     const colW = width / colCount;
     const rowH = 60;
-    const branchPad = 20;
 
     // Determine max branches per column to size vertically
     let maxBranches = 1;
@@ -1265,7 +1264,7 @@ function renderPathDetailTree(entry, container) {
     let svg = `<svg class="ptt-tree-svg" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">`;
 
     // Root node (team)
-    svg += nodeLabel(colW / 2, centerY, entry.team, teamColor, '', 'ROOT');
+    svg += nodeLabel(colW / 2, centerY, entry.team, teamColor, '', '');
 
     // Draw each round column
     rounds.forEach((rk, idx) => {
