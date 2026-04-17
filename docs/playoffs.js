@@ -1144,11 +1144,13 @@ function renderPlayoffRecaps(recaps) {
 // ── Path to Title ──────────────────────────────────────────────────────────
 
 let _pttExpanded = null; // currently-expanded team code
+let _pathData = null;
 
 function renderPathToTitle(pathData) {
     const section = document.getElementById('path-to-title-section');
     const tbody = document.getElementById('ptt-tbody');
     if (!section || !tbody || !pathData || !pathData.length) return;
+    _pathData = pathData;
 
     section.style.display = '';
 
@@ -1231,6 +1233,120 @@ function pathPctCls(pct) {
     return 'ptt-cell-pct-low';
 }
 
+function renderPathDetailTree(entry, container) {
+    const byRound = {};
+    const entryRounds = entry.rounds || [];
+    for (const r of entryRounds) byRound[r.round] = r;
+    const rounds = ['qf', 'sf', 'final']; // Root, then these columns, then trophy
+    if (entryRounds.find(r => r.round === 'play_in' && r.status !== 'unreached')) {
+        rounds.unshift('play_in');
+    }
+
+    const width = 900;
+    const colCount = rounds.length + 2; // team + rounds + trophy
+    const colW = width / colCount;
+    const rowH = 60;
+    const branchPad = 20;
+
+    // Determine max branches per column to size vertically
+    let maxBranches = 1;
+    for (const rk of rounds) {
+        const r = byRound[rk];
+        if (!r) continue;
+        if (r.status === 'upcoming' && r.branches) {
+            maxBranches = Math.max(maxBranches, r.branches.length);
+        }
+    }
+    const height = Math.max(180, maxBranches * rowH + 80);
+
+    const teamColor = TEAM_COLORS[entry.team] || '#60a5fa';
+    const centerY = height / 2;
+
+    let svg = `<svg class="ptt-tree-svg" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">`;
+
+    // Root node (team)
+    svg += nodeLabel(colW / 2, centerY, entry.team, teamColor, '', 'ROOT');
+
+    // Draw each round column
+    rounds.forEach((rk, idx) => {
+        const r = byRound[rk];
+        const cx = colW * (idx + 1) + colW / 2;
+        const prevX = idx === 0 ? colW / 2 : colW * idx + colW / 2;
+
+        if (!r || r.status === 'unreached') {
+            svg += nodeLabel(cx, centerY, '—', '#334155', roundLabel(rk), '');
+            svg += edge(prevX + 30, centerY, cx - 30, centerY, '#334155', 0.4);
+            return;
+        }
+
+        if (r.status === 'completed' || r.status === 'in_progress') {
+            const opp = r.actual_opponent;
+            const color = r.actual_result === 'won' ? '#22c55e' : (r.actual_result === 'lost' ? '#f87171' : '#60a5fa');
+            const topLabel = roundLabel(rk);
+            const oppLabel = r.status === 'completed'
+                ? `${r.actual_result === 'won' ? 'WON' : 'LOST'} ${r.series ? r.series.join('-') : ''} vs ${opp}`
+                : `${r.series ? r.series.join('-') : ''} vs ${opp}`;
+            svg += nodeLabel(cx, centerY, opp, color, topLabel, oppLabel);
+            svg += edge(prevX + 30, centerY, cx - 30, centerY, color, 0.9);
+            return;
+        }
+
+        // Upcoming — draw branches
+        const branches = r.branches || [];
+        const winProbLabel = `${roundLabel(rk)} (${r.reach_prob.toFixed(0)}% to reach · ${r.win_prob.toFixed(0)}% to win)`;
+        if (branches.length === 0) {
+            svg += nodeLabel(cx, centerY, 'TBD', '#64748b', winProbLabel, '');
+            svg += edge(prevX + 30, centerY, cx - 30, centerY, '#64748b', 0.5);
+            return;
+        }
+        const totalH = branches.length * rowH;
+        const startY = centerY - totalH / 2 + rowH / 2;
+        branches.forEach((b, bi) => {
+            const by = startY + bi * rowH;
+            const bColor = TEAM_COLORS[b.opponent] || '#60a5fa';
+            svg += edge(prevX + 30, centerY, cx - 30, by, bColor, 0.75);
+            svg += nodeLabel(cx, by, b.opponent, bColor,
+                `${b.reach_prob_for_opp.toFixed(0)}% opp`,
+                `${b.win_prob_vs.toFixed(0)}% win`);
+        });
+        // Round label above column
+        svg += `<text x="${cx}" y="${20}" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="700" font-family="Outfit,sans-serif">${winProbLabel}</text>`;
+    });
+
+    // Trophy column
+    const trophyX = colW * (rounds.length + 1) + colW / 2;
+    svg += edge(colW * rounds.length + colW / 2 + 30, centerY, trophyX - 30, centerY, '#fbbf24', 0.9);
+    svg += `<text x="${trophyX}" y="${centerY - 10}" text-anchor="middle" font-size="28">\u{1F3C6}</text>`;
+    svg += `<text x="${trophyX}" y="${centerY + 18}" text-anchor="middle" fill="#fbbf24" font-size="13" font-weight="800" font-family="Outfit,sans-serif">${entry.championship_odds.toFixed(1)}%</text>`;
+
+    svg += '</svg>';
+    container.innerHTML = svg;
+}
+
+function nodeLabel(cx, cy, code, color, topLabel, bottomLabel) {
+    const r = 22;
+    let s = '';
+    if (topLabel) {
+        s += `<text x="${cx}" y="${cy - 30}" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600" font-family="Inter,sans-serif">${topLabel}</text>`;
+    }
+    s += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${color}" opacity="0.18" stroke="${color}" stroke-width="1.5"/>`;
+    s += `<text x="${cx}" y="${cy + 4}" text-anchor="middle" fill="${color}" font-size="11" font-weight="800" font-family="Outfit,sans-serif">${code}</text>`;
+    if (bottomLabel) {
+        s += `<text x="${cx}" y="${cy + 40}" text-anchor="middle" fill="#cbd5e1" font-size="10" font-family="Inter,sans-serif">${bottomLabel}</text>`;
+    }
+    return s;
+}
+
+function edge(x1, y1, x2, y2, color, opacity) {
+    // Smooth curve between columns
+    const midX = (x1 + x2) / 2;
+    return `<path d="M${x1},${y1} C${midX},${y1} ${midX},${y2} ${x2},${y2}" stroke="${color}" stroke-width="1.5" fill="none" opacity="${opacity}"/>`;
+}
+
+function roundLabel(rk) {
+    return { 'play_in': 'Play-In', 'qf': 'QF', 'sf': 'SF', 'final': 'Final' }[rk] || rk;
+}
+
 function togglePathDetail(teamCode) {
     const tbody = document.getElementById('ptt-tbody');
     if (!tbody) return;
@@ -1254,7 +1370,10 @@ function togglePathDetail(teamCode) {
     const detail = document.getElementById(`ptt-detail-${teamCode}`);
     if (!row || !detail) return;
     row.classList.add('ptt-row-expanded');
-    detail.querySelector('td').innerHTML = '<div style="color:var(--text-muted);font-size:0.8rem">Tree rendering — implemented in Task 5.</div>';
+    const entry = (_pathData || []).find(e => e.team === teamCode);
+    if (entry) {
+        renderPathDetailTree(entry, detail.querySelector('td'));
+    }
     _pttExpanded = teamCode;
 }
 
