@@ -1209,6 +1209,425 @@ def main():
         except Exception as e:
             print(f"  Warning: Could not compute playoff matchup probs: {e}")
 
+    # ── Playoff bracket helper functions ─────────────────────────────────────
+
+    def _detect_playoff_label(playoff_results):
+        """Generate a human-readable label for the current playoff phase."""
+        if not playoff_results:
+            return 'Pre-Playoff'
+
+        final = playoff_results.get('final', {})
+        if final.get('winner'):
+            return 'Final'
+
+        sf = playoff_results.get('sf', {})
+        if sf.get('sf1') or sf.get('sf2'):
+            return 'Final Four'
+
+        qf = playoff_results.get('qf', {})
+        qf_games = sum(len(q.get('games', [])) for q in qf.values())
+        if qf_games > 0:
+            return f'QF Day {qf_games}'
+
+        pi = playoff_results.get('play_in', {})
+        pi_count = sum(1 for k in ['game_a', 'game_b', 'game_c'] if pi.get(k) and pi[k].get('winner'))
+        if pi_count > 0:
+            return f'Play-In Day {pi_count}'
+
+        return 'Playoffs'
+
+    def _format_game(g):
+        """Format a playoff game dict for JSON output."""
+        return {
+            'home': g['home'],
+            'away': g['away'],
+            'home_score': g['home_score'],
+            'away_score': g['away_score'],
+            'winner': g['winner'],
+            'date': g.get('date', ''),
+        }
+
+    def build_playoff_results(game_results, seeded_teams):
+        """
+        Detect playoff games and build structured bracket results.
+
+        Playoff games have GameCode > 380 in the Euroleague API.
+        The schedule XML 'round' field distinguishes phases:
+          PI = Play-In, QF = Quarterfinals, SF = Semi-Finals, F = Final
+
+        Args:
+            game_results: list of dicts with GameCode, LocalTeam, RoadTeam, LocalScore, RoadScore, Winner
+            seeded_teams: list of top-10 team dicts sorted by seed (index 0 = seed 1)
+
+        Returns:
+            dict with play_in, qf, sf, final structure, or None if no playoff games exist
+        """
+        import xml.etree.ElementTree as ET
+
+        # Build game code → round-type mapping from schedule XML
+        gc_to_phase = {}
+        gc_to_date = {}
+        try:
+            tree = ET.parse('official_schedule_2025.xml')
+            for item in tree.getroot().findall('item'):
+                gc_el = item.find('gamecode')
+                round_el = item.find('round')
+                date_el = item.find('date')
+                if gc_el is not None and gc_el.text:
+                    gc_text = gc_el.text
+                    gc_num = int(gc_text.split('_')[1]) if '_' in gc_text else int(gc_text)
+                    if round_el is not None and round_el.text:
+                        gc_to_phase[gc_num] = round_el.text
+                    if date_el is not None and date_el.text:
+                        gc_to_date[gc_num] = date_el.text
+        except Exception:
+            pass
+
+        # Filter to playoff games with scores
+        playoff_games = []
+        for g in game_results:
+            gc = g.get('GameCode', 0)
+            if isinstance(gc, float):
+                gc = int(gc)
+            if gc > 380 and g.get('LocalScore', 0) > 0:
+                phase = gc_to_phase.get(gc, '')
+                playoff_games.append({
+                    'game_code': gc,
+                    'home': g['LocalTeam'],
+                    'away': g['RoadTeam'],
+                    'home_score': int(g['LocalScore']),
+                    'away_score': int(g['RoadScore']),
+                    'winner': g['Winner'],
+                    'phase': phase,
+                    'date': gc_to_date.get(gc, ''),
+                })
+
+        if not playoff_games:
+            return None
+
+        # Sort by game code (chronological)
+        playoff_games.sort(key=lambda x: x['game_code'])
+
+        # Build seed lookup
+        seed_codes = [t['team'] for t in seeded_teams[:10]]
+
+        # --- Play-In ---
+        pi_games = [g for g in playoff_games if g['phase'] == 'PI']
+        play_in = {
+            'game_a': None,
+            'game_b': None,
+            'game_c': None,
+        }
+
+        s7, s8, s9, s10 = (seed_codes[6] if len(seed_codes) > 6 else None,
+                            seed_codes[7] if len(seed_codes) > 7 else None,
+                            seed_codes[8] if len(seed_codes) > 8 else None,
+                            seed_codes[9] if len(seed_codes) > 9 else None)
+
+        for g in pi_games:
+            teams_in_game = {g['home'], g['away']}
+            if s7 in teams_in_game and s8 in teams_in_game:
+                play_in['game_a'] = _format_game(g)
+            elif s9 in teams_in_game and s10 in teams_in_game:
+                play_in['game_b'] = _format_game(g)
+            else:
+                play_in['game_c'] = _format_game(g)
+
+        # --- Quarterfinals ---
+        qf_games = [g for g in playoff_games if g['phase'] == 'QF']
+
+        final_seed7 = None
+        final_seed8 = None
+        if play_in['game_a']:
+            final_seed7 = play_in['game_a']['winner']
+        if play_in['game_c']:
+            final_seed8 = play_in['game_c']['winner']
+
+        qf_matchups = {
+            '1v8': {'higher': seed_codes[0], 'lower': final_seed8},
+            '2v7': {'higher': seed_codes[1], 'lower': final_seed7},
+            '3v6': {'higher': seed_codes[2], 'lower': seed_codes[5]},
+            '4v5': {'higher': seed_codes[3], 'lower': seed_codes[4]},
+        }
+
+        qf = {}
+        for label, matchup in qf_matchups.items():
+            series_games = []
+            series_wins = [0, 0]
+            series_winner = None
+
+            for g in qf_games:
+                teams_in_game = {g['home'], g['away']}
+                if matchup['higher'] in teams_in_game and matchup['lower'] in teams_in_game:
+                    series_games.append(_format_game(g))
+                    if g['winner'] == matchup['higher']:
+                        series_wins[0] += 1
+                    else:
+                        series_wins[1] += 1
+                    if series_wins[0] >= 3:
+                        series_winner = matchup['higher']
+                    elif series_wins[1] >= 3:
+                        series_winner = matchup['lower']
+
+            qf[label] = {
+                'games': series_games,
+                'series': series_wins,
+                'higher_seed': matchup['higher'],
+                'lower_seed': matchup['lower'],
+                'winner': series_winner,
+            }
+
+        # --- Semi-Finals ---
+        sf_games = [g for g in playoff_games if g['phase'] == 'SF']
+        sf = {'sf1': None, 'sf2': None}
+
+        sf1_teams = {qf['1v8']['winner'], qf['4v5']['winner']} - {None}
+        sf2_teams = {qf['2v7']['winner'], qf['3v6']['winner']} - {None}
+
+        for g in sf_games:
+            teams_in_game = {g['home'], g['away']}
+            if sf1_teams and teams_in_game == sf1_teams:
+                sf['sf1'] = _format_game(g)
+            elif sf2_teams and teams_in_game == sf2_teams:
+                sf['sf2'] = _format_game(g)
+
+        # --- Final ---
+        final_games = [g for g in playoff_games if g['phase'] == 'F']
+        final = {'game': None, 'winner': None}
+        if final_games:
+            final['game'] = _format_game(final_games[0])
+            final['winner'] = final_games[0]['winner']
+
+        return {
+            'play_in': play_in,
+            'qf': qf,
+            'sf': sf,
+            'final': final,
+        }
+
+    def compute_championship_odds(playoff_results, matchup_probs, seeded_teams, n_sims=10000):
+        """
+        Run Monte Carlo simulation of the remaining bracket from current state.
+
+        Uses playoff_results for completed games and matchup_probs for simulating
+        unplayed games. Returns dict of team_code -> championship probability (0-100).
+        """
+        import random
+
+        if len(seeded_teams) < 10:
+            return {}
+
+        seed_codes = [t['team'] for t in seeded_teams[:10]]
+
+        def _get_prob(team_a, team_b, venue):
+            entry = (matchup_probs.get(team_a) or {}).get(team_b)
+            if entry:
+                return entry.get(venue, 0.5)
+            return 0.5
+
+        def _sim_game(team_a, team_b, venue):
+            p = _get_prob(team_a, team_b, venue)
+            return team_a if random.random() < p else team_b
+
+        def _sim_series(higher, lower):
+            home_pattern = [True, True, False, False, True]
+            wins_h, wins_l = 0, 0
+            for g in range(5):
+                venue = 'home' if home_pattern[g] else 'away'
+                winner = _sim_game(higher, lower, venue)
+                if winner == higher:
+                    wins_h += 1
+                else:
+                    wins_l += 1
+                if wins_h >= 3 or wins_l >= 3:
+                    break
+            return higher if wins_h >= 3 else lower
+
+        # Extract known results
+        pi_a_winner = None
+        pi_a_loser = None
+        pi_b_winner = None
+        pi_c_winner = None
+        qf_winners = {'1v8': None, '2v7': None, '3v6': None, '4v5': None}
+        qf_series_state = {}
+        sf_winners = {'sf1': None, 'sf2': None}
+        final_winner = None
+
+        if playoff_results:
+            pi = playoff_results.get('play_in', {})
+            if pi.get('game_a') and pi['game_a'].get('winner'):
+                pi_a_winner = pi['game_a']['winner']
+                ga = pi['game_a']
+                pi_a_loser = ga['away'] if ga['winner'] == ga['home'] else ga['home']
+            if pi.get('game_b') and pi['game_b'].get('winner'):
+                pi_b_winner = pi['game_b']['winner']
+            if pi.get('game_c') and pi['game_c'].get('winner'):
+                pi_c_winner = pi['game_c']['winner']
+
+            qf_data = playoff_results.get('qf', {})
+            for label in ['1v8', '2v7', '3v6', '4v5']:
+                qf_entry = qf_data.get(label, {})
+                if qf_entry.get('winner'):
+                    qf_winners[label] = qf_entry['winner']
+                elif qf_entry.get('series'):
+                    qf_series_state[label] = (
+                        qf_entry['series'][0], qf_entry['series'][1],
+                        qf_entry.get('higher_seed'), qf_entry.get('lower_seed')
+                    )
+
+            sf_data = playoff_results.get('sf', {})
+            if sf_data.get('sf1') and sf_data['sf1'].get('winner'):
+                sf_winners['sf1'] = sf_data['sf1']['winner']
+            if sf_data.get('sf2') and sf_data['sf2'].get('winner'):
+                sf_winners['sf2'] = sf_data['sf2']['winner']
+
+            final_data = playoff_results.get('final', {})
+            if final_data.get('winner'):
+                final_winner = final_data['winner']
+
+        counts = {code: 0 for code in seed_codes}
+
+        for _ in range(n_sims):
+            ga_w = pi_a_winner or _sim_game(seed_codes[6], seed_codes[7], 'home')
+            ga_l = pi_a_loser or (seed_codes[7] if ga_w == seed_codes[6] else seed_codes[6])
+            gb_w = pi_b_winner or _sim_game(seed_codes[8], seed_codes[9], 'home')
+            gc_w = pi_c_winner or _sim_game(ga_l, gb_w, 'home')
+
+            s7 = ga_w
+            s8 = gc_w
+
+            qf_pairs = {
+                '1v8': (seed_codes[0], s8),
+                '2v7': (seed_codes[1], s7),
+                '3v6': (seed_codes[2], seed_codes[5]),
+                '4v5': (seed_codes[3], seed_codes[4]),
+            }
+
+            qf_w = {}
+            for label, (higher, lower) in qf_pairs.items():
+                if qf_winners[label]:
+                    qf_w[label] = qf_winners[label]
+                elif label in qf_series_state:
+                    h_wins, l_wins, h_seed, l_seed = qf_series_state[label]
+                    while h_wins < 3 and l_wins < 3:
+                        game_num = h_wins + l_wins
+                        home_pattern = [True, True, False, False, True]
+                        venue = 'home' if home_pattern[game_num] else 'away'
+                        w = _sim_game(h_seed, l_seed, venue)
+                        if w == h_seed:
+                            h_wins += 1
+                        else:
+                            l_wins += 1
+                    qf_w[label] = h_seed if h_wins >= 3 else l_seed
+                else:
+                    qf_w[label] = _sim_series(higher, lower)
+
+            sf1_w = sf_winners['sf1'] or _sim_game(qf_w['1v8'], qf_w['4v5'], 'neutral')
+            sf2_w = sf_winners['sf2'] or _sim_game(qf_w['2v7'], qf_w['3v6'], 'neutral')
+
+            champ = final_winner or _sim_game(sf1_w, sf2_w, 'neutral')
+            counts[champ] += 1
+
+        return {code: round(count / n_sims * 100, 1) for code, count in counts.items()}
+
+    def build_playoff_recaps(playoff_results, odds_before, odds_after, matchup_probs, seeded_teams):
+        """
+        Generate recap card data for each completed playoff game.
+        """
+        if not playoff_results:
+            return []
+
+        recaps = []
+
+        def _get_pre_game_prob(home, away, venue):
+            entry = (matchup_probs.get(home) or {}).get(away)
+            if entry:
+                return entry.get(venue, 0.5)
+            return 0.5
+
+        def _add_recap(game, round_label, series=None, series_label_str=None):
+            if not game or not game.get('winner'):
+                return
+
+            home, away = game['home'], game['away']
+            winner = game['winner']
+
+            venue = 'neutral' if round_label in ('Semi-Final 1', 'Semi-Final 2', 'Final') else 'home'
+            home_prob = _get_pre_game_prob(home, away, venue)
+            winner_prob = home_prob if winner == home else (1 - home_prob)
+
+            is_upset = winner_prob < 0.4
+
+            recap = {
+                'date': game.get('date', ''),
+                'round': round_label,
+                'home': home,
+                'away': away,
+                'home_score': game['home_score'],
+                'away_score': game['away_score'],
+                'winner': winner,
+                'pre_game_win_prob': round(winner_prob * 100, 1),
+                'is_upset': is_upset,
+            }
+
+            if series is not None:
+                recap['series'] = series
+            if series_label_str is not None:
+                recap['series_label'] = series_label_str
+
+            recap['championship_odds_before'] = {
+                home: odds_before.get(home, 0),
+                away: odds_before.get(away, 0),
+            }
+            recap['championship_odds_after'] = {
+                home: odds_after.get(home, 0),
+                away: odds_after.get(away, 0),
+            }
+
+            recaps.append(recap)
+
+        # Play-In games
+        pi = playoff_results.get('play_in', {})
+        _add_recap(pi.get('game_a'), 'Play-In Game A')
+        _add_recap(pi.get('game_b'), 'Play-In Game B')
+        _add_recap(pi.get('game_c'), 'Play-In Game C')
+
+        # Quarterfinal games
+        qf = playoff_results.get('qf', {})
+        for label in ['1v8', '2v7', '3v6', '4v5']:
+            qf_entry = qf.get(label, {})
+            higher = qf_entry.get('higher_seed', '?')
+            lower = qf_entry.get('lower_seed', '?')
+
+            for i, game in enumerate(qf_entry.get('games', [])):
+                h_w = sum(1 for g2 in qf_entry['games'][:i+1] if g2['winner'] == higher)
+                l_w = (i + 1) - h_w
+
+                if h_w > l_w:
+                    sl = f"{higher} leads {h_w}-{l_w}"
+                elif l_w > h_w:
+                    sl = f"{lower} leads {l_w}-{h_w}"
+                elif h_w == 3 or l_w == 3:
+                    sl = f"Series over"
+                else:
+                    sl = f"Series tied {h_w}-{l_w}"
+
+                _add_recap(game, f'QF {label} Game {i+1}', [h_w, l_w], sl)
+
+        # Semi-Finals
+        sf = playoff_results.get('sf', {})
+        _add_recap(sf.get('sf1'), 'Semi-Final 1')
+        _add_recap(sf.get('sf2'), 'Semi-Final 2')
+
+        # Final
+        final = playoff_results.get('final', {})
+        _add_recap(final.get('game'), 'Final')
+
+        # Sort by date descending
+        recaps.sort(key=lambda r: r.get('date', ''), reverse=True)
+
+        return recaps
+
     # ── Build output ─────────────────────────────────────────────────────────
     from datetime import datetime
     output = {
