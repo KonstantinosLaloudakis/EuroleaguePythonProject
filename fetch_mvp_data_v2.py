@@ -30,7 +30,7 @@ def fetch_mvp_data_iterative():
     # Games are usually 1-indexed.
     
     consecutive_errors = 0
-    max_games = 400 # Full season: 20 teams → 10 games/round × 38 rounds = 380
+    max_games = 420 # Regular season (380) + Play-in (3) + QF (up to 20) + SF (2) + Final (1)
     
     for game_code in range(1, max_games + 1):
         try:
