@@ -180,6 +180,7 @@ async function init() {
         runMonteCarlo();
         renderChampionshipOdds(data.championship_odds_history || []);
         renderPlayoffRecaps(data.playoff_recaps || []);
+        renderPathToTitle(data.path_to_title || []);
     } catch (err) {
         document.getElementById('bracket').innerHTML =
             `<p style="color:var(--accent-red);padding:1rem">Failed to load data: ${err}</p>`;
@@ -1138,6 +1139,123 @@ function renderPlayoffRecaps(recaps) {
 
     html += '</div>';
     container.innerHTML = html;
+}
+
+// ── Path to Title ──────────────────────────────────────────────────────────
+
+let _pttExpanded = null; // currently-expanded team code
+
+function renderPathToTitle(pathData) {
+    const section = document.getElementById('path-to-title-section');
+    const tbody = document.getElementById('ptt-tbody');
+    if (!section || !tbody || !pathData || !pathData.length) return;
+
+    section.style.display = '';
+
+    let html = '';
+    for (const entry of pathData) {
+        html += buildPathRow(entry);
+        html += `<tr class="ptt-detail-row" id="ptt-detail-${entry.team}"><td colspan="7"></td></tr>`;
+    }
+    tbody.innerHTML = html;
+
+    // Wire up click handlers
+    tbody.querySelectorAll('.ptt-row').forEach(row => {
+        row.addEventListener('click', () => {
+            const teamCode = row.dataset.team;
+            if (row.classList.contains('ptt-row-eliminated')) return;
+            togglePathDetail(teamCode);
+        });
+    });
+}
+
+function buildPathRow(entry) {
+    const teamName = (() => {
+        const t = _seeded.find(s => s.team === entry.team);
+        return t ? t.name : entry.team;
+    })();
+    const teamColor = TEAM_COLORS[entry.team] || '#555';
+
+    const rowCls = [
+        'ptt-row',
+        entry.status === 'eliminated' ? 'ptt-row-eliminated' : '',
+        entry.status === 'champion' ? 'ptt-row-champion' : '',
+    ].filter(Boolean).join(' ');
+
+    const byRound = {};
+    for (const r of entry.rounds) byRound[r.round] = r;
+
+    const cells = ['play_in', 'qf', 'sf', 'final'].map(rk => pathRoundCell(byRound[rk])).join('');
+
+    const champPctCls = pathPctCls(entry.championship_odds);
+    const hint = entry.status === 'alive' ? '<span class="ptt-expand-hint">click to expand ▾</span>' : '';
+    const statusTitle = entry.status.charAt(0).toUpperCase() + entry.status.slice(1);
+
+    return `<tr class="${rowCls}" data-team="${entry.team}">
+        <td class="ptt-td-team">
+            <div class="ptt-team-wrap">
+                <div class="ptt-status-dot ${entry.status}" title="${statusTitle}"></div>
+                <div class="ptt-team-color" style="background:${teamColor}"></div>
+                <span class="ptt-team-name">${teamName}</span>
+            </div>
+        </td>
+        ${cells}
+        <td class="ptt-cell-champ ${champPctCls}">${entry.championship_odds.toFixed(1)}%</td>
+        <td>${hint}</td>
+    </tr>`;
+}
+
+function pathRoundCell(round) {
+    if (!round || round.status === 'unreached') {
+        return '<td class="ptt-cell-dash">—</td>';
+    }
+    if (round.status === 'completed') {
+        const cls = round.actual_result === 'won' ? 'ptt-cell-won' : 'ptt-cell-lost';
+        const label = round.actual_result === 'won' ? 'WON' : 'LOST';
+        const seriesStr = round.series ? `${round.series[0]}-${round.series[1]}` : '';
+        return `<td class="${cls}">${label} ${seriesStr} <span style="font-weight:400;color:var(--text-muted);font-size:0.72rem">vs ${round.actual_opponent}</span></td>`;
+    }
+    if (round.status === 'in_progress') {
+        const s = round.series ? `${round.series[0]}-${round.series[1]}` : '';
+        return `<td class="ptt-cell-progress">${s} vs ${round.actual_opponent}</td>`;
+    }
+    // upcoming
+    const pct = round.reach_prob;
+    const cls = pathPctCls(pct);
+    return `<td class="ptt-cell-pct ${cls}">${pct.toFixed(0)}%</td>`;
+}
+
+function pathPctCls(pct) {
+    if (pct >= 50) return 'ptt-cell-pct-high';
+    if (pct >= 20) return 'ptt-cell-pct-mid';
+    return 'ptt-cell-pct-low';
+}
+
+function togglePathDetail(teamCode) {
+    const tbody = document.getElementById('ptt-tbody');
+    if (!tbody) return;
+
+    // Close currently expanded
+    if (_pttExpanded) {
+        const prevRow = tbody.querySelector(`.ptt-row[data-team="${_pttExpanded}"]`);
+        const prevDetail = document.getElementById(`ptt-detail-${_pttExpanded}`);
+        if (prevRow) prevRow.classList.remove('ptt-row-expanded');
+        if (prevDetail) prevDetail.querySelector('td').innerHTML = '';
+    }
+
+    // Toggle same row = close
+    if (_pttExpanded === teamCode) {
+        _pttExpanded = null;
+        return;
+    }
+
+    // Open new row — placeholder content; Task 5 will render the SVG tree
+    const row = tbody.querySelector(`.ptt-row[data-team="${teamCode}"]`);
+    const detail = document.getElementById(`ptt-detail-${teamCode}`);
+    if (!row || !detail) return;
+    row.classList.add('ptt-row-expanded');
+    detail.querySelector('td').innerHTML = '<div style="color:var(--text-muted);font-size:0.8rem">Tree rendering — implemented in Task 5.</div>';
+    _pttExpanded = teamCode;
 }
 
 // ── Boot ──────────────────────────────────────────────────────────────────
