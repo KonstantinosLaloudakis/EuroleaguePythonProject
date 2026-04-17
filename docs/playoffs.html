@@ -527,6 +527,168 @@
         .recap-odds-delta .negative {
             color: #f87171;
         }
+
+        /* ── Path to Title ──────────────────────────────────── */
+        .ptt-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        .ptt-table thead th {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-muted);
+            text-align: center;
+            padding: 0.5rem 0.4rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .ptt-table thead th.ptt-th-team {
+            text-align: left;
+            padding-left: 0.8rem;
+        }
+
+        .ptt-row {
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            transition: background 0.15s ease;
+        }
+
+        .ptt-row:hover:not(.ptt-row-eliminated) {
+            background: var(--bg-secondary);
+        }
+
+        .ptt-row.ptt-row-eliminated {
+            opacity: 0.45;
+            cursor: default;
+        }
+
+        .ptt-row.ptt-row-champion {
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        .ptt-row td {
+            padding: 0.65rem 0.4rem;
+            text-align: center;
+            vertical-align: middle;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .ptt-row td.ptt-td-team {
+            text-align: left;
+            padding-left: 0.8rem;
+        }
+
+        .ptt-team-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .ptt-status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .ptt-status-dot.alive { background: #22c55e; }
+        .ptt-status-dot.eliminated { background: #64748b; }
+        .ptt-status-dot.champion { background: #fbbf24; }
+
+        .ptt-team-name {
+            font-weight: 600;
+        }
+
+        .ptt-team-color {
+            width: 4px;
+            height: 22px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .ptt-cell-won {
+            color: #22c55e;
+            font-weight: 700;
+        }
+
+        .ptt-cell-lost {
+            color: #f87171;
+            font-weight: 700;
+        }
+
+        .ptt-cell-progress {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .ptt-cell-progress::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #22c55e;
+            border-radius: 50%;
+            margin-right: 0.35rem;
+            animation: pttPulse 1.4s ease-in-out infinite;
+        }
+
+        @keyframes pttPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.35; }
+        }
+
+        .ptt-cell-dash {
+            color: var(--text-muted);
+        }
+
+        .ptt-cell-pct {
+            font-weight: 700;
+        }
+
+        .ptt-cell-pct-high { color: #22c55e; }
+        .ptt-cell-pct-mid { color: #f59e0b; }
+        .ptt-cell-pct-low { color: #f87171; }
+
+        .ptt-cell-champ {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 0.95rem;
+        }
+
+        .ptt-expand-hint {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+
+        .ptt-row.ptt-row-expanded + .ptt-detail-row {
+            display: table-row;
+        }
+
+        .ptt-detail-row {
+            display: none;
+        }
+
+        .ptt-detail-row td {
+            padding: 1rem 0.8rem 1.25rem;
+            background: var(--bg-secondary);
+        }
+
+        .ptt-tree-svg {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 420px;
+        }
+
+        @media (max-width: 768px) {
+            .ptt-table { font-size: 0.75rem; }
+            .ptt-expand-hint { display: none; }
+        }
     </style>
 </head>
 
@@ -592,6 +754,31 @@
         <div class="stat-card" id="playoff-recaps-section" style="margin-top:1rem;display:none">
             <h3>Game Recaps</h3>
             <div id="playoff-recaps"></div>
+        </div>
+
+        <div class="stat-card" id="path-to-title-section" style="margin-top:1rem;display:none">
+            <h3>Path to Title</h3>
+            <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:1rem">
+                Each team's road to the championship: completed rounds with actual results,
+                upcoming rounds with probabilities from 10,000-run Monte Carlo. Click any alive
+                team's row to see the branching tree of possible future opponents.
+            </p>
+            <div style="overflow-x:auto">
+                <table class="ptt-table" id="ptt-table">
+                    <thead>
+                        <tr>
+                            <th class="ptt-th-team">Team</th>
+                            <th>Play-In</th>
+                            <th>QF</th>
+                            <th>SF</th>
+                            <th>Final</th>
+                            <th>🏆</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="ptt-tbody"></tbody>
+                </table>
+            </div>
         </div>
     </main>
 
