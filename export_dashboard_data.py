@@ -1628,6 +1628,359 @@ def main():
 
         return recaps
 
+    def compute_path_to_title(playoff_results, matchup_probs, seeded_teams, n_sims=10000):
+        """
+        For each playoff-eligible team, simulate the remaining bracket n_sims times.
+        Track reach probability per round, opponent distribution, and win probabilities.
+        Returns list of per-team path entries matching the path_to_title spec.
+        """
+        import random
+
+        if len(seeded_teams) < 10:
+            return []
+
+        seed_codes = [t['team'] for t in seeded_teams[:10]]
+
+        def _get_prob(team_a, team_b, venue):
+            entry = (matchup_probs.get(team_a) or {}).get(team_b)
+            if entry:
+                return entry.get(venue, 0.5)
+            return 0.5
+
+        def _sim_game(team_a, team_b, venue):
+            p = _get_prob(team_a, team_b, venue)
+            return team_a if random.random() < p else team_b
+
+        def _sim_series(higher, lower):
+            home_pattern = [True, True, False, False, True]
+            wins_h, wins_l = 0, 0
+            for g in range(5):
+                venue = 'home' if home_pattern[g] else 'away'
+                winner = _sim_game(higher, lower, venue)
+                if winner == higher:
+                    wins_h += 1
+                else:
+                    wins_l += 1
+                if wins_h >= 3 or wins_l >= 3:
+                    break
+            return higher if wins_h >= 3 else lower
+
+        # Extract locked results (same pattern as compute_championship_odds)
+        pi_a_winner = None
+        pi_a_loser = None
+        pi_b_winner = None
+        pi_c_winner = None
+        qf_winners = {'1v8': None, '2v7': None, '3v6': None, '4v5': None}
+        qf_series_state = {}
+        sf_winners = {'sf1': None, 'sf2': None}
+        final_winner = None
+
+        if playoff_results:
+            pi = playoff_results.get('play_in', {})
+            if pi.get('game_a') and pi['game_a'].get('winner'):
+                pi_a_winner = pi['game_a']['winner']
+                ga = pi['game_a']
+                pi_a_loser = ga['away'] if ga['winner'] == ga['home'] else ga['home']
+            if pi.get('game_b') and pi['game_b'].get('winner'):
+                pi_b_winner = pi['game_b']['winner']
+            if pi.get('game_c') and pi['game_c'].get('winner'):
+                pi_c_winner = pi['game_c']['winner']
+
+            qf_data = playoff_results.get('qf', {})
+            for label in ['1v8', '2v7', '3v6', '4v5']:
+                qf_entry = qf_data.get(label, {})
+                if qf_entry.get('winner'):
+                    qf_winners[label] = qf_entry['winner']
+                elif qf_entry.get('series'):
+                    qf_series_state[label] = (
+                        qf_entry['series'][0], qf_entry['series'][1],
+                        qf_entry.get('higher_seed'), qf_entry.get('lower_seed')
+                    )
+
+            sf_data = playoff_results.get('sf', {})
+            if sf_data.get('sf1') and sf_data['sf1'].get('winner'):
+                sf_winners['sf1'] = sf_data['sf1']['winner']
+            if sf_data.get('sf2') and sf_data['sf2'].get('winner'):
+                sf_winners['sf2'] = sf_data['sf2']['winner']
+
+            final_data = playoff_results.get('final', {})
+            if final_data.get('winner'):
+                final_winner = final_data['winner']
+
+        # Per-team counters: reach[round] and opponent_wins[round][opp] and opponent_faced[round][opp]
+        round_keys = ['play_in', 'qf', 'sf', 'final', 'champion']
+        reach = {code: {r: 0 for r in round_keys} for code in seed_codes}
+        opp_faced = {code: {r: {} for r in round_keys} for code in seed_codes}
+        opp_wins = {code: {r: {} for r in round_keys} for code in seed_codes}
+
+        play_in_teams = set(seed_codes[6:10])  # seeds 7-10 participate in play-in
+
+        for _ in range(n_sims):
+            # Play-In
+            ga_w = pi_a_winner or _sim_game(seed_codes[6], seed_codes[7], 'home')
+            ga_l = pi_a_loser or (seed_codes[7] if ga_w == seed_codes[6] else seed_codes[6])
+            gb_w = pi_b_winner or _sim_game(seed_codes[8], seed_codes[9], 'home')
+            gb_l = seed_codes[9] if gb_w == seed_codes[8] else seed_codes[8]
+            gc_w = pi_c_winner or _sim_game(ga_l, gb_w, 'home')
+
+            # Mark reach: all 4 play-in teams reach play-in
+            for t in play_in_teams:
+                reach[t]['play_in'] += 1
+
+            # s7 (winner of Game A), s8 (winner of Game C)
+            s7 = ga_w
+            s8 = gc_w
+
+            # Seeds 1-6 and s7, s8 reach QF
+            qf_participants = set(seed_codes[:6]) | {s7, s8}
+            for t in qf_participants:
+                reach[t]['qf'] += 1
+
+            qf_pairs = {
+                '1v8': (seed_codes[0], s8),
+                '2v7': (seed_codes[1], s7),
+                '3v6': (seed_codes[2], seed_codes[5]),
+                '4v5': (seed_codes[3], seed_codes[4]),
+            }
+
+            qf_w = {}
+            for label, (higher, lower) in qf_pairs.items():
+                # Record opponents faced in QF
+                opp_faced[higher]['qf'][lower] = opp_faced[higher]['qf'].get(lower, 0) + 1
+                opp_faced[lower]['qf'][higher] = opp_faced[lower]['qf'].get(higher, 0) + 1
+
+                if qf_winners[label]:
+                    qf_w[label] = qf_winners[label]
+                elif label in qf_series_state:
+                    h_wins, l_wins, h_seed, l_seed = qf_series_state[label]
+                    while h_wins < 3 and l_wins < 3:
+                        game_num = h_wins + l_wins
+                        home_pattern = [True, True, False, False, True]
+                        venue = 'home' if home_pattern[game_num] else 'away'
+                        w = _sim_game(h_seed, l_seed, venue)
+                        if w == h_seed:
+                            h_wins += 1
+                        else:
+                            l_wins += 1
+                    qf_w[label] = h_seed if h_wins >= 3 else l_seed
+                else:
+                    qf_w[label] = _sim_series(higher, lower)
+
+                winner = qf_w[label]
+                loser = lower if winner == higher else higher
+                opp_wins[winner]['qf'][loser] = opp_wins[winner]['qf'].get(loser, 0) + 1
+
+            # SF
+            sf1_participants = {qf_w['1v8'], qf_w['4v5']}
+            sf2_participants = {qf_w['2v7'], qf_w['3v6']}
+            for t in sf1_participants | sf2_participants:
+                reach[t]['sf'] += 1
+
+            opp_faced[qf_w['1v8']]['sf'][qf_w['4v5']] = opp_faced[qf_w['1v8']]['sf'].get(qf_w['4v5'], 0) + 1
+            opp_faced[qf_w['4v5']]['sf'][qf_w['1v8']] = opp_faced[qf_w['4v5']]['sf'].get(qf_w['1v8'], 0) + 1
+            opp_faced[qf_w['2v7']]['sf'][qf_w['3v6']] = opp_faced[qf_w['2v7']]['sf'].get(qf_w['3v6'], 0) + 1
+            opp_faced[qf_w['3v6']]['sf'][qf_w['2v7']] = opp_faced[qf_w['3v6']]['sf'].get(qf_w['2v7'], 0) + 1
+
+            sf1_w = sf_winners['sf1'] or _sim_game(qf_w['1v8'], qf_w['4v5'], 'neutral')
+            sf2_w = sf_winners['sf2'] or _sim_game(qf_w['2v7'], qf_w['3v6'], 'neutral')
+
+            sf1_loser = qf_w['4v5'] if sf1_w == qf_w['1v8'] else qf_w['1v8']
+            sf2_loser = qf_w['3v6'] if sf2_w == qf_w['2v7'] else qf_w['2v7']
+            opp_wins[sf1_w]['sf'][sf1_loser] = opp_wins[sf1_w]['sf'].get(sf1_loser, 0) + 1
+            opp_wins[sf2_w]['sf'][sf2_loser] = opp_wins[sf2_w]['sf'].get(sf2_loser, 0) + 1
+
+            # Final
+            reach[sf1_w]['final'] += 1
+            reach[sf2_w]['final'] += 1
+
+            opp_faced[sf1_w]['final'][sf2_w] = opp_faced[sf1_w]['final'].get(sf2_w, 0) + 1
+            opp_faced[sf2_w]['final'][sf1_w] = opp_faced[sf2_w]['final'].get(sf1_w, 0) + 1
+
+            champ = final_winner or _sim_game(sf1_w, sf2_w, 'neutral')
+            reach[champ]['champion'] += 1
+            final_loser = sf2_w if champ == sf1_w else sf1_w
+            opp_wins[champ]['final'][final_loser] = opp_wins[champ]['final'].get(final_loser, 0) + 1
+
+        # Build output per team
+        def _build_branches(team, round_key):
+            """Top 2-3 opponents sorted by reach_prob_for_opp desc, truncate at cum 90% or 3 entries."""
+            opps = opp_faced[team][round_key]
+            team_reach = reach[team][round_key]
+            if team_reach == 0:
+                return []
+            sorted_opps = sorted(opps.items(), key=lambda kv: kv[1], reverse=True)
+            branches = []
+            cum = 0.0
+            for opp_code, faced_count in sorted_opps:
+                reach_pct = faced_count / team_reach * 100
+                wins_vs = opp_wins[team][round_key].get(opp_code, 0)
+                win_pct = wins_vs / faced_count * 100 if faced_count > 0 else 0.0
+                branches.append({
+                    'opponent': opp_code,
+                    'reach_prob_for_opp': round(reach_pct, 1),
+                    'win_prob_vs': round(win_pct, 1),
+                })
+                cum += reach_pct
+                if len(branches) >= 3 or cum >= 90.0:
+                    break
+            return branches
+
+        def _round_win_prob(team, round_key):
+            """P(team wins round_key | reached it) = (times reached next round) / (times reached this round)."""
+            this_round_count = reach[team][round_key]
+            if this_round_count == 0:
+                return 0.0
+            # The "win" means advancing. For qf, advancing means reaching sf. For sf, final. For final, champion.
+            next_key = {'play_in': 'qf', 'qf': 'sf', 'sf': 'final', 'final': 'champion'}.get(round_key)
+            if next_key is None:
+                return 0.0
+            # Play-In win means the team reached QF (i.e., they were a play-in team AND reached QF)
+            if round_key == 'play_in':
+                # Only teams with reach[play_in] > 0 count; the fraction of those who reach QF
+                return round(reach[team]['qf'] / this_round_count * 100, 1) if this_round_count > 0 else 0.0
+            return round(reach[team][next_key] / this_round_count * 100, 1)
+
+        # Determine completed rounds from playoff_results for each team
+        def _completed_round_data(team):
+            """Returns dict of round -> completed round info, based on playoff_results."""
+            done = {}
+            if not playoff_results:
+                return done
+
+            # Play-In
+            pi = playoff_results.get('play_in', {})
+            for gk in ['game_a', 'game_b', 'game_c']:
+                g = pi.get(gk)
+                if g and g.get('winner') and team in (g.get('home'), g.get('away')):
+                    opp = g['away'] if team == g['home'] else g['home']
+                    done['play_in'] = {
+                        'status': 'completed',
+                        'actual_opponent': opp,
+                        'actual_result': 'won' if g['winner'] == team else 'lost',
+                        'series': [1, 0] if g['winner'] == team else [0, 1],
+                        'reach_prob': 100.0,
+                    }
+
+            # QF
+            qf_data = playoff_results.get('qf', {})
+            for label, qf_entry in qf_data.items():
+                higher = qf_entry.get('higher_seed')
+                lower = qf_entry.get('lower_seed')
+                if team not in (higher, lower):
+                    continue
+                opp = lower if team == higher else higher
+                series = qf_entry.get('series', [0, 0])
+                t_wins = series[0] if team == higher else series[1]
+                o_wins = series[1] if team == higher else series[0]
+                if qf_entry.get('winner'):
+                    done['qf'] = {
+                        'status': 'completed',
+                        'actual_opponent': opp,
+                        'actual_result': 'won' if qf_entry['winner'] == team else 'lost',
+                        'series': [t_wins, o_wins],
+                        'reach_prob': 100.0,
+                    }
+                elif series[0] > 0 or series[1] > 0:
+                    done['qf'] = {
+                        'status': 'in_progress',
+                        'actual_opponent': opp,
+                        'series': [t_wins, o_wins],
+                        'reach_prob': 100.0,
+                    }
+
+            # SF
+            sf_data = playoff_results.get('sf', {})
+            for sk in ['sf1', 'sf2']:
+                g = sf_data.get(sk)
+                if g and g.get('winner') and team in (g.get('home'), g.get('away')):
+                    opp = g['away'] if team == g['home'] else g['home']
+                    done['sf'] = {
+                        'status': 'completed',
+                        'actual_opponent': opp,
+                        'actual_result': 'won' if g['winner'] == team else 'lost',
+                        'series': [1, 0] if g['winner'] == team else [0, 1],
+                        'reach_prob': 100.0,
+                    }
+
+            # Final
+            final_data = playoff_results.get('final', {})
+            g = final_data.get('game') if final_data else None
+            if g and g.get('winner') and team in (g.get('home'), g.get('away')):
+                opp = g['away'] if team == g['home'] else g['home']
+                done['final'] = {
+                    'status': 'completed',
+                    'actual_opponent': opp,
+                    'actual_result': 'won' if g['winner'] == team else 'lost',
+                    'series': [1, 0] if g['winner'] == team else [0, 1],
+                    'reach_prob': 100.0,
+                }
+
+            return done
+
+        result = []
+        for idx, code in enumerate(seed_codes):
+            is_play_in_team = idx >= 6
+            completed = _completed_round_data(code)
+
+            # Determine status + eliminated_at
+            champ_pct = reach[code]['champion'] / n_sims * 100
+            is_champion = final_winner == code
+
+            # Find earliest completed 'lost' round
+            eliminated_at = None
+            if not is_champion:
+                for rk in ['play_in', 'qf', 'sf', 'final']:
+                    if completed.get(rk, {}).get('actual_result') == 'lost':
+                        eliminated_at = rk
+                        break
+
+            if is_champion:
+                status = 'champion'
+            elif eliminated_at:
+                status = 'eliminated'
+            else:
+                status = 'alive'
+
+            # Build rounds array
+            rounds = []
+            for rk in ['play_in', 'qf', 'sf', 'final']:
+                if rk == 'play_in' and not is_play_in_team:
+                    rounds.append({'round': rk, 'status': 'unreached', 'reach_prob': 0.0})
+                    continue
+
+                if rk in completed:
+                    rounds.append({'round': rk, **completed[rk]})
+                    continue
+
+                # Not completed — upcoming or unreached
+                rp = reach[code][rk] / n_sims * 100
+                if rp == 0:
+                    rounds.append({'round': rk, 'status': 'unreached', 'reach_prob': 0.0})
+                else:
+                    rounds.append({
+                        'round': rk,
+                        'status': 'upcoming',
+                        'reach_prob': round(rp, 1),
+                        'win_prob': _round_win_prob(code, rk),
+                        'branches': _build_branches(code, rk),
+                    })
+
+            result.append({
+                'team': code,
+                'status': status,
+                'eliminated_at': eliminated_at,
+                'championship_odds': round(champ_pct, 1),
+                'rounds': rounds,
+            })
+
+        # Sort by championship odds desc, eliminated teams at bottom
+        result.sort(key=lambda e: (
+            0 if e['status'] != 'eliminated' else 1,
+            -e['championship_odds']
+        ))
+
+        return result
+
     # ── Build output ─────────────────────────────────────────────────────────
     from datetime import datetime
 
