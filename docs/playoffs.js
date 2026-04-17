@@ -22,6 +22,7 @@ let _seeded = [];    // top 10 teams by seed
 let _bracket = {};   // round → matchup index → { a, b, winner }
 let _champion = null;
 let _matchupProbs = {};  // pre-computed pairwise probabilities from backend
+let _realResults = null;  // locked playoff results from backend
 
 // ── Elo win probability (fallback) ──────────────────────────────────────
 function eloWinProb(eloA, eloB, neutral = false) {
@@ -157,6 +158,7 @@ async function init() {
         }
 
         _matchupProbs = data.playoff_matchup_probs || {};
+        _realResults = data.playoff_results || null;
 
         // Top 10 teams seeded 1-10
         _seeded = _teams.slice(0, 10).map((t, i) => ({
@@ -165,6 +167,9 @@ async function init() {
         }));
 
         resetBracket();
+        if (_realResults) {
+            applyRealResults();
+        }
         loadFromURL();
         runMonteCarlo();
     } catch (err) {
@@ -174,44 +179,12 @@ async function init() {
 }
 
 function resetBracket() {
-    _bracket = {
-        playin: [
-            { a: null, b: null, winner: null },   // Game A: 7 vs 8
-            { a: null, b: null, winner: null },   // Game B: 9 vs 10
-            { a: null, b: null, winner: null },   // Game C: Loser(A) vs Winner(B)
-        ],
-        quarters: [
-            { a: null, b: null, winner: null },   // 1 vs 8th (Game C winner)
-            { a: null, b: null, winner: null },   // 2 vs 7th (Game A winner)
-            { a: null, b: null, winner: null },   // 3 vs 6
-            { a: null, b: null, winner: null },   // 4 vs 5
-        ],
-        semis: [
-            { a: null, b: null, winner: null },   // QF1 winner vs QF4 winner
-            { a: null, b: null, winner: null },   // QF2 winner vs QF3 winner
-        ],
-        final: [
-            { a: null, b: null, winner: null },
-        ],
-    };
-    _champion = null;
-
-    // Seed play-in
-    _bracket.playin[0].a = _seeded[6];  // 7 — Game A
-    _bracket.playin[0].b = _seeded[7];  // 8
-    _bracket.playin[1].a = _seeded[8];  // 9 — Game B
-    _bracket.playin[1].b = _seeded[9];  // 10
-    // Game C slots filled when Game A and Game B are decided
-
-    // Seed QF with known teams (1-6 go directly)
-    _bracket.quarters[0].a = _seeded[0]; // 1
-    _bracket.quarters[1].a = _seeded[1]; // 2
-    _bracket.quarters[2].a = _seeded[2]; // 3
-    _bracket.quarters[2].b = _seeded[5]; // 6
-    _bracket.quarters[3].a = _seeded[3]; // 4
-    _bracket.quarters[3].b = _seeded[4]; // 5
-
-    renderBracket();
+    resetBracketSilent();
+    if (_realResults) {
+        applyRealResults();
+    } else {
+        renderBracket();
+    }
     runMonteCarlo();
     updateURL();
 }
@@ -279,15 +252,33 @@ function renderMatchup(round, idx, seriesLen, neutral, label) {
     const sideB = renderSide(teamB, probB, m.winner, round, idx, 'b');
 
     let badgeHTML = '';
+    const matchupData = _bracket[round][idx];
     if (label) {
-        badgeHTML = `<div class="series-badge">${label}</div>`;
+        if (matchupData && matchupData.locked && matchupData.score) {
+            badgeHTML = `<div class="series-badge">${label}<div class="locked-score">${matchupData.score.home} - ${matchupData.score.away}</div></div>`;
+        } else {
+            badgeHTML = `<div class="series-badge">${label}</div>`;
+        }
     } else if (seriesLen > 1 && teamA && teamB) {
-        const prediction = getPredictedScore(teamA, teamB, seriesLen);
-        badgeHTML = `<div class="series-badge">Best of ${seriesLen} · HCA 2-2-1<div class="series-prediction">${prediction}</div></div>`;
+        if (matchupData && matchupData.seriesScore && (matchupData.seriesScore[0] > 0 || matchupData.seriesScore[1] > 0)) {
+            const [hW, lW] = matchupData.seriesScore;
+            const nameA = teamA.name.split(' ').pop();
+            const nameB = teamB.name.split(' ').pop();
+            const scoreText = `${nameA} ${hW} - ${lW} ${nameB}`;
+            const prediction = matchupData.locked ? '' : getPredictedScore(teamA, teamB, seriesLen);
+            badgeHTML = `<div class="series-badge">Best of ${seriesLen} · ${scoreText}${prediction}</div>`;
+        } else {
+            const prediction = getPredictedScore(teamA, teamB, seriesLen);
+            badgeHTML = `<div class="series-badge">Best of ${seriesLen} · HCA 2-2-1<div class="series-prediction">${prediction}</div></div>`;
+        }
     } else if (seriesLen > 1) {
         badgeHTML = `<div class="series-badge">Best of ${seriesLen} · HCA 2-2-1</div>`;
     } else {
-        badgeHTML = `<div class="series-badge">Single game</div>`;
+        if (matchupData && matchupData.locked && matchupData.score) {
+            badgeHTML = `<div class="series-badge">Single game<div class="locked-score">${matchupData.score.home} - ${matchupData.score.away}</div></div>`;
+        } else {
+            badgeHTML = `<div class="series-badge">Single game</div>`;
+        }
     }
 
     return `<div class="matchup" data-round="${round}" data-idx="${idx}">${sideA}${sideB}${badgeHTML}</div>`;
@@ -314,11 +305,13 @@ function renderSide(team, prob, winner, round, idx, side) {
         ? `<div class="seed-prob" style="color:${probColor(prob)}">${(prob * 100).toFixed(0)}%</div>`
         : '';
 
-    // Winner can be clicked to undo; non-winner side locked when winner is set
+    // Winner can be clicked to undo (unless locked by real results); non-winner side locked when winner is set
     let onclick = '';
-    if (isWinner) {
+    const matchup = _bracket[round][idx];
+    const isLocked = matchup && matchup.locked;
+    if (isWinner && !isLocked) {
         onclick = `onclick="undoPick('${round}',${idx})"`;
-    } else if (!winner) {
+    } else if (!winner && !isLocked) {
         onclick = `onclick="pickWinner('${round}',${idx},'${side}')"`;
     }
 
@@ -895,6 +888,91 @@ function resetBracketSilent() {
     _bracket.quarters[2].b = _seeded[5];
     _bracket.quarters[3].a = _seeded[3];
     _bracket.quarters[3].b = _seeded[4];
+}
+
+function applyRealResults() {
+    if (!_realResults) return;
+
+    const teamByCode = {};
+    for (const t of _seeded) teamByCode[t.team] = t;
+
+    // --- Play-In ---
+    const pi = _realResults.play_in || {};
+
+    if (pi.game_a && pi.game_a.winner) {
+        const m = _bracket.playin[0];
+        m.winner = teamByCode[pi.game_a.winner];
+        m.score = { home: pi.game_a.home_score, away: pi.game_a.away_score };
+        m.locked = true;
+        const side = m.winner.team === m.a.team ? 'a' : 'b';
+        cascadeForward('playin', 0, side);
+    }
+
+    if (pi.game_b && pi.game_b.winner) {
+        const m = _bracket.playin[1];
+        m.winner = teamByCode[pi.game_b.winner];
+        m.score = { home: pi.game_b.home_score, away: pi.game_b.away_score };
+        m.locked = true;
+        const side = m.winner.team === m.a.team ? 'a' : 'b';
+        cascadeForward('playin', 1, side);
+    }
+
+    if (pi.game_c && pi.game_c.winner) {
+        const m = _bracket.playin[2];
+        m.winner = teamByCode[pi.game_c.winner];
+        m.score = { home: pi.game_c.home_score, away: pi.game_c.away_score };
+        m.locked = true;
+        const side = m.winner.team === m.a.team ? 'a' : 'b';
+        cascadeForward('playin', 2, side);
+    }
+
+    // --- Quarterfinals ---
+    const qf = _realResults.qf || {};
+    const qfOrder = ['1v8', '2v7', '3v6', '4v5'];
+    qfOrder.forEach((label, idx) => {
+        const entry = qf[label];
+        if (!entry) return;
+
+        const m = _bracket.quarters[idx];
+        m.seriesScore = entry.series || [0, 0];
+        m.seriesGames = entry.games || [];
+
+        if (entry.winner) {
+            m.winner = teamByCode[entry.winner];
+            m.locked = true;
+            const side = m.winner.team === m.a.team ? 'a' : 'b';
+            cascadeForward('quarters', idx, side);
+        }
+    });
+
+    // --- Semi-Finals ---
+    const sf = _realResults.sf || {};
+    if (sf.sf1 && sf.sf1.winner) {
+        const m = _bracket.semis[0];
+        m.winner = teamByCode[sf.sf1.winner];
+        m.score = { home: sf.sf1.home_score, away: sf.sf1.away_score };
+        m.locked = true;
+        cascadeForward('semis', 0, m.winner.team === m.a.team ? 'a' : 'b');
+    }
+    if (sf.sf2 && sf.sf2.winner) {
+        const m = _bracket.semis[1];
+        m.winner = teamByCode[sf.sf2.winner];
+        m.score = { home: sf.sf2.home_score, away: sf.sf2.away_score };
+        m.locked = true;
+        cascadeForward('semis', 1, m.winner.team === m.a.team ? 'a' : 'b');
+    }
+
+    // --- Final ---
+    const fin = _realResults.final || {};
+    if (fin.game && fin.winner) {
+        const m = _bracket.final[0];
+        m.winner = teamByCode[fin.winner];
+        m.score = { home: fin.game.home_score, away: fin.game.away_score };
+        m.locked = true;
+        _champion = m.winner;
+    }
+
+    renderBracket();
 }
 
 function copyBracketLink() {
