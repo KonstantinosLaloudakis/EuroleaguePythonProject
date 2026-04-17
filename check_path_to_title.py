@@ -1,5 +1,5 @@
 """Quick sanity check for compute_path_to_title."""
-import importlib.util, json, os, sys
+import json, os, sys
 
 # Load export_dashboard_data as a module so we can reach its inner functions.
 # Simplest: run export and inspect dashboard.json instead.

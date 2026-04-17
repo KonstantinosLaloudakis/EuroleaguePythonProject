@@ -1835,9 +1835,10 @@ def main():
             if next_key is None:
                 return 0.0
             # Play-In win means the team reached QF (i.e., they were a play-in team AND reached QF)
+            # Note: "win" here is "reach QF," not "win a single play-in game" — play-in is a 3-game mini-bracket.
             if round_key == 'play_in':
                 # Only teams with reach[play_in] > 0 count; the fraction of those who reach QF
-                return round(reach[team]['qf'] / this_round_count * 100, 1) if this_round_count > 0 else 0.0
+                return round(reach[team]['qf'] / this_round_count * 100, 1)
             return round(reach[team][next_key] / this_round_count * 100, 1)
 
         # Determine completed rounds from playoff_results for each team
@@ -1989,6 +1990,7 @@ def main():
     championship_odds = {}
     playoff_recaps = []
     championship_odds_history = []
+    path_to_title = []
 
     game_results_raw = load_json('mvp_game_results.json')
     if game_results_raw and len(teams) >= 10:
@@ -2032,6 +2034,11 @@ def main():
                 playoff_matchup_probs, seeded
             )
 
+            # Build path-to-title data
+            path_to_title = compute_path_to_title(
+                playoff_results_data, playoff_matchup_probs, seeded
+            )
+
             print(f"  Playoff results: {sum(1 for g in game_results_raw if int(g.get('GameCode', 0)) > 380 and g.get('LocalScore', 0) > 0)} games tracked")
             print(f"  Championship odds computed for {len([v for v in championship_odds.values() if v > 0])} contending teams")
         else:
@@ -2044,16 +2051,20 @@ def main():
             except Exception:
                 pass
 
-            if not championship_odds_history and playoff_matchup_probs:
+            if playoff_matchup_probs and len(teams) >= 10:
                 seeded = teams[:10]
-                championship_odds = compute_championship_odds(
+                if not championship_odds_history:
+                    championship_odds = compute_championship_odds(
+                        None, playoff_matchup_probs, seeded
+                    )
+                    championship_odds_history = [{
+                        'date': datetime.utcnow().strftime('%Y-%m-%d'),
+                        'label': 'Pre-Playoff',
+                        'odds': championship_odds,
+                    }]
+                path_to_title = compute_path_to_title(
                     None, playoff_matchup_probs, seeded
                 )
-                championship_odds_history = [{
-                    'date': datetime.utcnow().strftime('%Y-%m-%d'),
-                    'label': 'Pre-Playoff',
-                    'odds': championship_odds,
-                }]
 
     output = {
         'round': round_num,
@@ -2073,6 +2084,7 @@ def main():
         'playoff_results': playoff_results_data,
         'championship_odds_history': championship_odds_history,
         'playoff_recaps': playoff_recaps,
+        'path_to_title': path_to_title,
     }
 
     # ── Write output ─────────────────────────────────────────────────────────
