@@ -18,6 +18,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-2.35.0.min.js"></script>
     <style>
         /* ── Bracket layout ───────────────────────────────────── */
         .bracket-controls {
@@ -437,6 +438,95 @@
             .mc-bar-label { min-width: 80px; font-size: 0.72rem; }
             .bracket-ctrl-btn { padding: 0.35rem 0.6rem; font-size: 0.72rem; }
         }
+
+        /* ── Recap cards ─────────────────────────────────────── */
+        .recap-cards {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .recap-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .recap-card.upset {
+            border-color: rgba(251, 191, 36, 0.4);
+        }
+
+        .recap-team {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .recap-team.away {
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        .recap-team-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .recap-team.loser .recap-team-name {
+            opacity: 0.5;
+        }
+
+        .recap-score {
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .recap-meta {
+            grid-column: 1 / -1;
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 0.5rem;
+        }
+
+        .recap-badge {
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.7rem;
+        }
+
+        .recap-badge.upset-badge {
+            background: rgba(251, 191, 36, 0.15);
+            color: #fbbf24;
+        }
+
+        .recap-badge.round-badge {
+            background: rgba(99, 102, 241, 0.15);
+            color: #818cf8;
+        }
+
+        .recap-odds-delta {
+            font-size: 0.72rem;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .recap-odds-delta .positive {
+            color: #22c55e;
+        }
+
+        .recap-odds-delta .negative {
+            color: #f87171;
+        }
     </style>
 </head>
 
@@ -489,6 +579,19 @@
                 Simulates the full playoff bracket 10,000 times using adjusted ratings, Elo, and ML win probability.
             </p>
             <div id="mc-chart"></div>
+        </div>
+
+        <div class="stat-card" id="championship-odds-section" style="margin-top:1rem;display:none">
+            <h3>Championship Odds Tracker</h3>
+            <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:1rem">
+                How championship probabilities shift after each playoff game day.
+            </p>
+            <div id="championship-odds-chart"></div>
+        </div>
+
+        <div class="stat-card" id="playoff-recaps-section" style="margin-top:1rem;display:none">
+            <h3>Game Recaps</h3>
+            <div id="playoff-recaps"></div>
         </div>
     </main>
 

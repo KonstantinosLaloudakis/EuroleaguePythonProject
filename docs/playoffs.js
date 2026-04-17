@@ -170,8 +170,16 @@ async function init() {
         if (_realResults) {
             applyRealResults();
         }
+        if (_realResults) {
+            const h1 = document.querySelector('header h1');
+            const sub = document.querySelector('header .subtitle');
+            if (h1) h1.textContent = '\u{1F3C6} Playoff Bracket';
+            if (sub) sub.textContent = 'Live results are locked. Click unplayed matchups to simulate forward.';
+        }
         loadFromURL();
         runMonteCarlo();
+        renderChampionshipOdds(data.championship_odds_history || []);
+        renderPlayoffRecaps(data.playoff_recaps || []);
     } catch (err) {
         document.getElementById('bracket').innerHTML =
             `<p style="color:var(--accent-red);padding:1rem">Failed to load data: ${err}</p>`;
@@ -986,6 +994,150 @@ function copyBracketLink() {
         // Fallback for older browsers
         prompt('Copy this link to share your bracket:', url);
     });
+}
+
+// ── Championship Odds History Chart ─────────────────────────────────────
+function renderChampionshipOdds(history) {
+    const section = document.getElementById('championship-odds-section');
+    const container = document.getElementById('championship-odds-chart');
+    if (!section || !container || !history || history.length < 2) return;
+
+    section.style.display = '';
+
+    const allTeams = new Set();
+    for (const entry of history) {
+        for (const code of Object.keys(entry.odds || {})) allTeams.add(code);
+    }
+
+    const traces = [];
+    for (const code of allTeams) {
+        const xs = history.map(h => h.label || h.date);
+        const ys = history.map(h => (h.odds || {})[code] || 0);
+        const color = TEAM_COLORS[code] || '#555';
+        const name = (_seeded.find(t => t.team === code) || {}).name || code;
+        const isEliminated = ys[ys.length - 1] === 0 && ys.some(v => v > 0);
+
+        traces.push({
+            x: xs,
+            y: ys,
+            name: name,
+            mode: 'lines+markers',
+            line: {
+                color: isEliminated ? '#555' : color,
+                width: isEliminated ? 1 : 2.5,
+                dash: isEliminated ? 'dot' : 'solid',
+            },
+            marker: { size: 5 },
+            hovertemplate: `<b>${name}</b><br>%{x}<br>%{y:.1f}%<extra></extra>`,
+            opacity: isEliminated ? 0.4 : 1,
+        });
+    }
+
+    traces.sort((a, b) => {
+        const aLast = a.y[a.y.length - 1];
+        const bLast = b.y[b.y.length - 1];
+        if (aLast === 0 && bLast > 0) return 1;
+        if (bLast === 0 && aLast > 0) return -1;
+        return bLast - aLast;
+    });
+
+    const layout = {
+        paper_bgcolor: 'transparent',
+        plot_bgcolor: '#0f1117',
+        font: { color: '#9ca3af', family: 'Inter' },
+        margin: { t: 10, b: 50, l: 50, r: 10 },
+        height: 400,
+        xaxis: {
+            gridcolor: '#2d2e3a',
+            tickfont: { size: 11 },
+        },
+        yaxis: {
+            title: 'Championship Probability (%)',
+            gridcolor: '#2d2e3a',
+            ticksuffix: '%',
+            tickfont: { size: 11 },
+            rangemode: 'tozero',
+        },
+        legend: {
+            orientation: 'h',
+            y: -0.25,
+            x: 0.5,
+            xanchor: 'center',
+            font: { size: 10 },
+        },
+        hovermode: 'x unified',
+    };
+
+    Plotly.newPlot('championship-odds-chart', traces, layout, {
+        displayModeBar: false,
+        responsive: true,
+    });
+}
+
+// ── Playoff Recap Cards ──────────────────────────────────────────────────
+function renderPlayoffRecaps(recaps) {
+    const section = document.getElementById('playoff-recaps-section');
+    const container = document.getElementById('playoff-recaps');
+    if (!section || !container || !recaps || !recaps.length) return;
+
+    section.style.display = '';
+
+    const teamName = code => {
+        const t = _seeded.find(s => s.team === code);
+        return t ? t.name : code;
+    };
+
+    let html = '<div class="recap-cards">';
+
+    for (const r of recaps) {
+        const homeColor = TEAM_COLORS[r.home] || '#555';
+        const awayColor = TEAM_COLORS[r.away] || '#555';
+        const isHomeWinner = r.winner === r.home;
+        const upsetClass = r.is_upset ? ' upset' : '';
+
+        let oddsHTML = '';
+        if (r.championship_odds_before && r.championship_odds_after) {
+            const teams = [r.home, r.away];
+            const deltas = teams.map(t => {
+                const before = r.championship_odds_before[t] || 0;
+                const after = r.championship_odds_after[t] || 0;
+                const diff = after - before;
+                const cls = diff >= 0 ? 'positive' : 'negative';
+                const sign = diff >= 0 ? '+' : '';
+                return `<span class="recap-odds-delta">${teamName(t)}: ${after.toFixed(1)}% (<span class="${cls}">${sign}${diff.toFixed(1)}</span>)</span>`;
+            });
+            oddsHTML = deltas.join(' &middot; ');
+        }
+
+        html += `<div class="recap-card${upsetClass}">
+            <div class="recap-team${isHomeWinner ? '' : ' loser'}">
+                <div class="recap-team-color" style="width:4px;height:28px;border-radius:2px;background:${homeColor}"></div>
+                <div>
+                    <div class="recap-team-name">${teamName(r.home)}</div>
+                    <div style="font-size:0.7rem;color:var(--text-muted)">Home</div>
+                </div>
+            </div>
+            <div class="recap-score">${r.home_score} - ${r.away_score}</div>
+            <div class="recap-team away${isHomeWinner ? ' loser' : ''}">
+                <div>
+                    <div class="recap-team-name">${teamName(r.away)}</div>
+                    <div style="font-size:0.7rem;color:var(--text-muted)">Away</div>
+                </div>
+                <div class="recap-team-color" style="width:4px;height:28px;border-radius:2px;background:${awayColor}"></div>
+            </div>
+            <div class="recap-meta">
+                <span class="recap-badge round-badge">${r.round}</span>
+                ${r.series_label ? `<span>${r.series_label}</span>` : ''}
+                ${r.is_upset ? '<span class="recap-badge upset-badge">UPSET</span>' : ''}
+                <span>Win prob: ${r.pre_game_win_prob.toFixed(0)}%</span>
+                ${r.date ? `<span>${r.date}</span>` : ''}
+                ${oddsHTML ? `<span style="margin-left:auto">${oddsHTML}</span>` : ''}
+            </div>
+        </div>`;
+    }
+
+    html += '</div>';
+    container.innerHTML = html;
 }
 
 // ── Boot ──────────────────────────────────────────────────────────────────
