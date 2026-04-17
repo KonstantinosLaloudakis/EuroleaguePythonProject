@@ -1630,6 +1630,78 @@ def main():
 
     # ── Build output ─────────────────────────────────────────────────────────
     from datetime import datetime
+
+    # ── Playoff tracking ─────────────────────────────────────────────────────
+    playoff_results_data = None
+    championship_odds = {}
+    playoff_recaps = []
+    championship_odds_history = []
+
+    game_results_raw = load_json('mvp_game_results.json')
+    if game_results_raw and len(teams) >= 10:
+        seeded = teams[:10]  # Already sorted by wins desc, adj_net desc
+        playoff_results_data = build_playoff_results(game_results_raw, seeded)
+
+        if playoff_results_data:
+            # Compute current championship odds
+            championship_odds = compute_championship_odds(
+                playoff_results_data, playoff_matchup_probs, seeded
+            )
+
+            # Load previous odds history from existing dashboard
+            prev_dashboard_path = os.path.join('docs', 'data', 'current', 'dashboard.json')
+            prev_odds = {}
+            try:
+                with open(prev_dashboard_path, 'r', encoding='utf-8') as f:
+                    prev_data = json.load(f)
+                championship_odds_history = prev_data.get('championship_odds_history', [])
+                # Previous odds = last entry in history, or empty
+                if championship_odds_history:
+                    prev_odds = championship_odds_history[-1].get('odds', {})
+            except Exception:
+                pass
+
+            # Append today's snapshot (avoid duplicate dates)
+            today_str = datetime.utcnow().strftime('%Y-%m-%d')
+            # Remove any existing entry for today (re-run scenario)
+            championship_odds_history = [
+                h for h in championship_odds_history if h.get('date') != today_str
+            ]
+            championship_odds_history.append({
+                'date': today_str,
+                'label': _detect_playoff_label(playoff_results_data),
+                'odds': championship_odds,
+            })
+
+            # Build recap cards
+            playoff_recaps = build_playoff_recaps(
+                playoff_results_data, prev_odds, championship_odds,
+                playoff_matchup_probs, seeded
+            )
+
+            print(f"  Playoff results: {sum(1 for g in game_results_raw if int(g.get('GameCode', 0)) > 380 and g.get('LocalScore', 0) > 0)} games tracked")
+            print(f"  Championship odds computed for {len([v for v in championship_odds.values() if v > 0])} contending teams")
+        else:
+            # Pre-playoff: compute baseline odds if not done yet
+            prev_dashboard_path = os.path.join('docs', 'data', 'current', 'dashboard.json')
+            try:
+                with open(prev_dashboard_path, 'r', encoding='utf-8') as f:
+                    prev_data = json.load(f)
+                championship_odds_history = prev_data.get('championship_odds_history', [])
+            except Exception:
+                pass
+
+            if not championship_odds_history and playoff_matchup_probs:
+                seeded = teams[:10]
+                championship_odds = compute_championship_odds(
+                    None, playoff_matchup_probs, seeded
+                )
+                championship_odds_history = [{
+                    'date': datetime.utcnow().strftime('%Y-%m-%d'),
+                    'label': 'Pre-Playoff',
+                    'odds': championship_odds,
+                }]
+
     output = {
         'round': round_num,
         'updated': datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
@@ -1645,6 +1717,9 @@ def main():
         'accuracy': accuracy_data,
         'game_control': gci_data,
         'playoff_matchup_probs': playoff_matchup_probs,
+        'playoff_results': playoff_results_data,
+        'championship_odds_history': championship_odds_history,
+        'playoff_recaps': playoff_recaps,
     }
 
     # ── Write output ─────────────────────────────────────────────────────────
