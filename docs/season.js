@@ -345,8 +345,15 @@ function renderScheduleDifficulty(teams) {
     if (!teams.length) return;
     container.innerHTML = '';
 
+    // Only show teams that still have remaining games
+    const withGames = teams.filter(t => (t.remaining || 0) > 0);
+    if (!withGames.length) {
+        container.closest('.stat-card').style.display = 'none';
+        return;
+    }
+
     // Sort by current standing (wins desc, then adj_net desc) — same as standings table
-    const sorted = [...teams].sort((a, b) => b.wins - a.wins || b.adj_net - a.adj_net);
+    const sorted = [...withGames].sort((a, b) => b.wins - a.wins || b.adj_net - a.adj_net);
 
     const names     = sorted.map(t => t.name);
     const sos       = sorted.map(t => t.remaining_sos || 0);
@@ -393,7 +400,7 @@ function renderScheduleDifficulty(teams) {
         plot_bgcolor: '#0f1117',
         font: { color: '#9ca3af', family: 'Inter' },
         margin: { t: 10, b: 50, l: 160, r: 90 },
-        height: 500,
+        height: Math.max(250, sorted.length * 28 + 80),
         xaxis: {
             title: 'Opponents Avg Win% (higher = harder schedule)',
             gridcolor: '#2d2e3a',

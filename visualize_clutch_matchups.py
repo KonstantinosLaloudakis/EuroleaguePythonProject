@@ -170,8 +170,11 @@ def calculate_clutch_games():
 
 def create_clutch_chart():
     print("Generating Clutch Matchup Chart...")
-    
+
     clutch_games = calculate_clutch_games()
+    if not clutch_games:
+        print("No remaining games — skipping clutch matchup chart.")
+        return
     num_games = len(clutch_games)
     
     fig_h = 1.5 + num_games * 0.52

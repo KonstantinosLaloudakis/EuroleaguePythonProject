@@ -132,7 +132,11 @@ def create_schedule_grid():
     sorted_teams = sorted(team_schedule.keys(),
                          key=lambda t: (wins_lookup.get(t, 0), -losses_lookup.get(t, 0)),
                          reverse=True)
-    
+
+    if not sorted_teams:
+        print("No remaining games — skipping schedule grid.")
+        return
+
     # Determine opponent strength tiers
     # Get min/max adj_net for color scaling
     all_nets = list(adj_net_lookup.values())

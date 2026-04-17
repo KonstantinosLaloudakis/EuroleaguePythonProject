@@ -40,14 +40,20 @@ def create_sos_table():
     with open(in_file, 'r') as f:
         data = json.load(f)
     
+    # Only include teams that still have remaining games
+    data = [t for t in data if t.get('Remaining_Games', 0) > 0]
+    if not data:
+        print("No teams with remaining games — skipping SOS table.")
+        return
+
     # Use pre-calculated location-aware SOS from adjusted_ratings.json
     for team in data:
         # SOS_WinPct is already calculated in calculate_adjusted_ratings.py
         team['SOS_WinPct'] = team.get('SOS_WinPct', 0.5)
-        
+
         total = team['Wins'] + team['Losses']
         team['Team_WinPct'] = team['Wins'] / total if total > 0 else 0.5
-    
+
     # Sort by SOS (hardest first)
     data.sort(key=lambda x: x['SOS_WinPct'], reverse=True)
     
