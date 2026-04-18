@@ -2160,9 +2160,122 @@ def main():
             'final': {'round': 'final', 'label': 'Final',          'seeds': (final_high, final_low)},
         }
 
+        qf_label_for_slot = {'qf1': '1v8', 'qf2': '2v7', 'qf3': '3v6', 'qf4': '4v5'}
+
+        def _build_prob_pair(slot_id, high_code, low_code):
+            sp = series_win_probs.get(slot_id, {}) if series_win_probs else {}
+            h = round(sp.get(high_code, 0.0), 1) if high_code else 0.0
+            l = round(sp.get(low_code, 0.0), 1) if low_code else 0.0
+            return {'high': h, 'low': l}
+
+        def _schedule_home(game_num, high_code, low_code):
+            pattern = ['high', 'high', 'low', 'low', 'high']
+            side = pattern[game_num - 1]
+            if side == 'high':
+                return high_code, low_code
+            return low_code, high_code
+
+        def _build_games(completed_games, high_code, low_code, wins_h, wins_l, status):
+            games = []
+            completed_by_num = {g.get('game_num', idx + 1): g for idx, g in enumerate(completed_games)}
+            sweep_or_done = status == 'completed'
+            games_played = wins_h + wins_l
+
+            for game_num in range(1, 6):
+                gc = completed_by_num.get(game_num)
+                if gc:
+                    games.append({
+                        'game_num': game_num,
+                        'status': 'completed',
+                        'date': gc.get('date', ''),
+                        'home': gc.get('home'),
+                        'away': gc.get('away'),
+                        'home_score': gc.get('home_score'),
+                        'away_score': gc.get('away_score'),
+                        'winner': gc.get('winner'),
+                        'gamecode': gc.get('gamecode'),
+                    })
+                    continue
+
+                if sweep_or_done and game_num > games_played:
+                    games.append({
+                        'game_num': game_num,
+                        'status': 'unnecessary',
+                        'home': None,
+                        'away': None,
+                    })
+                    continue
+
+                if not high_code or not low_code:
+                    games.append({
+                        'game_num': game_num,
+                        'status': 'upcoming',
+                        'home': None,
+                        'away': None,
+                    })
+                    continue
+
+                home_code, away_code = _schedule_home(game_num, high_code, low_code)
+                home_prob_entry = (matchup_probs.get(home_code) or {}).get(away_code) or {}
+                p_home = home_prob_entry.get('home', 0.5)
+                games.append({
+                    'game_num': game_num,
+                    'status': 'upcoming',
+                    'home': home_code,
+                    'away': away_code,
+                    'pregame_wp': {
+                        'home': round(p_home * 100, 1),
+                        'away': round((1 - p_home) * 100, 1),
+                    },
+                })
+
+            return games
+
         result = {}
         for slot_id, defn in slot_defs.items():
             high, low = defn['seeds']
+            high_code = high['team'] if high else None
+            low_code = low['team'] if low else None
+
+            wins_h, wins_l = 0, 0
+            winner = None
+            status = 'not_started'
+            completed_games = []
+
+            if slot_id.startswith('qf') and playoff_results:
+                qf_label = qf_label_for_slot[slot_id]
+                qf_entry = (playoff_results.get('qf') or {}).get(qf_label) or {}
+                series = qf_entry.get('series') or [0, 0]
+                wins_h, wins_l = series[0], series[1]
+                winner = qf_entry.get('winner')
+                completed_games = qf_entry.get('games') or []
+            elif slot_id in ('sf1', 'sf2') and playoff_results:
+                sf_entry = (playoff_results.get('sf') or {}).get(slot_id) or {}
+                if sf_entry.get('winner'):
+                    winner = sf_entry['winner']
+                    if winner == high_code:
+                        wins_h = 1
+                    else:
+                        wins_l = 1
+                    completed_games = [sf_entry] if sf_entry else []
+            elif slot_id == 'final' and playoff_results:
+                final_entry = (playoff_results.get('final') or {}).get('game') or {}
+                final_winner_code = (playoff_results.get('final') or {}).get('winner')
+                if final_winner_code:
+                    winner = final_winner_code
+                    if winner == high_code:
+                        wins_h = 1
+                    else:
+                        wins_l = 1
+                    completed_games = [final_entry] if final_entry else []
+
+            if winner:
+                status = 'completed'
+            elif wins_h > 0 or wins_l > 0:
+                status = 'in_progress'
+
+            games = _build_games(completed_games, high_code, low_code, wins_h, wins_l, status)
+
             result[slot_id] = {
                 'id': slot_id,
                 'round': defn['round'],
@@ -2171,11 +2284,11 @@ def main():
                 'home_pattern': ['high', 'high', 'low', 'low', 'high'],
                 'high_seed': high,
                 'low_seed': low,
-                'status': 'not_started',
-                'wins': {'high': 0, 'low': 0},
-                'winner': None,
-                'series_win_prob': {'high': 0.0, 'low': 0.0},
-                'games': [],
+                'status': status,
+                'wins': {'high': wins_h, 'low': wins_l},
+                'winner': winner,
+                'series_win_prob': _build_prob_pair(slot_id, high_code, low_code),
+                'games': games,
                 'rs_h2h': [],
             }
 

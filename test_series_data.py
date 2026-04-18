@@ -104,3 +104,100 @@ assert finals['round'] == 'final'
 assert finals['high_seed'] is None and finals['low_seed'] is None
 
 print('Task 2 assertions passed.')
+
+# ── Task 3: state + games ──────────────────────────────────────────────────
+
+# Build a playoff_results with QF1 at 2-1 in favor of T01 (3 completed games)
+# and qf2 swept 3-0 by T02
+pr_state = {
+    'play_in': {'game_a': None, 'game_b': None, 'game_c': None},
+    'qf': {
+        '1v8': {
+            'higher_seed': 'T01', 'lower_seed': 'T08',
+            'series': [2, 1],
+            'winner': None,
+            'games': [
+                {'game_num': 1, 'date': '2026-04-21', 'home': 'T01', 'away': 'T08',
+                 'home_score': 90, 'away_score': 75, 'winner': 'T01', 'gamecode': 401},
+                {'game_num': 2, 'date': '2026-04-23', 'home': 'T01', 'away': 'T08',
+                 'home_score': 80, 'away_score': 88, 'winner': 'T08', 'gamecode': 402},
+                {'game_num': 3, 'date': '2026-04-26', 'home': 'T08', 'away': 'T01',
+                 'home_score': 70, 'away_score': 85, 'winner': 'T01', 'gamecode': 403},
+            ],
+        },
+        '2v7': {
+            'higher_seed': 'T02', 'lower_seed': 'T07',
+            'series': [3, 0],
+            'winner': 'T02',
+            'games': [
+                {'game_num': 1, 'date': '2026-04-21', 'home': 'T02', 'away': 'T07',
+                 'home_score': 95, 'away_score': 78, 'winner': 'T02', 'gamecode': 404},
+                {'game_num': 2, 'date': '2026-04-23', 'home': 'T02', 'away': 'T07',
+                 'home_score': 88, 'away_score': 85, 'winner': 'T02', 'gamecode': 405},
+                {'game_num': 3, 'date': '2026-04-26', 'home': 'T07', 'away': 'T02',
+                 'home_score': 79, 'away_score': 82, 'winner': 'T02', 'gamecode': 406},
+            ],
+        },
+        '3v6': {'higher_seed': 'T03', 'lower_seed': 'T06', 'series': [0, 0], 'winner': None, 'games': []},
+        '4v5': {'higher_seed': 'T04', 'lower_seed': 'T05', 'series': [0, 0], 'winner': None, 'games': []},
+    },
+    'sf': {'sf1': None, 'sf2': None},
+    'final': {},
+}
+
+# Synthetic series_win_probs
+swp = {
+    'qf1': {'T01': 72.0, 'T08': 28.0},
+    'qf2': {'T02': 100.0},   # completed
+    'qf3': {'T03': 60.0, 'T06': 40.0},
+    'qf4': {'T04': 55.0, 'T05': 45.0},
+    'sf1': {'T01': 40.0, 'T04': 30.0, 'T05': 20.0, 'T08': 10.0},
+    'sf2': {'T02': 50.0, 'T03': 30.0, 'T06': 20.0},
+    'final': {'T01': 25.0, 'T02': 30.0, 'T03': 15.0, 'T04': 12.0, 'T05': 8.0, 'T06': 5.0, 'T08': 5.0},
+}
+
+result = compute_series_data(pr_state, matchup_probs, seeded, swp, empty_games_df)
+
+# qf1: in progress, 2-1
+qf1 = result['qf1']
+assert qf1['status'] == 'in_progress', qf1['status']
+assert qf1['wins'] == {'high': 2, 'low': 1}, qf1['wins']
+assert qf1['winner'] is None
+assert qf1['series_win_prob'] == {'high': 72.0, 'low': 28.0}, qf1['series_win_prob']
+
+# 5 game entries total
+assert len(qf1['games']) == 5
+g1 = qf1['games'][0]
+assert g1['status'] == 'completed'
+assert g1['home'] == 'T01' and g1['away'] == 'T08'
+assert g1['home_score'] == 90 and g1['away_score'] == 75
+assert g1['winner'] == 'T01'
+assert g1['gamecode'] == 401
+
+g4 = qf1['games'][3]
+assert g4['status'] == 'upcoming', g4['status']
+assert g4['game_num'] == 4
+assert g4['home'] == 'T08'   # home_pattern[3] = 'low' = T08
+assert g4['away'] == 'T01'
+assert 'pregame_wp' in g4
+assert 'home' in g4['pregame_wp'] and 'away' in g4['pregame_wp']
+
+# qf2: sweep, winner set, status completed
+qf2 = result['qf2']
+assert qf2['status'] == 'completed'
+assert qf2['winner'] == 'T02'
+assert qf2['wins'] == {'high': 3, 'low': 0}
+assert qf2['series_win_prob'] == {'high': 100.0, 'low': 0.0}
+
+# qf2 games: 3 completed, G4/G5 marked unnecessary (sweep)
+assert len(qf2['games']) == 5
+assert qf2['games'][3]['status'] == 'unnecessary'
+assert qf2['games'][4]['status'] == 'unnecessary'
+
+# qf3: not_started, all 5 upcoming
+qf3 = result['qf3']
+assert qf3['status'] == 'not_started'
+assert qf3['winner'] is None
+assert all(g['status'] == 'upcoming' for g in qf3['games'])
+
+print('Task 3 assertions passed.')
