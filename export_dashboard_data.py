@@ -1715,6 +1715,28 @@ def main():
 
         play_in_teams = set(seed_codes[6:10])  # seeds 7-10 participate in play-in
 
+        # Pre-compute each play-in team's current state — which play-in game is the
+        # next one we should attribute to them in the sim. Four shapes:
+        #   ('first_game', opp_code) — haven't played Game A/B yet; opp is deterministic
+        #   'game_c_vs_gbw'          — lost Game A, waiting for Game C; opp = gb_w per sim
+        #   'game_c_vs_gal'          — won Game B, waiting for Game C; opp = ga_l per sim
+        #   'done'                   — won Game A / lost Game B / played Game C: no next opp
+        pi_state = {}
+        s7c, s8c, s9c, s10c = seed_codes[6], seed_codes[7], seed_codes[8], seed_codes[9]
+        if pi_a_winner is None:
+            pi_state[s7c] = ('first_game', s8c)
+            pi_state[s8c] = ('first_game', s7c)
+        else:
+            pi_state[pi_a_winner] = 'done'
+            pi_state[pi_a_loser] = 'done' if pi_c_winner is not None else 'game_c_vs_gbw'
+        if pi_b_winner is None:
+            pi_state[s9c] = ('first_game', s10c)
+            pi_state[s10c] = ('first_game', s9c)
+        else:
+            pi_b_loser = s10c if pi_b_winner == s9c else s9c
+            pi_state[pi_b_loser] = 'done'
+            pi_state[pi_b_winner] = 'done' if pi_c_winner is not None else 'game_c_vs_gal'
+
         for _ in range(n_sims):
             # Play-In
             ga_w = pi_a_winner or _sim_game(seed_codes[6], seed_codes[7], 'home')
@@ -1727,23 +1749,28 @@ def main():
             for t in play_in_teams:
                 reach[t]['play_in'] += 1
 
-            # Play-In opponent tracking (immediate first game only — A for seeds 7/8, B for seeds 9/10).
-            # Game C is a backdoor; its opp is not branched separately, but the round-level win prob
-            # (P(reach QF)) accounts for the whole play-in phase.
-            s7c, s8c, s9c, s10c = seed_codes[6], seed_codes[7], seed_codes[8], seed_codes[9]
-            opp_faced[s7c]['play_in'][s8c] = opp_faced[s7c]['play_in'].get(s8c, 0) + 1
-            opp_faced[s8c]['play_in'][s7c] = opp_faced[s8c]['play_in'].get(s7c, 0) + 1
-            opp_faced[s9c]['play_in'][s10c] = opp_faced[s9c]['play_in'].get(s10c, 0) + 1
-            opp_faced[s10c]['play_in'][s9c] = opp_faced[s10c]['play_in'].get(s9c, 0) + 1
-
-            if ga_w == s7c:
-                opp_wins[s7c]['play_in'][s8c] = opp_wins[s7c]['play_in'].get(s8c, 0) + 1
-            else:
-                opp_wins[s8c]['play_in'][s7c] = opp_wins[s8c]['play_in'].get(s7c, 0) + 1
-            if gb_w == s9c:
-                opp_wins[s9c]['play_in'][s10c] = opp_wins[s9c]['play_in'].get(s10c, 0) + 1
-            else:
-                opp_wins[s10c]['play_in'][s9c] = opp_wins[s10c]['play_in'].get(s9c, 0) + 1
+            # Play-In opponent tracking — which opponent to attribute depends on each
+            # team's current state (see pi_state). A 'done' team has no next play-in opp.
+            for code in play_in_teams:
+                state = pi_state[code]
+                if state == 'done':
+                    continue
+                if isinstance(state, tuple):  # ('first_game', opp)
+                    opp = state[1]
+                    first_won = (ga_w == code) if code in (s7c, s8c) else (gb_w == code)
+                    opp_faced[code]['play_in'][opp] = opp_faced[code]['play_in'].get(opp, 0) + 1
+                    if first_won:
+                        opp_wins[code]['play_in'][opp] = opp_wins[code]['play_in'].get(opp, 0) + 1
+                elif state == 'game_c_vs_gbw':
+                    opp = gb_w
+                    opp_faced[code]['play_in'][opp] = opp_faced[code]['play_in'].get(opp, 0) + 1
+                    if gc_w == code:
+                        opp_wins[code]['play_in'][opp] = opp_wins[code]['play_in'].get(opp, 0) + 1
+                elif state == 'game_c_vs_gal':
+                    opp = ga_l
+                    opp_faced[code]['play_in'][opp] = opp_faced[code]['play_in'].get(opp, 0) + 1
+                    if gc_w == code:
+                        opp_wins[code]['play_in'][opp] = opp_wins[code]['play_in'].get(opp, 0) + 1
 
             # s7 (winner of Game A), s8 (winner of Game C)
             s7 = ga_w
@@ -1866,19 +1893,30 @@ def main():
             if not playoff_results:
                 return done
 
-            # Play-In
+            # Play-In — do NOT mark as completed for teams still waiting for Game C
+            # (Game A loser or Game B winner whose Game C hasn't been played yet).
+            # The loop order (a, b, c) naturally overwrites Game A/B with Game C for
+            # teams that play both, so when Game C has a winner we can let it through.
             pi = playoff_results.get('play_in', {})
-            for gk in ['game_a', 'game_b', 'game_c']:
-                g = pi.get(gk)
-                if g and g.get('winner') and team in (g.get('home'), g.get('away')):
-                    opp = g['away'] if team == g['home'] else g['home']
-                    done['play_in'] = {
-                        'status': 'completed',
-                        'actual_opponent': opp,
-                        'actual_result': 'won' if g['winner'] == team else 'lost',
-                        'series': [1, 0] if g['winner'] == team else [0, 1],
-                        'reach_prob': 100.0,
-                    }
+            ga = pi.get('game_a') or {}
+            gb = pi.get('game_b') or {}
+            gc = pi.get('game_c') or {}
+            lost_game_a = team in (ga.get('home'), ga.get('away')) and ga.get('winner') and ga.get('winner') != team
+            won_game_b = team in (gb.get('home'), gb.get('away')) and gb.get('winner') == team
+            waiting_for_gc = (lost_game_a or won_game_b) and not gc.get('winner')
+
+            if not waiting_for_gc:
+                for gk in ['game_a', 'game_b', 'game_c']:
+                    g = pi.get(gk)
+                    if g and g.get('winner') and team in (g.get('home'), g.get('away')):
+                        opp = g['away'] if team == g['home'] else g['home']
+                        done['play_in'] = {
+                            'status': 'completed',
+                            'actual_opponent': opp,
+                            'actual_result': 'won' if g['winner'] == team else 'lost',
+                            'series': [1, 0] if g['winner'] == team else [0, 1],
+                            'reach_prob': 100.0,
+                        }
 
             # QF
             qf_data = playoff_results.get('qf', {})
