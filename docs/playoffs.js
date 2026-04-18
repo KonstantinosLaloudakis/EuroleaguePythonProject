@@ -1266,6 +1266,13 @@ function renderPathDetailTree(entry, container) {
         rounds.unshift('play_in_1');
     }
 
+    // Detect fork-active state: play_in_1 is upcoming and the team is a play-in team.
+    const pi1Round = byRound['play_in_1'];
+    const seedIdx = _seeded.findIndex(s => s.team === entry.team); // 0-9
+    const isSeed78 = seedIdx === 6 || seedIdx === 7;
+    const isSeed910 = seedIdx === 8 || seedIdx === 9;
+    const forkActive = !!pi1Round && pi1Round.status === 'upcoming' && (isSeed78 || isSeed910);
+
     const width = rounds.length === 5 ? 1050 : 900;
     const colCount = rounds.length + 2; // team + rounds + trophy
     const colW = width / colCount;
@@ -1280,7 +1287,8 @@ function renderPathDetailTree(entry, container) {
             maxBranches = Math.max(maxBranches, r.branches.length);
         }
     }
-    const height = Math.max(180, maxBranches * rowH + 80);
+    let height = Math.max(180, maxBranches * rowH + 80);
+    if (forkActive) height += 60; // extra headroom for the skip arc
 
     const teamColor = TEAM_COLORS[entry.team] || '#60a5fa';
     const centerY = height / 2;
@@ -1289,6 +1297,18 @@ function renderPathDetailTree(entry, container) {
 
     // Root node (team)
     svg += nodeLabel(colW / 2, centerY, entry.team, teamColor, '', '');
+
+    // Precompute column x-coords for fork edge targeting
+    const colCx = (idx) => colW * (idx + 1) + colW / 2;
+    const pi1Idx = rounds.indexOf('play_in_1');
+    const pi2Idx = rounds.indexOf('play_in_2');
+    const qfIdx = rounds.indexOf('qf');
+    const pi1Cx = pi1Idx >= 0 ? colCx(pi1Idx) : null;
+    const pi2Cx = pi2Idx >= 0 ? colCx(pi2Idx) : null;
+    const qfCx = qfIdx >= 0 ? colCx(qfIdx) : null;
+
+    const winColor = '#22c55e';
+    const loseColor = '#f87171';
 
     // Draw each round column
     rounds.forEach((rk, idx) => {
@@ -1325,10 +1345,37 @@ function renderPathDetailTree(entry, container) {
         }
         const totalH = branches.length * rowH;
         const startY = centerY - totalH / 2 + rowH / 2;
+
+        // Fork-active edge color override:
+        //   - pi1 branch edge: always neutral team color (this branch is always reached if play_in_1 happens)
+        //   - pi2 branch edges: colored by win/lose for the seed group, dashed
+        //   - qf branch edges: for seed 7/8, the #2-seed opponent is reached ONLY via the
+        //     pi1-win skip arc (not via pi2), so suppress the default pi2→#2-seed edge.
         branches.forEach((b, bi) => {
             const by = startY + bi * rowH;
             const bColor = TEAM_COLORS[b.opponent] || '#60a5fa';
-            svg += edge(prevX + 30, centerY, cx - 30, by, bColor, 0.75);
+
+            let drawDefaultEdge = true;
+            if (forkActive && rk === 'play_in_2') {
+                if (isSeed78) {
+                    // pi2 reached only on LOSE path of Game A → color edges red, dashed
+                    svg += forkEdge(prevX + 30, centerY, cx - 30, by, loseColor, 0.85);
+                    drawDefaultEdge = false;
+                } else if (isSeed910) {
+                    // pi2 reached only on WIN path of Game B → color edges green, dashed
+                    // But draw them only if we aren't replacing them entirely — we aren't; we draw them here.
+                    svg += forkEdge(prevX + 30, centerY, cx - 30, by, winColor, 0.85);
+                    drawDefaultEdge = false;
+                }
+            }
+            if (forkActive && rk === 'qf' && isSeed78 && _seeded[1] && b.opponent === _seeded[1].team) {
+                // #2 seed is the pi1-win-path QF opponent — the green skip arc already
+                // connects pi1 → this branch, so don't draw the default pi2→#2-seed edge.
+                drawDefaultEdge = false;
+            }
+            if (drawDefaultEdge) {
+                svg += edge(prevX + 30, centerY, cx - 30, by, bColor, 0.75);
+            }
             svg += branchNode(cx, by, b.opponent, bColor,
                 `${b.reach_prob_for_opp.toFixed(0)}% opp`,
                 `${b.win_prob_vs.toFixed(0)}% win`);
@@ -1337,6 +1384,62 @@ function renderPathDetailTree(entry, container) {
         svg += `<text x="${cx}" y="14" text-anchor="middle" fill="#cbd5e1" font-size="12" font-weight="800" font-family="Outfit,sans-serif">${roundLabel(rk)}</text>`;
         svg += `<text x="${cx}" y="28" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600" font-family="Inter,sans-serif">${reachPct}% reach · ${winPct}% win</text>`;
     });
+
+    // Fork overlay: drawn after columns so labels sit on top.
+    if (forkActive && pi1Cx !== null) {
+        const pi1 = pi1Round;
+        const winPct = Math.round(pi1.win_prob);
+        const losePct = 100 - winPct;
+        // pi1 branch node is at centerY (single branch — the fixed opponent).
+        const pi1RightX = pi1Cx + 30;
+
+        if (isSeed78 && qfCx !== null && pi2Cx !== null) {
+            // Win edge: skip pi2 entirely, arc over it, land on the seed-#2 QF branch node
+            // (the opponent reached via pi1-win). Fall back to top of cluster if not found.
+            const qfR = byRound['qf'];
+            let qfTopY = centerY;
+            if (qfR && qfR.status === 'upcoming' && qfR.branches && qfR.branches.length) {
+                const n = qfR.branches.length;
+                const qfStartY = centerY - (n * rowH) / 2 + rowH / 2;
+                qfTopY = qfStartY; // default fallback = topmost branch
+                const winOppCode = _seeded[1] && _seeded[1].team;
+                const winQfBranchIdx = winOppCode
+                    ? qfR.branches.findIndex(b => b.opponent === winOppCode)
+                    : -1;
+                if (winQfBranchIdx >= 0) {
+                    qfTopY = qfStartY + winQfBranchIdx * rowH;
+                }
+            }
+            const landX = qfCx - 30;
+            const landY = qfTopY;
+            svg += skipEdge(pi1RightX, centerY, landX, landY, winColor, 0.9);
+            // Win label — near start, above
+            const winLblX = pi1RightX + 20;
+            const winLblY = centerY - 10;
+            svg += `<text x="${winLblX}" y="${winLblY}" text-anchor="start" fill="${winColor}" font-size="10" font-weight="700" font-family="Inter,sans-serif">win ${winPct}%</text>`;
+            // Lose label — near start, below (paired with the red dashed pi2 edges)
+            const loseLblX = pi1RightX + 20;
+            const loseLblY = centerY + 18;
+            svg += `<text x="${loseLblX}" y="${loseLblY}" text-anchor="start" fill="${loseColor}" font-size="10" font-weight="700" font-family="Inter,sans-serif">lose ${losePct}%</text>`;
+        } else if (isSeed910 && pi2Cx !== null) {
+            // Win edge label — already drawn as green dashed pi2 edges above.
+            const winLblX = pi1RightX + 20;
+            const winLblY = centerY - 10;
+            svg += `<text x="${winLblX}" y="${winLblY}" text-anchor="start" fill="${winColor}" font-size="10" font-weight="700" font-family="Inter,sans-serif">win ${winPct}%</text>`;
+            // Lose edge: terminates at ✗ Eliminated marker near pi2 column (below).
+            const elimX = pi2Cx;
+            const elimY = Math.min(height - 30, centerY + Math.max(80, (maxBranches * rowH) / 2 + 30));
+            svg += forkEdge(pi1RightX, centerY, elimX - 16, elimY, loseColor, 0.85);
+            // Elim marker
+            svg += `<circle cx="${elimX}" cy="${elimY}" r="16" fill="#334155" opacity="0.35" stroke="#64748b" stroke-width="1.5"/>`;
+            svg += `<text x="${elimX}" y="${elimY + 6}" text-anchor="middle" fill="#94a3b8" font-size="18" font-weight="800" font-family="Inter,sans-serif">\u2715</text>`;
+            svg += `<text x="${elimX}" y="${elimY + 30}" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="700" font-family="Inter,sans-serif">Eliminated</text>`;
+            // Lose label — near start, below
+            const loseLblX = pi1RightX + 20;
+            const loseLblY = centerY + 18;
+            svg += `<text x="${loseLblX}" y="${loseLblY}" text-anchor="start" fill="${loseColor}" font-size="10" font-weight="700" font-family="Inter,sans-serif">lose ${losePct}%</text>`;
+        }
+    }
 
     // Trophy column
     const trophyX = colW * (rounds.length + 1) + colW / 2;
@@ -1376,6 +1479,19 @@ function edge(x1, y1, x2, y2, color, opacity) {
     // Smooth curve between columns
     const midX = (x1 + x2) / 2;
     return `<path d="M${x1},${y1} C${midX},${y1} ${midX},${y2} ${x2},${y2}" stroke="${color}" stroke-width="1.5" fill="none" opacity="${opacity}"/>`;
+}
+
+function forkEdge(x1, y1, x2, y2, color, opacity) {
+    // Dashed variant of edge() — used for "possible future" branching paths.
+    const midX = (x1 + x2) / 2;
+    return `<path d="M${x1},${y1} C${midX},${y1} ${midX},${y2} ${x2},${y2}" stroke="${color}" stroke-width="1.5" fill="none" opacity="${opacity}" stroke-dasharray="4,3"/>`;
+}
+
+function skipEdge(x1, y1, x2, y2, color, opacity) {
+    // Arc that peaks ABOVE both endpoints — used to "hop over" a column (e.g. pi1 → qf skipping pi2).
+    const arcY = Math.min(y1, y2) - 70;
+    const midX = (x1 + x2) / 2;
+    return `<path d="M${x1},${y1} C${midX - 60},${arcY} ${midX + 60},${arcY} ${x2},${y2}" stroke="${color}" stroke-width="1.5" fill="none" opacity="${opacity}" stroke-dasharray="4,3"/>`;
 }
 
 function roundLabel(rk) {
