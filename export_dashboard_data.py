@@ -1420,7 +1420,7 @@ def main():
             'final': final,
         }
 
-    def compute_championship_odds(playoff_results, matchup_probs, seeded_teams, n_sims=10000):
+    def compute_championship_odds(playoff_results, matchup_probs, seeded_teams, n_sims=50000):
         """
         Run Monte Carlo simulation of the remaining bracket from current state.
 
@@ -1428,6 +1428,9 @@ def main():
         unplayed games. Returns dict of team_code -> championship probability (0-100).
         """
         import random
+        # Seed deterministically so re-runs on unchanged state produce identical
+        # numbers — removes spurious wiggle in championship_odds_history deltas.
+        random.seed(42)
 
         if len(seeded_teams) < 10:
             return {}
@@ -1650,6 +1653,7 @@ def main():
         Returns list of per-team path entries matching the path_to_title spec.
         """
         import random
+        random.seed(42)
 
         if len(seeded_teams) < 10:
             return []
