@@ -1190,7 +1190,7 @@ function buildPathRow(entry) {
     const cells = ['play_in', 'qf', 'sf', 'final'].map(rk => pathRoundCell(byRound[rk])).join('');
 
     const champPctCls = pathPctCls(entry.championship_odds);
-    const hint = entry.status === 'alive' ? '<span class="ptt-expand-hint">click to expand ▾</span>' : '';
+    const hint = entry.status === 'alive' ? '<span class="ptt-expand-hint"></span>' : '';
     const statusTitle = entry.status.charAt(0).toUpperCase() + entry.status.slice(1);
 
     return `<tr class="${rowCls}" data-team="${entry.team}">
@@ -1245,7 +1245,7 @@ function renderPathDetailTree(entry, container) {
     const width = 900;
     const colCount = rounds.length + 2; // team + rounds + trophy
     const colW = width / colCount;
-    const rowH = 60;
+    const rowH = 90;
 
     // Determine max branches per column to size vertically
     let maxBranches = 1;
@@ -1304,7 +1304,7 @@ function renderPathDetailTree(entry, container) {
             const by = startY + bi * rowH;
             const bColor = TEAM_COLORS[b.opponent] || '#60a5fa';
             svg += edge(prevX + 30, centerY, cx - 30, by, bColor, 0.75);
-            svg += nodeLabel(cx, by, b.opponent, bColor,
+            svg += branchNode(cx, by, b.opponent, bColor,
                 `${b.reach_prob_for_opp.toFixed(0)}% opp`,
                 `${b.win_prob_vs.toFixed(0)}% win`);
         });
@@ -1336,6 +1336,16 @@ function nodeLabel(cx, cy, code, color, topLabel, bottomLabel) {
     return s;
 }
 
+function branchNode(cx, cy, code, color, oppLine, winLine) {
+    const r = 22;
+    let s = '';
+    s += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${color}" opacity="0.18" stroke="${color}" stroke-width="1.5"/>`;
+    s += `<text x="${cx}" y="${cy + 4}" text-anchor="middle" fill="${color}" font-size="11" font-weight="800" font-family="Outfit,sans-serif">${code}</text>`;
+    s += `<text x="${cx}" y="${cy + 38}" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600" font-family="Inter,sans-serif">${oppLine}</text>`;
+    s += `<text x="${cx}" y="${cy + 51}" text-anchor="middle" fill="#cbd5e1" font-size="10" font-family="Inter,sans-serif">${winLine}</text>`;
+    return s;
+}
+
 function edge(x1, y1, x2, y2, color, opacity) {
     // Smooth curve between columns
     const midX = (x1 + x2) / 2;
@@ -1355,7 +1365,11 @@ function togglePathDetail(teamCode) {
         const prevRow = tbody.querySelector(`.ptt-row[data-team="${_pttExpanded}"]`);
         const prevDetail = document.getElementById(`ptt-detail-${_pttExpanded}`);
         if (prevRow) prevRow.classList.remove('ptt-row-expanded');
-        if (prevDetail) prevDetail.querySelector('td').innerHTML = '';
+        if (prevDetail) {
+            const prevTd = prevDetail.querySelector('td');
+            prevTd.innerHTML = '';
+            prevTd.style.borderLeft = '';
+        }
     }
 
     // Toggle same row = close
@@ -1370,8 +1384,10 @@ function togglePathDetail(teamCode) {
     if (!row || !detail) return;
     row.classList.add('ptt-row-expanded');
     const entry = (_pathData || []).find(e => e.team === teamCode);
+    const td = detail.querySelector('td');
+    td.style.borderLeft = `3px solid ${TEAM_COLORS[teamCode] || '#60a5fa'}`;
     if (entry) {
-        renderPathDetailTree(entry, detail.querySelector('td'));
+        renderPathDetailTree(entry, td);
     }
     _pttExpanded = teamCode;
 }

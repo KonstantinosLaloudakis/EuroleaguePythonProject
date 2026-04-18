@@ -665,6 +665,14 @@
             color: var(--text-muted);
         }
 
+        .ptt-expand-hint::before {
+            content: 'click to expand \25BE';
+        }
+
+        .ptt-row.ptt-row-expanded .ptt-expand-hint::before {
+            content: 'click to collapse \25B4';
+        }
+
         .ptt-row.ptt-row-expanded + .ptt-detail-row {
             display: table-row;
         }
