@@ -2160,6 +2160,35 @@ def main():
             'final': {'round': 'final', 'label': 'Final',          'seeds': (final_high, final_low)},
         }
 
+        def _rs_h2h(team_a, team_b):
+            if not team_a or not team_b or games_df is None or len(games_df) == 0:
+                return []
+            df = games_df[
+                (games_df['round'] == 'RS') &
+                (games_df['played'] == True) &
+                (
+                    ((games_df['homecode'] == team_a) & (games_df['awaycode'] == team_b)) |
+                    ((games_df['homecode'] == team_b) & (games_df['awaycode'] == team_a))
+                )
+            ]
+            meetings = []
+            for _, row in df.iterrows():
+                home = row['homecode']
+                away = row['awaycode']
+                hs = int(row['homescore']) if row['homescore'] else 0
+                aws = int(row['awayscore']) if row['awayscore'] else 0
+                winner = home if hs > aws else away
+                meetings.append({
+                    'round': int(row.get('gameday') or 0),
+                    'home': home,
+                    'away': away,
+                    'home_score': hs,
+                    'away_score': aws,
+                    'winner': winner,
+                })
+            meetings.sort(key=lambda m: m['round'])
+            return meetings
+
         qf_label_for_slot = {'qf1': '1v8', 'qf2': '2v7', 'qf3': '3v6', 'qf4': '4v5'}
 
         def _build_prob_pair(slot_id, high_code, low_code):
@@ -2289,7 +2318,7 @@ def main():
                 'winner': winner,
                 'series_win_prob': _build_prob_pair(slot_id, high_code, low_code),
                 'games': games,
-                'rs_h2h': [],
+                'rs_h2h': _rs_h2h(high_code, low_code),
             }
 
         return result

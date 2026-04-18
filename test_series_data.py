@@ -201,3 +201,45 @@ assert qf3['winner'] is None
 assert all(g['status'] == 'upcoming' for g in qf3['games'])
 
 print('Task 3 assertions passed.')
+
+# ── Task 4: RS H2H ─────────────────────────────────────────────────────────
+
+# Build a synthetic games_df with 2 RS meetings between T01 and T08
+rs_games = pd.DataFrame([
+    {'round': 'RS', 'homecode': 'T01', 'awaycode': 'T08', 'homescore': 84,
+     'awayscore': 79, 'played': True, 'gameday': 7},
+    {'round': 'RS', 'homecode': 'T08', 'awaycode': 'T01', 'homescore': 91,
+     'awayscore': 88, 'played': True, 'gameday': 22},
+    {'round': 'RS', 'homecode': 'T02', 'awaycode': 'T07', 'homescore': 80,
+     'awayscore': 75, 'played': True, 'gameday': 10},
+    # T03/T06 have no RS meetings
+])
+
+result = compute_series_data(None, matchup_probs, seeded, {}, rs_games)
+
+qf1 = result['qf1']
+assert len(qf1['rs_h2h']) == 2, f'expected 2 rs_h2h, got {len(qf1["rs_h2h"])}'
+m0 = qf1['rs_h2h'][0]
+assert m0['home'] == 'T01' and m0['away'] == 'T08'
+assert m0['home_score'] == 84 and m0['away_score'] == 79
+assert m0['winner'] == 'T01'
+assert m0['round'] == 7
+
+m1 = qf1['rs_h2h'][1]
+assert m1['home'] == 'T08' and m1['away'] == 'T01'
+assert m1['winner'] == 'T08'
+assert m1['round'] == 22
+
+# qf2: 1 meeting
+qf2 = result['qf2']
+assert len(qf2['rs_h2h']) == 1
+assert qf2['rs_h2h'][0]['winner'] == 'T02'
+
+# qf3: 0 meetings
+qf3 = result['qf3']
+assert qf3['rs_h2h'] == []
+
+# SF/Final slots (unresolved seeds): no H2H
+assert result['sf1']['rs_h2h'] == []
+
+print('Task 4 assertions passed.')
