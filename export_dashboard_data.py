@@ -1424,16 +1424,18 @@ def main():
         """
         Run Monte Carlo simulation of the remaining bracket from current state.
 
-        Uses playoff_results for completed games and matchup_probs for simulating
-        unplayed games. Returns dict of team_code -> championship probability (0-100).
+        Returns dict with:
+          - 'championship': {team_code: championship_prob_pct}
+          - 'series': {slot_id: {team_code: series_win_prob_pct}}
+
+        Slot IDs: qf1..qf4 (1v8, 2v7, 3v6, 4v5), sf1 (w(qf1) vs w(qf4)),
+        sf2 (w(qf2) vs w(qf3)), final.
         """
         import random
-        # Seed deterministically so re-runs on unchanged state produce identical
-        # numbers — removes spurious wiggle in championship_odds_history deltas.
         random.seed(42)
 
         if len(seeded_teams) < 10:
-            return {}
+            return {'championship': {}, 'series': {}}
 
         seed_codes = [t['team'] for t in seeded_teams[:10]]
 
@@ -1503,7 +1505,11 @@ def main():
             if final_data.get('winner'):
                 final_winner = final_data['winner']
 
+        # Map from QF label (data-side) to slot ID (URL-side)
+        qf_label_to_slot = {'1v8': 'qf1', '2v7': 'qf2', '3v6': 'qf3', '4v5': 'qf4'}
+
         counts = {code: 0 for code in seed_codes}
+        series_counts = {slot: {} for slot in ('qf1', 'qf2', 'qf3', 'qf4', 'sf1', 'sf2', 'final')}
 
         for _ in range(n_sims):
             ga_w = pi_a_winner or _sim_game(seed_codes[6], seed_codes[7], 'home')
@@ -1540,13 +1546,25 @@ def main():
                 else:
                     qf_w[label] = _sim_series(higher, lower)
 
+                slot = qf_label_to_slot[label]
+                series_counts[slot][qf_w[label]] = series_counts[slot].get(qf_w[label], 0) + 1
+
             sf1_w = sf_winners['sf1'] or _sim_game(qf_w['1v8'], qf_w['4v5'], 'neutral')
             sf2_w = sf_winners['sf2'] or _sim_game(qf_w['2v7'], qf_w['3v6'], 'neutral')
+            series_counts['sf1'][sf1_w] = series_counts['sf1'].get(sf1_w, 0) + 1
+            series_counts['sf2'][sf2_w] = series_counts['sf2'].get(sf2_w, 0) + 1
 
             champ = final_winner or _sim_game(sf1_w, sf2_w, 'neutral')
+            series_counts['final'][champ] = series_counts['final'].get(champ, 0) + 1
             counts[champ] += 1
 
-        return {code: round(count / n_sims * 100, 1) for code, count in counts.items()}
+        championship_pcts = {code: round(count / n_sims * 100, 1) for code, count in counts.items()}
+        series_pcts = {
+            slot: {team: round(c / n_sims * 100, 1) for team, c in team_counts.items()}
+            for slot, team_counts in series_counts.items()
+        }
+
+        return {'championship': championship_pcts, 'series': series_pcts}
 
     def build_playoff_recaps(playoff_results, odds_before, odds_after, matchup_probs, seeded_teams):
         """
@@ -2079,6 +2097,7 @@ def main():
     playoff_recaps = []
     championship_odds_history = []
     path_to_title = []
+    series_win_probs = {}
 
     game_results_raw = load_json('mvp_game_results.json')
     if game_results_raw and len(teams) >= 10:
@@ -2087,9 +2106,11 @@ def main():
 
         if playoff_results_data:
             # Compute current championship odds
-            championship_odds = compute_championship_odds(
+            mc_result = compute_championship_odds(
                 playoff_results_data, playoff_matchup_probs, seeded
             )
+            championship_odds = mc_result['championship']
+            series_win_probs = mc_result['series']
 
             # Load previous odds history from existing dashboard
             prev_dashboard_path = os.path.join('docs', 'data', 'current', 'dashboard.json')
@@ -2142,9 +2163,11 @@ def main():
             if playoff_matchup_probs and len(teams) >= 10:
                 seeded = teams[:10]
                 if not championship_odds_history:
-                    championship_odds = compute_championship_odds(
+                    mc_result = compute_championship_odds(
                         None, playoff_matchup_probs, seeded
                     )
+                    championship_odds = mc_result['championship']
+                    series_win_probs = mc_result['series']
                     championship_odds_history = [{
                         'date': datetime.utcnow().strftime('%Y-%m-%d'),
                         'label': 'Pre-Playoff',
