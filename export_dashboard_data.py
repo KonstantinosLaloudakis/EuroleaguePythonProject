@@ -2088,6 +2088,99 @@ def main():
 
         return result
 
+    def compute_series_data(playoff_results, matchup_probs, seeded_teams, series_win_probs, games_df):
+        """
+        Build per-series entries for Series Hub pages.
+
+        Returns dict keyed by slot_id (qf1..qf4, sf1, sf2, final). Each entry has
+        id, round, label, format, home_pattern, high_seed, low_seed, status, wins,
+        winner, series_win_prob, games[], rs_h2h[].
+
+        Seeds resolve left-to-right: QFs populate from initial seeding; SFs/Final
+        populate once prerequisite series are decided. Unresolved sides remain null.
+        """
+        if len(seeded_teams) < 10:
+            return {}
+
+        seed_codes = [t['team'] for t in seeded_teams[:10]]
+
+        def _seed_obj(code, seed_num):
+            if not code:
+                return None
+            return {'team': code, 'seed': seed_num}
+
+        qf_winners = {'1v8': None, '2v7': None, '3v6': None, '4v5': None}
+        sf_winners = {'sf1': None, 'sf2': None}
+        final_winner = None
+        pi_a_winner = None
+        pi_c_winner = None
+        if playoff_results:
+            for label in qf_winners:
+                entry = (playoff_results.get('qf') or {}).get(label) or {}
+                if entry.get('winner'):
+                    qf_winners[label] = entry['winner']
+            sf_data = playoff_results.get('sf') or {}
+            if sf_data.get('sf1') and sf_data['sf1'].get('winner'):
+                sf_winners['sf1'] = sf_data['sf1']['winner']
+            if sf_data.get('sf2') and sf_data['sf2'].get('winner'):
+                sf_winners['sf2'] = sf_data['sf2']['winner']
+            final_data = playoff_results.get('final') or {}
+            if final_data.get('winner'):
+                final_winner = final_data['winner']
+            pi = playoff_results.get('play_in') or {}
+            if pi.get('game_a') and pi['game_a'].get('winner'):
+                pi_a_winner = pi['game_a']['winner']
+            if pi.get('game_c') and pi['game_c'].get('winner'):
+                pi_c_winner = pi['game_c']['winner']
+
+        seed_7_team = pi_a_winner or seed_codes[6]
+        seed_8_team = pi_c_winner or seed_codes[7]
+
+        qf_seeding = {
+            'qf1': (_seed_obj(seed_codes[0], 1), _seed_obj(seed_8_team, 8)),
+            'qf2': (_seed_obj(seed_codes[1], 2), _seed_obj(seed_7_team, 7)),
+            'qf3': (_seed_obj(seed_codes[2], 3), _seed_obj(seed_codes[5], 6)),
+            'qf4': (_seed_obj(seed_codes[3], 4), _seed_obj(seed_codes[4], 5)),
+        }
+
+        sf1_high = _seed_obj(qf_winners['1v8'], None) if qf_winners['1v8'] else None
+        sf1_low = _seed_obj(qf_winners['4v5'], None) if qf_winners['4v5'] else None
+        sf2_high = _seed_obj(qf_winners['2v7'], None) if qf_winners['2v7'] else None
+        sf2_low = _seed_obj(qf_winners['3v6'], None) if qf_winners['3v6'] else None
+        final_high = _seed_obj(sf_winners['sf1'], None) if sf_winners['sf1'] else None
+        final_low = _seed_obj(sf_winners['sf2'], None) if sf_winners['sf2'] else None
+
+        slot_defs = {
+            'qf1':   {'round': 'qf',    'label': 'Quarterfinal 1', 'seeds': qf_seeding['qf1']},
+            'qf2':   {'round': 'qf',    'label': 'Quarterfinal 2', 'seeds': qf_seeding['qf2']},
+            'qf3':   {'round': 'qf',    'label': 'Quarterfinal 3', 'seeds': qf_seeding['qf3']},
+            'qf4':   {'round': 'qf',    'label': 'Quarterfinal 4', 'seeds': qf_seeding['qf4']},
+            'sf1':   {'round': 'sf',    'label': 'Semifinal 1',    'seeds': (sf1_high, sf1_low)},
+            'sf2':   {'round': 'sf',    'label': 'Semifinal 2',    'seeds': (sf2_high, sf2_low)},
+            'final': {'round': 'final', 'label': 'Final',          'seeds': (final_high, final_low)},
+        }
+
+        result = {}
+        for slot_id, defn in slot_defs.items():
+            high, low = defn['seeds']
+            result[slot_id] = {
+                'id': slot_id,
+                'round': defn['round'],
+                'label': defn['label'],
+                'format': 'best_of_5',
+                'home_pattern': ['high', 'high', 'low', 'low', 'high'],
+                'high_seed': high,
+                'low_seed': low,
+                'status': 'not_started',
+                'wins': {'high': 0, 'low': 0},
+                'winner': None,
+                'series_win_prob': {'high': 0.0, 'low': 0.0},
+                'games': [],
+                'rs_h2h': [],
+            }
+
+        return result
+
     # ── Build output ─────────────────────────────────────────────────────────
     from datetime import datetime
 

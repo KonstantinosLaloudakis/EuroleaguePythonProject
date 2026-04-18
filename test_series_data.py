@@ -56,3 +56,51 @@ assert series['qf1'].get('T01', 0) > series['qf1'].get('T08', 0), \
     f'qf1 higher seed should win more: {series["qf1"]}'
 
 print('Task 1 assertions passed.')
+
+# ── Task 2: compute_series_data scaffolding ────────────────────────────────
+csd_fn = next(n for n in ast.walk(main_fn) if isinstance(n, ast.FunctionDef) and n.name == 'compute_series_data')
+ns2 = {}
+exec(ast.unparse(csd_fn), ns2)
+compute_series_data = ns2['compute_series_data']
+
+# Empty series_win_probs dict (not yet wired) - we test slot structure first
+import pandas as pd
+empty_games_df = pd.DataFrame(columns=['round', 'homecode', 'awaycode', 'homescore', 'awayscore', 'played'])
+
+# --- Pre-playoff state ---
+result = compute_series_data(None, matchup_probs, seeded, {}, empty_games_df)
+assert isinstance(result, dict)
+assert set(result.keys()) == {'qf1', 'qf2', 'qf3', 'qf4', 'sf1', 'sf2', 'final'}
+
+qf1 = result['qf1']
+assert qf1['id'] == 'qf1'
+assert qf1['round'] == 'qf'
+assert qf1['label'] == 'Quarterfinal 1'
+assert qf1['format'] == 'best_of_5'
+assert qf1['home_pattern'] == ['high', 'high', 'low', 'low', 'high']
+assert qf1['high_seed'] == {'team': 'T01', 'seed': 1}
+assert qf1['low_seed'] == {'team': 'T08', 'seed': 8}
+
+qf2 = result['qf2']
+assert qf2['high_seed'] == {'team': 'T02', 'seed': 2}
+assert qf2['low_seed'] == {'team': 'T07', 'seed': 7}
+
+qf3 = result['qf3']
+assert qf3['high_seed'] == {'team': 'T03', 'seed': 3}
+assert qf3['low_seed'] == {'team': 'T06', 'seed': 6}
+
+qf4 = result['qf4']
+assert qf4['high_seed'] == {'team': 'T04', 'seed': 4}
+assert qf4['low_seed'] == {'team': 'T05', 'seed': 5}
+
+# SF/Final slots start unresolved pre-playoff
+sf1 = result['sf1']
+assert sf1['id'] == 'sf1'
+assert sf1['round'] == 'sf'
+assert sf1['high_seed'] is None and sf1['low_seed'] is None
+
+finals = result['final']
+assert finals['round'] == 'final'
+assert finals['high_seed'] is None and finals['low_seed'] is None
+
+print('Task 2 assertions passed.')
