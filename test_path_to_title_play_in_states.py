@@ -4,9 +4,11 @@ the edge case where Game A loser / Game B winner are still alive waiting for
 Game C. Extracts the nested function from export_dashboard_data.py via AST.
 """
 import ast
+import os
 import random
 
-with open('export_dashboard_data.py', 'r', encoding='utf-8') as f:
+_here = os.path.dirname(os.path.abspath(__file__))
+with open(os.path.join(_here, 'export_dashboard_data.py'), 'r', encoding='utf-8') as f:
     src = f.read()
 
 tree = ast.parse(src)
@@ -36,8 +38,8 @@ for i, ta in enumerate(SEEDS):
 def find(result, team):
     return next(e for e in result if e['team'] == team)
 
-def pi_round(entry):
-    return next(r for r in entry['rounds'] if r['round'] == 'play_in')
+def pi_round_n(entry, n):
+    return next(r for r in entry['rounds'] if r['round'] == f'play_in_{n}')
 
 def run(playoff_results, label):
     random.seed(42)
@@ -45,23 +47,28 @@ def run(playoff_results, label):
     print(f'\n=== {label} ===')
     for code in SEEDS[6:10]:
         e = find(result, code)
-        r = pi_round(e)
-        print(f'  {code}  status={e["status"]:<10}  play_in={r}')
+        r1 = pi_round_n(e, 1)
+        r2 = pi_round_n(e, 2)
+        print(f'  {code}  status={e["status"]:<10}  pi1={r1}  pi2={r2}')
     return result
 
 # --- State 1: No games played (pre-play-in, current live state) ---
 r1 = run(None, 'Pre-play-in (nothing played)')
 for code in SEEDS[6:10]:
-    r = pi_round(find(r1, code))
-    assert r['status'] == 'upcoming', f'{code} should be upcoming, got {r["status"]}'
-    assert find(r1, code)['status'] == 'alive'
-    assert len(r['branches']) == 1
+    e = find(r1, code)
+    assert e['status'] == 'alive'
+    pi1 = pi_round_n(e, 1)
+    pi2 = pi_round_n(e, 2)
+    assert pi1['status'] == 'upcoming', f'{code} play_in_1 should be upcoming, got {pi1["status"]}'
+    assert len(pi1['branches']) == 1, f'{code} play_in_1 should have 1 branch, got {pi1["branches"]}'
+    assert pi2['status'] == 'upcoming', f'{code} play_in_2 should be upcoming, got {pi2["status"]}'
+    assert pi2['reach_prob'] < 100, f'{code} play_in_2 reach should be < 100, got {pi2["reach_prob"]}'
+    # Seeds 7/8 face potential Game C opps T09/T10; seeds 9/10 face T07/T08
+    expected_opps = {'T09', 'T10'} if code in ('T07', 'T08') else {'T07', 'T08'}
+    branch_opps = {b['opponent'] for b in pi2['branches']}
+    assert branch_opps == expected_opps, f'{code} play_in_2 branches should be {expected_opps}, got {branch_opps}'
 
 # --- State 2: Game A done (T07 beat T08), Game B/C pending ---
-# Expected:
-#   T07 (Game A winner) -> completed won, status alive (advances to QF)
-#   T08 (Game A loser)  -> upcoming (waiting for Game C), status alive, NOT completed
-#   T09, T10            -> upcoming (first game), alive
 pr2 = {
     'play_in': {
         'game_a': {'home': 'T07', 'away': 'T08', 'winner': 'T07'},
@@ -73,19 +80,35 @@ pr2 = {
     'final': {},
 }
 r2 = run(pr2, 'Game A done (T07 beat T08), B/C pending')
-t07 = find(r2, 'T07'); t07_pi = pi_round(t07)
-assert t07_pi['status'] == 'completed' and t07_pi['actual_result'] == 'won', f'T07 should be completed won: {t07_pi}'
+t07 = find(r2, 'T07')
+t07_pi1 = pi_round_n(t07, 1); t07_pi2 = pi_round_n(t07, 2)
+assert t07_pi1['status'] == 'completed' and t07_pi1['actual_result'] == 'won' and t07_pi1['actual_opponent'] == 'T08'
+assert t07_pi2['status'] == 'unreached', f'T07 play_in_2 should be unreached, got {t07_pi2}'
 assert t07['status'] == 'alive'
-t08 = find(r2, 'T08'); t08_pi = pi_round(t08)
-assert t08_pi['status'] == 'upcoming', f'T08 should still be upcoming (waiting for C), got {t08_pi}'
-assert t08['status'] == 'alive', f'T08 should still be alive, got {t08["status"]}'
-# T08's branches should include the potential Game B winners (T09 and/or T10) — NOT T07
-branch_opps = {b['opponent'] for b in t08_pi['branches']}
-assert 'T07' not in branch_opps, f'T08 should not face T07 again; branches: {t08_pi["branches"]}'
-assert branch_opps & {'T09', 'T10'}, f'T08 should face Game B winner; branches: {t08_pi["branches"]}'
+
+t08 = find(r2, 'T08')
+t08_pi1 = pi_round_n(t08, 1); t08_pi2 = pi_round_n(t08, 2)
+assert t08_pi1['status'] == 'completed' and t08_pi1['actual_result'] == 'lost' and t08_pi1['actual_opponent'] == 'T07'
+assert t08_pi2['status'] == 'upcoming' and t08_pi2['reach_prob'] == 100.0, f'T08 play_in_2 should be upcoming @ 100%, got {t08_pi2}'
+assert t08['status'] == 'alive'
+t08_opps = {b['opponent'] for b in t08_pi2['branches']}
+assert t08_opps == {'T09', 'T10'}, f'T08 play_in_2 branches should be T09/T10, got {t08_opps}'
+
+t09 = find(r2, 'T09')
+t09_pi1 = pi_round_n(t09, 1); t09_pi2 = pi_round_n(t09, 2)
+assert t09_pi1['status'] == 'upcoming' and len(t09_pi1['branches']) == 1 and t09_pi1['branches'][0]['opponent'] == 'T10'
+assert t09_pi2['status'] == 'upcoming'
+t09_pi2_opps = {b['opponent'] for b in t09_pi2['branches']}
+assert t09_pi2_opps == {'T08'}, f'T09 play_in_2 branches should be just T08 (Game A resolved), got {t09_pi2_opps}'
+
+t10 = find(r2, 'T10')
+t10_pi1 = pi_round_n(t10, 1); t10_pi2 = pi_round_n(t10, 2)
+assert t10_pi1['status'] == 'upcoming' and len(t10_pi1['branches']) == 1 and t10_pi1['branches'][0]['opponent'] == 'T09'
+assert t10_pi2['status'] == 'upcoming'
+t10_pi2_opps = {b['opponent'] for b in t10_pi2['branches']}
+assert t10_pi2_opps == {'T08'}, f'T10 play_in_2 branches should be just T08, got {t10_pi2_opps}'
 
 # --- State 3: Game A + B done, Game C pending ---
-# T07 won A (advance), T08 lost A (waits for C), T09 won B (waits for C), T10 lost B (eliminated)
 pr3 = {
     'play_in': {
         'game_a': {'home': 'T07', 'away': 'T08', 'winner': 'T07'},
@@ -97,19 +120,33 @@ pr3 = {
     'final': {},
 }
 r3 = run(pr3, 'Game A + B done, C pending')
-t07 = find(r3, 'T07'); assert pi_round(t07)['status'] == 'completed' and t07['status'] == 'alive'
-t08 = find(r3, 'T08'); t08_pi = pi_round(t08)
-assert t08_pi['status'] == 'upcoming' and t08['status'] == 'alive'
-# T08's only possible Game C opp is T09 (deterministic now)
-assert len(t08_pi['branches']) == 1 and t08_pi['branches'][0]['opponent'] == 'T09', t08_pi
-t09 = find(r3, 'T09'); t09_pi = pi_round(t09)
-assert t09_pi['status'] == 'upcoming' and t09['status'] == 'alive'
-assert len(t09_pi['branches']) == 1 and t09_pi['branches'][0]['opponent'] == 'T08', t09_pi
-t10 = find(r3, 'T10'); t10_pi = pi_round(t10)
-assert t10_pi['status'] == 'completed' and t10_pi['actual_result'] == 'lost'
+
+t07 = find(r3, 'T07')
+assert pi_round_n(t07, 1)['status'] == 'completed' and pi_round_n(t07, 1)['actual_result'] == 'won'
+assert pi_round_n(t07, 2)['status'] == 'unreached'
+assert t07['status'] == 'alive'
+
+t08 = find(r3, 'T08')
+t08_pi1 = pi_round_n(t08, 1); t08_pi2 = pi_round_n(t08, 2)
+assert t08_pi1['status'] == 'completed' and t08_pi1['actual_result'] == 'lost'
+assert t08_pi2['status'] == 'upcoming' and t08_pi2['reach_prob'] == 100.0
+assert len(t08_pi2['branches']) == 1 and t08_pi2['branches'][0]['opponent'] == 'T09', t08_pi2
+assert t08['status'] == 'alive'
+
+t09 = find(r3, 'T09')
+t09_pi1 = pi_round_n(t09, 1); t09_pi2 = pi_round_n(t09, 2)
+assert t09_pi1['status'] == 'completed' and t09_pi1['actual_result'] == 'won'
+assert t09_pi2['status'] == 'upcoming' and t09_pi2['reach_prob'] == 100.0
+assert len(t09_pi2['branches']) == 1 and t09_pi2['branches'][0]['opponent'] == 'T08', t09_pi2
+assert t09['status'] == 'alive'
+
+t10 = find(r3, 'T10')
+t10_pi1 = pi_round_n(t10, 1); t10_pi2 = pi_round_n(t10, 2)
+assert t10_pi1['status'] == 'completed' and t10_pi1['actual_result'] == 'lost'
+assert t10_pi2['status'] == 'unreached'
 assert t10['status'] == 'eliminated'
 
-# --- State 4: All three play-in games done ---
+# --- State 4: All three play-in games done (T08 beat T09 in Game C) ---
 pr4 = {
     'play_in': {
         'game_a': {'home': 'T07', 'away': 'T08', 'winner': 'T07'},
@@ -121,17 +158,27 @@ pr4 = {
     'final': {},
 }
 r4 = run(pr4, 'All play-in games done')
-# T07: won A, advanced
-assert find(r4, 'T07')['status'] == 'alive'
-# T08: lost A but won C vs T09 → advanced
-t08 = find(r4, 'T08'); t08_pi = pi_round(t08)
-assert t08_pi['status'] == 'completed' and t08_pi['actual_result'] == 'won' and t08_pi['actual_opponent'] == 'T09'
+
+t07 = find(r4, 'T07')
+assert pi_round_n(t07, 1)['status'] == 'completed' and pi_round_n(t07, 1)['actual_result'] == 'won'
+assert pi_round_n(t07, 2)['status'] == 'unreached'
+assert t07['status'] == 'alive'
+
+t08 = find(r4, 'T08')
+t08_pi1 = pi_round_n(t08, 1); t08_pi2 = pi_round_n(t08, 2)
+assert t08_pi1['status'] == 'completed' and t08_pi1['actual_result'] == 'lost' and t08_pi1['actual_opponent'] == 'T07'
+assert t08_pi2['status'] == 'completed' and t08_pi2['actual_result'] == 'won' and t08_pi2['actual_opponent'] == 'T09'
 assert t08['status'] == 'alive'
-# T09: won B but lost C → eliminated
-t09 = find(r4, 'T09'); t09_pi = pi_round(t09)
-assert t09_pi['status'] == 'completed' and t09_pi['actual_result'] == 'lost' and t09_pi['actual_opponent'] == 'T08'
+
+t09 = find(r4, 'T09')
+t09_pi1 = pi_round_n(t09, 1); t09_pi2 = pi_round_n(t09, 2)
+assert t09_pi1['status'] == 'completed' and t09_pi1['actual_result'] == 'won' and t09_pi1['actual_opponent'] == 'T10'
+assert t09_pi2['status'] == 'completed' and t09_pi2['actual_result'] == 'lost' and t09_pi2['actual_opponent'] == 'T08'
 assert t09['status'] == 'eliminated'
-# T10: lost B → eliminated
-assert find(r4, 'T10')['status'] == 'eliminated'
+
+t10 = find(r4, 'T10')
+assert pi_round_n(t10, 1)['status'] == 'completed' and pi_round_n(t10, 1)['actual_result'] == 'lost'
+assert pi_round_n(t10, 2)['status'] == 'unreached'
+assert t10['status'] == 'eliminated'
 
 print('\nAll 4 state assertions passed.')

@@ -1708,7 +1708,7 @@ def main():
                 final_winner = final_data['winner']
 
         # Per-team counters: reach[round] and opponent_wins[round][opp] and opponent_faced[round][opp]
-        round_keys = ['play_in', 'qf', 'sf', 'final', 'champion']
+        round_keys = ['play_in_1', 'play_in_2', 'qf', 'sf', 'final', 'champion']
         reach = {code: {r: 0 for r in round_keys} for code in seed_codes}
         opp_faced = {code: {r: {} for r in round_keys} for code in seed_codes}
         opp_wins = {code: {r: {} for r in round_keys} for code in seed_codes}
@@ -1745,32 +1745,40 @@ def main():
             gb_l = seed_codes[9] if gb_w == seed_codes[8] else seed_codes[8]
             gc_w = pi_c_winner or _sim_game(ga_l, gb_w, 'home')
 
-            # Mark reach: all 4 play-in teams reach play-in
-            for t in play_in_teams:
-                reach[t]['play_in'] += 1
-
-            # Play-In opponent tracking — which opponent to attribute depends on each
-            # team's current state (see pi_state). A 'done' team has no next play-in opp.
+            # Play-In reach + opponent tracking — split into play_in_1 (first scheduled
+            # game: A for 7/8, B for 9/10) and play_in_2 (Game C). pi_state determines
+            # which stage(s) to attribute for each team based on pre-sim locked results.
             for code in play_in_teams:
                 state = pi_state[code]
                 if state == 'done':
                     continue
                 if isinstance(state, tuple):  # ('first_game', opp)
                     opp = state[1]
-                    first_won = (ga_w == code) if code in (s7c, s8c) else (gb_w == code)
-                    opp_faced[code]['play_in'][opp] = opp_faced[code]['play_in'].get(opp, 0) + 1
+                    reach[code]['play_in_1'] += 1
+                    opp_faced[code]['play_in_1'][opp] = opp_faced[code]['play_in_1'].get(opp, 0) + 1
+                    in_game_a = code in (s7c, s8c)
+                    first_won = (ga_w == code) if in_game_a else (gb_w == code)
                     if first_won:
-                        opp_wins[code]['play_in'][opp] = opp_wins[code]['play_in'].get(opp, 0) + 1
+                        opp_wins[code]['play_in_1'][opp] = opp_wins[code]['play_in_1'].get(opp, 0) + 1
+                    reaches_gc = (not first_won) if in_game_a else first_won
+                    if reaches_gc:
+                        reach[code]['play_in_2'] += 1
+                        opp_c = gb_w if in_game_a else ga_l
+                        opp_faced[code]['play_in_2'][opp_c] = opp_faced[code]['play_in_2'].get(opp_c, 0) + 1
+                        if gc_w == code:
+                            opp_wins[code]['play_in_2'][opp_c] = opp_wins[code]['play_in_2'].get(opp_c, 0) + 1
                 elif state == 'game_c_vs_gbw':
-                    opp = gb_w
-                    opp_faced[code]['play_in'][opp] = opp_faced[code]['play_in'].get(opp, 0) + 1
+                    reach[code]['play_in_2'] += 1
+                    opp_c = gb_w
+                    opp_faced[code]['play_in_2'][opp_c] = opp_faced[code]['play_in_2'].get(opp_c, 0) + 1
                     if gc_w == code:
-                        opp_wins[code]['play_in'][opp] = opp_wins[code]['play_in'].get(opp, 0) + 1
+                        opp_wins[code]['play_in_2'][opp_c] = opp_wins[code]['play_in_2'].get(opp_c, 0) + 1
                 elif state == 'game_c_vs_gal':
-                    opp = ga_l
-                    opp_faced[code]['play_in'][opp] = opp_faced[code]['play_in'].get(opp, 0) + 1
+                    reach[code]['play_in_2'] += 1
+                    opp_c = ga_l
+                    opp_faced[code]['play_in_2'][opp_c] = opp_faced[code]['play_in_2'].get(opp_c, 0) + 1
                     if gc_w == code:
-                        opp_wins[code]['play_in'][opp] = opp_wins[code]['play_in'].get(opp, 0) + 1
+                        opp_wins[code]['play_in_2'][opp_c] = opp_wins[code]['play_in_2'].get(opp_c, 0) + 1
 
             # s7 (winner of Game A), s8 (winner of Game C)
             s7 = ga_w
@@ -1875,15 +1883,12 @@ def main():
             this_round_count = reach[team][round_key]
             if this_round_count == 0:
                 return 0.0
-            # The "win" means advancing. For qf, advancing means reaching sf. For sf, final. For final, champion.
-            next_key = {'play_in': 'qf', 'qf': 'sf', 'sf': 'final', 'final': 'champion'}.get(round_key)
+            if round_key in ('play_in_1', 'play_in_2'):
+                wins_total = sum(opp_wins[team][round_key].values())
+                return round(wins_total / this_round_count * 100, 1)
+            next_key = {'qf': 'sf', 'sf': 'final', 'final': 'champion'}.get(round_key)
             if next_key is None:
                 return 0.0
-            # Play-In win means the team reached QF (i.e., they were a play-in team AND reached QF)
-            # Note: "win" here is "reach QF," not "win a single play-in game" — play-in is a 3-game mini-bracket.
-            if round_key == 'play_in':
-                # Only teams with reach[play_in] > 0 count; the fraction of those who reach QF
-                return round(reach[team]['qf'] / this_round_count * 100, 1)
             return round(reach[team][next_key] / this_round_count * 100, 1)
 
         # Determine completed rounds from playoff_results for each team
@@ -1893,30 +1898,35 @@ def main():
             if not playoff_results:
                 return done
 
-            # Play-In — do NOT mark as completed for teams still waiting for Game C
-            # (Game A loser or Game B winner whose Game C hasn't been played yet).
-            # The loop order (a, b, c) naturally overwrites Game A/B with Game C for
-            # teams that play both, so when Game C has a winner we can let it through.
             pi = playoff_results.get('play_in', {})
             ga = pi.get('game_a') or {}
             gb = pi.get('game_b') or {}
             gc = pi.get('game_c') or {}
-            lost_game_a = team in (ga.get('home'), ga.get('away')) and ga.get('winner') and ga.get('winner') != team
-            won_game_b = team in (gb.get('home'), gb.get('away')) and gb.get('winner') == team
-            waiting_for_gc = (lost_game_a or won_game_b) and not gc.get('winner')
 
-            if not waiting_for_gc:
-                for gk in ['game_a', 'game_b', 'game_c']:
-                    g = pi.get(gk)
-                    if g and g.get('winner') and team in (g.get('home'), g.get('away')):
-                        opp = g['away'] if team == g['home'] else g['home']
-                        done['play_in'] = {
-                            'status': 'completed',
-                            'actual_opponent': opp,
-                            'actual_result': 'won' if g['winner'] == team else 'lost',
-                            'series': [1, 0] if g['winner'] == team else [0, 1],
-                            'reach_prob': 100.0,
-                        }
+            first_game = None
+            if team in (ga.get('home'), ga.get('away')):
+                first_game = ga
+            elif team in (gb.get('home'), gb.get('away')):
+                first_game = gb
+            if first_game and first_game.get('winner'):
+                opp = first_game['away'] if team == first_game['home'] else first_game['home']
+                done['play_in_1'] = {
+                    'status': 'completed',
+                    'actual_opponent': opp,
+                    'actual_result': 'won' if first_game['winner'] == team else 'lost',
+                    'series': [1, 0] if first_game['winner'] == team else [0, 1],
+                    'reach_prob': 100.0,
+                }
+
+            if gc and gc.get('winner') and team in (gc.get('home'), gc.get('away')):
+                opp = gc['away'] if team == gc['home'] else gc['home']
+                done['play_in_2'] = {
+                    'status': 'completed',
+                    'actual_opponent': opp,
+                    'actual_result': 'won' if gc['winner'] == team else 'lost',
+                    'series': [1, 0] if gc['winner'] == team else [0, 1],
+                    'reach_prob': 100.0,
+                }
 
             # QF
             qf_data = playoff_results.get('qf', {})
@@ -1983,11 +1993,14 @@ def main():
             champ_pct = reach[code]['champion'] / n_sims * 100
             is_champion = final_winner == code
 
-            # Find earliest completed 'lost' round
+            # Find earliest completed 'lost' round. Losing play_in_1 only eliminates
+            # seeds 9/10 (they don't get a Game C); seeds 7/8 advance to Game C.
             eliminated_at = None
             if not is_champion:
-                for rk in ['play_in', 'qf', 'sf', 'final']:
+                for rk in ['play_in_1', 'play_in_2', 'qf', 'sf', 'final']:
                     if completed.get(rk, {}).get('actual_result') == 'lost':
+                        if rk == 'play_in_1' and idx in (6, 7):
+                            continue
                         eliminated_at = rk
                         break
 
@@ -2000,8 +2013,8 @@ def main():
 
             # Build rounds array
             rounds = []
-            for rk in ['play_in', 'qf', 'sf', 'final']:
-                if rk == 'play_in' and not is_play_in_team:
+            for rk in ['play_in_1', 'play_in_2', 'qf', 'sf', 'final']:
+                if rk in ('play_in_1', 'play_in_2') and not is_play_in_team:
                     rounds.append({'round': rk, 'status': 'unreached', 'reach_prob': 0.0})
                     continue
 

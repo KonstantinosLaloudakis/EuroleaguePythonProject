@@ -1187,7 +1187,8 @@ function buildPathRow(entry) {
     const byRound = {};
     for (const r of entry.rounds) byRound[r.round] = r;
 
-    const cells = ['play_in', 'qf', 'sf', 'final'].map(rk => pathRoundCell(byRound[rk])).join('');
+    const piCell = pathPlayInCell(byRound['play_in_1'], byRound['play_in_2']);
+    const cells = piCell + ['qf', 'sf', 'final'].map(rk => pathRoundCell(byRound[rk])).join('');
 
     const champPctCls = pathPctCls(entry.championship_odds);
     const hint = entry.status === 'alive' ? '<span class="ptt-expand-hint"></span>' : '';
@@ -1227,6 +1228,26 @@ function pathRoundCell(round) {
     return `<td class="ptt-cell-pct ${cls}">${pct.toFixed(0)}%</td>`;
 }
 
+function pathPlayInCell(pi1, pi2) {
+    const unreached = (r) => !r || r.status === 'unreached';
+    if (unreached(pi1) && unreached(pi2)) {
+        return '<td class="ptt-cell-dash">—</td>';
+    }
+    if (pi2 && pi2.status === 'completed') {
+        return pathRoundCell(pi2);
+    }
+    if (pi1 && pi1.status === 'completed' && unreached(pi2)) {
+        return pathRoundCell(pi1);
+    }
+    if (pi1 && pi1.status === 'completed' && pi2 && pi2.status === 'upcoming') {
+        return pathRoundCell(pi2);
+    }
+    if (pi1 && pi1.status === 'upcoming') {
+        return pathRoundCell(pi1);
+    }
+    return '<td class="ptt-cell-dash">—</td>';
+}
+
 function pathPctCls(pct) {
     if (pct >= 50) return 'ptt-cell-pct-high';
     if (pct >= 20) return 'ptt-cell-pct-mid';
@@ -1238,11 +1259,14 @@ function renderPathDetailTree(entry, container) {
     const entryRounds = entry.rounds || [];
     for (const r of entryRounds) byRound[r.round] = r;
     const rounds = ['qf', 'sf', 'final']; // Root, then these columns, then trophy
-    if (entryRounds.find(r => r.round === 'play_in' && r.status !== 'unreached')) {
-        rounds.unshift('play_in');
+    if (entryRounds.find(r => r.round === 'play_in_2' && r.status !== 'unreached')) {
+        rounds.unshift('play_in_2');
+    }
+    if (entryRounds.find(r => r.round === 'play_in_1' && r.status !== 'unreached')) {
+        rounds.unshift('play_in_1');
     }
 
-    const width = 900;
+    const width = rounds.length === 5 ? 1050 : 900;
     const colCount = rounds.length + 2; // team + rounds + trophy
     const colW = width / colCount;
     const rowH = 90;
@@ -1355,7 +1379,7 @@ function edge(x1, y1, x2, y2, color, opacity) {
 }
 
 function roundLabel(rk) {
-    return { 'play_in': 'Play-In', 'qf': 'QF', 'sf': 'SF', 'final': 'Final' }[rk] || rk;
+    return { 'play_in_1': 'Play-In G1', 'play_in_2': 'Play-In G2', 'qf': 'QF', 'sf': 'SF', 'final': 'Final' }[rk] || rk;
 }
 
 function togglePathDetail(teamCode) {
