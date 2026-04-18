@@ -884,9 +884,24 @@ def build_game_recaps():
 
 
 def main():
-    suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
     print(f"\n=== Dashboard Export ===")
-    print(f"Round suffix: '{suffix}' (from EUROLEAGUE_ROUND_SUFFIX)")
+    if 'EUROLEAGUE_ROUND_SUFFIX' in os.environ:
+        suffix = os.environ['EUROLEAGUE_ROUND_SUFFIX']
+        print(f"Round suffix: '{suffix}' (from EUROLEAGUE_ROUND_SUFFIX)")
+    else:
+        # Auto-derive from max GP in standings so ad-hoc runs pick up the
+        # latest round-suffixed files instead of silently falling back to
+        # stale un-suffixed copies. Mirrors refresh_all.py's convention.
+        suffix = ''
+        try:
+            with open('mvp_standings_derived.json', 'r') as f:
+                _standings_for_suffix = json.load(f)
+            _max_gp = max((t.get('GP', 0) for t in _standings_for_suffix.values()), default=0)
+            if _max_gp > 0:
+                suffix = f'_R{_max_gp}'
+        except Exception as e:
+            print(f"  [WARN] Could not auto-derive round suffix: {e}")
+        print(f"Round suffix: '{suffix}' (auto-derived from mvp_standings_derived.json max GP)")
 
     # ── Load all source data ─────────────────────────────────────────────────
     adjusted = load_with_fallback(suffix, 'adjusted_ratings.json')
