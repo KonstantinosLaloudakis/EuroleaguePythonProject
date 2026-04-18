@@ -1292,9 +1292,10 @@ function renderPathDetailTree(entry, container) {
 
         // Upcoming — draw branches
         const branches = r.branches || [];
-        const winProbLabel = `${roundLabel(rk)} (${r.reach_prob.toFixed(0)}% to reach · ${r.win_prob.toFixed(0)}% to win)`;
+        const reachPct = r.reach_prob.toFixed(0);
+        const winPct = r.win_prob.toFixed(0);
         if (branches.length === 0) {
-            svg += nodeLabel(cx, centerY, 'TBD', '#64748b', winProbLabel, '');
+            svg += nodeLabel(cx, centerY, 'TBD', '#64748b', roundLabel(rk), `${reachPct}% reach · ${winPct}% win`);
             svg += edge(prevX + 30, centerY, cx - 30, centerY, '#64748b', 0.5);
             return;
         }
@@ -1308,8 +1309,9 @@ function renderPathDetailTree(entry, container) {
                 `${b.reach_prob_for_opp.toFixed(0)}% opp`,
                 `${b.win_prob_vs.toFixed(0)}% win`);
         });
-        // Round label above column
-        svg += `<text x="${cx}" y="${20}" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="700" font-family="Outfit,sans-serif">${winProbLabel}</text>`;
+        // Round header above column — two-line so it fits in narrower columns
+        svg += `<text x="${cx}" y="14" text-anchor="middle" fill="#cbd5e1" font-size="12" font-weight="800" font-family="Outfit,sans-serif">${roundLabel(rk)}</text>`;
+        svg += `<text x="${cx}" y="28" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600" font-family="Inter,sans-serif">${reachPct}% reach · ${winPct}% win</text>`;
     });
 
     // Trophy column

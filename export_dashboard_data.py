@@ -1727,6 +1727,24 @@ def main():
             for t in play_in_teams:
                 reach[t]['play_in'] += 1
 
+            # Play-In opponent tracking (immediate first game only — A for seeds 7/8, B for seeds 9/10).
+            # Game C is a backdoor; its opp is not branched separately, but the round-level win prob
+            # (P(reach QF)) accounts for the whole play-in phase.
+            s7c, s8c, s9c, s10c = seed_codes[6], seed_codes[7], seed_codes[8], seed_codes[9]
+            opp_faced[s7c]['play_in'][s8c] = opp_faced[s7c]['play_in'].get(s8c, 0) + 1
+            opp_faced[s8c]['play_in'][s7c] = opp_faced[s8c]['play_in'].get(s7c, 0) + 1
+            opp_faced[s9c]['play_in'][s10c] = opp_faced[s9c]['play_in'].get(s10c, 0) + 1
+            opp_faced[s10c]['play_in'][s9c] = opp_faced[s10c]['play_in'].get(s9c, 0) + 1
+
+            if ga_w == s7c:
+                opp_wins[s7c]['play_in'][s8c] = opp_wins[s7c]['play_in'].get(s8c, 0) + 1
+            else:
+                opp_wins[s8c]['play_in'][s7c] = opp_wins[s8c]['play_in'].get(s7c, 0) + 1
+            if gb_w == s9c:
+                opp_wins[s9c]['play_in'][s10c] = opp_wins[s9c]['play_in'].get(s10c, 0) + 1
+            else:
+                opp_wins[s10c]['play_in'][s9c] = opp_wins[s10c]['play_in'].get(s9c, 0) + 1
+
             # s7 (winner of Game A), s8 (winner of Game C)
             s7 = ga_w
             s8 = gc_w
