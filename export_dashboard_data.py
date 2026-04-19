@@ -2446,12 +2446,15 @@ def main():
 
             if playoff_matchup_probs and len(teams) >= 10:
                 seeded = teams[:10]
+                # Always run the MC sim pre-playoff so the Series Hub can show
+                # current per-series win probabilities. Only seed the history
+                # with a baseline entry on the very first run.
+                mc_result = compute_championship_odds(
+                    None, playoff_matchup_probs, seeded
+                )
+                championship_odds = mc_result['championship']
+                series_win_probs = mc_result['series']
                 if not championship_odds_history:
-                    mc_result = compute_championship_odds(
-                        None, playoff_matchup_probs, seeded
-                    )
-                    championship_odds = mc_result['championship']
-                    series_win_probs = mc_result['series']
                     championship_odds_history = [{
                         'date': datetime.utcnow().strftime('%Y-%m-%d'),
                         'label': 'Pre-Playoff',
