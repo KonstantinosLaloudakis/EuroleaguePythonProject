@@ -79,19 +79,27 @@ assert qf1['label'] == 'Quarterfinal 1'
 assert qf1['format'] == 'best_of_5'
 assert qf1['home_pattern'] == ['high', 'high', 'low', 'low', 'high']
 assert qf1['high_seed'] == {'team': 'T01', 'seed': 1}
-assert qf1['low_seed'] == {'team': 'T08', 'seed': 8}
+# Seed 8 comes from the play-in; pre-play-in, the low side must be unresolved.
+assert qf1['low_seed'] is None
+assert qf1['status'] == 'awaiting_teams'
 
 qf2 = result['qf2']
 assert qf2['high_seed'] == {'team': 'T02', 'seed': 2}
-assert qf2['low_seed'] == {'team': 'T07', 'seed': 7}
+# Seed 7 also comes from the play-in.
+assert qf2['low_seed'] is None
+assert qf2['status'] == 'awaiting_teams'
 
+# QF3 and QF4 are fully seeded from the regular-season standings, so they
+# should be known even before the play-in resolves.
 qf3 = result['qf3']
 assert qf3['high_seed'] == {'team': 'T03', 'seed': 3}
 assert qf3['low_seed'] == {'team': 'T06', 'seed': 6}
+assert qf3['status'] == 'not_started'
 
 qf4 = result['qf4']
 assert qf4['high_seed'] == {'team': 'T04', 'seed': 4}
 assert qf4['low_seed'] == {'team': 'T05', 'seed': 5}
+assert qf4['status'] == 'not_started'
 
 # SF/Final slots start unresolved pre-playoff
 sf1 = result['sf1']
@@ -215,7 +223,25 @@ rs_games = pd.DataFrame([
     # T03/T06 have no RS meetings
 ])
 
-result = compute_series_data(None, matchup_probs, seeded, {}, rs_games)
+# QF1/QF2 opponents depend on play-in results. Provide a playoff_results
+# with the play-in resolved so T01/T08 and T02/T07 become the QF matchups.
+pr_post_playin = {
+    'play_in': {
+        'game_a': {'winner': 'T07'},
+        'game_b': None,
+        'game_c': {'winner': 'T08'},
+    },
+    'qf': {
+        '1v8': {'higher_seed': 'T01', 'lower_seed': 'T08', 'series': [0, 0], 'winner': None, 'games': []},
+        '2v7': {'higher_seed': 'T02', 'lower_seed': 'T07', 'series': [0, 0], 'winner': None, 'games': []},
+        '3v6': {'higher_seed': 'T03', 'lower_seed': 'T06', 'series': [0, 0], 'winner': None, 'games': []},
+        '4v5': {'higher_seed': 'T04', 'lower_seed': 'T05', 'series': [0, 0], 'winner': None, 'games': []},
+    },
+    'sf': {'sf1': None, 'sf2': None},
+    'final': {},
+}
+
+result = compute_series_data(pr_post_playin, matchup_probs, seeded, {}, rs_games)
 
 qf1 = result['qf1']
 assert len(qf1['rs_h2h']) == 2, f'expected 2 rs_h2h, got {len(qf1["rs_h2h"])}'

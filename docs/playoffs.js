@@ -312,7 +312,7 @@ function renderMatchup(round, idx, seriesLen, neutral, label) {
     }
 
     const slotId = _seriesSlotId(round, idx);
-    const hubLink = slotId
+    const hubLink = (slotId && teamA && teamB)
         ? `<a class="series-hub-link" href="series.html?id=${slotId}" title="Open Series Hub" onclick="event.stopPropagation()">→</a>`
         : '';
 

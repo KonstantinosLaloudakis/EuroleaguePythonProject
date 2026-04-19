@@ -82,6 +82,7 @@ function renderHero(container, entry) {
   };
 
   const scoreLine = () => {
+    if (status === 'awaiting_teams') return 'Matchup pending — awaiting play-in / prior series';
     if (status === 'not_started') return 'Best-of-5 · Series not started';
     if (status === 'completed') return `Series complete · Winner: ${teamName(winner)}`;
     const leaderCode = wins.high > wins.low ? (high_seed && high_seed.team) : (low_seed && low_seed.team);
@@ -94,7 +95,7 @@ function renderHero(container, entry) {
   };
 
   const probBar = () => {
-    if (status === 'completed') return '';
+    if (status === 'completed' || status === 'awaiting_teams') return '';
     const h = (series_win_prob && series_win_prob.high) || 0;
     const l = (series_win_prob && series_win_prob.low) || 0;
     const highTeam = high_seed ? high_seed.team : 'HIGH';

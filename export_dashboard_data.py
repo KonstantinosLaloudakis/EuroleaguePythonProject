@@ -2133,14 +2133,27 @@ def main():
             if pi.get('game_c') and pi['game_c'].get('winner'):
                 pi_c_winner = pi['game_c']['winner']
 
-        seed_7_team = pi_a_winner or seed_codes[6]
-        seed_8_team = pi_c_winner or seed_codes[7]
+        # Seeds 7 and 8 are decided by the play-in; leave unresolved until then.
+        # Once the playoff bracket exists, prefer the explicit higher_seed /
+        # lower_seed already recorded on each QF entry (authoritative source).
+        seed_7_team = pi_a_winner
+        seed_8_team = pi_c_winner
+
+        def _qf_seeds(qf_label, default_high, default_low, seed_num_high, seed_num_low):
+            high_code, low_code = default_high, default_low
+            if playoff_results:
+                qf_entry = (playoff_results.get('qf') or {}).get(qf_label) or {}
+                if qf_entry.get('higher_seed'):
+                    high_code = qf_entry['higher_seed']
+                if qf_entry.get('lower_seed'):
+                    low_code = qf_entry['lower_seed']
+            return (_seed_obj(high_code, seed_num_high), _seed_obj(low_code, seed_num_low))
 
         qf_seeding = {
-            'qf1': (_seed_obj(seed_codes[0], 1), _seed_obj(seed_8_team, 8)),
-            'qf2': (_seed_obj(seed_codes[1], 2), _seed_obj(seed_7_team, 7)),
-            'qf3': (_seed_obj(seed_codes[2], 3), _seed_obj(seed_codes[5], 6)),
-            'qf4': (_seed_obj(seed_codes[3], 4), _seed_obj(seed_codes[4], 5)),
+            'qf1': _qf_seeds('1v8', seed_codes[0], seed_8_team, 1, 8),
+            'qf2': _qf_seeds('2v7', seed_codes[1], seed_7_team, 2, 7),
+            'qf3': _qf_seeds('3v6', seed_codes[2], seed_codes[5], 3, 6),
+            'qf4': _qf_seeds('4v5', seed_codes[3], seed_codes[4], 4, 5),
         }
 
         sf1_high = _seed_obj(qf_winners['1v8'], None) if qf_winners['1v8'] else None
@@ -2302,6 +2315,8 @@ def main():
                 status = 'completed'
             elif wins_h > 0 or wins_l > 0:
                 status = 'in_progress'
+            elif not high_code or not low_code:
+                status = 'awaiting_teams'
 
             games = _build_games(completed_games, high_code, low_code, wins_h, wins_l, status)
 
@@ -2335,14 +2350,32 @@ def main():
     series_win_probs = {}
     series_data = {}
 
-    # Load raw RS games for Series Hub H2H lookups
+    # Build RS games df for Series Hub H2H lookups.
+    # Uses mvp_game_results.json (has both legs of each home/away pair);
+    # data_cache/games_2025.csv only tracks one leg per pair.
     games_df = None
     try:
-        games_csv = os.path.join('data_cache', 'games_2025.csv')
-        if os.path.exists(games_csv):
-            games_df = pd.read_csv(games_csv)
+        h2h_src = load_json('mvp_game_results.json') or []
+        rows = []
+        for g in h2h_src:
+            code = int(g.get('GameCode', 0))
+            if code < 1 or code > 380:  # Regular season gamecodes only
+                continue
+            ls = g.get('LocalScore', 0) or 0
+            rs = g.get('RoadScore', 0) or 0
+            rows.append({
+                'round': 'RS',
+                'gameday': (code - 1) // 10 + 1,
+                'homecode': g.get('LocalTeam'),
+                'awaycode': g.get('RoadTeam'),
+                'homescore': int(ls),
+                'awayscore': int(rs),
+                'played': ls > 0 and rs > 0,
+            })
+        if rows:
+            games_df = pd.DataFrame(rows)
     except Exception as e:
-        print(f"  [WARN] Could not load games_2025.csv for Series Hub: {e}")
+        print(f"  [WARN] Could not build RS games for Series Hub: {e}")
 
     game_results_raw = load_json('mvp_game_results.json')
     if game_results_raw and len(teams) >= 10:
