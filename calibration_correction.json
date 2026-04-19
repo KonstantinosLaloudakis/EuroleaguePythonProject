@@ -1,0 +1,8 @@
+{
+  "method": "platt_sigmoid_on_logit",
+  "coef": 0.3648118413763448,
+  "intercept": 0.1665533490496177,
+  "usage": "p_corrected = sigmoid(coef * logit(p_raw) + intercept)",
+  "fit_on": "postseason",
+  "n_fit": 71
+}

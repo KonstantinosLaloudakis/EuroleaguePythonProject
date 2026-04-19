@@ -1156,7 +1156,31 @@ def main():
     top10 = teams[:10]
     if len(top10) >= 10:
         try:
+            import math
             from wp_model_utils import predict_wp
+
+            # Postseason calibration: Platt scaling fit on 2022-2024 EuroLeague
+            # playoff + Final Four games (n=71) by backtest_matchup_calibration.py.
+            # Shrinks overconfident favorites — see backtest_reliability.png.
+            platt_coef = None
+            platt_intercept = None
+            try:
+                with open('calibration_correction.json') as _cf:
+                    _platt = json.load(_cf)
+                if _platt.get('method') == 'platt_sigmoid_on_logit':
+                    platt_coef = float(_platt['coef'])
+                    platt_intercept = float(_platt['intercept'])
+                    print(f"  Loaded postseason calibration: coef={platt_coef:.3f} "
+                          f"intercept={platt_intercept:.3f} (n_fit={_platt.get('n_fit')})")
+            except FileNotFoundError:
+                pass
+
+            def _platt(p):
+                if platt_coef is None:
+                    return p
+                p = min(max(p, 1e-6), 1 - 1e-6)
+                z = platt_coef * math.log(p / (1 - p)) + platt_intercept
+                return 1.0 / (1.0 + math.exp(-z))
 
             # Load game results for HCA data (mirrors simulate_monte_carlo.py)
             game_results = load_json('mvp_game_results.json')
@@ -1183,7 +1207,9 @@ def main():
                     home_net_map[t] = (s['HP'] - s['HA']) / s['HG'] if s['HG'] > 0 else 0
 
             def _matchup_prob(team_a, team_b, venue):
-                """P(team_a wins) under given venue: 'home', 'away', 'neutral'."""
+                """P(team_a wins) under given venue: 'home', 'away', 'neutral'.
+                Raw wp_model output is passed through the postseason Platt
+                correction when calibration_correction.json is available."""
                 a_adj, b_adj = team_a['adj_net'], team_b['adj_net']
                 a_elo, b_elo = team_a['elo'], team_b['elo']
 
@@ -1194,7 +1220,8 @@ def main():
                     team_hca = home_net_map.get(team_a['team'], 0) - net_map.get(team_a['team'], 0)
                     blended_hca = (hca_global * 0.7 + team_hca * 0.3) * 0.5
                     pred_margin = margin_raw + blended_hca
-                    return predict_wp(margin=pred_margin, seconds_remaining=2400, elo_diff=a_elo - b_elo)
+                    raw = predict_wp(margin=pred_margin, seconds_remaining=2400, elo_diff=a_elo - b_elo)
+                    return _platt(raw)
 
                 elif venue == 'away':
                     # B is home — compute P(B wins) then invert
@@ -1205,7 +1232,7 @@ def main():
                     margin_raw = (a_adj - b_adj) * 0.75 + elo_margin * 0.25
                     p_a = predict_wp(margin=margin_raw, seconds_remaining=2400, elo_diff=a_elo - b_elo)
                     p_b = predict_wp(margin=-margin_raw, seconds_remaining=2400, elo_diff=b_elo - a_elo)
-                    return (p_a + (1.0 - p_b)) / 2.0
+                    return _platt((p_a + (1.0 - p_b)) / 2.0)
 
             for ta in top10:
                 inner = {}
