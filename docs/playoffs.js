@@ -16,6 +16,27 @@
 const ELO_HCA = 50;
 const MC_ITERATIONS = 10000;
 
+// Map (round, idx) -> series slot id used by series.html
+function _seriesSlotId(round, idx) {
+    if (round === 'quarters') return `qf${idx + 1}`;
+    if (round === 'semis') return `sf${idx + 1}`;
+    if (round === 'final') return 'final';
+    return null;
+}
+
+function _slotIdForRecapRound(recap) {
+    const label = (recap.series_label || recap.round || '').toLowerCase();
+    if (!label) return null;
+    if (label.includes('semi-final 1') || label.includes('semifinal 1') || label === 'sf1') return 'sf1';
+    if (label.includes('semi-final 2') || label.includes('semifinal 2') || label === 'sf2') return 'sf2';
+    if (label.includes('1v8')) return 'qf1';
+    if (label.includes('2v7')) return 'qf2';
+    if (label.includes('3v6')) return 'qf3';
+    if (label.includes('4v5')) return 'qf4';
+    if (label.includes('final') && !label.includes('semi') && !label.includes('quarter')) return 'final';
+    return null;
+}
+
 // State
 let _teams = [];
 let _seeded = [];    // top 10 teams by seed
@@ -290,7 +311,12 @@ function renderMatchup(round, idx, seriesLen, neutral, label) {
         }
     }
 
-    return `<div class="matchup" data-round="${round}" data-idx="${idx}">${sideA}${sideB}${badgeHTML}</div>`;
+    const slotId = _seriesSlotId(round, idx);
+    const hubLink = slotId
+        ? `<a class="series-hub-link" href="series.html?id=${slotId}" title="Open Series Hub" onclick="event.stopPropagation()">→</a>`
+        : '';
+
+    return `<div class="matchup" data-round="${round}" data-idx="${idx}">${sideA}${sideB}${badgeHTML}${hubLink}</div>`;
 }
 
 function renderSide(team, prob, winner, round, idx, side) {
@@ -1110,7 +1136,8 @@ function renderPlayoffRecaps(recaps) {
             oddsHTML = deltas.join(' &middot; ');
         }
 
-        html += `<div class="recap-card${upsetClass}">
+        const slotId = _slotIdForRecapRound(r);
+        const cardInner = `<div class="recap-card${upsetClass}">
             <div class="recap-team${isHomeWinner ? '' : ' loser'}">
                 <div class="recap-team-color" style="width:4px;height:28px;border-radius:2px;background:${homeColor}"></div>
                 <div>
@@ -1135,6 +1162,9 @@ function renderPlayoffRecaps(recaps) {
                 ${oddsHTML ? `<span style="margin-left:auto">${oddsHTML}</span>` : ''}
             </div>
         </div>`;
+        html += slotId
+            ? `<a class="recap-card-link" href="series.html?id=${slotId}">${cardInner}</a>`
+            : cardInner;
     }
 
     html += '</div>';
