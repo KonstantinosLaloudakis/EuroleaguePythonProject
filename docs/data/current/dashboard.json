@@ -1,6 +1,6 @@
 {
   "round": 38,
-  "updated": "2026-04-18T17:09:15Z",
+  "updated": "2026-04-19T09:02:11Z",
   "teams": [
     {
       "team": "OLY",
@@ -42341,5 +42341,553 @@
         }
       ]
     }
-  ]
+  ],
+  "series": {
+    "qf1": {
+      "id": "qf1",
+      "round": "qf",
+      "label": "Quarterfinal 1",
+      "format": "best_of_5",
+      "home_pattern": [
+        "high",
+        "high",
+        "low",
+        "low",
+        "high"
+      ],
+      "high_seed": {
+        "team": "OLY",
+        "seed": 1
+      },
+      "low_seed": {
+        "team": "MCO",
+        "seed": 8
+      },
+      "status": "not_started",
+      "wins": {
+        "high": 0,
+        "low": 0
+      },
+      "winner": null,
+      "series_win_prob": {
+        "high": 0.0,
+        "low": 0.0
+      },
+      "games": [
+        {
+          "game_num": 1,
+          "status": "upcoming",
+          "home": "OLY",
+          "away": "MCO",
+          "pregame_wp": {
+            "home": 72.2,
+            "away": 27.7
+          }
+        },
+        {
+          "game_num": 2,
+          "status": "upcoming",
+          "home": "OLY",
+          "away": "MCO",
+          "pregame_wp": {
+            "home": 72.2,
+            "away": 27.7
+          }
+        },
+        {
+          "game_num": 3,
+          "status": "upcoming",
+          "home": "MCO",
+          "away": "OLY",
+          "pregame_wp": {
+            "home": 57.0,
+            "away": 43.0
+          }
+        },
+        {
+          "game_num": 4,
+          "status": "upcoming",
+          "home": "MCO",
+          "away": "OLY",
+          "pregame_wp": {
+            "home": 57.0,
+            "away": 43.0
+          }
+        },
+        {
+          "game_num": 5,
+          "status": "upcoming",
+          "home": "OLY",
+          "away": "MCO",
+          "pregame_wp": {
+            "home": 72.2,
+            "away": 27.7
+          }
+        }
+      ],
+      "rs_h2h": [
+        {
+          "round": 7,
+          "home": "OLY",
+          "away": "MCO",
+          "home_score": 87,
+          "away_score": 92,
+          "winner": "MCO"
+        }
+      ]
+    },
+    "qf2": {
+      "id": "qf2",
+      "round": "qf",
+      "label": "Quarterfinal 2",
+      "format": "best_of_5",
+      "home_pattern": [
+        "high",
+        "high",
+        "low",
+        "low",
+        "high"
+      ],
+      "high_seed": {
+        "team": "PAM",
+        "seed": 2
+      },
+      "low_seed": {
+        "team": "PAN",
+        "seed": 7
+      },
+      "status": "not_started",
+      "wins": {
+        "high": 0,
+        "low": 0
+      },
+      "winner": null,
+      "series_win_prob": {
+        "high": 0.0,
+        "low": 0.0
+      },
+      "games": [
+        {
+          "game_num": 1,
+          "status": "upcoming",
+          "home": "PAM",
+          "away": "PAN",
+          "pregame_wp": {
+            "home": 57.0,
+            "away": 43.0
+          }
+        },
+        {
+          "game_num": 2,
+          "status": "upcoming",
+          "home": "PAM",
+          "away": "PAN",
+          "pregame_wp": {
+            "home": 57.0,
+            "away": 43.0
+          }
+        },
+        {
+          "game_num": 3,
+          "status": "upcoming",
+          "home": "PAN",
+          "away": "PAM",
+          "pregame_wp": {
+            "home": 59.7,
+            "away": 40.3
+          }
+        },
+        {
+          "game_num": 4,
+          "status": "upcoming",
+          "home": "PAN",
+          "away": "PAM",
+          "pregame_wp": {
+            "home": 59.7,
+            "away": 40.3
+          }
+        },
+        {
+          "game_num": 5,
+          "status": "upcoming",
+          "home": "PAM",
+          "away": "PAN",
+          "pregame_wp": {
+            "home": 57.0,
+            "away": 43.0
+          }
+        }
+      ],
+      "rs_h2h": [
+        {
+          "round": 14,
+          "home": "PAN",
+          "away": "PAM",
+          "home_score": 79,
+          "away_score": 89,
+          "winner": "PAM"
+        }
+      ]
+    },
+    "qf3": {
+      "id": "qf3",
+      "round": "qf",
+      "label": "Quarterfinal 3",
+      "format": "best_of_5",
+      "home_pattern": [
+        "high",
+        "high",
+        "low",
+        "low",
+        "high"
+      ],
+      "high_seed": {
+        "team": "MAD",
+        "seed": 3
+      },
+      "low_seed": {
+        "team": "HTA",
+        "seed": 6
+      },
+      "status": "not_started",
+      "wins": {
+        "high": 0,
+        "low": 0
+      },
+      "winner": null,
+      "series_win_prob": {
+        "high": 0.0,
+        "low": 0.0
+      },
+      "games": [
+        {
+          "game_num": 1,
+          "status": "upcoming",
+          "home": "MAD",
+          "away": "HTA",
+          "pregame_wp": {
+            "home": 81.0,
+            "away": 18.9
+          }
+        },
+        {
+          "game_num": 2,
+          "status": "upcoming",
+          "home": "MAD",
+          "away": "HTA",
+          "pregame_wp": {
+            "home": 81.0,
+            "away": 18.9
+          }
+        },
+        {
+          "game_num": 3,
+          "status": "upcoming",
+          "home": "HTA",
+          "away": "MAD",
+          "pregame_wp": {
+            "home": 40.7,
+            "away": 59.3
+          }
+        },
+        {
+          "game_num": 4,
+          "status": "upcoming",
+          "home": "HTA",
+          "away": "MAD",
+          "pregame_wp": {
+            "home": 40.7,
+            "away": 59.3
+          }
+        },
+        {
+          "game_num": 5,
+          "status": "upcoming",
+          "home": "MAD",
+          "away": "HTA",
+          "pregame_wp": {
+            "home": 81.0,
+            "away": 18.9
+          }
+        }
+      ],
+      "rs_h2h": [
+        {
+          "round": 13,
+          "home": "HTA",
+          "away": "MAD",
+          "home_score": 74,
+          "away_score": 75,
+          "winner": "MAD"
+        }
+      ]
+    },
+    "qf4": {
+      "id": "qf4",
+      "round": "qf",
+      "label": "Quarterfinal 4",
+      "format": "best_of_5",
+      "home_pattern": [
+        "high",
+        "high",
+        "low",
+        "low",
+        "high"
+      ],
+      "high_seed": {
+        "team": "ULK",
+        "seed": 4
+      },
+      "low_seed": {
+        "team": "ZAL",
+        "seed": 5
+      },
+      "status": "not_started",
+      "wins": {
+        "high": 0,
+        "low": 0
+      },
+      "winner": null,
+      "series_win_prob": {
+        "high": 0.0,
+        "low": 0.0
+      },
+      "games": [
+        {
+          "game_num": 1,
+          "status": "upcoming",
+          "home": "ULK",
+          "away": "ZAL",
+          "pregame_wp": {
+            "home": 53.1,
+            "away": 46.9
+          }
+        },
+        {
+          "game_num": 2,
+          "status": "upcoming",
+          "home": "ULK",
+          "away": "ZAL",
+          "pregame_wp": {
+            "home": 53.1,
+            "away": 46.9
+          }
+        },
+        {
+          "game_num": 3,
+          "status": "upcoming",
+          "home": "ZAL",
+          "away": "ULK",
+          "pregame_wp": {
+            "home": 75.1,
+            "away": 24.9
+          }
+        },
+        {
+          "game_num": 4,
+          "status": "upcoming",
+          "home": "ZAL",
+          "away": "ULK",
+          "pregame_wp": {
+            "home": 75.1,
+            "away": 24.9
+          }
+        },
+        {
+          "game_num": 5,
+          "status": "upcoming",
+          "home": "ULK",
+          "away": "ZAL",
+          "pregame_wp": {
+            "home": 53.1,
+            "away": 46.9
+          }
+        }
+      ],
+      "rs_h2h": [
+        {
+          "round": 2,
+          "home": "ZAL",
+          "away": "ULK",
+          "home_score": 84,
+          "away_score": 81,
+          "winner": "ZAL"
+        }
+      ]
+    },
+    "sf1": {
+      "id": "sf1",
+      "round": "sf",
+      "label": "Semifinal 1",
+      "format": "best_of_5",
+      "home_pattern": [
+        "high",
+        "high",
+        "low",
+        "low",
+        "high"
+      ],
+      "high_seed": null,
+      "low_seed": null,
+      "status": "not_started",
+      "wins": {
+        "high": 0,
+        "low": 0
+      },
+      "winner": null,
+      "series_win_prob": {
+        "high": 0.0,
+        "low": 0.0
+      },
+      "games": [
+        {
+          "game_num": 1,
+          "status": "upcoming",
+          "home": null,
+          "away": null
+        },
+        {
+          "game_num": 2,
+          "status": "upcoming",
+          "home": null,
+          "away": null
+        },
+        {
+          "game_num": 3,
+          "status": "upcoming",
+          "home": null,
+          "away": null
+        },
+        {
+          "game_num": 4,
+          "status": "upcoming",
+          "home": null,
+          "away": null
+        },
+        {
+          "game_num": 5,
+          "status": "upcoming",
+          "home": null,
+          "away": null
+        }
+      ],
+      "rs_h2h": []
+    },
+    "sf2": {
+      "id": "sf2",
+      "round": "sf",
+      "label": "Semifinal 2",
+      "format": "best_of_5",
+      "home_pattern": [
+        "high",
+        "high",
+        "low",
+        "low",
+        "high"
+      ],
+      "high_seed": null,
+      "low_seed": null,
+      "status": "not_started",
+      "wins": {
+        "high": 0,
+        "low": 0
+      },
+      "winner": null,
+      "series_win_prob": {
+        "high": 0.0,
+        "low": 0.0
+      },
+      "games": [
+        {
+          "game_num": 1,
+          "status": "upcoming",
+          "home": null,
+          "away": null
+        },
+        {
+          "game_num": 2,
+          "status": "upcoming",
+          "home": null,
+          "away": null
+        },
+        {
+          "game_num": 3,
+          "status": "upcoming",
+          "home": null,
+          "away": null
+        },
+        {
+          "game_num": 4,
+          "status": "upcoming",
+          "home": null,
+          "away": null
+        },
+        {
+          "game_num": 5,
+          "status": "upcoming",
+          "home": null,
+          "away": null
+        }
+      ],
+      "rs_h2h": []
+    },
+    "final": {
+      "id": "final",
+      "round": "final",
+      "label": "Final",
+      "format": "best_of_5",
+      "home_pattern": [
+        "high",
+        "high",
+        "low",
+        "low",
+        "high"
+      ],
+      "high_seed": null,
+      "low_seed": null,
+      "status": "not_started",
+      "wins": {
+        "high": 0,
+        "low": 0
+      },
+      "winner": null,
+      "series_win_prob": {
+        "high": 0.0,
+        "low": 0.0
+      },
+      "games": [
+        {
+          "game_num": 1,
+          "status": "upcoming",
+          "home": null,
+          "away": null
+        },
+        {
+          "game_num": 2,
+          "status": "upcoming",
+          "home": null,
+          "away": null
+        },
+        {
+          "game_num": 3,
+          "status": "upcoming",
+          "home": null,
+          "away": null
+        },
+        {
+          "game_num": 4,
+          "status": "upcoming",
+          "home": null,
+          "away": null
+        },
+        {
+          "game_num": 5,
+          "status": "upcoming",
+          "home": null,
+          "away": null
+        }
+      ],
+      "rs_h2h": []
+    }
+  }
 }

@@ -2333,6 +2333,16 @@ def main():
     championship_odds_history = []
     path_to_title = []
     series_win_probs = {}
+    series_data = {}
+
+    # Load raw RS games for Series Hub H2H lookups
+    games_df = None
+    try:
+        games_csv = os.path.join('data_cache', 'games_2025.csv')
+        if os.path.exists(games_csv):
+            games_df = pd.read_csv(games_csv)
+    except Exception as e:
+        print(f"  [WARN] Could not load games_2025.csv for Series Hub: {e}")
 
     game_results_raw = load_json('mvp_game_results.json')
     if game_results_raw and len(teams) >= 10:
@@ -2383,6 +2393,12 @@ def main():
                 playoff_results_data, playoff_matchup_probs, seeded
             )
 
+            # Build Series Hub data
+            series_data = compute_series_data(
+                playoff_results_data, playoff_matchup_probs, seeded,
+                series_win_probs, games_df,
+            )
+
             print(f"  Playoff results: {sum(1 for g in game_results_raw if int(g.get('GameCode', 0)) > 380 and g.get('LocalScore', 0) > 0)} games tracked")
             print(f"  Championship odds computed for {len([v for v in championship_odds.values() if v > 0])} contending teams")
         else:
@@ -2411,6 +2427,9 @@ def main():
                 path_to_title = compute_path_to_title(
                     None, playoff_matchup_probs, seeded
                 )
+                series_data = compute_series_data(
+                    None, playoff_matchup_probs, seeded, series_win_probs, games_df,
+                )
 
     output = {
         'round': round_num,
@@ -2431,6 +2450,7 @@ def main():
         'championship_odds_history': championship_odds_history,
         'playoff_recaps': playoff_recaps,
         'path_to_title': path_to_title,
+        'series': series_data,
     }
 
     # ── Write output ─────────────────────────────────────────────────────────
