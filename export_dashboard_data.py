@@ -2217,13 +2217,14 @@ def main():
                 return high_code, low_code
             return low_code, high_code
 
-        def _build_games(completed_games, high_code, low_code, wins_h, wins_l, status):
+        def _build_games(completed_games, high_code, low_code, wins_h, wins_l, status, fmt):
             games = []
             completed_by_num = {g.get('game_num', idx + 1): g for idx, g in enumerate(completed_games)}
             sweep_or_done = status == 'completed'
             games_played = wins_h + wins_l
+            total_games = 1 if fmt == 'single_game' else 5
 
-            for game_num in range(1, 6):
+            for game_num in range(1, total_games + 1):
                 gc = completed_by_num.get(game_num)
                 if gc:
                     games.append({
@@ -2254,6 +2255,23 @@ def main():
                         'status': 'upcoming',
                         'home': None,
                         'away': None,
+                    })
+                    continue
+
+                if fmt == 'single_game':
+                    # Neutral-court single game; no home advantage.
+                    pair_fwd = (matchup_probs.get(high_code) or {}).get(low_code) or {}
+                    p_high = pair_fwd.get('neutral', pair_fwd.get('home', 0.5))
+                    games.append({
+                        'game_num': game_num,
+                        'status': 'upcoming',
+                        'home': None,
+                        'away': None,
+                        'neutral': True,
+                        'pregame_wp': {
+                            'high': round(p_high * 100, 1),
+                            'low': round((1 - p_high) * 100, 1),
+                        },
                     })
                     continue
 
@@ -2318,14 +2336,17 @@ def main():
             elif not high_code or not low_code:
                 status = 'awaiting_teams'
 
-            games = _build_games(completed_games, high_code, low_code, wins_h, wins_l, status)
+            fmt = 'best_of_5' if defn['round'] == 'qf' else 'single_game'
+            home_pattern = ['high', 'high', 'low', 'low', 'high'] if fmt == 'best_of_5' else ['neutral']
+
+            games = _build_games(completed_games, high_code, low_code, wins_h, wins_l, status, fmt)
 
             result[slot_id] = {
                 'id': slot_id,
                 'round': defn['round'],
                 'label': defn['label'],
-                'format': 'best_of_5',
-                'home_pattern': ['high', 'high', 'low', 'low', 'high'],
+                'format': fmt,
+                'home_pattern': home_pattern,
                 'high_seed': high,
                 'low_seed': low,
                 'status': status,

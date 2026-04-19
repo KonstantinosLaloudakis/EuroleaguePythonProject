@@ -1,6 +1,6 @@
 {
   "round": 38,
-  "updated": "2026-04-19T13:34:29Z",
+  "updated": "2026-04-19T13:38:43Z",
   "teams": [
     {
       "team": "OLY",
@@ -42671,13 +42671,9 @@
       "id": "sf1",
       "round": "sf",
       "label": "Semifinal 1",
-      "format": "best_of_5",
+      "format": "single_game",
       "home_pattern": [
-        "high",
-        "high",
-        "low",
-        "low",
-        "high"
+        "neutral"
       ],
       "high_seed": null,
       "low_seed": null,
@@ -42694,30 +42690,6 @@
       "games": [
         {
           "game_num": 1,
-          "status": "upcoming",
-          "home": null,
-          "away": null
-        },
-        {
-          "game_num": 2,
-          "status": "upcoming",
-          "home": null,
-          "away": null
-        },
-        {
-          "game_num": 3,
-          "status": "upcoming",
-          "home": null,
-          "away": null
-        },
-        {
-          "game_num": 4,
-          "status": "upcoming",
-          "home": null,
-          "away": null
-        },
-        {
-          "game_num": 5,
           "status": "upcoming",
           "home": null,
           "away": null
@@ -42729,13 +42701,9 @@
       "id": "sf2",
       "round": "sf",
       "label": "Semifinal 2",
-      "format": "best_of_5",
+      "format": "single_game",
       "home_pattern": [
-        "high",
-        "high",
-        "low",
-        "low",
-        "high"
+        "neutral"
       ],
       "high_seed": null,
       "low_seed": null,
@@ -42752,30 +42720,6 @@
       "games": [
         {
           "game_num": 1,
-          "status": "upcoming",
-          "home": null,
-          "away": null
-        },
-        {
-          "game_num": 2,
-          "status": "upcoming",
-          "home": null,
-          "away": null
-        },
-        {
-          "game_num": 3,
-          "status": "upcoming",
-          "home": null,
-          "away": null
-        },
-        {
-          "game_num": 4,
-          "status": "upcoming",
-          "home": null,
-          "away": null
-        },
-        {
-          "game_num": 5,
           "status": "upcoming",
           "home": null,
           "away": null
@@ -42787,13 +42731,9 @@
       "id": "final",
       "round": "final",
       "label": "Final",
-      "format": "best_of_5",
+      "format": "single_game",
       "home_pattern": [
-        "high",
-        "high",
-        "low",
-        "low",
-        "high"
+        "neutral"
       ],
       "high_seed": null,
       "low_seed": null,
@@ -42810,30 +42750,6 @@
       "games": [
         {
           "game_num": 1,
-          "status": "upcoming",
-          "home": null,
-          "away": null
-        },
-        {
-          "game_num": 2,
-          "status": "upcoming",
-          "home": null,
-          "away": null
-        },
-        {
-          "game_num": 3,
-          "status": "upcoming",
-          "home": null,
-          "away": null
-        },
-        {
-          "game_num": 4,
-          "status": "upcoming",
-          "home": null,
-          "away": null
-        },
-        {
-          "game_num": 5,
           "status": "upcoming",
           "home": null,
           "away": null

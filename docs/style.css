@@ -1641,7 +1641,6 @@ footer {
 }
 .series-team { display: flex; align-items: center; gap: 8px; font-size: 18px; color: #fff; }
 .series-team-name { font-weight: 600; }
-.series-logo { width: 32px; height: 32px; object-fit: contain; }
 .series-vs { color: #9fb7d9; font-size: 14px; }
 .series-state { font-size: 16px; color: #e8efff; margin-bottom: 4px; }
 .series-format { font-size: 13px; color: #9fb7d9; margin-bottom: 16px; }

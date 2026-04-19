@@ -8,7 +8,6 @@ function getSlotId() {
 function teamName(code) {
   return (typeof TEAM_NAMES !== 'undefined' && TEAM_NAMES[code]) || code;
 }
-function logoUrl(code) { return `logos/${code}.png`; }
 
 function renderError(root, msg) {
   root.innerHTML = `<div class="series-error"><h1>Series not found</h1><p>${msg}</p></div>`;
@@ -78,19 +77,21 @@ function renderHero(container, entry) {
   const seedLabel = (s) => {
     if (!s) return '<span class="series-team-name">TBD</span>';
     const seedSuffix = s.seed != null ? ` (${s.seed})` : '';
-    return `<img class="series-logo" src="${logoUrl(s.team)}" alt="${s.team}" onerror="this.style.display='none'"><span class="series-team-name">${teamName(s.team)}${seedSuffix}</span>`;
+    return `<span class="series-team-name">${teamName(s.team)}${seedSuffix}</span>`;
   };
 
+  const isSingle = format === 'single_game';
   const scoreLine = () => {
     if (status === 'awaiting_teams') return 'Matchup pending — awaiting play-in / prior series';
-    if (status === 'not_started') return 'Best-of-5 · Series not started';
-    if (status === 'completed') return `Series complete · Winner: ${teamName(winner)}`;
+    if (status === 'not_started') return isSingle ? 'Not started' : 'Best-of-5 · Series not started';
+    if (status === 'completed') return isSingle ? `Winner: ${teamName(winner)}` : `Series complete · Winner: ${teamName(winner)}`;
     const leaderCode = wins.high > wins.low ? (high_seed && high_seed.team) : (low_seed && low_seed.team);
     return `Series: ${Math.max(wins.high, wins.low)}-${Math.min(wins.high, wins.low)} ${leaderCode || ''}`.trim();
   };
 
   const fmtLine = () => {
     if (format === 'best_of_5') return 'Best-of-5 · 2-2-1 home pattern';
+    if (format === 'single_game') return 'Final Four · Single game, neutral venue';
     return format;
   };
 
@@ -136,15 +137,17 @@ function renderTimeline(container, entry) {
     container.innerHTML = '';
     return;
   }
-  const boxes = visible.map(g => renderGameBox(g)).join('');
+  const title = entry.format === 'single_game' ? 'Game' : 'Game-by-game';
+  const boxes = visible.map(g => renderGameBox(g, entry)).join('');
   container.innerHTML = `
-    <h2 class="series-section-title">Game-by-game</h2>
+    <h2 class="series-section-title">${title}</h2>
     <div class="series-timeline">${boxes}</div>
   `;
 }
 
-function renderGameBox(g) {
-  const num = `G${g.game_num}`;
+function renderGameBox(g, entry) {
+  const isSingle = entry && entry.format === 'single_game';
+  const num = isSingle ? 'Final Four' : `G${g.game_num}`;
   if (g.status === 'completed') {
     const winnerCls = g.winner === g.home ? 'home-win' : 'away-win';
     const link = g.gamecode
@@ -162,6 +165,24 @@ function renderGameBox(g) {
     return link
       ? `<a class="series-game-box completed" href="${link}">${inner}</a>`
       : `<div class="series-game-box completed">${inner}</div>`;
+  }
+
+  if (g.neutral || isSingle) {
+    const highTeam = entry && entry.high_seed && entry.high_seed.team;
+    const lowTeam = entry && entry.low_seed && entry.low_seed.team;
+    const highWp = g.pregame_wp && g.pregame_wp.high;
+    const lowWp = g.pregame_wp && g.pregame_wp.low;
+    const wpLine = (highTeam && lowTeam && highWp != null)
+      ? `<div class="series-game-wp">${highTeam} ${highWp.toFixed(0)}% / ${lowTeam} ${lowWp.toFixed(0)}%</div>`
+      : '';
+    return `
+      <div class="series-game-box upcoming">
+        <div class="series-game-num">${num}</div>
+        <div class="series-game-venue">Neutral venue</div>
+        <div class="series-game-date">${formatDate(g.date) || 'TBD'}</div>
+        ${wpLine}
+      </div>
+    `;
   }
 
   const homeWp = g.pregame_wp && g.pregame_wp.home;
