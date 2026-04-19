@@ -3697,20 +3697,6 @@
     },
     {
         "MVP_Rank":265,
-        "PlayerName":"NEDELJKOVIC, ALEKSEJ",
-        "TeamCode":"RED",
-        "MVP_Score":36.9683495755,
-        "AvgPIR":0.0,
-        "AvgGmSc":0.0,
-        "WPA":0.0,
-        "TeamWinPct":0.5526315789,
-        "ClutchPoints":0.0,
-        "ClutchEff":0.0,
-        "Consistency":1.0,
-        "GP":5
-    },
-    {
-        "MVP_Rank":266,
         "PlayerName":"RADOSIC, OGNJEN",
         "TeamCode":"RED",
         "MVP_Score":36.9683495755,
@@ -3722,6 +3708,20 @@
         "ClutchEff":0.0,
         "Consistency":1.0,
         "GP":6
+    },
+    {
+        "MVP_Rank":266,
+        "PlayerName":"NEDELJKOVIC, ALEKSEJ",
+        "TeamCode":"RED",
+        "MVP_Score":36.9683495755,
+        "AvgPIR":0.0,
+        "AvgGmSc":0.0,
+        "WPA":0.0,
+        "TeamWinPct":0.5526315789,
+        "ClutchPoints":0.0,
+        "ClutchEff":0.0,
+        "Consistency":1.0,
+        "GP":5
     },
     {
         "MVP_Rank":267,
