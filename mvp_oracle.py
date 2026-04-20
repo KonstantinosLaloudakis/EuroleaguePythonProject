@@ -539,7 +539,7 @@ def run_oracle(target_round=None):
         l_col = team_colors.get(local, '#333')
         r_col = team_colors.get(road, '#333')
         def add_normalized_logo(ax, team_code, x, y):
-             logo_path = f"logos/{team_code}.png"
+             logo_path = f"docs/logos/{team_code}.png"
              if os.path.exists(logo_path):
                  try:
                      img = Image.open(logo_path).convert("RGBA")

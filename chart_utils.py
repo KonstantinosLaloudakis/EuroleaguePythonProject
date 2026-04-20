@@ -5,7 +5,7 @@ from PIL import Image
 import os
 
 def add_logo(ax, team_code, x, y, zoom=1.0):
-    logo_path = f"logos/{team_code}.png"
+    logo_path = f"docs/logos/{team_code}.png"
     if os.path.exists(logo_path):
         try:
             img = Image.open(logo_path).convert("RGBA")

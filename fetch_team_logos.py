@@ -45,7 +45,7 @@ def fetch_logos():
             if code and crest_url:
                 try:
                     img_data = requests.get(crest_url).content
-                    file_path = f"logos/{code}.png"
+                    file_path = f"docs/logos/{code}.png"
                     with open(file_path, 'wb') as f:
                         f.write(img_data)
                     print(f"Downloaded {code}.png")
