@@ -259,7 +259,6 @@ function _doRenderBracket() {
         </div>
     `;
 
-    renderPathSummary();
     drawConnectors();
 }
 
@@ -695,24 +694,6 @@ function computeChampionPath() {
         }
     }
     return prob;
-}
-
-function renderPathSummary() {
-    const container = document.getElementById('path-summary');
-    if (!_seeded.length) { container.innerHTML = ''; return; }
-
-    const chips = _seeded.slice(0, 6).map(t => {
-        const color = TEAM_COLORS[t.team] || '#555';
-        const pct = t.top4_pct != null ? t.top4_pct : '—';
-        return `<div class="path-chip">
-            <div class="path-chip-color" style="background:${color}"></div>
-            <span>${t.name}</span>
-            <span class="path-chip-pct">${typeof pct === 'number' ? pct.toFixed(0) + '%' : pct}</span>
-            <span style="font-size:0.68rem;color:var(--text-muted)">Top 4</span>
-        </div>`;
-    });
-
-    container.innerHTML = chips.join('');
 }
 
 // ── SVG Connector Lines ──────────────────────────────────────────────────
