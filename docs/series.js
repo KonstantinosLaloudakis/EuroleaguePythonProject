@@ -71,22 +71,50 @@ function renderSeries(root, entry, dashboard) {
 
 // ── Hero ────────────────────────────────────────────────────────────────
 
+function teamColor(code) {
+  return (typeof TEAM_COLORS !== 'undefined' && TEAM_COLORS[code]) || '#6b7280';
+}
+
 function renderHero(container, entry) {
   const { high_seed, low_seed, wins, status, winner, series_win_prob, label, format } = entry;
+  const isAwaiting = status === 'awaiting_teams';
+  const isCompleted = status === 'completed';
+  const isNotStarted = status === 'not_started';
 
-  const seedLabel = (s) => {
-    if (!s) return '<span class="series-team-name">TBD</span>';
-    const seedSuffix = s.seed != null ? ` (${s.seed})` : '';
-    return `<span class="series-team-name">${teamName(s.team)}${seedSuffix}</span>`;
+  const teamPanel = (s, side) => {
+    if (!s) {
+      return `<div class="series-team-panel series-team-pending">
+        <div class="series-team-logo-wrap"><div class="series-team-logo-placeholder">?</div></div>
+        <div class="series-team-info">
+          <div class="series-team-seed">TBD</div>
+          <div class="series-team-name">Awaiting opponent</div>
+        </div>
+      </div>`;
+    }
+    const color = teamColor(s.team);
+    const seed = s.seed != null ? `Seed #${s.seed}` : '';
+    const prob = series_win_prob && series_win_prob[side] != null ? series_win_prob[side] : null;
+    const showProb = !isAwaiting && !isCompleted && prob != null;
+    const isWinner = isCompleted && winner === s.team;
+    return `<div class="series-team-panel${isWinner ? ' series-team-panel-winner' : ''}" style="--team-color:${color}">
+      <div class="series-team-logo-wrap">
+        <img class="series-team-logo" src="logos/${s.team}.png" alt="${s.team}" onerror="this.style.display='none'">
+      </div>
+      <div class="series-team-info">
+        <div class="series-team-seed">${seed}</div>
+        <div class="series-team-name">${teamName(s.team)}</div>
+        ${showProb ? `<div class="series-team-prob">${prob.toFixed(1)}%</div>` : ''}
+        ${isWinner ? '<div class="series-team-winner-tag">🏆 Winner</div>' : ''}
+      </div>
+    </div>`;
   };
 
-  const isSingle = format === 'single_game';
-  const scoreLine = () => {
-    if (status === 'awaiting_teams') return 'Matchup pending — awaiting play-in / prior series';
-    if (status === 'not_started') return isSingle ? 'Not started' : 'Best-of-5 · Series not started';
-    if (status === 'completed') return isSingle ? `Winner: ${teamName(winner)}` : `Series complete · Winner: ${teamName(winner)}`;
+  const statusChip = () => {
+    if (isAwaiting) return '<span class="series-status-chip awaiting">Matchup pending</span>';
+    if (isNotStarted) return '<span class="series-status-chip not-started">Series not started</span>';
+    if (isCompleted) return `<span class="series-status-chip completed">Final · ${teamName(winner)}</span>`;
     const leaderCode = wins.high > wins.low ? (high_seed && high_seed.team) : (low_seed && low_seed.team);
-    return `Series: ${Math.max(wins.high, wins.low)}-${Math.min(wins.high, wins.low)} ${leaderCode || ''}`.trim();
+    return `<span class="series-status-chip live">Live · ${Math.max(wins.high, wins.low)}-${Math.min(wins.high, wins.low)} ${leaderCode || ''}</span>`;
   };
 
   const fmtLine = () => {
@@ -96,33 +124,33 @@ function renderHero(container, entry) {
   };
 
   const probBar = () => {
-    if (status === 'completed' || status === 'awaiting_teams') return '';
+    if (isCompleted || isAwaiting) return '';
     const h = (series_win_prob && series_win_prob.high) || 0;
     const l = (series_win_prob && series_win_prob.low) || 0;
-    const highTeam = high_seed ? high_seed.team : 'HIGH';
-    const lowTeam = low_seed ? low_seed.team : 'LOW';
+    const hColor = teamColor(high_seed && high_seed.team);
+    const lColor = teamColor(low_seed && low_seed.team);
     return `
       <div class="series-prob-bar">
-        <div class="series-prob-fill series-prob-high" style="width: ${h}%"></div>
-        <div class="series-prob-fill series-prob-low" style="width: ${l}%"></div>
-      </div>
-      <div class="series-prob-labels">
-        <span>${highTeam} ${h.toFixed(1)}%</span>
-        <span>${lowTeam} ${l.toFixed(1)}%</span>
+        <div class="series-prob-fill" style="width:${h}%;background:${hColor}"></div>
+        <div class="series-prob-fill" style="width:${l}%;background:${lColor}"></div>
       </div>
     `;
   };
 
   container.innerHTML = `
     <div class="series-hero">
-      <h1 class="series-title">${label}</h1>
-      <div class="series-teams">
-        <div class="series-team series-team-high">${seedLabel(high_seed)}</div>
-        <div class="series-vs">vs</div>
-        <div class="series-team series-team-low">${seedLabel(low_seed)}</div>
+      <div class="series-hero-top">
+        <h1 class="series-title">${label}</h1>
+        <div class="series-hero-meta">
+          ${statusChip()}
+          <span class="series-format-chip">${fmtLine()}</span>
+        </div>
       </div>
-      <div class="series-state">${scoreLine()}</div>
-      <div class="series-format">${fmtLine()}</div>
+      <div class="series-teams">
+        ${teamPanel(high_seed, 'high')}
+        <div class="series-vs">VS</div>
+        ${teamPanel(low_seed, 'low')}
+      </div>
       ${probBar()}
     </div>
   `;
@@ -148,6 +176,10 @@ function renderTimeline(container, entry) {
 function renderGameBox(g, entry) {
   const isSingle = entry && entry.format === 'single_game';
   const num = isSingle ? 'Final Four' : `G${g.game_num}`;
+  const homeColor = g.home ? teamColor(g.home) : '#6b7280';
+  const neutralStyle = 'style="--home-color:#9fb7d9"';
+  const homeStyle = `style="--home-color:${homeColor}"`;
+
   if (g.status === 'completed') {
     const winnerCls = g.winner === g.home ? 'home-win' : 'away-win';
     const link = g.gamecode
@@ -163,8 +195,8 @@ function renderGameBox(g, entry) {
       <div class="series-game-status">Final</div>
     `;
     return link
-      ? `<a class="series-game-box completed" href="${link}">${inner}</a>`
-      : `<div class="series-game-box completed">${inner}</div>`;
+      ? `<a class="series-game-box completed" ${homeStyle} href="${link}">${inner}</a>`
+      : `<div class="series-game-box completed" ${homeStyle}>${inner}</div>`;
   }
 
   if (g.neutral || isSingle) {
@@ -176,7 +208,7 @@ function renderGameBox(g, entry) {
       ? `<div class="series-game-wp">${highTeam} ${highWp.toFixed(0)}% / ${lowTeam} ${lowWp.toFixed(0)}%</div>`
       : '';
     return `
-      <div class="series-game-box upcoming">
+      <div class="series-game-box upcoming" ${neutralStyle}>
         <div class="series-game-num">${num}</div>
         <div class="series-game-venue">Neutral venue</div>
         <div class="series-game-date">${formatDate(g.date) || 'TBD'}</div>
@@ -189,7 +221,7 @@ function renderGameBox(g, entry) {
   const awayWp = g.pregame_wp && g.pregame_wp.away;
   const venue = g.home ? `@ ${g.home}` : 'TBD';
   return `
-    <div class="series-game-box upcoming">
+    <div class="series-game-box upcoming" ${homeStyle}>
       <div class="series-game-num">${num}</div>
       <div class="series-game-venue">${venue}</div>
       <div class="series-game-date">${formatDate(g.date) || 'TBD'}</div>
@@ -229,14 +261,24 @@ function renderH2H(container, entry) {
   }
 
   const cards = meetings.map(m => {
-    const hostedBy = `${m.home} home`;
+    const winnerColor = teamColor(m.winner);
+    const homeIsWinner = m.winner === m.home;
+    const awayIsWinner = m.winner === m.away;
     return `
-      <div class="series-h2h-card">
-        <div class="series-h2h-round">Round ${m.round} · ${hostedBy}</div>
-        <div class="series-h2h-score">
-          <span class="${m.winner === m.home ? 'winner' : ''}">${m.home} ${m.home_score}</span>
-          <span> – </span>
-          <span class="${m.winner === m.away ? 'winner' : ''}">${m.away} ${m.away_score}</span>
+      <div class="series-h2h-card" style="--winner-color:${winnerColor}">
+        <div class="series-h2h-round">Round ${m.round} · ${m.home} home</div>
+        <div class="series-h2h-teams">
+          <div class="series-h2h-side${homeIsWinner ? ' winner' : ''}">
+            <img class="series-h2h-logo" src="logos/${m.home}.png" alt="${m.home}" onerror="this.style.display='none'">
+            <span class="series-h2h-team">${m.home}</span>
+            <span class="series-h2h-score-val">${m.home_score}</span>
+          </div>
+          <div class="series-h2h-dash">–</div>
+          <div class="series-h2h-side${awayIsWinner ? ' winner' : ''}">
+            <span class="series-h2h-score-val">${m.away_score}</span>
+            <span class="series-h2h-team">${m.away}</span>
+            <img class="series-h2h-logo" src="logos/${m.away}.png" alt="${m.away}" onerror="this.style.display='none'">
+          </div>
         </div>
       </div>
     `;

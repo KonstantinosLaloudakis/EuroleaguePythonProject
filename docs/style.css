@@ -1678,41 +1678,132 @@ footer {
   border-radius: 8px;
   padding: 24px;
 }
+.series-hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
 .series-title {
-  margin: 0 0 16px;
+  margin: 0;
   font-size: 22px;
   color: #fff;
 }
-.series-teams {
+.series-hero-meta {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 12px;
+  gap: 8px;
   flex-wrap: wrap;
 }
-.series-team { display: flex; align-items: center; gap: 8px; font-size: 18px; color: #fff; }
-.series-team-name { font-weight: 600; }
-.series-vs { color: #9fb7d9; font-size: 14px; }
-.series-state { font-size: 16px; color: #e8efff; margin-bottom: 4px; }
-.series-format { font-size: 13px; color: #9fb7d9; margin-bottom: 16px; }
+.series-status-chip {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.series-status-chip.awaiting { background: #2a4a70; color: #9fb7d9; }
+.series-status-chip.not-started { background: #2a4a70; color: #e8efff; }
+.series-status-chip.completed { background: #FFD700; color: #0e1a2a; }
+.series-status-chip.live { background: #00E676; color: #0e1a2a; }
+.series-format-chip {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #2a4a70;
+  color: #9fb7d9;
+}
+
+.series-teams {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.series-team-panel {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--team-color, #60a5fa) 18%, #132a44);
+  border: 1px solid color-mix(in srgb, var(--team-color, #60a5fa) 50%, transparent);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.series-team-panel-winner {
+  background: color-mix(in srgb, var(--team-color, #60a5fa) 30%, #132a44);
+  border-color: var(--team-color, #60a5fa);
+  box-shadow: 0 0 0 1px var(--team-color, #60a5fa) inset;
+}
+.series-team-pending {
+  background: #132a44;
+  border: 1px dashed #3a5a80;
+}
+.series-team-logo-wrap {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 4px;
+}
+.series-team-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.series-team-logo-placeholder {
+  font-size: 28px;
+  color: #9fb7d9;
+  font-weight: 600;
+}
+.series-team-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.series-team-seed {
+  font-size: 11px;
+  color: #9fb7d9;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.series-team-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.series-team-prob {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--team-color, #fff);
+  margin-top: 2px;
+}
+.series-team-winner-tag {
+  font-size: 11px;
+  color: #FFD700;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.series-vs {
+  color: #9fb7d9;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 
 .series-prob-bar {
   display: flex;
-  height: 18px;
+  height: 8px;
   border-radius: 4px;
   overflow: hidden;
-  background: #2a4a70;
+  background: #132a44;
 }
 .series-prob-fill { height: 100%; transition: width 0.3s ease; }
-.series-prob-high { background: #60a5fa; }
-.series-prob-low { background: #f59e0b; }
-.series-prob-labels {
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-  color: #e8efff;
-  margin-top: 4px;
-}
 
 .series-timeline {
   display: flex;
@@ -1724,6 +1815,7 @@ footer {
   flex: 0 0 140px;
   background: #1e3a5f;
   border: 1px solid #3a5a80;
+  border-top: 3px solid var(--home-color, #3a5a80);
   border-radius: 6px;
   padding: 12px;
   color: #e8efff;
@@ -1733,7 +1825,7 @@ footer {
   gap: 4px;
   font-size: 12px;
 }
-.series-game-box.completed { border-color: #60a5fa; }
+.series-game-box.completed { border-color: #3a5a80; border-top-color: var(--home-color, #60a5fa); }
 .series-game-box.completed:hover { background: #2a4a70; }
 .series-game-num { font-weight: 600; font-size: 14px; color: #fff; }
 .series-game-score { display: flex; flex-direction: column; gap: 2px; }
@@ -1751,6 +1843,7 @@ footer {
 .series-h2h-card {
   background: #1e3a5f;
   border: 1px solid #3a5a80;
+  border-left: 4px solid var(--winner-color, #3a5a80);
   border-radius: 6px;
   padding: 14px;
   color: #e8efff;
@@ -1758,10 +1851,37 @@ footer {
 .series-h2h-round {
   color: #9fb7d9;
   font-size: 12px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
-.series-h2h-score { font-size: 16px; }
-.series-h2h-score .winner { color: #60a5fa; font-weight: 600; }
+.series-h2h-teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.series-h2h-side {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: #9fb7d9;
+}
+.series-h2h-side.winner {
+  color: var(--winner-color, #60a5fa);
+  font-weight: 700;
+}
+.series-h2h-side.winner .series-h2h-score-val {
+  color: #fff;
+  font-size: 18px;
+}
+.series-h2h-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.series-h2h-team { font-weight: 600; }
+.series-h2h-score-val { font-size: 16px; font-weight: 700; }
+.series-h2h-dash { color: #9fb7d9; }
 .series-h2h-summary {
   margin-top: 10px;
   color: #9fb7d9;
@@ -1823,5 +1943,7 @@ footer {
 
 @media (max-width: 640px) {
   .series-h2h-cards { grid-template-columns: 1fr; }
-  .series-teams { flex-direction: column; align-items: flex-start; }
+  .series-teams { grid-template-columns: 1fr; }
+  .series-vs { justify-self: center; }
+  .series-hero-top { flex-direction: column; }
 }
