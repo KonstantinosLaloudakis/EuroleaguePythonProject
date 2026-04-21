@@ -8,6 +8,8 @@ import shutil
 from euroleague_api import play_by_play_data
 
 SEASONS = list(range(2007, 2026))  # 2007 through 2025
+CURRENT_SEASON = max(SEASONS)  # in-progress season — always re-fetch so
+                               # play-in / playoff games show up as they happen
 CACHE_DIR = 'data_cache'
 
 os.makedirs(CACHE_DIR, exist_ok=True)
@@ -19,11 +21,12 @@ for year in SEASONS:
     cache_path = os.path.join(CACHE_DIR, filename)
     root_path = filename  # Some files might be in root from earlier
 
-    # Check if already fetched
-    if os.path.exists(cache_path):
+    # Completed seasons never change — skip if cached. The current season
+    # is still accruing games (play-in, playoffs), so always re-fetch it.
+    if year != CURRENT_SEASON and os.path.exists(cache_path):
         print(f"  [SKIP] {cache_path} already exists")
         continue
-    if os.path.exists(root_path):
+    if year != CURRENT_SEASON and os.path.exists(root_path):
         # Move to data_cache
         print(f"  [MOVE] {root_path} -> {cache_path}")
         shutil.move(root_path, cache_path)
