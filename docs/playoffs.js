@@ -1139,6 +1139,9 @@ function renderPlayoffRecaps(recaps) {
         }
 
         const slotId = _slotIdForRecapRound(r);
+        const replayHTML = r.gamecode
+            ? `<a class="recap-replay-link" href="replay.html?season=2025&gamecode=${r.gamecode}" onclick="event.stopPropagation()">▶ Replay</a>`
+            : '';
         const cardInner = `<div class="recap-card${upsetClass}">
             <div class="recap-team${isHomeWinner ? '' : ' loser'}">
                 <div class="recap-team-color" style="width:4px;height:28px;border-radius:2px;background:${homeColor}"></div>
@@ -1161,6 +1164,7 @@ function renderPlayoffRecaps(recaps) {
                 ${r.is_upset ? '<span class="recap-badge upset-badge">UPSET</span>' : ''}
                 <span>Win prob: ${r.pre_game_win_prob.toFixed(0)}%</span>
                 ${r.date ? `<span>${r.date}</span>` : ''}
+                ${replayHTML}
                 ${oddsHTML ? `<span style="margin-left:auto">${oddsHTML}</span>` : ''}
             </div>
         </div>`;

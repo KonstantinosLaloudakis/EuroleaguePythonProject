@@ -1,6 +1,6 @@
 {
   "round": 38,
-  "updated": "2026-04-21T21:54:42Z",
+  "updated": "2026-04-21T22:15:19Z",
   "teams": [
     {
       "team": "OLY",
@@ -1887,7 +1887,7 @@
         "W"
       ],
       "home_record": {
-        "W": 14,
+        "W": 13,
         "L": 6
       },
       "away_record": {
@@ -1895,12 +1895,6 @@
         "L": 10
       },
       "round_results": [
-        {
-          "round": -1,
-          "result": "W",
-          "opp": "MCO",
-          "home": true
-        },
         {
           "round": 1,
           "result": "W",
@@ -2208,15 +2202,9 @@
       },
       "away_record": {
         "W": 8,
-        "L": 12
+        "L": 11
       },
       "round_results": [
-        {
-          "round": -1,
-          "result": "L",
-          "opp": "PAN",
-          "home": false
-        },
         {
           "round": 1,
           "result": "L",
@@ -2519,7 +2507,7 @@
         "W"
       ],
       "home_record": {
-        "W": 13,
+        "W": 12,
         "L": 7
       },
       "away_record": {
@@ -2527,12 +2515,6 @@
         "L": 10
       },
       "round_results": [
-        {
-          "round": -1,
-          "result": "W",
-          "opp": "RED",
-          "home": true
-        },
         {
           "round": 1,
           "result": "L",
@@ -2840,15 +2822,9 @@
       },
       "away_record": {
         "W": 8,
-        "L": 12
+        "L": 11
       },
       "round_results": [
-        {
-          "round": -1,
-          "result": "L",
-          "opp": "BAR",
-          "home": false
-        },
         {
           "round": 1,
           "result": "L",
@@ -42554,8 +42530,24 @@
   },
   "playoff_results": {
     "play_in": {
-      "game_a": null,
-      "game_b": null,
+      "game_a": {
+        "gamecode": 381,
+        "home": "PAN",
+        "away": "MCO",
+        "home_score": 87,
+        "away_score": 79,
+        "winner": "PAN",
+        "date": ""
+      },
+      "game_b": {
+        "gamecode": 382,
+        "home": "BAR",
+        "away": "RED",
+        "home_score": 80,
+        "away_score": 72,
+        "winner": "BAR",
+        "date": ""
+      },
       "game_c": null
     },
     "qf": {
@@ -42576,7 +42568,7 @@
           0
         ],
         "higher_seed": "PAM",
-        "lower_seed": null,
+        "lower_seed": "PAN",
         "winner": null
       },
       "3v6": {
@@ -42610,16 +42602,16 @@
     }
   },
   "championship_odds": {
-    "OLY": 22.1,
-    "PAM": 12.5,
-    "MAD": 16.2,
-    "ULK": 8.7,
-    "ZAL": 11.8,
+    "OLY": 22.0,
+    "PAM": 12.0,
+    "MAD": 16.4,
+    "ULK": 8.6,
+    "ZAL": 11.7,
     "HTA": 5.2,
-    "PAN": 11.3,
-    "MCO": 8.7,
-    "BAR": 2.8,
-    "RED": 0.6
+    "PAN": 13.0,
+    "MCO": 6.6,
+    "BAR": 4.6,
+    "RED": 0.0
   },
   "championship_odds_history": [
     {
@@ -42640,28 +42632,69 @@
     },
     {
       "date": "2026-04-21",
-      "label": "Playoffs",
+      "label": "Play-In Day 2",
       "odds": {
-        "OLY": 22.1,
-        "PAM": 12.5,
-        "MAD": 16.2,
-        "ULK": 8.7,
-        "ZAL": 11.8,
+        "OLY": 22.0,
+        "PAM": 12.0,
+        "MAD": 16.4,
+        "ULK": 8.6,
+        "ZAL": 11.7,
         "HTA": 5.2,
-        "PAN": 11.3,
-        "MCO": 8.7,
-        "BAR": 2.8,
-        "RED": 0.6
+        "PAN": 13.0,
+        "MCO": 6.6,
+        "BAR": 4.6,
+        "RED": 0.0
       }
     }
   ],
-  "playoff_recaps": [],
+  "playoff_recaps": [
+    {
+      "gamecode": 381,
+      "date": "",
+      "round": "Play-In Game A",
+      "home": "PAN",
+      "away": "MCO",
+      "home_score": 87,
+      "away_score": 79,
+      "winner": "PAN",
+      "pre_game_win_prob": 60.2,
+      "is_upset": false,
+      "championship_odds_before": {
+        "PAN": 13.0,
+        "MCO": 6.6
+      },
+      "championship_odds_after": {
+        "PAN": 13.0,
+        "MCO": 6.6
+      }
+    },
+    {
+      "gamecode": 382,
+      "date": "",
+      "round": "Play-In Game B",
+      "home": "BAR",
+      "away": "RED",
+      "home_score": 80,
+      "away_score": 72,
+      "winner": "BAR",
+      "pre_game_win_prob": 65.5,
+      "is_upset": false,
+      "championship_odds_before": {
+        "BAR": 4.6,
+        "RED": 0.0
+      },
+      "championship_odds_after": {
+        "BAR": 4.6,
+        "RED": 0.0
+      }
+    }
+  ],
   "path_to_title": [
     {
       "team": "OLY",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 22.1,
+      "championship_odds": 22.0,
       "rounds": [
         {
           "round": "play_in_1",
@@ -42677,63 +42710,58 @@
           "round": "qf",
           "status": "upcoming",
           "reach_prob": 100.0,
-          "win_prob": 62.7,
+          "win_prob": 61.9,
           "branches": [
             {
               "opponent": "MCO",
-              "reach_prob_for_opp": 36.6,
-              "win_prob_vs": 61.5
-            },
-            {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 26.7,
-              "win_prob_vs": 59.2
+              "reach_prob_for_opp": 56.9,
+              "win_prob_vs": 61.6
             },
             {
               "opponent": "BAR",
-              "reach_prob_for_opp": 25.3,
-              "win_prob_vs": 62.0
+              "reach_prob_for_opp": 43.1,
+              "win_prob_vs": 62.3
             }
           ]
         },
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 62.7,
-          "win_prob": 61.3,
+          "reach_prob": 61.9,
+          "win_prob": 60.5,
           "branches": [
             {
               "opponent": "ZAL",
-              "reach_prob_for_opp": 53.8,
-              "win_prob_vs": 59.2
+              "reach_prob_for_opp": 54.3,
+              "win_prob_vs": 58.3
             },
             {
               "opponent": "ULK",
-              "reach_prob_for_opp": 46.2,
-              "win_prob_vs": 63.7
+              "reach_prob_for_opp": 45.7,
+              "win_prob_vs": 63.1
             }
           ]
         },
         {
           "round": "final",
           "status": "upcoming",
-          "reach_prob": 38.4,
-          "win_prob": 57.0,
+          "reach_prob": 37.5,
+          "win_prob": 56.7,
           "branches": [
             {
               "opponent": "MAD",
-              "reach_prob_for_opp": 32.7,
-              "win_prob_vs": 52.4
-            },
-            {
-              "opponent": "PAM",
-              "reach_prob_for_opp": 27.5,
-              "win_prob_vs": 58.0
+              "reach_prob_for_opp": 33.6,
+              "win_prob_vs": 54.0
             },
             {
               "opponent": "PAN",
-              "reach_prob_for_opp": 17.1,
-              "win_prob_vs": 60.0
+              "reach_prob_for_opp": 26.9,
+              "win_prob_vs": 57.7
+            },
+            {
+              "opponent": "PAM",
+              "reach_prob_for_opp": 25.9,
+              "win_prob_vs": 56.8
             }
           ]
         }
@@ -42743,7 +42771,7 @@
       "team": "MAD",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 16.2,
+      "championship_odds": 16.4,
       "rounds": [
         {
           "round": "play_in_1",
@@ -42759,212 +42787,53 @@
           "round": "qf",
           "status": "upcoming",
           "reach_prob": 100.0,
-          "win_prob": 67.8,
+          "win_prob": 67.7,
           "branches": [
             {
               "opponent": "HTA",
               "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 67.8
+              "win_prob_vs": 67.7
             }
           ]
         },
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 67.8,
-          "win_prob": 48.4,
+          "reach_prob": 67.7,
+          "win_prob": 49.0,
           "branches": [
+            {
+              "opponent": "PAN",
+              "reach_prob_for_opp": 50.9,
+              "win_prob_vs": 49.5
+            },
             {
               "opponent": "PAM",
-              "reach_prob_for_opp": 51.2,
-              "win_prob_vs": 49.8
-            },
-            {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 31.1,
-              "win_prob_vs": 46.5
-            },
-            {
-              "opponent": "MCO",
-              "reach_prob_for_opp": 17.7,
-              "win_prob_vs": 47.7
+              "reach_prob_for_opp": 49.1,
+              "win_prob_vs": 48.5
             }
           ]
         },
         {
           "round": "final",
           "status": "upcoming",
-          "reach_prob": 32.9,
-          "win_prob": 49.7,
+          "reach_prob": 33.2,
+          "win_prob": 48.9,
           "branches": [
             {
               "opponent": "OLY",
-              "reach_prob_for_opp": 38.3,
-              "win_prob_vs": 47.6
+              "reach_prob_for_opp": 38.0,
+              "win_prob_vs": 46.0
             },
             {
               "opponent": "ZAL",
-              "reach_prob_for_opp": 22.4,
-              "win_prob_vs": 50.1
+              "reach_prob_for_opp": 24.7,
+              "win_prob_vs": 49.5
             },
             {
               "opponent": "ULK",
-              "reach_prob_for_opp": 17.6,
-              "win_prob_vs": 53.3
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "team": "PAM",
-      "status": "alive",
-      "eliminated_at": null,
-      "championship_odds": 12.5,
-      "rounds": [
-        {
-          "round": "play_in_1",
-          "status": "unreached",
-          "reach_prob": 0.0
-        },
-        {
-          "round": "play_in_2",
-          "status": "unreached",
-          "reach_prob": 0.0
-        },
-        {
-          "round": "qf",
-          "status": "upcoming",
-          "reach_prob": 100.0,
-          "win_prob": 51.6,
-          "branches": [
-            {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 59.9,
-              "win_prob_vs": 49.2
-            },
-            {
-              "opponent": "MCO",
-              "reach_prob_for_opp": 40.1,
-              "win_prob_vs": 55.3
-            }
-          ]
-        },
-        {
-          "round": "sf",
-          "status": "upcoming",
-          "reach_prob": 51.6,
-          "win_prob": 53.0,
-          "branches": [
-            {
-              "opponent": "MAD",
-              "reach_prob_for_opp": 67.3,
-              "win_prob_vs": 50.2
-            },
-            {
-              "opponent": "HTA",
-              "reach_prob_for_opp": 32.7,
-              "win_prob_vs": 58.7
-            }
-          ]
-        },
-        {
-          "round": "final",
-          "status": "upcoming",
-          "reach_prob": 27.3,
-          "win_prob": 45.2,
-          "branches": [
-            {
-              "opponent": "OLY",
-              "reach_prob_for_opp": 38.7,
-              "win_prob_vs": 42.0
-            },
-            {
-              "opponent": "ZAL",
-              "reach_prob_for_opp": 22.9,
-              "win_prob_vs": 48.1
-            },
-            {
-              "opponent": "ULK",
-              "reach_prob_for_opp": 16.6,
-              "win_prob_vs": 47.0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "team": "ZAL",
-      "status": "alive",
-      "eliminated_at": null,
-      "championship_odds": 11.8,
-      "rounds": [
-        {
-          "round": "play_in_1",
-          "status": "unreached",
-          "reach_prob": 0.0
-        },
-        {
-          "round": "play_in_2",
-          "status": "unreached",
-          "reach_prob": 0.0
-        },
-        {
-          "round": "qf",
-          "status": "upcoming",
-          "reach_prob": 100.0,
-          "win_prob": 53.7,
-          "branches": [
-            {
-              "opponent": "ULK",
-              "reach_prob_for_opp": 100.0,
+              "reach_prob_for_opp": 16.2,
               "win_prob_vs": 53.7
-            }
-          ]
-        },
-        {
-          "round": "sf",
-          "status": "upcoming",
-          "reach_prob": 53.7,
-          "win_prob": 41.6,
-          "branches": [
-            {
-              "opponent": "OLY",
-              "reach_prob_for_opp": 62.8,
-              "win_prob_vs": 40.8
-            },
-            {
-              "opponent": "MCO",
-              "reach_prob_for_opp": 14.0,
-              "win_prob_vs": 41.9
-            },
-            {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 10.7,
-              "win_prob_vs": 41.7
-            }
-          ]
-        },
-        {
-          "round": "final",
-          "status": "upcoming",
-          "reach_prob": 22.4,
-          "win_prob": 52.3,
-          "branches": [
-            {
-              "opponent": "MAD",
-              "reach_prob_for_opp": 32.9,
-              "win_prob_vs": 49.9
-            },
-            {
-              "opponent": "PAM",
-              "reach_prob_for_opp": 28.0,
-              "win_prob_vs": 51.9
-            },
-            {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 17.3,
-              "win_prob_vs": 51.6
             }
           ]
         }
@@ -42974,77 +42843,201 @@
       "team": "PAN",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 11.3,
+      "championship_odds": 13.0,
       "rounds": [
         {
           "round": "play_in_1",
-          "status": "upcoming",
-          "reach_prob": 100.0,
-          "win_prob": 59.9,
-          "branches": [
-            {
-              "opponent": "MCO",
-              "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 59.9
-            }
-          ]
+          "status": "completed",
+          "actual_opponent": "MCO",
+          "actual_result": "won",
+          "series": [
+            1,
+            0
+          ],
+          "reach_prob": 100.0
         },
         {
           "round": "play_in_2",
-          "status": "upcoming",
-          "reach_prob": 40.1,
-          "win_prob": 66.6,
-          "branches": [
-            {
-              "opponent": "BAR",
-              "reach_prob_for_opp": 65.3,
-              "win_prob_vs": 64.7
-            },
-            {
-              "opponent": "RED",
-              "reach_prob_for_opp": 34.7,
-              "win_prob_vs": 70.1
-            }
-          ]
+          "status": "unreached",
+          "reach_prob": 0.0
         },
         {
           "round": "qf",
           "status": "upcoming",
-          "reach_prob": 86.6,
-          "win_prob": 47.7,
+          "reach_prob": 100.0,
+          "win_prob": 51.1,
           "branches": [
             {
               "opponent": "PAM",
-              "reach_prob_for_opp": 69.2,
-              "win_prob_vs": 50.8
-            },
-            {
-              "opponent": "OLY",
-              "reach_prob_for_opp": 30.8,
-              "win_prob_vs": 40.8
+              "reach_prob_for_opp": 100.0,
+              "win_prob_vs": 51.1
             }
           ]
         },
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 41.3,
-          "win_prob": 56.6,
+          "reach_prob": 51.1,
+          "win_prob": 53.9,
           "branches": [
             {
               "opponent": "MAD",
-              "reach_prob_for_opp": 51.0,
-              "win_prob_vs": 53.5
+              "reach_prob_for_opp": 67.4,
+              "win_prob_vs": 50.5
             },
             {
               "opponent": "HTA",
-              "reach_prob_for_opp": 22.6,
-              "win_prob_vs": 61.1
+              "reach_prob_for_opp": 32.6,
+              "win_prob_vs": 61.0
+            }
+          ]
+        },
+        {
+          "round": "final",
+          "status": "upcoming",
+          "reach_prob": 27.6,
+          "win_prob": 47.8,
+          "branches": [
+            {
+              "opponent": "OLY",
+              "reach_prob_for_opp": 36.5,
+              "win_prob_vs": 42.3
             },
             {
               "opponent": "ZAL",
-              "reach_prob_for_opp": 13.9,
-              "win_prob_vs": 58.3
+              "reach_prob_for_opp": 22.3,
+              "win_prob_vs": 46.7
+            },
+            {
+              "opponent": "ULK",
+              "reach_prob_for_opp": 18.7,
+              "win_prob_vs": 57.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "team": "PAM",
+      "status": "alive",
+      "eliminated_at": null,
+      "championship_odds": 12.0,
+      "rounds": [
+        {
+          "round": "play_in_1",
+          "status": "unreached",
+          "reach_prob": 0.0
+        },
+        {
+          "round": "play_in_2",
+          "status": "unreached",
+          "reach_prob": 0.0
+        },
+        {
+          "round": "qf",
+          "status": "upcoming",
+          "reach_prob": 100.0,
+          "win_prob": 48.9,
+          "branches": [
+            {
+              "opponent": "PAN",
+              "reach_prob_for_opp": 100.0,
+              "win_prob_vs": 48.9
+            }
+          ]
+        },
+        {
+          "round": "sf",
+          "status": "upcoming",
+          "reach_prob": 48.9,
+          "win_prob": 53.7,
+          "branches": [
+            {
+              "opponent": "MAD",
+              "reach_prob_for_opp": 68.0,
+              "win_prob_vs": 51.5
+            },
+            {
+              "opponent": "HTA",
+              "reach_prob_for_opp": 32.0,
+              "win_prob_vs": 58.4
+            }
+          ]
+        },
+        {
+          "round": "final",
+          "status": "upcoming",
+          "reach_prob": 26.2,
+          "win_prob": 47.7,
+          "branches": [
+            {
+              "opponent": "OLY",
+              "reach_prob_for_opp": 37.0,
+              "win_prob_vs": 43.2
+            },
+            {
+              "opponent": "ZAL",
+              "reach_prob_for_opp": 23.4,
+              "win_prob_vs": 52.4
+            },
+            {
+              "opponent": "ULK",
+              "reach_prob_for_opp": 17.8,
+              "win_prob_vs": 52.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "team": "ZAL",
+      "status": "alive",
+      "eliminated_at": null,
+      "championship_odds": 11.7,
+      "rounds": [
+        {
+          "round": "play_in_1",
+          "status": "unreached",
+          "reach_prob": 0.0
+        },
+        {
+          "round": "play_in_2",
+          "status": "unreached",
+          "reach_prob": 0.0
+        },
+        {
+          "round": "qf",
+          "status": "upcoming",
+          "reach_prob": 100.0,
+          "win_prob": 54.6,
+          "branches": [
+            {
+              "opponent": "ULK",
+              "reach_prob_for_opp": 100.0,
+              "win_prob_vs": 54.6
+            }
+          ]
+        },
+        {
+          "round": "sf",
+          "status": "upcoming",
+          "reach_prob": 54.6,
+          "win_prob": 42.9,
+          "branches": [
+            {
+              "opponent": "OLY",
+              "reach_prob_for_opp": 61.6,
+              "win_prob_vs": 41.7
+            },
+            {
+              "opponent": "MCO",
+              "reach_prob_for_opp": 21.7,
+              "win_prob_vs": 43.6
+            },
+            {
+              "opponent": "BAR",
+              "reach_prob_for_opp": 16.7,
+              "win_prob_vs": 46.3
             }
           ]
         },
@@ -43052,22 +43045,22 @@
           "round": "final",
           "status": "upcoming",
           "reach_prob": 23.4,
-          "win_prob": 49.4,
+          "win_prob": 50.9,
           "branches": [
             {
-              "opponent": "OLY",
-              "reach_prob_for_opp": 28.1,
-              "win_prob_vs": 40.0
+              "opponent": "MAD",
+              "reach_prob_for_opp": 35.0,
+              "win_prob_vs": 50.5
             },
             {
-              "opponent": "MCO",
-              "reach_prob_for_opp": 16.6,
-              "win_prob_vs": 53.0
+              "opponent": "PAN",
+              "reach_prob_for_opp": 26.3,
+              "win_prob_vs": 53.3
             },
             {
-              "opponent": "ZAL",
-              "reach_prob_for_opp": 16.5,
-              "win_prob_vs": 48.4
+              "opponent": "PAM",
+              "reach_prob_for_opp": 26.2,
+              "win_prob_vs": 47.6
             }
           ]
         }
@@ -43077,7 +43070,7 @@
       "team": "ULK",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 8.7,
+      "championship_odds": 8.6,
       "rounds": [
         {
           "round": "play_in_1",
@@ -43093,35 +43086,35 @@
           "round": "qf",
           "status": "upcoming",
           "reach_prob": 100.0,
-          "win_prob": 46.3,
+          "win_prob": 45.4,
           "branches": [
             {
               "opponent": "ZAL",
               "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 46.3
+              "win_prob_vs": 45.4
             }
           ]
         },
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 46.3,
-          "win_prob": 38.1,
+          "reach_prob": 45.4,
+          "win_prob": 38.8,
           "branches": [
             {
               "opponent": "OLY",
-              "reach_prob_for_opp": 62.6,
-              "win_prob_vs": 36.3
+              "reach_prob_for_opp": 62.3,
+              "win_prob_vs": 36.9
             },
             {
               "opponent": "MCO",
-              "reach_prob_for_opp": 14.3,
-              "win_prob_vs": 39.9
+              "reach_prob_for_opp": 22.0,
+              "win_prob_vs": 40.2
             },
             {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 11.2,
-              "win_prob_vs": 40.9
+              "opponent": "BAR",
+              "reach_prob_for_opp": 15.7,
+              "win_prob_vs": 44.4
             }
           ]
         },
@@ -43129,22 +43122,22 @@
           "round": "final",
           "status": "upcoming",
           "reach_prob": 17.6,
-          "win_prob": 49.5,
+          "win_prob": 46.2,
           "branches": [
             {
               "opponent": "MAD",
-              "reach_prob_for_opp": 32.8,
-              "win_prob_vs": 46.7
-            },
-            {
-              "opponent": "PAM",
-              "reach_prob_for_opp": 25.8,
-              "win_prob_vs": 53.0
+              "reach_prob_for_opp": 30.5,
+              "win_prob_vs": 46.3
             },
             {
               "opponent": "PAN",
-              "reach_prob_for_opp": 18.6,
-              "win_prob_vs": 43.9
+              "reach_prob_for_opp": 29.3,
+              "win_prob_vs": 42.4
+            },
+            {
+              "opponent": "PAM",
+              "reach_prob_for_opp": 26.4,
+              "win_prob_vs": 47.2
             }
           ]
         }
@@ -43154,100 +43147,83 @@
       "team": "MCO",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 8.7,
+      "championship_odds": 6.6,
       "rounds": [
         {
           "round": "play_in_1",
-          "status": "upcoming",
-          "reach_prob": 100.0,
-          "win_prob": 40.1,
-          "branches": [
-            {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 40.1
-            }
-          ]
+          "status": "completed",
+          "actual_opponent": "PAN",
+          "actual_result": "lost",
+          "series": [
+            0,
+            1
+          ],
+          "reach_prob": 100.0
         },
         {
           "round": "play_in_2",
           "status": "upcoming",
-          "reach_prob": 59.9,
-          "win_prob": 61.1,
+          "reach_prob": 100.0,
+          "win_prob": 56.9,
           "branches": [
             {
               "opponent": "BAR",
-              "reach_prob_for_opp": 64.5,
-              "win_prob_vs": 58.4
-            },
-            {
-              "opponent": "RED",
-              "reach_prob_for_opp": 35.5,
-              "win_prob_vs": 66.2
+              "reach_prob_for_opp": 100.0,
+              "win_prob_vs": 56.9
             }
           ]
         },
         {
           "round": "qf",
           "status": "upcoming",
-          "reach_prob": 76.7,
-          "win_prob": 41.8,
+          "reach_prob": 56.9,
+          "win_prob": 38.4,
           "branches": [
             {
-              "opponent": "PAM",
-              "reach_prob_for_opp": 52.2,
-              "win_prob_vs": 44.7
-            },
-            {
               "opponent": "OLY",
-              "reach_prob_for_opp": 47.8,
-              "win_prob_vs": 38.5
+              "reach_prob_for_opp": 100.0,
+              "win_prob_vs": 38.4
             }
           ]
         },
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 32.0,
-          "win_prob": 55.7,
+          "reach_prob": 21.9,
+          "win_prob": 58.0,
           "branches": [
             {
-              "opponent": "MAD",
-              "reach_prob_for_opp": 37.5,
-              "win_prob_vs": 52.3
-            },
-            {
               "opponent": "ZAL",
-              "reach_prob_for_opp": 23.4,
-              "win_prob_vs": 58.1
+              "reach_prob_for_opp": 54.2,
+              "win_prob_vs": 56.4
             },
             {
               "opponent": "ULK",
-              "reach_prob_for_opp": 20.6,
-              "win_prob_vs": 60.1
+              "reach_prob_for_opp": 45.8,
+              "win_prob_vs": 59.8
             }
           ]
         },
         {
           "round": "final",
           "status": "upcoming",
-          "reach_prob": 17.8,
-          "win_prob": 48.5,
+          "reach_prob": 12.7,
+          "win_prob": 53.0,
           "branches": [
             {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 21.8,
-              "win_prob_vs": 47.0
-            },
-            {
-              "opponent": "OLY",
-              "reach_prob_for_opp": 20.9,
-              "win_prob_vs": 40.2
-            },
-            {
               "opponent": "MAD",
-              "reach_prob_for_opp": 14.7,
-              "win_prob_vs": 52.7
+              "reach_prob_for_opp": 33.0,
+              "win_prob_vs": 51.3
+            },
+            {
+              "opponent": "PAN",
+              "reach_prob_for_opp": 27.9,
+              "win_prob_vs": 50.6
+            },
+            {
+              "opponent": "PAM",
+              "reach_prob_for_opp": 27.1,
+              "win_prob_vs": 52.6
             }
           ]
         }
@@ -43273,58 +43249,53 @@
           "round": "qf",
           "status": "upcoming",
           "reach_prob": 100.0,
-          "win_prob": 32.2,
+          "win_prob": 32.3,
           "branches": [
             {
               "opponent": "MAD",
               "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 32.2
+              "win_prob_vs": 32.3
             }
           ]
         },
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 32.2,
-          "win_prob": 41.3,
+          "reach_prob": 32.3,
+          "win_prob": 40.3,
           "branches": [
             {
-              "opponent": "PAM",
-              "reach_prob_for_opp": 52.5,
-              "win_prob_vs": 41.3
-            },
-            {
               "opponent": "PAN",
-              "reach_prob_for_opp": 29.1,
-              "win_prob_vs": 38.9
+              "reach_prob_for_opp": 51.7,
+              "win_prob_vs": 39.0
             },
             {
-              "opponent": "MCO",
-              "reach_prob_for_opp": 18.4,
-              "win_prob_vs": 45.2
+              "opponent": "PAM",
+              "reach_prob_for_opp": 48.3,
+              "win_prob_vs": 41.6
             }
           ]
         },
         {
           "round": "final",
           "status": "upcoming",
-          "reach_prob": 13.3,
-          "win_prob": 40.3,
+          "reach_prob": 13.0,
+          "win_prob": 42.4,
           "branches": [
             {
               "opponent": "OLY",
-              "reach_prob_for_opp": 37.4,
-              "win_prob_vs": 39.4
+              "reach_prob_for_opp": 39.0,
+              "win_prob_vs": 38.9
             },
             {
               "opponent": "ZAL",
-              "reach_prob_for_opp": 21.8,
-              "win_prob_vs": 39.8
+              "reach_prob_for_opp": 22.6,
+              "win_prob_vs": 45.9
             },
             {
               "opponent": "ULK",
-              "reach_prob_for_opp": 17.9,
-              "win_prob_vs": 45.8
+              "reach_prob_for_opp": 18.7,
+              "win_prob_vs": 47.7
             }
           ]
         }
@@ -43334,90 +43305,83 @@
       "team": "BAR",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 2.8,
+      "championship_odds": 4.6,
       "rounds": [
         {
           "round": "play_in_1",
-          "status": "upcoming",
-          "reach_prob": 100.0,
-          "win_prob": 64.8,
-          "branches": [
-            {
-              "opponent": "RED",
-              "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 64.8
-            }
-          ]
+          "status": "completed",
+          "actual_opponent": "RED",
+          "actual_result": "won",
+          "series": [
+            1,
+            0
+          ],
+          "reach_prob": 100.0
         },
         {
           "round": "play_in_2",
           "status": "upcoming",
-          "reach_prob": 64.8,
-          "win_prob": 39.1,
+          "reach_prob": 100.0,
+          "win_prob": 43.1,
           "branches": [
             {
               "opponent": "MCO",
-              "reach_prob_for_opp": 59.7,
-              "win_prob_vs": 41.6
-            },
-            {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 40.3,
-              "win_prob_vs": 35.3
+              "reach_prob_for_opp": 100.0,
+              "win_prob_vs": 43.1
             }
           ]
         },
         {
           "round": "qf",
           "status": "upcoming",
-          "reach_prob": 25.3,
-          "win_prob": 38.0,
+          "reach_prob": 43.1,
+          "win_prob": 37.7,
           "branches": [
             {
               "opponent": "OLY",
               "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 38.0
+              "win_prob_vs": 37.7
             }
           ]
         },
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 9.6,
-          "win_prob": 57.5,
+          "reach_prob": 16.2,
+          "win_prob": 54.6,
           "branches": [
             {
               "opponent": "ZAL",
-              "reach_prob_for_opp": 55.5,
-              "win_prob_vs": 56.6
+              "reach_prob_for_opp": 56.1,
+              "win_prob_vs": 53.7
             },
             {
               "opponent": "ULK",
-              "reach_prob_for_opp": 44.5,
-              "win_prob_vs": 58.6
+              "reach_prob_for_opp": 43.9,
+              "win_prob_vs": 55.6
             }
           ]
         },
         {
           "round": "final",
           "status": "upcoming",
-          "reach_prob": 5.5,
-          "win_prob": 49.7,
+          "reach_prob": 8.8,
+          "win_prob": 51.4,
           "branches": [
             {
               "opponent": "MAD",
-              "reach_prob_for_opp": 36.0,
-              "win_prob_vs": 47.7
+              "reach_prob_for_opp": 32.0,
+              "win_prob_vs": 48.8
+            },
+            {
+              "opponent": "PAN",
+              "reach_prob_for_opp": 30.3,
+              "win_prob_vs": 50.0
             },
             {
               "opponent": "PAM",
-              "reach_prob_for_opp": 27.7,
-              "win_prob_vs": 51.0
-            },
-            {
-              "opponent": "HTA",
-              "reach_prob_for_opp": 15.0,
-              "win_prob_vs": 47.0
+              "reach_prob_for_opp": 25.9,
+              "win_prob_vs": 55.5
             }
           ]
         }
@@ -43425,94 +43389,40 @@
     },
     {
       "team": "RED",
-      "status": "alive",
-      "eliminated_at": null,
-      "championship_odds": 0.6,
+      "status": "eliminated",
+      "eliminated_at": "play_in_1",
+      "championship_odds": 0.0,
       "rounds": [
         {
           "round": "play_in_1",
-          "status": "upcoming",
-          "reach_prob": 100.0,
-          "win_prob": 35.2,
-          "branches": [
-            {
-              "opponent": "BAR",
-              "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 35.2
-            }
-          ]
+          "status": "completed",
+          "actual_opponent": "BAR",
+          "actual_result": "lost",
+          "series": [
+            0,
+            1
+          ],
+          "reach_prob": 100.0
         },
         {
           "round": "play_in_2",
-          "status": "upcoming",
-          "reach_prob": 35.2,
-          "win_prob": 32.2,
-          "branches": [
-            {
-              "opponent": "MCO",
-              "reach_prob_for_opp": 60.5,
-              "win_prob_vs": 33.8
-            },
-            {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 39.5,
-              "win_prob_vs": 29.9
-            }
-          ]
+          "status": "unreached",
+          "reach_prob": 0.0
         },
         {
           "round": "qf",
-          "status": "upcoming",
-          "reach_prob": 11.3,
-          "win_prob": 23.4,
-          "branches": [
-            {
-              "opponent": "OLY",
-              "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 23.4
-            }
-          ]
+          "status": "unreached",
+          "reach_prob": 0.0
         },
         {
           "round": "sf",
-          "status": "upcoming",
-          "reach_prob": 2.7,
-          "win_prob": 50.4,
-          "branches": [
-            {
-              "opponent": "ZAL",
-              "reach_prob_for_opp": 53.0,
-              "win_prob_vs": 48.9
-            },
-            {
-              "opponent": "ULK",
-              "reach_prob_for_opp": 47.0,
-              "win_prob_vs": 52.0
-            }
-          ]
+          "status": "unreached",
+          "reach_prob": 0.0
         },
         {
           "round": "final",
-          "status": "upcoming",
-          "reach_prob": 1.3,
-          "win_prob": 49.3,
-          "branches": [
-            {
-              "opponent": "MAD",
-              "reach_prob_for_opp": 32.8,
-              "win_prob_vs": 56.8
-            },
-            {
-              "opponent": "PAM",
-              "reach_prob_for_opp": 30.6,
-              "win_prob_vs": 39.0
-            },
-            {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 18.7,
-              "win_prob_vs": 40.0
-            }
-          ]
+          "status": "unreached",
+          "reach_prob": 0.0
         }
       ]
     }
@@ -43542,7 +43452,7 @@
       },
       "winner": null,
       "series_win_prob": {
-        "high": 62.5,
+        "high": 62.3,
         "low": 0.0
       },
       "games": [
@@ -43595,50 +43505,90 @@
         "team": "PAM",
         "seed": 2
       },
-      "low_seed": null,
-      "status": "awaiting_teams",
+      "low_seed": {
+        "team": "PAN",
+        "seed": 7
+      },
+      "status": "not_started",
       "wins": {
         "high": 0,
         "low": 0
       },
       "winner": null,
       "series_win_prob": {
-        "high": 52.0,
-        "low": 0.0
+        "high": 49.5,
+        "low": 50.5
       },
       "games": [
         {
           "game_num": 1,
           "status": "upcoming",
-          "home": null,
-          "away": null
+          "home": "PAM",
+          "away": "PAN",
+          "pregame_wp": {
+            "home": 57.2,
+            "away": 42.8
+          }
         },
         {
           "game_num": 2,
           "status": "upcoming",
-          "home": null,
-          "away": null
+          "home": "PAM",
+          "away": "PAN",
+          "pregame_wp": {
+            "home": 57.2,
+            "away": 42.8
+          }
         },
         {
           "game_num": 3,
           "status": "upcoming",
-          "home": null,
-          "away": null
+          "home": "PAN",
+          "away": "PAM",
+          "pregame_wp": {
+            "home": 61.3,
+            "away": 38.7
+          }
         },
         {
           "game_num": 4,
           "status": "upcoming",
-          "home": null,
-          "away": null
+          "home": "PAN",
+          "away": "PAM",
+          "pregame_wp": {
+            "home": 61.3,
+            "away": 38.7
+          }
         },
         {
           "game_num": 5,
           "status": "upcoming",
-          "home": null,
-          "away": null
+          "home": "PAM",
+          "away": "PAN",
+          "pregame_wp": {
+            "home": 57.2,
+            "away": 42.8
+          }
         }
       ],
-      "rs_h2h": []
+      "rs_h2h": [
+        {
+          "round": 14,
+          "home": "PAN",
+          "away": "PAM",
+          "home_score": 79,
+          "away_score": 89,
+          "winner": "PAM"
+        },
+        {
+          "round": 37,
+          "home": "PAM",
+          "away": "PAN",
+          "home_score": 102,
+          "away_score": 84,
+          "winner": "PAM"
+        }
+      ]
     },
     "qf3": {
       "id": "qf3",
@@ -43768,8 +43718,8 @@
       },
       "winner": null,
       "series_win_prob": {
-        "high": 45.7,
-        "low": 54.3
+        "high": 45.2,
+        "low": 54.8
       },
       "games": [
         {

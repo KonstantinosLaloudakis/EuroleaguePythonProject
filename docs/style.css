@@ -1941,6 +1941,22 @@ footer {
   cursor: pointer;
 }
 
+.recap-replay-link {
+  color: #9fb7d9;
+  text-decoration: none;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgba(90, 130, 200, 0.18);
+  border: 1px solid rgba(120, 160, 220, 0.35);
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.recap-replay-link:hover {
+  color: #fff;
+  background: rgba(120, 160, 220, 0.45);
+}
+
 @media (max-width: 640px) {
   .series-h2h-cards { grid-template-columns: 1fr; }
   .series-teams { grid-template-columns: 1fr; }

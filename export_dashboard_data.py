@@ -1292,6 +1292,7 @@ def main():
     def _format_game(g):
         """Format a playoff game dict for JSON output."""
         return {
+            'gamecode': g.get('game_code'),
             'home': g['home'],
             'away': g['away'],
             'home_score': g['home_score'],
@@ -1654,6 +1655,7 @@ def main():
             is_upset = winner_prob < 0.4
 
             recap = {
+                'gamecode': game.get('gamecode'),
                 'date': game.get('date', ''),
                 'round': round_label,
                 'home': home,
