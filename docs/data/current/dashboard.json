@@ -1,6 +1,6 @@
 {
   "round": 38,
-  "updated": "2026-04-20T04:33:29Z",
+  "updated": "2026-04-21T04:22:31Z",
   "teams": [
     {
       "team": "OLY",
@@ -15769,18 +15769,6 @@
       "RAPM_Rank": 24
     },
     {
-      "player": "EBOUA, PAUL",
-      "team": "ASV",
-      "RAPM": 1.12,
-      "ORAPM": 0.5,
-      "DRAPM": 0.52,
-      "RAPM_basic": 1.03,
-      "prior": 0.08,
-      "est_minutes": 491.0,
-      "possessions": 859.0,
-      "RAPM_Rank": 25
-    },
-    {
       "player": "FORREST, TRENT",
       "team": "BAS",
       "RAPM": 1.12,
@@ -15790,6 +15778,18 @@
       "prior": 0.21,
       "est_minutes": 1199.0,
       "possessions": 2099.0,
+      "RAPM_Rank": 25
+    },
+    {
+      "player": "EBOUA, PAUL",
+      "team": "ASV",
+      "RAPM": 1.12,
+      "ORAPM": 0.5,
+      "DRAPM": 0.52,
+      "RAPM_basic": 1.03,
+      "prior": 0.08,
+      "est_minutes": 491.0,
+      "possessions": 859.0,
       "RAPM_Rank": 26
     },
     {
@@ -15973,18 +15973,6 @@
       "RAPM_Rank": 41
     },
     {
-      "player": "MALEDON, THEO",
-      "team": "MAD",
-      "RAPM": 0.86,
-      "ORAPM": 0.56,
-      "DRAPM": 0.23,
-      "RAPM_basic": 0.59,
-      "prior": 0.31,
-      "est_minutes": 1058.0,
-      "possessions": 1852.0,
-      "RAPM_Rank": 42
-    },
-    {
       "player": "SIMMONS, KOBI",
       "team": "BAS",
       "RAPM": 0.86,
@@ -15994,6 +15982,18 @@
       "prior": 0.26,
       "est_minutes": 1393.0,
       "possessions": 2437.0,
+      "RAPM_Rank": 42
+    },
+    {
+      "player": "MALEDON, THEO",
+      "team": "MAD",
+      "RAPM": 0.86,
+      "ORAPM": 0.56,
+      "DRAPM": 0.23,
+      "RAPM_basic": 0.59,
+      "prior": 0.31,
+      "est_minutes": 1058.0,
+      "possessions": 1852.0,
       "RAPM_Rank": 43
     },
     {
@@ -16045,18 +16045,6 @@
       "RAPM_Rank": 47
     },
     {
-      "player": "FRANCISCO, SYLVAIN",
-      "team": "ZAL",
-      "RAPM": 0.75,
-      "ORAPM": 0.95,
-      "DRAPM": -0.49,
-      "RAPM_basic": 0.35,
-      "prior": 0.47,
-      "est_minutes": 1833.0,
-      "possessions": 3208.0,
-      "RAPM_Rank": 48
-    },
-    {
       "player": "FERNANDO, BRUNO",
       "team": "PAR",
       "RAPM": 0.75,
@@ -16066,6 +16054,18 @@
       "prior": 0.15,
       "est_minutes": 1107.0,
       "possessions": 1938.0,
+      "RAPM_Rank": 48
+    },
+    {
+      "player": "FRANCISCO, SYLVAIN",
+      "team": "ZAL",
+      "RAPM": 0.75,
+      "ORAPM": 0.95,
+      "DRAPM": -0.49,
+      "RAPM_basic": 0.35,
+      "prior": 0.47,
+      "est_minutes": 1833.0,
+      "possessions": 3208.0,
       "RAPM_Rank": 49
     },
     {
@@ -16093,6 +16093,18 @@
       "RAPM_Rank": 51
     },
     {
+      "player": "ANGOLA, BRAIAN",
+      "team": "ASV",
+      "RAPM": 0.71,
+      "ORAPM": 0.33,
+      "DRAPM": 0.3,
+      "RAPM_basic": 0.29,
+      "prior": 0.45,
+      "est_minutes": 513.0,
+      "possessions": 897.0,
+      "RAPM_Rank": 52
+    },
+    {
       "player": "MARINKOVIC, VANJA",
       "team": "PAR",
       "RAPM": 0.71,
@@ -16102,18 +16114,6 @@
       "prior": -0.07,
       "est_minutes": 837.0,
       "possessions": 1464.0,
-      "RAPM_Rank": 52
-    },
-    {
-      "player": "ANGOLA, BRAIAN",
-      "team": "ASV",
-      "RAPM": 0.71,
-      "ORAPM": 0.33,
-      "DRAPM": 0.29,
-      "RAPM_basic": 0.29,
-      "prior": 0.45,
-      "est_minutes": 513.0,
-      "possessions": 897.0,
       "RAPM_Rank": 53
     },
     {
@@ -16129,18 +16129,6 @@
       "RAPM_Rank": 54
     },
     {
-      "player": "COSTELLO, MATTHEW",
-      "team": "PAM",
-      "RAPM": 0.68,
-      "ORAPM": -0.47,
-      "DRAPM": 0.88,
-      "RAPM_basic": 0.59,
-      "prior": 0.09,
-      "est_minutes": 1063.0,
-      "possessions": 1861.0,
-      "RAPM_Rank": 55
-    },
-    {
       "player": "LEN, ALEX",
       "team": "MAD",
       "RAPM": 0.68,
@@ -16150,19 +16138,19 @@
       "prior": 0.08,
       "est_minutes": 284.0,
       "possessions": 497.0,
-      "RAPM_Rank": 56
+      "RAPM_Rank": 55
     },
     {
-      "player": "NEBO, JOSH",
-      "team": "MIL",
-      "RAPM": 0.67,
-      "ORAPM": 0.91,
-      "DRAPM": -0.13,
-      "RAPM_basic": 0.56,
-      "prior": 0.16,
-      "est_minutes": 982.0,
-      "possessions": 1718.0,
-      "RAPM_Rank": 57
+      "player": "COSTELLO, MATTHEW",
+      "team": "PAM",
+      "RAPM": 0.68,
+      "ORAPM": -0.47,
+      "DRAPM": 0.88,
+      "RAPM_basic": 0.59,
+      "prior": 0.09,
+      "est_minutes": 1063.0,
+      "possessions": 1861.0,
+      "RAPM_Rank": 56
     },
     {
       "player": "VAUTIER, BASTIEN",
@@ -16174,19 +16162,19 @@
       "prior": 0.15,
       "est_minutes": 973.0,
       "possessions": 1703.0,
-      "RAPM_Rank": 58
+      "RAPM_Rank": 57
     },
     {
-      "player": "PUERTO, JOSEP",
-      "team": "PAM",
-      "RAPM": 0.66,
-      "ORAPM": -0.33,
-      "DRAPM": 0.75,
-      "RAPM_basic": 0.67,
-      "prior": -0.01,
-      "est_minutes": 1031.0,
-      "possessions": 1804.0,
-      "RAPM_Rank": 59
+      "player": "NEBO, JOSH",
+      "team": "MIL",
+      "RAPM": 0.67,
+      "ORAPM": 0.91,
+      "DRAPM": -0.13,
+      "RAPM_basic": 0.56,
+      "prior": 0.16,
+      "est_minutes": 982.0,
+      "possessions": 1718.0,
+      "RAPM_Rank": 58
     },
     {
       "player": "MUSA, DZANAN",
@@ -16198,18 +16186,30 @@
       "prior": 0.31,
       "est_minutes": 794.0,
       "possessions": 1389.0,
+      "RAPM_Rank": 59
+    },
+    {
+      "player": "PUERTO, JOSEP",
+      "team": "PAM",
+      "RAPM": 0.66,
+      "ORAPM": -0.33,
+      "DRAPM": 0.75,
+      "RAPM_basic": 0.67,
+      "prior": -0.01,
+      "est_minutes": 1031.0,
+      "possessions": 1804.0,
       "RAPM_Rank": 60
     },
     {
-      "player": "DE LARREA, SERGIO",
-      "team": "PAM",
+      "player": "DIOP, KHALIFA",
+      "team": "BAS",
       "RAPM": 0.65,
-      "ORAPM": 0.53,
-      "DRAPM": -0.05,
-      "RAPM_basic": 0.57,
-      "prior": 0.06,
-      "est_minutes": 557.0,
-      "possessions": 975.0,
+      "ORAPM": 0.84,
+      "DRAPM": 0.04,
+      "RAPM_basic": 0.75,
+      "prior": -0.15,
+      "est_minutes": 1035.0,
+      "possessions": 1812.0,
       "RAPM_Rank": 61
     },
     {
@@ -16225,15 +16225,15 @@
       "RAPM_Rank": 62
     },
     {
-      "player": "DIOP, KHALIFA",
-      "team": "BAS",
+      "player": "DE LARREA, SERGIO",
+      "team": "PAM",
       "RAPM": 0.65,
-      "ORAPM": 0.84,
-      "DRAPM": 0.04,
-      "RAPM_basic": 0.75,
-      "prior": -0.15,
-      "est_minutes": 1035.0,
-      "possessions": 1812.0,
+      "ORAPM": 0.53,
+      "DRAPM": -0.05,
+      "RAPM_basic": 0.57,
+      "prior": 0.06,
+      "est_minutes": 557.0,
+      "possessions": 975.0,
       "RAPM_Rank": 63
     },
     {
@@ -16333,18 +16333,6 @@
       "RAPM_Rank": 71
     },
     {
-      "player": "TRAORE, ARMEL",
-      "team": "ASV",
-      "RAPM": 0.53,
-      "ORAPM": -0.1,
-      "DRAPM": 0.33,
-      "RAPM_basic": 0.45,
-      "prior": 0.04,
-      "est_minutes": 1207.0,
-      "possessions": 2112.0,
-      "RAPM_Rank": 72
-    },
-    {
       "player": "MOORE, OMARI",
       "team": "PAM",
       "RAPM": 0.53,
@@ -16354,7 +16342,7 @@
       "prior": 0.22,
       "est_minutes": 1402.0,
       "possessions": 2454.0,
-      "RAPM_Rank": 73
+      "RAPM_Rank": 72
     },
     {
       "player": "LO, MAODO",
@@ -16366,6 +16354,18 @@
       "prior": 0.14,
       "est_minutes": 1270.0,
       "possessions": 2222.0,
+      "RAPM_Rank": 73
+    },
+    {
+      "player": "TRAORE, ARMEL",
+      "team": "ASV",
+      "RAPM": 0.53,
+      "ORAPM": -0.1,
+      "DRAPM": 0.33,
+      "RAPM_basic": 0.45,
+      "prior": 0.04,
+      "est_minutes": 1207.0,
+      "possessions": 2112.0,
       "RAPM_Rank": 74
     },
     {
@@ -16465,18 +16465,6 @@
       "RAPM_Rank": 82
     },
     {
-      "player": "LEDAY, ZACH",
-      "team": "MIL",
-      "RAPM": 0.44,
-      "ORAPM": 0.59,
-      "DRAPM": -0.01,
-      "RAPM_basic": 0.23,
-      "prior": 0.27,
-      "est_minutes": 1408.0,
-      "possessions": 2464.0,
-      "RAPM_Rank": 83
-    },
-    {
       "player": "YURTSEVEN, OMER",
       "team": "PAN",
       "RAPM": 0.44,
@@ -16486,31 +16474,19 @@
       "prior": 0.23,
       "est_minutes": 575.0,
       "possessions": 1006.0,
+      "RAPM_Rank": 83
+    },
+    {
+      "player": "LEDAY, ZACH",
+      "team": "MIL",
+      "RAPM": 0.44,
+      "ORAPM": 0.59,
+      "DRAPM": -0.01,
+      "RAPM_basic": 0.23,
+      "prior": 0.27,
+      "est_minutes": 1408.0,
+      "possessions": 2464.0,
       "RAPM_Rank": 84
-    },
-    {
-      "player": "BIRCH, KHEM",
-      "team": "ULK",
-      "RAPM": 0.43,
-      "ORAPM": -0.35,
-      "DRAPM": 0.67,
-      "RAPM_basic": 0.56,
-      "prior": -0.19,
-      "est_minutes": 1157.0,
-      "possessions": 2025.0,
-      "RAPM_Rank": 85
-    },
-    {
-      "player": "ALSTON JR., DERRICK",
-      "team": "VIR",
-      "RAPM": 0.43,
-      "ORAPM": 0.02,
-      "DRAPM": 0.36,
-      "RAPM_basic": 0.38,
-      "prior": 0.0,
-      "est_minutes": 2163.0,
-      "possessions": 3785.0,
-      "RAPM_Rank": 86
     },
     {
       "player": "JACKSON, EDWIN",
@@ -16522,19 +16498,19 @@
       "prior": 0.14,
       "est_minutes": 550.0,
       "possessions": 962.0,
-      "RAPM_Rank": 87
+      "RAPM_Rank": 85
     },
     {
-      "player": "DA SILVA, OSCAR",
-      "team": "MUN",
+      "player": "BIRCH, KHEM",
+      "team": "ULK",
       "RAPM": 0.43,
-      "ORAPM": -0.1,
-      "DRAPM": 0.56,
-      "RAPM_basic": 0.34,
-      "prior": 0.08,
-      "est_minutes": 975.0,
-      "possessions": 1707.0,
-      "RAPM_Rank": 88
+      "ORAPM": -0.35,
+      "DRAPM": 0.67,
+      "RAPM_basic": 0.56,
+      "prior": -0.19,
+      "est_minutes": 1157.0,
+      "possessions": 2025.0,
+      "RAPM_Rank": 86
     },
     {
       "player": "CLARK III, JIMMY",
@@ -16546,6 +16522,30 @@
       "prior": 0.31,
       "est_minutes": 1380.0,
       "possessions": 2415.0,
+      "RAPM_Rank": 87
+    },
+    {
+      "player": "ALSTON JR., DERRICK",
+      "team": "VIR",
+      "RAPM": 0.43,
+      "ORAPM": 0.02,
+      "DRAPM": 0.36,
+      "RAPM_basic": 0.38,
+      "prior": 0.0,
+      "est_minutes": 2163.0,
+      "possessions": 3785.0,
+      "RAPM_Rank": 88
+    },
+    {
+      "player": "DA SILVA, OSCAR",
+      "team": "MUN",
+      "RAPM": 0.43,
+      "ORAPM": -0.1,
+      "DRAPM": 0.56,
+      "RAPM_basic": 0.34,
+      "prior": 0.08,
+      "est_minutes": 975.0,
+      "possessions": 1707.0,
       "RAPM_Rank": 89
     },
     {
@@ -16621,18 +16621,6 @@
       "RAPM_Rank": 95
     },
     {
-      "player": "WARD, TYSON",
-      "team": "OLY",
-      "RAPM": 0.38,
-      "ORAPM": 0.47,
-      "DRAPM": 0.08,
-      "RAPM_basic": 0.33,
-      "prior": 0.07,
-      "est_minutes": 1175.0,
-      "possessions": 2057.0,
-      "RAPM_Rank": 96
-    },
-    {
       "player": "MIKE, ISIAHA",
       "team": "MUN",
       "RAPM": 0.38,
@@ -16642,19 +16630,19 @@
       "prior": 0.17,
       "est_minutes": 1566.0,
       "possessions": 2740.0,
-      "RAPM_Rank": 97
+      "RAPM_Rank": 96
     },
     {
-      "player": "BLATT, TAMIR",
-      "team": "TEL",
-      "RAPM": 0.37,
-      "ORAPM": 0.82,
-      "DRAPM": -0.17,
-      "RAPM_basic": 0.24,
-      "prior": 0.15,
-      "est_minutes": 1388.0,
-      "possessions": 2428.0,
-      "RAPM_Rank": 98
+      "player": "WARD, TYSON",
+      "team": "OLY",
+      "RAPM": 0.38,
+      "ORAPM": 0.47,
+      "DRAPM": 0.08,
+      "RAPM_basic": 0.33,
+      "prior": 0.07,
+      "est_minutes": 1175.0,
+      "possessions": 2057.0,
+      "RAPM_Rank": 97
     },
     {
       "player": "LIGHTY, DAVID",
@@ -16666,6 +16654,18 @@
       "prior": -0.16,
       "est_minutes": 1120.0,
       "possessions": 1960.0,
+      "RAPM_Rank": 98
+    },
+    {
+      "player": "BLATT, TAMIR",
+      "team": "TEL",
+      "RAPM": 0.37,
+      "ORAPM": 0.82,
+      "DRAPM": -0.17,
+      "RAPM_basic": 0.24,
+      "prior": 0.15,
+      "est_minutes": 1388.0,
+      "possessions": 2428.0,
       "RAPM_Rank": 99
     },
     {
@@ -16693,18 +16693,6 @@
       "RAPM_Rank": 101
     },
     {
-      "player": "DIBARTOLOMEO, JOHN",
-      "team": "TEL",
-      "RAPM": 0.31,
-      "ORAPM": 0.11,
-      "DRAPM": 0.35,
-      "RAPM_basic": 0.36,
-      "prior": -0.08,
-      "est_minutes": 675.0,
-      "possessions": 1182.0,
-      "RAPM_Rank": 102
-    },
-    {
       "player": "DECK, GABRIEL",
       "team": "MAD",
       "RAPM": 0.31,
@@ -16714,7 +16702,7 @@
       "prior": 0.01,
       "est_minutes": 1363.0,
       "possessions": 2385.0,
-      "RAPM_Rank": 103
+      "RAPM_Rank": 102
     },
     {
       "player": "LLULL, SERGIO",
@@ -16726,6 +16714,18 @@
       "prior": 0.01,
       "est_minutes": 761.0,
       "possessions": 1331.0,
+      "RAPM_Rank": 103
+    },
+    {
+      "player": "DIBARTOLOMEO, JOHN",
+      "team": "TEL",
+      "RAPM": 0.31,
+      "ORAPM": 0.11,
+      "DRAPM": 0.35,
+      "RAPM_basic": 0.36,
+      "prior": -0.08,
+      "est_minutes": 675.0,
+      "possessions": 1182.0,
       "RAPM_Rank": 104
     },
     {
@@ -16801,18 +16801,6 @@
       "RAPM_Rank": 110
     },
     {
-      "player": "GIFFEY, NIELS",
-      "team": "MUN",
-      "RAPM": 0.24,
-      "ORAPM": -0.07,
-      "DRAPM": 0.26,
-      "RAPM_basic": 0.2,
-      "prior": 0.01,
-      "est_minutes": 774.0,
-      "possessions": 1354.0,
-      "RAPM_Rank": 111
-    },
-    {
       "player": "MALCOLM, COLLIN",
       "team": "HTA",
       "RAPM": 0.24,
@@ -16822,7 +16810,7 @@
       "prior": -0.09,
       "est_minutes": 1685.0,
       "possessions": 2949.0,
-      "RAPM_Rank": 112
+      "RAPM_Rank": 111
     },
     {
       "player": "KALAITZAKIS, PANAGIOTIS",
@@ -16834,19 +16822,19 @@
       "prior": -0.18,
       "est_minutes": 388.0,
       "possessions": 679.0,
-      "RAPM_Rank": 113
+      "RAPM_Rank": 112
     },
     {
-      "player": "FAYE, MOUHAMED",
-      "team": "PRS",
-      "RAPM": 0.23,
-      "ORAPM": 0.06,
-      "DRAPM": 0.02,
-      "RAPM_basic": 0.36,
-      "prior": -0.12,
-      "est_minutes": 1293.0,
-      "possessions": 2262.0,
-      "RAPM_Rank": 114
+      "player": "GIFFEY, NIELS",
+      "team": "MUN",
+      "RAPM": 0.24,
+      "ORAPM": -0.07,
+      "DRAPM": 0.26,
+      "RAPM_basic": 0.2,
+      "prior": 0.01,
+      "est_minutes": 774.0,
+      "possessions": 1354.0,
+      "RAPM_Rank": 113
     },
     {
       "player": "HERNANGOMEZ, JUANCHO",
@@ -16858,6 +16846,18 @@
       "prior": -0.01,
       "est_minutes": 1736.0,
       "possessions": 3037.0,
+      "RAPM_Rank": 114
+    },
+    {
+      "player": "FAYE, MOUHAMED",
+      "team": "PRS",
+      "RAPM": 0.23,
+      "ORAPM": 0.06,
+      "DRAPM": 0.02,
+      "RAPM_basic": 0.36,
+      "prior": -0.12,
+      "est_minutes": 1293.0,
+      "possessions": 2262.0,
       "RAPM_Rank": 115
     },
     {
@@ -16909,18 +16909,6 @@
       "RAPM_Rank": 119
     },
     {
-      "player": "POIRIER, VINCENT",
-      "team": "IST",
-      "RAPM": 0.2,
-      "ORAPM": 0.68,
-      "DRAPM": -0.41,
-      "RAPM_basic": 0.04,
-      "prior": 0.15,
-      "est_minutes": 423.0,
-      "possessions": 740.0,
-      "RAPM_Rank": 120
-    },
-    {
       "player": "CALATHES, NICK",
       "team": "PAR",
       "RAPM": 0.2,
@@ -16930,6 +16918,18 @@
       "prior": -0.07,
       "est_minutes": 1012.0,
       "possessions": 1770.0,
+      "RAPM_Rank": 120
+    },
+    {
+      "player": "POIRIER, VINCENT",
+      "team": "IST",
+      "RAPM": 0.2,
+      "ORAPM": 0.68,
+      "DRAPM": -0.41,
+      "RAPM_basic": 0.04,
+      "prior": 0.15,
+      "est_minutes": 423.0,
+      "possessions": 740.0,
       "RAPM_Rank": 121
     },
     {
@@ -17065,18 +17065,6 @@
       "RAPM_Rank": 132
     },
     {
-      "player": "MORGAN, MATTHEW",
-      "team": "VIR",
-      "RAPM": 0.09,
-      "ORAPM": -0.33,
-      "DRAPM": 0.35,
-      "RAPM_basic": -0.38,
-      "prior": 0.49,
-      "est_minutes": 1155.0,
-      "possessions": 2021.0,
-      "RAPM_Rank": 133
-    },
-    {
       "player": "NUNN, KENDRICK",
       "team": "PAN",
       "RAPM": 0.09,
@@ -17086,6 +17074,18 @@
       "prior": 0.48,
       "est_minutes": 1572.0,
       "possessions": 2752.0,
+      "RAPM_Rank": 133
+    },
+    {
+      "player": "MORGAN, MATTHEW",
+      "team": "VIR",
+      "RAPM": 0.09,
+      "ORAPM": -0.33,
+      "DRAPM": 0.35,
+      "RAPM_basic": -0.38,
+      "prior": 0.49,
+      "est_minutes": 1155.0,
+      "possessions": 2021.0,
       "RAPM_Rank": 134
     },
     {
@@ -17173,18 +17173,6 @@
       "RAPM_Rank": 141
     },
     {
-      "player": "NEDOVIC, NEMANJA",
-      "team": "MCO",
-      "RAPM": 0.02,
-      "ORAPM": -0.35,
-      "DRAPM": 0.26,
-      "RAPM_basic": -0.21,
-      "prior": 0.24,
-      "est_minutes": 867.0,
-      "possessions": 1518.0,
-      "RAPM_Rank": 142
-    },
-    {
       "player": "JEKIRI, TONYE",
       "team": "PAR",
       "RAPM": 0.02,
@@ -17194,6 +17182,18 @@
       "prior": 0.1,
       "est_minutes": 534.0,
       "possessions": 934.0,
+      "RAPM_Rank": 142
+    },
+    {
+      "player": "NEDOVIC, NEMANJA",
+      "team": "MCO",
+      "RAPM": 0.02,
+      "ORAPM": -0.35,
+      "DRAPM": 0.26,
+      "RAPM_basic": -0.21,
+      "prior": 0.24,
+      "est_minutes": 867.0,
+      "possessions": 1518.0,
       "RAPM_Rank": 143
     },
     {
@@ -17341,30 +17341,6 @@
       "RAPM_Rank": 155
     },
     {
-      "player": "GINAT, TOMER",
-      "team": "HTA",
-      "RAPM": -0.08,
-      "ORAPM": -0.38,
-      "DRAPM": 0.34,
-      "RAPM_basic": -0.11,
-      "prior": 0.03,
-      "est_minutes": 274.0,
-      "possessions": 479.0,
-      "RAPM_Rank": 156
-    },
-    {
-      "player": "OMORUYI, EUGENE",
-      "team": "BAS",
-      "RAPM": -0.08,
-      "ORAPM": 0.72,
-      "DRAPM": -0.63,
-      "RAPM_basic": -0.32,
-      "prior": 0.29,
-      "est_minutes": 794.0,
-      "possessions": 1389.0,
-      "RAPM_Rank": 157
-    },
-    {
       "player": "M'BAYE, AMATH",
       "team": "PRS",
       "RAPM": -0.08,
@@ -17374,7 +17350,7 @@
       "prior": 0.14,
       "est_minutes": 1149.0,
       "possessions": 2012.0,
-      "RAPM_Rank": 158
+      "RAPM_Rank": 156
     },
     {
       "player": "CALE, MYLES",
@@ -17386,19 +17362,31 @@
       "prior": -0.18,
       "est_minutes": 989.0,
       "possessions": 1731.0,
-      "RAPM_Rank": 159
+      "RAPM_Rank": 157
     },
     {
-      "player": "BIRSEN, METECAN",
-      "team": "ULK",
-      "RAPM": -0.11,
-      "ORAPM": 0.32,
-      "DRAPM": -0.5,
-      "RAPM_basic": 0.04,
-      "prior": -0.2,
-      "est_minutes": 522.0,
-      "possessions": 913.0,
-      "RAPM_Rank": 160
+      "player": "OMORUYI, EUGENE",
+      "team": "BAS",
+      "RAPM": -0.08,
+      "ORAPM": 0.72,
+      "DRAPM": -0.63,
+      "RAPM_basic": -0.32,
+      "prior": 0.29,
+      "est_minutes": 794.0,
+      "possessions": 1389.0,
+      "RAPM_Rank": 158
+    },
+    {
+      "player": "GINAT, TOMER",
+      "team": "HTA",
+      "RAPM": -0.08,
+      "ORAPM": -0.38,
+      "DRAPM": 0.34,
+      "RAPM_basic": -0.11,
+      "prior": 0.03,
+      "est_minutes": 274.0,
+      "possessions": 479.0,
+      "RAPM_Rank": 159
     },
     {
       "player": "THEIS, DANIEL",
@@ -17410,6 +17398,18 @@
       "prior": 0.19,
       "est_minutes": 1415.0,
       "possessions": 2476.0,
+      "RAPM_Rank": 160
+    },
+    {
+      "player": "BIRSEN, METECAN",
+      "team": "ULK",
+      "RAPM": -0.11,
+      "ORAPM": 0.32,
+      "DRAPM": -0.5,
+      "RAPM_basic": 0.04,
+      "prior": -0.2,
+      "est_minutes": 522.0,
+      "possessions": 913.0,
       "RAPM_Rank": 161
     },
     {
@@ -17449,15 +17449,15 @@
       "RAPM_Rank": 164
     },
     {
-      "player": "EDWARDS, KESSLER",
-      "team": "HTA",
+      "player": "MASSA, BODIAN",
+      "team": "ASV",
       "RAPM": -0.14,
-      "ORAPM": -0.19,
-      "DRAPM": 0.09,
-      "RAPM_basic": -0.1,
-      "prior": -0.04,
-      "est_minutes": 227.0,
-      "possessions": 397.0,
+      "ORAPM": -0.59,
+      "DRAPM": 0.2,
+      "RAPM_basic": -0.12,
+      "prior": -0.08,
+      "est_minutes": 1091.0,
+      "possessions": 1909.0,
       "RAPM_Rank": 165
     },
     {
@@ -17473,15 +17473,15 @@
       "RAPM_Rank": 166
     },
     {
-      "player": "MASSA, BODIAN",
-      "team": "ASV",
+      "player": "EDWARDS, KESSLER",
+      "team": "HTA",
       "RAPM": -0.14,
-      "ORAPM": -0.59,
-      "DRAPM": 0.2,
-      "RAPM_basic": -0.12,
-      "prior": -0.08,
-      "est_minutes": 1091.0,
-      "possessions": 1909.0,
+      "ORAPM": -0.19,
+      "DRAPM": 0.09,
+      "RAPM_basic": -0.1,
+      "prior": -0.04,
+      "est_minutes": 227.0,
+      "possessions": 397.0,
       "RAPM_Rank": 167
     },
     {
@@ -17521,18 +17521,6 @@
       "RAPM_Rank": 170
     },
     {
-      "player": "JOVIC, STEFAN",
-      "team": "MUN",
-      "RAPM": -0.16,
-      "ORAPM": 0.12,
-      "DRAPM": -0.3,
-      "RAPM_basic": -0.2,
-      "prior": 0.01,
-      "est_minutes": 710.0,
-      "possessions": 1243.0,
-      "RAPM_Rank": 171
-    },
-    {
       "player": "SWIDER, COLE",
       "team": "IST",
       "RAPM": -0.16,
@@ -17542,19 +17530,19 @@
       "prior": 0.36,
       "est_minutes": 543.0,
       "possessions": 951.0,
-      "RAPM_Rank": 172
+      "RAPM_Rank": 171
     },
     {
-      "player": "JALLOW, KARIM",
-      "team": "VIR",
-      "RAPM": -0.17,
-      "ORAPM": 0.21,
-      "DRAPM": -0.4,
-      "RAPM_basic": -0.09,
-      "prior": -0.13,
-      "est_minutes": 1018.0,
-      "possessions": 1781.0,
-      "RAPM_Rank": 173
+      "player": "JOVIC, STEFAN",
+      "team": "MUN",
+      "RAPM": -0.16,
+      "ORAPM": 0.12,
+      "DRAPM": -0.3,
+      "RAPM_basic": -0.2,
+      "prior": 0.01,
+      "est_minutes": 710.0,
+      "possessions": 1243.0,
+      "RAPM_Rank": 172
     },
     {
       "player": "GARUBA, USMAN",
@@ -17566,19 +17554,19 @@
       "prior": 0.1,
       "est_minutes": 756.0,
       "possessions": 1323.0,
-      "RAPM_Rank": 174
+      "RAPM_Rank": 173
     },
     {
-      "player": "DOZIER, PJ",
-      "team": "IST",
-      "RAPM": -0.18,
-      "ORAPM": -0.04,
-      "DRAPM": 0.13,
-      "RAPM_basic": -0.41,
-      "prior": 0.22,
-      "est_minutes": 1055.0,
-      "possessions": 1846.0,
-      "RAPM_Rank": 175
+      "player": "JALLOW, KARIM",
+      "team": "VIR",
+      "RAPM": -0.17,
+      "ORAPM": 0.21,
+      "DRAPM": -0.4,
+      "RAPM_basic": -0.09,
+      "prior": -0.13,
+      "est_minutes": 1018.0,
+      "possessions": 1781.0,
+      "RAPM_Rank": 174
     },
     {
       "player": "FELIZ, ANDRES",
@@ -17590,6 +17578,18 @@
       "prior": 0.13,
       "est_minutes": 944.0,
       "possessions": 1652.0,
+      "RAPM_Rank": 175
+    },
+    {
+      "player": "DOZIER, PJ",
+      "team": "IST",
+      "RAPM": -0.18,
+      "ORAPM": -0.04,
+      "DRAPM": 0.13,
+      "RAPM_basic": -0.41,
+      "prior": 0.22,
+      "est_minutes": 1055.0,
+      "possessions": 1846.0,
       "RAPM_Rank": 176
     },
     {
@@ -17605,18 +17605,6 @@
       "RAPM_Rank": 177
     },
     {
-      "player": "OBST, ANDREAS",
-      "team": "MUN",
-      "RAPM": -0.21,
-      "ORAPM": 0.52,
-      "DRAPM": -0.79,
-      "RAPM_basic": -0.53,
-      "prior": 0.33,
-      "est_minutes": 1771.0,
-      "possessions": 3099.0,
-      "RAPM_Rank": 178
-    },
-    {
       "player": "VILDOZA, LUCA",
       "team": "VIR",
       "RAPM": -0.21,
@@ -17626,31 +17614,19 @@
       "prior": 0.1,
       "est_minutes": 1082.0,
       "possessions": 1893.0,
+      "RAPM_Rank": 178
+    },
+    {
+      "player": "OBST, ANDREAS",
+      "team": "MUN",
+      "RAPM": -0.21,
+      "ORAPM": 0.52,
+      "DRAPM": -0.79,
+      "RAPM_basic": -0.53,
+      "prior": 0.33,
+      "est_minutes": 1771.0,
+      "possessions": 3099.0,
       "RAPM_Rank": 179
-    },
-    {
-      "player": "MELLI, NICOLO",
-      "team": "ULK",
-      "RAPM": -0.23,
-      "ORAPM": -0.89,
-      "DRAPM": 0.56,
-      "RAPM_basic": -0.23,
-      "prior": -0.03,
-      "est_minutes": 1298.0,
-      "possessions": 2272.0,
-      "RAPM_Rank": 180
-    },
-    {
-      "player": "ALSTON JR. , DERRICK",
-      "team": "VIR",
-      "RAPM": -0.23,
-      "ORAPM": -0.46,
-      "DRAPM": 0.1,
-      "RAPM_basic": -0.4,
-      "prior": 0.17,
-      "est_minutes": 869.0,
-      "possessions": 1521.0,
-      "RAPM_Rank": 181
     },
     {
       "player": "NGOUAMA, MEHDY",
@@ -17662,6 +17638,30 @@
       "prior": 0.01,
       "est_minutes": 258.0,
       "possessions": 451.0,
+      "RAPM_Rank": 180
+    },
+    {
+      "player": "MELLI, NICOLO",
+      "team": "ULK",
+      "RAPM": -0.23,
+      "ORAPM": -0.89,
+      "DRAPM": 0.56,
+      "RAPM_basic": -0.23,
+      "prior": -0.03,
+      "est_minutes": 1298.0,
+      "possessions": 2272.0,
+      "RAPM_Rank": 181
+    },
+    {
+      "player": "ALSTON JR. , DERRICK",
+      "team": "VIR",
+      "RAPM": -0.23,
+      "ORAPM": -0.46,
+      "DRAPM": 0.1,
+      "RAPM_basic": -0.4,
+      "prior": 0.17,
+      "est_minutes": 869.0,
+      "possessions": 1521.0,
       "RAPM_Rank": 182
     },
     {
@@ -17725,18 +17725,6 @@
       "RAPM_Rank": 187
     },
     {
-      "player": "LOYD, JORDAN",
-      "team": "IST",
-      "RAPM": -0.28,
-      "ORAPM": -0.28,
-      "DRAPM": 0.32,
-      "RAPM_basic": -0.51,
-      "prior": 0.23,
-      "est_minutes": 1426.0,
-      "possessions": 2496.0,
-      "RAPM_Rank": 188
-    },
-    {
       "player": "MOTLEY, JOHNATHAN",
       "team": "HTA",
       "RAPM": -0.28,
@@ -17746,6 +17734,18 @@
       "prior": 0.33,
       "est_minutes": 1063.0,
       "possessions": 1859.0,
+      "RAPM_Rank": 188
+    },
+    {
+      "player": "LOYD, JORDAN",
+      "team": "IST",
+      "RAPM": -0.28,
+      "ORAPM": -0.28,
+      "DRAPM": 0.32,
+      "RAPM_basic": -0.51,
+      "prior": 0.23,
+      "est_minutes": 1426.0,
+      "possessions": 2496.0,
       "RAPM_Rank": 189
     },
     {
@@ -17761,18 +17761,6 @@
       "RAPM_Rank": 190
     },
     {
-      "player": "HEZONJA, MARIO",
-      "team": "MAD",
-      "RAPM": -0.3,
-      "ORAPM": 0.32,
-      "DRAPM": -0.75,
-      "RAPM_basic": -0.69,
-      "prior": 0.45,
-      "est_minutes": 1527.0,
-      "possessions": 2672.0,
-      "RAPM_Rank": 191
-    },
-    {
       "player": "TARPEY, TERRY",
       "team": "MCO",
       "RAPM": -0.3,
@@ -17782,6 +17770,18 @@
       "prior": -0.14,
       "est_minutes": 461.0,
       "possessions": 806.0,
+      "RAPM_Rank": 191
+    },
+    {
+      "player": "HEZONJA, MARIO",
+      "team": "MAD",
+      "RAPM": -0.3,
+      "ORAPM": 0.32,
+      "DRAPM": -0.75,
+      "RAPM_basic": -0.69,
+      "prior": 0.45,
+      "est_minutes": 1527.0,
+      "possessions": 2672.0,
       "RAPM_Rank": 192
     },
     {
@@ -17821,15 +17821,15 @@
       "RAPM_Rank": 195
     },
     {
-      "player": "VESELY, JAN",
+      "player": "NORRIS, MILES",
       "team": "BAR",
       "RAPM": -0.35,
-      "ORAPM": -0.53,
-      "DRAPM": 0.17,
-      "RAPM_basic": -0.47,
-      "prior": 0.13,
-      "est_minutes": 1324.0,
-      "possessions": 2317.0,
+      "ORAPM": -0.07,
+      "DRAPM": -0.26,
+      "RAPM_basic": -0.41,
+      "prior": 0.02,
+      "est_minutes": 733.0,
+      "possessions": 1282.0,
       "RAPM_Rank": 196
     },
     {
@@ -17845,18 +17845,6 @@
       "RAPM_Rank": 197
     },
     {
-      "player": "NORRIS, MILES",
-      "team": "BAR",
-      "RAPM": -0.35,
-      "ORAPM": -0.07,
-      "DRAPM": -0.26,
-      "RAPM_basic": -0.41,
-      "prior": 0.02,
-      "est_minutes": 733.0,
-      "possessions": 1282.0,
-      "RAPM_Rank": 198
-    },
-    {
       "player": "POKUSEVSKI, ALEKSEJ",
       "team": "PAR",
       "RAPM": -0.35,
@@ -17866,6 +17854,18 @@
       "prior": -0.01,
       "est_minutes": 556.0,
       "possessions": 974.0,
+      "RAPM_Rank": 198
+    },
+    {
+      "player": "VESELY, JAN",
+      "team": "BAR",
+      "RAPM": -0.35,
+      "ORAPM": -0.53,
+      "DRAPM": 0.17,
+      "RAPM_basic": -0.47,
+      "prior": 0.13,
+      "est_minutes": 1324.0,
+      "possessions": 2317.0,
       "RAPM_Rank": 199
     },
     {
@@ -17977,18 +17977,6 @@
       "RAPM_Rank": 208
     },
     {
-      "player": "DUNSTON, BRYANT",
-      "team": "MIL",
-      "RAPM": -0.43,
-      "ORAPM": -0.65,
-      "DRAPM": 0.28,
-      "RAPM_basic": -0.33,
-      "prior": -0.14,
-      "est_minutes": 420.0,
-      "possessions": 735.0,
-      "RAPM_Rank": 209
-    },
-    {
       "player": "DIAKITE, MAMADI",
       "team": "BAS",
       "RAPM": -0.43,
@@ -17998,6 +17986,18 @@
       "prior": 0.15,
       "est_minutes": 1358.0,
       "possessions": 2376.0,
+      "RAPM_Rank": 209
+    },
+    {
+      "player": "MITOGLOU, KONSTANTINOS",
+      "team": "PAN",
+      "RAPM": -0.43,
+      "ORAPM": -1.04,
+      "DRAPM": 0.6,
+      "RAPM_basic": -0.5,
+      "prior": 0.07,
+      "est_minutes": 748.0,
+      "possessions": 1308.0,
       "RAPM_Rank": 210
     },
     {
@@ -18013,15 +18013,15 @@
       "RAPM_Rank": 211
     },
     {
-      "player": "MITOGLOU, KONSTANTINOS",
-      "team": "PAN",
+      "player": "DUNSTON, BRYANT",
+      "team": "MIL",
       "RAPM": -0.43,
-      "ORAPM": -1.04,
-      "DRAPM": 0.6,
-      "RAPM_basic": -0.5,
-      "prior": 0.07,
-      "est_minutes": 748.0,
-      "possessions": 1308.0,
+      "ORAPM": -0.65,
+      "DRAPM": 0.28,
+      "RAPM_basic": -0.33,
+      "prior": -0.14,
+      "est_minutes": 420.0,
+      "possessions": 735.0,
       "RAPM_Rank": 212
     },
     {
@@ -18121,15 +18121,15 @@
       "RAPM_Rank": 220
     },
     {
-      "player": "OKOBO, ELIE",
-      "team": "MCO",
+      "player": "GABRIEL, WENYEN",
+      "team": "MUN",
       "RAPM": -0.53,
-      "ORAPM": 0.26,
-      "DRAPM": -1.04,
-      "RAPM_basic": -0.73,
-      "prior": 0.25,
-      "est_minutes": 1793.0,
-      "possessions": 3139.0,
+      "ORAPM": -0.54,
+      "DRAPM": -0.05,
+      "RAPM_basic": -0.57,
+      "prior": 0.04,
+      "est_minutes": 1123.0,
+      "possessions": 1965.0,
       "RAPM_Rank": 221
     },
     {
@@ -18145,15 +18145,15 @@
       "RAPM_Rank": 222
     },
     {
-      "player": "GABRIEL, WENYEN",
-      "team": "MUN",
+      "player": "OKOBO, ELIE",
+      "team": "MCO",
       "RAPM": -0.53,
-      "ORAPM": -0.54,
-      "DRAPM": -0.05,
-      "RAPM_basic": -0.57,
-      "prior": 0.04,
-      "est_minutes": 1123.0,
-      "possessions": 1965.0,
+      "ORAPM": 0.26,
+      "DRAPM": -1.04,
+      "RAPM_basic": -0.73,
+      "prior": 0.25,
+      "est_minutes": 1793.0,
+      "possessions": 3139.0,
       "RAPM_Rank": 223
     },
     {
@@ -18181,15 +18181,15 @@
       "RAPM_Rank": 225
     },
     {
-      "player": "MADAR, YAM",
-      "team": "HTA",
+      "player": "MILTON, SHAKE",
+      "team": "PAR",
       "RAPM": -0.55,
-      "ORAPM": -0.48,
-      "DRAPM": 0.0,
-      "RAPM_basic": -0.62,
-      "prior": 0.06,
-      "est_minutes": 265.0,
-      "possessions": 464.0,
+      "ORAPM": -0.71,
+      "DRAPM": 0.18,
+      "RAPM_basic": -0.65,
+      "prior": 0.08,
+      "est_minutes": 729.0,
+      "possessions": 1276.0,
       "RAPM_Rank": 226
     },
     {
@@ -18205,6 +18205,18 @@
       "RAPM_Rank": 227
     },
     {
+      "player": "MADAR, YAM",
+      "team": "HTA",
+      "RAPM": -0.55,
+      "ORAPM": -0.48,
+      "DRAPM": 0.0,
+      "RAPM_basic": -0.62,
+      "prior": 0.06,
+      "est_minutes": 265.0,
+      "possessions": 464.0,
+      "RAPM_Rank": 228
+    },
+    {
       "player": "BUTKEVICIUS, ARNAS",
       "team": "ZAL",
       "RAPM": -0.55,
@@ -18214,18 +18226,6 @@
       "prior": -0.02,
       "est_minutes": 1145.0,
       "possessions": 2003.0,
-      "RAPM_Rank": 228
-    },
-    {
-      "player": "MILTON, SHAKE",
-      "team": "PAR",
-      "RAPM": -0.55,
-      "ORAPM": -0.71,
-      "DRAPM": 0.18,
-      "RAPM_basic": -0.65,
-      "prior": 0.08,
-      "est_minutes": 729.0,
-      "possessions": 1276.0,
       "RAPM_Rank": 229
     },
     {
@@ -18361,18 +18361,6 @@
       "RAPM_Rank": 240
     },
     {
-      "player": "DANGUBIC, NEMANJA",
-      "team": "DUB",
-      "RAPM": -0.71,
-      "ORAPM": -0.5,
-      "DRAPM": -0.19,
-      "RAPM_basic": -0.45,
-      "prior": -0.27,
-      "est_minutes": 214.0,
-      "possessions": 374.0,
-      "RAPM_Rank": 241
-    },
-    {
       "player": "PREPELIC, KLEMEN",
       "team": "DUB",
       "RAPM": -0.71,
@@ -18382,6 +18370,18 @@
       "prior": -0.08,
       "est_minutes": 700.0,
       "possessions": 1226.0,
+      "RAPM_Rank": 241
+    },
+    {
+      "player": "DANGUBIC, NEMANJA",
+      "team": "DUB",
+      "RAPM": -0.71,
+      "ORAPM": -0.5,
+      "DRAPM": -0.19,
+      "RAPM_basic": -0.45,
+      "prior": -0.27,
+      "est_minutes": 214.0,
+      "possessions": 374.0,
       "RAPM_Rank": 242
     },
     {
@@ -18481,15 +18481,15 @@
       "RAPM_Rank": 250
     },
     {
-      "player": "OTURU, DAN",
-      "team": "HTA",
+      "player": "SAMODUROV, ALEXANDROS",
+      "team": "PAN",
       "RAPM": -0.85,
-      "ORAPM": -0.04,
-      "DRAPM": -0.76,
-      "RAPM_basic": -1.14,
-      "prior": 0.32,
-      "est_minutes": 1597.0,
-      "possessions": 2795.0,
+      "ORAPM": -0.54,
+      "DRAPM": -0.32,
+      "RAPM_basic": -0.97,
+      "prior": 0.13,
+      "est_minutes": 219.0,
+      "possessions": 383.0,
       "RAPM_Rank": 251
     },
     {
@@ -18505,15 +18505,15 @@
       "RAPM_Rank": 252
     },
     {
-      "player": "SAMODUROV, ALEXANDROS",
-      "team": "PAN",
+      "player": "OTURU, DAN",
+      "team": "HTA",
       "RAPM": -0.85,
-      "ORAPM": -0.54,
-      "DRAPM": -0.32,
-      "RAPM_basic": -0.97,
-      "prior": 0.13,
-      "est_minutes": 219.0,
-      "possessions": 383.0,
+      "ORAPM": -0.04,
+      "DRAPM": -0.76,
+      "RAPM_basic": -1.14,
+      "prior": 0.32,
+      "est_minutes": 1597.0,
+      "possessions": 2795.0,
       "RAPM_Rank": 253
     },
     {
@@ -18541,15 +18541,15 @@
       "RAPM_Rank": 255
     },
     {
-      "player": "SMAILAGIC, ALEN",
-      "team": "VIR",
+      "player": "GUDURIC, MARKO",
+      "team": "MIL",
       "RAPM": -0.89,
-      "ORAPM": -0.27,
-      "DRAPM": -0.73,
-      "RAPM_basic": -1.05,
-      "prior": 0.17,
-      "est_minutes": 944.0,
-      "possessions": 1652.0,
+      "ORAPM": -0.62,
+      "DRAPM": -0.06,
+      "RAPM_basic": -1.08,
+      "prior": 0.2,
+      "est_minutes": 1453.0,
+      "possessions": 2543.0,
       "RAPM_Rank": 256
     },
     {
@@ -18565,15 +18565,15 @@
       "RAPM_Rank": 257
     },
     {
-      "player": "GUDURIC, MARKO",
-      "team": "MIL",
+      "player": "SMAILAGIC, ALEN",
+      "team": "VIR",
       "RAPM": -0.89,
-      "ORAPM": -0.62,
-      "DRAPM": -0.06,
-      "RAPM_basic": -1.08,
-      "prior": 0.2,
-      "est_minutes": 1453.0,
-      "possessions": 2543.0,
+      "ORAPM": -0.27,
+      "DRAPM": -0.73,
+      "RAPM_basic": -1.05,
+      "prior": 0.17,
+      "est_minutes": 944.0,
+      "possessions": 1652.0,
       "RAPM_Rank": 258
     },
     {
