@@ -1516,11 +1516,17 @@ def main():
                 qf_entry = qf_data.get(label, {})
                 if qf_entry.get('winner'):
                     qf_winners[label] = qf_entry['winner']
-                elif qf_entry.get('series'):
-                    qf_series_state[label] = (
-                        qf_entry['series'][0], qf_entry['series'][1],
-                        qf_entry.get('higher_seed'), qf_entry.get('lower_seed')
-                    )
+                else:
+                    series = qf_entry.get('series') or [0, 0]
+                    # Only track in-progress state when at least one game was played.
+                    # Otherwise the data-derived lower seed may be None (play-in seed 8
+                    # isn't known until Game C finishes), so fall through to the
+                    # fresh-simulation branch which uses the newly computed pair.
+                    if (series[0] > 0 or series[1] > 0) and qf_entry.get('higher_seed') and qf_entry.get('lower_seed'):
+                        qf_series_state[label] = (
+                            series[0], series[1],
+                            qf_entry['higher_seed'], qf_entry['lower_seed']
+                        )
 
             sf_data = playoff_results.get('sf', {})
             if sf_data.get('sf1') and sf_data['sf1'].get('winner'):
@@ -1755,11 +1761,17 @@ def main():
                 qf_entry = qf_data.get(label, {})
                 if qf_entry.get('winner'):
                     qf_winners[label] = qf_entry['winner']
-                elif qf_entry.get('series'):
-                    qf_series_state[label] = (
-                        qf_entry['series'][0], qf_entry['series'][1],
-                        qf_entry.get('higher_seed'), qf_entry.get('lower_seed')
-                    )
+                else:
+                    series = qf_entry.get('series') or [0, 0]
+                    # Only track in-progress state when at least one game was played.
+                    # Otherwise the data-derived lower seed may be None (play-in seed 8
+                    # isn't known until Game C finishes), so fall through to the
+                    # fresh-simulation branch which uses the newly computed pair.
+                    if (series[0] > 0 or series[1] > 0) and qf_entry.get('higher_seed') and qf_entry.get('lower_seed'):
+                        qf_series_state[label] = (
+                            series[0], series[1],
+                            qf_entry['higher_seed'], qf_entry['lower_seed']
+                        )
 
             sf_data = playoff_results.get('sf', {})
             if sf_data.get('sf1') and sf_data['sf1'].get('winner'):
