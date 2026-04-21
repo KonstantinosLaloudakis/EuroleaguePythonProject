@@ -2474,6 +2474,14 @@ def main():
                 playoff_results_data, playoff_matchup_probs, seeded
             )
 
+            # Align championship_odds with the 50k-sim source for display consistency
+            for entry in path_to_title:
+                entry['championship_odds'] = round(championship_odds.get(entry['team'], 0.0), 1)
+            path_to_title.sort(key=lambda e: (
+                0 if e['status'] != 'eliminated' else 1,
+                -e['championship_odds'],
+            ))
+
             # Build Series Hub data
             series_data = compute_series_data(
                 playoff_results_data, playoff_matchup_probs, seeded,
@@ -2511,6 +2519,13 @@ def main():
                 path_to_title = compute_path_to_title(
                     None, playoff_matchup_probs, seeded
                 )
+                # Align championship_odds with the 50k-sim source for display consistency
+                for entry in path_to_title:
+                    entry['championship_odds'] = round(championship_odds.get(entry['team'], 0.0), 1)
+                path_to_title.sort(key=lambda e: (
+                    0 if e['status'] != 'eliminated' else 1,
+                    -e['championship_odds'],
+                ))
                 series_data = compute_series_data(
                     None, playoff_matchup_probs, seeded, series_win_probs, games_df,
                 )
@@ -2531,6 +2546,7 @@ def main():
         'game_control': gci_data,
         'playoff_matchup_probs': playoff_matchup_probs,
         'playoff_results': playoff_results_data,
+        'championship_odds': championship_odds,
         'championship_odds_history': championship_odds_history,
         'playoff_recaps': playoff_recaps,
         'path_to_title': path_to_title,

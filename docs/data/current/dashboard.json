@@ -1,6 +1,6 @@
 {
   "round": 38,
-  "updated": "2026-04-21T04:22:31Z",
+  "updated": "2026-04-21T17:23:32Z",
   "teams": [
     {
       "team": "OLY",
@@ -41462,6 +41462,18 @@
     }
   },
   "playoff_results": null,
+  "championship_odds": {
+    "OLY": 22.0,
+    "PAM": 13.1,
+    "MAD": 16.2,
+    "ULK": 8.3,
+    "ZAL": 12.1,
+    "HTA": 5.3,
+    "PAN": 10.7,
+    "MCO": 9.1,
+    "BAR": 2.5,
+    "RED": 0.8
+  },
   "championship_odds_history": [
     {
       "date": "2026-04-17",
@@ -41486,7 +41498,7 @@
       "team": "OLY",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 21.6,
+      "championship_odds": 22.0,
       "rounds": [
         {
           "round": "play_in_1",
@@ -41722,7 +41734,7 @@
       "team": "ZAL",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 12.0,
+      "championship_odds": 12.1,
       "rounds": [
         {
           "round": "play_in_1",
@@ -41799,7 +41811,7 @@
       "team": "PAN",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 10.8,
+      "championship_odds": 10.7,
       "rounds": [
         {
           "round": "play_in_1",
@@ -41902,7 +41914,7 @@
       "team": "MCO",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 8.7,
+      "championship_odds": 9.1,
       "rounds": [
         {
           "round": "play_in_1",
@@ -42005,7 +42017,7 @@
       "team": "ULK",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 8.5,
+      "championship_odds": 8.3,
       "rounds": [
         {
           "round": "play_in_1",
@@ -42082,7 +42094,7 @@
       "team": "HTA",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 5.5,
+      "championship_odds": 5.3,
       "rounds": [
         {
           "round": "play_in_1",
@@ -42159,7 +42171,7 @@
       "team": "BAR",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 2.6,
+      "championship_odds": 2.5,
       "rounds": [
         {
           "round": "play_in_1",
@@ -42252,7 +42264,7 @@
       "team": "RED",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 0.9,
+      "championship_odds": 0.8,
       "rounds": [
         {
           "round": "play_in_1",

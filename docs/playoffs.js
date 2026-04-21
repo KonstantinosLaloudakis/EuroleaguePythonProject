@@ -44,6 +44,8 @@ let _bracket = {};   // round → matchup index → { a, b, winner }
 let _champion = null;
 let _matchupProbs = {};  // pre-computed pairwise probabilities from backend
 let _realResults = null;  // locked playoff results from backend
+let _serverOdds = null;   // server-computed championship odds (authoritative initial view)
+let _hasUserInteracted = false;  // set true on bracket click — switches MC to live sim
 
 // ── Elo win probability (fallback) ──────────────────────────────────────
 function eloWinProb(eloA, eloB, neutral = false) {
@@ -180,6 +182,7 @@ async function init() {
 
         _matchupProbs = data.playoff_matchup_probs || {};
         _realResults = data.playoff_results || null;
+        _serverOdds = data.championship_odds || null;
 
         // Top 10 teams seeded 1-10
         _seeded = _teams.slice(0, 10).map((t, i) => ({
@@ -215,6 +218,7 @@ function resetBracket() {
     } else {
         renderBracket();
     }
+    _hasUserInteracted = false;
     runMonteCarlo();
     updateURL();
 }
@@ -436,6 +440,7 @@ function pickWinner(round, idx, side) {
     // Cascade: feed winner into next round
     cascadeForward(round, idx, side);
 
+    _hasUserInteracted = true;
     renderBracket();
     runMonteCarlo();
     updateURL();
@@ -512,6 +517,7 @@ function undoPick(round, idx) {
         _champion = null;
     }
 
+    _hasUserInteracted = true;
     renderBracket();
     runMonteCarlo();
     updateURL();
@@ -542,6 +548,7 @@ function clearMatchup(round, idx) {
 
 // ── Auto-fill by favorites ───────────────────────────────────────────────
 function autoFill() {
+    _hasUserInteracted = true;
     resetBracket();
 
     // Walk through each round in order, picking the higher-probability side
@@ -573,6 +580,17 @@ function autoFill() {
 // ── Monte Carlo simulation ───────────────────────────────────────────────
 function runMonteCarlo() {
     if (_seeded.length < 10) return;
+
+    // Until the user interacts, show the authoritative server-side odds so
+    // the MC chart and Path to Title table match exactly on initial load.
+    if (!_hasUserInteracted && _serverOdds && Object.keys(_serverOdds).length) {
+        const counts = {};
+        for (const t of _seeded) {
+            counts[t.team] = ((_serverOdds[t.team] || 0) / 100) * MC_ITERATIONS;
+        }
+        renderMonteCarloChart(counts);
+        return;
+    }
 
     const counts = {};
     for (const t of _seeded) counts[t.team] = 0;
@@ -853,6 +871,7 @@ function loadFromURL() {
     ];
 
     let pos = 0;
+    let anyPicked = false;
     for (const { key, count } of rounds) {
         for (let i = 0; i < count; i++) {
             if (pos >= code.length) break;
@@ -863,9 +882,11 @@ function loadFromURL() {
             const side = ch === 'a' ? 'a' : 'b';
             m.winner = side === 'a' ? m.a : m.b;
             cascadeForward(key, i, side);
+            anyPicked = true;
         }
     }
 
+    if (anyPicked) _hasUserInteracted = true;
     renderBracket();
 }
 
