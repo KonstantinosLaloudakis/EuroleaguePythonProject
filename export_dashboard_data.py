@@ -1325,6 +1325,21 @@ def main():
         except Exception:
             pass
 
+        def _infer_phase(gc):
+            # Fallback when the cached schedule XML predates the playoff
+            # schedule announcement. Euroleague's GameCode convention:
+            # 381-383 = Play-In, 384-403 = QF (best-of-5, 4 series),
+            # 404-405 = SF (Final Four), 406 = Final.
+            if 381 <= gc <= 383:
+                return 'PI'
+            if 384 <= gc <= 403:
+                return 'QF'
+            if gc in (404, 405):
+                return 'SF'
+            if gc == 406:
+                return 'F'
+            return ''
+
         # Filter to playoff games with scores
         playoff_games = []
         for g in game_results:
@@ -1332,7 +1347,7 @@ def main():
             if isinstance(gc, float):
                 gc = int(gc)
             if gc > 380 and g.get('LocalScore', 0) > 0:
-                phase = gc_to_phase.get(gc, '')
+                phase = gc_to_phase.get(gc) or _infer_phase(gc)
                 playoff_games.append({
                     'game_code': gc,
                     'home': g['LocalTeam'],
