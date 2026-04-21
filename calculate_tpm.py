@@ -25,8 +25,14 @@ def calculate_tpm_2025():
                 adj_net[e['Team']] = e['Adj_Net']
                 
     player_data = {}
-    
+
     for game in games:
+        # Skip playoff/play-in games (GameCode > 380) — TPM is a regular-season stat
+        gc = game.get('Gamecode', 0)
+        if isinstance(gc, float):
+            gc = int(gc)
+        if gc > 380:
+            continue
         for is_local, team_key in [(True, 'local.players'), (False, 'road.players')]:
             players = game.get(team_key, [])
             for p_entry in players:

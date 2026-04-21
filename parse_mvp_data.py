@@ -117,10 +117,13 @@ def parse_game_data():
     print("Parsed Data Sample:")
     df_parsed = pd.DataFrame(player_stats_list)
     print(df_parsed.head(3))
-    
-    # Save Parsed Games
-    df_parsed.to_json('mvp_parsed_games.json', orient='records', indent=4)
-    print("Saved mvp_parsed_games.json")
+
+    # Save Parsed Games (regular-season only — playoffs have GameCode > 380).
+    # MVP ladder, per-round MVP, player performance models, and the MVP race
+    # simulation all read this file and should see a 38-game RS sample.
+    df_parsed_rs = df_parsed[df_parsed['GameCode'] <= 380].copy()
+    df_parsed_rs.to_json('mvp_parsed_games.json', orient='records', indent=4)
+    print(f"Saved mvp_parsed_games.json ({len(df_parsed_rs)} RS rows, {len(df_parsed) - len(df_parsed_rs)} playoff rows filtered)")
 
     print("Game Results Sample:")
     df_results = pd.DataFrame(game_results)

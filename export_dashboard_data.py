@@ -754,6 +754,10 @@ def build_game_recaps():
 
     for game in all_stats:
         gc = game.get('Gamecode', game.get('GameCode'))
+        # Skip playoff/play-in games (GameCode > 380) — Game Recaps cover regular season only
+        gc_int = int(gc) if isinstance(gc, (int, float)) else 0
+        if gc_int > 380:
+            continue
         bt = bt_lookup.get(gc)
         if not bt:
             continue  # skip games not in backtest (future/unplayed)
@@ -949,6 +953,13 @@ def main():
         home_rec        = defaultdict(lambda: {'W': 0, 'L': 0})
         away_rec        = defaultdict(lambda: {'W': 0, 'L': 0})
         for g in backtest_data:
+            # Skip playoff/play-in games (GameCode > 380) — Last 5 and home/away
+            # records must reflect regular-season performance only.
+            gc = g.get('GameCode', 0)
+            if isinstance(gc, float):
+                gc = int(gc)
+            if gc > 380:
+                continue
             home, away, winner = g.get('Home'), g.get('Away'), g.get('ActualWinner')
             rnd = g.get('Round', 0)
             if home and away and winner:

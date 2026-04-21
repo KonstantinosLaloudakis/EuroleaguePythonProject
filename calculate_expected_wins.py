@@ -44,7 +44,12 @@ def calculate_expected_wins():
             for e in json.load(f):
                 adj_net[e['Team']] = e['Adj_Net']
     
-    played = [g for g in all_games if g['LocalScore'] > 0]
+    def _rs(g):
+        gc = g.get('GameCode', 0)
+        if isinstance(gc, float):
+            gc = int(gc)
+        return gc <= 380 and g['LocalScore'] > 0
+    played = [g for g in all_games if _rs(g)]
     
     # Track per-team stats
     teams = {}

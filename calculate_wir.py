@@ -13,8 +13,14 @@ def calculate_wir_2025():
         games = json.load(f)
         
     player_data = {}
-    
+
     for game in games:
+        # Skip playoff/play-in games (GameCode > 380) — WIR is a regular-season stat
+        gc = game.get('Gamecode', 0)
+        if isinstance(gc, float):
+            gc = int(gc)
+        if gc > 380:
+            continue
         for team_key in ['local.players', 'road.players']:
             players = game.get(team_key, [])
             for p_entry in players:
