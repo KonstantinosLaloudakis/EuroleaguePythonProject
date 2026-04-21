@@ -130,23 +130,29 @@ def parse_game_data():
     df_results.to_json('mvp_game_results.json', orient='records', indent=4)
     print("Saved mvp_game_results.json")
     
-    # Compute Standings
+    # Compute Standings (regular season only — playoff games have GameCode > 380)
     standings = {}
-    
+
     for res in game_results:
+        gc = res.get('GameCode', 0)
+        if isinstance(gc, float):
+            gc = int(gc)
+        if gc > 380:  # Skip play-in, QF, SF, Final
+            continue
+
         local = res['LocalTeam']
         road = res['RoadTeam']
         winner = res['Winner']
-        
+
         if local == "UNKNOWN" or road == "UNKNOWN":
             continue
-            
+
         if local not in standings: standings[local] = {'W': 0, 'L': 0, 'GP': 0}
         if road not in standings: standings[road] = {'W': 0, 'L': 0, 'GP': 0}
-        
+
         standings[local]['GP'] += 1
         standings[road]['GP'] += 1
-        
+
         if winner == local:
             standings[local]['W'] += 1
             standings[road]['L'] += 1

@@ -103,7 +103,8 @@ def run_monte_carlo(num_simulations=10000):
 
     try:
         df = pd.read_json('mvp_game_results.json')
-        played = df[(df['LocalScore'] > 0) & (df['RoadScore'] > 0)].copy()
+        # Regular-season only: playoff games have GameCode > 380
+        played = df[(df['LocalScore'] > 0) & (df['RoadScore'] > 0) & (df['GameCode'] <= 380)].copy()
         
         # Base HCA
         hca = (played['LocalScore'] - played['RoadScore']).mean()

@@ -42,12 +42,22 @@ NAME_TO_CODE = {
 
 
 def load_game_data():
-    """Load all played games from mvp_game_results.json."""
+    """Load regular-season played games from mvp_game_results.json.
+
+    Excludes playoff games (GameCode > 380) so adjusted ratings reflect
+    only the 38-round regular season.
+    """
     with open('mvp_game_results.json', 'r') as f:
         data = json.load(f)
-    
-    played = [g for g in data if g['LocalScore'] > 0 and g['RoadScore'] > 0]
-    print(f"Loaded {len(played)} played games.")
+
+    def _rs(g):
+        gc = g.get('GameCode', 0)
+        if isinstance(gc, float):
+            gc = int(gc)
+        return gc <= 380 and g['LocalScore'] > 0 and g['RoadScore'] > 0
+
+    played = [g for g in data if _rs(g)]
+    print(f"Loaded {len(played)} played games (regular season only).")
     return played
 
 
