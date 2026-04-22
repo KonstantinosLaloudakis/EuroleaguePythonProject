@@ -43,10 +43,13 @@ async function init() {
         });
         seasonSelect.disabled = false;
 
-        // Auto-select from URL params (e.g. ?season=2023&game=170)
+        // Auto-select from URL params (e.g. ?season=2023&game=170).
+        // Accept both ?game= and ?gamecode= since callers across the site
+        // use both (playoffs.js, series.js use gamecode; game-control.js,
+        // gci-history.js use game).
         const params = new URLSearchParams(window.location.search);
         const urlSeason = params.get('season');
-        const urlGame = params.get('game');
+        const urlGame = params.get('game') || params.get('gamecode');
         if (urlSeason && seasonSelect.querySelector(`option[value="${urlSeason}"]`)) {
             seasonSelect.value = urlSeason;
             seasonSelect.dispatchEvent(new Event('change'));
