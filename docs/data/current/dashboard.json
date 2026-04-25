@@ -1,6 +1,6 @@
 {
   "round": 38,
-  "updated": "2026-04-25T21:07:29Z",
+  "updated": "2026-04-25T21:23:20Z",
   "teams": [
     {
       "team": "OLY",
@@ -6208,7 +6208,7 @@
       "rank": 1,
       "player": "VEZENKOV, SASHA",
       "team": "OLY",
-      "mvp_score": 90.47,
+      "mvp_score": 90.43,
       "avg_pir": 23.12,
       "avg_gmsc": 16.05,
       "wpa": 1286.7,
@@ -6236,7 +6236,7 @@
       "rank": 3,
       "player": "BALDWIN IV, WADE",
       "team": "ULK",
-      "mvp_score": 82.43,
+      "mvp_score": 82.39,
       "avg_pir": 16.38,
       "avg_gmsc": 11.01,
       "wpa": 1342.5,
@@ -6250,7 +6250,7 @@
       "rank": 4,
       "player": "BRYANT, ELIJAH",
       "team": "HTA",
-      "mvp_score": 82.43,
+      "mvp_score": 82.39,
       "avg_pir": 20.59,
       "avg_gmsc": 12.77,
       "wpa": 1168.2,
@@ -6264,10 +6264,10 @@
       "rank": 5,
       "player": "JAMES, MIKE",
       "team": "MCO",
-      "mvp_score": 81.12,
+      "mvp_score": 81.28,
       "avg_pir": 18.88,
       "avg_gmsc": 12.98,
-      "wpa": 1299.1,
+      "wpa": 1315.7,
       "team_win_pct": 57.9,
       "clutch_eff": 0.2029,
       "clutch_pts": 22.0,
@@ -6278,7 +6278,7 @@
       "rank": 6,
       "player": "NUNN, KENDRICK",
       "team": "PAN",
-      "mvp_score": 80.58,
+      "mvp_score": 80.54,
       "avg_pir": 16.81,
       "avg_gmsc": 12.6,
       "wpa": 1322.7,
@@ -6292,7 +6292,7 @@
       "rank": 7,
       "player": "MONEKE, CHIMA",
       "team": "RED",
-      "mvp_score": 80.53,
+      "mvp_score": 80.5,
       "avg_pir": 18.23,
       "avg_gmsc": 11.89,
       "wpa": 1155.8,
@@ -6306,7 +6306,7 @@
       "rank": 8,
       "player": "DORSEY, TYLER",
       "team": "OLY",
-      "mvp_score": 80.08,
+      "mvp_score": 80.04,
       "avg_pir": 15.08,
       "avg_gmsc": 11.31,
       "wpa": 1385.4,
@@ -6320,7 +6320,7 @@
       "rank": 9,
       "player": "HIFI, NADIR",
       "team": "PRS",
-      "mvp_score": 80.07,
+      "mvp_score": 80.03,
       "avg_pir": 17.57,
       "avg_gmsc": 12.26,
       "wpa": 1443.1,
@@ -6334,7 +6334,7 @@
       "rank": 10,
       "player": "HORTON TUCKER, TALEN",
       "team": "ULK",
-      "mvp_score": 79.83,
+      "mvp_score": 79.79,
       "avg_pir": 14.67,
       "avg_gmsc": 10.36,
       "wpa": 1308.9,
@@ -6348,7 +6348,7 @@
       "rank": 11,
       "player": "MILUTINOV, NIKOLA",
       "team": "OLY",
-      "mvp_score": 79.61,
+      "mvp_score": 79.59,
       "avg_pir": 20.09,
       "avg_gmsc": 12.39,
       "wpa": 704.0,
@@ -6362,7 +6362,7 @@
       "rank": 12,
       "player": "WRIGHT IV, MCKINLEY",
       "team": "DUB",
-      "mvp_score": 79.06,
+      "mvp_score": 79.02,
       "avg_pir": 15.71,
       "avg_gmsc": 11.41,
       "wpa": 1346.9,
@@ -6376,7 +6376,7 @@
       "rank": 13,
       "player": "NWORA, JORDAN",
       "team": "RED",
-      "mvp_score": 78.15,
+      "mvp_score": 78.11,
       "avg_pir": 16.18,
       "avg_gmsc": 11.37,
       "wpa": 1229.7,
@@ -6390,7 +6390,7 @@
       "rank": 14,
       "player": "LUWAWU-CABARROT, TIMOTHE",
       "team": "BAS",
-      "mvp_score": 77.34,
+      "mvp_score": 77.29,
       "avg_pir": 16.39,
       "avg_gmsc": 12.38,
       "wpa": 1488.0,
@@ -6404,7 +6404,7 @@
       "rank": 15,
       "player": "MONTERO, JEAN",
       "team": "PAM",
-      "mvp_score": 76.82,
+      "mvp_score": 76.8,
       "avg_pir": 16.44,
       "avg_gmsc": 11.43,
       "wpa": 975.7,
@@ -8674,7 +8674,7 @@
       "fg_pct": 54.3,
       "fg3_pct": 39.6,
       "ft_pct": 89.2,
-      "mvp_score": 90.5,
+      "mvp_score": 90.4,
       "mvp_rank": 1,
       "wpa": 1286.7,
       "consistency": 0.747,
@@ -8762,9 +8762,9 @@
       "fg_pct": 42.1,
       "fg3_pct": 32.3,
       "ft_pct": 85.9,
-      "mvp_score": 81.1,
+      "mvp_score": 81.3,
       "mvp_rank": 5,
-      "wpa": 1299.1,
+      "wpa": 1315.7,
       "consistency": 0.742,
       "clutch_eff": 0.203
     },
@@ -8828,7 +8828,7 @@
       "fg_pct": 41.5,
       "fg3_pct": 35.1,
       "ft_pct": 84.2,
-      "mvp_score": 80.1,
+      "mvp_score": 80.0,
       "mvp_rank": 9,
       "wpa": 1443.1,
       "consistency": 0.673,
@@ -8916,7 +8916,7 @@
       "fg_pct": 50.1,
       "fg3_pct": 37.9,
       "ft_pct": 90.4,
-      "mvp_score": 80.6,
+      "mvp_score": 80.5,
       "mvp_rank": 6,
       "wpa": 1322.7,
       "consistency": 0.621,
@@ -9005,7 +9005,7 @@
       "fg3_pct": 30.4,
       "ft_pct": 86.4,
       "mvp_score": 69.1,
-      "mvp_rank": 28,
+      "mvp_rank": 29,
       "wpa": 818.0,
       "consistency": 0.699,
       "clutch_eff": 0.257
@@ -9026,7 +9026,7 @@
       "fg_pct": 71.1,
       "fg3_pct": 0.0,
       "ft_pct": 66.4,
-      "mvp_score": 75.7,
+      "mvp_score": 75.6,
       "mvp_rank": 17,
       "wpa": 995.9,
       "consistency": 0.682,
@@ -9071,7 +9071,7 @@
       "fg3_pct": 0.0,
       "ft_pct": 73.0,
       "mvp_score": 69.7,
-      "mvp_rank": 24,
+      "mvp_rank": 25,
       "wpa": 691.6,
       "consistency": 0.673,
       "clutch_eff": 0.143
@@ -9092,7 +9092,7 @@
       "fg_pct": 51.7,
       "fg3_pct": 37.8,
       "ft_pct": 85.3,
-      "mvp_score": 79.1,
+      "mvp_score": 79.0,
       "mvp_rank": 12,
       "wpa": 1346.9,
       "consistency": 0.591,
@@ -9158,9 +9158,9 @@
       "fg_pct": 53.7,
       "fg3_pct": 36.5,
       "ft_pct": 81.9,
-      "mvp_score": 71.9,
+      "mvp_score": 72.2,
       "mvp_rank": 23,
-      "wpa": 814.9,
+      "wpa": 845.0,
       "consistency": 0.66,
       "clutch_eff": 0.438
     },
@@ -9202,7 +9202,7 @@
       "fg_pct": 45.8,
       "fg3_pct": 39.9,
       "ft_pct": 80.1,
-      "mvp_score": 80.1,
+      "mvp_score": 80.0,
       "mvp_rank": 8,
       "wpa": 1385.4,
       "consistency": 0.643,
@@ -9224,7 +9224,7 @@
       "fg_pct": 50.6,
       "fg3_pct": 49.5,
       "ft_pct": 82.4,
-      "mvp_score": 66.8,
+      "mvp_score": 66.7,
       "mvp_rank": 40,
       "wpa": 820.2,
       "consistency": 0.679,
@@ -9268,7 +9268,7 @@
       "fg_pct": 51.6,
       "fg3_pct": 44.3,
       "ft_pct": 79.2,
-      "mvp_score": 72.5,
+      "mvp_score": 72.4,
       "mvp_rank": 21,
       "wpa": 929.7,
       "consistency": 0.615,
@@ -9290,9 +9290,9 @@
       "fg_pct": 46.3,
       "fg3_pct": 38.7,
       "ft_pct": 72.6,
-      "mvp_score": 68.9,
-      "mvp_rank": 29,
-      "wpa": 1007.7,
+      "mvp_score": 69.2,
+      "mvp_rank": 28,
+      "wpa": 1032.2,
       "consistency": 0.589,
       "clutch_eff": 0.124
     },
@@ -9335,7 +9335,7 @@
       "fg3_pct": 28.1,
       "ft_pct": 86.1,
       "mvp_score": 60.4,
-      "mvp_rank": 75,
+      "mvp_rank": 76,
       "wpa": 689.9,
       "consistency": 0.581,
       "clutch_eff": 0.173
@@ -9423,7 +9423,7 @@
       "fg3_pct": 31.0,
       "ft_pct": 82.7,
       "mvp_score": 65.2,
-      "mvp_rank": 47,
+      "mvp_rank": 48,
       "wpa": 754.6,
       "consistency": 0.689,
       "clutch_eff": 0.25
@@ -9466,7 +9466,7 @@
       "fg_pct": 51.6,
       "fg3_pct": 34.1,
       "ft_pct": 81.9,
-      "mvp_score": 67.9,
+      "mvp_score": 67.8,
       "mvp_rank": 36,
       "wpa": 1015.2,
       "consistency": 0.611,
@@ -9488,7 +9488,7 @@
       "fg_pct": 42.2,
       "fg3_pct": 31.4,
       "ft_pct": 78.8,
-      "mvp_score": 68.6,
+      "mvp_score": 68.5,
       "mvp_rank": 31,
       "wpa": 954.4,
       "consistency": 0.625,
@@ -9532,9 +9532,9 @@
       "fg_pct": 49.6,
       "fg3_pct": 32.3,
       "ft_pct": 79.2,
-      "mvp_score": 69.5,
-      "mvp_rank": 25,
-      "wpa": 898.7,
+      "mvp_score": 69.9,
+      "mvp_rank": 24,
+      "wpa": 929.3,
       "consistency": 0.687,
       "clutch_eff": 0.272
     },
@@ -9598,9 +9598,9 @@
       "fg_pct": 45.6,
       "fg3_pct": 41.4,
       "ft_pct": 86.6,
-      "mvp_score": 72.8,
+      "mvp_score": 72.9,
       "mvp_rank": 20,
-      "wpa": 1219.8,
+      "wpa": 1231.5,
       "consistency": 0.534,
       "clutch_eff": 0.442
     },
@@ -9686,9 +9686,9 @@
       "fg_pct": 60.4,
       "fg3_pct": 27.6,
       "ft_pct": 80.7,
-      "mvp_score": 65.0,
-      "mvp_rank": 48,
-      "wpa": 713.2,
+      "mvp_score": 65.4,
+      "mvp_rank": 45,
+      "wpa": 743.6,
       "consistency": 0.67,
       "clutch_eff": 0.204
     },
@@ -9796,7 +9796,7 @@
       "fg_pct": 45.6,
       "fg3_pct": 42.1,
       "ft_pct": 83.8,
-      "mvp_score": 62.6,
+      "mvp_score": 62.5,
       "mvp_rank": 62,
       "wpa": 1005.4,
       "consistency": 0.595,
@@ -9884,7 +9884,7 @@
       "fg_pct": 46.7,
       "fg3_pct": 36.7,
       "ft_pct": 91.4,
-      "mvp_score": 62.2,
+      "mvp_score": 62.1,
       "mvp_rank": 64,
       "wpa": 887.1,
       "consistency": 0.612,
@@ -9928,9 +9928,9 @@
       "fg_pct": 42.3,
       "fg3_pct": 34.5,
       "ft_pct": 84.4,
-      "mvp_score": 66.3,
+      "mvp_score": 66.7,
       "mvp_rank": 41,
-      "wpa": 980.0,
+      "wpa": 1022.4,
       "consistency": 0.574,
       "clutch_eff": 0.109
     },
@@ -9951,7 +9951,7 @@
       "fg3_pct": 0.0,
       "ft_pct": 79.4,
       "mvp_score": 58.8,
-      "mvp_rank": 85,
+      "mvp_rank": 86,
       "wpa": 409.3,
       "consistency": 0.589,
       "clutch_eff": 0.054
@@ -10060,7 +10060,7 @@
       "fg_pct": 51.9,
       "fg3_pct": 40.7,
       "ft_pct": 78.4,
-      "mvp_score": 62.3,
+      "mvp_score": 62.2,
       "mvp_rank": 63,
       "wpa": 988.8,
       "consistency": 0.626,
@@ -10082,7 +10082,7 @@
       "fg_pct": 60.7,
       "fg3_pct": 43.9,
       "ft_pct": 64.3,
-      "mvp_score": 67.2,
+      "mvp_score": 67.1,
       "mvp_rank": 39,
       "wpa": 916.0,
       "consistency": 0.553,
@@ -10104,7 +10104,7 @@
       "fg_pct": 49.1,
       "fg3_pct": 37.7,
       "ft_pct": 81.9,
-      "mvp_score": 61.3,
+      "mvp_score": 61.2,
       "mvp_rank": 67,
       "wpa": 667.8,
       "consistency": 0.639,
@@ -10126,7 +10126,7 @@
       "fg_pct": 45.5,
       "fg3_pct": 30.2,
       "ft_pct": 87.0,
-      "mvp_score": 61.2,
+      "mvp_score": 61.1,
       "mvp_rank": 68,
       "wpa": 524.7,
       "consistency": 0.565,
@@ -10214,7 +10214,7 @@
       "fg_pct": 45.7,
       "fg3_pct": 39.2,
       "ft_pct": 90.5,
-      "mvp_score": 63.9,
+      "mvp_score": 63.8,
       "mvp_rank": 53,
       "wpa": 1068.6,
       "consistency": 0.557,
@@ -10346,9 +10346,9 @@
       "fg_pct": 44.3,
       "fg3_pct": 38.3,
       "ft_pct": 83.3,
-      "mvp_score": 61.0,
+      "mvp_score": 61.1,
       "mvp_rank": 70,
-      "wpa": 669.2,
+      "wpa": 677.7,
       "consistency": 0.594,
       "clutch_eff": 0.129
     },
@@ -10391,7 +10391,7 @@
       "fg3_pct": 34.6,
       "ft_pct": 85.8,
       "mvp_score": 58.7,
-      "mvp_rank": 86,
+      "mvp_rank": 87,
       "wpa": 953.1,
       "consistency": 0.52,
       "clutch_eff": 0.192
@@ -10412,7 +10412,7 @@
       "fg_pct": 41.1,
       "fg3_pct": 30.9,
       "ft_pct": 90.5,
-      "mvp_score": 60.8,
+      "mvp_score": 60.7,
       "mvp_rank": 71,
       "wpa": 739.9,
       "consistency": 0.587,
@@ -10457,7 +10457,7 @@
       "fg3_pct": 36.4,
       "ft_pct": 81.2,
       "mvp_score": 65.3,
-      "mvp_rank": 45,
+      "mvp_rank": 46,
       "wpa": 905.5,
       "consistency": 0.529,
       "clutch_eff": 0.446
@@ -10545,7 +10545,7 @@
       "fg3_pct": 40.8,
       "ft_pct": 84.4,
       "mvp_score": 65.2,
-      "mvp_rank": 46,
+      "mvp_rank": 47,
       "wpa": 853.6,
       "consistency": 0.559,
       "clutch_eff": 0.278
@@ -10588,9 +10588,9 @@
       "fg_pct": 54.2,
       "fg3_pct": 32.3,
       "ft_pct": 64.4,
-      "mvp_score": 60.4,
-      "mvp_rank": 76,
-      "wpa": 799.2,
+      "mvp_score": 60.5,
+      "mvp_rank": 75,
+      "wpa": 817.2,
       "consistency": 0.568,
       "clutch_eff": 0.039
     },
@@ -10676,7 +10676,7 @@
       "fg_pct": 71.3,
       "fg3_pct": 0.0,
       "ft_pct": 76.6,
-      "mvp_score": 59.5,
+      "mvp_score": 59.4,
       "mvp_rank": 81,
       "wpa": 661.8,
       "consistency": 0.55,
@@ -10698,8 +10698,8 @@
       "fg_pct": 50.5,
       "fg3_pct": 18.1,
       "ft_pct": 55.2,
-      "mvp_score": 50.4,
-      "mvp_rank": 138,
+      "mvp_score": 50.3,
+      "mvp_rank": 139,
       "wpa": 526.4,
       "consistency": 0.568,
       "clutch_eff": 0.104
@@ -10720,7 +10720,7 @@
       "fg_pct": 54.6,
       "fg3_pct": 33.8,
       "ft_pct": 83.1,
-      "mvp_score": 54.9,
+      "mvp_score": 54.8,
       "mvp_rank": 111,
       "wpa": 618.4,
       "consistency": 0.526,
@@ -10896,7 +10896,7 @@
       "fg_pct": 49.8,
       "fg3_pct": 28.6,
       "ft_pct": 75.9,
-      "mvp_score": 54.9,
+      "mvp_score": 54.8,
       "mvp_rank": 112,
       "wpa": 601.0,
       "consistency": 0.561,
@@ -10918,7 +10918,7 @@
       "fg_pct": 49.5,
       "fg3_pct": 48.5,
       "ft_pct": 93.0,
-      "mvp_score": 58.6,
+      "mvp_score": 58.5,
       "mvp_rank": 89,
       "wpa": 610.6,
       "consistency": 0.592,
@@ -10940,9 +10940,9 @@
       "fg_pct": 54.5,
       "fg3_pct": 29.4,
       "ft_pct": 77.3,
-      "mvp_score": 58.6,
-      "mvp_rank": 87,
-      "wpa": 684.3,
+      "mvp_score": 59.1,
+      "mvp_rank": 82,
+      "wpa": 728.2,
       "consistency": 0.594,
       "clutch_eff": 0.198
     },
@@ -10962,7 +10962,7 @@
       "fg_pct": 46.4,
       "fg3_pct": 41.8,
       "ft_pct": 72.5,
-      "mvp_score": 54.3,
+      "mvp_score": 54.2,
       "mvp_rank": 117,
       "wpa": 620.6,
       "consistency": 0.53,
@@ -11029,7 +11029,7 @@
       "fg3_pct": 31.7,
       "ft_pct": 75.0,
       "mvp_score": 58.9,
-      "mvp_rank": 83,
+      "mvp_rank": 84,
       "wpa": 290.9,
       "consistency": 0.582,
       "clutch_eff": 0.47
@@ -11050,7 +11050,7 @@
       "fg_pct": 64.4,
       "fg3_pct": 0.0,
       "ft_pct": 68.0,
-      "mvp_score": 52.2,
+      "mvp_score": 52.1,
       "mvp_rank": 128,
       "wpa": 290.1,
       "consistency": 0.46,
@@ -11271,7 +11271,7 @@
       "fg3_pct": 32.6,
       "ft_pct": 72.2,
       "mvp_score": 58.9,
-      "mvp_rank": 84,
+      "mvp_rank": 85,
       "wpa": 642.0,
       "consistency": 0.54,
       "clutch_eff": 0.189
@@ -11293,7 +11293,7 @@
       "fg3_pct": 30.8,
       "ft_pct": 80.0,
       "mvp_score": 59.1,
-      "mvp_rank": 82,
+      "mvp_rank": 83,
       "wpa": 839.6,
       "consistency": 0.518,
       "clutch_eff": 0.381
@@ -11315,7 +11315,7 @@
       "fg3_pct": 0.0,
       "ft_pct": 40.9,
       "mvp_score": 48.3,
-      "mvp_rank": 158,
+      "mvp_rank": 157,
       "wpa": 322.8,
       "consistency": 0.582,
       "clutch_eff": 0.0
@@ -11402,7 +11402,7 @@
       "fg_pct": 44.1,
       "fg3_pct": 25.0,
       "ft_pct": 70.7,
-      "mvp_score": 54.8,
+      "mvp_score": 54.7,
       "mvp_rank": 113,
       "wpa": 399.8,
       "consistency": 0.645,
@@ -11557,7 +11557,7 @@
       "fg3_pct": 41.7,
       "ft_pct": 78.7,
       "mvp_score": 49.9,
-      "mvp_rank": 147,
+      "mvp_rank": 148,
       "wpa": 483.6,
       "consistency": 0.559,
       "clutch_eff": 0.09
@@ -11600,7 +11600,7 @@
       "fg_pct": 44.3,
       "fg3_pct": 39.9,
       "ft_pct": 95.1,
-      "mvp_score": 60.3,
+      "mvp_score": 60.2,
       "mvp_rank": 78,
       "wpa": 837.0,
       "consistency": 0.489,
@@ -11666,7 +11666,7 @@
       "fg_pct": 49.0,
       "fg3_pct": 40.2,
       "ft_pct": 50.9,
-      "mvp_score": 55.1,
+      "mvp_score": 55.0,
       "mvp_rank": 110,
       "wpa": 528.8,
       "consistency": 0.564,
@@ -12040,7 +12040,7 @@
       "fg_pct": 60.1,
       "fg3_pct": 0.0,
       "ft_pct": 72.4,
-      "mvp_score": 53.4,
+      "mvp_score": 53.3,
       "mvp_rank": 122,
       "wpa": 513.9,
       "consistency": 0.508,
@@ -12106,9 +12106,9 @@
       "fg_pct": 51.0,
       "fg3_pct": 25.0,
       "ft_pct": 65.7,
-      "mvp_score": 50.3,
-      "mvp_rank": 139,
-      "wpa": 432.5,
+      "mvp_score": 50.4,
+      "mvp_rank": 138,
+      "wpa": 435.3,
       "consistency": 0.461,
       "clutch_eff": 0.102
     },
@@ -12216,9 +12216,9 @@
       "fg_pct": 48.6,
       "fg3_pct": 29.4,
       "ft_pct": 79.1,
-      "mvp_score": 49.9,
-      "mvp_rank": 148,
-      "wpa": 415.1,
+      "mvp_score": 50.0,
+      "mvp_rank": 147,
+      "wpa": 419.8,
       "consistency": 0.503,
       "clutch_eff": 0.018
     },
@@ -12260,7 +12260,7 @@
       "fg_pct": 42.1,
       "fg3_pct": 41.1,
       "ft_pct": 76.8,
-      "mvp_score": 51.8,
+      "mvp_score": 51.7,
       "mvp_rank": 130,
       "wpa": 505.4,
       "consistency": 0.507,
@@ -12612,9 +12612,9 @@
       "fg_pct": 45.2,
       "fg3_pct": 35.1,
       "ft_pct": 86.7,
-      "mvp_score": 54.5,
+      "mvp_score": 54.6,
       "mvp_rank": 114,
-      "wpa": 798.8,
+      "wpa": 812.0,
       "consistency": 0.448,
       "clutch_eff": 0.181
     },
@@ -12811,7 +12811,7 @@
       "fg3_pct": 44.4,
       "ft_pct": 86.7,
       "mvp_score": 48.3,
-      "mvp_rank": 157,
+      "mvp_rank": 158,
       "wpa": 410.0,
       "consistency": 0.518,
       "clutch_eff": 0.0
@@ -13184,9 +13184,9 @@
       "fg_pct": 68.8,
       "fg3_pct": 0.0,
       "ft_pct": 61.5,
-      "mvp_score": 38.2,
-      "mvp_rank": 254,
-      "wpa": 87.1,
+      "mvp_score": 38.3,
+      "mvp_rank": 253,
+      "wpa": 94.9,
       "consistency": 0.288,
       "clutch_eff": 0.0
     },
@@ -13251,7 +13251,7 @@
       "fg3_pct": 35.7,
       "ft_pct": 100.0,
       "mvp_score": 36.4,
-      "mvp_rank": 270,
+      "mvp_rank": 271,
       "wpa": 145.3,
       "consistency": 0.395,
       "clutch_eff": 0.02
@@ -13338,7 +13338,7 @@
       "fg_pct": 63.5,
       "fg3_pct": 0.0,
       "ft_pct": 76.0,
-      "mvp_score": 44.1,
+      "mvp_score": 44.0,
       "mvp_rank": 191,
       "wpa": 325.1,
       "consistency": 0.401,
@@ -13383,7 +13383,7 @@
       "fg3_pct": 25.9,
       "ft_pct": 56.2,
       "mvp_score": 41.4,
-      "mvp_rank": 222,
+      "mvp_rank": 223,
       "wpa": 219.9,
       "consistency": 0.522,
       "clutch_eff": 0.056
@@ -13514,9 +13514,9 @@
       "fg_pct": 46.2,
       "fg3_pct": 30.8,
       "ft_pct": 82.4,
-      "mvp_score": 41.3,
-      "mvp_rank": 223,
-      "wpa": 241.1,
+      "mvp_score": 41.4,
+      "mvp_rank": 222,
+      "wpa": 246.6,
       "consistency": 0.36,
       "clutch_eff": 0.083
     },
@@ -13558,8 +13558,8 @@
       "fg_pct": 49.6,
       "fg3_pct": 50.0,
       "ft_pct": 54.2,
-      "mvp_score": 38.3,
-      "mvp_rank": 253,
+      "mvp_score": 38.2,
+      "mvp_rank": 254,
       "wpa": 330.2,
       "consistency": 0.461,
       "clutch_eff": 0.066
@@ -13669,7 +13669,7 @@
       "fg3_pct": 33.3,
       "ft_pct": 77.8,
       "mvp_score": 40.5,
-      "mvp_rank": 236,
+      "mvp_rank": 237,
       "wpa": 166.8,
       "consistency": 0.472,
       "clutch_eff": 0.059
@@ -13866,7 +13866,7 @@
       "fg_pct": 41.4,
       "fg3_pct": 32.8,
       "ft_pct": 72.2,
-      "mvp_score": 36.7,
+      "mvp_score": 36.6,
       "mvp_rank": 268,
       "wpa": 279.5,
       "consistency": 0.437,
@@ -13999,7 +13999,7 @@
       "fg3_pct": 32.7,
       "ft_pct": 80.0,
       "mvp_score": 36.4,
-      "mvp_rank": 271,
+      "mvp_rank": 272,
       "wpa": 332.1,
       "consistency": 0.346,
       "clutch_eff": 0.114
@@ -14240,9 +14240,9 @@
       "fg_pct": 59.0,
       "fg3_pct": 50.0,
       "ft_pct": 62.5,
-      "mvp_score": 40.4,
-      "mvp_rank": 237,
-      "wpa": 97.6,
+      "mvp_score": 40.6,
+      "mvp_rank": 236,
+      "wpa": 109.6,
       "consistency": 0.432,
       "clutch_eff": 0.086
     },
@@ -14768,9 +14768,9 @@
       "fg_pct": 32.4,
       "fg3_pct": 32.0,
       "ft_pct": 0.0,
-      "mvp_score": 36.3,
-      "mvp_rank": 272,
-      "wpa": 72.8,
+      "mvp_score": 36.5,
+      "mvp_rank": 270,
+      "wpa": 90.4,
       "consistency": 0.287,
       "clutch_eff": 0.0
     },
@@ -15450,7 +15450,7 @@
       "fg_pct": 0.0,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 29.2,
+      "mvp_score": 29.3,
       "mvp_rank": 318,
       "wpa": 0.0,
       "consistency": 0.091,
@@ -26118,12 +26118,12 @@
         "LocalName": "Panathinaikos",
         "Road": "MCO",
         "RoadName": "Monaco",
-        "Margin": 6.72,
+        "Margin": 2.66,
         "Winner": "PAN",
         "WinnerName": "Panathinaikos",
-        "HomeWinProb": 75.1,
-        "Conf": 75.1,
-        "Insight": "📈 Panathinaikos +5.8 Adj Net advantage\nAdj Net: +11.1 v +5.3  |  Elo: 1507 v 1509\nL5: 3-2 v 4-1  |  H: 14-6 v A: 8-12\nKey players — H: Nunn  |  A: James",
+        "HomeWinProb": 69.1,
+        "Conf": 69.1,
+        "Insight": "⚖️ Evenly matched (Adj Net gap: 0.4)\nAdj Net: +3.1 v +2.7  |  Elo: 1507 v 1509\nL5: 3-2 v 4-1  |  H: 14-6 v A: 8-12\nKey players — H: Nunn  |  A: James",
         "Date": "Mar 27, 2026",
         "Time": "20:15"
       },
@@ -26133,12 +26133,12 @@
         "LocalName": "Barcelona",
         "Road": "RED",
         "RoadName": "Crvena Zvezda",
-        "Margin": 5.97,
+        "Margin": 2.13,
         "Winner": "BAR",
         "WinnerName": "Barcelona",
-        "HomeWinProb": 61.0,
-        "Conf": 61.0,
-        "Insight": "📈 Barcelona +5.4 Adj Net advantage\nAdj Net: +4.2 v -1.2  |  Elo: 1517 v 1520\nL5: 2-3 v 2-3  |  H: 13-7 v A: 8-12\nKey players — H: Punter  |  A: Nwora",
+        "HomeWinProb": 59.7,
+        "Conf": 59.7,
+        "Insight": "⚖️ Evenly matched (Adj Net gap: 0.3)\nAdj Net: +0.5 v +0.2  |  Elo: 1517 v 1520\nL5: 2-3 v 2-3  |  H: 13-7 v A: 8-12\nKey players — H: Punter  |  A: Nwora",
         "Date": "Mar 27, 2026",
         "Time": "20:30"
       },
@@ -26148,12 +26148,12 @@
         "LocalName": "Monaco",
         "Road": "BAR",
         "RoadName": "Barcelona",
-        "Margin": 3.2,
+        "Margin": 4.05,
         "Winner": "MCO",
         "WinnerName": "Monaco",
-        "HomeWinProb": 61.0,
-        "Conf": 61.0,
-        "Insight": "⚖️ Evenly matched (Adj Net gap: 1.0)\nAdj Net: +5.3 v +4.2  |  Elo: 1509 v 1517\nL5: 4-1 v 2-3  |  H: 15-5 v A: 9-11\nKey players — H: James  |  A: Punter",
+        "HomeWinProb": 64.2,
+        "Conf": 64.2,
+        "Insight": "⚖️ Evenly matched (Adj Net gap: 2.2)\nAdj Net: +2.7 v +0.5  |  Elo: 1509 v 1517\nL5: 4-1 v 2-3  |  H: 15-5 v A: 9-11\nKey players — H: James  |  A: Punter",
         "Date": "Apr 10, 2026",
         "Time": "19:30"
       },
@@ -26271,8 +26271,8 @@
         "AvgPIR": 18.9,
         "MaxPIR": 37.0,
         "AvgPTS": 16.5,
-        "WinProb": 24.9,
-        "ExpectedPIR": 20.9
+        "WinProb": 30.9,
+        "ExpectedPIR": 21.1
       },
       {
         "Player": "STRAZEL, MATTHEW",
@@ -26281,8 +26281,8 @@
         "AvgPIR": 11.2,
         "MaxPIR": 31.0,
         "AvgPTS": 9.2,
-        "WinProb": 61.0,
-        "ExpectedPIR": 18.7
+        "WinProb": 64.2,
+        "ExpectedPIR": 18.8
       },
       {
         "Player": "OKOBO, ELIE",
@@ -26291,8 +26291,8 @@
         "AvgPIR": 12.5,
         "MaxPIR": 39.0,
         "AvgPTS": 11.5,
-        "WinProb": 61.0,
-        "ExpectedPIR": 18.6
+        "WinProb": 64.2,
+        "ExpectedPIR": 18.7
       },
       {
         "Player": "NUNN, KENDRICK",
@@ -26301,8 +26301,8 @@
         "AvgPIR": 16.8,
         "MaxPIR": 40.0,
         "AvgPTS": 19.0,
-        "WinProb": 75.1,
-        "ExpectedPIR": 18.0
+        "WinProb": 69.1,
+        "ExpectedPIR": 17.8
       },
       {
         "Player": "JAMES, MIKE",
@@ -26311,8 +26311,8 @@
         "AvgPIR": 18.9,
         "MaxPIR": 37.0,
         "AvgPTS": 16.5,
-        "WinProb": 61.0,
-        "ExpectedPIR": 17.1
+        "WinProb": 64.2,
+        "ExpectedPIR": 17.2
       },
       {
         "Player": "MONEKE, CHIMA",
@@ -26321,7 +26321,7 @@
         "AvgPIR": 18.2,
         "MaxPIR": 35.0,
         "AvgPTS": 13.7,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "ExpectedPIR": 16.9
       },
       {
@@ -26331,7 +26331,17 @@
         "AvgPIR": 13.4,
         "MaxPIR": 40.0,
         "AvgPTS": 14.9,
-        "WinProb": 61.0,
+        "WinProb": 59.7,
+        "ExpectedPIR": 15.5
+      },
+      {
+        "Player": "MIROTIC, NIKOLA",
+        "Team": "MCO",
+        "GP": 31,
+        "AvgPIR": 12.7,
+        "MaxPIR": 32.0,
+        "AvgPTS": 11.0,
+        "WinProb": 64.2,
         "ExpectedPIR": 15.5
       },
       {
@@ -26341,17 +26351,7 @@
         "AvgPIR": 16.2,
         "MaxPIR": 34.0,
         "AvgPTS": 17.1,
-        "WinProb": 39.0,
-        "ExpectedPIR": 15.4
-      },
-      {
-        "Player": "MIROTIC, NIKOLA",
-        "Team": "MCO",
-        "GP": 31,
-        "AvgPIR": 12.7,
-        "MaxPIR": 32.0,
-        "AvgPTS": 11.0,
-        "WinProb": 61.0,
+        "WinProb": 40.3,
         "ExpectedPIR": 15.4
       },
       {
@@ -26361,7 +26361,7 @@
         "AvgPIR": 14.3,
         "MaxPIR": 33.0,
         "AvgPTS": 13.4,
-        "WinProb": 61.0,
+        "WinProb": 59.7,
         "ExpectedPIR": 15.3
       }
     ],
@@ -26377,9 +26377,9 @@
         "AvgPTS": 16.5,
         "FormFactor": 1.024,
         "DefFactor": 0.991,
-        "WinProb": 24.9,
-        "PredictedPIR": 20.9,
-        "PredictedPTS": 16.1
+        "WinProb": 30.9,
+        "PredictedPIR": 21.1,
+        "PredictedPTS": 16.2
       },
       {
         "Player": "STRAZEL, MATTHEW",
@@ -26392,8 +26392,8 @@
         "AvgPTS": 9.2,
         "FormFactor": 1.243,
         "DefFactor": 0.985,
-        "WinProb": 61.0,
-        "PredictedPIR": 18.7,
+        "WinProb": 64.2,
+        "PredictedPIR": 18.8,
         "PredictedPTS": 11.5
       },
       {
@@ -26407,9 +26407,9 @@
         "AvgPTS": 11.5,
         "FormFactor": 1.19,
         "DefFactor": 0.985,
-        "WinProb": 61.0,
-        "PredictedPIR": 18.6,
-        "PredictedPTS": 13.7
+        "WinProb": 64.2,
+        "PredictedPIR": 18.7,
+        "PredictedPTS": 13.8
       },
       {
         "Player": "NUNN, KENDRICK",
@@ -26422,9 +26422,9 @@
         "AvgPTS": 19.0,
         "FormFactor": 0.903,
         "DefFactor": 0.976,
-        "WinProb": 75.1,
-        "PredictedPIR": 18.0,
-        "PredictedPTS": 17.4
+        "WinProb": 69.1,
+        "PredictedPIR": 17.8,
+        "PredictedPTS": 17.2
       },
       {
         "Player": "JAMES, MIKE",
@@ -26437,9 +26437,9 @@
         "AvgPTS": 16.5,
         "FormFactor": 1.024,
         "DefFactor": 0.985,
-        "WinProb": 61.0,
-        "PredictedPIR": 17.1,
-        "PredictedPTS": 16.9
+        "WinProb": 64.2,
+        "PredictedPIR": 17.2,
+        "PredictedPTS": 17.0
       },
       {
         "Player": "MONEKE, CHIMA",
@@ -26452,7 +26452,7 @@
         "AvgPTS": 13.7,
         "FormFactor": 0.973,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "PredictedPIR": 16.9,
         "PredictedPTS": 13.0
       },
@@ -26467,24 +26467,9 @@
         "AvgPTS": 14.9,
         "FormFactor": 0.952,
         "DefFactor": 0.99,
-        "WinProb": 61.0,
+        "WinProb": 59.7,
         "PredictedPIR": 15.5,
         "PredictedPTS": 14.2
-      },
-      {
-        "Player": "NWORA, JORDAN",
-        "Team": "RED",
-        "Opponent": "BAR",
-        "IsHome": false,
-        "GP": 33,
-        "AvgPIR": 16.2,
-        "MaxPIR": 34.0,
-        "AvgPTS": 17.1,
-        "FormFactor": 1.011,
-        "DefFactor": 0.985,
-        "WinProb": 39.0,
-        "PredictedPIR": 15.4,
-        "PredictedPTS": 16.8
       },
       {
         "Player": "MIROTIC, NIKOLA",
@@ -26497,9 +26482,24 @@
         "AvgPTS": 11.0,
         "FormFactor": 0.96,
         "DefFactor": 0.985,
-        "WinProb": 61.0,
+        "WinProb": 64.2,
+        "PredictedPIR": 15.5,
+        "PredictedPTS": 10.7
+      },
+      {
+        "Player": "NWORA, JORDAN",
+        "Team": "RED",
+        "Opponent": "BAR",
+        "IsHome": false,
+        "GP": 33,
+        "AvgPIR": 16.2,
+        "MaxPIR": 34.0,
+        "AvgPTS": 17.1,
+        "FormFactor": 1.011,
+        "DefFactor": 0.985,
+        "WinProb": 40.3,
         "PredictedPIR": 15.4,
-        "PredictedPTS": 10.6
+        "PredictedPTS": 16.8
       },
       {
         "Player": "CLYBURN, WILL",
@@ -26512,24 +26512,9 @@
         "AvgPTS": 13.4,
         "FormFactor": 1.028,
         "DefFactor": 0.99,
-        "WinProb": 61.0,
+        "WinProb": 59.7,
         "PredictedPIR": 15.3,
         "PredictedPTS": 13.9
-      },
-      {
-        "Player": "HAYES-DAVIS, NIGEL",
-        "Team": "PAN",
-        "Opponent": "MCO",
-        "IsHome": true,
-        "GP": 10,
-        "AvgPIR": 14.4,
-        "MaxPIR": 30.0,
-        "AvgPTS": 14.8,
-        "FormFactor": 0.933,
-        "DefFactor": 0.976,
-        "WinProb": 75.1,
-        "PredictedPIR": 14.8,
-        "PredictedPTS": 14.0
       },
       {
         "Player": "MILLER-MCINTYRE, CODI",
@@ -26542,9 +26527,24 @@
         "AvgPTS": 12.4,
         "FormFactor": 1.097,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "PredictedPIR": 14.7,
         "PredictedPTS": 13.2
+      },
+      {
+        "Player": "HAYES-DAVIS, NIGEL",
+        "Team": "PAN",
+        "Opponent": "MCO",
+        "IsHome": true,
+        "GP": 10,
+        "AvgPIR": 14.4,
+        "MaxPIR": 30.0,
+        "AvgPTS": 14.8,
+        "FormFactor": 0.933,
+        "DefFactor": 0.976,
+        "WinProb": 69.1,
+        "PredictedPIR": 14.6,
+        "PredictedPTS": 13.9
       },
       {
         "Player": "SATORANSKY, TOMAS",
@@ -26557,24 +26557,9 @@
         "AvgPTS": 7.1,
         "FormFactor": 1.034,
         "DefFactor": 0.99,
-        "WinProb": 61.0,
+        "WinProb": 59.7,
         "PredictedPIR": 14.6,
         "PredictedPTS": 7.4
-      },
-      {
-        "Player": "HERNANGOMEZ, JUANCHO",
-        "Team": "PAN",
-        "Opponent": "MCO",
-        "IsHome": true,
-        "GP": 38,
-        "AvgPIR": 13.1,
-        "MaxPIR": 39.0,
-        "AvgPTS": 8.4,
-        "FormFactor": 1.021,
-        "DefFactor": 0.976,
-        "WinProb": 75.1,
-        "PredictedPIR": 14.2,
-        "PredictedPTS": 8.7
       },
       {
         "Player": "THEIS, DANIEL",
@@ -26587,9 +26572,24 @@
         "AvgPTS": 9.9,
         "FormFactor": 1.075,
         "DefFactor": 0.985,
-        "WinProb": 61.0,
+        "WinProb": 64.2,
         "PredictedPIR": 14.2,
         "PredictedPTS": 10.7
+      },
+      {
+        "Player": "HERNANGOMEZ, JUANCHO",
+        "Team": "PAN",
+        "Opponent": "MCO",
+        "IsHome": true,
+        "GP": 38,
+        "AvgPIR": 13.1,
+        "MaxPIR": 39.0,
+        "AvgPTS": 8.4,
+        "FormFactor": 1.021,
+        "DefFactor": 0.976,
+        "WinProb": 69.1,
+        "PredictedPIR": 14.1,
+        "PredictedPTS": 8.6
       },
       {
         "Player": "BLOSSOMGAME, JARON",
@@ -26602,9 +26602,9 @@
         "AvgPTS": 9.6,
         "FormFactor": 1.169,
         "DefFactor": 0.985,
-        "WinProb": 61.0,
-        "PredictedPIR": 14.0,
-        "PredictedPTS": 11.2
+        "WinProb": 64.2,
+        "PredictedPIR": 14.1,
+        "PredictedPTS": 11.3
       },
       {
         "Player": "SHENGELIA, TORNIKE",
@@ -26617,8 +26617,8 @@
         "AvgPTS": 12.5,
         "FormFactor": 0.878,
         "DefFactor": 0.976,
-        "WinProb": 39.0,
-        "PredictedPIR": 13.9,
+        "WinProb": 35.8,
+        "PredictedPIR": 13.8,
         "PredictedPTS": 10.5
       },
       {
@@ -26632,9 +26632,9 @@
         "AvgPTS": 9.6,
         "FormFactor": 1.063,
         "DefFactor": 0.976,
-        "WinProb": 75.1,
-        "PredictedPIR": 13.7,
-        "PredictedPTS": 10.4
+        "WinProb": 69.1,
+        "PredictedPIR": 13.5,
+        "PredictedPTS": 10.3
       },
       {
         "Player": "CLYBURN, WILL",
@@ -26647,8 +26647,8 @@
         "AvgPTS": 13.4,
         "FormFactor": 1.028,
         "DefFactor": 0.976,
-        "WinProb": 39.0,
-        "PredictedPIR": 13.6,
+        "WinProb": 35.8,
+        "PredictedPIR": 13.5,
         "PredictedPTS": 13.2
       },
       {
@@ -26662,24 +26662,9 @@
         "AvgPTS": 11.9,
         "FormFactor": 0.976,
         "DefFactor": 0.985,
-        "WinProb": 61.0,
+        "WinProb": 64.2,
         "PredictedPIR": 13.5,
         "PredictedPTS": 11.7
-      },
-      {
-        "Player": "LESSORT, MATHIAS",
-        "Team": "PAN",
-        "Opponent": "MCO",
-        "IsHome": true,
-        "GP": 8,
-        "AvgPIR": 13.0,
-        "MaxPIR": 20.0,
-        "AvgPTS": 8.6,
-        "FormFactor": 1.042,
-        "DefFactor": 0.976,
-        "WinProb": 75.1,
-        "PredictedPIR": 13.2,
-        "PredictedPTS": 9.1
       },
       {
         "Player": "DIALLO, ALPHA",
@@ -26692,24 +26677,24 @@
         "AvgPTS": 11.9,
         "FormFactor": 0.976,
         "DefFactor": 0.991,
-        "WinProb": 24.9,
-        "PredictedPIR": 13.0,
-        "PredictedPTS": 11.1
+        "WinProb": 30.9,
+        "PredictedPIR": 13.2,
+        "PredictedPTS": 11.2
       },
       {
-        "Player": "SHENGELIA, TORNIKE",
-        "Team": "BAR",
-        "Opponent": "RED",
+        "Player": "LESSORT, MATHIAS",
+        "Team": "PAN",
+        "Opponent": "MCO",
         "IsHome": true,
-        "GP": 32,
-        "AvgPIR": 15.5,
-        "MaxPIR": 42.0,
-        "AvgPTS": 12.5,
-        "FormFactor": 0.878,
-        "DefFactor": 0.99,
-        "WinProb": 61.0,
-        "PredictedPIR": 12.9,
-        "PredictedPTS": 11.0
+        "GP": 8,
+        "AvgPIR": 13.0,
+        "MaxPIR": 20.0,
+        "AvgPTS": 8.6,
+        "FormFactor": 1.042,
+        "DefFactor": 0.976,
+        "WinProb": 69.1,
+        "PredictedPIR": 13.1,
+        "PredictedPTS": 9.0
       },
       {
         "Player": "THEIS, DANIEL",
@@ -26722,9 +26707,24 @@
         "AvgPTS": 9.9,
         "FormFactor": 1.075,
         "DefFactor": 0.991,
-        "WinProb": 24.9,
-        "PredictedPIR": 12.7,
-        "PredictedPTS": 10.2
+        "WinProb": 30.9,
+        "PredictedPIR": 12.8,
+        "PredictedPTS": 10.3
+      },
+      {
+        "Player": "SHENGELIA, TORNIKE",
+        "Team": "BAR",
+        "Opponent": "RED",
+        "IsHome": true,
+        "GP": 32,
+        "AvgPIR": 15.5,
+        "MaxPIR": 42.0,
+        "AvgPTS": 12.5,
+        "FormFactor": 0.878,
+        "DefFactor": 0.99,
+        "WinProb": 59.7,
+        "PredictedPIR": 12.8,
+        "PredictedPTS": 11.0
       },
       {
         "Player": "OSMAN, CEDI",
@@ -26737,9 +26737,9 @@
         "AvgPTS": 13.0,
         "FormFactor": 0.997,
         "DefFactor": 0.976,
-        "WinProb": 75.1,
-        "PredictedPIR": 11.6,
-        "PredictedPTS": 13.1
+        "WinProb": 69.1,
+        "PredictedPIR": 11.5,
+        "PredictedPTS": 13.0
       },
       {
         "Player": "FARIED, KENNETH",
@@ -26752,9 +26752,9 @@
         "AvgPTS": 6.4,
         "FormFactor": 1.065,
         "DefFactor": 0.976,
-        "WinProb": 75.1,
-        "PredictedPIR": 11.2,
-        "PredictedPTS": 6.9
+        "WinProb": 69.1,
+        "PredictedPIR": 11.1,
+        "PredictedPTS": 6.8
       },
       {
         "Player": "OKOBO, ELIE",
@@ -26767,9 +26767,9 @@
         "AvgPTS": 11.5,
         "FormFactor": 1.19,
         "DefFactor": 0.991,
-        "WinProb": 24.9,
-        "PredictedPIR": 10.8,
-        "PredictedPTS": 13.1
+        "WinProb": 30.9,
+        "PredictedPIR": 10.9,
+        "PredictedPTS": 13.2
       },
       {
         "Player": "BUTLER, JARED",
@@ -26782,7 +26782,7 @@
         "AvgPTS": 13.3,
         "FormFactor": 0.912,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "PredictedPIR": 10.2,
         "PredictedPTS": 11.8
       },
@@ -26797,9 +26797,9 @@
         "AvgPTS": 7.8,
         "FormFactor": 1.004,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "PredictedPIR": 10.1,
-        "PredictedPTS": 7.5
+        "PredictedPTS": 7.6
       },
       {
         "Player": "VESELY, JAN",
@@ -26812,24 +26812,9 @@
         "AvgPTS": 8.7,
         "FormFactor": 1.06,
         "DefFactor": 0.99,
-        "WinProb": 61.0,
-        "PredictedPIR": 10.0,
+        "WinProb": 59.7,
+        "PredictedPIR": 9.9,
         "PredictedPTS": 9.2
-      },
-      {
-        "Player": "PUNTER, KEVIN",
-        "Team": "BAR",
-        "Opponent": "MCO",
-        "IsHome": false,
-        "GP": 37,
-        "AvgPIR": 13.4,
-        "MaxPIR": 40.0,
-        "AvgPTS": 14.9,
-        "FormFactor": 0.952,
-        "DefFactor": 0.976,
-        "WinProb": 39.0,
-        "PredictedPIR": 9.8,
-        "PredictedPTS": 13.6
       },
       {
         "Player": "BLOSSOMGAME, JARON",
@@ -26842,9 +26827,24 @@
         "AvgPTS": 9.6,
         "FormFactor": 1.169,
         "DefFactor": 0.991,
-        "WinProb": 24.9,
+        "WinProb": 30.9,
+        "PredictedPIR": 9.8,
+        "PredictedPTS": 10.8
+      },
+      {
+        "Player": "PUNTER, KEVIN",
+        "Team": "BAR",
+        "Opponent": "MCO",
+        "IsHome": false,
+        "GP": 37,
+        "AvgPIR": 13.4,
+        "MaxPIR": 40.0,
+        "AvgPTS": 14.9,
+        "FormFactor": 0.952,
+        "DefFactor": 0.976,
+        "WinProb": 35.8,
         "PredictedPIR": 9.7,
-        "PredictedPTS": 10.7
+        "PredictedPTS": 13.5
       },
       {
         "Player": "VESELY, JAN",
@@ -26857,7 +26857,7 @@
         "AvgPTS": 8.7,
         "FormFactor": 1.06,
         "DefFactor": 0.976,
-        "WinProb": 39.0,
+        "WinProb": 35.8,
         "PredictedPIR": 9.5,
         "PredictedPTS": 8.8
       },
@@ -26872,9 +26872,9 @@
         "AvgPTS": 11.0,
         "FormFactor": 0.96,
         "DefFactor": 0.991,
-        "WinProb": 24.9,
+        "WinProb": 30.9,
         "PredictedPIR": 9.1,
-        "PredictedPTS": 10.1
+        "PredictedPTS": 10.2
       },
       {
         "Player": "LAPROVITTOLA, NICOLAS",
@@ -26887,8 +26887,8 @@
         "AvgPTS": 8.0,
         "FormFactor": 1.006,
         "DefFactor": 0.976,
-        "WinProb": 39.0,
-        "PredictedPIR": 8.9,
+        "WinProb": 35.8,
+        "PredictedPIR": 8.8,
         "PredictedPTS": 7.7
       },
       {
@@ -26902,24 +26902,9 @@
         "AvgPTS": 9.2,
         "FormFactor": 1.243,
         "DefFactor": 0.991,
-        "WinProb": 24.9,
-        "PredictedPIR": 8.6,
-        "PredictedPTS": 10.9
-      },
-      {
-        "Player": "GRANT, JERIAN",
-        "Team": "PAN",
-        "Opponent": "MCO",
-        "IsHome": true,
-        "GP": 36,
-        "AvgPIR": 8.3,
-        "MaxPIR": 22.0,
-        "AvgPTS": 7.2,
-        "FormFactor": 0.961,
-        "DefFactor": 0.976,
-        "WinProb": 75.1,
-        "PredictedPIR": 8.4,
-        "PredictedPTS": 7.0
+        "WinProb": 30.9,
+        "PredictedPIR": 8.7,
+        "PredictedPTS": 11.0
       },
       {
         "Player": "HAYES, KEVARRIUS",
@@ -26932,9 +26917,24 @@
         "AvgPTS": 6.3,
         "FormFactor": 1.158,
         "DefFactor": 0.985,
-        "WinProb": 61.0,
+        "WinProb": 64.2,
         "PredictedPIR": 8.4,
         "PredictedPTS": 7.3
+      },
+      {
+        "Player": "GRANT, JERIAN",
+        "Team": "PAN",
+        "Opponent": "MCO",
+        "IsHome": true,
+        "GP": 36,
+        "AvgPIR": 8.3,
+        "MaxPIR": 22.0,
+        "AvgPTS": 7.2,
+        "FormFactor": 0.961,
+        "DefFactor": 0.976,
+        "WinProb": 69.1,
+        "PredictedPIR": 8.3,
+        "PredictedPTS": 6.9
       },
       {
         "Player": "SATORANSKY, TOMAS",
@@ -26947,7 +26947,7 @@
         "AvgPTS": 7.1,
         "FormFactor": 1.034,
         "DefFactor": 0.976,
-        "WinProb": 39.0,
+        "WinProb": 35.8,
         "PredictedPIR": 8.3,
         "PredictedPTS": 7.0
       },
@@ -26962,7 +26962,7 @@
         "AvgPTS": 5.1,
         "FormFactor": 1.369,
         "DefFactor": 0.976,
-        "WinProb": 75.1,
+        "WinProb": 69.1,
         "PredictedPIR": 8.2,
         "PredictedPTS": 7.0
       },
@@ -26977,9 +26977,9 @@
         "AvgPTS": 7.2,
         "FormFactor": 0.956,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
-        "PredictedPIR": 8.0,
-        "PredictedPTS": 6.6
+        "WinProb": 40.3,
+        "PredictedPIR": 8.1,
+        "PredictedPTS": 6.7
       },
       {
         "Player": "HAYES, KEVARRIUS",
@@ -26992,9 +26992,9 @@
         "AvgPTS": 6.3,
         "FormFactor": 1.158,
         "DefFactor": 0.991,
-        "WinProb": 24.9,
-        "PredictedPIR": 7.9,
-        "PredictedPTS": 6.9
+        "WinProb": 30.9,
+        "PredictedPIR": 8.0,
+        "PredictedPTS": 7.0
       },
       {
         "Player": "PARRA, JOEL",
@@ -27007,7 +27007,7 @@
         "AvgPTS": 5.8,
         "FormFactor": 1.12,
         "DefFactor": 0.99,
-        "WinProb": 61.0,
+        "WinProb": 59.7,
         "PredictedPIR": 7.8,
         "PredictedPTS": 6.5
       },
@@ -27022,8 +27022,8 @@
         "AvgPTS": 7.5,
         "FormFactor": 0.805,
         "DefFactor": 0.976,
-        "WinProb": 75.1,
-        "PredictedPIR": 7.6,
+        "WinProb": 69.1,
+        "PredictedPIR": 7.5,
         "PredictedPTS": 6.1
       },
       {
@@ -27037,8 +27037,8 @@
         "AvgPTS": 5.8,
         "FormFactor": 1.12,
         "DefFactor": 0.976,
-        "WinProb": 39.0,
-        "PredictedPIR": 7.6,
+        "WinProb": 35.8,
+        "PredictedPIR": 7.5,
         "PredictedPTS": 6.2
       },
       {
@@ -27052,7 +27052,7 @@
         "AvgPTS": 3.9,
         "FormFactor": 1.311,
         "DefFactor": 0.99,
-        "WinProb": 61.0,
+        "WinProb": 59.7,
         "PredictedPIR": 7.4,
         "PredictedPTS": 5.2
       },
@@ -27067,7 +27067,7 @@
         "AvgPTS": 5.9,
         "FormFactor": 0.946,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "PredictedPIR": 7.3,
         "PredictedPTS": 5.4
       },
@@ -27082,7 +27082,7 @@
         "AvgPTS": 7.6,
         "FormFactor": 1.038,
         "DefFactor": 0.976,
-        "WinProb": 75.1,
+        "WinProb": 69.1,
         "PredictedPIR": 7.1,
         "PredictedPTS": 7.9
       },
@@ -27097,7 +27097,7 @@
         "AvgPTS": 9.2,
         "FormFactor": 1.037,
         "DefFactor": 0.976,
-        "WinProb": 39.0,
+        "WinProb": 35.8,
         "PredictedPIR": 6.9,
         "PredictedPTS": 9.1
       },
@@ -27112,24 +27112,9 @@
         "AvgPTS": 3.4,
         "FormFactor": 1.055,
         "DefFactor": 0.985,
-        "WinProb": 61.0,
+        "WinProb": 64.2,
         "PredictedPIR": 6.6,
-        "PredictedPTS": 3.6
-      },
-      {
-        "Player": "MOTIEJUNAS, DONATAS",
-        "Team": "RED",
-        "Opponent": "BAR",
-        "IsHome": false,
-        "GP": 30,
-        "AvgPIR": 6.6,
-        "MaxPIR": 19.0,
-        "AvgPTS": 5.5,
-        "FormFactor": 0.882,
-        "DefFactor": 0.985,
-        "WinProb": 39.0,
-        "PredictedPIR": 6.5,
-        "PredictedPTS": 4.7
+        "PredictedPTS": 3.7
       },
       {
         "Player": "NEDOVIC, NEMANJA",
@@ -27142,9 +27127,24 @@
         "AvgPTS": 6.5,
         "FormFactor": 1.069,
         "DefFactor": 0.991,
-        "WinProb": 24.9,
-        "PredictedPIR": 6.4,
-        "PredictedPTS": 6.6
+        "WinProb": 30.9,
+        "PredictedPIR": 6.5,
+        "PredictedPTS": 6.7
+      },
+      {
+        "Player": "MOTIEJUNAS, DONATAS",
+        "Team": "RED",
+        "Opponent": "BAR",
+        "IsHome": false,
+        "GP": 30,
+        "AvgPIR": 6.6,
+        "MaxPIR": 19.0,
+        "AvgPTS": 5.5,
+        "FormFactor": 0.882,
+        "DefFactor": 0.985,
+        "WinProb": 40.3,
+        "PredictedPIR": 6.5,
+        "PredictedPTS": 4.7
       },
       {
         "Player": "HERNANGOMEZ, WILLY",
@@ -27157,7 +27157,7 @@
         "AvgPTS": 5.5,
         "FormFactor": 0.86,
         "DefFactor": 0.99,
-        "WinProb": 61.0,
+        "WinProb": 59.7,
         "PredictedPIR": 6.0,
         "PredictedPTS": 4.8
       },
@@ -27172,8 +27172,8 @@
         "AvgPTS": 9.2,
         "FormFactor": 1.037,
         "DefFactor": 0.99,
-        "WinProb": 61.0,
-        "PredictedPIR": 5.7,
+        "WinProb": 59.7,
+        "PredictedPIR": 5.6,
         "PredictedPTS": 9.6
       },
       {
@@ -27187,7 +27187,7 @@
         "AvgPTS": 5.5,
         "FormFactor": 0.86,
         "DefFactor": 0.976,
-        "WinProb": 39.0,
+        "WinProb": 35.8,
         "PredictedPIR": 5.4,
         "PredictedPTS": 4.5
       },
@@ -27202,7 +27202,7 @@
         "AvgPTS": 6.5,
         "FormFactor": 1.069,
         "DefFactor": 0.985,
-        "WinProb": 61.0,
+        "WinProb": 64.2,
         "PredictedPIR": 5.3,
         "PredictedPTS": 7.0
       },
@@ -27217,7 +27217,7 @@
         "AvgPTS": 5.4,
         "FormFactor": 0.683,
         "DefFactor": 0.976,
-        "WinProb": 75.1,
+        "WinProb": 69.1,
         "PredictedPIR": 5.1,
         "PredictedPTS": 3.7
       },
@@ -27232,7 +27232,7 @@
         "AvgPTS": 5.1,
         "FormFactor": 1.092,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "PredictedPIR": 5.1,
         "PredictedPTS": 5.4
       },
@@ -27247,8 +27247,8 @@
         "AvgPTS": 8.0,
         "FormFactor": 1.006,
         "DefFactor": 0.99,
-        "WinProb": 61.0,
-        "PredictedPIR": 5.0,
+        "WinProb": 59.7,
+        "PredictedPIR": 4.9,
         "PredictedPTS": 8.1
       },
       {
@@ -27262,7 +27262,7 @@
         "AvgPTS": 3.0,
         "FormFactor": 0.96,
         "DefFactor": 0.99,
-        "WinProb": 61.0,
+        "WinProb": 59.7,
         "PredictedPIR": 4.6,
         "PredictedPTS": 2.9
       },
@@ -27277,8 +27277,8 @@
         "AvgPTS": 0.5,
         "FormFactor": 7.6,
         "DefFactor": 0.976,
-        "WinProb": 75.1,
-        "PredictedPIR": 4.3,
+        "WinProb": 69.1,
+        "PredictedPIR": 4.2,
         "PredictedPTS": 4.0
       },
       {
@@ -27292,7 +27292,7 @@
         "AvgPTS": 3.9,
         "FormFactor": 1.311,
         "DefFactor": 0.976,
-        "WinProb": 39.0,
+        "WinProb": 35.8,
         "PredictedPIR": 4.2,
         "PredictedPTS": 4.9
       },
@@ -27307,9 +27307,9 @@
         "AvgPTS": 2.5,
         "FormFactor": 1.393,
         "DefFactor": 0.985,
-        "WinProb": 61.0,
+        "WinProb": 64.2,
         "PredictedPIR": 4.0,
-        "PredictedPTS": 3.4
+        "PredictedPTS": 3.5
       },
       {
         "Player": "DOBRIC, OGNJEN",
@@ -27322,7 +27322,7 @@
         "AvgPTS": 5.0,
         "FormFactor": 1.035,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "PredictedPIR": 3.9,
         "PredictedPTS": 5.0
       },
@@ -27337,7 +27337,7 @@
         "AvgPTS": 2.4,
         "FormFactor": 1.19,
         "DefFactor": 0.976,
-        "WinProb": 75.1,
+        "WinProb": 69.1,
         "PredictedPIR": 3.8,
         "PredictedPTS": 2.9
       },
@@ -27352,7 +27352,7 @@
         "AvgPTS": 1.5,
         "FormFactor": 1.384,
         "DefFactor": 0.99,
-        "WinProb": 61.0,
+        "WinProb": 59.7,
         "PredictedPIR": 3.7,
         "PredictedPTS": 2.0
       },
@@ -27367,7 +27367,7 @@
         "AvgPTS": 1.5,
         "FormFactor": 1.134,
         "DefFactor": 0.985,
-        "WinProb": 61.0,
+        "WinProb": 64.2,
         "PredictedPIR": 3.6,
         "PredictedPTS": 1.7
       },
@@ -27382,7 +27382,7 @@
         "AvgPTS": 6.0,
         "FormFactor": 0.709,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "PredictedPIR": 3.5,
         "PredictedPTS": 4.1
       },
@@ -27397,7 +27397,7 @@
         "AvgPTS": 1.5,
         "FormFactor": 1.384,
         "DefFactor": 0.976,
-        "WinProb": 39.0,
+        "WinProb": 35.8,
         "PredictedPIR": 2.9,
         "PredictedPTS": 1.9
       },
@@ -27412,7 +27412,7 @@
         "AvgPTS": 3.4,
         "FormFactor": 1.055,
         "DefFactor": 0.991,
-        "WinProb": 24.9,
+        "WinProb": 30.9,
         "PredictedPIR": 2.6,
         "PredictedPTS": 3.5
       },
@@ -27427,9 +27427,9 @@
         "AvgPTS": 4.4,
         "FormFactor": 0.772,
         "DefFactor": 0.976,
-        "WinProb": 75.1,
+        "WinProb": 69.1,
         "PredictedPIR": 2.4,
-        "PredictedPTS": 3.5
+        "PredictedPTS": 3.4
       },
       {
         "Player": "BEGARIN, JUHANN",
@@ -27442,8 +27442,8 @@
         "AvgPTS": 2.5,
         "FormFactor": 1.393,
         "DefFactor": 0.991,
-        "WinProb": 24.9,
-        "PredictedPIR": 2.2,
+        "WinProb": 30.9,
+        "PredictedPIR": 2.3,
         "PredictedPTS": 3.3
       },
       {
@@ -27457,9 +27457,9 @@
         "AvgPTS": 1.5,
         "FormFactor": 1.134,
         "DefFactor": 0.991,
-        "WinProb": 24.9,
+        "WinProb": 30.9,
         "PredictedPIR": 2.1,
-        "PredictedPTS": 1.6
+        "PredictedPTS": 1.7
       },
       {
         "Player": "KEITA, SAYON",
@@ -27472,7 +27472,7 @@
         "AvgPTS": 1.7,
         "FormFactor": 1.168,
         "DefFactor": 0.99,
-        "WinProb": 61.0,
+        "WinProb": 59.7,
         "PredictedPIR": 2.1,
         "PredictedPTS": 2.0
       },
@@ -27487,24 +27487,9 @@
         "AvgPTS": 2.2,
         "FormFactor": 0.975,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "PredictedPIR": 1.8,
         "PredictedPTS": 2.1
-      },
-      {
-        "Player": "TOLIOPOULOS, VASSILIS",
-        "Team": "PAN",
-        "Opponent": "MCO",
-        "IsHome": true,
-        "GP": 19,
-        "AvgPIR": 1.2,
-        "MaxPIR": 21.0,
-        "AvgPTS": 1.9,
-        "FormFactor": 0.545,
-        "DefFactor": 0.976,
-        "WinProb": 75.1,
-        "PredictedPIR": 1.7,
-        "PredictedPTS": 1.1
       },
       {
         "Player": "KEITA, SAYON",
@@ -27517,9 +27502,24 @@
         "AvgPTS": 1.7,
         "FormFactor": 1.168,
         "DefFactor": 0.976,
-        "WinProb": 39.0,
+        "WinProb": 35.8,
         "PredictedPIR": 1.7,
         "PredictedPTS": 1.9
+      },
+      {
+        "Player": "TOLIOPOULOS, VASSILIS",
+        "Team": "PAN",
+        "Opponent": "MCO",
+        "IsHome": true,
+        "GP": 19,
+        "AvgPIR": 1.2,
+        "MaxPIR": 21.0,
+        "AvgPTS": 1.9,
+        "FormFactor": 0.545,
+        "DefFactor": 0.976,
+        "WinProb": 69.1,
+        "PredictedPIR": 1.6,
+        "PredictedPTS": 1.1
       },
       {
         "Player": "DAVIDOVAC, DEJAN",
@@ -27532,7 +27532,7 @@
         "AvgPTS": 1.8,
         "FormFactor": 0.7,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "PredictedPIR": 1.6,
         "PredictedPTS": 1.2
       },
@@ -27547,7 +27547,7 @@
         "AvgPTS": 1.8,
         "FormFactor": 1.066,
         "DefFactor": 0.99,
-        "WinProb": 61.0,
+        "WinProb": 59.7,
         "PredictedPIR": 1.6,
         "PredictedPTS": 1.9
       },
@@ -27562,7 +27562,7 @@
         "AvgPTS": 4.6,
         "FormFactor": 0.449,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "PredictedPIR": 1.1,
         "PredictedPTS": 2.0
       },
@@ -27577,7 +27577,7 @@
         "AvgPTS": 1.8,
         "FormFactor": 1.066,
         "DefFactor": 0.976,
-        "WinProb": 39.0,
+        "WinProb": 35.8,
         "PredictedPIR": 1.1,
         "PredictedPTS": 1.8
       },
@@ -27592,7 +27592,7 @@
         "AvgPTS": 3.0,
         "FormFactor": 0.96,
         "DefFactor": 0.976,
-        "WinProb": 39.0,
+        "WinProb": 35.8,
         "PredictedPIR": 1.0,
         "PredictedPTS": 2.8
       },
@@ -27607,7 +27607,7 @@
         "AvgPTS": 1.2,
         "FormFactor": 0.861,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "PredictedPIR": 0.8,
         "PredictedPTS": 1.0
       },
@@ -27622,7 +27622,7 @@
         "AvgPTS": 0.9,
         "FormFactor": 0.977,
         "DefFactor": 0.976,
-        "WinProb": 75.1,
+        "WinProb": 69.1,
         "PredictedPIR": 0.7,
         "PredictedPTS": 0.9
       },
@@ -27637,7 +27637,7 @@
         "AvgPTS": 0.1,
         "FormFactor": -0.26,
         "DefFactor": 0.985,
-        "WinProb": 61.0,
+        "WinProb": 64.2,
         "PredictedPIR": 0.1,
         "PredictedPTS": -0.0
       },
@@ -27652,7 +27652,7 @@
         "AvgPTS": 0.1,
         "FormFactor": -0.26,
         "DefFactor": 0.991,
-        "WinProb": 24.9,
+        "WinProb": 30.9,
         "PredictedPIR": -0.0,
         "PredictedPTS": -0.0
       },
@@ -27667,7 +27667,7 @@
         "AvgPTS": 0.9,
         "FormFactor": 0.82,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "PredictedPIR": 0.0,
         "PredictedPTS": 0.7
       },
@@ -27682,7 +27682,7 @@
         "AvgPTS": 0.0,
         "FormFactor": 1.0,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "PredictedPIR": 0.0,
         "PredictedPTS": 0.0
       },
@@ -27697,7 +27697,7 @@
         "AvgPTS": 0.0,
         "FormFactor": 1.0,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "PredictedPIR": 0.0,
         "PredictedPTS": 0.0
       },
@@ -27712,7 +27712,7 @@
         "AvgPTS": 1.8,
         "FormFactor": -0.02,
         "DefFactor": 0.985,
-        "WinProb": 39.0,
+        "WinProb": 40.3,
         "PredictedPIR": 0.0,
         "PredictedPTS": -0.0
       }
@@ -27720,46 +27720,46 @@
   },
   "accuracy": {
     "n_games": 498,
-    "accuracy": 64.9,
-    "brier_score": 0.2146,
-    "log_loss": 0.6161,
+    "accuracy": 65.5,
+    "brier_score": 0.2103,
+    "log_loss": 0.6045,
     "calibration": [
       {
         "Bucket": "50-60%",
-        "Count": 146,
-        "Accuracy": 54.1,
-        "AvgConfidence": 55.3
+        "Count": 148,
+        "Accuracy": 50.7,
+        "AvgConfidence": 56.0
       },
       {
         "Bucket": "60-70%",
-        "Count": 138,
-        "Accuracy": 58.0,
-        "AvgConfidence": 65.4
+        "Count": 156,
+        "Accuracy": 61.5,
+        "AvgConfidence": 64.7
       },
       {
         "Bucket": "70-80%",
-        "Count": 115,
-        "Accuracy": 70.4,
-        "AvgConfidence": 75.5
+        "Count": 127,
+        "Accuracy": 73.2,
+        "AvgConfidence": 75.8
       },
       {
         "Bucket": "80-90%",
-        "Count": 69,
-        "Accuracy": 79.7,
-        "AvgConfidence": 84.3
+        "Count": 42,
+        "Accuracy": 92.9,
+        "AvgConfidence": 84.7
       },
       {
         "Bucket": "90%+",
-        "Count": 30,
-        "Accuracy": 93.3,
-        "AvgConfidence": 93.0
+        "Count": 25,
+        "Accuracy": 92.0,
+        "AvgConfidence": 92.8
       }
     ],
     "per_round": [
       {
         "Round": 1,
         "Games": 10,
-        "Accuracy": 60.0
+        "Accuracy": 50.0
       },
       {
         "Round": 2,
@@ -27774,7 +27774,7 @@
       {
         "Round": 4,
         "Games": 10,
-        "Accuracy": 60.0
+        "Accuracy": 50.0
       },
       {
         "Round": 5,
@@ -27784,7 +27784,7 @@
       {
         "Round": 6,
         "Games": 10,
-        "Accuracy": 30.0
+        "Accuracy": 50.0
       },
       {
         "Round": 7,
@@ -27799,22 +27799,22 @@
       {
         "Round": 9,
         "Games": 10,
-        "Accuracy": 50.0
+        "Accuracy": 40.0
       },
       {
         "Round": 10,
         "Games": 10,
-        "Accuracy": 90.0
+        "Accuracy": 80.0
       },
       {
         "Round": 11,
         "Games": 10,
-        "Accuracy": 40.0
+        "Accuracy": 50.0
       },
       {
         "Round": 12,
         "Games": 10,
-        "Accuracy": 60.0
+        "Accuracy": 70.0
       },
       {
         "Round": 13,
@@ -27834,12 +27834,12 @@
       {
         "Round": 16,
         "Games": 10,
-        "Accuracy": 20.0
+        "Accuracy": 10.0
       },
       {
         "Round": 17,
         "Games": 10,
-        "Accuracy": 80.0
+        "Accuracy": 90.0
       },
       {
         "Round": 18,
@@ -27849,7 +27849,7 @@
       {
         "Round": 19,
         "Games": 10,
-        "Accuracy": 50.0
+        "Accuracy": 60.0
       },
       {
         "Round": 20,
@@ -27864,17 +27864,17 @@
       {
         "Round": 22,
         "Games": 10,
-        "Accuracy": 50.0
+        "Accuracy": 60.0
       },
       {
         "Round": 23,
         "Games": 10,
-        "Accuracy": 90.0
+        "Accuracy": 80.0
       },
       {
         "Round": 24,
         "Games": 10,
-        "Accuracy": 60.0
+        "Accuracy": 70.0
       },
       {
         "Round": 25,
@@ -27884,12 +27884,12 @@
       {
         "Round": 26,
         "Games": 10,
-        "Accuracy": 60.0
+        "Accuracy": 50.0
       },
       {
         "Round": 27,
         "Games": 10,
-        "Accuracy": 30.0
+        "Accuracy": 40.0
       },
       {
         "Round": 28,
@@ -27909,7 +27909,7 @@
       {
         "Round": 31,
         "Games": 10,
-        "Accuracy": 80.0
+        "Accuracy": 70.0
       },
       {
         "Round": 32,
@@ -27919,7 +27919,7 @@
       {
         "Round": 33,
         "Games": 20,
-        "Accuracy": 65.0
+        "Accuracy": 70.0
       },
       {
         "Round": 34,
@@ -27929,7 +27929,7 @@
       {
         "Round": 35,
         "Games": 30,
-        "Accuracy": 66.7
+        "Accuracy": 70.0
       },
       {
         "Round": 36,
@@ -43264,8 +43264,8 @@
       "pre_game_win_prob": 58.2,
       "is_upset": false,
       "championship_odds_before": {
-        "PAN": 10.9,
-        "MCO": 9.7
+        "PAN": 10.7,
+        "MCO": 11.5
       },
       "championship_odds_after": {
         "PAN": 10.9,
@@ -43304,7 +43304,7 @@
       "pre_game_win_prob": 61.3,
       "is_upset": false,
       "championship_odds_before": {
-        "MCO": 9.7,
+        "MCO": 11.5,
         "BAR": 0.0
       },
       "championship_odds_after": {
@@ -44132,7 +44132,7 @@
             "metric": "paint_pct",
             "label": "Paint %",
             "high": 37.9,
-            "low": 39.8
+            "low": 40.2
           },
           {
             "metric": "ft_rate",
@@ -44303,8 +44303,8 @@
           {
             "metric": "paint_pct",
             "label": "Paint %",
-            "high": 39.4,
-            "low": 41.3
+            "high": 40.0,
+            "low": 41.6
           },
           {
             "metric": "ft_rate",
@@ -44475,8 +44475,8 @@
           {
             "metric": "paint_pct",
             "label": "Paint %",
-            "high": 38.6,
-            "low": 36.6
+            "high": 39.4,
+            "low": 37.6
           },
           {
             "metric": "ft_rate",
@@ -44647,8 +44647,8 @@
           {
             "metric": "paint_pct",
             "label": "Paint %",
-            "high": 37.7,
-            "low": 46.1
+            "high": 37.8,
+            "low": 45.9
           },
           {
             "metric": "ft_rate",
