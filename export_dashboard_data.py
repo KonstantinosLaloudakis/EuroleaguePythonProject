@@ -1195,6 +1195,73 @@ def build_momentum(series_entry, matchup_probs, teams_by_code):
     }
 
 
+def build_tale_of_the_tape(high_team, low_team, teams_by_code,
+                            box_metrics, paint_share, rs_h2h):
+    """
+    Build the Tale of the Tape data block for a series.
+
+    8 fixed stat rows in this order:
+        1. Pace          (poss/40)         from box_metrics
+        2. Adj. Offense                    from teams_by_code (adj_off)
+        3. Adj. Defense                    from teams_by_code (adj_def, lower better)
+        4. Adj. Net                        from teams_by_code (adj_net)
+        5. 3PT %                           from box_metrics
+        6. Paint %                         from paint_share
+        7. FT Rate                         from box_metrics
+        8. Bench %                         from box_metrics
+
+    Rows where either team is missing the stat are skipped (no n/a placeholders).
+
+    Args:
+        high_team, low_team: 3-letter codes. Either may be None
+            (returns None in that case).
+        teams_by_code: dict from dashboard 'teams' list keyed by code.
+        box_metrics: output of compute_team_box_metrics().
+        paint_share: output of compute_team_paint_share().
+        rs_h2h: list of regular-season meetings (already computed by
+            compute_series_data._rs_h2h).
+
+    Returns:
+        {'rows': [...], 'edges': []} or None if either team is missing.
+
+    Edges field is intentionally empty in this task; it is populated by
+    the build_tale_of_the_tape_edges call wired in Task 6.
+    """
+    if not high_team or not low_team:
+        return None
+
+    th = teams_by_code.get(high_team) or {}
+    tl = teams_by_code.get(low_team) or {}
+    bh = box_metrics.get(high_team) or {}
+    bl = box_metrics.get(low_team) or {}
+
+    row_specs = [
+        ('pace',        'Pace (poss/40)', bh.get('pace'),                 bl.get('pace'),                 False),
+        ('adj_off',     'Adj. Offense',   th.get('adj_off'),              tl.get('adj_off'),              False),
+        ('adj_def',     'Adj. Defense',   th.get('adj_def'),              tl.get('adj_def'),              True),
+        ('adj_net',     'Adj. Net',       th.get('adj_net'),              tl.get('adj_net'),              False),
+        ('three_pct',   '3PT %',          bh.get('three_pct'),            bl.get('three_pct'),            False),
+        ('paint_pct',   'Paint %',        paint_share.get(high_team),     paint_share.get(low_team),      False),
+        ('ft_rate',     'FT Rate',        bh.get('ft_rate'),              bl.get('ft_rate'),              False),
+        ('bench_share', 'Bench %',        bh.get('bench_share'),          bl.get('bench_share'),          False),
+    ]
+
+    rows = []
+    for metric, label, hv, lv, lower_is_better in row_specs:
+        if hv is None or lv is None:
+            continue
+        row = {
+            'metric': metric, 'label': label,
+            'high': round(float(hv), 3 if metric == 'ft_rate' else 1),
+            'low':  round(float(lv), 3 if metric == 'ft_rate' else 1),
+        }
+        if lower_is_better:
+            row['lower_is_better'] = True
+        rows.append(row)
+
+    return {'rows': rows, 'edges': []}
+
+
 def main():
     print(f"\n=== Dashboard Export ===")
     if 'EUROLEAGUE_ROUND_SUFFIX' in os.environ:
@@ -2469,7 +2536,8 @@ def main():
         return result
 
     def compute_series_data(playoff_results, matchup_probs, seeded_teams,
-                            series_win_probs, games_df, teams_by_code):
+                            series_win_probs, games_df, teams_by_code,
+                            box_metrics, paint_share):
         """
         Build per-series entries for Series Hub pages.
 
@@ -2740,6 +2808,10 @@ def main():
             result[slot_id]['momentum'] = build_momentum(
                 result[slot_id], matchup_probs, teams_by_code,
             )
+            result[slot_id]['tale_of_the_tape'] = build_tale_of_the_tape(
+                high_code, low_code, teams_by_code,
+                box_metrics, paint_share, result[slot_id]['rs_h2h'],
+            )
 
         return result
 
@@ -2841,9 +2913,18 @@ def main():
 
             # Build Series Hub data
             teams_by_code = {t['team']: t for t in teams}
+            all_game_stats = load_json('mvp_all_game_stats_2025.json') or []
+            gamecode_to_teams = {
+                int(r['GameCode']): (r['LocalTeam'], r['RoadTeam'])
+                for r in (load_json('mvp_game_results.json') or [])
+            }
+            box_metrics = compute_team_box_metrics(all_game_stats, gamecode_to_teams)
+            shot_stats_for_paint = load_json('docs/data/current/shot_stats.json') or {}
+            paint_share = compute_team_paint_share(shot_stats_for_paint)
             series_data = compute_series_data(
                 playoff_results_data, playoff_matchup_probs, seeded,
                 series_win_probs, games_df, teams_by_code,
+                box_metrics, paint_share,
             )
 
             print(f"  Playoff results: {sum(1 for g in game_results_raw if int(g.get('GameCode', 0)) > 380 and g.get('LocalScore', 0) > 0)} games tracked")
@@ -2885,9 +2966,18 @@ def main():
                     -e['championship_odds'],
                 ))
                 teams_by_code = {t['team']: t for t in teams}
+                all_game_stats = load_json('mvp_all_game_stats_2025.json') or []
+                gamecode_to_teams = {
+                    int(r['GameCode']): (r['LocalTeam'], r['RoadTeam'])
+                    for r in (load_json('mvp_game_results.json') or [])
+                }
+                box_metrics = compute_team_box_metrics(all_game_stats, gamecode_to_teams)
+                shot_stats_for_paint = load_json('docs/data/current/shot_stats.json') or {}
+                paint_share = compute_team_paint_share(shot_stats_for_paint)
                 series_data = compute_series_data(
                     None, playoff_matchup_probs, seeded, series_win_probs, games_df,
                     teams_by_code,
+                    box_metrics, paint_share,
                 )
 
     output = {
