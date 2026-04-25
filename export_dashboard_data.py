@@ -1308,10 +1308,13 @@ def _compute_edges(high_team, low_team, th, tl, bh, bl, paint_share, rs_h2h):
     if gap >= 2 and (th.get('last5') or tl.get('last5')):
         favor = 'high' if f_h > f_l else 'low'
         team = high_team if favor == 'high' else low_team
+        opp_name = low_team if favor == 'high' else high_team
+        f_team = f_h if favor == 'high' else f_l
+        f_opp = f_l if favor == 'high' else f_h
         cands.append({
             'type': 'form', 'score': float(gap), 'favor': favor,
-            'text': f'{team}: {f_h}-{5-f_h} last 5 vs {high_team if favor == "low" else low_team} '
-                    f'{f_l}-{5-f_l} — form edge {team}',
+            'text': f'{team}: {f_team}-{5-f_team} last 5 vs {opp_name} '
+                    f'{f_opp}-{5-f_opp} — form edge {team}',
         })
 
     # De-duplicate shooting edges: keep the higher-scoring of {three_pct, paint_pct}
@@ -1375,10 +1378,8 @@ def build_tale_of_the_tape(high_team, low_team, teams_by_code,
             compute_series_data._rs_h2h).
 
     Returns:
-        {'rows': [...], 'edges': []} or None if either team is missing.
-
-    Edges field is intentionally empty in this task; it is populated by
-    the build_tale_of_the_tape_edges call wired in Task 6.
+        {'rows': [...], 'edges': [...]} or None if either team is missing.
+        Edges are computed via _compute_edges() and follow the rows.
     """
     if not high_team or not low_team:
         return None

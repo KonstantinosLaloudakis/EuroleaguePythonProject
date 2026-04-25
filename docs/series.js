@@ -513,7 +513,7 @@ function _renderMomentumCallout(swing) {
   return `
     <div class="momentum-callout">
       <strong>Biggest swing:</strong>
-      G${swing.game_num} — ${winner} win shifted series WP ${swing.delta_pct}%
+      G${swing.game_num} — ${winner} win shifted series WP +${swing.delta_pct}%
     </div>
   `;
 }
