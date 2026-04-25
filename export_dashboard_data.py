@@ -887,6 +887,103 @@ def build_game_recaps():
     return output
 
 
+def compute_team_box_metrics(all_game_stats, gamecode_to_teams):
+    """
+    Aggregate per-team season box-score metrics from raw box scores.
+
+    Args:
+        all_game_stats: list of game dicts from mvp_all_game_stats_2025.json
+        gamecode_to_teams: dict[int, tuple[str, str]] mapping
+            GameCode -> (local_team_code, road_team_code)
+
+    Returns:
+        dict[team_code] = {
+            'pace': float,           # avg possessions per game
+            'three_pct': float,      # 3PT% (0-100)
+            'two_pct': float,        # 2PT% (0-100)
+            'ft_rate': float,        # FTA / FGA
+            'bench_share': float,    # bench points share (0-100)
+            'opp_three_pct': float,  # opponents' 3PT% vs this team (0-100)
+            'opp_two_pct': float,    # opponents' 2PT% vs this team (0-100)
+            'games': int,
+        }
+    Skips playoff games (Gamecode > 380) and any game with no shot attempts logged.
+    """
+    from collections import defaultdict
+
+    agg = defaultdict(lambda: {
+        'fga': 0.0, 'fta': 0.0, 'oreb': 0.0, 'tov': 0.0,
+        'fgm3': 0.0, 'fga3': 0.0, 'fgm2': 0.0, 'fga2': 0.0,
+        'opp_fgm3': 0.0, 'opp_fga3': 0.0,
+        'opp_fgm2': 0.0, 'opp_fga2': 0.0,
+        'bench_pts': 0.0, 'total_pts': 0.0,
+        'games': 0,
+    })
+
+    def _bench_points(players):
+        if not isinstance(players, list):
+            return 0.0
+        total = 0.0
+        for pl in players:
+            stats = pl.get('stats') or {}
+            if stats.get('startFive'):
+                continue
+            total += float(stats.get('points') or 0.0)
+        return total
+
+    for g in all_game_stats:
+        gc = int(g.get('Gamecode') or g.get('GameCode') or 0)
+        if gc <= 0 or gc > 380:
+            continue
+        teams = gamecode_to_teams.get(gc)
+        if not teams:
+            continue
+        local_team, road_team = teams
+
+        for side, opp_side, my_team in (
+            ('local', 'road', local_team),
+            ('road', 'local', road_team),
+        ):
+            fga = float(g.get(f'{side}.total.fieldGoalsAttemptedTotal') or 0)
+            fta = float(g.get(f'{side}.total.freeThrowsAttempted') or 0)
+            if fga + fta == 0:
+                continue  # data missing
+
+            t = agg[my_team]
+            t['fga'] += fga
+            t['fta'] += fta
+            t['oreb'] += float(g.get(f'{side}.total.offensiveRebounds') or 0)
+            t['tov'] += float(g.get(f'{side}.total.turnovers') or 0)
+            t['fgm3'] += float(g.get(f'{side}.total.fieldGoalsMade3') or 0)
+            t['fga3'] += float(g.get(f'{side}.total.fieldGoalsAttempted3') or 0)
+            t['fgm2'] += float(g.get(f'{side}.total.fieldGoalsMade2') or 0)
+            t['fga2'] += float(g.get(f'{side}.total.fieldGoalsAttempted2') or 0)
+            t['opp_fgm3'] += float(g.get(f'{opp_side}.total.fieldGoalsMade3') or 0)
+            t['opp_fga3'] += float(g.get(f'{opp_side}.total.fieldGoalsAttempted3') or 0)
+            t['opp_fgm2'] += float(g.get(f'{opp_side}.total.fieldGoalsMade2') or 0)
+            t['opp_fga2'] += float(g.get(f'{opp_side}.total.fieldGoalsAttempted2') or 0)
+            t['total_pts'] += float(g.get(f'{side}.total.points') or 0)
+            t['bench_pts'] += _bench_points(g.get(f'{side}.players'))
+            t['games'] += 1
+
+    out = {}
+    for code, a in agg.items():
+        if a['games'] == 0:
+            continue
+        poss = a['fga'] + 0.44 * a['fta'] - a['oreb'] + a['tov']
+        out[code] = {
+            'pace': round(poss / a['games'], 1),
+            'three_pct': round((a['fgm3'] / a['fga3']) * 100, 1) if a['fga3'] > 0 else 0.0,
+            'two_pct': round((a['fgm2'] / a['fga2']) * 100, 1) if a['fga2'] > 0 else 0.0,
+            'ft_rate': round(a['fta'] / a['fga'], 3) if a['fga'] > 0 else 0.0,
+            'bench_share': round((a['bench_pts'] / a['total_pts']) * 100, 1) if a['total_pts'] > 0 else 0.0,
+            'opp_three_pct': round((a['opp_fgm3'] / a['opp_fga3']) * 100, 1) if a['opp_fga3'] > 0 else 0.0,
+            'opp_two_pct': round((a['opp_fgm2'] / a['opp_fga2']) * 100, 1) if a['opp_fga2'] > 0 else 0.0,
+            'games': a['games'],
+        }
+    return out
+
+
 def main():
     print(f"\n=== Dashboard Export ===")
     if 'EUROLEAGUE_ROUND_SUFFIX' in os.environ:
