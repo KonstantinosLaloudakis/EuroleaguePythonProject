@@ -1186,11 +1186,16 @@ def main():
             except FileNotFoundError:
                 pass
 
-            def _platt(p):
+            def _platt(p, apply_intercept=True):
+                """Apply postseason calibration. The intercept was fit on
+                home-team predictions so it captures home-team bias; on
+                neutral courts we drop it to keep P(A>B)+P(B>A)=1."""
                 if platt_coef is None:
                     return p
                 p = min(max(p, 1e-6), 1 - 1e-6)
-                z = platt_coef * math.log(p / (1 - p)) + platt_intercept
+                z = platt_coef * math.log(p / (1 - p))
+                if apply_intercept:
+                    z += platt_intercept
                 return 1.0 / (1.0 + math.exp(-z))
 
             # Load game results for HCA data (mirrors simulate_monte_carlo.py)
@@ -1243,7 +1248,7 @@ def main():
                     margin_raw = (a_adj - b_adj) * 0.75 + elo_margin * 0.25
                     p_a = predict_wp(margin=margin_raw, seconds_remaining=2400, elo_diff=a_elo - b_elo)
                     p_b = predict_wp(margin=-margin_raw, seconds_remaining=2400, elo_diff=b_elo - a_elo)
-                    return _platt((p_a + (1.0 - p_b)) / 2.0)
+                    return _platt((p_a + (1.0 - p_b)) / 2.0, apply_intercept=False)
 
             for ta in top10:
                 inner = {}
