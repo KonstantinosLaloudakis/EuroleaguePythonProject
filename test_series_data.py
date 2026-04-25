@@ -59,7 +59,20 @@ print('Task 1 assertions passed.')
 
 # ── Task 2: compute_series_data scaffolding ────────────────────────────────
 csd_fn = next(n for n in ast.walk(main_fn) if isinstance(n, ast.FunctionDef) and n.name == 'compute_series_data')
-ns2 = {}
+
+# compute_series_data now references module-level helpers (build_momentum,
+# build_tale_of_the_tape, compute_remaining_series_wp). Inject them into the
+# exec namespace so the extracted function can resolve them at call time.
+from export_dashboard_data import (
+    build_momentum,
+    build_tale_of_the_tape,
+    compute_remaining_series_wp,
+)
+ns2 = {
+    'build_momentum': build_momentum,
+    'build_tale_of_the_tape': build_tale_of_the_tape,
+    'compute_remaining_series_wp': compute_remaining_series_wp,
+}
 exec(ast.unparse(csd_fn), ns2)
 compute_series_data = ns2['compute_series_data']
 
@@ -67,8 +80,15 @@ compute_series_data = ns2['compute_series_data']
 import pandas as pd
 empty_games_df = pd.DataFrame(columns=['round', 'homecode', 'awaycode', 'homescore', 'awayscore', 'played'])
 
+# Empty defaults for the new parameters added by the Tale of the Tape /
+# Momentum work — the existing assertions don't depend on these outputs.
+empty_teams_by_code = {}
+empty_box_metrics = {}
+empty_paint_share = {}
+
 # --- Pre-playoff state ---
-result = compute_series_data(None, matchup_probs, seeded, {}, empty_games_df)
+result = compute_series_data(None, matchup_probs, seeded, {}, empty_games_df,
+                             empty_teams_by_code, empty_box_metrics, empty_paint_share)
 assert isinstance(result, dict)
 assert set(result.keys()) == {'qf1', 'qf2', 'qf3', 'qf4', 'sf1', 'sf2', 'final'}
 
@@ -164,7 +184,8 @@ swp = {
     'final': {'T01': 25.0, 'T02': 30.0, 'T03': 15.0, 'T04': 12.0, 'T05': 8.0, 'T06': 5.0, 'T08': 5.0},
 }
 
-result = compute_series_data(pr_state, matchup_probs, seeded, swp, empty_games_df)
+result = compute_series_data(pr_state, matchup_probs, seeded, swp, empty_games_df,
+                             empty_teams_by_code, empty_box_metrics, empty_paint_share)
 
 # qf1: in progress, 2-1
 qf1 = result['qf1']
@@ -241,7 +262,8 @@ pr_post_playin = {
     'final': {},
 }
 
-result = compute_series_data(pr_post_playin, matchup_probs, seeded, {}, rs_games)
+result = compute_series_data(pr_post_playin, matchup_probs, seeded, {}, rs_games,
+                             empty_teams_by_code, empty_box_metrics, empty_paint_share)
 
 qf1 = result['qf1']
 assert len(qf1['rs_h2h']) == 2, f'expected 2 rs_h2h, got {len(qf1["rs_h2h"])}'
