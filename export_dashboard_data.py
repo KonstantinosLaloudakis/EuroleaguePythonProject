@@ -984,6 +984,33 @@ def compute_team_box_metrics(all_game_stats, gamecode_to_teams):
     return out
 
 
+def compute_team_paint_share(shot_stats):
+    """
+    Compute per-team paint shot volume share from shot_stats data.
+
+    Paint zones: A (At Rim), B (Left Paint), C (Right Paint).
+    paint_share = (paint attempts) / (total attempts) * 100.
+
+    Args:
+        shot_stats: dict loaded from docs/data/current/shot_stats.json
+
+    Returns:
+        dict[team_code] -> float (0-100)
+    """
+    out = {}
+    teams = (shot_stats or {}).get('teams') or {}
+    paint_zones = ('A', 'B', 'C')
+    for code, zones in teams.items():
+        if not isinstance(zones, dict):
+            continue
+        paint_att = sum(float((zones.get(z) or {}).get('attempts') or 0) for z in paint_zones)
+        total_att = sum(float((zones.get(z) or {}).get('attempts') or 0) for z in zones.keys())
+        if total_att <= 0:
+            continue
+        out[code] = round((paint_att / total_att) * 100, 1)
+    return out
+
+
 def main():
     print(f"\n=== Dashboard Export ===")
     if 'EUROLEAGUE_ROUND_SUFFIX' in os.environ:
