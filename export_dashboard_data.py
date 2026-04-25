@@ -1195,6 +1195,159 @@ def build_momentum(series_entry, matchup_probs, teams_by_code):
     }
 
 
+def _compute_edges(high_team, low_team, th, tl, bh, bl, paint_share, rs_h2h):
+    """
+    Deterministic Edges panel. Returns a list of up to 3 edge dicts:
+        {'text': str, 'favor': 'high' | 'low' | None, 'type': str}
+
+    Algorithm (matches spec):
+      - Generate candidates: net, three_pct, paint_pct, pace, bench, form.
+      - Drop the lower-scoring of {three_pct, paint_pct} so at most one
+        shooting edge survives.
+      - Sort surviving by score desc; tie-break by priority order.
+      - Take top 2 (or top 3 if no H2H qualifies).
+      - Append H2H as slot 3 if rs_h2h has at least 1 entry.
+    """
+    PRIORITY = ['net', 'three_pct', 'paint_pct', 'pace', 'bench', 'form']
+    cands = []  # each: {'type','score','favor','text'}
+
+    def _last5_wins(team_obj):
+        last5 = team_obj.get('last5') or []
+        return sum(1 for x in last5 if x == 'W')
+
+    # 1. Net rating gap (always considered)
+    net_h = th.get('adj_net')
+    net_l = tl.get('adj_net')
+    if net_h is not None and net_l is not None:
+        gap = abs(net_h - net_l)
+        favor = 'high' if net_h >= net_l else 'low'
+        team = high_team if favor == 'high' else low_team
+        diff = abs(round(net_h - net_l, 1))
+        cands.append({
+            'type': 'net', 'score': gap, 'favor': favor,
+            'text': f'{team}: +{diff:g} net rating advantage',
+        })
+
+    # 2. 3PT shooting matchup: team's 3PT% vs opp 3PT% allowed
+    th_3 = bh.get('three_pct')
+    tl_3 = bl.get('three_pct')
+    th_opp3 = bh.get('opp_three_pct')
+    tl_opp3 = bl.get('opp_three_pct')
+    if None not in (th_3, tl_3, th_opp3, tl_opp3):
+        # Each team's expected edge from 3 vs the OTHER team's perimeter D
+        h_edge = th_3 - tl_opp3   # high shoots vs low's defense
+        l_edge = tl_3 - th_opp3   # low shoots vs high's defense
+        # Pick the larger absolute team edge as the candidate
+        if abs(h_edge) >= abs(l_edge):
+            score = abs(h_edge)
+            favor = 'high' if h_edge >= 0 else 'low'
+            text = (f'{high_team}: {th_3:.0f}% from 3 vs {low_team} defending '
+                    f'{tl_opp3:.0f}% — '
+                    + ('edge ' + (high_team if favor == 'high' else low_team)))
+        else:
+            score = abs(l_edge)
+            favor = 'low' if l_edge >= 0 else 'high'
+            text = (f'{low_team}: {tl_3:.0f}% from 3 vs {high_team} defending '
+                    f'{th_opp3:.0f}% — '
+                    + ('edge ' + (low_team if favor == 'low' else high_team)))
+        cands.append({'type': 'three_pct', 'score': score, 'favor': favor, 'text': text})
+
+    # 3. Paint shooting matchup: 2PT% as proxy (higher is better; also opp 2PT% lower is better D)
+    th_2 = bh.get('two_pct')
+    tl_2 = bl.get('two_pct')
+    th_opp2 = bh.get('opp_two_pct')
+    tl_opp2 = bl.get('opp_two_pct')
+    if None not in (th_2, tl_2, th_opp2, tl_opp2):
+        h_edge = th_2 - tl_opp2   # high inside vs low's interior D
+        l_edge = tl_2 - th_opp2
+        if abs(h_edge) >= abs(l_edge):
+            score = abs(h_edge)
+            favor = 'high' if h_edge >= 0 else 'low'
+            text = (f'{high_team}: {th_2:.0f}% on 2s vs {low_team} allowing '
+                    f'{tl_opp2:.0f}% — '
+                    + ('paint edge ' + (high_team if favor == 'high' else low_team)))
+        else:
+            score = abs(l_edge)
+            favor = 'low' if l_edge >= 0 else 'high'
+            text = (f'{low_team}: {tl_2:.0f}% on 2s vs {high_team} allowing '
+                    f'{th_opp2:.0f}% — '
+                    + ('paint edge ' + (low_team if favor == 'low' else high_team)))
+        cands.append({'type': 'paint_pct', 'score': score, 'favor': favor, 'text': text})
+
+    # 4. Pace mismatch (gap >= 3.0)
+    pace_h = bh.get('pace')
+    pace_l = bl.get('pace')
+    if pace_h is not None and pace_l is not None:
+        gap = abs(pace_h - pace_l)
+        if gap >= 3.0:
+            favor = 'high' if pace_h > pace_l else 'low'
+            faster = high_team if favor == 'high' else low_team
+            cands.append({
+                'type': 'pace', 'score': gap, 'favor': favor,
+                'text': f'{faster} plays {gap:.1f} more possessions per 40 — pace edge {faster}',
+            })
+
+    # 5. Bench depth (gap >= 5pp)
+    bs_h = bh.get('bench_share')
+    bs_l = bl.get('bench_share')
+    if bs_h is not None and bs_l is not None:
+        gap = abs(bs_h - bs_l)
+        if gap >= 5.0:
+            favor = 'high' if bs_h > bs_l else 'low'
+            deeper = high_team if favor == 'high' else low_team
+            cands.append({
+                'type': 'bench', 'score': gap, 'favor': favor,
+                'text': f'{deeper}: bench scores {(bs_h if favor == "high" else bs_l):.0f}% vs '
+                        f'{(bs_l if favor == "high" else bs_h):.0f}% — depth edge {deeper}',
+            })
+
+    # 6. Recent form (last5 W differential >= 2)
+    f_h = _last5_wins(th)
+    f_l = _last5_wins(tl)
+    gap = abs(f_h - f_l)
+    if gap >= 2 and (th.get('last5') or tl.get('last5')):
+        favor = 'high' if f_h > f_l else 'low'
+        team = high_team if favor == 'high' else low_team
+        cands.append({
+            'type': 'form', 'score': float(gap), 'favor': favor,
+            'text': f'{team}: {f_h}-{5-f_h} last 5 vs {high_team if favor == "low" else low_team} '
+                    f'{f_l}-{5-f_l} — form edge {team}',
+        })
+
+    # De-duplicate shooting edges: keep the higher-scoring of {three_pct, paint_pct}
+    shooting = [c for c in cands if c['type'] in ('three_pct', 'paint_pct')]
+    if len(shooting) > 1:
+        keep = max(shooting, key=lambda c: c['score'])
+        cands = [c for c in cands if c['type'] not in ('three_pct', 'paint_pct')] + [keep]
+
+    # Sort by score desc, tie-break by PRIORITY order
+    cands.sort(key=lambda c: (-c['score'], PRIORITY.index(c['type'])))
+
+    # H2H is forced into slot 3 if any meetings exist
+    h2h_edge = None
+    if rs_h2h:
+        wins_h = sum(1 for m in rs_h2h if m.get('winner') == high_team)
+        wins_l = sum(1 for m in rs_h2h if m.get('winner') == low_team)
+        if wins_h == len(rs_h2h) and wins_l == 0:
+            text = f'{high_team} swept RS series {wins_h}-0'
+            favor = 'high'
+        elif wins_l == len(rs_h2h) and wins_h == 0:
+            text = f'{low_team} swept RS series {wins_l}-0'
+            favor = 'low'
+        else:
+            text = f'Split RS series {wins_h}-{wins_l}'
+            favor = None
+        h2h_edge = {'type': 'h2h', 'text': text, 'favor': favor}
+
+    take = 2 if h2h_edge else 3
+    edges = cands[:take]
+    if h2h_edge:
+        edges.append(h2h_edge)
+
+    # Strip score before returning (frontend doesn't need it)
+    return [{'text': e['text'], 'favor': e['favor'], 'type': e['type']} for e in edges]
+
+
 def build_tale_of_the_tape(high_team, low_team, teams_by_code,
                             box_metrics, paint_share, rs_h2h):
     """
@@ -1259,7 +1412,11 @@ def build_tale_of_the_tape(high_team, low_team, teams_by_code,
             row['lower_is_better'] = True
         rows.append(row)
 
-    return {'rows': rows, 'edges': []}
+    edges = _compute_edges(
+        high_team, low_team, th, tl, bh, bl,
+        paint_share, rs_h2h,
+    )
+    return {'rows': rows, 'edges': edges}
 
 
 def main():
