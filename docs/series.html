@@ -14,6 +14,131 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-2.35.0.min.js"></script>
+    <style>
+        /* ── Tale of the Tape ───────────────────────────────────── */
+        .tot-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+            margin-top: 1rem;
+        }
+
+        .tot-row {
+            display: grid;
+            grid-template-columns: 70px 1fr 70px;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .tot-row-label {
+            text-align: center;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.2rem;
+        }
+
+        .tot-bar-wrap {
+            display: flex;
+            height: 24px;
+            background: var(--bg-secondary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .tot-bar-half {
+            display: flex;
+            align-items: center;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            padding: 0 0.5rem;
+            transition: width 0.3s ease;
+        }
+
+        .tot-bar-half.high {
+            justify-content: flex-end;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .tot-bar-half.low {
+            justify-content: flex-start;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .tot-bar-half.dim {
+            opacity: 0.45;
+        }
+
+        .tot-value {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-align: center;
+        }
+
+        .tot-value.high { text-align: right; }
+        .tot-value.low { text-align: left; }
+        .tot-value.dim { color: var(--text-muted); font-weight: 600; }
+
+        /* ── Edges panel ────────────────────────────────────────── */
+        .tot-edges {
+            margin-top: 1.25rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .tot-edges-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .tot-edge {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+        }
+
+        .tot-edge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            flex-shrink: 0;
+        }
+
+        /* ── Momentum chart ─────────────────────────────────────── */
+        #series-momentum .momentum-callout {
+            margin-top: 0.75rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        #series-momentum .momentum-callout strong {
+            color: var(--text-primary);
+        }
+
+        @media (max-width: 600px) {
+            .tot-row { grid-template-columns: 56px 1fr 56px; gap: 0.35rem; }
+            .tot-value { font-size: 0.75rem; }
+            .tot-bar-half { font-size: 0.68rem; padding: 0 0.35rem; }
+        }
+    </style>
 </head>
 
 <body>
