@@ -1,6 +1,6 @@
 {
   "round": 38,
-  "updated": "2026-04-24T20:45:54Z",
+  "updated": "2026-04-25T00:31:32Z",
   "teams": [
     {
       "team": "OLY",
@@ -8,9 +8,9 @@
       "wins": 26,
       "losses": 12,
       "win_pct": 68.4,
-      "adj_net": 8.04,
-      "adj_off": 87.97,
-      "adj_def": 79.93,
+      "adj_net": 6.71,
+      "adj_off": 90.52,
+      "adj_def": 83.82,
       "elo": 1597.5,
       "sos": 50.0,
       "remaining": 0,
@@ -318,9 +318,9 @@
       "wins": 25,
       "losses": 13,
       "win_pct": 65.8,
-      "adj_net": 8.88,
-      "adj_off": 96.89,
-      "adj_def": 88.02,
+      "adj_net": 4.53,
+      "adj_off": 91.28,
+      "adj_def": 86.75,
       "elo": 1536.7,
       "sos": 50.0,
       "remaining": 0,
@@ -628,9 +628,9 @@
       "wins": 24,
       "losses": 14,
       "win_pct": 63.2,
-      "adj_net": 6.0,
-      "adj_off": 89.97,
-      "adj_def": 83.98,
+      "adj_net": 5.42,
+      "adj_off": 88.34,
+      "adj_def": 82.92,
       "elo": 1601.2,
       "sos": 50.0,
       "remaining": 0,
@@ -938,9 +938,9 @@
       "wins": 24,
       "losses": 14,
       "win_pct": 63.2,
-      "adj_net": -4.94,
-      "adj_off": 77.59,
-      "adj_def": 82.54,
+      "adj_net": 0.95,
+      "adj_off": 81.51,
+      "adj_def": 80.57,
       "elo": 1549.6,
       "sos": 50.0,
       "remaining": 0,
@@ -1248,9 +1248,9 @@
       "wins": 23,
       "losses": 15,
       "win_pct": 60.5,
-      "adj_net": 5.63,
-      "adj_off": 83.93,
-      "adj_def": 78.31,
+      "adj_net": 4.58,
+      "adj_off": 87.37,
+      "adj_def": 82.79,
       "elo": 1524.7,
       "sos": 50.0,
       "remaining": 0,
@@ -1558,9 +1558,9 @@
       "wins": 23,
       "losses": 15,
       "win_pct": 60.5,
-      "adj_net": -0.88,
-      "adj_off": 91.62,
-      "adj_def": 92.5,
+      "adj_net": 1.9,
+      "adj_off": 88.37,
+      "adj_def": 86.47,
       "elo": 1528.7,
       "sos": 50.0,
       "remaining": 0,
@@ -1868,9 +1868,9 @@
       "wins": 22,
       "losses": 16,
       "win_pct": 57.9,
-      "adj_net": 11.1,
-      "adj_off": 94.08,
-      "adj_def": 82.98,
+      "adj_net": 3.14,
+      "adj_off": 87.56,
+      "adj_def": 84.42,
       "elo": 1548.3,
       "sos": 50.0,
       "remaining": 0,
@@ -2178,9 +2178,9 @@
       "wins": 22,
       "losses": 16,
       "win_pct": 57.9,
-      "adj_net": 5.26,
-      "adj_off": 93.44,
-      "adj_def": 88.17,
+      "adj_net": 2.71,
+      "adj_off": 90.07,
+      "adj_def": 87.36,
       "elo": 1559.4,
       "sos": 50.0,
       "remaining": 0,
@@ -2488,9 +2488,9 @@
       "wins": 21,
       "losses": 17,
       "win_pct": 55.3,
-      "adj_net": 4.21,
-      "adj_off": 84.42,
-      "adj_def": 80.21,
+      "adj_net": 0.52,
+      "adj_off": 82.95,
+      "adj_def": 82.43,
       "elo": 1546.9,
       "sos": 50.0,
       "remaining": 0,
@@ -2798,9 +2798,9 @@
       "wins": 21,
       "losses": 17,
       "win_pct": 55.3,
-      "adj_net": -1.23,
-      "adj_off": 91.53,
-      "adj_def": 92.76,
+      "adj_net": 0.2,
+      "adj_off": 87.46,
+      "adj_def": 87.26,
       "elo": 1490.2,
       "sos": 50.0,
       "remaining": 0,
@@ -3108,9 +3108,9 @@
       "wins": 19,
       "losses": 19,
       "win_pct": 50.0,
-      "adj_net": -0.47,
-      "adj_off": 85.84,
-      "adj_def": 86.31,
+      "adj_net": 0.55,
+      "adj_off": 88.72,
+      "adj_def": 88.18,
       "elo": 1504.1,
       "sos": 50.0,
       "remaining": 0,
@@ -3418,9 +3418,9 @@
       "wins": 18,
       "losses": 20,
       "win_pct": 47.4,
-      "adj_net": -10.28,
-      "adj_off": 89.75,
-      "adj_def": 100.04,
+      "adj_net": -2.7,
+      "adj_off": 90.8,
+      "adj_def": 93.5,
       "elo": 1514.3,
       "sos": 50.0,
       "remaining": 0,
@@ -3728,9 +3728,9 @@
       "wins": 17,
       "losses": 21,
       "win_pct": 44.7,
-      "adj_net": -3.95,
-      "adj_off": 86.81,
-      "adj_def": 90.75,
+      "adj_net": -1.61,
+      "adj_off": 86.52,
+      "adj_def": 88.14,
       "elo": 1482.1,
       "sos": 50.0,
       "remaining": 0,
@@ -4038,9 +4038,9 @@
       "wins": 17,
       "losses": 21,
       "win_pct": 44.7,
-      "adj_net": -6.76,
-      "adj_off": 82.49,
-      "adj_def": 89.25,
+      "adj_net": -2.49,
+      "adj_off": 81.21,
+      "adj_def": 83.7,
       "elo": 1467.9,
       "sos": 50.0,
       "remaining": 0,
@@ -4348,9 +4348,9 @@
       "wins": 16,
       "losses": 22,
       "win_pct": 42.1,
-      "adj_net": 1.11,
-      "adj_off": 84.48,
-      "adj_def": 83.37,
+      "adj_net": -3.67,
+      "adj_off": 81.9,
+      "adj_def": 85.57,
       "elo": 1488.8,
       "sos": 50.0,
       "remaining": 0,
@@ -4658,9 +4658,9 @@
       "wins": 15,
       "losses": 23,
       "win_pct": 39.5,
-      "adj_net": 2.87,
-      "adj_off": 90.87,
-      "adj_def": 88.0,
+      "adj_net": -0.25,
+      "adj_off": 90.45,
+      "adj_def": 90.7,
       "elo": 1475.7,
       "sos": 50.0,
       "remaining": 0,
@@ -4968,9 +4968,9 @@
       "wins": 14,
       "losses": 24,
       "win_pct": 36.8,
-      "adj_net": -10.06,
-      "adj_off": 77.1,
-      "adj_def": 87.16,
+      "adj_net": -5.74,
+      "adj_off": 81.68,
+      "adj_def": 87.41,
       "elo": 1451.2,
       "sos": 50.0,
       "remaining": 0,
@@ -5278,9 +5278,9 @@
       "wins": 13,
       "losses": 25,
       "win_pct": 34.2,
-      "adj_net": -3.7,
-      "adj_off": 88.68,
-      "adj_def": 92.38,
+      "adj_net": -4.33,
+      "adj_off": 89.34,
+      "adj_def": 93.68,
       "elo": 1460.5,
       "sos": 50.0,
       "remaining": 0,
@@ -5588,9 +5588,9 @@
       "wins": 12,
       "losses": 26,
       "win_pct": 31.6,
-      "adj_net": -4.93,
-      "adj_off": 77.33,
-      "adj_def": 82.26,
+      "adj_net": -4.06,
+      "adj_off": 79.89,
+      "adj_def": 83.96,
       "elo": 1458.8,
       "sos": 50.0,
       "remaining": 0,
@@ -5898,9 +5898,9 @@
       "wins": 8,
       "losses": 30,
       "win_pct": 21.1,
-      "adj_net": -7.69,
-      "adj_off": 80.74,
-      "adj_def": 88.43,
+      "adj_net": -6.78,
+      "adj_off": 79.74,
+      "adj_def": 86.52,
       "elo": 1368.8,
       "sos": 50.0,
       "remaining": 0,
@@ -42639,472 +42639,472 @@
   "playoff_matchup_probs": {
     "OLY": {
       "PAM": {
-        "home": 0.6261,
-        "away": 0.4741,
-        "neutral": 0.5942
+        "home": 0.6386,
+        "away": 0.4937,
+        "neutral": 0.6095
       },
       "MAD": {
-        "home": 0.5939,
-        "away": 0.3977,
-        "neutral": 0.5392
+        "home": 0.5816,
+        "away": 0.3871,
+        "neutral": 0.5333
       },
       "ULK": {
-        "home": 0.6977,
-        "away": 0.4927,
-        "neutral": 0.6301
+        "home": 0.6553,
+        "away": 0.4741,
+        "neutral": 0.5957
       },
       "ZAL": {
         "home": 0.6386,
         "away": 0.4678,
-        "neutral": 0.5958
+        "neutral": 0.5902
       },
       "HTA": {
-        "home": 0.6736,
-        "away": 0.5149,
-        "neutral": 0.6281
+        "home": 0.6566,
+        "away": 0.4927,
+        "neutral": 0.6143
       },
       "PAN": {
-        "home": 0.6129,
-        "away": 0.4473,
-        "neutral": 0.5747
+        "home": 0.6386,
+        "away": 0.4678,
+        "neutral": 0.5947
       },
       "MCO": {
-        "home": 0.6261,
-        "away": 0.4332,
-        "neutral": 0.5706
+        "home": 0.6362,
+        "away": 0.4388,
+        "neutral": 0.5719
       },
       "BAR": {
-        "home": 0.6511,
+        "home": 0.6566,
         "away": 0.4741,
-        "neutral": 0.595
+        "neutral": 0.6055
       },
       "RED": {
-        "home": 0.6977,
-        "away": 0.5639,
-        "neutral": 0.6621
+        "home": 0.6832,
+        "away": 0.543,
+        "neutral": 0.655
       }
     },
     "PAM": {
       "OLY": {
-        "home": 0.5259,
-        "away": 0.3739,
-        "neutral": 0.4879
+        "home": 0.5063,
+        "away": 0.3614,
+        "neutral": 0.472
       },
       "MAD": {
-        "home": 0.5501,
-        "away": 0.3871,
-        "neutral": 0.5063
+        "home": 0.5322,
+        "away": 0.3614,
+        "neutral": 0.4884
       },
       "ULK": {
-        "home": 0.6617,
-        "away": 0.4473,
-        "neutral": 0.5865
+        "home": 0.6023,
+        "away": 0.4184,
+        "neutral": 0.5439
       },
       "ZAL": {
-        "home": 0.6129,
-        "away": 0.4275,
-        "neutral": 0.5657
+        "home": 0.6023,
+        "away": 0.4184,
+        "neutral": 0.546
       },
       "HTA": {
-        "home": 0.6617,
-        "away": 0.4568,
-        "neutral": 0.5924
+        "home": 0.6129,
+        "away": 0.4275,
+        "neutral": 0.5586
       },
       "PAN": {
-        "home": 0.5725,
-        "away": 0.3871,
-        "neutral": 0.5244
+        "home": 0.5816,
+        "away": 0.4061,
+        "neutral": 0.5392
       },
       "MCO": {
-        "home": 0.5816,
-        "away": 0.4499,
-        "neutral": 0.5582
+        "home": 0.5768,
+        "away": 0.4473,
+        "neutral": 0.5561
       },
       "BAR": {
-        "home": 0.6029,
-        "away": 0.4184,
+        "home": 0.6023,
+        "away": 0.3977,
         "neutral": 0.5415
       },
       "RED": {
-        "home": 0.6799,
-        "away": 0.4473,
-        "neutral": 0.5965
+        "home": 0.6566,
+        "away": 0.4275,
+        "neutral": 0.5824
       }
     },
     "MAD": {
       "OLY": {
-        "home": 0.6023,
-        "away": 0.4061,
-        "neutral": 0.5439
+        "home": 0.6129,
+        "away": 0.4184,
+        "neutral": 0.5498
       },
       "PAM": {
-        "home": 0.6129,
-        "away": 0.4499,
-        "neutral": 0.5763
+        "home": 0.6386,
+        "away": 0.4678,
+        "neutral": 0.5937
       },
       "ULK": {
-        "home": 0.6799,
-        "away": 0.4937,
-        "neutral": 0.6277
+        "home": 0.6553,
+        "away": 0.4741,
+        "neutral": 0.5958
       },
       "ZAL": {
         "home": 0.6386,
-        "away": 0.4605,
-        "neutral": 0.5868
+        "away": 0.4647,
+        "neutral": 0.59
       },
       "HTA": {
-        "home": 0.6675,
-        "away": 0.4927,
-        "neutral": 0.6208
+        "home": 0.6511,
+        "away": 0.4741,
+        "neutral": 0.6047
       },
       "PAN": {
-        "home": 0.6129,
-        "away": 0.4331,
-        "neutral": 0.567
+        "home": 0.6386,
+        "away": 0.4678,
+        "neutral": 0.5902
       },
       "MCO": {
         "home": 0.6386,
-        "away": 0.4232,
-        "neutral": 0.5607
+        "away": 0.4275,
+        "neutral": 0.5764
       },
       "BAR": {
-        "home": 0.6386,
-        "away": 0.4564,
-        "neutral": 0.5813
+        "home": 0.6553,
+        "away": 0.4605,
+        "neutral": 0.5924
       },
       "RED": {
-        "home": 0.7417,
-        "away": 0.5149,
-        "neutral": 0.6508
+        "home": 0.7333,
+        "away": 0.5115,
+        "neutral": 0.6444
       }
     },
     "ULK": {
       "OLY": {
-        "home": 0.5073,
-        "away": 0.3023,
-        "neutral": 0.4503
+        "home": 0.5259,
+        "away": 0.3447,
+        "neutral": 0.4864
       },
       "PAM": {
-        "home": 0.5527,
-        "away": 0.3383,
-        "neutral": 0.4959
+        "home": 0.5816,
+        "away": 0.3977,
+        "neutral": 0.5392
       },
       "MAD": {
-        "home": 0.5063,
-        "away": 0.3201,
-        "neutral": 0.4529
+        "home": 0.5259,
+        "away": 0.3447,
+        "neutral": 0.4863
       },
       "ZAL": {
-        "home": 0.5527,
-        "away": 0.3614,
-        "neutral": 0.5073
+        "home": 0.5725,
+        "away": 0.4184,
+        "neutral": 0.5367
       },
       "HTA": {
-        "home": 0.5612,
-        "away": 0.4275,
-        "neutral": 0.536
+        "home": 0.5725,
+        "away": 0.4388,
+        "neutral": 0.5458
       },
       "PAN": {
-        "home": 0.5322,
-        "away": 0.3023,
-        "neutral": 0.4731
+        "home": 0.5816,
+        "away": 0.3871,
+        "neutral": 0.5293
       },
       "MCO": {
-        "home": 0.5432,
-        "away": 0.3265,
-        "neutral": 0.4822
+        "home": 0.578,
+        "away": 0.3739,
+        "neutral": 0.5212
       },
       "BAR": {
-        "home": 0.5725,
-        "away": 0.3249,
-        "neutral": 0.4934
+        "home": 0.6029,
+        "away": 0.3871,
+        "neutral": 0.5268
       },
       "RED": {
-        "home": 0.6129,
-        "away": 0.4473,
-        "neutral": 0.5673
+        "home": 0.6362,
+        "away": 0.4568,
+        "neutral": 0.581
       }
     },
     "ZAL": {
       "OLY": {
         "home": 0.5322,
         "away": 0.3614,
-        "neutral": 0.4862
+        "neutral": 0.492
       },
       "PAM": {
-        "home": 0.5725,
-        "away": 0.3871,
-        "neutral": 0.5172
+        "home": 0.5816,
+        "away": 0.3977,
+        "neutral": 0.5371
       },
       "MAD": {
-        "home": 0.5395,
+        "home": 0.5353,
         "away": 0.3614,
-        "neutral": 0.4956
+        "neutral": 0.4923
       },
       "ULK": {
-        "home": 0.6386,
-        "away": 0.4473,
-        "neutral": 0.5754
+        "home": 0.5816,
+        "away": 0.4275,
+        "neutral": 0.5464
       },
       "HTA": {
-        "home": 0.6369,
-        "away": 0.4605,
-        "neutral": 0.581
+        "home": 0.6129,
+        "away": 0.4473,
+        "neutral": 0.567
       },
       "PAN": {
-        "home": 0.5527,
-        "away": 0.3739,
-        "neutral": 0.5122
+        "home": 0.5768,
+        "away": 0.4061,
+        "neutral": 0.5371
       },
       "MCO": {
         "home": 0.5816,
-        "away": 0.3885,
+        "away": 0.3977,
         "neutral": 0.5356
       },
       "BAR": {
-        "home": 0.5768,
-        "away": 0.4473,
-        "neutral": 0.5527
+        "home": 0.5816,
+        "away": 0.4499,
+        "neutral": 0.5601
       },
       "RED": {
-        "home": 0.6553,
-        "away": 0.4232,
-        "neutral": 0.567
+        "home": 0.6362,
+        "away": 0.4184,
+        "neutral": 0.5641
       }
     },
     "HTA": {
       "OLY": {
-        "home": 0.4851,
-        "away": 0.3264,
-        "neutral": 0.4524
+        "home": 0.5073,
+        "away": 0.3434,
+        "neutral": 0.4669
       },
       "PAM": {
-        "home": 0.5432,
-        "away": 0.3383,
-        "neutral": 0.4898
-      },
-      "MAD": {
-        "home": 0.5073,
-        "away": 0.3325,
-        "neutral": 0.4602
-      },
-      "ULK": {
-        "home": 0.5725,
-        "away": 0.4388,
-        "neutral": 0.5471
-      },
-      "ZAL": {
-        "home": 0.5395,
-        "away": 0.3631,
-        "neutral": 0.5015
-      },
-      "PAN": {
-        "home": 0.5322,
-        "away": 0.3325,
-        "neutral": 0.4787
-      },
-      "MCO": {
-        "home": 0.5259,
-        "away": 0.3614,
-        "neutral": 0.4916
-      },
-      "BAR": {
         "home": 0.5725,
         "away": 0.3871,
-        "neutral": 0.5212
+        "neutral": 0.5244
+      },
+      "MAD": {
+        "home": 0.5259,
+        "away": 0.3489,
+        "neutral": 0.477
+      },
+      "ULK": {
+        "home": 0.5612,
+        "away": 0.4275,
+        "neutral": 0.5373
+      },
+      "ZAL": {
+        "home": 0.5527,
+        "away": 0.3871,
+        "neutral": 0.5159
+      },
+      "PAN": {
+        "home": 0.5669,
+        "away": 0.3977,
+        "neutral": 0.5272
+      },
+      "MCO": {
+        "home": 0.5527,
+        "away": 0.3871,
+        "neutral": 0.5104
+      },
+      "BAR": {
+        "home": 0.6023,
+        "away": 0.4184,
+        "neutral": 0.5439
       },
       "RED": {
-        "home": 0.6129,
+        "home": 0.6256,
         "away": 0.4275,
-        "neutral": 0.5656
+        "neutral": 0.5706
       }
     },
     "PAN": {
       "OLY": {
-        "home": 0.5527,
-        "away": 0.3871,
-        "neutral": 0.508
+        "home": 0.5322,
+        "away": 0.3614,
+        "neutral": 0.4875
       },
       "PAM": {
-        "home": 0.6129,
-        "away": 0.4275,
-        "neutral": 0.5586
+        "home": 0.5939,
+        "away": 0.4184,
+        "neutral": 0.5439
       },
       "MAD": {
-        "home": 0.5669,
-        "away": 0.3871,
-        "neutral": 0.5159
+        "home": 0.5322,
+        "away": 0.3614,
+        "neutral": 0.492
       },
       "ULK": {
-        "home": 0.6977,
-        "away": 0.4678,
-        "neutral": 0.6084
-      },
-      "ZAL": {
-        "home": 0.6261,
-        "away": 0.4473,
-        "neutral": 0.5706
-      },
-      "HTA": {
-        "home": 0.6675,
-        "away": 0.4678,
-        "neutral": 0.6031
-      },
-      "MCO": {
         "home": 0.6129,
         "away": 0.4184,
-        "neutral": 0.5498
+        "neutral": 0.5537
       },
-      "BAR": {
-        "home": 0.6129,
+      "ZAL": {
+        "home": 0.5939,
         "away": 0.4232,
         "neutral": 0.546
       },
+      "HTA": {
+        "home": 0.6023,
+        "away": 0.4331,
+        "neutral": 0.5558
+      },
+      "MCO": {
+        "home": 0.5816,
+        "away": 0.3971,
+        "neutral": 0.5311
+      },
+      "BAR": {
+        "home": 0.5816,
+        "away": 0.4184,
+        "neutral": 0.5398
+      },
       "RED": {
-        "home": 0.6832,
-        "away": 0.5173,
-        "neutral": 0.6415
+        "home": 0.6386,
+        "away": 0.4678,
+        "neutral": 0.6044
       }
     },
     "MCO": {
       "OLY": {
-        "home": 0.5668,
-        "away": 0.3739,
-        "neutral": 0.5122
+        "home": 0.5612,
+        "away": 0.3638,
+        "neutral": 0.5109
       },
       "PAM": {
-        "home": 0.5501,
-        "away": 0.4184,
-        "neutral": 0.5248
+        "home": 0.5527,
+        "away": 0.4232,
+        "neutral": 0.5269
       },
       "MAD": {
-        "home": 0.5768,
+        "home": 0.5725,
         "away": 0.3614,
-        "neutral": 0.5223
+        "neutral": 0.5062
       },
       "ULK": {
-        "home": 0.6735,
-        "away": 0.4568,
-        "neutral": 0.5998
+        "home": 0.6261,
+        "away": 0.422,
+        "neutral": 0.5617
       },
       "ZAL": {
-        "home": 0.6115,
+        "home": 0.6023,
         "away": 0.4184,
         "neutral": 0.5474
       },
       "HTA": {
-        "home": 0.6386,
-        "away": 0.4741,
-        "neutral": 0.5907
+        "home": 0.6129,
+        "away": 0.4473,
+        "neutral": 0.5724
       },
       "PAN": {
-        "home": 0.5816,
-        "away": 0.3871,
-        "neutral": 0.5333
-      },
-      "BAR": {
-        "home": 0.6115,
-        "away": 0.4232,
+        "home": 0.6029,
+        "away": 0.4184,
         "neutral": 0.5519
       },
+      "BAR": {
+        "home": 0.6129,
+        "away": 0.4275,
+        "neutral": 0.5586
+      },
       "RED": {
-        "home": 0.6617,
-        "away": 0.4983,
-        "neutral": 0.6257
+        "home": 0.6386,
+        "away": 0.4741,
+        "neutral": 0.6049
       }
     },
     "BAR": {
       "OLY": {
         "home": 0.5259,
-        "away": 0.3489,
-        "neutral": 0.4872
+        "away": 0.3434,
+        "neutral": 0.4762
       },
       "PAM": {
-        "home": 0.5816,
-        "away": 0.3971,
+        "home": 0.6023,
+        "away": 0.3977,
         "neutral": 0.5415
       },
       "MAD": {
-        "home": 0.5436,
-        "away": 0.3614,
-        "neutral": 0.5012
+        "home": 0.5395,
+        "away": 0.3447,
+        "neutral": 0.4898
       },
       "ULK": {
-        "home": 0.6751,
-        "away": 0.4275,
-        "neutral": 0.5889
+        "home": 0.6129,
+        "away": 0.3971,
+        "neutral": 0.5562
       },
       "ZAL": {
-        "home": 0.5527,
-        "away": 0.4232,
-        "neutral": 0.5304
+        "home": 0.5501,
+        "away": 0.4184,
+        "neutral": 0.5229
       },
       "HTA": {
-        "home": 0.6129,
-        "away": 0.4275,
-        "neutral": 0.5617
+        "home": 0.5816,
+        "away": 0.3977,
+        "neutral": 0.5392
       },
       "PAN": {
-        "home": 0.5768,
-        "away": 0.3871,
-        "neutral": 0.5371
+        "home": 0.5816,
+        "away": 0.4184,
+        "neutral": 0.5433
       },
       "MCO": {
-        "home": 0.5768,
-        "away": 0.3885,
-        "neutral": 0.5311
+        "home": 0.5725,
+        "away": 0.3871,
+        "neutral": 0.5244
       },
       "RED": {
-        "home": 0.6553,
-        "away": 0.5219,
-        "neutral": 0.6311
+        "home": 0.6362,
+        "away": 0.5098,
+        "neutral": 0.6048
       }
     },
     "RED": {
       "OLY": {
-        "home": 0.4361,
-        "away": 0.3023,
-        "neutral": 0.4159
+        "home": 0.457,
+        "away": 0.3168,
+        "neutral": 0.4236
       },
       "PAM": {
-        "home": 0.5527,
-        "away": 0.3201,
-        "neutral": 0.4856
+        "home": 0.5725,
+        "away": 0.3434,
+        "neutral": 0.5002
       },
       "MAD": {
-        "home": 0.4851,
-        "away": 0.2583,
-        "neutral": 0.4281
+        "home": 0.4885,
+        "away": 0.2667,
+        "neutral": 0.435
       },
       "ULK": {
-        "home": 0.5527,
-        "away": 0.3871,
-        "neutral": 0.5156
+        "home": 0.5432,
+        "away": 0.3638,
+        "neutral": 0.5015
       },
       "ZAL": {
-        "home": 0.5768,
-        "away": 0.3447,
-        "neutral": 0.5159
+        "home": 0.5816,
+        "away": 0.3638,
+        "neutral": 0.5188
       },
       "HTA": {
         "home": 0.5725,
-        "away": 0.3871,
-        "neutral": 0.5173
+        "away": 0.3744,
+        "neutral": 0.5122
       },
       "PAN": {
-        "home": 0.4827,
-        "away": 0.3168,
-        "neutral": 0.4381
+        "home": 0.5322,
+        "away": 0.3614,
+        "neutral": 0.4773
       },
       "MCO": {
-        "home": 0.5017,
-        "away": 0.3383,
-        "neutral": 0.455
+        "home": 0.5259,
+        "away": 0.3614,
+        "neutral": 0.4768
       },
       "BAR": {
-        "home": 0.4781,
-        "away": 0.3447,
-        "neutral": 0.4492
+        "home": 0.4902,
+        "away": 0.3638,
+        "neutral": 0.4769
       }
     }
   },
@@ -43190,14 +43190,14 @@
     }
   },
   "championship_odds": {
-    "OLY": 20.5,
-    "PAM": 12.0,
-    "MAD": 16.6,
-    "ULK": 8.3,
-    "ZAL": 11.9,
-    "HTA": 5.1,
-    "PAN": 12.7,
-    "MCO": 12.9,
+    "OLY": 20.9,
+    "PAM": 11.8,
+    "MAD": 16.3,
+    "ULK": 11.3,
+    "ZAL": 10.8,
+    "HTA": 6.7,
+    "PAN": 10.7,
+    "MCO": 11.5,
     "BAR": 0.0,
     "RED": 0.0
   },
@@ -43270,14 +43270,30 @@
       "date": "2026-04-24",
       "label": "Play-In Day 3",
       "odds": {
-        "OLY": 20.5,
-        "PAM": 12.0,
-        "MAD": 16.6,
-        "ULK": 8.3,
-        "ZAL": 11.9,
-        "HTA": 5.1,
-        "PAN": 12.7,
-        "MCO": 12.9,
+        "OLY": 20.9,
+        "PAM": 11.8,
+        "MAD": 16.3,
+        "ULK": 11.3,
+        "ZAL": 10.8,
+        "HTA": 6.7,
+        "PAN": 10.7,
+        "MCO": 11.5,
+        "RED": 0.0,
+        "BAR": 0.0
+      }
+    },
+    {
+      "date": "2026-04-25",
+      "label": "Play-In Day 3",
+      "odds": {
+        "OLY": 20.9,
+        "PAM": 11.8,
+        "MAD": 16.3,
+        "ULK": 11.3,
+        "ZAL": 10.8,
+        "HTA": 6.7,
+        "PAN": 10.7,
+        "MCO": 11.5,
         "BAR": 0.0,
         "RED": 0.0
       }
@@ -43293,15 +43309,15 @@
       "home_score": 87,
       "away_score": 79,
       "winner": "PAN",
-      "pre_game_win_prob": 61.3,
+      "pre_game_win_prob": 58.2,
       "is_upset": false,
       "championship_odds_before": {
-        "PAN": 13.0,
-        "MCO": 6.6
+        "PAN": 10.7,
+        "MCO": 11.5
       },
       "championship_odds_after": {
-        "PAN": 12.7,
-        "MCO": 12.9
+        "PAN": 10.7,
+        "MCO": 11.5
       }
     },
     {
@@ -43313,10 +43329,10 @@
       "home_score": 80,
       "away_score": 72,
       "winner": "BAR",
-      "pre_game_win_prob": 65.5,
+      "pre_game_win_prob": 63.6,
       "is_upset": false,
       "championship_odds_before": {
-        "BAR": 4.6,
+        "BAR": 0.0,
         "RED": 0.0
       },
       "championship_odds_after": {
@@ -43333,14 +43349,14 @@
       "home_score": 79,
       "away_score": 70,
       "winner": "MCO",
-      "pre_game_win_prob": 61.2,
+      "pre_game_win_prob": 61.3,
       "is_upset": false,
       "championship_odds_before": {
-        "MCO": 6.6,
-        "BAR": 4.6
+        "MCO": 11.5,
+        "BAR": 0.0
       },
       "championship_odds_after": {
-        "MCO": 12.9,
+        "MCO": 11.5,
         "BAR": 0.0
       }
     }
@@ -43350,7 +43366,7 @@
       "team": "OLY",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 20.5,
+      "championship_odds": 20.9,
       "rounds": [
         {
           "round": "play_in_1",
@@ -43366,53 +43382,53 @@
           "round": "qf",
           "status": "upcoming",
           "reach_prob": 100.0,
-          "win_prob": 60.0,
+          "win_prob": 61.8,
           "branches": [
             {
               "opponent": "MCO",
               "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 60.0
+              "win_prob_vs": 61.8
             }
           ]
         },
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 60.0,
-          "win_prob": 60.5,
+          "reach_prob": 61.8,
+          "win_prob": 58.3,
           "branches": [
             {
-              "opponent": "ZAL",
-              "reach_prob_for_opp": 54.6,
-              "win_prob_vs": 58.7
+              "opponent": "ULK",
+              "reach_prob_for_opp": 52.5,
+              "win_prob_vs": 58.9
             },
             {
-              "opponent": "ULK",
-              "reach_prob_for_opp": 45.4,
-              "win_prob_vs": 62.6
+              "opponent": "ZAL",
+              "reach_prob_for_opp": 47.5,
+              "win_prob_vs": 57.7
             }
           ]
         },
         {
           "round": "final",
           "status": "upcoming",
-          "reach_prob": 36.3,
-          "win_prob": 57.2,
+          "reach_prob": 36.1,
+          "win_prob": 57.7,
           "branches": [
             {
               "opponent": "MAD",
-              "reach_prob_for_opp": 32.3,
-              "win_prob_vs": 53.0
+              "reach_prob_for_opp": 32.4,
+              "win_prob_vs": 54.4
             },
             {
               "opponent": "PAM",
-              "reach_prob_for_opp": 27.6,
-              "win_prob_vs": 57.9
+              "reach_prob_for_opp": 27.3,
+              "win_prob_vs": 58.3
             },
             {
               "opponent": "PAN",
-              "reach_prob_for_opp": 27.1,
-              "win_prob_vs": 57.6
+              "reach_prob_for_opp": 23.2,
+              "win_prob_vs": 57.8
             }
           ]
         }
@@ -43422,7 +43438,7 @@
       "team": "MAD",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 16.6,
+      "championship_odds": 16.3,
       "rounds": [
         {
           "round": "play_in_1",
@@ -43438,53 +43454,125 @@
           "round": "qf",
           "status": "upcoming",
           "reach_prob": 100.0,
-          "win_prob": 68.9,
+          "win_prob": 65.3,
           "branches": [
             {
               "opponent": "HTA",
               "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 68.9
+              "win_prob_vs": 65.3
             }
           ]
         },
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 68.9,
-          "win_prob": 49.3,
+          "reach_prob": 65.3,
+          "win_prob": 52.0,
           "branches": [
             {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 50.2,
-              "win_prob_vs": 49.5
+              "opponent": "PAM",
+              "reach_prob_for_opp": 51.3,
+              "win_prob_vs": 51.5
             },
             {
-              "opponent": "PAM",
-              "reach_prob_for_opp": 49.8,
-              "win_prob_vs": 49.1
+              "opponent": "PAN",
+              "reach_prob_for_opp": 48.7,
+              "win_prob_vs": 52.4
             }
           ]
         },
         {
           "round": "final",
           "status": "upcoming",
-          "reach_prob": 33.9,
+          "reach_prob": 34.0,
           "win_prob": 49.7,
           "branches": [
             {
               "opponent": "OLY",
-              "reach_prob_for_opp": 34.5,
-              "win_prob_vs": 47.0
+              "reach_prob_for_opp": 34.4,
+              "win_prob_vs": 45.6
             },
             {
               "opponent": "ZAL",
-              "reach_prob_for_opp": 25.3,
-              "win_prob_vs": 51.5
+              "reach_prob_for_opp": 22.2,
+              "win_prob_vs": 51.0
+            },
+            {
+              "opponent": "ULK",
+              "reach_prob_for_opp": 21.8,
+              "win_prob_vs": 51.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "team": "PAM",
+      "status": "alive",
+      "eliminated_at": null,
+      "championship_odds": 11.8,
+      "rounds": [
+        {
+          "round": "play_in_1",
+          "status": "unreached",
+          "reach_prob": 0.0
+        },
+        {
+          "round": "play_in_2",
+          "status": "unreached",
+          "reach_prob": 0.0
+        },
+        {
+          "round": "qf",
+          "status": "upcoming",
+          "reach_prob": 100.0,
+          "win_prob": 51.6,
+          "branches": [
+            {
+              "opponent": "PAN",
+              "reach_prob_for_opp": 100.0,
+              "win_prob_vs": 51.6
+            }
+          ]
+        },
+        {
+          "round": "sf",
+          "status": "upcoming",
+          "reach_prob": 51.6,
+          "win_prob": 50.5,
+          "branches": [
+            {
+              "opponent": "MAD",
+              "reach_prob_for_opp": 64.9,
+              "win_prob_vs": 48.5
+            },
+            {
+              "opponent": "HTA",
+              "reach_prob_for_opp": 35.1,
+              "win_prob_vs": 54.3
+            }
+          ]
+        },
+        {
+          "round": "final",
+          "status": "upcoming",
+          "reach_prob": 26.1,
+          "win_prob": 46.0,
+          "branches": [
+            {
+              "opponent": "OLY",
+              "reach_prob_for_opp": 37.8,
+              "win_prob_vs": 41.7
+            },
+            {
+              "opponent": "ULK",
+              "reach_prob_for_opp": 21.7,
+              "win_prob_vs": 47.5
             },
             {
               "opponent": "MCO",
-              "reach_prob_for_opp": 23.4,
-              "win_prob_vs": 46.8
+              "reach_prob_for_opp": 20.9,
+              "win_prob_vs": 46.4
             }
           ]
         }
@@ -43494,7 +43582,7 @@
       "team": "MCO",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 12.9,
+      "championship_odds": 11.5,
       "rounds": [
         {
           "round": "play_in_1",
@@ -43522,30 +43610,102 @@
           "round": "qf",
           "status": "upcoming",
           "reach_prob": 100.0,
-          "win_prob": 40.0,
+          "win_prob": 38.2,
           "branches": [
             {
               "opponent": "OLY",
               "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 40.0
+              "win_prob_vs": 38.2
             }
           ]
         },
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 40.0,
-          "win_prob": 56.2,
+          "reach_prob": 38.2,
+          "win_prob": 54.5,
+          "branches": [
+            {
+              "opponent": "ULK",
+              "reach_prob_for_opp": 52.9,
+              "win_prob_vs": 54.8
+            },
+            {
+              "opponent": "ZAL",
+              "reach_prob_for_opp": 47.1,
+              "win_prob_vs": 54.2
+            }
+          ]
+        },
+        {
+          "round": "final",
+          "status": "upcoming",
+          "reach_prob": 20.8,
+          "win_prob": 51.9,
+          "branches": [
+            {
+              "opponent": "MAD",
+              "reach_prob_for_opp": 35.2,
+              "win_prob_vs": 47.0
+            },
+            {
+              "opponent": "PAM",
+              "reach_prob_for_opp": 26.2,
+              "win_prob_vs": 53.6
+            },
+            {
+              "opponent": "PAN",
+              "reach_prob_for_opp": 23.0,
+              "win_prob_vs": 54.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "team": "ULK",
+      "status": "alive",
+      "eliminated_at": null,
+      "championship_odds": 11.3,
+      "rounds": [
+        {
+          "round": "play_in_1",
+          "status": "unreached",
+          "reach_prob": 0.0
+        },
+        {
+          "round": "play_in_2",
+          "status": "unreached",
+          "reach_prob": 0.0
+        },
+        {
+          "round": "qf",
+          "status": "upcoming",
+          "reach_prob": 100.0,
+          "win_prob": 52.7,
           "branches": [
             {
               "opponent": "ZAL",
-              "reach_prob_for_opp": 56.4,
-              "win_prob_vs": 53.9
+              "reach_prob_for_opp": 100.0,
+              "win_prob_vs": 52.7
+            }
+          ]
+        },
+        {
+          "round": "sf",
+          "status": "upcoming",
+          "reach_prob": 52.7,
+          "win_prob": 42.7,
+          "branches": [
+            {
+              "opponent": "OLY",
+              "reach_prob_for_opp": 61.6,
+              "win_prob_vs": 41.1
             },
             {
-              "opponent": "ULK",
-              "reach_prob_for_opp": 43.6,
-              "win_prob_vs": 59.1
+              "opponent": "MCO",
+              "reach_prob_for_opp": 38.4,
+              "win_prob_vs": 45.2
             }
           ]
         },
@@ -43553,22 +43713,94 @@
           "round": "final",
           "status": "upcoming",
           "reach_prob": 22.5,
-          "win_prob": 54.8,
+          "win_prob": 51.2,
           "branches": [
             {
               "opponent": "MAD",
-              "reach_prob_for_opp": 35.3,
-              "win_prob_vs": 53.2
-            },
-            {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 26.6,
-              "win_prob_vs": 53.8
+              "reach_prob_for_opp": 32.9,
+              "win_prob_vs": 48.2
             },
             {
               "opponent": "PAM",
-              "reach_prob_for_opp": 26.1,
-              "win_prob_vs": 54.7
+              "reach_prob_for_opp": 25.2,
+              "win_prob_vs": 52.5
+            },
+            {
+              "opponent": "PAN",
+              "reach_prob_for_opp": 25.0,
+              "win_prob_vs": 51.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "team": "ZAL",
+      "status": "alive",
+      "eliminated_at": null,
+      "championship_odds": 10.8,
+      "rounds": [
+        {
+          "round": "play_in_1",
+          "status": "unreached",
+          "reach_prob": 0.0
+        },
+        {
+          "round": "play_in_2",
+          "status": "unreached",
+          "reach_prob": 0.0
+        },
+        {
+          "round": "qf",
+          "status": "upcoming",
+          "reach_prob": 100.0,
+          "win_prob": 47.3,
+          "branches": [
+            {
+              "opponent": "ULK",
+              "reach_prob_for_opp": 100.0,
+              "win_prob_vs": 47.3
+            }
+          ]
+        },
+        {
+          "round": "sf",
+          "status": "upcoming",
+          "reach_prob": 47.3,
+          "win_prob": 43.6,
+          "branches": [
+            {
+              "opponent": "OLY",
+              "reach_prob_for_opp": 62.1,
+              "win_prob_vs": 42.3
+            },
+            {
+              "opponent": "MCO",
+              "reach_prob_for_opp": 37.9,
+              "win_prob_vs": 45.8
+            }
+          ]
+        },
+        {
+          "round": "final",
+          "status": "upcoming",
+          "reach_prob": 20.6,
+          "win_prob": 51.8,
+          "branches": [
+            {
+              "opponent": "MAD",
+              "reach_prob_for_opp": 36.6,
+              "win_prob_vs": 49.0
+            },
+            {
+              "opponent": "PAM",
+              "reach_prob_for_opp": 24.8,
+              "win_prob_vs": 47.9
+            },
+            {
+              "opponent": "PAN",
+              "reach_prob_for_opp": 23.2,
+              "win_prob_vs": 56.2
             }
           ]
         }
@@ -43578,7 +43810,7 @@
       "team": "PAN",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 12.7,
+      "championship_odds": 10.7,
       "rounds": [
         {
           "round": "play_in_1",
@@ -43600,269 +43832,53 @@
           "round": "qf",
           "status": "upcoming",
           "reach_prob": 100.0,
-          "win_prob": 50.7,
+          "win_prob": 48.4,
           "branches": [
             {
               "opponent": "PAM",
               "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 50.7
+              "win_prob_vs": 48.4
             }
           ]
         },
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 50.7,
-          "win_prob": 53.4,
+          "reach_prob": 48.4,
+          "win_prob": 48.7,
           "branches": [
             {
               "opponent": "MAD",
-              "reach_prob_for_opp": 68.2,
-              "win_prob_vs": 50.5
+              "reach_prob_for_opp": 65.8,
+              "win_prob_vs": 47.6
             },
             {
               "opponent": "HTA",
-              "reach_prob_for_opp": 31.8,
-              "win_prob_vs": 59.6
+              "reach_prob_for_opp": 34.2,
+              "win_prob_vs": 50.8
             }
           ]
         },
         {
           "round": "final",
           "status": "upcoming",
-          "reach_prob": 27.1,
-          "win_prob": 46.4,
-          "branches": [
-            {
-              "opponent": "OLY",
-              "reach_prob_for_opp": 36.3,
-              "win_prob_vs": 42.4
-            },
-            {
-              "opponent": "ZAL",
-              "reach_prob_for_opp": 23.5,
-              "win_prob_vs": 48.0
-            },
-            {
-              "opponent": "MCO",
-              "reach_prob_for_opp": 22.1,
-              "win_prob_vs": 46.2
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "team": "PAM",
-      "status": "alive",
-      "eliminated_at": null,
-      "championship_odds": 12.0,
-      "rounds": [
-        {
-          "round": "play_in_1",
-          "status": "unreached",
-          "reach_prob": 0.0
-        },
-        {
-          "round": "play_in_2",
-          "status": "unreached",
-          "reach_prob": 0.0
-        },
-        {
-          "round": "qf",
-          "status": "upcoming",
-          "reach_prob": 100.0,
-          "win_prob": 49.3,
-          "branches": [
-            {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 49.3
-            }
-          ]
-        },
-        {
-          "round": "sf",
-          "status": "upcoming",
-          "reach_prob": 49.3,
-          "win_prob": 53.6,
-          "branches": [
-            {
-              "opponent": "MAD",
-              "reach_prob_for_opp": 69.5,
-              "win_prob_vs": 50.9
-            },
-            {
-              "opponent": "HTA",
-              "reach_prob_for_opp": 30.5,
-              "win_prob_vs": 59.9
-            }
-          ]
-        },
-        {
-          "round": "final",
-          "status": "upcoming",
-          "reach_prob": 26.5,
-          "win_prob": 45.7,
-          "branches": [
-            {
-              "opponent": "OLY",
-              "reach_prob_for_opp": 37.8,
-              "win_prob_vs": 42.1
-            },
-            {
-              "opponent": "ZAL",
-              "reach_prob_for_opp": 22.6,
-              "win_prob_vs": 47.5
-            },
-            {
-              "opponent": "MCO",
-              "reach_prob_for_opp": 22.2,
-              "win_prob_vs": 45.3
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "team": "ZAL",
-      "status": "alive",
-      "eliminated_at": null,
-      "championship_odds": 11.9,
-      "rounds": [
-        {
-          "round": "play_in_1",
-          "status": "unreached",
-          "reach_prob": 0.0
-        },
-        {
-          "round": "play_in_2",
-          "status": "unreached",
-          "reach_prob": 0.0
-        },
-        {
-          "round": "qf",
-          "status": "upcoming",
-          "reach_prob": 100.0,
-          "win_prob": 55.3,
-          "branches": [
-            {
-              "opponent": "ULK",
-              "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 55.3
-            }
-          ]
-        },
-        {
-          "round": "sf",
-          "status": "upcoming",
-          "reach_prob": 55.3,
-          "win_prob": 43.2,
-          "branches": [
-            {
-              "opponent": "OLY",
-              "reach_prob_for_opp": 59.2,
-              "win_prob_vs": 41.3
-            },
-            {
-              "opponent": "MCO",
-              "reach_prob_for_opp": 40.8,
-              "win_prob_vs": 46.1
-            }
-          ]
-        },
-        {
-          "round": "final",
-          "status": "upcoming",
-          "reach_prob": 23.9,
-          "win_prob": 51.9,
-          "branches": [
-            {
-              "opponent": "MAD",
-              "reach_prob_for_opp": 35.9,
-              "win_prob_vs": 48.5
-            },
-            {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 26.6,
-              "win_prob_vs": 52.0
-            },
-            {
-              "opponent": "PAM",
-              "reach_prob_for_opp": 25.0,
-              "win_prob_vs": 52.5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "team": "ULK",
-      "status": "alive",
-      "eliminated_at": null,
-      "championship_odds": 8.3,
-      "rounds": [
-        {
-          "round": "play_in_1",
-          "status": "unreached",
-          "reach_prob": 0.0
-        },
-        {
-          "round": "play_in_2",
-          "status": "unreached",
-          "reach_prob": 0.0
-        },
-        {
-          "round": "qf",
-          "status": "upcoming",
-          "reach_prob": 100.0,
+          "reach_prob": 23.6,
           "win_prob": 44.7,
           "branches": [
             {
-              "opponent": "ZAL",
-              "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 44.7
-            }
-          ]
-        },
-        {
-          "round": "sf",
-          "status": "upcoming",
-          "reach_prob": 44.7,
-          "win_prob": 38.8,
-          "branches": [
-            {
               "opponent": "OLY",
-              "reach_prob_for_opp": 61.0,
-              "win_prob_vs": 37.4
+              "reach_prob_for_opp": 35.5,
+              "win_prob_vs": 42.2
             },
             {
-              "opponent": "MCO",
-              "reach_prob_for_opp": 39.0,
-              "win_prob_vs": 40.9
-            }
-          ]
-        },
-        {
-          "round": "final",
-          "status": "upcoming",
-          "reach_prob": 17.3,
-          "win_prob": 46.7,
-          "branches": [
-            {
-              "opponent": "MAD",
-              "reach_prob_for_opp": 32.9,
-              "win_prob_vs": 43.3
+              "opponent": "ULK",
+              "reach_prob_for_opp": 23.9,
+              "win_prob_vs": 48.6
             },
             {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 28.3,
-              "win_prob_vs": 47.5
-            },
-            {
-              "opponent": "PAM",
-              "reach_prob_for_opp": 26.6,
-              "win_prob_vs": 48.2
+              "opponent": "ZAL",
+              "reach_prob_for_opp": 20.3,
+              "win_prob_vs": 43.8
             }
           ]
         }
@@ -43872,7 +43888,7 @@
       "team": "HTA",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 5.1,
+      "championship_odds": 6.7,
       "rounds": [
         {
           "round": "play_in_1",
@@ -43888,53 +43904,53 @@
           "round": "qf",
           "status": "upcoming",
           "reach_prob": 100.0,
-          "win_prob": 31.1,
+          "win_prob": 34.7,
           "branches": [
             {
               "opponent": "MAD",
               "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 31.1
+              "win_prob_vs": 34.7
             }
           ]
         },
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 31.1,
-          "win_prob": 40.3,
+          "reach_prob": 34.7,
+          "win_prob": 47.3,
           "branches": [
             {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 51.7,
-              "win_prob_vs": 40.4
+              "opponent": "PAM",
+              "reach_prob_for_opp": 52.3,
+              "win_prob_vs": 45.7
             },
             {
-              "opponent": "PAM",
-              "reach_prob_for_opp": 48.3,
-              "win_prob_vs": 40.1
+              "opponent": "PAN",
+              "reach_prob_for_opp": 47.7,
+              "win_prob_vs": 49.2
             }
           ]
         },
         {
           "round": "final",
           "status": "upcoming",
-          "reach_prob": 12.5,
-          "win_prob": 39.3,
+          "reach_prob": 16.4,
+          "win_prob": 41.2,
           "branches": [
             {
               "opponent": "OLY",
-              "reach_prob_for_opp": 37.9,
-              "win_prob_vs": 35.2
+              "reach_prob_for_opp": 37.5,
+              "win_prob_vs": 37.2
             },
             {
-              "opponent": "ZAL",
-              "reach_prob_for_opp": 23.9,
-              "win_prob_vs": 39.7
+              "opponent": "ULK",
+              "reach_prob_for_opp": 23.2,
+              "win_prob_vs": 45.1
             },
             {
               "opponent": "MCO",
-              "reach_prob_for_opp": 21.5,
-              "win_prob_vs": 38.3
+              "reach_prob_for_opp": 19.9,
+              "win_prob_vs": 43.7
             }
           ]
         }
@@ -44053,8 +44069,8 @@
       },
       "winner": null,
       "series_win_prob": {
-        "high": 59.1,
-        "low": 40.9
+        "high": 60.7,
+        "low": 39.3
       },
       "games": [
         {
@@ -44063,8 +44079,8 @@
           "home": "OLY",
           "away": "MCO",
           "pregame_wp": {
-            "home": 62.6,
-            "away": 37.4
+            "home": 63.6,
+            "away": 36.4
           }
         },
         {
@@ -44073,8 +44089,8 @@
           "home": "OLY",
           "away": "MCO",
           "pregame_wp": {
-            "home": 62.6,
-            "away": 37.4
+            "home": 63.6,
+            "away": 36.4
           }
         },
         {
@@ -44083,8 +44099,8 @@
           "home": "MCO",
           "away": "OLY",
           "pregame_wp": {
-            "home": 56.7,
-            "away": 43.3
+            "home": 56.1,
+            "away": 43.9
           }
         },
         {
@@ -44093,8 +44109,8 @@
           "home": "MCO",
           "away": "OLY",
           "pregame_wp": {
-            "home": 56.7,
-            "away": 43.3
+            "home": 56.1,
+            "away": 43.9
           }
         },
         {
@@ -44103,8 +44119,8 @@
           "home": "OLY",
           "away": "MCO",
           "pregame_wp": {
-            "home": 62.6,
-            "away": 37.4
+            "home": 63.6,
+            "away": 36.4
           }
         }
       ],
@@ -44154,8 +44170,8 @@
       },
       "winner": null,
       "series_win_prob": {
-        "high": 49.8,
-        "low": 50.2
+        "high": 52.5,
+        "low": 47.5
       },
       "games": [
         {
@@ -44164,8 +44180,8 @@
           "home": "PAM",
           "away": "PAN",
           "pregame_wp": {
-            "home": 57.2,
-            "away": 42.8
+            "home": 58.2,
+            "away": 41.8
           }
         },
         {
@@ -44174,8 +44190,8 @@
           "home": "PAM",
           "away": "PAN",
           "pregame_wp": {
-            "home": 57.2,
-            "away": 42.8
+            "home": 58.2,
+            "away": 41.8
           }
         },
         {
@@ -44184,8 +44200,8 @@
           "home": "PAN",
           "away": "PAM",
           "pregame_wp": {
-            "home": 61.3,
-            "away": 38.7
+            "home": 59.4,
+            "away": 40.6
           }
         },
         {
@@ -44194,8 +44210,8 @@
           "home": "PAN",
           "away": "PAM",
           "pregame_wp": {
-            "home": 61.3,
-            "away": 38.7
+            "home": 59.4,
+            "away": 40.6
           }
         },
         {
@@ -44204,8 +44220,8 @@
           "home": "PAM",
           "away": "PAN",
           "pregame_wp": {
-            "home": 57.2,
-            "away": 42.8
+            "home": 58.2,
+            "away": 41.8
           }
         }
       ],
@@ -44255,8 +44271,8 @@
       },
       "winner": null,
       "series_win_prob": {
-        "high": 68.4,
-        "low": 31.6
+        "high": 65.1,
+        "low": 34.9
       },
       "games": [
         {
@@ -44265,8 +44281,8 @@
           "home": "MAD",
           "away": "HTA",
           "pregame_wp": {
-            "home": 66.8,
-            "away": 33.2
+            "home": 65.1,
+            "away": 34.9
           }
         },
         {
@@ -44275,8 +44291,8 @@
           "home": "MAD",
           "away": "HTA",
           "pregame_wp": {
-            "home": 66.8,
-            "away": 33.2
+            "home": 65.1,
+            "away": 34.9
           }
         },
         {
@@ -44285,8 +44301,8 @@
           "home": "HTA",
           "away": "MAD",
           "pregame_wp": {
-            "home": 50.7,
-            "away": 49.3
+            "home": 52.6,
+            "away": 47.4
           }
         },
         {
@@ -44295,8 +44311,8 @@
           "home": "HTA",
           "away": "MAD",
           "pregame_wp": {
-            "home": 50.7,
-            "away": 49.3
+            "home": 52.6,
+            "away": 47.4
           }
         },
         {
@@ -44305,8 +44321,8 @@
           "home": "MAD",
           "away": "HTA",
           "pregame_wp": {
-            "home": 66.8,
-            "away": 33.2
+            "home": 65.1,
+            "away": 34.9
           }
         }
       ],
@@ -44356,8 +44372,8 @@
       },
       "winner": null,
       "series_win_prob": {
-        "high": 45.8,
-        "low": 54.2
+        "high": 52.2,
+        "low": 47.8
       },
       "games": [
         {
@@ -44366,8 +44382,8 @@
           "home": "ULK",
           "away": "ZAL",
           "pregame_wp": {
-            "home": 55.3,
-            "away": 44.7
+            "home": 57.2,
+            "away": 42.8
           }
         },
         {
@@ -44376,8 +44392,8 @@
           "home": "ULK",
           "away": "ZAL",
           "pregame_wp": {
-            "home": 55.3,
-            "away": 44.7
+            "home": 57.2,
+            "away": 42.8
           }
         },
         {
@@ -44386,8 +44402,8 @@
           "home": "ZAL",
           "away": "ULK",
           "pregame_wp": {
-            "home": 63.9,
-            "away": 36.1
+            "home": 58.2,
+            "away": 41.8
           }
         },
         {
@@ -44396,8 +44412,8 @@
           "home": "ZAL",
           "away": "ULK",
           "pregame_wp": {
-            "home": 63.9,
-            "away": 36.1
+            "home": 58.2,
+            "away": 41.8
           }
         },
         {
@@ -44406,8 +44422,8 @@
           "home": "ULK",
           "away": "ZAL",
           "pregame_wp": {
-            "home": 55.3,
-            "away": 44.7
+            "home": 57.2,
+            "away": 42.8
           }
         }
       ],

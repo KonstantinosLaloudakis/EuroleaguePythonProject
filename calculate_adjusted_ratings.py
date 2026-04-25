@@ -1,7 +1,11 @@
 """
 KenPom-Style Adjusted Net Rating Engine for Euroleague 2025.
-Calculates Adjusted Offensive, Defensive, and Net Ratings for all 18 teams
+Calculates Adjusted Offensive, Defensive, and Net Ratings for all teams
 using an iterative convergence algorithm that accounts for Strength of Schedule.
+
+Includes regular season + play-in + playoff games once played, with per-round
+recency decay so playoff games carry full weight and older regular-season
+games gradually fade.
 
 Also calculates Remaining Strength of Schedule (SOS) for each team based on
 the unplayed games in the official schedule.
@@ -41,23 +45,67 @@ NAME_TO_CODE = {
 }
 
 
-def load_game_data():
-    """Load regular-season played games from mvp_game_results.json.
+def load_gamecode_to_round():
+    """Build {GameCode: round_number} from the official schedule XML.
 
-    Excludes playoff games (GameCode > 380) so adjusted ratings reflect
-    only the 38-round regular season.
+    Used so recency decay is applied per round, not per game code (which
+    would be ~10× more aggressive given 10 games per round).
+    """
+    tree = ET.parse('official_schedule_2025.xml')
+    mapping = {}
+    for item in tree.getroot().findall('item'):
+        gc_el = item.find('gamecode')
+        gd_el = item.find('gameday')
+        if gc_el is None or gd_el is None:
+            continue
+        gc_text = gc_el.text
+        try:
+            gc = int(gc_text.split('_')[1]) if '_' in gc_text else int(gc_text)
+            mapping[gc] = int(gd_el.text)
+        except (ValueError, AttributeError):
+            continue
+    return mapping
+
+
+def load_game_data():
+    """Load all played games (regular season + play-in + playoffs) from
+    mvp_game_results.json.
+
+    Each game is annotated with its round number from the schedule XML
+    for recency-decay weighting. Playoff games have GameCode > 380 and
+    aren't in the XML; they fall back to (gc-1)//10+1, which assigns the
+    play-in round to round 39, QF games to rounds 39-40, etc. This means
+    the most recent playoff games carry full weight while regular-season
+    games decay slightly behind them.
+
+    If EUROLEAGUE_MAX_ROUND is set, games from rounds beyond that are
+    excluded — used to regenerate historical R{N}.json snapshots.
     """
     with open('mvp_game_results.json', 'r') as f:
         data = json.load(f)
 
-    def _rs(g):
+    def _played(g):
         gc = g.get('GameCode', 0)
         if isinstance(gc, float):
             gc = int(gc)
-        return gc <= 380 and g['LocalScore'] > 0 and g['RoadScore'] > 0
+        return gc > 0 and g['LocalScore'] > 0 and g['RoadScore'] > 0
 
-    played = [g for g in data if _rs(g)]
-    print(f"Loaded {len(played)} played games (regular season only).")
+    played = [g for g in data if _played(g)]
+
+    gc_to_round = load_gamecode_to_round()
+    for g in played:
+        gc = int(g.get('GameCode', 0))
+        g['Round'] = gc_to_round.get(gc, (gc - 1) // 10 + 1)
+
+    max_round_env = os.environ.get('EUROLEAGUE_MAX_ROUND')
+    if max_round_env:
+        max_round = int(max_round_env)
+        played = [g for g in played if g['Round'] <= max_round]
+        print(f"Filtered to round <= {max_round}: {len(played)} played games.")
+    else:
+        reg_count = sum(1 for g in played if int(g.get('GameCode', 0)) <= 380)
+        po_count = len(played) - reg_count
+        print(f"Loaded {len(played)} played games ({reg_count} regular season + {po_count} playoff).")
     return played
 
 
@@ -68,7 +116,7 @@ def calculate_raw_ratings(games):
     for g in games:
         home, away = g['LocalTeam'], g['RoadTeam']
         h_pts, a_pts = g['LocalScore'], g['RoadScore']
-        game_round = g.get('GameCode', 0)
+        game_round = g.get('Round', g.get('GameCode', 0))
 
         for t in (home, away):
             if t not in teams:
