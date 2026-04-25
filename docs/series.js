@@ -59,11 +59,15 @@ async function main() {
 function renderSeries(root, entry, dashboard) {
   root.innerHTML = `
     <section id="series-hero" class="series-section"></section>
+    <section id="series-tale" class="series-section"></section>
+    <section id="series-momentum" class="series-section"></section>
     <section id="series-timeline" class="series-section"></section>
     <section id="series-h2h" class="series-section"></section>
     <section id="series-recaps" class="series-section"></section>
   `;
   renderHero(document.getElementById('series-hero'), entry);
+  renderTaleOfTheTape(document.getElementById('series-tale'), entry);
+  renderMomentum(document.getElementById('series-momentum'), entry);
   renderTimeline(document.getElementById('series-timeline'), entry);
   renderH2H(document.getElementById('series-h2h'), entry);
   renderRecaps(document.getElementById('series-recaps'), entry, dashboard);
@@ -345,6 +349,98 @@ function renderRecapCard(r) {
       <div class="recap-pre">${pre}</div>
     </div>
   `;
+}
+
+// ── Tale of the Tape ────────────────────────────────────────────────────
+
+function _formatTotValue(metric, value) {
+  if (value == null || isNaN(value)) return '—';
+  if (metric === 'ft_rate') return Number(value).toFixed(2);
+  if (metric === 'pace') return Number(value).toFixed(1);
+  return Number(value).toFixed(1);
+}
+
+function _suffixForMetric(metric) {
+  if (metric === 'pace') return '';
+  if (metric === 'ft_rate') return '';
+  if (['three_pct', 'paint_pct', 'bench_share'].includes(metric)) return '%';
+  return '';
+}
+
+function renderTaleOfTheTape(container, entry) {
+  if (!container) return;
+  const tot = entry && entry.tale_of_the_tape;
+  if (!tot || !Array.isArray(tot.rows) || tot.rows.length === 0) {
+    container.innerHTML = '';
+    return;
+  }
+
+  const high = entry.high_seed && entry.high_seed.team;
+  const low = entry.low_seed && entry.low_seed.team;
+  const colorH = teamColor(high);
+  const colorL = teamColor(low);
+
+  const rowsHtml = tot.rows.map(r => {
+    const lowerBetter = !!r.lower_is_better;
+    // "Winner" (visually emphasized) is the side with the better stat.
+    const hWins = lowerBetter ? r.high <= r.low : r.high >= r.low;
+    const lWins = !hWins;
+
+    // Bar widths: proportional split, floor at 15% so the loser is still visible.
+    const total = (Number(r.high) || 0) + (Number(r.low) || 0);
+    let hPct = 50, lPct = 50;
+    if (total > 0) {
+      hPct = Math.max(15, Math.min(85, Math.round((r.high / total) * 100)));
+      lPct = 100 - hPct;
+    }
+
+    return `
+      <div class="tot-row-block">
+        <div class="tot-row-label">${r.label}</div>
+        <div class="tot-row">
+          <div class="tot-value high ${lWins ? 'dim' : ''}">${_formatTotValue(r.metric, r.high)}${_suffixForMetric(r.metric)}</div>
+          <div class="tot-bar-wrap">
+            <div class="tot-bar-half high ${lWins ? 'dim' : ''}"
+                 style="width:${hPct}%; background:${colorH || 'var(--accent-blue)'}"></div>
+            <div class="tot-bar-half low ${hWins ? 'dim' : ''}"
+                 style="width:${lPct}%; background:${colorL || 'var(--accent-red)'}"></div>
+          </div>
+          <div class="tot-value low ${hWins ? 'dim' : ''}">${_formatTotValue(r.metric, r.low)}${_suffixForMetric(r.metric)}</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  const edgesHtml = (tot.edges || []).map(e => {
+    let dotColor = 'var(--text-muted)';
+    if (e.favor === 'high') dotColor = colorH || 'var(--accent-blue)';
+    if (e.favor === 'low') dotColor = colorL || 'var(--accent-red)';
+    return `
+      <div class="tot-edge">
+        <span class="tot-edge-dot" style="background:${dotColor}"></span>
+        <span>${e.text}</span>
+      </div>
+    `;
+  }).join('');
+
+  container.innerHTML = `
+    <div class="stat-card">
+      <h3>Tale of the Tape</h3>
+      <div class="tot-rows">${rowsHtml}</div>
+      ${edgesHtml ? `
+        <div class="tot-edges">
+          <div class="tot-edges-title">Edges</div>
+          ${edgesHtml}
+        </div>` : ''}
+    </div>
+  `;
+}
+
+// ── Momentum (placeholder; populated in Task 9) ─────────────────────────
+
+function renderMomentum(container, entry) {
+  // Placeholder; populated in Task 9.
+  if (container) container.innerHTML = '';
 }
 
 main();
