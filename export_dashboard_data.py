@@ -1088,6 +1088,113 @@ def compute_remaining_series_wp(matchup_probs, high_team, low_team,
     return prob_high
 
 
+def build_momentum(series_entry, matchup_probs, teams_by_code):
+    """
+    Build the Series Momentum checkpoint sequence + biggest-swing callout.
+
+    Reads the entry's wins, completed games, home_pattern, and high/low seeds.
+    Recomputes series WP from scratch at each checkpoint (Pre-series, After G1,
+    After G2, ...). Returns None when no games have been played.
+
+    Args:
+        series_entry: dict produced by compute_series_data() for one slot.
+        matchup_probs: dict[high][low] = {home, away, neutral}.
+        teams_by_code: dict[code] -> team object from dashboard 'teams' list,
+            used for Elo fallback.
+
+    Returns:
+        {
+          'checkpoints': [{'label': 'Pre-series', 'high_wp': ..., 'low_wp': ...}, ...],
+          'biggest_swing': {
+              'from_label': str, 'to_label': str, 'game_num': int,
+              'delta_pct': float, 'shifted_to': 'high'|'low',
+              'winner_team': str
+          }
+        }
+        or None if no games completed yet.
+    """
+    high = (series_entry.get('high_seed') or {}).get('team')
+    low = (series_entry.get('low_seed') or {}).get('team')
+    if not high or not low:
+        return None
+
+    games = series_entry.get('games') or []
+    completed = [g for g in games if g.get('status') == 'completed']
+    if not completed:
+        return None
+
+    fmt = series_entry.get('format') or 'best_of_5'
+    target_wins = 1 if fmt == 'single_game' else 3
+    home_pattern = tuple(series_entry.get('home_pattern')
+                        or ('high', 'high', 'low', 'low', 'high'))
+
+    elo_high = (teams_by_code.get(high) or {}).get('elo')
+    elo_low = (teams_by_code.get(low) or {}).get('elo')
+
+    def _wp(wins_h, wins_l):
+        return compute_remaining_series_wp(
+            matchup_probs, high, low, wins_h, wins_l,
+            home_pattern=home_pattern, target_wins=target_wins,
+            elo_high=elo_high, elo_low=elo_low,
+        )
+
+    # Pre-series checkpoint
+    p0 = _wp(0, 0)
+    checkpoints = [{
+        'label': 'Pre-series',
+        'high_wp': round(p0 * 100, 1),
+        'low_wp': round((1 - p0) * 100, 1),
+    }]
+
+    wins_h, wins_l = 0, 0
+    completed_sorted = sorted(completed, key=lambda g: g.get('game_num') or 0)
+    for g in completed_sorted:
+        winner = g.get('winner')
+        if winner == high:
+            wins_h += 1
+        elif winner == low:
+            wins_l += 1
+        else:
+            continue  # skip games with unknown winner
+        p = _wp(wins_h, wins_l)
+        checkpoints.append({
+            'label': f'After G{g.get("game_num")}',
+            'high_wp': round(p * 100, 1),
+            'low_wp': round((1 - p) * 100, 1),
+        })
+
+    if len(checkpoints) < 2:
+        return None  # nothing actually played that we could attribute
+
+    # Biggest swing = consecutive checkpoint pair with largest |delta_high|
+    biggest = None
+    for i in range(1, len(checkpoints)):
+        prev = checkpoints[i - 1]
+        cur = checkpoints[i]
+        delta = cur['high_wp'] - prev['high_wp']
+        if biggest is None or abs(delta) > abs(biggest['delta']):
+            biggest = {
+                'i': i, 'delta': delta,
+                'from_label': prev['label'], 'to_label': cur['label'],
+            }
+
+    # Resolve biggest swing -> game_num, winner
+    swing_game = completed_sorted[biggest['i'] - 1]
+    delta_pct = round(biggest['delta'], 1)
+    shifted_to = 'high' if delta_pct > 0 else 'low'
+    return {
+        'checkpoints': checkpoints,
+        'biggest_swing': {
+            'from_label': biggest['from_label'],
+            'to_label': biggest['to_label'],
+            'game_num': swing_game.get('game_num'),
+            'delta_pct': abs(delta_pct),
+            'shifted_to': shifted_to,
+            'winner_team': swing_game.get('winner'),
+        },
+    }
+
+
 def main():
     print(f"\n=== Dashboard Export ===")
     if 'EUROLEAGUE_ROUND_SUFFIX' in os.environ:
@@ -2361,7 +2468,8 @@ def main():
 
         return result
 
-    def compute_series_data(playoff_results, matchup_probs, seeded_teams, series_win_probs, games_df):
+    def compute_series_data(playoff_results, matchup_probs, seeded_teams,
+                            series_win_probs, games_df, teams_by_code):
         """
         Build per-series entries for Series Hub pages.
 
@@ -2629,6 +2737,9 @@ def main():
                 'games': games,
                 'rs_h2h': _rs_h2h(high_code, low_code),
             }
+            result[slot_id]['momentum'] = build_momentum(
+                result[slot_id], matchup_probs, teams_by_code,
+            )
 
         return result
 
@@ -2729,9 +2840,10 @@ def main():
             ))
 
             # Build Series Hub data
+            teams_by_code = {t['team']: t for t in teams}
             series_data = compute_series_data(
                 playoff_results_data, playoff_matchup_probs, seeded,
-                series_win_probs, games_df,
+                series_win_probs, games_df, teams_by_code,
             )
 
             print(f"  Playoff results: {sum(1 for g in game_results_raw if int(g.get('GameCode', 0)) > 380 and g.get('LocalScore', 0) > 0)} games tracked")
@@ -2772,8 +2884,10 @@ def main():
                     0 if e['status'] != 'eliminated' else 1,
                     -e['championship_odds'],
                 ))
+                teams_by_code = {t['team']: t for t in teams}
                 series_data = compute_series_data(
                     None, playoff_matchup_probs, seeded, series_win_probs, games_df,
+                    teams_by_code,
                 )
 
     output = {
