@@ -1011,6 +1011,83 @@ def compute_team_paint_share(shot_stats):
     return out
 
 
+def compute_remaining_series_wp(matchup_probs, high_team, low_team,
+                                wins_high, wins_low,
+                                home_pattern=('high', 'high', 'low', 'low', 'high'),
+                                target_wins=3, elo_high=None, elo_low=None,
+                                elo_hca=50.0):
+    """
+    Compute series win probability for the higher seed given the current
+    series score and remaining games. Best-of-N DP, identical to the JS
+    `seriesProbHCA` in playoffs.js.
+
+    Args:
+        matchup_probs: dict[high_team][low_team] = {'home','away','neutral'}
+            with floats in [0,1]. May be missing.
+        high_team, low_team: 3-letter team codes.
+        wins_high, wins_low: current series score (ints).
+        home_pattern: tuple of 'high' | 'low' for each game number 1..N.
+            'neutral' is also allowed (used for the Final).
+        target_wins: wins needed to clinch (3 for best-of-5, 1 for single-game).
+        elo_high, elo_low: optional Elo ratings for fallback when matchup_probs
+            is missing for the pair.
+        elo_hca: Elo home-court advantage in points.
+
+    Returns:
+        float in [0,1] — probability the higher seed wins the series.
+    """
+    if wins_high >= target_wins:
+        return 1.0
+    if wins_low >= target_wins:
+        return 0.0
+
+    pair_fwd = (matchup_probs.get(high_team) or {}).get(low_team) or {}
+
+    def _elo_wp(neutral=False):
+        if elo_high is None or elo_low is None:
+            return 0.5
+        hca = 0.0 if neutral else elo_hca
+        return 1.0 / (1.0 + 10.0 ** ((elo_low - elo_high - hca) / 400.0))
+
+    def _per_game_p(slot):
+        if slot == 'high':
+            return pair_fwd.get('home', _elo_wp(neutral=False))
+        if slot == 'low':
+            return pair_fwd.get('away', _elo_wp(neutral=False))
+        return pair_fwd.get('neutral', _elo_wp(neutral=True))
+
+    games_played = wins_high + wins_low
+    remaining = list(home_pattern)[games_played:]
+    if not remaining:
+        return 1.0 if wins_high > wins_low else 0.0
+
+    states = {(wins_high, wins_low): 1.0}
+    prob_high = 0.0
+
+    for slot in remaining:
+        p = _per_game_p(slot)
+        nxt = {}
+        for (a, b), prob in states.items():
+            # higher seed wins this game
+            a1 = a + 1
+            if a1 >= target_wins:
+                prob_high += prob * p
+            else:
+                key = (a1, b)
+                nxt[key] = nxt.get(key, 0.0) + prob * p
+            # lower seed wins this game
+            b1 = b + 1
+            if b1 < target_wins:
+                key = (a, b1)
+                nxt[key] = nxt.get(key, 0.0) + prob * (1.0 - p)
+            # else: low clinches — no contribution to prob_high
+        states = nxt
+        if not states:
+            break
+
+    return prob_high
+
+
 def main():
     print(f"\n=== Dashboard Export ===")
     if 'EUROLEAGUE_ROUND_SUFFIX' in os.environ:
