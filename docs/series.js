@@ -436,11 +436,86 @@ function renderTaleOfTheTape(container, entry) {
   `;
 }
 
-// ── Momentum (placeholder; populated in Task 9) ─────────────────────────
+// ── Momentum ─────────────────────────────────────────────────────────────
 
 function renderMomentum(container, entry) {
-  // Placeholder; populated in Task 9.
-  if (container) container.innerHTML = '';
+  if (!container) return;
+  const m = entry && entry.momentum;
+  if (!m || !Array.isArray(m.checkpoints) || m.checkpoints.length < 2) {
+    container.innerHTML = '';
+    return;
+  }
+  if (typeof Plotly === 'undefined') {
+    container.innerHTML = '<div class="stat-card"><h3>Series Momentum</h3><p>Plotly failed to load.</p></div>';
+    return;
+  }
+
+  const high = entry.high_seed && entry.high_seed.team;
+  const low = entry.low_seed && entry.low_seed.team;
+  const colorH = teamColor(high) || '#60a5fa';
+  const colorL = teamColor(low) || '#f87171';
+
+  container.innerHTML = `
+    <div class="stat-card">
+      <h3>Series Momentum</h3>
+      <div id="momentum-chart" style="width:100%;height:280px"></div>
+      ${_renderMomentumCallout(m.biggest_swing)}
+    </div>
+  `;
+
+  const labels = m.checkpoints.map(c => c.label);
+  const highVals = m.checkpoints.map(c => c.high_wp);
+  const lowVals = m.checkpoints.map(c => c.low_wp);
+
+  const traces = [
+    {
+      x: labels, y: highVals, mode: 'lines+markers',
+      name: high || 'Higher seed',
+      line: { color: colorH, width: 3 },
+      marker: { size: 8, color: colorH },
+    },
+    {
+      x: labels, y: lowVals, mode: 'lines+markers',
+      name: low || 'Lower seed',
+      line: { color: colorL, width: 3 },
+      marker: { size: 8, color: colorL },
+    },
+  ];
+
+  const layout = {
+    margin: { l: 40, r: 16, t: 8, b: 36 },
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)',
+    font: {
+      family: 'Inter, sans-serif',
+      color: getComputedStyle(document.documentElement).getPropertyValue('--text-secondary') || '#cbd5e1',
+      size: 12,
+    },
+    xaxis: { gridcolor: 'rgba(255,255,255,0.06)', tickfont: { size: 11 } },
+    yaxis: {
+      title: { text: 'Series WP %', font: { size: 11 } },
+      range: [0, 100], gridcolor: 'rgba(255,255,255,0.06)',
+      ticksuffix: '%',
+    },
+    showlegend: true,
+    legend: { orientation: 'h', y: -0.2, x: 0.5, xanchor: 'center' },
+    hovermode: 'x unified',
+  };
+
+  Plotly.newPlot('momentum-chart', traces, layout, {
+    displayModeBar: false, responsive: true,
+  });
+}
+
+function _renderMomentumCallout(swing) {
+  if (!swing) return '';
+  const winner = swing.winner_team || (swing.shifted_to === 'high' ? 'higher seed' : 'lower seed');
+  return `
+    <div class="momentum-callout">
+      <strong>Biggest swing:</strong>
+      G${swing.game_num} — ${winner} win shifted series WP ${swing.delta_pct}%
+    </div>
+  `;
 }
 
 main();

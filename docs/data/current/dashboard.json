@@ -1,6 +1,6 @@
 {
   "round": 38,
-  "updated": "2026-04-25T00:46:55Z",
+  "updated": "2026-04-25T20:39:46Z",
   "teams": [
     {
       "team": "OLY",
@@ -43264,8 +43264,8 @@
       "pre_game_win_prob": 58.2,
       "is_upset": false,
       "championship_odds_before": {
-        "PAN": 10.7,
-        "MCO": 11.5
+        "PAN": 10.9,
+        "MCO": 9.7
       },
       "championship_odds_after": {
         "PAN": 10.9,
@@ -43304,7 +43304,7 @@
       "pre_game_win_prob": 61.3,
       "is_upset": false,
       "championship_odds_before": {
-        "MCO": 11.5,
+        "MCO": 9.7,
         "BAR": 0.0
       },
       "championship_odds_after": {
@@ -44093,7 +44093,78 @@
           "away_score": 80,
           "winner": "MCO"
         }
-      ]
+      ],
+      "momentum": null,
+      "tale_of_the_tape": {
+        "rows": [
+          {
+            "metric": "pace",
+            "label": "Pace (poss/40)",
+            "high": 74.1,
+            "low": 75.3
+          },
+          {
+            "metric": "adj_off",
+            "label": "Adj. Offense",
+            "high": 90.5,
+            "low": 90.1
+          },
+          {
+            "metric": "adj_def",
+            "label": "Adj. Defense",
+            "high": 83.8,
+            "low": 87.4,
+            "lower_is_better": true
+          },
+          {
+            "metric": "adj_net",
+            "label": "Adj. Net",
+            "high": 6.7,
+            "low": 2.7
+          },
+          {
+            "metric": "three_pct",
+            "label": "3PT %",
+            "high": 35.0,
+            "low": 35.6
+          },
+          {
+            "metric": "paint_pct",
+            "label": "Paint %",
+            "high": 37.9,
+            "low": 39.8
+          },
+          {
+            "metric": "ft_rate",
+            "label": "FT Rate",
+            "high": 0.379,
+            "low": 0.35
+          },
+          {
+            "metric": "bench_share",
+            "label": "Bench %",
+            "high": 36.6,
+            "low": 35.1
+          }
+        ],
+        "edges": [
+          {
+            "text": "OLY: 60% on 2s vs MCO allowing 54% — paint edge OLY",
+            "favor": "high",
+            "type": "paint_pct"
+          },
+          {
+            "text": "OLY: +4 net rating advantage",
+            "favor": "high",
+            "type": "net"
+          },
+          {
+            "text": "MCO swept RS series 2-0",
+            "favor": "low",
+            "type": "h2h"
+          }
+        ]
+      }
     },
     "qf2": {
       "id": "qf2",
@@ -44194,7 +44265,78 @@
           "away_score": 84,
           "winner": "PAM"
         }
-      ]
+      ],
+      "momentum": null,
+      "tale_of_the_tape": {
+        "rows": [
+          {
+            "metric": "pace",
+            "label": "Pace (poss/40)",
+            "high": 76.6,
+            "low": 73.4
+          },
+          {
+            "metric": "adj_off",
+            "label": "Adj. Offense",
+            "high": 91.3,
+            "low": 87.6
+          },
+          {
+            "metric": "adj_def",
+            "label": "Adj. Defense",
+            "high": 86.8,
+            "low": 84.4,
+            "lower_is_better": true
+          },
+          {
+            "metric": "adj_net",
+            "label": "Adj. Net",
+            "high": 4.5,
+            "low": 3.1
+          },
+          {
+            "metric": "three_pct",
+            "label": "3PT %",
+            "high": 36.7,
+            "low": 35.5
+          },
+          {
+            "metric": "paint_pct",
+            "label": "Paint %",
+            "high": 39.4,
+            "low": 41.3
+          },
+          {
+            "metric": "ft_rate",
+            "label": "FT Rate",
+            "high": 0.284,
+            "low": 0.301
+          },
+          {
+            "metric": "bench_share",
+            "label": "Bench %",
+            "high": 49.7,
+            "low": 39.5
+          }
+        ],
+        "edges": [
+          {
+            "text": "PAM: bench scores 50% vs 40% — depth edge PAM",
+            "favor": "high",
+            "type": "bench"
+          },
+          {
+            "text": "PAM plays 3.2 more possessions per 40 — pace edge PAM",
+            "favor": "high",
+            "type": "pace"
+          },
+          {
+            "text": "PAM swept RS series 2-0",
+            "favor": "high",
+            "type": "h2h"
+          }
+        ]
+      }
     },
     "qf3": {
       "id": "qf3",
@@ -44295,7 +44437,78 @@
           "away_score": 83,
           "winner": "MAD"
         }
-      ]
+      ],
+      "momentum": null,
+      "tale_of_the_tape": {
+        "rows": [
+          {
+            "metric": "pace",
+            "label": "Pace (poss/40)",
+            "high": 73.0,
+            "low": 74.5
+          },
+          {
+            "metric": "adj_off",
+            "label": "Adj. Offense",
+            "high": 88.3,
+            "low": 88.4
+          },
+          {
+            "metric": "adj_def",
+            "label": "Adj. Defense",
+            "high": 82.9,
+            "low": 86.5,
+            "lower_is_better": true
+          },
+          {
+            "metric": "adj_net",
+            "label": "Adj. Net",
+            "high": 5.4,
+            "low": 1.9
+          },
+          {
+            "metric": "three_pct",
+            "label": "3PT %",
+            "high": 37.9,
+            "low": 37.3
+          },
+          {
+            "metric": "paint_pct",
+            "label": "Paint %",
+            "high": 38.6,
+            "low": 36.6
+          },
+          {
+            "metric": "ft_rate",
+            "label": "FT Rate",
+            "high": 0.339,
+            "low": 0.284
+          },
+          {
+            "metric": "bench_share",
+            "label": "Bench %",
+            "high": 46.4,
+            "low": 41.9
+          }
+        ],
+        "edges": [
+          {
+            "text": "HTA: 60% on 2s vs MAD allowing 52% — paint edge HTA",
+            "favor": "low",
+            "type": "paint_pct"
+          },
+          {
+            "text": "MAD: +3.5 net rating advantage",
+            "favor": "high",
+            "type": "net"
+          },
+          {
+            "text": "MAD swept RS series 2-0",
+            "favor": "high",
+            "type": "h2h"
+          }
+        ]
+      }
     },
     "qf4": {
       "id": "qf4",
@@ -44396,7 +44609,78 @@
           "away_score": 92,
           "winner": "ZAL"
         }
-      ]
+      ],
+      "momentum": null,
+      "tale_of_the_tape": {
+        "rows": [
+          {
+            "metric": "pace",
+            "label": "Pace (poss/40)",
+            "high": 72.5,
+            "low": 73.1
+          },
+          {
+            "metric": "adj_off",
+            "label": "Adj. Offense",
+            "high": 81.5,
+            "low": 87.4
+          },
+          {
+            "metric": "adj_def",
+            "label": "Adj. Defense",
+            "high": 80.6,
+            "low": 82.8,
+            "lower_is_better": true
+          },
+          {
+            "metric": "adj_net",
+            "label": "Adj. Net",
+            "high": 0.9,
+            "low": 4.6
+          },
+          {
+            "metric": "three_pct",
+            "label": "3PT %",
+            "high": 36.1,
+            "low": 39.8
+          },
+          {
+            "metric": "paint_pct",
+            "label": "Paint %",
+            "high": 37.7,
+            "low": 46.1
+          },
+          {
+            "metric": "ft_rate",
+            "label": "FT Rate",
+            "high": 0.307,
+            "low": 0.307
+          },
+          {
+            "metric": "bench_share",
+            "label": "Bench %",
+            "high": 46.5,
+            "low": 38.6
+          }
+        ],
+        "edges": [
+          {
+            "text": "ULK: bench scores 46% vs 39% — depth edge ULK",
+            "favor": "high",
+            "type": "bench"
+          },
+          {
+            "text": "ZAL: 40% from 3 vs ULK defending 32% — edge ZAL",
+            "favor": "low",
+            "type": "three_pct"
+          },
+          {
+            "text": "ZAL swept RS series 2-0",
+            "favor": "low",
+            "type": "h2h"
+          }
+        ]
+      }
     },
     "sf1": {
       "id": "sf1",
@@ -44426,7 +44710,9 @@
           "away": null
         }
       ],
-      "rs_h2h": []
+      "rs_h2h": [],
+      "momentum": null,
+      "tale_of_the_tape": null
     },
     "sf2": {
       "id": "sf2",
@@ -44456,7 +44742,9 @@
           "away": null
         }
       ],
-      "rs_h2h": []
+      "rs_h2h": [],
+      "momentum": null,
+      "tale_of_the_tape": null
     },
     "final": {
       "id": "final",
@@ -44486,7 +44774,9 @@
           "away": null
         }
       ],
-      "rs_h2h": []
+      "rs_h2h": [],
+      "momentum": null,
+      "tale_of_the_tape": null
     }
   }
 }
