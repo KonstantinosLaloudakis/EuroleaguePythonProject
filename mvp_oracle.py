@@ -301,9 +301,32 @@ def run_oracle(target_round=None):
         start_gc = (target_round - 1) * games_per_round + 1 + offset
         end_gc = target_round * games_per_round + offset
         round_games = df[(df['GameCode'] >= start_gc) & (df['GameCode'] <= end_gc)].copy()
-    
+
+    # Drop already-played games and UNKNOWN placeholders. Oracle is a
+    # regular-season-game forecaster; once the season ends, the next-round
+    # slot is filled with played play-ins and dummy rows, neither of which
+    # should be predicted.
+    if not round_games.empty:
+        round_games = round_games[
+            (round_games['LocalScore'] == 0)
+            & (round_games['RoadScore'] == 0)
+            & (round_games['LocalTeam'] != 'UNKNOWN')
+            & (round_games['RoadTeam'] != 'UNKNOWN')
+        ].copy()
+
+    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    json_out = f"oracle_forecast_round_{target_round}{round_suffix}.json"
+
     if round_games.empty:
-        print(f"No games found for Round {target_round}.")
+        print(f"No upcoming games for Round {target_round} — writing empty forecast.")
+        with open(json_out, 'w') as f:
+            json.dump({
+                'round': target_round,
+                'predictions': [],
+                'mvp_candidates': [],
+                'player_forecasts': [],
+            }, f, indent=2)
+        print(f"Empty forecast saved to {json_out}")
         return
 
     print(f"Predicting {len(round_games)} games for Round {target_round}...")
@@ -455,8 +478,6 @@ def run_oracle(target_round=None):
         })
 
     # 6. Save game predictions first so player forecaster can read win probs
-    round_suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
-    json_out = f"oracle_forecast_round_{target_round}{round_suffix}.json"
     with open(json_out, 'w') as f:
         json.dump({'round': target_round, 'predictions': predictions}, f, indent=2)
 

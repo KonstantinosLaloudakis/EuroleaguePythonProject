@@ -438,10 +438,15 @@ function renderScheduleDifficulty(teams) {
 function renderOracleHeader(data) {
     const el = document.getElementById('oracle-header');
     const round = data.oracle ? data.oracle.round : null;
+    const hasPreds = !!(data.oracle && data.oracle.predictions && data.oracle.predictions.length);
     const acc = data.accuracy ? data.accuracy.accuracy : null;
 
     let html = '<div class="oracle-header-content">';
-    html += `<div class="oracle-round-badge">Round ${round || data.round || '?'} Forecast</div>`;
+    if (hasPreds) {
+        html += `<div class="oracle-round-badge">Round ${round || data.round || '?'} Forecast</div>`;
+    } else {
+        html += '<div class="oracle-round-badge">Final Accuracy</div>';
+    }
     if (acc !== null) {
         html += `<div class="oracle-acc-badge">Model Accuracy: <strong>${acc.toFixed(1)}%</strong></div>`;
     }
@@ -485,7 +490,11 @@ function parseInsight(raw) {
 function renderOracleCards(oracle) {
     const container = document.getElementById('oracle-cards');
     if (!oracle || !oracle.predictions || !oracle.predictions.length) {
-        container.innerHTML = '<div class="oracle-placeholder"><p>No oracle predictions available for the next round.</p></div>';
+        container.innerHTML = '<div class="oracle-placeholder">'
+            + '<p><strong>Regular season complete.</strong> The Oracle forecasts upcoming regular-season games — '
+            + 'with no more on the schedule, there\'s nothing to predict.</p>'
+            + '<p style="margin-top:0.5rem">Head to the <a href="playoffs.html">Playoffs page</a> for the bracket and play-in results.</p>'
+            + '</div>';
         return;
     }
 
@@ -586,7 +595,7 @@ function renderPlayerForecasts(forecasts, teams) {
 
     const container = document.getElementById('player-forecast-table');
     if (!_forecastsAll.length) {
-        container.innerHTML = '<p style="color:var(--text-muted);padding:1rem">No player forecast data available.</p>';
+        container.innerHTML = '<p style="color:var(--text-muted);padding:1rem">No upcoming games — player forecasts return next season.</p>';
         return;
     }
 
