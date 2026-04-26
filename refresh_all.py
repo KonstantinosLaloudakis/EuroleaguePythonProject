@@ -79,6 +79,11 @@ def main():
             'fetch_shot_data.py',
             ['--force']
         )))
+        results.append(('Fetch Schedule', run_step(
+            'Fetching season schedule (dates + tip-off times)',
+            'fetch_schedule.py',
+            ['--force']
+        )))
         results.append(('Parse Game Data', run_step(
             'Parsing game results',
             'parse_mvp_data.py'

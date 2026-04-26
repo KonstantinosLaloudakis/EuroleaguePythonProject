@@ -35,6 +35,19 @@ const TEAM_NAMES = {
     SIE:'Montepaschi Siena', SOP:'Asseco Prokom', UNK:'UNICS Kazan',
 };
 
+// ── Team home-arena timezones (IANA) ────────────────────────────────────
+// Used to convert Schedule API tip-off times (CET/CEST) into arena-local
+// time on the Series Hub. HTA is mapped to Europe/Sofia for the 2025
+// season because their home games are being played in Botevgrad, Bulgaria.
+const TEAM_TIMEZONES = {
+    BER:'Europe/Berlin', IST:'Europe/Istanbul', MCO:'Europe/Monaco', BAS:'Europe/Madrid',
+    RED:'Europe/Belgrade', MIL:'Europe/Rome', BAR:'Europe/Madrid', MUN:'Europe/Berlin',
+    ULK:'Europe/Istanbul', ASV:'Europe/Paris', TEL:'Asia/Jerusalem', OLY:'Europe/Athens',
+    PAN:'Europe/Athens', PAR:'Europe/Belgrade', PRS:'Europe/Paris', MAD:'Europe/Madrid',
+    PAM:'Europe/Madrid', VIR:'Europe/Rome', ZAL:'Europe/Vilnius', DUB:'Asia/Dubai',
+    HTA:'Europe/Sofia',
+};
+
 // ── Shared tab switching ─────────────────────────────────────────────────
 /**
  * switchTab(tabId, tabIds, opts)

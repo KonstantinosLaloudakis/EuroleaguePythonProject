@@ -1,6 +1,6 @@
 {
   "round": 38,
-  "updated": "2026-04-26T04:35:50Z",
+  "updated": "2026-04-26T14:26:46Z",
   "teams": [
     {
       "team": "OLY",
@@ -44084,7 +44084,11 @@
           "pregame_wp": {
             "home": 63.6,
             "away": 36.4
-          }
+          },
+          "date": "Apr 28, 2026",
+          "tipoff": "20:00",
+          "arena": "PEACE AND FRIENDSHIP STADIUM",
+          "tipoff_confirmed": true
         },
         {
           "game_num": 2,
@@ -44094,7 +44098,11 @@
           "pregame_wp": {
             "home": 63.6,
             "away": 36.4
-          }
+          },
+          "date": "Apr 30, 2026",
+          "tipoff": "20:00",
+          "arena": "PEACE AND FRIENDSHIP STADIUM",
+          "tipoff_confirmed": true
         },
         {
           "game_num": 3,
@@ -44104,7 +44112,11 @@
           "pregame_wp": {
             "home": 56.1,
             "away": 43.9
-          }
+          },
+          "date": "May 05, 2026",
+          "tipoff": "19:45",
+          "arena": "SALLE GASTON MEDECIN",
+          "tipoff_confirmed": true
         },
         {
           "game_num": 4,
@@ -44114,7 +44126,11 @@
           "pregame_wp": {
             "home": 56.1,
             "away": 43.9
-          }
+          },
+          "date": "May 07, 2026",
+          "tipoff": "19:30",
+          "arena": "SALLE GASTON MEDECIN",
+          "tipoff_confirmed": true
         },
         {
           "game_num": 5,
@@ -44124,7 +44140,11 @@
           "pregame_wp": {
             "home": 63.6,
             "away": 36.4
-          }
+          },
+          "date": "May 12, 2026",
+          "tipoff": "00:00",
+          "arena": "PEACE AND FRIENDSHIP STADIUM",
+          "tipoff_confirmed": false
         }
       ],
       "rs_h2h": [
@@ -44256,7 +44276,11 @@
           "pregame_wp": {
             "home": 58.2,
             "away": 41.8
-          }
+          },
+          "date": "Apr 28, 2026",
+          "tipoff": "20:45",
+          "arena": "ROIG ARENA",
+          "tipoff_confirmed": true
         },
         {
           "game_num": 2,
@@ -44266,7 +44290,11 @@
           "pregame_wp": {
             "home": 58.2,
             "away": 41.8
-          }
+          },
+          "date": "Apr 30, 2026",
+          "tipoff": "20:45",
+          "arena": "ROIG ARENA",
+          "tipoff_confirmed": true
         },
         {
           "game_num": 3,
@@ -44276,7 +44304,11 @@
           "pregame_wp": {
             "home": 59.4,
             "away": 40.6
-          }
+          },
+          "date": "May 06, 2026",
+          "tipoff": "20:15",
+          "arena": "TELEKOM CENTER ATHENS",
+          "tipoff_confirmed": true
         },
         {
           "game_num": 4,
@@ -44286,7 +44318,11 @@
           "pregame_wp": {
             "home": 59.4,
             "away": 40.6
-          }
+          },
+          "date": "May 08, 2026",
+          "tipoff": "20:15",
+          "arena": "TELEKOM CENTER ATHENS",
+          "tipoff_confirmed": true
         },
         {
           "game_num": 5,
@@ -44296,7 +44332,11 @@
           "pregame_wp": {
             "home": 58.2,
             "away": 41.8
-          }
+          },
+          "date": "May 12, 2026",
+          "tipoff": "00:00",
+          "arena": "ROIG ARENA",
+          "tipoff_confirmed": false
         }
       ],
       "rs_h2h": [
@@ -44428,7 +44468,11 @@
           "pregame_wp": {
             "home": 65.1,
             "away": 34.9
-          }
+          },
+          "date": "Apr 29, 2026",
+          "tipoff": "20:45",
+          "arena": "MOVISTAR ARENA",
+          "tipoff_confirmed": true
         },
         {
           "game_num": 2,
@@ -44438,7 +44482,11 @@
           "pregame_wp": {
             "home": 65.1,
             "away": 34.9
-          }
+          },
+          "date": "May 01, 2026",
+          "tipoff": "20:45",
+          "arena": "MOVISTAR ARENA",
+          "tipoff_confirmed": true
         },
         {
           "game_num": 3,
@@ -44448,7 +44496,11 @@
           "pregame_wp": {
             "home": 52.6,
             "away": 47.4
-          }
+          },
+          "date": "May 05, 2026",
+          "tipoff": "18:00",
+          "arena": "ARENA BOTEVGRAD",
+          "tipoff_confirmed": true
         },
         {
           "game_num": 4,
@@ -44458,7 +44510,11 @@
           "pregame_wp": {
             "home": 52.6,
             "away": 47.4
-          }
+          },
+          "date": "May 07, 2026",
+          "tipoff": "20:00",
+          "arena": "ARENA BOTEVGRAD",
+          "tipoff_confirmed": true
         },
         {
           "game_num": 5,
@@ -44468,7 +44524,11 @@
           "pregame_wp": {
             "home": 65.1,
             "away": 34.9
-          }
+          },
+          "date": "May 12, 2026",
+          "tipoff": "00:00",
+          "arena": "MOVISTAR ARENA",
+          "tipoff_confirmed": false
         }
       ],
       "rs_h2h": [
@@ -44600,7 +44660,11 @@
           "pregame_wp": {
             "home": 57.2,
             "away": 42.8
-          }
+          },
+          "date": "Apr 28, 2026",
+          "tipoff": "19:45",
+          "arena": "ULKER SPORTS AND EVENT HALL",
+          "tipoff_confirmed": true
         },
         {
           "game_num": 2,
@@ -44610,7 +44674,11 @@
           "pregame_wp": {
             "home": 57.2,
             "away": 42.8
-          }
+          },
+          "date": "Apr 30, 2026",
+          "tipoff": "19:45",
+          "arena": "ULKER SPORTS AND EVENT HALL",
+          "tipoff_confirmed": true
         },
         {
           "game_num": 3,
@@ -44620,7 +44688,11 @@
           "pregame_wp": {
             "home": 58.2,
             "away": 41.8
-          }
+          },
+          "date": "May 06, 2026",
+          "tipoff": "19:00",
+          "arena": "ZALGIRIO ARENA",
+          "tipoff_confirmed": true
         },
         {
           "game_num": 4,
@@ -44630,7 +44702,11 @@
           "pregame_wp": {
             "home": 58.2,
             "away": 41.8
-          }
+          },
+          "date": "May 08, 2026",
+          "tipoff": "19:00",
+          "arena": "ZALGIRIO ARENA",
+          "tipoff_confirmed": true
         },
         {
           "game_num": 5,
@@ -44640,7 +44716,11 @@
           "pregame_wp": {
             "home": 57.2,
             "away": 42.8
-          }
+          },
+          "date": "May 12, 2026",
+          "tipoff": "00:00",
+          "arena": "ULKER SPORTS AND EVENT HALL",
+          "tipoff_confirmed": false
         }
       ],
       "rs_h2h": [

@@ -2695,7 +2695,7 @@ def main():
 
     def compute_series_data(playoff_results, matchup_probs, seeded_teams,
                             series_win_probs, games_df, teams_by_code,
-                            box_metrics, paint_share):
+                            box_metrics, paint_share, schedule_index=None):
         """
         Build per-series entries for Series Hub pages.
 
@@ -2705,7 +2705,12 @@ def main():
 
         Seeds resolve left-to-right: QFs populate from initial seeding; SFs/Final
         populate once prerequisite series are decided. Unresolved sides remain null.
+
+        schedule_index, if provided, maps frozenset({code_a, code_b}) → list of
+        schedule rows (sorted by gameday) so upcoming games can carry their
+        scheduled date and tip-off time.
         """
+        schedule_index = schedule_index or {}
         if len(seeded_teams) < 10:
             return {}
 
@@ -2831,6 +2836,25 @@ def main():
             games_played = wins_h + wins_l
             total_games = 1 if fmt == 'single_game' else 5
 
+            sched_entries = []
+            if high_code and low_code:
+                sched_entries = schedule_index.get(frozenset({high_code, low_code}), [])
+
+            def _sched_for(game_num):
+                idx = game_num - 1
+                if 0 <= idx < len(sched_entries):
+                    row = sched_entries[idx]
+                    # Schedule API encodes confirmeddate/confirmedtime as strings 'true'/'false'.
+                    cd = str(row.get('confirmeddate', '')).lower() == 'true'
+                    ct = str(row.get('confirmedtime', '')).lower() == 'true'
+                    return {
+                        'date': row.get('date') or '',
+                        'tipoff': row.get('startime') or '',
+                        'arena': row.get('arenaname') or '',
+                        'confirmed': cd and ct,
+                    }
+                return None
+
             for game_num in range(1, total_games + 1):
                 gc = completed_by_num.get(game_num)
                 if gc:
@@ -2865,11 +2889,13 @@ def main():
                     })
                     continue
 
+                sched = _sched_for(game_num)
+
                 if fmt == 'single_game':
                     # Neutral-court single game; no home advantage.
                     pair_fwd = (matchup_probs.get(high_code) or {}).get(low_code) or {}
                     p_high = pair_fwd.get('neutral', pair_fwd.get('home', 0.5))
-                    games.append({
+                    entry = {
                         'game_num': game_num,
                         'status': 'upcoming',
                         'home': None,
@@ -2879,13 +2905,21 @@ def main():
                             'high': round(p_high * 100, 1),
                             'low': round((1 - p_high) * 100, 1),
                         },
-                    })
+                    }
+                    if sched:
+                        entry.update({
+                            'date': sched['date'],
+                            'tipoff': sched['tipoff'],
+                            'arena': sched['arena'],
+                            'tipoff_confirmed': sched['confirmed'],
+                        })
+                    games.append(entry)
                     continue
 
                 home_code, away_code = _schedule_home(game_num, high_code, low_code)
                 home_prob_entry = (matchup_probs.get(home_code) or {}).get(away_code) or {}
                 p_home = home_prob_entry.get('home', 0.5)
-                games.append({
+                entry = {
                     'game_num': game_num,
                     'status': 'upcoming',
                     'home': home_code,
@@ -2894,7 +2928,15 @@ def main():
                         'home': round(p_home * 100, 1),
                         'away': round((1 - p_home) * 100, 1),
                     },
-                })
+                }
+                if sched:
+                    entry.update({
+                        'date': sched['date'],
+                        'tipoff': sched['tipoff'],
+                        'arena': sched['arena'],
+                        'tipoff_confirmed': sched['confirmed'],
+                    })
+                games.append(entry)
 
             return games
 
@@ -3012,6 +3054,26 @@ def main():
     except Exception as e:
         print(f"  [WARN] Could not build RS games for Series Hub: {e}")
 
+    # Build schedule index for Series Hub upcoming-game date/tip-off lookups.
+    # Keyed by frozenset({home, away}) → list of schedule rows ordered by gameday.
+    # Excludes RS and PI rounds; only QF/SF/Final pairings are kept.
+    schedule_index = {}
+    try:
+        sched_rows = load_json('schedule_2025.json') or []
+        for row in sched_rows:
+            rnd = row.get('round')
+            if rnd in ('RS', 'PI') or not rnd:
+                continue
+            h = row.get('homecode')
+            a = row.get('awaycode')
+            if not h or not a:
+                continue
+            schedule_index.setdefault(frozenset({h, a}), []).append(row)
+        for key in schedule_index:
+            schedule_index[key].sort(key=lambda r: int(r.get('gameday') or 0))
+    except Exception as e:
+        print(f"  [WARN] Could not build schedule index for Series Hub: {e}")
+
     game_results_raw = load_json('mvp_game_results.json')
     if game_results_raw and len(teams) >= 10:
         seeded = teams[:10]  # Already sorted by wins desc, adj_net desc
@@ -3082,7 +3144,7 @@ def main():
             series_data = compute_series_data(
                 playoff_results_data, playoff_matchup_probs, seeded,
                 series_win_probs, games_df, teams_by_code,
-                box_metrics, paint_share,
+                box_metrics, paint_share, schedule_index=schedule_index,
             )
 
             print(f"  Playoff results: {sum(1 for g in game_results_raw if int(g.get('GameCode', 0)) > 380 and g.get('LocalScore', 0) > 0)} games tracked")
@@ -3135,7 +3197,7 @@ def main():
                 series_data = compute_series_data(
                     None, playoff_matchup_probs, seeded, series_win_probs, games_df,
                     teams_by_code,
-                    box_metrics, paint_share,
+                    box_metrics, paint_share, schedule_index=schedule_index,
                 )
 
     output = {

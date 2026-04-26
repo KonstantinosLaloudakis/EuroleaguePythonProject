@@ -215,7 +215,7 @@ function renderGameBox(g, entry) {
       <div class="series-game-box upcoming" ${neutralStyle}>
         <div class="series-game-num">${num}</div>
         <div class="series-game-venue">Neutral venue</div>
-        <div class="series-game-date">${formatDate(g.date) || 'TBD'}</div>
+        <div class="series-game-date">${formatUpcoming(g)}</div>
         ${wpLine}
       </div>
     `;
@@ -228,7 +228,7 @@ function renderGameBox(g, entry) {
     <div class="series-game-box upcoming" ${homeStyle}>
       <div class="series-game-num">${num}</div>
       <div class="series-game-venue">${venue}</div>
-      <div class="series-game-date">${formatDate(g.date) || 'TBD'}</div>
+      <div class="series-game-date">${formatUpcoming(g)}</div>
       ${homeWp != null ? `<div class="series-game-wp">${g.home} ${homeWp.toFixed(0)}% / ${g.away} ${awayWp.toFixed(0)}%</div>` : ''}
     </div>
   `;
@@ -239,6 +239,51 @@ function formatDate(iso) {
   const d = new Date(iso);
   if (isNaN(d.getTime())) return iso;
   return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+
+// Schedule API serves CET/CEST. Playoffs run late Apr–May, always in CEST (UTC+2).
+const _MONTHS_3 = { Jan:'01', Feb:'02', Mar:'03', Apr:'04', May:'05', Jun:'06',
+                    Jul:'07', Aug:'08', Sep:'09', Oct:'10', Nov:'11', Dec:'12' };
+
+function _parseScheduleDate(str) {
+  const m = str && str.match(/^(\w{3})\s+(\d{1,2}),\s+(\d{4})$/);
+  if (!m) return null;
+  const mm = _MONTHS_3[m[1]];
+  if (!mm) return null;
+  return { yyyy: m[3], mm, dd: m[2].padStart(2, '0') };
+}
+
+function formatUpcoming(g) {
+  if (!g || !g.date) return 'TBD';
+  const confirmed = g.tipoff_confirmed !== false;
+  const tipoff = g.tipoff;
+  const hasUsableTime = confirmed && tipoff && tipoff !== '00:00';
+
+  // Date-only fallback: no usable tip-off, render in CET (no TZ shift needed for date).
+  if (!hasUsableTime) {
+    const d = new Date(g.date);
+    return isNaN(d.getTime())
+      ? g.date
+      : d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  }
+
+  // Build a real instant by treating "MMM DD, YYYY" + "HH:MM" as CEST (+02:00).
+  const parts = _parseScheduleDate(g.date);
+  if (!parts) return `${g.date} · ${tipoff}`;
+  const iso = `${parts.yyyy}-${parts.mm}-${parts.dd}T${tipoff}:00+02:00`;
+  const dt = new Date(iso);
+  if (isNaN(dt.getTime())) return `${g.date} · ${tipoff}`;
+
+  // Format in the home arena's local timezone. Neutral/F4 games fall back to CET.
+  const tz = (typeof TEAM_TIMEZONES !== 'undefined' && TEAM_TIMEZONES[g.home])
+             || 'Europe/Berlin';
+  const dateLabel = dt.toLocaleDateString('en-US', {
+    weekday: 'short', month: 'short', day: 'numeric', timeZone: tz,
+  });
+  const timeLabel = dt.toLocaleTimeString('en-GB', {
+    hour: '2-digit', minute: '2-digit', hour12: false, timeZone: tz,
+  });
+  return `${dateLabel} · ${timeLabel}`;
 }
 
 // ── Regular-Season H2H ──────────────────────────────────────────────────
