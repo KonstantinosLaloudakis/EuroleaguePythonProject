@@ -1,6 +1,6 @@
 {
   "round": 38,
-  "updated": "2026-04-26T14:45:45Z",
+  "updated": "2026-04-27T04:41:12Z",
   "teams": [
     {
       "team": "OLY",
@@ -26116,21 +26116,21 @@
     "player_forecasts": []
   },
   "accuracy": {
-    "n_games": 498,
-    "accuracy": 65.5,
-    "brier_score": 0.2103,
-    "log_loss": 0.6045,
+    "n_games": 495,
+    "accuracy": 65.3,
+    "brier_score": 0.2108,
+    "log_loss": 0.6055,
     "calibration": [
       {
         "Bucket": "50-60%",
-        "Count": 148,
-        "Accuracy": 50.7,
-        "AvgConfidence": 56.0
+        "Count": 147,
+        "Accuracy": 50.3,
+        "AvgConfidence": 55.9
       },
       {
         "Bucket": "60-70%",
-        "Count": 156,
-        "Accuracy": 61.5,
+        "Count": 154,
+        "Accuracy": 61.0,
         "AvgConfidence": 64.7
       },
       {
@@ -26345,7 +26345,7 @@
       },
       {
         "Round": 39,
-        "Games": 5,
+        "Games": 2,
         "Accuracy": 100.0
       }
     ]
@@ -41684,6 +41684,22 @@
     },
     {
       "date": "2026-04-26",
+      "label": "Play-In Day 3",
+      "odds": {
+        "OLY": 18.0,
+        "PAM": 11.9,
+        "MAD": 19.1,
+        "ULK": 11.5,
+        "ZAL": 10.9,
+        "HTA": 8.0,
+        "PAN": 10.9,
+        "MCO": 9.7,
+        "BAR": 0.0,
+        "RED": 0.0
+      }
+    },
+    {
+      "date": "2026-04-27",
       "label": "Play-In Day 3",
       "odds": {
         "OLY": 18.0,
