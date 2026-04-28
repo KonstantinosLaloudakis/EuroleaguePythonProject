@@ -1,6 +1,6 @@
 {
   "round": 38,
-  "updated": "2026-04-27T04:41:12Z",
+  "updated": "2026-04-28T04:49:47Z",
   "teams": [
     {
       "team": "OLY",
@@ -41713,6 +41713,22 @@
         "BAR": 0.0,
         "RED": 0.0
       }
+    },
+    {
+      "date": "2026-04-28",
+      "label": "Play-In Day 3",
+      "odds": {
+        "OLY": 18.0,
+        "PAM": 11.9,
+        "MAD": 19.1,
+        "ULK": 11.5,
+        "ZAL": 10.9,
+        "HTA": 8.0,
+        "PAN": 10.9,
+        "MCO": 9.7,
+        "BAR": 0.0,
+        "RED": 0.0
+      }
     }
   ],
   "playoff_recaps": [
@@ -42616,7 +42632,7 @@
             "metric": "paint_pct",
             "label": "Paint %",
             "high": 37.9,
-            "low": 39.8
+            "low": 40.2
           },
           {
             "metric": "ft_rate",
@@ -42807,8 +42823,8 @@
           {
             "metric": "paint_pct",
             "label": "Paint %",
-            "high": 39.4,
-            "low": 41.3
+            "high": 40.0,
+            "low": 41.6
           },
           {
             "metric": "ft_rate",
@@ -42999,8 +43015,8 @@
           {
             "metric": "paint_pct",
             "label": "Paint %",
-            "high": 38.6,
-            "low": 36.6
+            "high": 39.4,
+            "low": 37.6
           },
           {
             "metric": "ft_rate",
@@ -43191,8 +43207,8 @@
           {
             "metric": "paint_pct",
             "label": "Paint %",
-            "high": 37.7,
-            "low": 46.1
+            "high": 37.8,
+            "low": 45.9
           },
           {
             "metric": "ft_rate",
