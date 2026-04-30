@@ -1,6 +1,6 @@
 {
   "round": 38,
-  "updated": "2026-04-29T04:47:38Z",
+  "updated": "2026-04-30T04:45:36Z",
   "teams": [
     {
       "team": "OLY",
@@ -8,9 +8,9 @@
       "wins": 26,
       "losses": 12,
       "win_pct": 68.4,
-      "adj_net": 7.3,
-      "adj_off": 90.44,
-      "adj_def": 83.14,
+      "adj_net": 7.29,
+      "adj_off": 90.43,
+      "adj_def": 83.15,
       "elo": 1601.2,
       "sos": 50.0,
       "remaining": 0,
@@ -308,8 +308,8 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 78.9,
-      "drama_avg": 4.02,
+      "gci": 79.7,
+      "drama_avg": 3.97,
       "comeback_count": 1
     },
     {
@@ -318,7 +318,7 @@
       "wins": 25,
       "losses": 13,
       "win_pct": 65.8,
-      "adj_net": 4.38,
+      "adj_net": 4.36,
       "adj_off": 90.27,
       "adj_def": 85.9,
       "elo": 1531.2,
@@ -618,7 +618,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 63.9,
+      "gci": 62.0,
       "drama_avg": 4.06,
       "comeback_count": 3
     },
@@ -628,10 +628,10 @@
       "wins": 24,
       "losses": 14,
       "win_pct": 63.2,
-      "adj_net": 5.38,
-      "adj_off": 88.31,
-      "adj_def": 82.93,
-      "elo": 1601.2,
+      "adj_net": 5.37,
+      "adj_off": 88.19,
+      "adj_def": 82.81,
+      "elo": 1604.5,
       "sos": 50.0,
       "remaining": 0,
       "top4_pct": 100.0,
@@ -928,7 +928,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 72.5,
+      "gci": 72.6,
       "drama_avg": 3.71,
       "comeback_count": 1
     },
@@ -938,9 +938,9 @@
       "wins": 24,
       "losses": 14,
       "win_pct": 63.2,
-      "adj_net": 1.49,
-      "adj_off": 81.94,
-      "adj_def": 80.45,
+      "adj_net": 1.47,
+      "adj_off": 81.93,
+      "adj_def": 80.46,
       "elo": 1553.5,
       "sos": 50.0,
       "remaining": 0,
@@ -1238,8 +1238,8 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 63.5,
-      "drama_avg": 3.64,
+      "gci": 65.3,
+      "drama_avg": 3.63,
       "comeback_count": 3
     },
     {
@@ -1248,9 +1248,9 @@
       "wins": 23,
       "losses": 15,
       "win_pct": 60.5,
-      "adj_net": 3.95,
-      "adj_off": 87.22,
-      "adj_def": 83.27,
+      "adj_net": 3.94,
+      "adj_off": 87.21,
+      "adj_def": 83.28,
       "elo": 1520.8,
       "sos": 50.0,
       "remaining": 0,
@@ -1548,8 +1548,8 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 66.4,
-      "drama_avg": 3.74,
+      "gci": 64.6,
+      "drama_avg": 3.72,
       "comeback_count": 1
     },
     {
@@ -1558,10 +1558,10 @@
       "wins": 23,
       "losses": 15,
       "win_pct": 60.5,
-      "adj_net": 1.86,
-      "adj_off": 88.37,
-      "adj_def": 86.51,
-      "elo": 1528.7,
+      "adj_net": 1.82,
+      "adj_off": 88.22,
+      "adj_def": 86.4,
+      "elo": 1525.4,
       "sos": 50.0,
       "remaining": 0,
       "top4_pct": 0.0,
@@ -1858,7 +1858,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 61.6,
+      "gci": 61.7,
       "drama_avg": 3.93,
       "comeback_count": 2
     },
@@ -1868,9 +1868,9 @@
       "wins": 22,
       "losses": 16,
       "win_pct": 57.9,
-      "adj_net": 3.1,
-      "adj_off": 86.69,
-      "adj_def": 83.59,
+      "adj_net": 3.09,
+      "adj_off": 86.68,
+      "adj_def": 83.6,
       "elo": 1553.9,
       "sos": 50.0,
       "remaining": 0,
@@ -2168,8 +2168,8 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 59.7,
-      "drama_avg": 3.67,
+      "gci": 61.2,
+      "drama_avg": 3.69,
       "comeback_count": 3
     },
     {
@@ -2178,9 +2178,9 @@
       "wins": 22,
       "losses": 16,
       "win_pct": 57.9,
-      "adj_net": 2.04,
-      "adj_off": 89.37,
-      "adj_def": 87.33,
+      "adj_net": 2.02,
+      "adj_off": 89.36,
+      "adj_def": 87.34,
       "elo": 1555.6,
       "sos": 50.0,
       "remaining": 0,
@@ -2478,8 +2478,8 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 60.6,
-      "drama_avg": 3.8,
+      "gci": 59.2,
+      "drama_avg": 3.76,
       "comeback_count": 3
     },
     {
@@ -2488,8 +2488,8 @@
       "wins": 21,
       "losses": 17,
       "win_pct": 55.3,
-      "adj_net": 0.45,
-      "adj_off": 82.92,
+      "adj_net": 0.44,
+      "adj_off": 82.91,
       "adj_def": 82.47,
       "elo": 1546.9,
       "sos": 50.0,
@@ -2788,7 +2788,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 51.3,
+      "gci": 51.4,
       "drama_avg": 3.82,
       "comeback_count": 1
     },
@@ -2798,9 +2798,9 @@
       "wins": 21,
       "losses": 17,
       "win_pct": 55.3,
-      "adj_net": 0.16,
-      "adj_off": 87.43,
-      "adj_def": 87.26,
+      "adj_net": 0.15,
+      "adj_off": 87.42,
+      "adj_def": 87.27,
       "elo": 1490.2,
       "sos": 50.0,
       "remaining": 0,
@@ -3098,7 +3098,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 51.5,
+      "gci": 51.6,
       "drama_avg": 4.06,
       "comeback_count": 4
     },
@@ -3108,9 +3108,9 @@
       "wins": 19,
       "losses": 19,
       "win_pct": 50.0,
-      "adj_net": 0.49,
+      "adj_net": 0.47,
       "adj_off": 88.71,
-      "adj_def": 88.22,
+      "adj_def": 88.23,
       "elo": 1504.1,
       "sos": 50.0,
       "remaining": 0,
@@ -3408,7 +3408,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 50.3,
+      "gci": 50.4,
       "drama_avg": 4.12,
       "comeback_count": 4
     },
@@ -3418,9 +3418,9 @@
       "wins": 18,
       "losses": 20,
       "win_pct": 47.4,
-      "adj_net": -2.73,
-      "adj_off": 90.76,
-      "adj_def": 93.49,
+      "adj_net": -2.75,
+      "adj_off": 90.75,
+      "adj_def": 93.5,
       "elo": 1514.3,
       "sos": 50.0,
       "remaining": 0,
@@ -3718,7 +3718,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 43.1,
+      "gci": 43.2,
       "drama_avg": 4.24,
       "comeback_count": 3
     },
@@ -3728,9 +3728,9 @@
       "wins": 17,
       "losses": 21,
       "win_pct": 44.7,
-      "adj_net": -1.63,
-      "adj_off": 86.52,
-      "adj_def": 88.15,
+      "adj_net": -1.65,
+      "adj_off": 86.51,
+      "adj_def": 88.16,
       "elo": 1482.1,
       "sos": 50.0,
       "remaining": 0,
@@ -4028,7 +4028,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 50.1,
+      "gci": 50.2,
       "drama_avg": 3.65,
       "comeback_count": 1
     },
@@ -4038,9 +4038,9 @@
       "wins": 17,
       "losses": 21,
       "win_pct": 44.7,
-      "adj_net": -2.53,
+      "adj_net": -2.54,
       "adj_off": 81.17,
-      "adj_def": 83.7,
+      "adj_def": 83.71,
       "elo": 1467.9,
       "sos": 50.0,
       "remaining": 0,
@@ -4348,9 +4348,9 @@
       "wins": 16,
       "losses": 22,
       "win_pct": 42.1,
-      "adj_net": -3.71,
-      "adj_off": 81.88,
-      "adj_def": 85.59,
+      "adj_net": -3.73,
+      "adj_off": 81.87,
+      "adj_def": 85.6,
       "elo": 1488.8,
       "sos": 50.0,
       "remaining": 0,
@@ -4658,9 +4658,9 @@
       "wins": 15,
       "losses": 23,
       "win_pct": 39.5,
-      "adj_net": -0.3,
-      "adj_off": 90.42,
-      "adj_def": 90.72,
+      "adj_net": -0.32,
+      "adj_off": 90.41,
+      "adj_def": 90.73,
       "elo": 1475.7,
       "sos": 50.0,
       "remaining": 0,
@@ -4958,7 +4958,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 44.2,
+      "gci": 44.3,
       "drama_avg": 3.82,
       "comeback_count": 1
     },
@@ -4968,9 +4968,9 @@
       "wins": 14,
       "losses": 24,
       "win_pct": 36.8,
-      "adj_net": -5.76,
-      "adj_off": 81.66,
-      "adj_def": 87.42,
+      "adj_net": -5.77,
+      "adj_off": 81.65,
+      "adj_def": 87.43,
       "elo": 1451.2,
       "sos": 50.0,
       "remaining": 0,
@@ -5268,7 +5268,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 31.7,
+      "gci": 31.8,
       "drama_avg": 3.71,
       "comeback_count": 0
     },
@@ -5278,9 +5278,9 @@
       "wins": 13,
       "losses": 25,
       "win_pct": 34.2,
-      "adj_net": -4.38,
+      "adj_net": -4.4,
       "adj_off": 89.3,
-      "adj_def": 93.68,
+      "adj_def": 93.7,
       "elo": 1460.5,
       "sos": 50.0,
       "remaining": 0,
@@ -5588,9 +5588,9 @@
       "wins": 12,
       "losses": 26,
       "win_pct": 31.6,
-      "adj_net": -4.13,
-      "adj_off": 79.87,
-      "adj_def": 83.99,
+      "adj_net": -4.14,
+      "adj_off": 79.86,
+      "adj_def": 84.0,
       "elo": 1458.8,
       "sos": 50.0,
       "remaining": 0,
@@ -5898,8 +5898,8 @@
       "wins": 8,
       "losses": 30,
       "win_pct": 21.1,
-      "adj_net": -6.8,
-      "adj_off": 79.72,
+      "adj_net": -6.81,
+      "adj_off": 79.71,
       "adj_def": 86.52,
       "elo": 1368.8,
       "sos": 50.0,
@@ -6208,10 +6208,10 @@
       "rank": 1,
       "player": "VEZENKOV, SASHA",
       "team": "OLY",
-      "mvp_score": 90.43,
+      "mvp_score": 90.5,
       "avg_pir": 23.12,
       "avg_gmsc": 16.05,
-      "wpa": 1286.7,
+      "wpa": 1303.2,
       "team_win_pct": 68.4,
       "clutch_eff": 0.4577,
       "clutch_pts": 26.0,
@@ -6225,7 +6225,7 @@
       "mvp_score": 87.85,
       "avg_pir": 19.5,
       "avg_gmsc": 13.47,
-      "wpa": 1536.7,
+      "wpa": 1567.8,
       "team_win_pct": 60.5,
       "clutch_eff": 0.5252,
       "clutch_pts": 34.0,
@@ -6236,10 +6236,10 @@
       "rank": 3,
       "player": "BALDWIN IV, WADE",
       "team": "ULK",
-      "mvp_score": 82.39,
+      "mvp_score": 82.45,
       "avg_pir": 16.38,
       "avg_gmsc": 11.01,
-      "wpa": 1342.5,
+      "wpa": 1358.7,
       "team_win_pct": 63.2,
       "clutch_eff": 0.5905,
       "clutch_pts": 33.0,
@@ -6250,7 +6250,7 @@
       "rank": 4,
       "player": "BRYANT, ELIJAH",
       "team": "HTA",
-      "mvp_score": 82.39,
+      "mvp_score": 82.29,
       "avg_pir": 20.59,
       "avg_gmsc": 12.77,
       "wpa": 1168.2,
@@ -6264,10 +6264,10 @@
       "rank": 5,
       "player": "JAMES, MIKE",
       "team": "MCO",
-      "mvp_score": 81.28,
+      "mvp_score": 81.24,
       "avg_pir": 18.88,
       "avg_gmsc": 12.98,
-      "wpa": 1315.7,
+      "wpa": 1323.6,
       "team_win_pct": 57.9,
       "clutch_eff": 0.2029,
       "clutch_pts": 22.0,
@@ -6278,10 +6278,10 @@
       "rank": 6,
       "player": "NUNN, KENDRICK",
       "team": "PAN",
-      "mvp_score": 80.54,
+      "mvp_score": 81.2,
       "avg_pir": 16.81,
       "avg_gmsc": 12.6,
-      "wpa": 1322.7,
+      "wpa": 1391.9,
       "team_win_pct": 57.9,
       "clutch_eff": 0.502,
       "clutch_pts": 26.0,
@@ -6292,7 +6292,7 @@
       "rank": 7,
       "player": "MONEKE, CHIMA",
       "team": "RED",
-      "mvp_score": 80.5,
+      "mvp_score": 80.4,
       "avg_pir": 18.23,
       "avg_gmsc": 11.89,
       "wpa": 1155.8,
@@ -6306,10 +6306,10 @@
       "rank": 8,
       "player": "DORSEY, TYLER",
       "team": "OLY",
-      "mvp_score": 80.04,
+      "mvp_score": 80.15,
       "avg_pir": 15.08,
       "avg_gmsc": 11.31,
-      "wpa": 1385.4,
+      "wpa": 1405.8,
       "team_win_pct": 68.4,
       "clutch_eff": 0.4127,
       "clutch_pts": 27.0,
@@ -6318,9 +6318,23 @@
     },
     {
       "rank": 9,
+      "player": "HORTON TUCKER, TALEN",
+      "team": "ULK",
+      "mvp_score": 80.06,
+      "avg_pir": 14.67,
+      "avg_gmsc": 10.36,
+      "wpa": 1343.3,
+      "team_win_pct": 63.2,
+      "clutch_eff": 0.6894,
+      "clutch_pts": 31.0,
+      "consistency": 0.6197,
+      "gp": 36
+    },
+    {
+      "rank": 10,
       "player": "HIFI, NADIR",
       "team": "PRS",
-      "mvp_score": 80.03,
+      "mvp_score": 79.9,
       "avg_pir": 17.57,
       "avg_gmsc": 12.26,
       "wpa": 1443.1,
@@ -6331,27 +6345,13 @@
       "gp": 37
     },
     {
-      "rank": 10,
-      "player": "HORTON TUCKER, TALEN",
-      "team": "ULK",
-      "mvp_score": 79.79,
-      "avg_pir": 14.67,
-      "avg_gmsc": 10.36,
-      "wpa": 1308.9,
-      "team_win_pct": 63.2,
-      "clutch_eff": 0.6894,
-      "clutch_pts": 31.0,
-      "consistency": 0.6197,
-      "gp": 36
-    },
-    {
       "rank": 11,
       "player": "MILUTINOV, NIKOLA",
       "team": "OLY",
-      "mvp_score": 79.59,
+      "mvp_score": 79.57,
       "avg_pir": 20.09,
       "avg_gmsc": 12.39,
-      "wpa": 704.0,
+      "wpa": 707.8,
       "team_win_pct": 68.4,
       "clutch_eff": 0.3429,
       "clutch_pts": 12.0,
@@ -6362,7 +6362,7 @@
       "rank": 12,
       "player": "WRIGHT IV, MCKINLEY",
       "team": "DUB",
-      "mvp_score": 79.02,
+      "mvp_score": 78.9,
       "avg_pir": 15.71,
       "avg_gmsc": 11.41,
       "wpa": 1346.9,
@@ -6376,7 +6376,7 @@
       "rank": 13,
       "player": "NWORA, JORDAN",
       "team": "RED",
-      "mvp_score": 78.11,
+      "mvp_score": 78.0,
       "avg_pir": 16.18,
       "avg_gmsc": 11.37,
       "wpa": 1229.7,
@@ -6388,9 +6388,23 @@
     },
     {
       "rank": 14,
+      "player": "MONTERO, JEAN",
+      "team": "PAM",
+      "mvp_score": 77.84,
+      "avg_pir": 16.44,
+      "avg_gmsc": 11.43,
+      "wpa": 1075.2,
+      "team_win_pct": 65.8,
+      "clutch_eff": 0.4006,
+      "clutch_pts": 21.0,
+      "consistency": 0.6546,
+      "gp": 32
+    },
+    {
+      "rank": 15,
       "player": "LUWAWU-CABARROT, TIMOTHE",
       "team": "BAS",
-      "mvp_score": 77.29,
+      "mvp_score": 77.16,
       "avg_pir": 16.39,
       "avg_gmsc": 12.38,
       "wpa": 1488.0,
@@ -6399,20 +6413,6 @@
       "clutch_pts": 22.0,
       "consistency": 0.7428,
       "gp": 36
-    },
-    {
-      "rank": 15,
-      "player": "MONTERO, JEAN",
-      "team": "PAM",
-      "mvp_score": 76.8,
-      "avg_pir": 16.44,
-      "avg_gmsc": 11.43,
-      "wpa": 975.7,
-      "team_win_pct": 65.8,
-      "clutch_eff": 0.4006,
-      "clutch_pts": 21.0,
-      "consistency": 0.6546,
-      "gp": 32
     }
   ],
   "mvp_race": [
@@ -8674,33 +8674,11 @@
       "fg_pct": 54.4,
       "fg3_pct": 40.0,
       "ft_pct": 89.2,
-      "mvp_score": 90.4,
+      "mvp_score": 90.5,
       "mvp_rank": 1,
-      "wpa": 1286.7,
+      "wpa": 1303.2,
       "consistency": 0.747,
       "clutch_eff": 0.458
-    },
-    {
-      "code": "009846",
-      "name": "BRYANT, ELIJAH",
-      "team": "HTA",
-      "position": "Guard",
-      "gp": 34,
-      "avg_pts": 15.9,
-      "avg_reb": 5.3,
-      "avg_ast": 3.4,
-      "avg_stl": 0.7,
-      "avg_to": 2.3,
-      "avg_blk": 0.1,
-      "avg_pir": 20.6,
-      "fg_pct": 54.4,
-      "fg3_pct": 38.7,
-      "ft_pct": 89.3,
-      "mvp_score": 82.4,
-      "mvp_rank": 4,
-      "wpa": 1168.2,
-      "consistency": 0.703,
-      "clutch_eff": 0.197
     },
     {
       "code": "003941",
@@ -8720,9 +8698,31 @@
       "ft_pct": 78.6,
       "mvp_score": 79.6,
       "mvp_rank": 11,
-      "wpa": 704.0,
+      "wpa": 707.8,
       "consistency": 0.759,
       "clutch_eff": 0.343
+    },
+    {
+      "code": "009846",
+      "name": "BRYANT, ELIJAH",
+      "team": "HTA",
+      "position": "Guard",
+      "gp": 35,
+      "avg_pts": 15.5,
+      "avg_reb": 5.2,
+      "avg_ast": 3.3,
+      "avg_stl": 0.7,
+      "avg_to": 2.3,
+      "avg_blk": 0.1,
+      "avg_pir": 19.9,
+      "fg_pct": 53.9,
+      "fg3_pct": 37.6,
+      "ft_pct": 89.3,
+      "mvp_score": 82.3,
+      "mvp_rank": 4,
+      "wpa": 1168.2,
+      "consistency": 0.703,
+      "clutch_eff": 0.197
     },
     {
       "code": "005985",
@@ -8740,9 +8740,9 @@
       "fg_pct": 42.5,
       "fg3_pct": 32.3,
       "ft_pct": 86.1,
-      "mvp_score": 81.3,
+      "mvp_score": 81.2,
       "mvp_rank": 5,
-      "wpa": 1315.7,
+      "wpa": 1323.6,
       "consistency": 0.742,
       "clutch_eff": 0.203
     },
@@ -8764,7 +8764,7 @@
       "ft_pct": 79.5,
       "mvp_score": 87.8,
       "mvp_rank": 2,
-      "wpa": 1536.7,
+      "wpa": 1567.8,
       "consistency": 0.681,
       "clutch_eff": 0.525
     },
@@ -8784,7 +8784,7 @@
       "fg_pct": 55.7,
       "fg3_pct": 34.3,
       "ft_pct": 77.4,
-      "mvp_score": 80.5,
+      "mvp_score": 80.4,
       "mvp_rank": 7,
       "wpa": 1155.8,
       "consistency": 0.689,
@@ -8806,7 +8806,7 @@
       "fg_pct": 42.8,
       "fg3_pct": 32.0,
       "ft_pct": 85.4,
-      "mvp_score": 65.8,
+      "mvp_score": 65.7,
       "mvp_rank": 42,
       "wpa": 601.2,
       "consistency": 0.671,
@@ -8828,8 +8828,8 @@
       "fg_pct": 41.5,
       "fg3_pct": 35.1,
       "ft_pct": 84.2,
-      "mvp_score": 80.0,
-      "mvp_rank": 9,
+      "mvp_score": 79.9,
+      "mvp_rank": 10,
       "wpa": 1443.1,
       "consistency": 0.673,
       "clutch_eff": 0.543
@@ -8850,7 +8850,7 @@
       "fg_pct": 56.3,
       "fg3_pct": 32.3,
       "ft_pct": 82.1,
-      "mvp_score": 75.6,
+      "mvp_score": 75.5,
       "mvp_rank": 18,
       "wpa": 1091.1,
       "consistency": 0.659,
@@ -8872,9 +8872,9 @@
       "fg_pct": 60.4,
       "fg3_pct": 33.3,
       "ft_pct": 74.1,
-      "mvp_score": 76.1,
+      "mvp_score": 76.3,
       "mvp_rank": 16,
-      "wpa": 1161.7,
+      "wpa": 1190.2,
       "consistency": 0.65,
       "clutch_eff": 0.068
     },
@@ -8901,6 +8901,28 @@
       "clutch_eff": 0.0
     },
     {
+      "code": "012788",
+      "name": "OTURU, DAN",
+      "team": "HTA",
+      "position": "Center",
+      "gp": 39,
+      "avg_pts": 13.6,
+      "avg_reb": 5.7,
+      "avg_ast": 0.9,
+      "avg_stl": 0.5,
+      "avg_to": 1.5,
+      "avg_blk": 1.3,
+      "avg_pir": 16.6,
+      "fg_pct": 71.6,
+      "fg3_pct": 0.0,
+      "ft_pct": 66.4,
+      "mvp_score": 75.5,
+      "mvp_rank": 17,
+      "wpa": 995.9,
+      "consistency": 0.682,
+      "clutch_eff": 0.405
+    },
+    {
       "code": "012774",
       "name": "NUNN, KENDRICK",
       "team": "PAN",
@@ -8916,9 +8938,9 @@
       "fg_pct": 49.9,
       "fg3_pct": 37.4,
       "ft_pct": 88.8,
-      "mvp_score": 80.5,
+      "mvp_score": 81.2,
       "mvp_rank": 6,
-      "wpa": 1322.7,
+      "wpa": 1391.9,
       "consistency": 0.621,
       "clutch_eff": 0.502
     },
@@ -8938,9 +8960,9 @@
       "fg_pct": 46.3,
       "fg3_pct": 28.4,
       "ft_pct": 79.6,
-      "mvp_score": 82.4,
+      "mvp_score": 82.5,
       "mvp_rank": 3,
-      "wpa": 1342.5,
+      "wpa": 1358.7,
       "consistency": 0.696,
       "clutch_eff": 0.591
     },
@@ -8960,9 +8982,9 @@
       "fg_pct": 39.9,
       "fg3_pct": 31.3,
       "ft_pct": 89.1,
-      "mvp_score": 76.8,
-      "mvp_rank": 15,
-      "wpa": 975.7,
+      "mvp_score": 77.8,
+      "mvp_rank": 14,
+      "wpa": 1075.2,
       "consistency": 0.655,
       "clutch_eff": 0.401
     },
@@ -8982,8 +9004,8 @@
       "fg_pct": 47.6,
       "fg3_pct": 41.2,
       "ft_pct": 89.8,
-      "mvp_score": 77.3,
-      "mvp_rank": 14,
+      "mvp_score": 77.2,
+      "mvp_rank": 15,
       "wpa": 1488.0,
       "consistency": 0.743,
       "clutch_eff": 0.459
@@ -9004,33 +9026,11 @@
       "fg_pct": 52.8,
       "fg3_pct": 30.4,
       "ft_pct": 86.4,
-      "mvp_score": 69.1,
+      "mvp_score": 69.0,
       "mvp_rank": 29,
       "wpa": 818.0,
       "consistency": 0.699,
       "clutch_eff": 0.257
-    },
-    {
-      "code": "012788",
-      "name": "OTURU, DAN",
-      "team": "HTA",
-      "position": "Center",
-      "gp": 38,
-      "avg_pts": 13.4,
-      "avg_reb": 5.4,
-      "avg_ast": 0.9,
-      "avg_stl": 0.5,
-      "avg_to": 1.5,
-      "avg_blk": 1.3,
-      "avg_pir": 16.1,
-      "fg_pct": 71.1,
-      "fg3_pct": 0.0,
-      "ft_pct": 66.4,
-      "mvp_score": 75.6,
-      "mvp_rank": 17,
-      "wpa": 995.9,
-      "consistency": 0.682,
-      "clutch_eff": 0.405
     },
     {
       "code": "013363",
@@ -9048,33 +9048,11 @@
       "fg_pct": 47.1,
       "fg3_pct": 35.6,
       "ft_pct": 80.6,
-      "mvp_score": 78.1,
+      "mvp_score": 78.0,
       "mvp_rank": 13,
       "wpa": 1229.7,
       "consistency": 0.669,
       "clutch_eff": 0.486
-    },
-    {
-      "code": "005791",
-      "name": "TAVARES, WALTER",
-      "team": "MAD",
-      "position": "Center",
-      "gp": 38,
-      "avg_pts": 9.8,
-      "avg_reb": 6.8,
-      "avg_ast": 0.6,
-      "avg_stl": 0.6,
-      "avg_to": 1.7,
-      "avg_blk": 1.9,
-      "avg_pir": 15.8,
-      "fg_pct": 68.8,
-      "fg3_pct": 0.0,
-      "ft_pct": 73.0,
-      "mvp_score": 69.7,
-      "mvp_rank": 25,
-      "wpa": 691.6,
-      "consistency": 0.673,
-      "clutch_eff": 0.143
     },
     {
       "code": "012606",
@@ -9092,7 +9070,7 @@
       "fg_pct": 51.7,
       "fg3_pct": 37.8,
       "ft_pct": 85.3,
-      "mvp_score": 79.0,
+      "mvp_score": 78.9,
       "mvp_rank": 12,
       "wpa": 1346.9,
       "consistency": 0.591,
@@ -9121,6 +9099,28 @@
       "clutch_eff": 0.167
     },
     {
+      "code": "005791",
+      "name": "TAVARES, WALTER",
+      "team": "MAD",
+      "position": "Center",
+      "gp": 39,
+      "avg_pts": 9.6,
+      "avg_reb": 6.6,
+      "avg_ast": 0.6,
+      "avg_stl": 0.6,
+      "avg_to": 1.6,
+      "avg_blk": 1.8,
+      "avg_pir": 15.5,
+      "fg_pct": 68.9,
+      "fg3_pct": 0.0,
+      "ft_pct": 73.0,
+      "mvp_score": 69.6,
+      "mvp_rank": 26,
+      "wpa": 691.6,
+      "consistency": 0.673,
+      "clutch_eff": 0.143
+    },
+    {
       "code": "011194",
       "name": "PETRUSEV, FILIP",
       "team": "DUB",
@@ -9136,7 +9136,7 @@
       "fg_pct": 54.8,
       "fg3_pct": 39.4,
       "ft_pct": 81.3,
-      "mvp_score": 68.0,
+      "mvp_score": 67.9,
       "mvp_rank": 35,
       "wpa": 907.1,
       "consistency": 0.64,
@@ -9158,7 +9158,7 @@
       "fg_pct": 53.7,
       "fg3_pct": 36.5,
       "ft_pct": 81.9,
-      "mvp_score": 72.2,
+      "mvp_score": 72.1,
       "mvp_rank": 23,
       "wpa": 845.0,
       "consistency": 0.66,
@@ -9180,7 +9180,7 @@
       "fg_pct": 46.9,
       "fg3_pct": 43.1,
       "ft_pct": 89.2,
-      "mvp_score": 59.8,
+      "mvp_score": 59.7,
       "mvp_rank": 80,
       "wpa": 465.3,
       "consistency": 0.696,
@@ -9203,7 +9203,7 @@
       "fg3_pct": 49.5,
       "ft_pct": 82.4,
       "mvp_score": 66.7,
-      "mvp_rank": 40,
+      "mvp_rank": 41,
       "wpa": 820.2,
       "consistency": 0.679,
       "clutch_eff": 0.171
@@ -9224,7 +9224,7 @@
       "fg_pct": 43.0,
       "fg3_pct": 33.0,
       "ft_pct": 60.5,
-      "mvp_score": 72.3,
+      "mvp_score": 72.2,
       "mvp_rank": 22,
       "wpa": 1002.6,
       "consistency": 0.659,
@@ -9246,9 +9246,9 @@
       "fg_pct": 45.8,
       "fg3_pct": 39.5,
       "ft_pct": 79.1,
-      "mvp_score": 80.0,
+      "mvp_score": 80.1,
       "mvp_rank": 8,
-      "wpa": 1385.4,
+      "wpa": 1405.8,
       "consistency": 0.643,
       "clutch_eff": 0.413
     },
@@ -9257,17 +9257,17 @@
       "name": "LYLES, TREY",
       "team": "MAD",
       "position": "Forward",
-      "gp": 36,
+      "gp": 37,
       "avg_pts": 13.3,
-      "avg_reb": 4.3,
-      "avg_ast": 1.6,
+      "avg_reb": 4.4,
+      "avg_ast": 1.5,
       "avg_stl": 0.5,
       "avg_to": 1.4,
       "avg_blk": 0.5,
       "avg_pir": 14.8,
-      "fg_pct": 51.6,
-      "fg3_pct": 44.3,
-      "ft_pct": 79.2,
+      "fg_pct": 51.3,
+      "fg3_pct": 44.5,
+      "ft_pct": 79.1,
       "mvp_score": 72.4,
       "mvp_rank": 21,
       "wpa": 929.7,
@@ -9290,11 +9290,33 @@
       "fg_pct": 46.3,
       "fg3_pct": 38.7,
       "ft_pct": 72.6,
-      "mvp_score": 69.2,
+      "mvp_score": 69.1,
       "mvp_rank": 28,
       "wpa": 1032.2,
       "consistency": 0.589,
       "clutch_eff": 0.124
+    },
+    {
+      "code": "005928",
+      "name": "CAMPAZZO, FACUNDO",
+      "team": "MAD",
+      "position": "Guard",
+      "gp": 39,
+      "avg_pts": 12.1,
+      "avg_reb": 1.9,
+      "avg_ast": 4.9,
+      "avg_stl": 1.2,
+      "avg_to": 1.9,
+      "avg_blk": 0.0,
+      "avg_pir": 14.6,
+      "fg_pct": 43.8,
+      "fg3_pct": 43.4,
+      "ft_pct": 85.4,
+      "mvp_score": 72.9,
+      "mvp_rank": 19,
+      "wpa": 994.5,
+      "consistency": 0.624,
+      "clutch_eff": 0.347
     },
     {
       "code": "014124",
@@ -9312,9 +9334,9 @@
       "fg_pct": 48.2,
       "fg3_pct": 28.7,
       "ft_pct": 75.8,
-      "mvp_score": 79.8,
-      "mvp_rank": 10,
-      "wpa": 1308.9,
+      "mvp_score": 80.1,
+      "mvp_rank": 9,
+      "wpa": 1343.3,
       "consistency": 0.62,
       "clutch_eff": 0.689
     },
@@ -9334,33 +9356,11 @@
       "fg_pct": 43.9,
       "fg3_pct": 28.1,
       "ft_pct": 86.1,
-      "mvp_score": 60.4,
-      "mvp_rank": 76,
+      "mvp_score": 60.3,
+      "mvp_rank": 77,
       "wpa": 689.9,
       "consistency": 0.581,
       "clutch_eff": 0.173
-    },
-    {
-      "code": "005928",
-      "name": "CAMPAZZO, FACUNDO",
-      "team": "MAD",
-      "position": "Guard",
-      "gp": 38,
-      "avg_pts": 11.8,
-      "avg_reb": 1.8,
-      "avg_ast": 5.1,
-      "avg_stl": 1.2,
-      "avg_to": 2.0,
-      "avg_blk": 0.0,
-      "avg_pir": 14.5,
-      "fg_pct": 43.8,
-      "fg3_pct": 42.3,
-      "ft_pct": 85.0,
-      "mvp_score": 73.0,
-      "mvp_rank": 19,
-      "wpa": 994.5,
-      "consistency": 0.624,
-      "clutch_eff": 0.347
     },
     {
       "code": "014008",
@@ -9378,7 +9378,7 @@
       "fg_pct": 41.6,
       "fg3_pct": 34.3,
       "ft_pct": 82.8,
-      "mvp_score": 68.6,
+      "mvp_score": 68.5,
       "mvp_rank": 30,
       "wpa": 1088.0,
       "consistency": 0.592,
@@ -9400,7 +9400,7 @@
       "fg_pct": 49.0,
       "fg3_pct": 31.0,
       "ft_pct": 82.7,
-      "mvp_score": 65.2,
+      "mvp_score": 65.1,
       "mvp_rank": 48,
       "wpa": 754.6,
       "consistency": 0.689,
@@ -9422,8 +9422,8 @@
       "fg_pct": 67.7,
       "fg3_pct": 0.0,
       "ft_pct": 66.3,
-      "mvp_score": 60.3,
-      "mvp_rank": 77,
+      "mvp_score": 60.2,
+      "mvp_rank": 78,
       "wpa": 552.4,
       "consistency": 0.567,
       "clutch_eff": 0.181
@@ -9444,8 +9444,8 @@
       "fg_pct": 51.6,
       "fg3_pct": 34.1,
       "ft_pct": 81.9,
-      "mvp_score": 67.8,
-      "mvp_rank": 36,
+      "mvp_score": 67.7,
+      "mvp_rank": 37,
       "wpa": 1015.2,
       "consistency": 0.611,
       "clutch_eff": 0.182
@@ -9466,9 +9466,9 @@
       "fg_pct": 51.4,
       "fg3_pct": 40.2,
       "ft_pct": 97.8,
-      "mvp_score": 64.9,
+      "mvp_score": 65.0,
       "mvp_rank": 49,
-      "wpa": 762.3,
+      "wpa": 773.0,
       "consistency": 0.619,
       "clutch_eff": 0.666
     },
@@ -9488,7 +9488,7 @@
       "fg_pct": 42.2,
       "fg3_pct": 31.4,
       "ft_pct": 78.8,
-      "mvp_score": 68.5,
+      "mvp_score": 68.4,
       "mvp_rank": 31,
       "wpa": 954.4,
       "consistency": 0.625,
@@ -9532,9 +9532,9 @@
       "fg_pct": 49.3,
       "fg3_pct": 31.8,
       "ft_pct": 79.6,
-      "mvp_score": 69.9,
+      "mvp_score": 70.0,
       "mvp_rank": 24,
-      "wpa": 929.3,
+      "wpa": 944.7,
       "consistency": 0.687,
       "clutch_eff": 0.272
     },
@@ -9576,9 +9576,9 @@
       "fg_pct": 50.5,
       "fg3_pct": 39.6,
       "ft_pct": 83.5,
-      "mvp_score": 69.4,
-      "mvp_rank": 26,
-      "wpa": 873.8,
+      "mvp_score": 69.7,
+      "mvp_rank": 25,
+      "wpa": 910.3,
       "consistency": 0.634,
       "clutch_eff": 0.184
     },
@@ -9598,7 +9598,7 @@
       "fg_pct": 45.6,
       "fg3_pct": 41.4,
       "ft_pct": 86.6,
-      "mvp_score": 72.9,
+      "mvp_score": 72.7,
       "mvp_rank": 20,
       "wpa": 1231.5,
       "consistency": 0.534,
@@ -9620,7 +9620,7 @@
       "fg_pct": 44.2,
       "fg3_pct": 37.4,
       "ft_pct": 87.6,
-      "mvp_score": 65.7,
+      "mvp_score": 65.6,
       "mvp_rank": 43,
       "wpa": 955.6,
       "consistency": 0.578,
@@ -9642,9 +9642,9 @@
       "fg_pct": 48.2,
       "fg3_pct": 35.5,
       "ft_pct": 76.6,
-      "mvp_score": 63.9,
+      "mvp_score": 64.0,
       "mvp_rank": 52,
-      "wpa": 700.0,
+      "wpa": 712.5,
       "consistency": 0.613,
       "clutch_eff": 0.084
     },
@@ -9664,8 +9664,8 @@
       "fg_pct": 47.8,
       "fg3_pct": 39.3,
       "ft_pct": 82.1,
-      "mvp_score": 62.9,
-      "mvp_rank": 60,
+      "mvp_score": 62.8,
+      "mvp_rank": 61,
       "wpa": 699.3,
       "consistency": 0.625,
       "clutch_eff": 0.035
@@ -9686,9 +9686,9 @@
       "fg_pct": 45.2,
       "fg3_pct": 36.4,
       "ft_pct": 85.2,
-      "mvp_score": 60.7,
-      "mvp_rank": 73,
-      "wpa": 296.7,
+      "mvp_score": 60.9,
+      "mvp_rank": 71,
+      "wpa": 314.3,
       "consistency": 0.667,
       "clutch_eff": 0.0
     },
@@ -9708,7 +9708,7 @@
       "fg_pct": 39.4,
       "fg3_pct": 35.1,
       "ft_pct": 75.8,
-      "mvp_score": 63.4,
+      "mvp_score": 63.3,
       "mvp_rank": 55,
       "wpa": 821.5,
       "consistency": 0.584,
@@ -9730,7 +9730,7 @@
       "fg_pct": 43.2,
       "fg3_pct": 37.5,
       "ft_pct": 90.5,
-      "mvp_score": 64.4,
+      "mvp_score": 64.3,
       "mvp_rank": 50,
       "wpa": 712.2,
       "consistency": 0.577,
@@ -9752,7 +9752,7 @@
       "fg_pct": 61.3,
       "fg3_pct": 41.7,
       "ft_pct": 85.1,
-      "mvp_score": 58.6,
+      "mvp_score": 58.5,
       "mvp_rank": 88,
       "wpa": 449.8,
       "consistency": 0.645,
@@ -9776,7 +9776,7 @@
       "ft_pct": 80.7,
       "mvp_score": 65.4,
       "mvp_rank": 45,
-      "wpa": 743.6,
+      "wpa": 752.7,
       "consistency": 0.67,
       "clutch_eff": 0.204
     },
@@ -9862,9 +9862,9 @@
       "fg_pct": 46.1,
       "fg3_pct": 37.5,
       "ft_pct": 81.7,
-      "mvp_score": 63.8,
-      "mvp_rank": 54,
-      "wpa": 787.2,
+      "mvp_score": 63.9,
+      "mvp_rank": 53,
+      "wpa": 801.8,
       "consistency": 0.569,
       "clutch_eff": 0.085
     },
@@ -9884,9 +9884,9 @@
       "fg_pct": 63.6,
       "fg3_pct": 0.0,
       "ft_pct": 63.3,
-      "mvp_score": 56.7,
-      "mvp_rank": 100,
-      "wpa": 123.6,
+      "mvp_score": 57.1,
+      "mvp_rank": 98,
+      "wpa": 161.4,
       "consistency": 0.678,
       "clutch_eff": 0.0
     },
@@ -9928,7 +9928,7 @@
       "fg_pct": 76.6,
       "fg3_pct": 0.0,
       "ft_pct": 79.4,
-      "mvp_score": 58.8,
+      "mvp_score": 58.7,
       "mvp_rank": 86,
       "wpa": 409.3,
       "consistency": 0.589,
@@ -9950,8 +9950,8 @@
       "fg_pct": 41.5,
       "fg3_pct": 37.8,
       "ft_pct": 89.4,
-      "mvp_score": 67.6,
-      "mvp_rank": 37,
+      "mvp_score": 67.5,
+      "mvp_rank": 38,
       "wpa": 1011.9,
       "consistency": 0.55,
       "clutch_eff": 0.57
@@ -9972,11 +9972,33 @@
       "fg_pct": 58.4,
       "fg3_pct": 40.0,
       "ft_pct": 70.1,
-      "mvp_score": 67.6,
-      "mvp_rank": 38,
-      "wpa": 993.0,
+      "mvp_score": 67.8,
+      "mvp_rank": 36,
+      "wpa": 1015.3,
       "consistency": 0.632,
       "clutch_eff": 0.202
+    },
+    {
+      "code": "010568",
+      "name": "JONES, CHRIS",
+      "team": "HTA",
+      "position": "Guard",
+      "gp": 39,
+      "avg_pts": 9.8,
+      "avg_reb": 2.0,
+      "avg_ast": 4.3,
+      "avg_stl": 0.9,
+      "avg_to": 1.5,
+      "avg_blk": 0.0,
+      "avg_pir": 11.9,
+      "fg_pct": 47.9,
+      "fg3_pct": 42.5,
+      "ft_pct": 87.0,
+      "mvp_score": 68.3,
+      "mvp_rank": 33,
+      "wpa": 855.2,
+      "consistency": 0.617,
+      "clutch_eff": 0.54
     },
     {
       "code": "011212",
@@ -9994,9 +10016,9 @@
       "fg_pct": 42.3,
       "fg3_pct": 34.3,
       "ft_pct": 83.5,
-      "mvp_score": 66.7,
-      "mvp_rank": 41,
-      "wpa": 1022.4,
+      "mvp_score": 66.8,
+      "mvp_rank": 40,
+      "wpa": 1034.7,
       "consistency": 0.574,
       "clutch_eff": 0.109
     },
@@ -10005,44 +10027,22 @@
       "name": "HEZONJA, MARIO",
       "team": "MAD",
       "position": "Forward",
-      "gp": 38,
-      "avg_pts": 13.2,
+      "gp": 39,
+      "avg_pts": 13.1,
       "avg_reb": 3.9,
       "avg_ast": 2.2,
-      "avg_stl": 0.7,
+      "avg_stl": 0.8,
       "avg_to": 1.6,
       "avg_blk": 0.0,
       "avg_pir": 11.7,
-      "fg_pct": 42.7,
-      "fg3_pct": 30.2,
-      "ft_pct": 81.8,
-      "mvp_score": 68.1,
+      "fg_pct": 42.2,
+      "fg3_pct": 29.3,
+      "ft_pct": 82.8,
+      "mvp_score": 68.0,
       "mvp_rank": 34,
       "wpa": 1128.7,
       "consistency": 0.598,
       "clutch_eff": 0.121
-    },
-    {
-      "code": "010568",
-      "name": "JONES, CHRIS",
-      "team": "HTA",
-      "position": "Guard",
-      "gp": 38,
-      "avg_pts": 9.7,
-      "avg_reb": 2.0,
-      "avg_ast": 4.2,
-      "avg_stl": 0.9,
-      "avg_to": 1.5,
-      "avg_blk": 0.0,
-      "avg_pir": 11.6,
-      "fg_pct": 47.7,
-      "fg3_pct": 42.7,
-      "ft_pct": 86.3,
-      "mvp_score": 68.4,
-      "mvp_rank": 33,
-      "wpa": 855.2,
-      "consistency": 0.617,
-      "clutch_eff": 0.54
     },
     {
       "code": "012710",
@@ -10104,9 +10104,9 @@
       "fg_pct": 47.0,
       "fg3_pct": 39.1,
       "ft_pct": 78.8,
-      "mvp_score": 62.6,
-      "mvp_rank": 61,
-      "wpa": 765.6,
+      "mvp_score": 62.9,
+      "mvp_rank": 59,
+      "wpa": 794.3,
       "consistency": 0.563,
       "clutch_eff": 0.19
     },
@@ -10126,33 +10126,11 @@
       "fg_pct": 60.3,
       "fg3_pct": 43.1,
       "ft_pct": 65.0,
-      "mvp_score": 67.1,
+      "mvp_score": 67.5,
       "mvp_rank": 39,
-      "wpa": 916.0,
+      "wpa": 952.6,
       "consistency": 0.553,
       "clutch_eff": 0.292
-    },
-    {
-      "code": "007027",
-      "name": "MALEDON, THEO",
-      "team": "MAD",
-      "position": "Guard",
-      "gp": 32,
-      "avg_pts": 9.3,
-      "avg_reb": 2.2,
-      "avg_ast": 2.9,
-      "avg_stl": 0.6,
-      "avg_to": 1.4,
-      "avg_blk": 0.1,
-      "avg_pir": 11.2,
-      "fg_pct": 45.5,
-      "fg3_pct": 30.2,
-      "ft_pct": 87.0,
-      "mvp_score": 61.1,
-      "mvp_rank": 68,
-      "wpa": 524.7,
-      "consistency": 0.565,
-      "clutch_eff": 0.212
     },
     {
       "code": "004004",
@@ -10170,11 +10148,33 @@
       "fg_pct": 47.3,
       "fg3_pct": 38.3,
       "ft_pct": 90.2,
-      "mvp_score": 63.0,
+      "mvp_score": 62.9,
       "mvp_rank": 58,
       "wpa": 893.9,
       "consistency": 0.622,
       "clutch_eff": 0.33
+    },
+    {
+      "code": "007027",
+      "name": "MALEDON, THEO",
+      "team": "MAD",
+      "position": "Guard",
+      "gp": 33,
+      "avg_pts": 9.2,
+      "avg_reb": 2.2,
+      "avg_ast": 2.9,
+      "avg_stl": 0.6,
+      "avg_to": 1.4,
+      "avg_blk": 0.1,
+      "avg_pir": 11.1,
+      "fg_pct": 45.3,
+      "fg3_pct": 29.7,
+      "ft_pct": 87.3,
+      "mvp_score": 61.1,
+      "mvp_rank": 68,
+      "wpa": 524.7,
+      "consistency": 0.565,
+      "clutch_eff": 0.212
     },
     {
       "code": "014207",
@@ -10214,7 +10214,7 @@
       "fg_pct": 40.9,
       "fg3_pct": 36.6,
       "ft_pct": 75.4,
-      "mvp_score": 57.8,
+      "mvp_score": 57.7,
       "mvp_rank": 93,
       "wpa": 741.1,
       "consistency": 0.55,
@@ -10236,8 +10236,8 @@
       "fg_pct": 45.7,
       "fg3_pct": 39.2,
       "ft_pct": 90.5,
-      "mvp_score": 63.8,
-      "mvp_rank": 53,
+      "mvp_score": 63.7,
+      "mvp_rank": 54,
       "wpa": 1068.6,
       "consistency": 0.557,
       "clutch_eff": 0.315
@@ -10258,8 +10258,8 @@
       "fg_pct": 45.0,
       "fg3_pct": 37.7,
       "ft_pct": 80.0,
-      "mvp_score": 62.9,
-      "mvp_rank": 59,
+      "mvp_score": 62.8,
+      "mvp_rank": 60,
       "wpa": 757.9,
       "consistency": 0.54,
       "clutch_eff": 1.135
@@ -10280,7 +10280,7 @@
       "fg_pct": 39.4,
       "fg3_pct": 31.9,
       "ft_pct": 79.8,
-      "mvp_score": 69.3,
+      "mvp_score": 69.2,
       "mvp_rank": 27,
       "wpa": 1407.4,
       "consistency": 0.524,
@@ -10309,6 +10309,28 @@
       "clutch_eff": 0.171
     },
     {
+      "code": "002580",
+      "name": "MICIC, VASILIJE",
+      "team": "HTA",
+      "position": "Guard",
+      "gp": 37,
+      "avg_pts": 11.5,
+      "avg_reb": 2.7,
+      "avg_ast": 4.2,
+      "avg_stl": 0.9,
+      "avg_to": 2.8,
+      "avg_blk": 0.0,
+      "avg_pir": 10.9,
+      "fg_pct": 41.5,
+      "fg3_pct": 31.4,
+      "ft_pct": 90.6,
+      "mvp_score": 60.7,
+      "mvp_rank": 74,
+      "wpa": 739.9,
+      "consistency": 0.587,
+      "clutch_eff": 0.025
+    },
+    {
       "code": "002939",
       "name": "SATORANSKY, TOMAS",
       "team": "BAR",
@@ -10324,8 +10346,8 @@
       "fg_pct": 49.2,
       "fg3_pct": 48.9,
       "ft_pct": 73.3,
-      "mvp_score": 60.7,
-      "mvp_rank": 74,
+      "mvp_score": 60.6,
+      "mvp_rank": 75,
       "wpa": 626.5,
       "consistency": 0.59,
       "clutch_eff": 0.203
@@ -10346,8 +10368,8 @@
       "fg_pct": 62.9,
       "fg3_pct": 33.3,
       "ft_pct": 79.4,
-      "mvp_score": 56.1,
-      "mvp_rank": 104,
+      "mvp_score": 56.0,
+      "mvp_rank": 103,
       "wpa": 535.9,
       "consistency": 0.557,
       "clutch_eff": 0.263
@@ -10368,33 +10390,33 @@
       "fg_pct": 40.4,
       "fg3_pct": 34.6,
       "ft_pct": 85.8,
-      "mvp_score": 58.7,
+      "mvp_score": 58.6,
       "mvp_rank": 87,
       "wpa": 953.1,
       "consistency": 0.52,
       "clutch_eff": 0.192
     },
     {
-      "code": "002580",
-      "name": "MICIC, VASILIJE",
+      "code": "013402",
+      "name": "BLAKENEY, ANTONIO",
       "team": "HTA",
       "position": "Guard",
-      "gp": 36,
-      "avg_pts": 11.4,
-      "avg_reb": 2.6,
-      "avg_ast": 4.2,
-      "avg_stl": 0.9,
-      "avg_to": 2.7,
-      "avg_blk": 0.0,
+      "gp": 39,
+      "avg_pts": 13.5,
+      "avg_reb": 2.2,
+      "avg_ast": 1.0,
+      "avg_stl": 0.4,
+      "avg_to": 1.0,
+      "avg_blk": 0.3,
       "avg_pir": 10.8,
-      "fg_pct": 41.1,
-      "fg3_pct": 30.9,
-      "ft_pct": 90.5,
-      "mvp_score": 60.7,
-      "mvp_rank": 71,
-      "wpa": 739.9,
-      "consistency": 0.587,
-      "clutch_eff": 0.025
+      "fg_pct": 47.3,
+      "fg3_pct": 41.3,
+      "ft_pct": 83.8,
+      "mvp_score": 68.4,
+      "mvp_rank": 32,
+      "wpa": 1171.2,
+      "consistency": 0.606,
+      "clutch_eff": 0.338
     },
     {
       "code": "014152",
@@ -10412,8 +10434,8 @@
       "fg_pct": 49.6,
       "fg3_pct": 28.7,
       "ft_pct": 90.9,
-      "mvp_score": 56.4,
-      "mvp_rank": 101,
+      "mvp_score": 56.3,
+      "mvp_rank": 102,
       "wpa": 746.3,
       "consistency": 0.67,
       "clutch_eff": 0.055
@@ -10434,7 +10456,7 @@
       "fg_pct": 44.0,
       "fg3_pct": 36.4,
       "ft_pct": 81.2,
-      "mvp_score": 65.3,
+      "mvp_score": 65.2,
       "mvp_rank": 46,
       "wpa": 905.5,
       "consistency": 0.529,
@@ -10479,7 +10501,7 @@
       "fg3_pct": 39.6,
       "ft_pct": 80.6,
       "mvp_score": 56.9,
-      "mvp_rank": 99,
+      "mvp_rank": 100,
       "wpa": 501.5,
       "consistency": 0.548,
       "clutch_eff": 0.274
@@ -10500,8 +10522,8 @@
       "fg_pct": 47.0,
       "fg3_pct": 34.6,
       "ft_pct": 86.8,
-      "mvp_score": 55.4,
-      "mvp_rank": 107,
+      "mvp_score": 55.3,
+      "mvp_rank": 108,
       "wpa": 522.6,
       "consistency": 0.593,
       "clutch_eff": 0.063
@@ -10522,33 +10544,11 @@
       "fg_pct": 42.7,
       "fg3_pct": 36.4,
       "ft_pct": 83.3,
-      "mvp_score": 61.1,
+      "mvp_score": 61.0,
       "mvp_rank": 70,
-      "wpa": 677.7,
+      "wpa": 676.8,
       "consistency": 0.594,
       "clutch_eff": 0.129
-    },
-    {
-      "code": "013402",
-      "name": "BLAKENEY, ANTONIO",
-      "team": "HTA",
-      "position": "Guard",
-      "gp": 38,
-      "avg_pts": 13.2,
-      "avg_reb": 2.3,
-      "avg_ast": 1.0,
-      "avg_stl": 0.4,
-      "avg_to": 1.0,
-      "avg_blk": 0.3,
-      "avg_pir": 10.6,
-      "fg_pct": 47.2,
-      "fg3_pct": 40.6,
-      "ft_pct": 84.2,
-      "mvp_score": 68.5,
-      "mvp_rank": 32,
-      "wpa": 1171.2,
-      "consistency": 0.606,
-      "clutch_eff": 0.338
     },
     {
       "code": "013384",
@@ -10566,8 +10566,8 @@
       "fg_pct": 45.2,
       "fg3_pct": 41.6,
       "ft_pct": 82.4,
-      "mvp_score": 63.3,
-      "mvp_rank": 56,
+      "mvp_score": 63.2,
+      "mvp_rank": 57,
       "wpa": 1080.4,
       "consistency": 0.552,
       "clutch_eff": 0.265
@@ -10610,9 +10610,9 @@
       "fg_pct": 53.7,
       "fg3_pct": 31.0,
       "ft_pct": 65.2,
-      "mvp_score": 60.5,
-      "mvp_rank": 75,
-      "wpa": 817.2,
+      "mvp_score": 60.6,
+      "mvp_rank": 76,
+      "wpa": 826.4,
       "consistency": 0.568,
       "clutch_eff": 0.039
     },
@@ -10656,7 +10656,7 @@
       "ft_pct": 84.4,
       "mvp_score": 65.2,
       "mvp_rank": 47,
-      "wpa": 853.6,
+      "wpa": 858.5,
       "consistency": 0.559,
       "clutch_eff": 0.278
     },
@@ -10699,7 +10699,7 @@
       "fg3_pct": 18.1,
       "ft_pct": 55.2,
       "mvp_score": 50.3,
-      "mvp_rank": 139,
+      "mvp_rank": 140,
       "wpa": 526.4,
       "consistency": 0.568,
       "clutch_eff": 0.104
@@ -10764,9 +10764,9 @@
       "fg_pct": 47.1,
       "fg3_pct": 42.6,
       "ft_pct": 52.4,
-      "mvp_score": 56.3,
-      "mvp_rank": 102,
-      "wpa": 350.8,
+      "mvp_score": 56.5,
+      "mvp_rank": 101,
+      "wpa": 368.1,
       "consistency": 0.623,
       "clutch_eff": 0.107
     },
@@ -10874,7 +10874,7 @@
       "fg_pct": 38.9,
       "fg3_pct": 30.2,
       "ft_pct": 81.2,
-      "mvp_score": 52.5,
+      "mvp_score": 52.4,
       "mvp_rank": 127,
       "wpa": 258.1,
       "consistency": 0.557,
@@ -10920,7 +10920,7 @@
       "ft_pct": 91.5,
       "mvp_score": 58.5,
       "mvp_rank": 89,
-      "wpa": 610.6,
+      "wpa": 608.1,
       "consistency": 0.592,
       "clutch_eff": 0.083
     },
@@ -10940,7 +10940,7 @@
       "fg_pct": 54.5,
       "fg3_pct": 29.4,
       "ft_pct": 77.3,
-      "mvp_score": 59.1,
+      "mvp_score": 59.0,
       "mvp_rank": 82,
       "wpa": 728.2,
       "consistency": 0.594,
@@ -10986,7 +10986,7 @@
       "ft_pct": 83.8,
       "mvp_score": 57.9,
       "mvp_rank": 91,
-      "wpa": 508.9,
+      "wpa": 517.6,
       "consistency": 0.609,
       "clutch_eff": 0.18
     },
@@ -11008,7 +11008,7 @@
       "ft_pct": 76.0,
       "mvp_score": 58.2,
       "mvp_rank": 90,
-      "wpa": 526.7,
+      "wpa": 525.3,
       "consistency": 0.638,
       "clutch_eff": 0.118
     },
@@ -11028,9 +11028,9 @@
       "fg_pct": 38.6,
       "fg3_pct": 32.1,
       "ft_pct": 75.0,
-      "mvp_score": 58.9,
+      "mvp_score": 59.0,
       "mvp_rank": 84,
-      "wpa": 290.9,
+      "wpa": 297.0,
       "consistency": 0.582,
       "clutch_eff": 0.47
     },
@@ -11051,7 +11051,7 @@
       "fg3_pct": 0.0,
       "ft_pct": 68.0,
       "mvp_score": 52.1,
-      "mvp_rank": 128,
+      "mvp_rank": 129,
       "wpa": 290.1,
       "consistency": 0.46,
       "clutch_eff": 0.12
@@ -11072,9 +11072,9 @@
       "fg_pct": 43.5,
       "fg3_pct": 35.6,
       "ft_pct": 86.0,
-      "mvp_score": 60.7,
+      "mvp_score": 60.8,
       "mvp_rank": 72,
-      "wpa": 843.4,
+      "wpa": 857.7,
       "consistency": 0.58,
       "clutch_eff": 0.077
     },
@@ -11095,51 +11095,29 @@
       "fg3_pct": 37.0,
       "ft_pct": 80.4,
       "mvp_score": 48.8,
-      "mvp_rank": 153,
+      "mvp_rank": 154,
       "wpa": 513.5,
       "consistency": 0.511,
       "clutch_eff": 0.231
-    },
-    {
-      "code": "011157",
-      "name": "MOTLEY, JOHNATHAN",
-      "team": "HTA",
-      "position": "Center",
-      "gp": 32,
-      "avg_pts": 9.0,
-      "avg_reb": 2.5,
-      "avg_ast": 1.0,
-      "avg_stl": 0.3,
-      "avg_to": 1.2,
-      "avg_blk": 0.2,
-      "avg_pir": 8.9,
-      "fg_pct": 62.7,
-      "fg3_pct": 51.3,
-      "ft_pct": 72.7,
-      "mvp_score": 57.1,
-      "mvp_rank": 98,
-      "wpa": 547.8,
-      "consistency": 0.513,
-      "clutch_eff": 0.347
     },
     {
       "code": "009005",
       "name": "DECK, GABRIEL",
       "team": "MAD",
       "position": "Forward",
-      "gp": 35,
-      "avg_pts": 6.9,
-      "avg_reb": 3.6,
+      "gp": 36,
+      "avg_pts": 7.0,
+      "avg_reb": 3.5,
       "avg_ast": 1.2,
       "avg_stl": 0.4,
-      "avg_to": 0.7,
+      "avg_to": 0.8,
       "avg_blk": 0.0,
       "avg_pir": 8.9,
-      "fg_pct": 55.4,
+      "fg_pct": 56.1,
       "fg3_pct": 36.1,
       "ft_pct": 86.5,
       "mvp_score": 57.7,
-      "mvp_rank": 94,
+      "mvp_rank": 95,
       "wpa": 504.6,
       "consistency": 0.6,
       "clutch_eff": 0.211
@@ -11160,7 +11138,7 @@
       "fg_pct": 44.9,
       "fg3_pct": 28.0,
       "ft_pct": 63.2,
-      "mvp_score": 46.6,
+      "mvp_score": 46.5,
       "mvp_rank": 171,
       "wpa": 473.8,
       "consistency": 0.506,
@@ -11204,33 +11182,11 @@
       "fg_pct": 42.5,
       "fg3_pct": 29.5,
       "ft_pct": 84.0,
-      "mvp_score": 55.2,
-      "mvp_rank": 108,
+      "mvp_score": 55.1,
+      "mvp_rank": 109,
       "wpa": 767.3,
       "consistency": 0.491,
       "clutch_eff": 0.385
-    },
-    {
-      "code": "012609",
-      "name": "MALCOLM, COLLIN",
-      "team": "HTA",
-      "position": "Forward",
-      "gp": 38,
-      "avg_pts": 6.9,
-      "avg_reb": 3.6,
-      "avg_ast": 1.0,
-      "avg_stl": 0.8,
-      "avg_to": 0.5,
-      "avg_blk": 0.4,
-      "avg_pir": 8.7,
-      "fg_pct": 50.8,
-      "fg3_pct": 42.2,
-      "ft_pct": 75.7,
-      "mvp_score": 55.4,
-      "mvp_rank": 106,
-      "wpa": 514.1,
-      "consistency": 0.552,
-      "clutch_eff": 0.073
     },
     {
       "code": "014005",
@@ -11270,11 +11226,33 @@
       "fg_pct": 41.5,
       "fg3_pct": 30.8,
       "ft_pct": 80.0,
-      "mvp_score": 59.1,
+      "mvp_score": 59.0,
       "mvp_rank": 83,
       "wpa": 839.6,
       "consistency": 0.518,
       "clutch_eff": 0.381
+    },
+    {
+      "code": "011157",
+      "name": "MOTLEY, JOHNATHAN",
+      "team": "HTA",
+      "position": "Center",
+      "gp": 33,
+      "avg_pts": 8.7,
+      "avg_reb": 2.5,
+      "avg_ast": 1.0,
+      "avg_stl": 0.3,
+      "avg_to": 1.2,
+      "avg_blk": 0.2,
+      "avg_pir": 8.6,
+      "fg_pct": 62.4,
+      "fg3_pct": 50.0,
+      "ft_pct": 72.7,
+      "mvp_score": 57.0,
+      "mvp_rank": 99,
+      "wpa": 547.8,
+      "consistency": 0.513,
+      "clutch_eff": 0.347
     },
     {
       "code": "014010",
@@ -11338,9 +11316,31 @@
       "ft_pct": 73.0,
       "mvp_score": 58.9,
       "mvp_rank": 85,
-      "wpa": 642.0,
+      "wpa": 646.2,
       "consistency": 0.54,
       "clutch_eff": 0.189
+    },
+    {
+      "code": "012609",
+      "name": "MALCOLM, COLLIN",
+      "team": "HTA",
+      "position": "Forward",
+      "gp": 39,
+      "avg_pts": 6.7,
+      "avg_reb": 3.6,
+      "avg_ast": 1.0,
+      "avg_stl": 0.8,
+      "avg_to": 0.5,
+      "avg_blk": 0.4,
+      "avg_pir": 8.4,
+      "fg_pct": 49.8,
+      "fg3_pct": 41.7,
+      "ft_pct": 75.7,
+      "mvp_score": 55.3,
+      "mvp_rank": 107,
+      "wpa": 514.1,
+      "consistency": 0.552,
+      "clutch_eff": 0.073
     },
     {
       "code": "005353",
@@ -11365,6 +11365,28 @@
       "clutch_eff": 0.0
     },
     {
+      "code": "014006",
+      "name": "OKEKE, CHUMA",
+      "team": "MAD",
+      "position": "Center",
+      "gp": 38,
+      "avg_pts": 5.8,
+      "avg_reb": 4.0,
+      "avg_ast": 0.8,
+      "avg_stl": 0.6,
+      "avg_to": 0.3,
+      "avg_blk": 0.5,
+      "avg_pir": 8.4,
+      "fg_pct": 48.0,
+      "fg3_pct": 38.9,
+      "ft_pct": 64.7,
+      "mvp_score": 53.9,
+      "mvp_rank": 119,
+      "wpa": 459.6,
+      "consistency": 0.571,
+      "clutch_eff": 0.0
+    },
+    {
       "code": "006961",
       "name": "BIBEROVIC, TARIK",
       "team": "ULK",
@@ -11380,9 +11402,9 @@
       "fg_pct": 45.6,
       "fg3_pct": 41.4,
       "ft_pct": 95.1,
-      "mvp_score": 60.2,
-      "mvp_rank": 78,
-      "wpa": 837.0,
+      "mvp_score": 60.7,
+      "mvp_rank": 73,
+      "wpa": 887.9,
       "consistency": 0.489,
       "clutch_eff": 0.298
     },
@@ -11409,28 +11431,6 @@
       "clutch_eff": 0.069
     },
     {
-      "code": "014006",
-      "name": "OKEKE, CHUMA",
-      "team": "MAD",
-      "position": "Center",
-      "gp": 37,
-      "avg_pts": 5.8,
-      "avg_reb": 3.9,
-      "avg_ast": 0.8,
-      "avg_stl": 0.5,
-      "avg_to": 0.3,
-      "avg_blk": 0.5,
-      "avg_pir": 8.2,
-      "fg_pct": 47.9,
-      "fg3_pct": 39.6,
-      "ft_pct": 64.7,
-      "mvp_score": 54.0,
-      "mvp_rank": 119,
-      "wpa": 459.6,
-      "consistency": 0.571,
-      "clutch_eff": 0.0
-    },
-    {
       "code": "011204",
       "name": "GRANT, JERIAN",
       "team": "PAN",
@@ -11448,7 +11448,7 @@
       "ft_pct": 80.0,
       "mvp_score": 54.2,
       "mvp_rank": 118,
-      "wpa": 550.5,
+      "wpa": 550.0,
       "consistency": 0.536,
       "clutch_eff": 0.037
     },
@@ -11468,9 +11468,9 @@
       "fg_pct": 46.4,
       "fg3_pct": 26.8,
       "ft_pct": 70.8,
-      "mvp_score": 55.1,
-      "mvp_rank": 109,
-      "wpa": 631.9,
+      "mvp_score": 55.8,
+      "mvp_rank": 106,
+      "wpa": 698.5,
       "consistency": 0.475,
       "clutch_eff": 0.189
     },
@@ -11534,7 +11534,7 @@
       "fg_pct": 44.2,
       "fg3_pct": 39.0,
       "ft_pct": 78.3,
-      "mvp_score": 50.9,
+      "mvp_score": 50.8,
       "mvp_rank": 134,
       "wpa": 572.9,
       "consistency": 0.506,
@@ -11580,7 +11580,7 @@
       "ft_pct": 68.8,
       "mvp_score": 54.7,
       "mvp_rank": 113,
-      "wpa": 399.8,
+      "wpa": 401.1,
       "consistency": 0.645,
       "clutch_eff": 0.017
     },
@@ -11623,8 +11623,8 @@
       "fg3_pct": 34.8,
       "ft_pct": 79.7,
       "mvp_score": 63.2,
-      "mvp_rank": 57,
-      "wpa": 922.3,
+      "mvp_rank": 56,
+      "wpa": 933.5,
       "consistency": 0.474,
       "clutch_eff": 0.425
     },
@@ -11644,8 +11644,8 @@
       "fg_pct": 46.6,
       "fg3_pct": 35.8,
       "ft_pct": 75.6,
-      "mvp_score": 56.1,
-      "mvp_rank": 103,
+      "mvp_score": 56.0,
+      "mvp_rank": 104,
       "wpa": 554.7,
       "consistency": 0.584,
       "clutch_eff": 0.338
@@ -11755,8 +11755,8 @@
       "fg3_pct": 40.2,
       "ft_pct": 79.3,
       "mvp_score": 57.6,
-      "mvp_rank": 95,
-      "wpa": 652.5,
+      "mvp_rank": 96,
+      "wpa": 655.4,
       "consistency": 0.52,
       "clutch_eff": 0.279
     },
@@ -11778,7 +11778,7 @@
       "ft_pct": 50.9,
       "mvp_score": 55.0,
       "mvp_rank": 110,
-      "wpa": 528.8,
+      "wpa": 528.9,
       "consistency": 0.564,
       "clutch_eff": 0.041
     },
@@ -11886,9 +11886,9 @@
       "fg_pct": 51.2,
       "fg3_pct": 38.9,
       "ft_pct": 83.1,
-      "mvp_score": 57.6,
-      "mvp_rank": 96,
-      "wpa": 590.6,
+      "mvp_score": 57.7,
+      "mvp_rank": 94,
+      "wpa": 606.6,
       "consistency": 0.515,
       "clutch_eff": 0.277
     },
@@ -11909,7 +11909,7 @@
       "fg3_pct": 35.8,
       "ft_pct": 88.4,
       "mvp_score": 47.5,
-      "mvp_rank": 167,
+      "mvp_rank": 168,
       "wpa": 439.4,
       "consistency": 0.499,
       "clutch_eff": 0.027
@@ -11975,7 +11975,7 @@
       "fg3_pct": 35.2,
       "ft_pct": 92.0,
       "mvp_score": 49.1,
-      "mvp_rank": 151,
+      "mvp_rank": 152,
       "wpa": 284.5,
       "consistency": 0.492,
       "clutch_eff": 0.058
@@ -11996,7 +11996,7 @@
       "fg_pct": 47.4,
       "fg3_pct": 34.9,
       "ft_pct": 76.0,
-      "mvp_score": 46.2,
+      "mvp_score": 46.1,
       "mvp_rank": 176,
       "wpa": 399.0,
       "consistency": 0.517,
@@ -12018,7 +12018,7 @@
       "fg_pct": 65.2,
       "fg3_pct": 0.0,
       "ft_pct": 49.0,
-      "mvp_score": 48.1,
+      "mvp_score": 48.0,
       "mvp_rank": 161,
       "wpa": 381.5,
       "consistency": 0.579,
@@ -12062,7 +12062,7 @@
       "fg_pct": 37.7,
       "fg3_pct": 33.7,
       "ft_pct": 71.4,
-      "mvp_score": 50.8,
+      "mvp_score": 50.7,
       "mvp_rank": 135,
       "wpa": 628.3,
       "consistency": 0.454,
@@ -12084,9 +12084,9 @@
       "fg_pct": 47.9,
       "fg3_pct": 36.0,
       "ft_pct": 78.3,
-      "mvp_score": 47.4,
-      "mvp_rank": 168,
-      "wpa": 107.8,
+      "mvp_score": 47.7,
+      "mvp_rank": 165,
+      "wpa": 133.0,
       "consistency": 0.521,
       "clutch_eff": 0.012
     },
@@ -12106,8 +12106,8 @@
       "fg_pct": 51.0,
       "fg3_pct": 25.0,
       "ft_pct": 65.7,
-      "mvp_score": 50.4,
-      "mvp_rank": 138,
+      "mvp_score": 50.3,
+      "mvp_rank": 139,
       "wpa": 435.3,
       "consistency": 0.461,
       "clutch_eff": 0.102
@@ -12130,7 +12130,7 @@
       "ft_pct": 72.4,
       "mvp_score": 53.3,
       "mvp_rank": 122,
-      "wpa": 513.9,
+      "wpa": 516.4,
       "consistency": 0.508,
       "clutch_eff": 0.171
     },
@@ -12151,7 +12151,7 @@
       "fg3_pct": 80.0,
       "ft_pct": 69.2,
       "mvp_score": 42.4,
-      "mvp_rank": 209,
+      "mvp_rank": 208,
       "wpa": 93.3,
       "consistency": 0.427,
       "clutch_eff": 0.0
@@ -12194,7 +12194,7 @@
       "fg_pct": 40.1,
       "fg3_pct": 34.9,
       "ft_pct": 80.8,
-      "mvp_score": 50.2,
+      "mvp_score": 50.1,
       "mvp_rank": 143,
       "wpa": 534.4,
       "consistency": 0.424,
@@ -12238,7 +12238,7 @@
       "fg_pct": 48.6,
       "fg3_pct": 29.4,
       "ft_pct": 79.1,
-      "mvp_score": 50.0,
+      "mvp_score": 49.9,
       "mvp_rank": 147,
       "wpa": 419.8,
       "consistency": 0.503,
@@ -12282,9 +12282,9 @@
       "fg_pct": 60.0,
       "fg3_pct": 0.0,
       "ft_pct": 46.0,
-      "mvp_score": 50.3,
-      "mvp_rank": 141,
-      "wpa": 351.3,
+      "mvp_score": 50.5,
+      "mvp_rank": 138,
+      "wpa": 367.3,
       "consistency": 0.481,
       "clutch_eff": 0.0
     },
@@ -12326,8 +12326,8 @@
       "fg_pct": 47.3,
       "fg3_pct": 34.1,
       "ft_pct": 78.6,
-      "mvp_score": 44.6,
-      "mvp_rank": 187,
+      "mvp_score": 44.5,
+      "mvp_rank": 188,
       "wpa": 443.0,
       "consistency": 0.458,
       "clutch_eff": 0.0
@@ -12392,9 +12392,9 @@
       "fg_pct": 42.5,
       "fg3_pct": 40.7,
       "ft_pct": 81.2,
-      "mvp_score": 52.1,
-      "mvp_rank": 129,
-      "wpa": 382.3,
+      "mvp_score": 52.2,
+      "mvp_rank": 128,
+      "wpa": 393.3,
       "consistency": 0.534,
       "clutch_eff": 0.271
     },
@@ -12458,8 +12458,8 @@
       "fg_pct": 44.0,
       "fg3_pct": 35.4,
       "ft_pct": 79.7,
-      "mvp_score": 49.1,
-      "mvp_rank": 152,
+      "mvp_score": 49.0,
+      "mvp_rank": 153,
       "wpa": 586.4,
       "consistency": 0.511,
       "clutch_eff": 0.178
@@ -12503,32 +12503,10 @@
       "fg3_pct": 0.0,
       "ft_pct": 56.2,
       "mvp_score": 42.4,
-      "mvp_rank": 208,
+      "mvp_rank": 209,
       "wpa": 229.4,
       "consistency": 0.558,
       "clutch_eff": 0.0
-    },
-    {
-      "code": "011247",
-      "name": "FELIZ, ANDRES",
-      "team": "MAD",
-      "position": "Guard",
-      "gp": 33,
-      "avg_pts": 6.3,
-      "avg_reb": 2.2,
-      "avg_ast": 1.9,
-      "avg_stl": 0.5,
-      "avg_to": 0.9,
-      "avg_blk": 0.0,
-      "avg_pir": 6.1,
-      "fg_pct": 49.1,
-      "fg3_pct": 45.3,
-      "ft_pct": 78.6,
-      "mvp_score": 50.2,
-      "mvp_rank": 142,
-      "wpa": 376.0,
-      "consistency": 0.491,
-      "clutch_eff": 0.078
     },
     {
       "code": "007109",
@@ -12547,7 +12525,7 @@
       "fg3_pct": 32.9,
       "ft_pct": 73.3,
       "mvp_score": 47.5,
-      "mvp_rank": 166,
+      "mvp_rank": 167,
       "wpa": 513.7,
       "consistency": 0.493,
       "clutch_eff": 0.299
@@ -12568,11 +12546,33 @@
       "fg_pct": 49.3,
       "fg3_pct": 40.0,
       "ft_pct": 80.4,
-      "mvp_score": 50.2,
+      "mvp_score": 50.1,
       "mvp_rank": 144,
       "wpa": 530.1,
       "consistency": 0.523,
       "clutch_eff": 0.244
+    },
+    {
+      "code": "011247",
+      "name": "FELIZ, ANDRES",
+      "team": "MAD",
+      "position": "Guard",
+      "gp": 34,
+      "avg_pts": 6.3,
+      "avg_reb": 2.2,
+      "avg_ast": 1.9,
+      "avg_stl": 0.6,
+      "avg_to": 0.9,
+      "avg_blk": 0.0,
+      "avg_pir": 6.0,
+      "fg_pct": 48.2,
+      "fg3_pct": 43.3,
+      "ft_pct": 78.6,
+      "mvp_score": 50.2,
+      "mvp_rank": 142,
+      "wpa": 376.0,
+      "consistency": 0.491,
+      "clutch_eff": 0.078
     },
     {
       "code": "014119",
@@ -12612,7 +12612,7 @@
       "fg_pct": 43.3,
       "fg3_pct": 25.7,
       "ft_pct": 84.6,
-      "mvp_score": 44.8,
+      "mvp_score": 44.7,
       "mvp_rank": 186,
       "wpa": 332.6,
       "consistency": 0.522,
@@ -12634,7 +12634,7 @@
       "fg_pct": 45.2,
       "fg3_pct": 35.1,
       "ft_pct": 86.7,
-      "mvp_score": 54.6,
+      "mvp_score": 54.5,
       "mvp_rank": 114,
       "wpa": 812.0,
       "consistency": 0.448,
@@ -12656,8 +12656,8 @@
       "fg_pct": 44.4,
       "fg3_pct": 23.8,
       "ft_pct": 81.2,
-      "mvp_score": 47.7,
-      "mvp_rank": 165,
+      "mvp_score": 47.6,
+      "mvp_rank": 166,
       "wpa": 298.6,
       "consistency": 0.434,
       "clutch_eff": 0.212
@@ -12722,9 +12722,9 @@
       "fg_pct": 45.2,
       "fg3_pct": 23.9,
       "ft_pct": 57.7,
-      "mvp_score": 48.8,
-      "mvp_rank": 154,
-      "wpa": 298.4,
+      "mvp_score": 49.2,
+      "mvp_rank": 151,
+      "wpa": 332.5,
       "consistency": 0.495,
       "clutch_eff": 0.036
     },
@@ -12766,7 +12766,7 @@
       "fg_pct": 43.6,
       "fg3_pct": 42.3,
       "ft_pct": 78.6,
-      "mvp_score": 43.2,
+      "mvp_score": 43.1,
       "mvp_rank": 199,
       "wpa": 272.9,
       "consistency": 0.499,
@@ -12810,11 +12810,33 @@
       "fg_pct": 55.4,
       "fg3_pct": 18.2,
       "ft_pct": 44.9,
-      "mvp_score": 47.3,
+      "mvp_score": 47.2,
       "mvp_rank": 169,
       "wpa": 419.0,
       "consistency": 0.444,
       "clutch_eff": 0.193
+    },
+    {
+      "code": "007630",
+      "name": "GARUBA, USMAN",
+      "team": "MAD",
+      "position": "Center",
+      "gp": 36,
+      "avg_pts": 4.8,
+      "avg_reb": 2.5,
+      "avg_ast": 0.5,
+      "avg_stl": 0.8,
+      "avg_to": 0.7,
+      "avg_blk": 0.7,
+      "avg_pir": 5.7,
+      "fg_pct": 61.2,
+      "fg3_pct": 60.0,
+      "ft_pct": 63.6,
+      "mvp_score": 48.3,
+      "mvp_rank": 156,
+      "wpa": 358.5,
+      "consistency": 0.5,
+      "clutch_eff": 0.0
     },
     {
       "code": "012597",
@@ -12839,28 +12861,6 @@
       "clutch_eff": 0.0
     },
     {
-      "code": "007630",
-      "name": "GARUBA, USMAN",
-      "team": "MAD",
-      "position": "Center",
-      "gp": 35,
-      "avg_pts": 4.8,
-      "avg_reb": 2.4,
-      "avg_ast": 0.5,
-      "avg_stl": 0.7,
-      "avg_to": 0.7,
-      "avg_blk": 0.7,
-      "avg_pir": 5.6,
-      "fg_pct": 61.3,
-      "fg3_pct": 60.0,
-      "ft_pct": 65.1,
-      "mvp_score": 48.3,
-      "mvp_rank": 156,
-      "wpa": 358.5,
-      "consistency": 0.5,
-      "clutch_eff": 0.0
-    },
-    {
       "code": "003458",
       "name": "BERTANS, DAVIS",
       "team": "DUB",
@@ -12876,7 +12876,7 @@
       "fg_pct": 35.7,
       "fg3_pct": 33.5,
       "ft_pct": 85.0,
-      "mvp_score": 46.6,
+      "mvp_score": 46.5,
       "mvp_rank": 172,
       "wpa": 426.7,
       "consistency": 0.43,
@@ -12966,7 +12966,7 @@
       "ft_pct": 42.1,
       "mvp_score": 46.3,
       "mvp_rank": 174,
-      "wpa": 238.9,
+      "wpa": 241.4,
       "consistency": 0.489,
       "clutch_eff": 0.0
     },
@@ -12987,7 +12987,7 @@
       "fg3_pct": 40.2,
       "ft_pct": 73.1,
       "mvp_score": 50.3,
-      "mvp_rank": 140,
+      "mvp_rank": 141,
       "wpa": 364.4,
       "consistency": 0.52,
       "clutch_eff": 0.133
@@ -13052,7 +13052,7 @@
       "fg_pct": 51.9,
       "fg3_pct": 0.0,
       "ft_pct": 67.1,
-      "mvp_score": 43.4,
+      "mvp_score": 43.3,
       "mvp_rank": 195,
       "wpa": 516.8,
       "consistency": 0.412,
@@ -13076,7 +13076,7 @@
       "ft_pct": 85.1,
       "mvp_score": 50.0,
       "mvp_rank": 146,
-      "wpa": 353.3,
+      "wpa": 354.7,
       "consistency": 0.489,
       "clutch_eff": 0.237
     },
@@ -13119,7 +13119,7 @@
       "fg3_pct": 35.0,
       "ft_pct": 85.7,
       "mvp_score": 40.6,
-      "mvp_rank": 234,
+      "mvp_rank": 235,
       "wpa": 188.0,
       "consistency": 0.492,
       "clutch_eff": 0.06
@@ -13141,7 +13141,7 @@
       "fg3_pct": 42.4,
       "ft_pct": 100.0,
       "mvp_score": 40.7,
-      "mvp_rank": 232,
+      "mvp_rank": 233,
       "wpa": 241.4,
       "consistency": 0.487,
       "clutch_eff": 0.059
@@ -13184,8 +13184,8 @@
       "fg_pct": 34.6,
       "fg3_pct": 25.6,
       "ft_pct": 70.8,
-      "mvp_score": 45.7,
-      "mvp_rank": 178,
+      "mvp_score": 45.6,
+      "mvp_rank": 179,
       "wpa": 485.9,
       "consistency": 0.394,
       "clutch_eff": 0.188
@@ -13251,7 +13251,7 @@
       "fg3_pct": 0.0,
       "ft_pct": 73.9,
       "mvp_score": 37.1,
-      "mvp_rank": 262,
+      "mvp_rank": 263,
       "wpa": 103.6,
       "consistency": 0.388,
       "clutch_eff": 0.0
@@ -13279,33 +13279,11 @@
       "clutch_eff": 0.103
     },
     {
-      "code": "011823",
-      "name": "ODIASE, TAI",
-      "team": "HTA",
-      "position": "Center",
-      "gp": 25,
-      "avg_pts": 4.0,
-      "avg_reb": 1.9,
-      "avg_ast": 0.4,
-      "avg_stl": 0.4,
-      "avg_to": 0.4,
-      "avg_blk": 0.2,
-      "avg_pir": 4.6,
-      "fg_pct": 63.5,
-      "fg3_pct": 0.0,
-      "ft_pct": 76.0,
-      "mvp_score": 44.0,
-      "mvp_rank": 191,
-      "wpa": 325.1,
-      "consistency": 0.401,
-      "clutch_eff": 0.0
-    },
-    {
       "code": "013284",
       "name": "WAINRIGHT, ISH",
       "team": "HTA",
       "position": "Forward",
-      "gp": 38,
+      "gp": 39,
       "avg_pts": 4.3,
       "avg_reb": 2.7,
       "avg_ast": 1.2,
@@ -13313,8 +13291,8 @@
       "avg_to": 0.3,
       "avg_blk": 0.1,
       "avg_pir": 4.6,
-      "fg_pct": 37.8,
-      "fg3_pct": 29.8,
+      "fg_pct": 37.9,
+      "fg3_pct": 30.5,
       "ft_pct": 73.3,
       "mvp_score": 48.2,
       "mvp_rank": 160,
@@ -13362,7 +13340,7 @@
       "ft_pct": 62.5,
       "mvp_score": 46.9,
       "mvp_rank": 170,
-      "wpa": 234.7,
+      "wpa": 239.7,
       "consistency": 0.491,
       "clutch_eff": 0.046
     },
@@ -13499,6 +13477,28 @@
       "clutch_eff": 0.0
     },
     {
+      "code": "011823",
+      "name": "ODIASE, TAI",
+      "team": "HTA",
+      "position": "Center",
+      "gp": 26,
+      "avg_pts": 3.9,
+      "avg_reb": 1.8,
+      "avg_ast": 0.4,
+      "avg_stl": 0.4,
+      "avg_to": 0.4,
+      "avg_blk": 0.2,
+      "avg_pir": 4.4,
+      "fg_pct": 63.1,
+      "fg3_pct": 0.0,
+      "ft_pct": 76.0,
+      "mvp_score": 44.0,
+      "mvp_rank": 191,
+      "wpa": 325.1,
+      "consistency": 0.401,
+      "clutch_eff": 0.0
+    },
+    {
       "code": "012618",
       "name": "MASSA, BODIAN",
       "team": "ASV",
@@ -13537,31 +13537,9 @@
       "fg3_pct": 0.0,
       "ft_pct": 85.7,
       "mvp_score": 44.5,
-      "mvp_rank": 188,
-      "wpa": 102.1,
+      "mvp_rank": 187,
+      "wpa": 106.8,
       "consistency": 0.475,
-      "clutch_eff": 0.0
-    },
-    {
-      "code": "014416",
-      "name": "EDWARDS, KESSLER",
-      "team": "HTA",
-      "position": "Forward",
-      "gp": 9,
-      "avg_pts": 3.4,
-      "avg_reb": 2.8,
-      "avg_ast": 0.6,
-      "avg_stl": 0.1,
-      "avg_to": 0.4,
-      "avg_blk": 0.3,
-      "avg_pir": 4.4,
-      "fg_pct": 45.0,
-      "fg3_pct": 50.0,
-      "ft_pct": 80.0,
-      "mvp_score": 41.1,
-      "mvp_rank": 226,
-      "wpa": 22.3,
-      "consistency": 0.354,
       "clutch_eff": 0.0
     },
     {
@@ -13668,7 +13646,7 @@
       "fg_pct": 38.5,
       "fg3_pct": 39.8,
       "ft_pct": 75.0,
-      "mvp_score": 41.8,
+      "mvp_score": 41.7,
       "mvp_rank": 215,
       "wpa": 323.5,
       "consistency": 0.473,
@@ -13697,28 +13675,6 @@
       "clutch_eff": 0.0
     },
     {
-      "code": "003733",
-      "name": "ABALDE, ALBERTO",
-      "team": "MAD",
-      "position": "Forward",
-      "gp": 36,
-      "avg_pts": 4.8,
-      "avg_reb": 1.6,
-      "avg_ast": 1.4,
-      "avg_stl": 0.5,
-      "avg_to": 0.7,
-      "avg_blk": 0.0,
-      "avg_pir": 4.1,
-      "fg_pct": 47.4,
-      "fg3_pct": 49.3,
-      "ft_pct": 80.0,
-      "mvp_score": 45.7,
-      "mvp_rank": 179,
-      "wpa": 301.7,
-      "consistency": 0.491,
-      "clutch_eff": 0.0
-    },
-    {
       "code": "007182",
       "name": "BIRCH, KHEM",
       "team": "ULK",
@@ -13739,6 +13695,28 @@
       "wpa": 205.7,
       "consistency": 0.445,
       "clutch_eff": 0.086
+    },
+    {
+      "code": "014416",
+      "name": "EDWARDS, KESSLER",
+      "team": "HTA",
+      "position": "Forward",
+      "gp": 10,
+      "avg_pts": 3.1,
+      "avg_reb": 2.6,
+      "avg_ast": 0.5,
+      "avg_stl": 0.1,
+      "avg_to": 0.4,
+      "avg_blk": 0.3,
+      "avg_pir": 4.1,
+      "fg_pct": 45.0,
+      "fg3_pct": 50.0,
+      "ft_pct": 80.0,
+      "mvp_score": 41.1,
+      "mvp_rank": 226,
+      "wpa": 22.3,
+      "consistency": 0.354,
+      "clutch_eff": 0.0
     },
     {
       "code": "011201",
@@ -13763,6 +13741,28 @@
       "clutch_eff": 0.092
     },
     {
+      "code": "003733",
+      "name": "ABALDE, ALBERTO",
+      "team": "MAD",
+      "position": "Forward",
+      "gp": 37,
+      "avg_pts": 4.7,
+      "avg_reb": 1.5,
+      "avg_ast": 1.4,
+      "avg_stl": 0.5,
+      "avg_to": 0.7,
+      "avg_blk": 0.0,
+      "avg_pir": 4.0,
+      "fg_pct": 47.1,
+      "fg3_pct": 47.8,
+      "ft_pct": 80.0,
+      "mvp_score": 45.7,
+      "mvp_rank": 178,
+      "wpa": 301.7,
+      "consistency": 0.491,
+      "clutch_eff": 0.0
+    },
+    {
       "code": "014016",
       "name": "BOSTON JR., BRANDON",
       "team": "ULK",
@@ -13780,7 +13780,7 @@
       "ft_pct": 76.9,
       "mvp_score": 45.2,
       "mvp_rank": 182,
-      "wpa": 325.4,
+      "wpa": 326.2,
       "consistency": 0.361,
       "clutch_eff": 0.067
     },
@@ -13823,7 +13823,7 @@
       "fg3_pct": 48.1,
       "ft_pct": 94.7,
       "mvp_score": 37.2,
-      "mvp_rank": 260,
+      "mvp_rank": 261,
       "wpa": 288.4,
       "consistency": 0.328,
       "clutch_eff": 0.0
@@ -13917,6 +13917,28 @@
       "clutch_eff": 0.0
     },
     {
+      "code": "014169",
+      "name": "LEN, ALEX",
+      "team": "MAD",
+      "position": "Center",
+      "gp": 20,
+      "avg_pts": 3.0,
+      "avg_reb": 1.9,
+      "avg_ast": 0.3,
+      "avg_stl": 0.1,
+      "avg_to": 0.6,
+      "avg_blk": 0.7,
+      "avg_pir": 3.8,
+      "fg_pct": 52.6,
+      "fg3_pct": 0.0,
+      "ft_pct": 75.0,
+      "mvp_score": 42.4,
+      "mvp_rank": 210,
+      "wpa": 163.6,
+      "consistency": 0.283,
+      "clutch_eff": 0.208
+    },
+    {
       "code": "001557",
       "name": "GIFFEY, NIELS",
       "team": "MUN",
@@ -13981,28 +14003,6 @@
       "wpa": 332.1,
       "consistency": 0.346,
       "clutch_eff": 0.114
-    },
-    {
-      "code": "014169",
-      "name": "LEN, ALEX",
-      "team": "MAD",
-      "position": "Center",
-      "gp": 19,
-      "avg_pts": 3.0,
-      "avg_reb": 1.6,
-      "avg_ast": 0.3,
-      "avg_stl": 0.2,
-      "avg_to": 0.6,
-      "avg_blk": 0.6,
-      "avg_pir": 3.4,
-      "fg_pct": 54.1,
-      "fg3_pct": 0.0,
-      "ft_pct": 70.8,
-      "mvp_score": 42.4,
-      "mvp_rank": 210,
-      "wpa": 163.6,
-      "consistency": 0.283,
-      "clutch_eff": 0.208
     },
     {
       "code": "014219",
@@ -14131,7 +14131,7 @@
       "fg3_pct": 29.1,
       "ft_pct": 76.5,
       "mvp_score": 40.6,
-      "mvp_rank": 235,
+      "mvp_rank": 236,
       "wpa": 163.4,
       "consistency": 0.428,
       "clutch_eff": 0.0
@@ -14152,9 +14152,9 @@
       "fg_pct": 59.1,
       "fg3_pct": 50.0,
       "ft_pct": 62.5,
-      "mvp_score": 40.6,
-      "mvp_rank": 236,
-      "wpa": 109.6,
+      "mvp_score": 40.7,
+      "mvp_rank": 232,
+      "wpa": 121.6,
       "consistency": 0.432,
       "clutch_eff": 0.086
     },
@@ -14219,7 +14219,7 @@
       "fg3_pct": 10.0,
       "ft_pct": 38.5,
       "mvp_score": 40.6,
-      "mvp_rank": 233,
+      "mvp_rank": 234,
       "wpa": 138.3,
       "consistency": 0.45,
       "clutch_eff": 0.03
@@ -14262,7 +14262,7 @@
       "fg_pct": 39.4,
       "fg3_pct": 38.8,
       "ft_pct": 84.2,
-      "mvp_score": 43.6,
+      "mvp_score": 43.5,
       "mvp_rank": 194,
       "wpa": 203.5,
       "consistency": 0.368,
@@ -14373,7 +14373,7 @@
       "fg3_pct": 34.9,
       "ft_pct": 75.0,
       "mvp_score": 37.2,
-      "mvp_rank": 261,
+      "mvp_rank": 260,
       "wpa": 158.5,
       "consistency": 0.29,
       "clutch_eff": 0.13
@@ -14515,16 +14515,16 @@
       "name": "LLULL, SERGIO",
       "team": "MAD",
       "position": "Guard",
-      "gp": 34,
-      "avg_pts": 3.5,
+      "gp": 35,
+      "avg_pts": 3.4,
       "avg_reb": 0.8,
       "avg_ast": 1.6,
-      "avg_stl": 0.1,
+      "avg_stl": 0.2,
       "avg_to": 0.6,
       "avg_blk": 0.0,
-      "avg_pir": 2.4,
-      "fg_pct": 31.5,
-      "fg3_pct": 28.7,
+      "avg_pir": 2.3,
+      "fg_pct": 31.2,
+      "fg3_pct": 28.4,
       "ft_pct": 63.6,
       "mvp_score": 42.7,
       "mvp_rank": 203,
@@ -14614,9 +14614,9 @@
       "fg_pct": 35.1,
       "fg3_pct": 30.0,
       "ft_pct": 28.6,
-      "mvp_score": 41.7,
+      "mvp_score": 41.6,
       "mvp_rank": 217,
-      "wpa": 149.0,
+      "wpa": 143.5,
       "consistency": 0.409,
       "clutch_eff": 0.0
     },
@@ -14945,7 +14945,7 @@
       "fg3_pct": 32.0,
       "ft_pct": 50.0,
       "mvp_score": 35.7,
-      "mvp_rank": 277,
+      "mvp_rank": 278,
       "wpa": 19.2,
       "consistency": 0.138,
       "clutch_eff": 0.0
@@ -15017,28 +15017,6 @@
       "clutch_eff": 0.0
     },
     {
-      "code": "013382",
-      "name": "RANDOLPH, LEVI",
-      "team": "HTA",
-      "position": "Forward",
-      "gp": 8,
-      "avg_pts": 2.4,
-      "avg_reb": 1.1,
-      "avg_ast": 0.2,
-      "avg_stl": 0.2,
-      "avg_to": 0.4,
-      "avg_blk": 0.0,
-      "avg_pir": 0.9,
-      "fg_pct": 40.0,
-      "fg3_pct": 20.0,
-      "ft_pct": 40.0,
-      "mvp_score": 36.3,
-      "mvp_rank": 273,
-      "wpa": 26.1,
-      "consistency": 0.344,
-      "clutch_eff": 0.0
-    },
-    {
       "code": "005942",
       "name": "DANGUBIC, NEMANJA",
       "team": "DUB",
@@ -15098,9 +15076,9 @@
       "fg_pct": 35.0,
       "fg3_pct": 33.3,
       "ft_pct": 0.0,
-      "mvp_score": 33.3,
+      "mvp_score": 33.5,
       "mvp_rank": 299,
-      "wpa": 27.8,
+      "wpa": 42.9,
       "consistency": 0.044,
       "clutch_eff": 0.0
     },
@@ -15193,6 +15171,28 @@
       "clutch_eff": 0.0
     },
     {
+      "code": "013382",
+      "name": "RANDOLPH, LEVI",
+      "team": "HTA",
+      "position": "Forward",
+      "gp": 9,
+      "avg_pts": 2.1,
+      "avg_reb": 1.1,
+      "avg_ast": 0.2,
+      "avg_stl": 0.2,
+      "avg_to": 0.4,
+      "avg_blk": 0.0,
+      "avg_pir": 0.4,
+      "fg_pct": 38.1,
+      "fg3_pct": 20.0,
+      "ft_pct": 40.0,
+      "mvp_score": 36.3,
+      "mvp_rank": 273,
+      "wpa": 26.1,
+      "consistency": 0.344,
+      "clutch_eff": 0.0
+    },
+    {
       "code": "010162",
       "name": "NOGUES, ISAAC",
       "team": "PAM",
@@ -15209,7 +15209,7 @@
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
       "mvp_score": 35.7,
-      "mvp_rank": 278,
+      "mvp_rank": 277,
       "wpa": 2.8,
       "consistency": 0.216,
       "clutch_eff": 0.0
@@ -15507,11 +15507,11 @@
     {
       "player": "HIFI, NADIR",
       "team": "PRS",
-      "RAPM": 1.9,
-      "ORAPM": 1.3,
+      "RAPM": 1.89,
+      "ORAPM": 1.29,
       "DRAPM": 0.38,
       "RAPM_basic": 1.15,
-      "prior": 0.82,
+      "prior": 0.81,
       "est_minutes": 1566.0,
       "possessions": 2741.0,
       "RAPM_Rank": 3
@@ -15519,7 +15519,7 @@
     {
       "player": "BIRUTIS, LAURYNAS",
       "team": "ZAL",
-      "RAPM": 1.84,
+      "RAPM": 1.85,
       "ORAPM": 0.35,
       "DRAPM": 1.36,
       "RAPM_basic": 1.74,
@@ -15533,7 +15533,7 @@
       "team": "MUN",
       "RAPM": 1.61,
       "ORAPM": 0.91,
-      "DRAPM": 0.65,
+      "DRAPM": 0.66,
       "RAPM_basic": 1.56,
       "prior": 0.02,
       "est_minutes": 1481.0,
@@ -15543,26 +15543,14 @@
     {
       "player": "ANDERSON, JUSTIN",
       "team": "DUB",
-      "RAPM": 1.52,
+      "RAPM": 1.53,
       "ORAPM": -0.05,
       "DRAPM": 1.7,
       "RAPM_basic": 1.59,
-      "prior": -0.11,
+      "prior": -0.1,
       "est_minutes": 1402.0,
       "possessions": 2453.0,
       "RAPM_Rank": 6
-    },
-    {
-      "player": "KEY, BRAXTON",
-      "team": "PAM",
-      "RAPM": 1.51,
-      "ORAPM": 0.3,
-      "DRAPM": 1.04,
-      "RAPM_basic": 1.51,
-      "prior": 0.02,
-      "est_minutes": 825.0,
-      "possessions": 1443.0,
-      "RAPM_Rank": 7
     },
     {
       "player": "HERRERA, SEBASTIAN",
@@ -15574,6 +15562,18 @@
       "prior": 0.2,
       "est_minutes": 1230.0,
       "possessions": 2152.0,
+      "RAPM_Rank": 7
+    },
+    {
+      "player": "KEY, BRAXTON",
+      "team": "PAM",
+      "RAPM": 1.51,
+      "ORAPM": 0.3,
+      "DRAPM": 1.04,
+      "RAPM_basic": 1.51,
+      "prior": 0.02,
+      "est_minutes": 825.0,
+      "possessions": 1443.0,
       "RAPM_Rank": 8
     },
     {
@@ -15613,6 +15613,18 @@
       "RAPM_Rank": 11
     },
     {
+      "player": "CABOCLO, BRUNO",
+      "team": "DUB",
+      "RAPM": 1.28,
+      "ORAPM": 0.81,
+      "DRAPM": 0.5,
+      "RAPM_basic": 1.06,
+      "prior": 0.24,
+      "est_minutes": 255.0,
+      "possessions": 446.0,
+      "RAPM_Rank": 12
+    },
+    {
       "player": "LYLES, TREY",
       "team": "MAD",
       "RAPM": 1.28,
@@ -15622,7 +15634,7 @@
       "prior": 0.45,
       "est_minutes": 1359.0,
       "possessions": 2379.0,
-      "RAPM_Rank": 12
+      "RAPM_Rank": 13
     },
     {
       "player": "VEZENKOV, SASHA",
@@ -15634,18 +15646,6 @@
       "prior": 0.52,
       "est_minutes": 1831.0,
       "possessions": 3205.0,
-      "RAPM_Rank": 13
-    },
-    {
-      "player": "CABOCLO, BRUNO",
-      "team": "DUB",
-      "RAPM": 1.27,
-      "ORAPM": 0.81,
-      "DRAPM": 0.49,
-      "RAPM_basic": 1.06,
-      "prior": 0.23,
-      "est_minutes": 255.0,
-      "possessions": 446.0,
       "RAPM_Rank": 14
     },
     {
@@ -15689,7 +15689,7 @@
       "team": "ASV",
       "RAPM": 1.23,
       "ORAPM": 0.11,
-      "DRAPM": 0.91,
+      "DRAPM": 0.9,
       "RAPM_basic": 0.93,
       "prior": 0.31,
       "est_minutes": 868.0,
@@ -15713,7 +15713,7 @@
       "team": "ULK",
       "RAPM": 1.19,
       "ORAPM": 0.91,
-      "DRAPM": 0.17,
+      "DRAPM": 0.18,
       "RAPM_basic": 0.77,
       "prior": 0.44,
       "est_minutes": 998.0,
@@ -15751,7 +15751,7 @@
       "ORAPM": 0.9,
       "DRAPM": 0.46,
       "RAPM_basic": 0.79,
-      "prior": 0.45,
+      "prior": 0.44,
       "est_minutes": 1799.0,
       "possessions": 3148.0,
       "RAPM_Rank": 23
@@ -15787,22 +15787,10 @@
       "ORAPM": 0.5,
       "DRAPM": 0.52,
       "RAPM_basic": 1.03,
-      "prior": 0.08,
+      "prior": 0.09,
       "est_minutes": 491.0,
       "possessions": 859.0,
       "RAPM_Rank": 26
-    },
-    {
-      "player": "ROBINSON, JUSTIN",
-      "team": "PRS",
-      "RAPM": 1.08,
-      "ORAPM": 0.22,
-      "DRAPM": 0.69,
-      "RAPM_basic": 0.42,
-      "prior": 0.71,
-      "est_minutes": 1314.0,
-      "possessions": 2300.0,
-      "RAPM_Rank": 27
     },
     {
       "player": "MICIC, VASILIJE",
@@ -15814,13 +15802,25 @@
       "prior": 0.28,
       "est_minutes": 1557.0,
       "possessions": 2724.0,
+      "RAPM_Rank": 27
+    },
+    {
+      "player": "ROBINSON, JUSTIN",
+      "team": "PRS",
+      "RAPM": 1.07,
+      "ORAPM": 0.22,
+      "DRAPM": 0.69,
+      "RAPM_basic": 0.42,
+      "prior": 0.71,
+      "est_minutes": 1314.0,
+      "possessions": 2300.0,
       "RAPM_Rank": 28
     },
     {
       "player": "BALDWIN IV, WADE",
       "team": "ULK",
-      "RAPM": 1.03,
-      "ORAPM": -0.51,
+      "RAPM": 1.02,
+      "ORAPM": -0.52,
       "DRAPM": 1.38,
       "RAPM_basic": 0.63,
       "prior": 0.4,
@@ -15832,7 +15832,7 @@
       "player": "BITIM, ONURALP",
       "team": "ULK",
       "RAPM": 1.01,
-      "ORAPM": -0.01,
+      "ORAPM": 0.0,
       "DRAPM": 0.94,
       "RAPM_basic": 1.1,
       "prior": -0.13,
@@ -15855,7 +15855,7 @@
     {
       "player": "FOURNIER, EVAN",
       "team": "OLY",
-      "RAPM": 0.99,
+      "RAPM": 0.98,
       "ORAPM": 1.06,
       "DRAPM": 0.15,
       "RAPM_basic": 0.71,
@@ -15863,18 +15863,6 @@
       "est_minutes": 1407.0,
       "possessions": 2462.0,
       "RAPM_Rank": 32
-    },
-    {
-      "player": "AVRAMOVIC, ALEKSA",
-      "team": "DUB",
-      "RAPM": 0.98,
-      "ORAPM": -0.36,
-      "DRAPM": 1.39,
-      "RAPM_basic": 0.64,
-      "prior": 0.37,
-      "est_minutes": 680.0,
-      "possessions": 1190.0,
-      "RAPM_Rank": 33
     },
     {
       "player": "BROOKS, ARMONI",
@@ -15886,13 +15874,25 @@
       "prior": 0.39,
       "est_minutes": 1521.0,
       "possessions": 2662.0,
+      "RAPM_Rank": 33
+    },
+    {
+      "player": "AVRAMOVIC, ALEKSA",
+      "team": "DUB",
+      "RAPM": 0.97,
+      "ORAPM": -0.36,
+      "DRAPM": 1.39,
+      "RAPM_basic": 0.64,
+      "prior": 0.37,
+      "est_minutes": 680.0,
+      "possessions": 1190.0,
       "RAPM_Rank": 34
     },
     {
       "player": "LEE, SABEN",
       "team": "IST",
       "RAPM": 0.95,
-      "ORAPM": 0.55,
+      "ORAPM": 0.54,
       "DRAPM": 0.58,
       "RAPM_basic": 0.74,
       "prior": 0.23,
@@ -15916,7 +15916,7 @@
       "player": "LUWAWU-CABARROT, TIMOTHE",
       "team": "BAS",
       "RAPM": 0.92,
-      "ORAPM": 0.58,
+      "ORAPM": 0.57,
       "DRAPM": 0.68,
       "RAPM_basic": 0.48,
       "prior": 0.57,
@@ -15961,6 +15961,18 @@
       "RAPM_Rank": 40
     },
     {
+      "player": "MALEDON, THEO",
+      "team": "MAD",
+      "RAPM": 0.86,
+      "ORAPM": 0.56,
+      "DRAPM": 0.23,
+      "RAPM_basic": 0.59,
+      "prior": 0.31,
+      "est_minutes": 1058.0,
+      "possessions": 1852.0,
+      "RAPM_Rank": 41
+    },
+    {
       "player": "SIMMONS, KOBI",
       "team": "BAS",
       "RAPM": 0.86,
@@ -15970,24 +15982,12 @@
       "prior": 0.27,
       "est_minutes": 1393.0,
       "possessions": 2437.0,
-      "RAPM_Rank": 41
-    },
-    {
-      "player": "MALEDON, THEO",
-      "team": "MAD",
-      "RAPM": 0.86,
-      "ORAPM": 0.56,
-      "DRAPM": 0.23,
-      "RAPM_basic": 0.59,
-      "prior": 0.32,
-      "est_minutes": 1058.0,
-      "possessions": 1852.0,
       "RAPM_Rank": 42
     },
     {
       "player": "BLOSSOMGAME, JARON",
       "team": "MCO",
-      "RAPM": 0.82,
+      "RAPM": 0.83,
       "ORAPM": 0.52,
       "DRAPM": 0.11,
       "RAPM_basic": 0.72,
@@ -16012,7 +16012,7 @@
       "player": "HAYES-DAVIS, NIGEL",
       "team": "PAN",
       "RAPM": 0.8,
-      "ORAPM": 0.58,
+      "ORAPM": 0.57,
       "DRAPM": 0.23,
       "RAPM_basic": 0.59,
       "prior": 0.22,
@@ -16033,18 +16033,6 @@
       "RAPM_Rank": 46
     },
     {
-      "player": "WILLIAMS-GOSS, NIGEL",
-      "team": "ZAL",
-      "RAPM": 0.76,
-      "ORAPM": -0.38,
-      "DRAPM": 0.88,
-      "RAPM_basic": 0.49,
-      "prior": 0.32,
-      "est_minutes": 1092.0,
-      "possessions": 1912.0,
-      "RAPM_Rank": 47
-    },
-    {
       "player": "RHODEN, JARED",
       "team": "PRS",
       "RAPM": 0.76,
@@ -16054,19 +16042,19 @@
       "prior": 0.29,
       "est_minutes": 912.0,
       "possessions": 1596.0,
-      "RAPM_Rank": 48
+      "RAPM_Rank": 47
     },
     {
-      "player": "FERNANDO, BRUNO",
-      "team": "PAR",
-      "RAPM": 0.75,
-      "ORAPM": 0.12,
-      "DRAPM": 0.77,
-      "RAPM_basic": 0.59,
-      "prior": 0.16,
-      "est_minutes": 1107.0,
-      "possessions": 1938.0,
-      "RAPM_Rank": 49
+      "player": "WILLIAMS-GOSS, NIGEL",
+      "team": "ZAL",
+      "RAPM": 0.76,
+      "ORAPM": -0.38,
+      "DRAPM": 0.88,
+      "RAPM_basic": 0.49,
+      "prior": 0.32,
+      "est_minutes": 1092.0,
+      "possessions": 1912.0,
+      "RAPM_Rank": 48
     },
     {
       "player": "FRANCISCO, SYLVAIN",
@@ -16078,16 +16066,28 @@
       "prior": 0.47,
       "est_minutes": 1833.0,
       "possessions": 3208.0,
+      "RAPM_Rank": 49
+    },
+    {
+      "player": "FERNANDO, BRUNO",
+      "team": "PAR",
+      "RAPM": 0.75,
+      "ORAPM": 0.11,
+      "DRAPM": 0.77,
+      "RAPM_basic": 0.59,
+      "prior": 0.16,
+      "est_minutes": 1107.0,
+      "possessions": 1938.0,
       "RAPM_Rank": 50
     },
     {
       "player": "BRYANT, ELIJAH",
       "team": "HTA",
       "RAPM": 0.74,
-      "ORAPM": 0.45,
+      "ORAPM": 0.44,
       "DRAPM": 0.36,
       "RAPM_basic": 0.47,
-      "prior": 0.33,
+      "prior": 0.32,
       "est_minutes": 1829.0,
       "possessions": 3201.0,
       "RAPM_Rank": 51
@@ -16109,7 +16109,7 @@
       "team": "PAR",
       "RAPM": 0.7,
       "ORAPM": 0.4,
-      "DRAPM": 0.42,
+      "DRAPM": 0.41,
       "RAPM_basic": 0.74,
       "prior": -0.07,
       "est_minutes": 837.0,
@@ -16129,15 +16129,15 @@
       "RAPM_Rank": 54
     },
     {
-      "player": "LEN, ALEX",
-      "team": "MAD",
+      "player": "NEBO, JOSH",
+      "team": "MIL",
       "RAPM": 0.68,
-      "ORAPM": 0.28,
-      "DRAPM": 0.37,
-      "RAPM_basic": 0.59,
-      "prior": 0.08,
-      "est_minutes": 284.0,
-      "possessions": 497.0,
+      "ORAPM": 0.92,
+      "DRAPM": -0.12,
+      "RAPM_basic": 0.56,
+      "prior": 0.17,
+      "est_minutes": 982.0,
+      "possessions": 1718.0,
       "RAPM_Rank": 55
     },
     {
@@ -16153,18 +16153,6 @@
       "RAPM_Rank": 56
     },
     {
-      "player": "NEBO, JOSH",
-      "team": "MIL",
-      "RAPM": 0.67,
-      "ORAPM": 0.92,
-      "DRAPM": -0.12,
-      "RAPM_basic": 0.56,
-      "prior": 0.17,
-      "est_minutes": 982.0,
-      "possessions": 1718.0,
-      "RAPM_Rank": 57
-    },
-    {
       "player": "VAUTIER, BASTIEN",
       "team": "ASV",
       "RAPM": 0.67,
@@ -16174,7 +16162,7 @@
       "prior": 0.15,
       "est_minutes": 973.0,
       "possessions": 1703.0,
-      "RAPM_Rank": 58
+      "RAPM_Rank": 57
     },
     {
       "player": "DIOP, KHALIFA",
@@ -16183,10 +16171,10 @@
       "ORAPM": 0.84,
       "DRAPM": 0.04,
       "RAPM_basic": 0.75,
-      "prior": -0.15,
+      "prior": -0.14,
       "est_minutes": 1035.0,
       "possessions": 1812.0,
-      "RAPM_Rank": 59
+      "RAPM_Rank": 58
     },
     {
       "player": "PUERTO, JOSEP",
@@ -16198,7 +16186,7 @@
       "prior": -0.01,
       "est_minutes": 1031.0,
       "possessions": 1804.0,
-      "RAPM_Rank": 60
+      "RAPM_Rank": 59
     },
     {
       "player": "MUSA, DZANAN",
@@ -16210,6 +16198,18 @@
       "prior": 0.31,
       "est_minutes": 794.0,
       "possessions": 1389.0,
+      "RAPM_Rank": 60
+    },
+    {
+      "player": "DE LARREA, SERGIO",
+      "team": "PAM",
+      "RAPM": 0.65,
+      "ORAPM": 0.53,
+      "DRAPM": -0.05,
+      "RAPM_basic": 0.57,
+      "prior": 0.06,
+      "est_minutes": 557.0,
+      "possessions": 975.0,
       "RAPM_Rank": 61
     },
     {
@@ -16225,27 +16225,27 @@
       "RAPM_Rank": 62
     },
     {
-      "player": "DE LARREA, SERGIO",
-      "team": "PAM",
-      "RAPM": 0.65,
-      "ORAPM": 0.53,
-      "DRAPM": -0.05,
-      "RAPM_basic": 0.57,
-      "prior": 0.06,
-      "est_minutes": 557.0,
-      "possessions": 975.0,
-      "RAPM_Rank": 63
-    },
-    {
       "player": "RATHAN-MAYES, XAVIER",
       "team": "MUN",
-      "RAPM": 0.65,
-      "ORAPM": 0.01,
+      "RAPM": 0.64,
+      "ORAPM": 0.0,
       "DRAPM": 0.61,
       "RAPM_basic": 0.36,
       "prior": 0.29,
       "est_minutes": 806.0,
       "possessions": 1410.0,
+      "RAPM_Rank": 63
+    },
+    {
+      "player": "LEN, ALEX",
+      "team": "MAD",
+      "RAPM": 0.63,
+      "ORAPM": 0.24,
+      "DRAPM": 0.37,
+      "RAPM_basic": 0.59,
+      "prior": 0.04,
+      "est_minutes": 284.0,
+      "possessions": 497.0,
       "RAPM_Rank": 64
     },
     {
@@ -16273,6 +16273,18 @@
       "RAPM_Rank": 66
     },
     {
+      "player": "HOLMES, RICHAUN",
+      "team": "PAN",
+      "RAPM": 0.61,
+      "ORAPM": 0.81,
+      "DRAPM": -0.13,
+      "RAPM_basic": 0.51,
+      "prior": 0.1,
+      "est_minutes": 689.0,
+      "possessions": 1206.0,
+      "RAPM_Rank": 67
+    },
+    {
       "player": "WILLIS, DEREK",
       "team": "PRS",
       "RAPM": 0.61,
@@ -16282,18 +16294,6 @@
       "prior": 0.06,
       "est_minutes": 914.0,
       "possessions": 1599.0,
-      "RAPM_Rank": 67
-    },
-    {
-      "player": "HOLMES, RICHAUN",
-      "team": "PAN",
-      "RAPM": 0.61,
-      "ORAPM": 0.81,
-      "DRAPM": -0.13,
-      "RAPM_basic": 0.51,
-      "prior": 0.09,
-      "est_minutes": 689.0,
-      "possessions": 1206.0,
       "RAPM_Rank": 68
     },
     {
@@ -16324,8 +16324,8 @@
       "player": "SORKIN, ROMAN",
       "team": "TEL",
       "RAPM": 0.57,
-      "ORAPM": 0.91,
-      "DRAPM": -0.02,
+      "ORAPM": 0.9,
+      "DRAPM": -0.01,
       "RAPM_basic": 0.25,
       "prior": 0.39,
       "est_minutes": 1588.0,
@@ -16348,37 +16348,13 @@
       "player": "JOSEPH, CORY",
       "team": "OLY",
       "RAPM": 0.53,
-      "ORAPM": 0.27,
+      "ORAPM": 0.28,
       "DRAPM": 0.34,
       "RAPM_basic": 0.42,
       "prior": 0.12,
       "est_minutes": 258.0,
       "possessions": 451.0,
       "RAPM_Rank": 73
-    },
-    {
-      "player": "MONTERO, JEAN",
-      "team": "PAM",
-      "RAPM": 0.52,
-      "ORAPM": 0.24,
-      "DRAPM": 0.0,
-      "RAPM_basic": 0.09,
-      "prior": 0.5,
-      "est_minutes": 1307.0,
-      "possessions": 2288.0,
-      "RAPM_Rank": 74
-    },
-    {
-      "player": "SHENGELIA, TORNIKE",
-      "team": "BAR",
-      "RAPM": 0.52,
-      "ORAPM": 0.46,
-      "DRAPM": 0.05,
-      "RAPM_basic": 0.29,
-      "prior": 0.26,
-      "est_minutes": 1418.0,
-      "possessions": 2482.0,
-      "RAPM_Rank": 75
     },
     {
       "player": "LO, MAODO",
@@ -16390,7 +16366,7 @@
       "prior": 0.13,
       "est_minutes": 1270.0,
       "possessions": 2222.0,
-      "RAPM_Rank": 76
+      "RAPM_Rank": 74
     },
     {
       "player": "MOORE, OMARI",
@@ -16402,19 +16378,31 @@
       "prior": 0.21,
       "est_minutes": 1402.0,
       "possessions": 2454.0,
-      "RAPM_Rank": 77
+      "RAPM_Rank": 75
     },
     {
-      "player": "JANTUNEN, MIKAEL",
-      "team": "ULK",
-      "RAPM": 0.49,
-      "ORAPM": -0.45,
-      "DRAPM": 0.87,
-      "RAPM_basic": 0.54,
-      "prior": -0.09,
-      "est_minutes": 1156.0,
-      "possessions": 2023.0,
-      "RAPM_Rank": 78
+      "player": "SHENGELIA, TORNIKE",
+      "team": "BAR",
+      "RAPM": 0.52,
+      "ORAPM": 0.46,
+      "DRAPM": 0.05,
+      "RAPM_basic": 0.29,
+      "prior": 0.26,
+      "est_minutes": 1418.0,
+      "possessions": 2482.0,
+      "RAPM_Rank": 76
+    },
+    {
+      "player": "MONTERO, JEAN",
+      "team": "PAM",
+      "RAPM": 0.51,
+      "ORAPM": 0.24,
+      "DRAPM": 0.0,
+      "RAPM_basic": 0.09,
+      "prior": 0.5,
+      "est_minutes": 1307.0,
+      "possessions": 2288.0,
+      "RAPM_Rank": 77
     },
     {
       "player": "RADZEVICIUS, GYTIS",
@@ -16426,6 +16414,18 @@
       "prior": -0.11,
       "est_minutes": 784.0,
       "possessions": 1371.0,
+      "RAPM_Rank": 78
+    },
+    {
+      "player": "JANTUNEN, MIKAEL",
+      "team": "ULK",
+      "RAPM": 0.49,
+      "ORAPM": -0.45,
+      "DRAPM": 0.87,
+      "RAPM_basic": 0.54,
+      "prior": -0.08,
+      "est_minutes": 1156.0,
+      "possessions": 2023.0,
       "RAPM_Rank": 79
     },
     {
@@ -16441,15 +16441,15 @@
       "RAPM_Rank": 80
     },
     {
-      "player": "PARRA, JOEL",
-      "team": "BAR",
+      "player": "LEDAY, ZACH",
+      "team": "MIL",
       "RAPM": 0.45,
-      "ORAPM": -0.06,
-      "DRAPM": 0.52,
-      "RAPM_basic": 0.44,
-      "prior": -0.05,
-      "est_minutes": 1403.0,
-      "possessions": 2455.0,
+      "ORAPM": 0.59,
+      "DRAPM": -0.01,
+      "RAPM_basic": 0.23,
+      "prior": 0.28,
+      "est_minutes": 1408.0,
+      "possessions": 2464.0,
       "RAPM_Rank": 81
     },
     {
@@ -16465,15 +16465,15 @@
       "RAPM_Rank": 82
     },
     {
-      "player": "LEDAY, ZACH",
-      "team": "MIL",
+      "player": "PARRA, JOEL",
+      "team": "BAR",
       "RAPM": 0.45,
-      "ORAPM": 0.59,
-      "DRAPM": -0.01,
-      "RAPM_basic": 0.23,
-      "prior": 0.28,
-      "est_minutes": 1408.0,
-      "possessions": 2464.0,
+      "ORAPM": -0.06,
+      "DRAPM": 0.52,
+      "RAPM_basic": 0.44,
+      "prior": -0.05,
+      "est_minutes": 1403.0,
+      "possessions": 2455.0,
       "RAPM_Rank": 83
     },
     {
@@ -16483,22 +16483,10 @@
       "ORAPM": -0.03,
       "DRAPM": 0.5,
       "RAPM_basic": 0.22,
-      "prior": 0.23,
+      "prior": 0.24,
       "est_minutes": 575.0,
       "possessions": 1006.0,
       "RAPM_Rank": 84
-    },
-    {
-      "player": "ALSTON JR., DERRICK",
-      "team": "VIR",
-      "RAPM": 0.43,
-      "ORAPM": 0.02,
-      "DRAPM": 0.36,
-      "RAPM_basic": 0.38,
-      "prior": 0.0,
-      "est_minutes": 2163.0,
-      "possessions": 3785.0,
-      "RAPM_Rank": 85
     },
     {
       "player": "JACKSON, EDWIN",
@@ -16510,7 +16498,7 @@
       "prior": 0.14,
       "est_minutes": 550.0,
       "possessions": 962.0,
-      "RAPM_Rank": 86
+      "RAPM_Rank": 85
     },
     {
       "player": "DA SILVA, OSCAR",
@@ -16522,12 +16510,24 @@
       "prior": 0.08,
       "est_minutes": 975.0,
       "possessions": 1707.0,
+      "RAPM_Rank": 86
+    },
+    {
+      "player": "ALSTON JR., DERRICK",
+      "team": "VIR",
+      "RAPM": 0.43,
+      "ORAPM": 0.02,
+      "DRAPM": 0.36,
+      "RAPM_basic": 0.38,
+      "prior": 0.0,
+      "est_minutes": 2163.0,
+      "possessions": 3785.0,
       "RAPM_Rank": 87
     },
     {
       "player": "CLARK III, JIMMY",
       "team": "TEL",
-      "RAPM": 0.43,
+      "RAPM": 0.42,
       "ORAPM": 0.98,
       "DRAPM": -0.25,
       "RAPM_basic": 0.15,
@@ -16535,18 +16535,6 @@
       "est_minutes": 1380.0,
       "possessions": 2415.0,
       "RAPM_Rank": 88
-    },
-    {
-      "player": "BRIZUELA, DARIO",
-      "team": "BAR",
-      "RAPM": 0.42,
-      "ORAPM": 0.09,
-      "DRAPM": 0.3,
-      "RAPM_basic": 0.02,
-      "prior": 0.4,
-      "est_minutes": 1023.0,
-      "possessions": 1790.0,
-      "RAPM_Rank": 89
     },
     {
       "player": "BIRCH, KHEM",
@@ -16558,7 +16546,7 @@
       "prior": -0.19,
       "est_minutes": 1157.0,
       "possessions": 2025.0,
-      "RAPM_Rank": 90
+      "RAPM_Rank": 89
     },
     {
       "player": "THOMPSON, DARIUS",
@@ -16570,7 +16558,7 @@
       "prior": 0.29,
       "est_minutes": 1383.0,
       "possessions": 2419.0,
-      "RAPM_Rank": 91
+      "RAPM_Rank": 90
     },
     {
       "player": "BIBEROVIC, TARIK",
@@ -16579,9 +16567,21 @@
       "ORAPM": -1.09,
       "DRAPM": 1.3,
       "RAPM_basic": 0.2,
-      "prior": 0.2,
+      "prior": 0.21,
       "est_minutes": 1499.0,
       "possessions": 2624.0,
+      "RAPM_Rank": 91
+    },
+    {
+      "player": "BRIZUELA, DARIO",
+      "team": "BAR",
+      "RAPM": 0.41,
+      "ORAPM": 0.09,
+      "DRAPM": 0.3,
+      "RAPM_basic": 0.02,
+      "prior": 0.4,
+      "est_minutes": 1023.0,
+      "possessions": 1790.0,
       "RAPM_Rank": 92
     },
     {
@@ -16601,7 +16601,7 @@
       "team": "VIR",
       "RAPM": 0.4,
       "ORAPM": 0.05,
-      "DRAPM": 0.3,
+      "DRAPM": 0.29,
       "RAPM_basic": 0.46,
       "prior": -0.12,
       "est_minutes": 931.0,
@@ -16612,10 +16612,10 @@
       "player": "JONES, CARLIK",
       "team": "PAR",
       "RAPM": 0.39,
-      "ORAPM": 0.2,
+      "ORAPM": 0.19,
       "DRAPM": 0.14,
       "RAPM_basic": 0.04,
-      "prior": 0.37,
+      "prior": 0.36,
       "est_minutes": 641.0,
       "possessions": 1123.0,
       "RAPM_Rank": 95
@@ -16639,22 +16639,10 @@
       "ORAPM": 0.47,
       "DRAPM": 0.08,
       "RAPM_basic": 0.33,
-      "prior": 0.06,
+      "prior": 0.07,
       "est_minutes": 1175.0,
       "possessions": 2057.0,
       "RAPM_Rank": 97
-    },
-    {
-      "player": "BLATT, TAMIR",
-      "team": "TEL",
-      "RAPM": 0.37,
-      "ORAPM": 0.82,
-      "DRAPM": -0.17,
-      "RAPM_basic": 0.24,
-      "prior": 0.15,
-      "est_minutes": 1388.0,
-      "possessions": 2428.0,
-      "RAPM_Rank": 98
     },
     {
       "player": "LIGHTY, DAVID",
@@ -16666,13 +16654,25 @@
       "prior": -0.16,
       "est_minutes": 1120.0,
       "possessions": 1960.0,
+      "RAPM_Rank": 98
+    },
+    {
+      "player": "BLATT, TAMIR",
+      "team": "TEL",
+      "RAPM": 0.37,
+      "ORAPM": 0.82,
+      "DRAPM": -0.17,
+      "RAPM_basic": 0.24,
+      "prior": 0.15,
+      "est_minutes": 1388.0,
+      "possessions": 2428.0,
       "RAPM_Rank": 99
     },
     {
       "player": "HOLLATZ, JUSTUS",
       "team": "MUN",
       "RAPM": 0.36,
-      "ORAPM": -0.53,
+      "ORAPM": -0.52,
       "DRAPM": 0.88,
       "RAPM_basic": 0.48,
       "prior": -0.19,
@@ -16687,7 +16687,7 @@
       "ORAPM": -0.27,
       "DRAPM": 0.51,
       "RAPM_basic": 0.29,
-      "prior": 0.02,
+      "prior": 0.03,
       "est_minutes": 1363.0,
       "possessions": 2385.0,
       "RAPM_Rank": 101
@@ -16723,7 +16723,7 @@
       "ORAPM": 0.12,
       "DRAPM": 0.13,
       "RAPM_basic": 0.32,
-      "prior": 0.0,
+      "prior": -0.01,
       "est_minutes": 761.0,
       "possessions": 1331.0,
       "RAPM_Rank": 104
@@ -16733,12 +16733,24 @@
       "team": "RED",
       "RAPM": 0.29,
       "ORAPM": 0.62,
-      "DRAPM": -0.23,
+      "DRAPM": -0.22,
       "RAPM_basic": 0.02,
       "prior": 0.29,
       "est_minutes": 716.0,
       "possessions": 1253.0,
       "RAPM_Rank": 105
+    },
+    {
+      "player": "PUNTER, KEVIN",
+      "team": "BAR",
+      "RAPM": 0.28,
+      "ORAPM": 0.4,
+      "DRAPM": -0.13,
+      "RAPM_basic": -0.03,
+      "prior": 0.32,
+      "est_minutes": 1813.0,
+      "possessions": 3173.0,
+      "RAPM_Rank": 106
     },
     {
       "player": "SEDEKERSKIS, TADAS",
@@ -16750,18 +16762,6 @@
       "prior": 0.03,
       "est_minutes": 619.0,
       "possessions": 1083.0,
-      "RAPM_Rank": 106
-    },
-    {
-      "player": "PUNTER, KEVIN",
-      "team": "BAR",
-      "RAPM": 0.28,
-      "ORAPM": 0.41,
-      "DRAPM": -0.13,
-      "RAPM_basic": -0.03,
-      "prior": 0.32,
-      "est_minutes": 1813.0,
-      "possessions": 3173.0,
       "RAPM_Rank": 107
     },
     {
@@ -16801,18 +16801,6 @@
       "RAPM_Rank": 110
     },
     {
-      "player": "LEAF, TJ",
-      "team": "TEL",
-      "RAPM": 0.24,
-      "ORAPM": 0.35,
-      "DRAPM": 0.1,
-      "RAPM_basic": 0.01,
-      "prior": 0.25,
-      "est_minutes": 903.0,
-      "possessions": 1580.0,
-      "RAPM_Rank": 111
-    },
-    {
       "player": "KALAITZAKIS, PANAGIOTIS",
       "team": "PAN",
       "RAPM": 0.24,
@@ -16822,19 +16810,19 @@
       "prior": -0.19,
       "est_minutes": 388.0,
       "possessions": 679.0,
-      "RAPM_Rank": 112
+      "RAPM_Rank": 111
     },
     {
-      "player": "MALCOLM, COLLIN",
-      "team": "HTA",
+      "player": "LEAF, TJ",
+      "team": "TEL",
       "RAPM": 0.24,
-      "ORAPM": 0.52,
-      "DRAPM": -0.22,
-      "RAPM_basic": 0.29,
-      "prior": -0.09,
-      "est_minutes": 1685.0,
-      "possessions": 2949.0,
-      "RAPM_Rank": 113
+      "ORAPM": 0.35,
+      "DRAPM": 0.1,
+      "RAPM_basic": 0.01,
+      "prior": 0.25,
+      "est_minutes": 903.0,
+      "possessions": 1580.0,
+      "RAPM_Rank": 112
     },
     {
       "player": "GIFFEY, NIELS",
@@ -16846,7 +16834,7 @@
       "prior": 0.01,
       "est_minutes": 774.0,
       "possessions": 1354.0,
-      "RAPM_Rank": 114
+      "RAPM_Rank": 113
     },
     {
       "player": "HERNANGOMEZ, JUANCHO",
@@ -16858,6 +16846,18 @@
       "prior": -0.01,
       "est_minutes": 1736.0,
       "possessions": 3037.0,
+      "RAPM_Rank": 114
+    },
+    {
+      "player": "MALCOLM, COLLIN",
+      "team": "HTA",
+      "RAPM": 0.23,
+      "ORAPM": 0.51,
+      "DRAPM": -0.23,
+      "RAPM_basic": 0.29,
+      "prior": -0.1,
+      "est_minutes": 1685.0,
+      "possessions": 2949.0,
       "RAPM_Rank": 115
     },
     {
@@ -16873,18 +16873,6 @@
       "RAPM_Rank": 116
     },
     {
-      "player": "MONEKE, CHIMA",
-      "team": "RED",
-      "RAPM": 0.21,
-      "ORAPM": 0.36,
-      "DRAPM": -0.05,
-      "RAPM_basic": 0.0,
-      "prior": 0.26,
-      "est_minutes": 1762.0,
-      "possessions": 3083.0,
-      "RAPM_Rank": 117
-    },
-    {
       "player": "NDIAYE, MBAYE",
       "team": "ASV",
       "RAPM": 0.21,
@@ -16894,7 +16882,31 @@
       "prior": -0.01,
       "est_minutes": 1559.0,
       "possessions": 2728.0,
+      "RAPM_Rank": 117
+    },
+    {
+      "player": "MONEKE, CHIMA",
+      "team": "RED",
+      "RAPM": 0.21,
+      "ORAPM": 0.35,
+      "DRAPM": -0.04,
+      "RAPM_basic": 0.0,
+      "prior": 0.26,
+      "est_minutes": 1762.0,
+      "possessions": 3083.0,
       "RAPM_Rank": 118
+    },
+    {
+      "player": "BLAKENEY, ANTONIO",
+      "team": "HTA",
+      "RAPM": 0.21,
+      "ORAPM": -0.06,
+      "DRAPM": 0.33,
+      "RAPM_basic": -0.1,
+      "prior": 0.38,
+      "est_minutes": 1476.0,
+      "possessions": 2583.0,
+      "RAPM_Rank": 119
     },
     {
       "player": "POIRIER, VINCENT",
@@ -16906,7 +16918,7 @@
       "prior": 0.15,
       "est_minutes": 423.0,
       "possessions": 740.0,
-      "RAPM_Rank": 119
+      "RAPM_Rank": 120
     },
     {
       "player": "BOLMARO, LEANDRO",
@@ -16918,18 +16930,6 @@
       "prior": 0.19,
       "est_minutes": 1220.0,
       "possessions": 2135.0,
-      "RAPM_Rank": 120
-    },
-    {
-      "player": "BLAKENEY, ANTONIO",
-      "team": "HTA",
-      "RAPM": 0.2,
-      "ORAPM": -0.07,
-      "DRAPM": 0.33,
-      "RAPM_basic": -0.1,
-      "prior": 0.37,
-      "est_minutes": 1476.0,
-      "possessions": 2583.0,
       "RAPM_Rank": 121
     },
     {
@@ -16939,7 +16939,7 @@
       "ORAPM": -0.1,
       "DRAPM": 0.42,
       "RAPM_basic": 0.19,
-      "prior": -0.08,
+      "prior": -0.09,
       "est_minutes": 1012.0,
       "possessions": 1770.0,
       "RAPM_Rank": 122
@@ -16957,15 +16957,15 @@
       "RAPM_Rank": 123
     },
     {
-      "player": "LARKIN, SHANE",
-      "team": "IST",
+      "player": "HOMMES, DAULTON",
+      "team": "PRS",
       "RAPM": 0.14,
-      "ORAPM": 0.59,
-      "DRAPM": -0.22,
-      "RAPM_basic": -0.14,
-      "prior": 0.28,
-      "est_minutes": 694.0,
-      "possessions": 1215.0,
+      "ORAPM": 0.41,
+      "DRAPM": -0.36,
+      "RAPM_basic": 0.11,
+      "prior": 0.03,
+      "est_minutes": 559.0,
+      "possessions": 978.0,
       "RAPM_Rank": 124
     },
     {
@@ -16981,16 +16981,28 @@
       "RAPM_Rank": 125
     },
     {
-      "player": "HOMMES, DAULTON",
-      "team": "PRS",
-      "RAPM": 0.13,
-      "ORAPM": 0.41,
-      "DRAPM": -0.36,
-      "RAPM_basic": 0.11,
-      "prior": 0.02,
-      "est_minutes": 559.0,
-      "possessions": 978.0,
+      "player": "LARKIN, SHANE",
+      "team": "IST",
+      "RAPM": 0.14,
+      "ORAPM": 0.59,
+      "DRAPM": -0.22,
+      "RAPM_basic": -0.14,
+      "prior": 0.28,
+      "est_minutes": 694.0,
+      "possessions": 1215.0,
       "RAPM_Rank": 126
+    },
+    {
+      "player": "PETRUSEV, FILIP",
+      "team": "DUB",
+      "RAPM": 0.13,
+      "ORAPM": 1.0,
+      "DRAPM": -0.72,
+      "RAPM_basic": -0.06,
+      "prior": 0.23,
+      "est_minutes": 1652.0,
+      "possessions": 2891.0,
+      "RAPM_Rank": 127
     },
     {
       "player": "TAYLOR, BRANDON",
@@ -17002,7 +17014,7 @@
       "prior": 0.06,
       "est_minutes": 215.0,
       "possessions": 376.0,
-      "RAPM_Rank": 127
+      "RAPM_Rank": 128
     },
     {
       "player": "DESSERT, BRICE",
@@ -17011,10 +17023,22 @@
       "ORAPM": -0.32,
       "DRAPM": 0.54,
       "RAPM_basic": 0.02,
-      "prior": 0.09,
+      "prior": 0.1,
       "est_minutes": 343.0,
       "possessions": 600.0,
-      "RAPM_Rank": 128
+      "RAPM_Rank": 129
+    },
+    {
+      "player": "HALL, DONTA",
+      "team": "OLY",
+      "RAPM": 0.12,
+      "ORAPM": 0.19,
+      "DRAPM": 0.08,
+      "RAPM_basic": -0.04,
+      "prior": 0.18,
+      "est_minutes": 934.0,
+      "possessions": 1635.0,
+      "RAPM_Rank": 130
     },
     {
       "player": "ULANOVAS, EDGARAS",
@@ -17026,30 +17050,6 @@
       "prior": -0.09,
       "est_minutes": 1402.0,
       "possessions": 2454.0,
-      "RAPM_Rank": 129
-    },
-    {
-      "player": "HALL, DONTA",
-      "team": "OLY",
-      "RAPM": 0.12,
-      "ORAPM": 0.19,
-      "DRAPM": 0.07,
-      "RAPM_basic": -0.04,
-      "prior": 0.17,
-      "est_minutes": 934.0,
-      "possessions": 1635.0,
-      "RAPM_Rank": 130
-    },
-    {
-      "player": "PETRUSEV, FILIP",
-      "team": "DUB",
-      "RAPM": 0.12,
-      "ORAPM": 1.0,
-      "DRAPM": -0.72,
-      "RAPM_basic": -0.06,
-      "prior": 0.22,
-      "est_minutes": 1652.0,
-      "possessions": 2891.0,
       "RAPM_Rank": 131
     },
     {
@@ -17065,27 +17065,27 @@
       "RAPM_Rank": 132
     },
     {
+      "player": "BACOT JR., ARMANDO",
+      "team": "ULK",
+      "RAPM": 0.09,
+      "ORAPM": -0.12,
+      "DRAPM": 0.2,
+      "RAPM_basic": 0.23,
+      "prior": -0.15,
+      "est_minutes": 486.0,
+      "possessions": 850.0,
+      "RAPM_Rank": 133
+    },
+    {
       "player": "RUBSTAVICIUS, MANTAS",
       "team": "ZAL",
       "RAPM": 0.09,
       "ORAPM": 0.07,
       "DRAPM": 0.02,
       "RAPM_basic": -0.05,
-      "prior": 0.13,
+      "prior": 0.14,
       "est_minutes": 237.0,
       "possessions": 414.0,
-      "RAPM_Rank": 133
-    },
-    {
-      "player": "BACOT JR., ARMANDO",
-      "team": "ULK",
-      "RAPM": 0.09,
-      "ORAPM": -0.13,
-      "DRAPM": 0.21,
-      "RAPM_basic": 0.23,
-      "prior": -0.15,
-      "est_minutes": 486.0,
-      "possessions": 850.0,
       "RAPM_Rank": 134
     },
     {
@@ -17101,18 +17101,6 @@
       "RAPM_Rank": 135
     },
     {
-      "player": "DIALLO, ALPHA",
-      "team": "MCO",
-      "RAPM": 0.08,
-      "ORAPM": 0.13,
-      "DRAPM": -0.29,
-      "RAPM_basic": -0.02,
-      "prior": 0.14,
-      "est_minutes": 2040.0,
-      "possessions": 3570.0,
-      "RAPM_Rank": 136
-    },
-    {
       "player": "SIRVYDIS, DEIVIDAS",
       "team": "ZAL",
       "RAPM": 0.08,
@@ -17122,7 +17110,31 @@
       "prior": 0.04,
       "est_minutes": 568.0,
       "possessions": 995.0,
+      "RAPM_Rank": 136
+    },
+    {
+      "player": "DIALLO, ALPHA",
+      "team": "MCO",
+      "RAPM": 0.08,
+      "ORAPM": 0.13,
+      "DRAPM": -0.29,
+      "RAPM_basic": -0.02,
+      "prior": 0.14,
+      "est_minutes": 2040.0,
+      "possessions": 3570.0,
       "RAPM_Rank": 137
+    },
+    {
+      "player": "CAMPAZZO, FACUNDO",
+      "team": "MAD",
+      "RAPM": 0.07,
+      "ORAPM": -0.65,
+      "DRAPM": 0.62,
+      "RAPM_basic": -0.19,
+      "prior": 0.29,
+      "est_minutes": 1683.0,
+      "possessions": 2945.0,
+      "RAPM_Rank": 138
     },
     {
       "player": "OUATTARA, YAKUBA",
@@ -17134,7 +17146,7 @@
       "prior": 0.05,
       "est_minutes": 1141.0,
       "possessions": 1997.0,
-      "RAPM_Rank": 138
+      "RAPM_Rank": 139
     },
     {
       "player": "WRIGHT IV, MCKINLEY",
@@ -17146,18 +17158,6 @@
       "prior": 0.2,
       "est_minutes": 2058.0,
       "possessions": 3602.0,
-      "RAPM_Rank": 139
-    },
-    {
-      "player": "CAMPAZZO, FACUNDO",
-      "team": "MAD",
-      "RAPM": 0.06,
-      "ORAPM": -0.66,
-      "DRAPM": 0.62,
-      "RAPM_basic": -0.19,
-      "prior": 0.28,
-      "est_minutes": 1683.0,
-      "possessions": 2945.0,
       "RAPM_Rank": 140
     },
     {
@@ -17175,26 +17175,14 @@
     {
       "player": "JONES, KAI",
       "team": "IST",
-      "RAPM": 0.03,
+      "RAPM": 0.04,
       "ORAPM": -0.42,
-      "DRAPM": 0.73,
+      "DRAPM": 0.74,
       "RAPM_basic": 0.09,
-      "prior": -0.11,
+      "prior": -0.1,
       "est_minutes": 976.0,
       "possessions": 1709.0,
       "RAPM_Rank": 142
-    },
-    {
-      "player": "JEKIRI, TONYE",
-      "team": "PAR",
-      "RAPM": 0.02,
-      "ORAPM": -0.43,
-      "DRAPM": 0.53,
-      "RAPM_basic": -0.11,
-      "prior": 0.1,
-      "est_minutes": 534.0,
-      "possessions": 934.0,
-      "RAPM_Rank": 143
     },
     {
       "player": "WAINRIGHT, ISH",
@@ -17206,6 +17194,18 @@
       "prior": -0.23,
       "est_minutes": 1616.0,
       "possessions": 2828.0,
+      "RAPM_Rank": 143
+    },
+    {
+      "player": "JEKIRI, TONYE",
+      "team": "PAR",
+      "RAPM": 0.02,
+      "ORAPM": -0.43,
+      "DRAPM": 0.53,
+      "RAPM_basic": -0.11,
+      "prior": 0.1,
+      "est_minutes": 534.0,
+      "possessions": 934.0,
       "RAPM_Rank": 144
     },
     {
@@ -17221,6 +17221,18 @@
       "RAPM_Rank": 145
     },
     {
+      "player": "MCKISSIC, SHAQUIELLE",
+      "team": "OLY",
+      "RAPM": 0.0,
+      "ORAPM": -0.23,
+      "DRAPM": 0.37,
+      "RAPM_basic": -0.02,
+      "prior": 0.0,
+      "est_minutes": 445.0,
+      "possessions": 779.0,
+      "RAPM_Rank": 146
+    },
+    {
       "player": "BEGARIN, JUHANN",
       "team": "MCO",
       "RAPM": 0.0,
@@ -17230,18 +17242,6 @@
       "prior": 0.06,
       "est_minutes": 339.0,
       "possessions": 593.0,
-      "RAPM_Rank": 146
-    },
-    {
-      "player": "MCKISSIC, SHAQUIELLE",
-      "team": "OLY",
-      "RAPM": 0.0,
-      "ORAPM": -0.24,
-      "DRAPM": 0.37,
-      "RAPM_basic": -0.02,
-      "prior": 0.0,
-      "est_minutes": 445.0,
-      "possessions": 779.0,
       "RAPM_Rank": 147
     },
     {
@@ -17257,33 +17257,33 @@
       "RAPM_Rank": 148
     },
     {
-      "player": "ODIASE, TAI",
-      "team": "HTA",
-      "RAPM": -0.02,
-      "ORAPM": -0.61,
-      "DRAPM": 0.57,
-      "RAPM_basic": 0.01,
-      "prior": -0.04,
-      "est_minutes": 538.0,
-      "possessions": 942.0,
-      "RAPM_Rank": 149
-    },
-    {
       "player": "FRISCH, CLEMENT",
       "team": "BAS",
-      "RAPM": -0.03,
-      "ORAPM": 0.21,
+      "RAPM": -0.02,
+      "ORAPM": 0.22,
       "DRAPM": -0.01,
       "RAPM_basic": -0.08,
       "prior": 0.05,
       "est_minutes": 816.0,
       "possessions": 1429.0,
+      "RAPM_Rank": 149
+    },
+    {
+      "player": "ODIASE, TAI",
+      "team": "HTA",
+      "RAPM": -0.02,
+      "ORAPM": -0.62,
+      "DRAPM": 0.57,
+      "RAPM_basic": 0.01,
+      "prior": -0.05,
+      "est_minutes": 538.0,
+      "possessions": 942.0,
       "RAPM_Rank": 150
     },
     {
       "player": "HOARD, JAYLEN",
       "team": "TEL",
-      "RAPM": -0.04,
+      "RAPM": -0.03,
       "ORAPM": 0.76,
       "DRAPM": -0.46,
       "RAPM_basic": -0.11,
@@ -17295,11 +17295,11 @@
     {
       "player": "DAVIDOVAC, DEJAN",
       "team": "RED",
-      "RAPM": -0.05,
+      "RAPM": -0.04,
       "ORAPM": -0.14,
-      "DRAPM": 0.24,
+      "DRAPM": 0.25,
       "RAPM_basic": 0.12,
-      "prior": -0.24,
+      "prior": -0.23,
       "est_minutes": 640.0,
       "possessions": 1120.0,
       "RAPM_Rank": 152
@@ -17335,7 +17335,7 @@
       "ORAPM": -0.28,
       "DRAPM": 0.45,
       "RAPM_basic": -0.02,
-      "prior": -0.12,
+      "prior": -0.11,
       "est_minutes": 1706.0,
       "possessions": 2985.0,
       "RAPM_Rank": 155
@@ -17365,18 +17365,6 @@
       "RAPM_Rank": 157
     },
     {
-      "player": "GINAT, TOMER",
-      "team": "HTA",
-      "RAPM": -0.09,
-      "ORAPM": -0.38,
-      "DRAPM": 0.33,
-      "RAPM_basic": -0.11,
-      "prior": 0.03,
-      "est_minutes": 274.0,
-      "possessions": 479.0,
-      "RAPM_Rank": 158
-    },
-    {
       "player": "CALE, MYLES",
       "team": "BAR",
       "RAPM": -0.09,
@@ -17386,6 +17374,18 @@
       "prior": -0.19,
       "est_minutes": 989.0,
       "possessions": 1731.0,
+      "RAPM_Rank": 158
+    },
+    {
+      "player": "GINAT, TOMER",
+      "team": "HTA",
+      "RAPM": -0.09,
+      "ORAPM": -0.38,
+      "DRAPM": 0.33,
+      "RAPM_basic": -0.11,
+      "prior": 0.03,
+      "est_minutes": 274.0,
+      "possessions": 479.0,
       "RAPM_Rank": 159
     },
     {
@@ -17395,7 +17395,7 @@
       "ORAPM": -0.23,
       "DRAPM": -0.05,
       "RAPM_basic": -0.25,
-      "prior": 0.2,
+      "prior": 0.21,
       "est_minutes": 1415.0,
       "possessions": 2476.0,
       "RAPM_Rank": 160
@@ -17413,6 +17413,18 @@
       "RAPM_Rank": 161
     },
     {
+      "player": "BONGA, ISAAC",
+      "team": "PAR",
+      "RAPM": -0.12,
+      "ORAPM": -0.06,
+      "DRAPM": 0.12,
+      "RAPM_basic": -0.16,
+      "prior": 0.04,
+      "est_minutes": 2039.0,
+      "possessions": 3569.0,
+      "RAPM_Rank": 162
+    },
+    {
       "player": "BIRSEN, METECAN",
       "team": "ULK",
       "RAPM": -0.12,
@@ -17422,18 +17434,6 @@
       "prior": -0.2,
       "est_minutes": 522.0,
       "possessions": 913.0,
-      "RAPM_Rank": 162
-    },
-    {
-      "player": "BONGA, ISAAC",
-      "team": "PAR",
-      "RAPM": -0.12,
-      "ORAPM": -0.06,
-      "DRAPM": 0.12,
-      "RAPM_basic": -0.16,
-      "prior": 0.03,
-      "est_minutes": 2039.0,
-      "possessions": 3569.0,
       "RAPM_Rank": 163
     },
     {
@@ -17441,24 +17441,12 @@
       "team": "MIL",
       "RAPM": -0.13,
       "ORAPM": -0.22,
-      "DRAPM": 0.14,
+      "DRAPM": 0.13,
       "RAPM_basic": -0.25,
       "prior": 0.12,
       "est_minutes": 447.0,
       "possessions": 782.0,
       "RAPM_Rank": 164
-    },
-    {
-      "player": "EDWARDS, KESSLER",
-      "team": "HTA",
-      "RAPM": -0.14,
-      "ORAPM": -0.18,
-      "DRAPM": 0.09,
-      "RAPM_basic": -0.1,
-      "prior": -0.04,
-      "est_minutes": 227.0,
-      "possessions": 397.0,
-      "RAPM_Rank": 165
     },
     {
       "player": "DIARRA, ALIOU",
@@ -17470,19 +17458,19 @@
       "prior": 0.14,
       "est_minutes": 482.0,
       "possessions": 843.0,
-      "RAPM_Rank": 166
+      "RAPM_Rank": 165
     },
     {
       "player": "REUVERS, NATHAN",
       "team": "PAM",
-      "RAPM": -0.15,
+      "RAPM": -0.14,
       "ORAPM": -0.23,
       "DRAPM": -0.22,
       "RAPM_basic": -0.38,
       "prior": 0.31,
       "est_minutes": 1356.0,
       "possessions": 2372.0,
-      "RAPM_Rank": 167
+      "RAPM_Rank": 166
     },
     {
       "player": "KONDIC, KOSTA",
@@ -17494,7 +17482,7 @@
       "prior": 0.07,
       "est_minutes": 356.0,
       "possessions": 622.0,
-      "RAPM_Rank": 168
+      "RAPM_Rank": 167
     },
     {
       "player": "SWIDER, COLE",
@@ -17506,6 +17494,18 @@
       "prior": 0.37,
       "est_minutes": 543.0,
       "possessions": 951.0,
+      "RAPM_Rank": 168
+    },
+    {
+      "player": "SATORANSKY, TOMAS",
+      "team": "BAR",
+      "RAPM": -0.15,
+      "ORAPM": -0.55,
+      "DRAPM": 0.35,
+      "RAPM_basic": -0.16,
+      "prior": -0.02,
+      "est_minutes": 1682.0,
+      "possessions": 2944.0,
       "RAPM_Rank": 169
     },
     {
@@ -17521,16 +17521,28 @@
       "RAPM_Rank": 170
     },
     {
-      "player": "SATORANSKY, TOMAS",
-      "team": "BAR",
+      "player": "EDWARDS, KESSLER",
+      "team": "HTA",
       "RAPM": -0.15,
-      "ORAPM": -0.55,
-      "DRAPM": 0.35,
-      "RAPM_basic": -0.16,
-      "prior": -0.02,
-      "est_minutes": 1682.0,
-      "possessions": 2944.0,
+      "ORAPM": -0.19,
+      "DRAPM": 0.09,
+      "RAPM_basic": -0.1,
+      "prior": -0.05,
+      "est_minutes": 227.0,
+      "possessions": 397.0,
       "RAPM_Rank": 171
+    },
+    {
+      "player": "GARUBA, USMAN",
+      "team": "MAD",
+      "RAPM": -0.16,
+      "ORAPM": 0.0,
+      "DRAPM": -0.23,
+      "RAPM_basic": -0.25,
+      "prior": 0.1,
+      "est_minutes": 756.0,
+      "possessions": 1323.0,
+      "RAPM_Rank": 172
     },
     {
       "player": "JOVIC, STEFAN",
@@ -17542,43 +17554,7 @@
       "prior": 0.01,
       "est_minutes": 710.0,
       "possessions": 1243.0,
-      "RAPM_Rank": 172
-    },
-    {
-      "player": "SHORTS, TJ",
-      "team": "PAN",
-      "RAPM": -0.17,
-      "ORAPM": -0.04,
-      "DRAPM": -0.04,
-      "RAPM_basic": -0.45,
-      "prior": 0.31,
-      "est_minutes": 988.0,
-      "possessions": 1729.0,
       "RAPM_Rank": 173
-    },
-    {
-      "player": "GARUBA, USMAN",
-      "team": "MAD",
-      "RAPM": -0.17,
-      "ORAPM": 0.0,
-      "DRAPM": -0.23,
-      "RAPM_basic": -0.25,
-      "prior": 0.1,
-      "est_minutes": 756.0,
-      "possessions": 1323.0,
-      "RAPM_Rank": 174
-    },
-    {
-      "player": "FELIZ, ANDRES",
-      "team": "MAD",
-      "RAPM": -0.18,
-      "ORAPM": 0.37,
-      "DRAPM": -0.69,
-      "RAPM_basic": -0.28,
-      "prior": 0.13,
-      "est_minutes": 944.0,
-      "possessions": 1652.0,
-      "RAPM_Rank": 175
     },
     {
       "player": "DOZIER, PJ",
@@ -17590,18 +17566,42 @@
       "prior": 0.22,
       "est_minutes": 1055.0,
       "possessions": 1846.0,
-      "RAPM_Rank": 176
+      "RAPM_Rank": 174
+    },
+    {
+      "player": "SHORTS, TJ",
+      "team": "PAN",
+      "RAPM": -0.18,
+      "ORAPM": -0.04,
+      "DRAPM": -0.05,
+      "RAPM_basic": -0.45,
+      "prior": 0.31,
+      "est_minutes": 988.0,
+      "possessions": 1729.0,
+      "RAPM_Rank": 175
     },
     {
       "player": "JALLOW, KARIM",
       "team": "VIR",
       "RAPM": -0.18,
-      "ORAPM": 0.2,
+      "ORAPM": 0.21,
       "DRAPM": -0.4,
       "RAPM_basic": -0.09,
       "prior": -0.13,
       "est_minutes": 1018.0,
       "possessions": 1781.0,
+      "RAPM_Rank": 176
+    },
+    {
+      "player": "FELIZ, ANDRES",
+      "team": "MAD",
+      "RAPM": -0.18,
+      "ORAPM": 0.36,
+      "DRAPM": -0.69,
+      "RAPM_basic": -0.28,
+      "prior": 0.13,
+      "est_minutes": 944.0,
+      "possessions": 1652.0,
       "RAPM_Rank": 177
     },
     {
@@ -17632,13 +17632,25 @@
       "player": "MELLI, NICOLO",
       "team": "ULK",
       "RAPM": -0.22,
-      "ORAPM": -0.89,
+      "ORAPM": -0.88,
       "DRAPM": 0.56,
       "RAPM_basic": -0.23,
       "prior": -0.02,
       "est_minutes": 1298.0,
       "possessions": 2272.0,
       "RAPM_Rank": 180
+    },
+    {
+      "player": "TARPEY, TERRY",
+      "team": "MCO",
+      "RAPM": -0.23,
+      "ORAPM": -0.01,
+      "DRAPM": -0.29,
+      "RAPM_basic": -0.2,
+      "prior": -0.06,
+      "est_minutes": 461.0,
+      "possessions": 806.0,
+      "RAPM_Rank": 181
     },
     {
       "player": "ALSTON JR. , DERRICK",
@@ -17650,18 +17662,6 @@
       "prior": 0.17,
       "est_minutes": 869.0,
       "possessions": 1521.0,
-      "RAPM_Rank": 181
-    },
-    {
-      "player": "TARPEY, TERRY",
-      "team": "MCO",
-      "RAPM": -0.24,
-      "ORAPM": -0.01,
-      "DRAPM": -0.29,
-      "RAPM_basic": -0.2,
-      "prior": -0.06,
-      "est_minutes": 461.0,
-      "possessions": 806.0,
       "RAPM_Rank": 182
     },
     {
@@ -17677,15 +17677,15 @@
       "RAPM_Rank": 183
     },
     {
-      "player": "NGOUAMA, MEHDY",
-      "team": "ASV",
+      "player": "DOKOSSI, ALLAN",
+      "team": "PRS",
       "RAPM": -0.25,
-      "ORAPM": -0.39,
-      "DRAPM": 0.05,
-      "RAPM_basic": -0.26,
-      "prior": -0.01,
-      "est_minutes": 258.0,
-      "possessions": 451.0,
+      "ORAPM": -0.61,
+      "DRAPM": 0.19,
+      "RAPM_basic": -0.22,
+      "prior": 0.0,
+      "est_minutes": 1057.0,
+      "possessions": 1850.0,
       "RAPM_Rank": 184
     },
     {
@@ -17701,15 +17701,15 @@
       "RAPM_Rank": 185
     },
     {
-      "player": "DOKOSSI, ALLAN",
-      "team": "PRS",
-      "RAPM": -0.26,
-      "ORAPM": -0.61,
-      "DRAPM": 0.19,
-      "RAPM_basic": -0.22,
-      "prior": 0.0,
-      "est_minutes": 1057.0,
-      "possessions": 1850.0,
+      "player": "NGOUAMA, MEHDY",
+      "team": "ASV",
+      "RAPM": -0.25,
+      "ORAPM": -0.39,
+      "DRAPM": 0.05,
+      "RAPM_basic": -0.26,
+      "prior": -0.01,
+      "est_minutes": 258.0,
+      "possessions": 451.0,
       "RAPM_Rank": 186
     },
     {
@@ -17727,8 +17727,8 @@
     {
       "player": "MOTLEY, JOHNATHAN",
       "team": "HTA",
-      "RAPM": -0.27,
-      "ORAPM": -0.22,
+      "RAPM": -0.28,
+      "ORAPM": -0.23,
       "DRAPM": 0.0,
       "RAPM_basic": -0.55,
       "prior": 0.34,
@@ -17741,7 +17741,7 @@
       "team": "ZAL",
       "RAPM": -0.28,
       "ORAPM": -0.16,
-      "DRAPM": -0.13,
+      "DRAPM": -0.14,
       "RAPM_basic": -0.02,
       "prior": -0.3,
       "est_minutes": 408.0,
@@ -17776,7 +17776,7 @@
       "player": "KABENGELE, MFIONDU",
       "team": "DUB",
       "RAPM": -0.31,
-      "ORAPM": 0.2,
+      "ORAPM": 0.19,
       "DRAPM": -0.39,
       "RAPM_basic": -0.7,
       "prior": 0.46,
@@ -17788,10 +17788,10 @@
       "player": "HEZONJA, MARIO",
       "team": "MAD",
       "RAPM": -0.31,
-      "ORAPM": 0.32,
+      "ORAPM": 0.31,
       "DRAPM": -0.75,
       "RAPM_basic": -0.69,
-      "prior": 0.45,
+      "prior": 0.44,
       "est_minutes": 1527.0,
       "possessions": 2672.0,
       "RAPM_Rank": 193
@@ -17824,10 +17824,10 @@
       "player": "LAVI, GUR",
       "team": "TEL",
       "RAPM": -0.34,
-      "ORAPM": -0.15,
+      "ORAPM": -0.14,
       "DRAPM": -0.1,
       "RAPM_basic": -0.36,
-      "prior": 0.01,
+      "prior": 0.02,
       "est_minutes": 350.0,
       "possessions": 613.0,
       "RAPM_Rank": 196
@@ -17835,7 +17835,7 @@
     {
       "player": "MILUTINOV, NIKOLA",
       "team": "OLY",
-      "RAPM": -0.35,
+      "RAPM": -0.34,
       "ORAPM": 0.13,
       "DRAPM": -0.27,
       "RAPM_basic": -0.51,
@@ -17899,7 +17899,7 @@
       "ORAPM": -0.09,
       "DRAPM": -0.26,
       "RAPM_basic": -0.41,
-      "prior": -0.01,
+      "prior": 0.0,
       "est_minutes": 733.0,
       "possessions": 1282.0,
       "RAPM_Rank": 202
@@ -17909,7 +17909,7 @@
       "team": "OLY",
       "RAPM": -0.39,
       "ORAPM": -0.25,
-      "DRAPM": 0.02,
+      "DRAPM": 0.03,
       "RAPM_basic": -0.59,
       "prior": 0.19,
       "est_minutes": 1005.0,
@@ -17957,23 +17957,23 @@
       "team": "ASV",
       "RAPM": -0.42,
       "ORAPM": -0.68,
-      "DRAPM": 0.17,
+      "DRAPM": 0.16,
       "RAPM_basic": -0.24,
-      "prior": -0.22,
+      "prior": -0.23,
       "est_minutes": 339.0,
       "possessions": 593.0,
       "RAPM_Rank": 207
     },
     {
-      "player": "MITOGLOU, KONSTANTINOS",
-      "team": "PAN",
-      "RAPM": -0.43,
-      "ORAPM": -1.04,
-      "DRAPM": 0.6,
-      "RAPM_basic": -0.5,
-      "prior": 0.07,
-      "est_minutes": 748.0,
-      "possessions": 1308.0,
+      "player": "DUNSTON, BRYANT",
+      "team": "MIL",
+      "RAPM": -0.42,
+      "ORAPM": -0.65,
+      "DRAPM": 0.28,
+      "RAPM_basic": -0.33,
+      "prior": -0.13,
+      "est_minutes": 420.0,
+      "possessions": 735.0,
       "RAPM_Rank": 208
     },
     {
@@ -17989,22 +17989,22 @@
       "RAPM_Rank": 209
     },
     {
-      "player": "DUNSTON, BRYANT",
-      "team": "MIL",
+      "player": "MITOGLOU, KONSTANTINOS",
+      "team": "PAN",
       "RAPM": -0.43,
-      "ORAPM": -0.65,
-      "DRAPM": 0.28,
-      "RAPM_basic": -0.33,
-      "prior": -0.13,
-      "est_minutes": 420.0,
-      "possessions": 735.0,
+      "ORAPM": -1.04,
+      "DRAPM": 0.6,
+      "RAPM_basic": -0.5,
+      "prior": 0.07,
+      "est_minutes": 748.0,
+      "possessions": 1308.0,
       "RAPM_Rank": 210
     },
     {
       "player": "YILMAZ, ERKAN",
       "team": "IST",
       "RAPM": -0.43,
-      "ORAPM": -0.82,
+      "ORAPM": -0.81,
       "DRAPM": 0.49,
       "RAPM_basic": -0.16,
       "prior": -0.32,
@@ -18015,7 +18015,7 @@
     {
       "player": "BROWN, LORENZO",
       "team": "MIL",
-      "RAPM": -0.43,
+      "RAPM": -0.44,
       "ORAPM": 0.03,
       "DRAPM": -0.38,
       "RAPM_basic": -0.6,
@@ -18029,7 +18029,7 @@
       "team": "PRS",
       "RAPM": -0.46,
       "ORAPM": -0.88,
-      "DRAPM": 0.3,
+      "DRAPM": 0.29,
       "RAPM_basic": -0.31,
       "prior": -0.16,
       "est_minutes": 998.0,
@@ -18099,7 +18099,7 @@
     {
       "player": "HORTON TUCKER, TALEN",
       "team": "ULK",
-      "RAPM": -0.5,
+      "RAPM": -0.51,
       "ORAPM": -1.43,
       "DRAPM": 0.79,
       "RAPM_basic": -0.98,
@@ -18157,6 +18157,18 @@
       "RAPM_Rank": 223
     },
     {
+      "player": "MORGAN, JEREMY",
+      "team": "PRS",
+      "RAPM": -0.55,
+      "ORAPM": -0.17,
+      "DRAPM": -0.53,
+      "RAPM_basic": -0.53,
+      "prior": -0.04,
+      "est_minutes": 1148.0,
+      "possessions": 2010.0,
+      "RAPM_Rank": 224
+    },
+    {
       "player": "MILTON, SHAKE",
       "team": "PAR",
       "RAPM": -0.55,
@@ -18166,18 +18178,6 @@
       "prior": 0.08,
       "est_minutes": 729.0,
       "possessions": 1276.0,
-      "RAPM_Rank": 224
-    },
-    {
-      "player": "BUTKEVICIUS, ARNAS",
-      "team": "ZAL",
-      "RAPM": -0.55,
-      "ORAPM": -0.14,
-      "DRAPM": -0.54,
-      "RAPM_basic": -0.53,
-      "prior": -0.02,
-      "est_minutes": 1145.0,
-      "possessions": 2003.0,
       "RAPM_Rank": 225
     },
     {
@@ -18193,15 +18193,15 @@
       "RAPM_Rank": 226
     },
     {
-      "player": "WATSON, GLYNN",
-      "team": "ASV",
-      "RAPM": -0.56,
-      "ORAPM": -0.79,
-      "DRAPM": -0.11,
-      "RAPM_basic": -0.93,
-      "prior": 0.36,
-      "est_minutes": 1517.0,
-      "possessions": 2655.0,
+      "player": "BUTKEVICIUS, ARNAS",
+      "team": "ZAL",
+      "RAPM": -0.55,
+      "ORAPM": -0.14,
+      "DRAPM": -0.54,
+      "RAPM_basic": -0.53,
+      "prior": -0.02,
+      "est_minutes": 1145.0,
+      "possessions": 2003.0,
       "RAPM_Rank": 227
     },
     {
@@ -18217,21 +18217,21 @@
       "RAPM_Rank": 228
     },
     {
-      "player": "MORGAN, JEREMY",
-      "team": "PRS",
-      "RAPM": -0.56,
-      "ORAPM": -0.18,
-      "DRAPM": -0.53,
-      "RAPM_basic": -0.53,
-      "prior": -0.04,
-      "est_minutes": 1148.0,
-      "possessions": 2010.0,
+      "player": "WATSON, GLYNN",
+      "team": "ASV",
+      "RAPM": -0.57,
+      "ORAPM": -0.79,
+      "DRAPM": -0.11,
+      "RAPM_basic": -0.93,
+      "prior": 0.36,
+      "est_minutes": 1517.0,
+      "possessions": 2655.0,
       "RAPM_Rank": 229
     },
     {
       "player": "BOLOMBOY, JOEL",
       "team": "RED",
-      "RAPM": -0.58,
+      "RAPM": -0.57,
       "ORAPM": -0.59,
       "DRAPM": 0.03,
       "RAPM_basic": -0.64,
@@ -18256,7 +18256,7 @@
       "player": "SAKO, NEAL",
       "team": "PAM",
       "RAPM": -0.59,
-      "ORAPM": -0.32,
+      "ORAPM": -0.31,
       "DRAPM": -0.48,
       "RAPM_basic": -0.65,
       "prior": 0.06,
@@ -18267,7 +18267,7 @@
     {
       "player": "OKEKE, CHUMA",
       "team": "MAD",
-      "RAPM": -0.62,
+      "RAPM": -0.61,
       "ORAPM": -0.39,
       "DRAPM": -0.35,
       "RAPM_basic": -0.65,
@@ -18277,28 +18277,16 @@
       "RAPM_Rank": 233
     },
     {
-      "player": "VILLAR, RAFA",
-      "team": "BAS",
-      "RAPM": -0.65,
-      "ORAPM": -0.49,
-      "DRAPM": -0.06,
-      "RAPM_basic": -0.36,
-      "prior": -0.33,
-      "est_minutes": 280.0,
-      "possessions": 490.0,
-      "RAPM_Rank": 234
-    },
-    {
       "player": "MCCORMACK, DAVID",
       "team": "MUN",
-      "RAPM": -0.65,
+      "RAPM": -0.64,
       "ORAPM": -0.15,
       "DRAPM": -0.53,
       "RAPM_basic": -0.79,
       "prior": 0.16,
       "est_minutes": 703.0,
       "possessions": 1231.0,
-      "RAPM_Rank": 235
+      "RAPM_Rank": 234
     },
     {
       "player": "CLYBURN, WILL",
@@ -18310,13 +18298,25 @@
       "prior": 0.31,
       "est_minutes": 1348.0,
       "possessions": 2359.0,
+      "RAPM_Rank": 235
+    },
+    {
+      "player": "VILLAR, RAFA",
+      "team": "BAS",
+      "RAPM": -0.65,
+      "ORAPM": -0.48,
+      "DRAPM": -0.06,
+      "RAPM_basic": -0.36,
+      "prior": -0.33,
+      "est_minutes": 280.0,
+      "possessions": 490.0,
       "RAPM_Rank": 236
     },
     {
       "player": "AJINCA, MELVIN",
       "team": "ASV",
       "RAPM": -0.67,
-      "ORAPM": -0.66,
+      "ORAPM": -0.65,
       "DRAPM": -0.22,
       "RAPM_basic": -0.7,
       "prior": 0.0,
@@ -18340,7 +18340,7 @@
       "player": "STRAZEL, MATTHEW",
       "team": "MCO",
       "RAPM": -0.7,
-      "ORAPM": -0.96,
+      "ORAPM": -0.95,
       "DRAPM": 0.03,
       "RAPM_basic": -0.78,
       "prior": 0.08,
@@ -18388,37 +18388,13 @@
       "player": "DANGUBIC, NEMANJA",
       "team": "DUB",
       "RAPM": -0.73,
-      "ORAPM": -0.51,
-      "DRAPM": -0.19,
+      "ORAPM": -0.5,
+      "DRAPM": -0.2,
       "RAPM_basic": -0.45,
       "prior": -0.29,
       "est_minutes": 214.0,
       "possessions": 374.0,
       "RAPM_Rank": 243
-    },
-    {
-      "player": "ABALDE, ALBERTO",
-      "team": "MAD",
-      "RAPM": -0.75,
-      "ORAPM": -0.39,
-      "DRAPM": -0.41,
-      "RAPM_basic": -0.72,
-      "prior": -0.04,
-      "est_minutes": 1094.0,
-      "possessions": 1914.0,
-      "RAPM_Rank": 244
-    },
-    {
-      "player": "FALL, YOUSSOUPHA",
-      "team": "BAR",
-      "RAPM": -0.76,
-      "ORAPM": -0.12,
-      "DRAPM": -0.59,
-      "RAPM_basic": -0.85,
-      "prior": 0.07,
-      "est_minutes": 206.0,
-      "possessions": 361.0,
-      "RAPM_Rank": 245
     },
     {
       "player": "KAMENJAS, KENAN",
@@ -18430,6 +18406,30 @@
       "prior": 0.07,
       "est_minutes": 576.0,
       "possessions": 1007.0,
+      "RAPM_Rank": 244
+    },
+    {
+      "player": "ABALDE, ALBERTO",
+      "team": "MAD",
+      "RAPM": -0.76,
+      "ORAPM": -0.4,
+      "DRAPM": -0.42,
+      "RAPM_basic": -0.72,
+      "prior": -0.04,
+      "est_minutes": 1094.0,
+      "possessions": 1914.0,
+      "RAPM_Rank": 245
+    },
+    {
+      "player": "FALL, YOUSSOUPHA",
+      "team": "BAR",
+      "RAPM": -0.76,
+      "ORAPM": -0.12,
+      "DRAPM": -0.58,
+      "RAPM_basic": -0.85,
+      "prior": 0.08,
+      "est_minutes": 206.0,
+      "possessions": 361.0,
       "RAPM_Rank": 246
     },
     {
@@ -18445,27 +18445,27 @@
       "RAPM_Rank": 247
     },
     {
-      "player": "SLOUKAS, KOSTAS",
-      "team": "PAN",
-      "RAPM": -0.77,
-      "ORAPM": -0.31,
-      "DRAPM": -0.45,
-      "RAPM_basic": -0.99,
-      "prior": 0.24,
-      "est_minutes": 1500.0,
-      "possessions": 2624.0,
-      "RAPM_Rank": 248
-    },
-    {
       "player": "ABASS, AWUDU",
       "team": "DUB",
-      "RAPM": -0.78,
+      "RAPM": -0.77,
       "ORAPM": -0.28,
       "DRAPM": -0.39,
       "RAPM_basic": -0.6,
       "prior": -0.23,
       "est_minutes": 914.0,
       "possessions": 1599.0,
+      "RAPM_Rank": 248
+    },
+    {
+      "player": "SLOUKAS, KOSTAS",
+      "team": "PAN",
+      "RAPM": -0.78,
+      "ORAPM": -0.31,
+      "DRAPM": -0.45,
+      "RAPM_basic": -0.99,
+      "prior": 0.24,
+      "est_minutes": 1500.0,
+      "possessions": 2624.0,
       "RAPM_Rank": 249
     },
     {
@@ -18481,6 +18481,18 @@
       "RAPM_Rank": 250
     },
     {
+      "player": "OTURU, DAN",
+      "team": "HTA",
+      "RAPM": -0.83,
+      "ORAPM": -0.03,
+      "DRAPM": -0.75,
+      "RAPM_basic": -1.14,
+      "prior": 0.34,
+      "est_minutes": 1597.0,
+      "possessions": 2795.0,
+      "RAPM_Rank": 251
+    },
+    {
       "player": "SAMODUROV, ALEXANDROS",
       "team": "PAN",
       "RAPM": -0.84,
@@ -18490,18 +18502,6 @@
       "prior": 0.14,
       "est_minutes": 219.0,
       "possessions": 383.0,
-      "RAPM_Rank": 251
-    },
-    {
-      "player": "OTURU, DAN",
-      "team": "HTA",
-      "RAPM": -0.84,
-      "ORAPM": -0.04,
-      "DRAPM": -0.75,
-      "RAPM_basic": -1.14,
-      "prior": 0.34,
-      "est_minutes": 1597.0,
-      "possessions": 2795.0,
       "RAPM_Rank": 252
     },
     {
@@ -18511,7 +18511,7 @@
       "ORAPM": -0.43,
       "DRAPM": -0.49,
       "RAPM_basic": -0.9,
-      "prior": 0.0,
+      "prior": 0.01,
       "est_minutes": 1088.0,
       "possessions": 1903.0,
       "RAPM_Rank": 253
@@ -18521,7 +18521,7 @@
       "team": "BAR",
       "RAPM": -0.86,
       "ORAPM": -0.84,
-      "DRAPM": 0.0,
+      "DRAPM": -0.01,
       "RAPM_basic": -0.79,
       "prior": -0.1,
       "est_minutes": 411.0,
@@ -18532,7 +18532,7 @@
       "player": "LAPROVITTOLA, NICOLAS",
       "team": "BAR",
       "RAPM": -0.87,
-      "ORAPM": 0.01,
+      "ORAPM": 0.0,
       "DRAPM": -0.79,
       "RAPM_basic": -1.13,
       "prior": 0.29,
@@ -18544,7 +18544,7 @@
       "player": "GUDURIC, MARKO",
       "team": "MIL",
       "RAPM": -0.89,
-      "ORAPM": -0.61,
+      "ORAPM": -0.62,
       "DRAPM": -0.06,
       "RAPM_basic": -1.08,
       "prior": 0.21,
@@ -18569,7 +18569,7 @@
       "team": "TEL",
       "RAPM": -0.9,
       "ORAPM": -0.55,
-      "DRAPM": -0.11,
+      "DRAPM": -0.12,
       "RAPM_basic": -0.77,
       "prior": -0.15,
       "est_minutes": 894.0,
@@ -18580,7 +18580,7 @@
       "player": "KRAMER, DAVID",
       "team": "MAD",
       "RAPM": -0.92,
-      "ORAPM": -0.47,
+      "ORAPM": -0.46,
       "DRAPM": -0.44,
       "RAPM_basic": -0.78,
       "prior": -0.17,
@@ -18605,7 +18605,7 @@
       "team": "MCO",
       "RAPM": -0.97,
       "ORAPM": -0.21,
-      "DRAPM": -0.92,
+      "DRAPM": -0.91,
       "RAPM_basic": -1.28,
       "prior": 0.37,
       "est_minutes": 1149.0,
@@ -18615,7 +18615,7 @@
     {
       "player": "RICCI, GIAMPAOLO",
       "team": "MIL",
-      "RAPM": -1.07,
+      "RAPM": -1.06,
       "ORAPM": -0.31,
       "DRAPM": -0.62,
       "RAPM_basic": -1.02,
@@ -18629,7 +18629,7 @@
       "team": "RED",
       "RAPM": -1.14,
       "ORAPM": -0.72,
-      "DRAPM": -0.34,
+      "DRAPM": -0.35,
       "RAPM_basic": -1.1,
       "prior": -0.07,
       "est_minutes": 531.0,
@@ -18676,7 +18676,7 @@
       "player": "PRADILLA, JAIME",
       "team": "PAM",
       "RAPM": -1.34,
-      "ORAPM": -0.62,
+      "ORAPM": -0.61,
       "DRAPM": -1.04,
       "RAPM_basic": -1.34,
       "prior": 0.03,
@@ -18688,7 +18688,7 @@
       "player": "WALKER IV, LONNIE",
       "team": "TEL",
       "RAPM": -1.5,
-      "ORAPM": -0.68,
+      "ORAPM": -0.69,
       "DRAPM": -0.59,
       "RAPM_basic": -1.93,
       "prior": 0.52,
@@ -18790,24 +18790,24 @@
       "rank": 13
     },
     {
+      "player": "BLAKENEY, ANTONIO",
+      "team": "HTA",
+      "wpa": 1206.96,
+      "plays": 1002,
+      "rank": 14
+    },
+    {
       "player": "WRIGHT, MOSES",
       "team": "ZAL",
       "wpa": 1190.17,
       "plays": 1361,
-      "rank": 14
-    },
-    {
-      "player": "BLAKENEY, ANTONIO",
-      "team": "HTA",
-      "wpa": 1171.22,
-      "plays": 969,
       "rank": 15
     },
     {
       "player": "BRYANT, ELIJAH",
       "team": "HTA",
-      "wpa": 1168.18,
-      "plays": 1276,
+      "wpa": 1167.41,
+      "plays": 1289,
       "rank": 16
     },
     {
@@ -18820,8 +18820,8 @@
     {
       "player": "HEZONJA, MARIO",
       "team": "MAD",
-      "wpa": 1128.65,
-      "plays": 1179,
+      "wpa": 1141.87,
+      "plays": 1220,
       "rank": 18
     },
     {
@@ -18874,52 +18874,52 @@
       "rank": 25
     },
     {
+      "player": "CAMPAZZO, FACUNDO",
+      "team": "MAD",
+      "wpa": 1028.77,
+      "plays": 1265,
+      "rank": 26
+    },
+    {
+      "player": "OTURU, DAN",
+      "team": "HTA",
+      "wpa": 1021.9,
+      "plays": 1245,
+      "rank": 27
+    },
+    {
       "player": "TUBELIS, AZUOLAS",
       "team": "ZAL",
       "wpa": 1015.34,
       "plays": 1140,
-      "rank": 26
+      "rank": 28
     },
     {
       "player": "SORKIN, ROMAN",
       "team": "TEL",
       "wpa": 1015.2,
       "plays": 1258,
-      "rank": 27
+      "rank": 29
     },
     {
       "player": "OBST, ANDREAS",
       "team": "MUN",
       "wpa": 1011.92,
       "plays": 1032,
-      "rank": 28
+      "rank": 30
     },
     {
       "player": "WATSON, GLYNN",
       "team": "ASV",
       "wpa": 1005.38,
       "plays": 1004,
-      "rank": 29
+      "rank": 31
     },
     {
       "player": "MILLER-MCINTYRE, CODI",
       "team": "RED",
       "wpa": 1002.59,
       "plays": 1538,
-      "rank": 30
-    },
-    {
-      "player": "OTURU, DAN",
-      "team": "HTA",
-      "wpa": 995.87,
-      "plays": 1201,
-      "rank": 31
-    },
-    {
-      "player": "CAMPAZZO, FACUNDO",
-      "team": "MAD",
-      "wpa": 994.49,
-      "plays": 1229,
       "rank": 32
     },
     {
@@ -18965,17 +18965,17 @@
       "rank": 38
     },
     {
+      "player": "LYLES, TREY",
+      "team": "MAD",
+      "wpa": 940.28,
+      "plays": 1132,
+      "rank": 39
+    },
+    {
       "player": "FOURNIER, EVAN",
       "team": "OLY",
       "wpa": 933.54,
       "plays": 923,
-      "rank": 39
-    },
-    {
-      "player": "LYLES, TREY",
-      "team": "MAD",
-      "wpa": 929.67,
-      "plays": 1105,
       "rank": 40
     },
     {
@@ -19021,24 +19021,24 @@
       "rank": 46
     },
     {
+      "player": "JONES, CHRIS",
+      "team": "HTA",
+      "wpa": 861.3,
+      "plays": 1018,
+      "rank": 47
+    },
+    {
       "player": "THOMPSON, DARIUS",
       "team": "PAM",
       "wpa": 858.52,
       "plays": 1080,
-      "rank": 47
+      "rank": 48
     },
     {
       "player": "BADIO, BRANCOU",
       "team": "PAM",
       "wpa": 857.72,
       "plays": 1085,
-      "rank": 48
-    },
-    {
-      "player": "JONES, CHRIS",
-      "team": "HTA",
-      "wpa": 855.25,
-      "plays": 982,
       "rank": 49
     },
     {
@@ -19147,45 +19147,45 @@
       "rank": 64
     },
     {
+      "player": "MICIC, VASILIJE",
+      "team": "HTA",
+      "wpa": 754.52,
+      "plays": 1233,
+      "rank": 65
+    },
+    {
       "player": "THEIS, DANIEL",
       "team": "MCO",
       "wpa": 752.72,
       "plays": 1011,
-      "rank": 65
+      "rank": 66
     },
     {
       "player": "BRISSETT, O'SHAE J",
       "team": "TEL",
       "wpa": 749.4,
       "plays": 1016,
-      "rank": 66
+      "rank": 67
     },
     {
       "player": "SIMMONS, KOBI",
       "team": "BAS",
       "wpa": 746.25,
       "plays": 948,
-      "rank": 67
+      "rank": 68
     },
     {
       "player": "VILDOZA, LUCA",
       "team": "VIR",
       "wpa": 743.13,
       "plays": 841,
-      "rank": 68
+      "rank": 69
     },
     {
       "player": "WEILER-BABB, NICK",
       "team": "IST",
       "wpa": 741.12,
       "plays": 1085,
-      "rank": 69
-    },
-    {
-      "player": "MICIC, VASILIJE",
-      "team": "HTA",
-      "wpa": 739.91,
-      "plays": 1186,
       "rank": 70
     },
     {
@@ -19240,8 +19240,8 @@
     {
       "player": "TAVARES, WALTER",
       "team": "MAD",
-      "wpa": 691.61,
-      "plays": 1192,
+      "wpa": 692.9,
+      "plays": 1195,
       "rank": 78
     },
     {
@@ -19395,7 +19395,7 @@
       "player": "MOTLEY, JOHNATHAN",
       "team": "HTA",
       "wpa": 547.82,
-      "plays": 709,
+      "plays": 715,
       "rank": 100
     },
     {
@@ -19413,38 +19413,38 @@
       "rank": 102
     },
     {
+      "player": "MALEDON, THEO",
+      "team": "MAD",
+      "wpa": 532.03,
+      "plays": 908,
+      "rank": 103
+    },
+    {
       "player": "SANTOS, MARCIO",
       "team": "TEL",
       "wpa": 530.15,
       "plays": 882,
-      "rank": 103
+      "rank": 104
     },
     {
       "player": "COSTELLO, MATTHEW",
       "team": "PAM",
       "wpa": 528.91,
       "plays": 855,
-      "rank": 104
+      "rank": 105
     },
     {
       "player": "NDIAYE, MBAYE",
       "team": "ASV",
       "wpa": 526.44,
       "plays": 916,
-      "rank": 105
+      "rank": 106
     },
     {
       "player": "PRADILLA, JAIME",
       "team": "PAM",
       "wpa": 525.3,
       "plays": 1023,
-      "rank": 106
-    },
-    {
-      "player": "MALEDON, THEO",
-      "team": "MAD",
-      "wpa": 524.65,
-      "plays": 887,
       "rank": 107
     },
     {
@@ -19469,66 +19469,66 @@
       "rank": 110
     },
     {
+      "player": "DECK, GABRIEL",
+      "team": "MAD",
+      "wpa": 516.79,
+      "plays": 710,
+      "rank": 111
+    },
+    {
       "player": "VAUTIER, BASTIEN",
       "team": "ASV",
       "wpa": 516.76,
       "plays": 861,
-      "rank": 111
+      "rank": 112
     },
     {
       "player": "HAYES, KEVARRIUS",
       "team": "MCO",
       "wpa": 516.44,
       "plays": 802,
-      "rank": 112
+      "rank": 113
     },
     {
       "player": "MALCOLM, COLLIN",
       "team": "HTA",
       "wpa": 514.13,
-      "plays": 788,
-      "rank": 113
+      "plays": 801,
+      "rank": 114
     },
     {
       "player": "SMITS, ROLANDS",
       "team": "IST",
       "wpa": 513.73,
       "plays": 770,
-      "rank": 114
+      "rank": 115
     },
     {
       "player": "HEURTEL, THOMAS",
       "team": "ASV",
       "wpa": 513.52,
       "plays": 761,
-      "rank": 115
+      "rank": 116
     },
     {
       "player": "AVRAMOVIC, ALEKSA",
       "team": "DUB",
       "wpa": 512.93,
       "plays": 585,
-      "rank": 116
+      "rank": 117
     },
     {
       "player": "ANDERSON, JUSTIN",
       "team": "DUB",
       "wpa": 508.96,
       "plays": 641,
-      "rank": 117
+      "rank": 118
     },
     {
       "player": "SLEVA, DUSTIN",
       "team": "ZAL",
       "wpa": 505.37,
       "plays": 930,
-      "rank": 118
-    },
-    {
-      "player": "DECK, GABRIEL",
-      "team": "MAD",
-      "wpa": 504.59,
-      "plays": 694,
       "rank": 119
     },
     {
@@ -19574,24 +19574,24 @@
       "rank": 125
     },
     {
+      "player": "OKEKE, CHUMA",
+      "team": "MAD",
+      "wpa": 472.05,
+      "plays": 640,
+      "rank": 126
+    },
+    {
       "player": "LARKIN, SHANE",
       "team": "IST",
       "wpa": 465.26,
       "plays": 413,
-      "rank": 126
+      "rank": 127
     },
     {
       "player": "KALINIC, NIKOLA",
       "team": "RED",
       "wpa": 461.39,
       "plays": 906,
-      "rank": 127
-    },
-    {
-      "player": "OKEKE, CHUMA",
-      "team": "MAD",
-      "wpa": 459.59,
-      "plays": 618,
       "rank": 128
     },
     {
@@ -19737,8 +19737,8 @@
     {
       "player": "WAINRIGHT, ISH",
       "team": "HTA",
-      "wpa": 391.11,
-      "plays": 696,
+      "wpa": 389.82,
+      "plays": 708,
       "rank": 149
     },
     {
@@ -19763,24 +19763,24 @@
       "rank": 152
     },
     {
+      "player": "FELIZ, ANDRES",
+      "team": "MAD",
+      "wpa": 382.41,
+      "plays": 673,
+      "rank": 153
+    },
+    {
       "player": "FAYE, MOUHAMED",
       "team": "PRS",
       "wpa": 381.47,
       "plays": 997,
-      "rank": 153
+      "rank": 154
     },
     {
       "player": "FARIED, KENNETH",
       "team": "PAN",
       "wpa": 379.87,
       "plays": 678,
-      "rank": 154
-    },
-    {
-      "player": "FELIZ, ANDRES",
-      "team": "MAD",
-      "wpa": 375.99,
-      "plays": 647,
       "rank": 155
     },
     {
@@ -19814,8 +19814,8 @@
     {
       "player": "GARUBA, USMAN",
       "team": "MAD",
-      "wpa": 358.52,
-      "plays": 602,
+      "wpa": 363.6,
+      "plays": 626,
       "rank": 160
     },
     {
@@ -19875,24 +19875,24 @@
       "rank": 168
     },
     {
+      "player": "ODIASE, TAI",
+      "team": "HTA",
+      "wpa": 328.24,
+      "plays": 357,
+      "rank": 169
+    },
+    {
       "player": "TRAORE, ARMEL",
       "team": "ASV",
       "wpa": 327.82,
       "plays": 730,
-      "rank": 169
+      "rank": 170
     },
     {
       "player": "BOSTON JR., BRANDON",
       "team": "ULK",
       "wpa": 326.16,
       "plays": 456,
-      "rank": 170
-    },
-    {
-      "player": "ODIASE, TAI",
-      "team": "HTA",
-      "wpa": 325.09,
-      "plays": 348,
       "rank": 171
     },
     {
@@ -19912,8 +19912,8 @@
     {
       "player": "LLULL, SERGIO",
       "team": "MAD",
-      "wpa": 320.71,
-      "plays": 461,
+      "wpa": 321.03,
+      "plays": 470,
       "rank": 174
     },
     {
@@ -19933,8 +19933,8 @@
     {
       "player": "ABALDE, ALBERTO",
       "team": "MAD",
-      "wpa": 301.74,
-      "plays": 556,
+      "wpa": 304.96,
+      "plays": 564,
       "rank": 177
     },
     {
@@ -20274,17 +20274,17 @@
       "rank": 225
     },
     {
+      "player": "LEN, ALEX",
+      "team": "MAD",
+      "wpa": 168.86,
+      "plays": 242,
+      "rank": 226
+    },
+    {
       "player": "MARINKOVIC, VANJA",
       "team": "PAR",
       "wpa": 166.76,
       "plays": 348,
-      "rank": 226
-    },
-    {
-      "player": "LEN, ALEX",
-      "team": "MAD",
-      "wpa": 163.58,
-      "plays": 220,
       "rank": 227
     },
     {
@@ -20662,7 +20662,7 @@
       "player": "RANDOLPH, LEVI",
       "team": "HTA",
       "wpa": 26.11,
-      "plays": 83,
+      "plays": 92,
       "rank": 281
     },
     {
@@ -20711,7 +20711,7 @@
       "player": "EDWARDS, KESSLER",
       "team": "HTA",
       "wpa": 22.29,
-      "plays": 122,
+      "plays": 125,
       "rank": 288
     },
     {
@@ -26116,39 +26116,39 @@
     "player_forecasts": []
   },
   "accuracy": {
-    "n_games": 498,
+    "n_games": 499,
     "accuracy": 64.3,
-    "brier_score": 0.2118,
-    "log_loss": 0.6069,
+    "brier_score": 0.2106,
+    "log_loss": 0.6045,
     "calibration": [
       {
         "Bucket": "50-60%",
-        "Count": 152,
-        "Accuracy": 50.7,
-        "AvgConfidence": 56.3
+        "Count": 157,
+        "Accuracy": 48.4,
+        "AvgConfidence": 56.0
       },
       {
         "Bucket": "60-70%",
-        "Count": 155,
-        "Accuracy": 56.8,
-        "AvgConfidence": 64.9
+        "Count": 150,
+        "Accuracy": 59.3,
+        "AvgConfidence": 64.8
       },
       {
         "Bucket": "70-80%",
-        "Count": 123,
-        "Accuracy": 74.8,
-        "AvgConfidence": 76.0
+        "Count": 122,
+        "Accuracy": 74.6,
+        "AvgConfidence": 75.9
       },
       {
         "Bucket": "80-90%",
-        "Count": 44,
-        "Accuracy": 88.6,
-        "AvgConfidence": 85.0
+        "Count": 46,
+        "Accuracy": 91.3,
+        "AvgConfidence": 85.1
       },
       {
         "Bucket": "90%+",
         "Count": 24,
-        "Accuracy": 100.0,
+        "Accuracy": 95.8,
         "AvgConfidence": 92.6
       }
     ],
@@ -26186,7 +26186,7 @@
       {
         "Round": 7,
         "Games": 10,
-        "Accuracy": 70.0
+        "Accuracy": 80.0
       },
       {
         "Round": 8,
@@ -26196,7 +26196,7 @@
       {
         "Round": 9,
         "Games": 10,
-        "Accuracy": 40.0
+        "Accuracy": 50.0
       },
       {
         "Round": 10,
@@ -26241,7 +26241,7 @@
       {
         "Round": 18,
         "Games": 10,
-        "Accuracy": 80.0
+        "Accuracy": 70.0
       },
       {
         "Round": 19,
@@ -26276,12 +26276,12 @@
       {
         "Round": 25,
         "Games": 10,
-        "Accuracy": 60.0
+        "Accuracy": 70.0
       },
       {
         "Round": 26,
         "Games": 10,
-        "Accuracy": 60.0
+        "Accuracy": 50.0
       },
       {
         "Round": 27,
@@ -26311,7 +26311,7 @@
       {
         "Round": 32,
         "Games": 30,
-        "Accuracy": 63.3
+        "Accuracy": 60.0
       },
       {
         "Round": 33,
@@ -26761,7 +26761,7 @@
         ]
       },
       "BAR": {
-        "gci": 51.3,
+        "gci": 51.4,
         "dominance_avg": -0.0037,
         "control_pct": 0.3269,
         "crunch_swing_avg": 0.0579,
@@ -26769,7 +26769,7 @@
         "drama_avg": 3.8184,
         "comeback_rating": 0.6306,
         "comeback_count": 1,
-        "home_gci": 54.0,
+        "home_gci": 54.1,
         "away_gci": 48.7,
         "win_quality_hist": [
           6,
@@ -27197,7 +27197,7 @@
         "drama_avg": 4.2488,
         "comeback_rating": 0.6417,
         "comeback_count": 2,
-        "home_gci": 63.0,
+        "home_gci": 63.1,
         "away_gci": 5.8,
         "win_quality_hist": [
           4,
@@ -27597,7 +27597,7 @@
         ]
       },
       "DUB": {
-        "gci": 50.3,
+        "gci": 50.4,
         "dominance_avg": 0.0162,
         "control_pct": 0.3522,
         "crunch_swing_avg": -0.0264,
@@ -27605,8 +27605,8 @@
         "drama_avg": 4.125,
         "comeback_rating": 0.6464,
         "comeback_count": 4,
-        "home_gci": 70.4,
-        "away_gci": 30.2,
+        "home_gci": 70.5,
+        "away_gci": 30.3,
         "win_quality_hist": [
           3,
           9,
@@ -28005,7 +28005,7 @@
         ]
       },
       "HTA": {
-        "gci": 61.6,
+        "gci": 61.7,
         "dominance_avg": 0.0439,
         "control_pct": 0.3855,
         "crunch_swing_avg": 0.0324,
@@ -28013,8 +28013,8 @@
         "drama_avg": 3.9299,
         "comeback_rating": 0.6436,
         "comeback_count": 2,
-        "home_gci": 75.9,
-        "away_gci": 47.2,
+        "home_gci": 76.1,
+        "away_gci": 47.3,
         "win_quality_hist": [
           9,
           6,
@@ -28821,7 +28821,7 @@
         ]
       },
       "MAD": {
-        "gci": 72.5,
+        "gci": 72.6,
         "dominance_avg": 0.0687,
         "control_pct": 0.4245,
         "crunch_swing_avg": 0.0449,
@@ -29229,16 +29229,16 @@
         ]
       },
       "MCO": {
-        "gci": 60.6,
-        "dominance_avg": 0.0312,
-        "control_pct": 0.3852,
-        "crunch_swing_avg": 0.0256,
-        "killer_instinct": -0.0212,
-        "drama_avg": 3.797,
+        "gci": 59.2,
+        "dominance_avg": 0.025,
+        "control_pct": 0.3758,
+        "crunch_swing_avg": 0.0244,
+        "killer_instinct": -0.0207,
+        "drama_avg": 3.7635,
         "comeback_rating": 0.6134,
         "comeback_count": 3,
-        "home_gci": 82.7,
-        "away_gci": 38.6,
+        "home_gci": 82.8,
+        "away_gci": 36.8,
         "win_quality_hist": [
           4,
           7,
@@ -29249,7 +29249,7 @@
         "loss_quality_hist": [
           4,
           6,
-          5,
+          6,
           2,
           0
         ],
@@ -29653,11 +29653,21 @@
             "drama": 2.919,
             "home_score": 79,
             "away_score": 70
+          },
+          {
+            "gamecode": 384,
+            "opponent": "OLY",
+            "is_home": false,
+            "is_win": false,
+            "dominance": -0.224,
+            "drama": 2.426,
+            "home_score": 91,
+            "away_score": 70
           }
         ]
       },
       "MIL": {
-        "gci": 50.1,
+        "gci": 50.2,
         "dominance_avg": -0.0001,
         "control_pct": 0.3441,
         "crunch_swing_avg": -0.0758,
@@ -29665,7 +29675,7 @@
         "drama_avg": 3.6515,
         "comeback_rating": 0.6102,
         "comeback_count": 1,
-        "home_gci": 71.6,
+        "home_gci": 71.7,
         "away_gci": 28.6,
         "win_quality_hist": [
           3,
@@ -30073,7 +30083,7 @@
         "drama_avg": 3.5678,
         "comeback_rating": 0.6475,
         "comeback_count": 2,
-        "home_gci": 65.5,
+        "home_gci": 65.6,
         "away_gci": 30.5,
         "win_quality_hist": [
           5,
@@ -30473,20 +30483,20 @@
         ]
       },
       "OLY": {
-        "gci": 78.9,
-        "dominance_avg": 0.1058,
-        "control_pct": 0.4968,
-        "crunch_swing_avg": 0.0327,
-        "killer_instinct": -0.0163,
-        "drama_avg": 4.0151,
-        "comeback_rating": 0.6147,
+        "gci": 79.7,
+        "dominance_avg": 0.1089,
+        "control_pct": 0.4994,
+        "crunch_swing_avg": 0.0325,
+        "killer_instinct": -0.0142,
+        "drama_avg": 3.9744,
+        "comeback_rating": 0.6139,
         "comeback_count": 1,
         "home_gci": 100.0,
-        "away_gci": 56.3,
+        "away_gci": 56.4,
         "win_quality_hist": [
           3,
           10,
-          8,
+          9,
           5,
           0
         ],
@@ -30877,19 +30887,29 @@
             "drama": 2.922,
             "home_score": 85,
             "away_score": 76
+          },
+          {
+            "gamecode": 384,
+            "opponent": "MCO",
+            "is_home": true,
+            "is_win": true,
+            "dominance": 0.224,
+            "drama": 2.426,
+            "home_score": 91,
+            "away_score": 70
           }
         ]
       },
       "PAM": {
-        "gci": 63.9,
-        "dominance_avg": 0.0475,
-        "control_pct": 0.3846,
-        "crunch_swing_avg": 0.0529,
-        "killer_instinct": -0.0267,
-        "drama_avg": 4.06,
+        "gci": 62.0,
+        "dominance_avg": 0.0418,
+        "control_pct": 0.3747,
+        "crunch_swing_avg": 0.0437,
+        "killer_instinct": -0.026,
+        "drama_avg": 4.0648,
         "comeback_rating": 0.629,
         "comeback_count": 3,
-        "home_gci": 87.7,
+        "home_gci": 82.8,
         "away_gci": 40.0,
         "win_quality_hist": [
           10,
@@ -30900,7 +30920,7 @@
         ],
         "loss_quality_hist": [
           1,
-          7,
+          8,
           4,
           1,
           0
@@ -31285,23 +31305,33 @@
             "drama": 3.798,
             "home_score": 85,
             "away_score": 95
+          },
+          {
+            "gamecode": 387,
+            "opponent": "PAN",
+            "is_home": true,
+            "is_win": false,
+            "dominance": -0.177,
+            "drama": 4.249,
+            "home_score": 67,
+            "away_score": 68
           }
         ]
       },
       "PAN": {
-        "gci": 59.7,
-        "dominance_avg": 0.0279,
-        "control_pct": 0.3553,
-        "crunch_swing_avg": -0.0113,
-        "killer_instinct": 0.044,
-        "drama_avg": 3.6736,
-        "comeback_rating": 0.6362,
+        "gci": 61.2,
+        "dominance_avg": 0.0316,
+        "control_pct": 0.3683,
+        "crunch_swing_avg": -0.0033,
+        "killer_instinct": 0.0347,
+        "drama_avg": 3.688,
+        "comeback_rating": 0.6306,
         "comeback_count": 3,
-        "home_gci": 72.8,
-        "away_gci": 45.9,
+        "home_gci": 72.9,
+        "away_gci": 49.5,
         "win_quality_hist": [
           6,
-          8,
+          9,
           8,
           1,
           0
@@ -31703,6 +31733,16 @@
             "drama": 3.027,
             "home_score": 87,
             "away_score": 79
+          },
+          {
+            "gamecode": 387,
+            "opponent": "PAM",
+            "is_home": false,
+            "is_win": true,
+            "dominance": 0.177,
+            "drama": 4.249,
+            "home_score": 67,
+            "away_score": 68
           }
         ]
       },
@@ -31716,7 +31756,7 @@
         "comeback_rating": 0.684,
         "comeback_count": 4,
         "home_gci": 29.9,
-        "away_gci": 23.0,
+        "away_gci": 23.1,
         "win_quality_hist": [
           3,
           9,
@@ -32115,7 +32155,7 @@
         ]
       },
       "PRS": {
-        "gci": 44.2,
+        "gci": 44.3,
         "dominance_avg": -0.0107,
         "control_pct": 0.3102,
         "crunch_swing_avg": -0.0671,
@@ -32124,7 +32164,7 @@
         "comeback_rating": 0.6078,
         "comeback_count": 1,
         "home_gci": 47.5,
-        "away_gci": 40.9,
+        "away_gci": 41.0,
         "win_quality_hist": [
           1,
           6,
@@ -32523,7 +32563,7 @@
         ]
       },
       "RED": {
-        "gci": 51.5,
+        "gci": 51.6,
         "dominance_avg": 0.0082,
         "control_pct": 0.3155,
         "crunch_swing_avg": 0.0381,
@@ -32531,8 +32571,8 @@
         "drama_avg": 4.056,
         "comeback_rating": 0.6727,
         "comeback_count": 4,
-        "home_gci": 68.8,
-        "away_gci": 35.1,
+        "home_gci": 68.9,
+        "away_gci": 35.2,
         "win_quality_hist": [
           9,
           6,
@@ -32941,7 +32981,7 @@
         ]
       },
       "TEL": {
-        "gci": 43.1,
+        "gci": 43.2,
         "dominance_avg": -0.034,
         "control_pct": 0.2835,
         "crunch_swing_avg": 0.028,
@@ -33349,20 +33389,20 @@
         ]
       },
       "ULK": {
-        "gci": 63.5,
-        "dominance_avg": 0.0141,
-        "control_pct": 0.3585,
-        "crunch_swing_avg": 0.0494,
-        "killer_instinct": 0.0622,
-        "drama_avg": 3.6449,
-        "comeback_rating": 0.6339,
+        "gci": 65.3,
+        "dominance_avg": 0.0201,
+        "control_pct": 0.3692,
+        "crunch_swing_avg": 0.0498,
+        "killer_instinct": 0.0648,
+        "drama_avg": 3.6253,
+        "comeback_rating": 0.633,
         "comeback_count": 3,
-        "home_gci": 80.2,
-        "away_gci": 46.7,
+        "home_gci": 82.9,
+        "away_gci": 46.8,
         "win_quality_hist": [
           11,
           2,
-          8,
+          9,
           3,
           0
         ],
@@ -33753,11 +33793,21 @@
             "drama": 2.428,
             "home_score": 76,
             "away_score": 81
+          },
+          {
+            "gamecode": 385,
+            "opponent": "ZAL",
+            "is_home": true,
+            "is_win": true,
+            "dominance": 0.248,
+            "drama": 2.883,
+            "home_score": 89,
+            "away_score": 78
           }
         ]
       },
       "VIR": {
-        "gci": 31.7,
+        "gci": 31.8,
         "dominance_avg": -0.0639,
         "control_pct": 0.2107,
         "crunch_swing_avg": -0.0536,
@@ -34165,16 +34215,16 @@
         ]
       },
       "ZAL": {
-        "gci": 66.4,
-        "dominance_avg": 0.058,
-        "control_pct": 0.415,
-        "crunch_swing_avg": 0.0277,
-        "killer_instinct": -0.0189,
-        "drama_avg": 3.7415,
+        "gci": 64.6,
+        "dominance_avg": 0.0501,
+        "control_pct": 0.4046,
+        "crunch_swing_avg": 0.0254,
+        "killer_instinct": -0.0184,
+        "drama_avg": 3.7194,
         "comeback_rating": 0.6038,
         "comeback_count": 1,
-        "home_gci": 83.4,
-        "away_gci": 49.3,
+        "home_gci": 83.5,
+        "away_gci": 46.7,
         "win_quality_hist": [
           7,
           7,
@@ -34185,7 +34235,7 @@
         "loss_quality_hist": [
           7,
           4,
-          3,
+          4,
           1,
           0
         ],
@@ -34569,6 +34619,16 @@
             "drama": 3.706,
             "home_score": 85,
             "away_score": 79
+          },
+          {
+            "gamecode": 385,
+            "opponent": "ULK",
+            "is_home": false,
+            "is_win": false,
+            "dominance": -0.248,
+            "drama": 2.883,
+            "home_score": 89,
+            "away_score": 78
           }
         ]
       }
@@ -40318,6 +40378,51 @@
         "control_away": 0.0,
         "crunch_home": 0.0974,
         "crunch_away": -0.0974
+      },
+      {
+        "gamecode": 384,
+        "home": "OLY",
+        "away": "MCO",
+        "home_score": 91,
+        "away_score": 70,
+        "winner": "OLY",
+        "dominance": 0.2241,
+        "drama": 2.4256,
+        "comeback": 0.5935,
+        "control_home": 0.6,
+        "control_away": 0.0,
+        "crunch_home": 0.0217,
+        "crunch_away": -0.0217
+      },
+      {
+        "gamecode": 385,
+        "home": "ULK",
+        "away": "ZAL",
+        "home_score": 89,
+        "away_score": 78,
+        "winner": "ULK",
+        "dominance": 0.2476,
+        "drama": 2.8831,
+        "comeback": 0.6131,
+        "control_home": 0.7727,
+        "control_away": 0.0114,
+        "crunch_home": 0.0648,
+        "crunch_away": -0.0648
+      },
+      {
+        "gamecode": 387,
+        "home": "PAM",
+        "away": "PAN",
+        "home_score": 67,
+        "away_score": 68,
+        "winner": "PAN",
+        "dominance": -0.1774,
+        "drama": 4.2492,
+        "comeback": 0.5,
+        "control_home": 0.0,
+        "control_away": 0.875,
+        "crunch_home": -0.3072,
+        "crunch_away": 0.3072
       }
     ],
     "storylines": [
@@ -40325,8 +40430,8 @@
         "label": "Dominant Force",
         "team": "OLY",
         "color": "#4ecdc4",
-        "text": "Controlled 50% of game time on average. 18 dominant wins this season.",
-        "stat_label": "GCI 78.9",
+        "text": "Controlled 50% of game time on average. 19 dominant wins this season.",
+        "stat_label": "GCI 79.7",
         "stat_sub": "#1 Overall"
       },
       {
@@ -40363,177 +40468,177 @@
       }
     ],
     "game_of_round": {
-      "gamecode": 378,
+      "gamecode": 387,
       "round": 38,
-      "home": "DUB",
-      "away": "PAM",
-      "home_score": 85,
-      "away_score": 95,
-      "winner": "PAM",
-      "drama": 3.7979,
-      "comeback": 0.6267,
-      "crunch_home": -0.1161,
-      "dominance": -0.1595,
+      "home": "PAM",
+      "away": "PAN",
+      "home_score": 67,
+      "away_score": 68,
+      "winner": "PAN",
+      "drama": 4.2492,
+      "comeback": 0.5,
+      "crunch_home": -0.3072,
+      "dominance": -0.1774,
       "wp_curve": [
         [
           0.0,
-          0.4813
+          0.5
         ],
         [
-          0.0136,
-          0.5188
+          0.011,
+          0.445
         ],
         [
-          0.0518,
-          0.5192
+          0.0351,
+          0.4628
         ],
         [
-          0.072,
-          0.4613
-        ],
-        [
-          0.1119,
-          0.4214
-        ],
-        [
-          0.1282,
-          0.4207
-        ],
-        [
-          0.1471,
-          0.4003
-        ],
-        [
-          0.1655,
-          0.419
-        ],
-        [
-          0.1817,
-          0.4384
-        ],
-        [
-          0.2274,
-          0.3954
-        ],
-        [
-          0.2669,
-          0.3927
-        ],
-        [
-          0.2994,
+          0.0828,
           0.3693
         ],
         [
-          0.3301,
-          0.3879
+          0.093,
+          0.3167
         ],
         [
-          0.3393,
-          0.3656
+          0.1682,
+          0.363
         ],
         [
-          0.3854,
-          0.3609
+          0.1682,
+          0.3818
         ],
         [
-          0.4043,
-          0.4518
+          0.1864,
+          0.3805
         ],
         [
-          0.4219,
-          0.4511
+          0.2113,
+          0.3047
         ],
         [
-          0.439,
-          0.4258
+          0.2308,
+          0.3205
         ],
         [
-          0.4561,
-          0.5504
+          0.2599,
+          0.375
         ],
         [
-          0.4592,
-          0.5506
+          0.2811,
+          0.3149
         ],
         [
-          0.4807,
-          0.6267
+          0.2954,
+          0.2769
         ],
         [
-          0.5031,
-          0.5264
+          0.3022,
+          0.3123
         ],
         [
-          0.5189,
-          0.4464
+          0.3504,
+          0.3062
         ],
         [
-          0.565,
-          0.3887
+          0.3804,
+          0.322
         ],
         [
-          0.5808,
-          0.4144
+          0.391,
+          0.3848
         ],
         [
-          0.5957,
-          0.3847
+          0.4222,
+          0.2958
         ],
         [
-          0.6054,
-          0.3557
+          0.4577,
+          0.3109
         ],
         [
-          0.6251,
-          0.3522
+          0.4865,
+          0.3284
         ],
         [
-          0.6523,
-          0.2424
+          0.5689,
+          0.2906
         ],
         [
-          0.6624,
-          0.2635
+          0.5799,
+          0.2656
         ],
         [
-          0.6734,
-          0.2358
+          0.6116,
+          0.2809
         ],
         [
-          0.6853,
-          0.2826
+          0.6289,
+          0.382
         ],
         [
-          0.7226,
-          0.1209
+          0.6733,
+          0.2399
         ],
         [
-          0.7432,
-          0.2099
+          0.6995,
+          0.3389
         ],
         [
-          0.7928,
-          0.2409
+          0.7046,
+          0.4003
         ],
         [
-          0.8648,
-          0.1161
+          0.7249,
+          0.3968
         ],
         [
-          0.9131,
-          0.0359
+          0.7578,
+          0.2608
         ],
         [
-          0.9412,
-          0.0785
+          0.798,
+          0.2422
         ],
         [
-          0.9649,
-          0.0123
+          0.8085,
+          0.2365
         ],
         [
-          0.9969,
-          0.0
+          0.8085,
+          0.2076
+        ],
+        [
+          0.8702,
+          0.3072
+        ],
+        [
+          0.9138,
+          0.3212
+        ],
+        [
+          0.9269,
+          0.3678
+        ],
+        [
+          0.9417,
+          0.5
+        ],
+        [
+          0.9522,
+          0.3384
+        ],
+        [
+          0.97,
+          0.1556
+        ],
+        [
+          0.9899,
+          0.3258
+        ],
+        [
+          0.9992,
+          0.0745
         ],
         [
           1.0,
@@ -41076,9 +41181,9 @@
         "neutral": 0.5593
       },
       "MAD": {
-        "home": 0.6129,
-        "away": 0.4061,
-        "neutral": 0.5083
+        "home": 0.5939,
+        "away": 0.3977,
+        "neutral": 0.4976
       },
       "ULK": {
         "home": 0.6553,
@@ -41092,7 +41197,7 @@
       },
       "HTA": {
         "home": 0.6553,
-        "away": 0.4772,
+        "away": 0.4927,
         "neutral": 0.5656
       },
       "PAN": {
@@ -41123,9 +41228,9 @@
         "neutral": 0.4407
       },
       "MAD": {
-        "home": 0.5322,
-        "away": 0.3727,
-        "neutral": 0.456
+        "home": 0.5353,
+        "away": 0.3614,
+        "neutral": 0.4508
       },
       "ULK": {
         "home": 0.5816,
@@ -41138,9 +41243,9 @@
         "neutral": 0.5144
       },
       "HTA": {
-        "home": 0.6129,
-        "away": 0.3871,
-        "neutral": 0.4997
+        "home": 0.5768,
+        "away": 0.4184,
+        "neutral": 0.4979
       },
       "PAN": {
         "home": 0.5768,
@@ -41165,49 +41270,49 @@
     },
     "MAD": {
       "OLY": {
-        "home": 0.5939,
-        "away": 0.3871,
-        "neutral": 0.4917
+        "home": 0.6023,
+        "away": 0.4061,
+        "neutral": 0.5024
       },
       "PAM": {
-        "home": 0.6273,
-        "away": 0.4678,
-        "neutral": 0.544
+        "home": 0.6386,
+        "away": 0.4647,
+        "neutral": 0.5492
       },
       "ULK": {
         "home": 0.6553,
-        "away": 0.5149,
-        "neutral": 0.5774
+        "away": 0.4741,
+        "neutral": 0.5543
       },
       "ZAL": {
-        "home": 0.6261,
-        "away": 0.4568,
-        "neutral": 0.5433
+        "home": 0.6777,
+        "away": 0.4678,
+        "neutral": 0.5627
       },
       "HTA": {
-        "home": 0.6511,
+        "home": 0.6386,
         "away": 0.4741,
-        "neutral": 0.5643
+        "neutral": 0.5593
       },
       "PAN": {
         "home": 0.6386,
-        "away": 0.4232,
-        "neutral": 0.5252
+        "away": 0.4678,
+        "neutral": 0.5494
       },
       "MCO": {
         "home": 0.6511,
-        "away": 0.4499,
-        "neutral": 0.5467
+        "away": 0.4678,
+        "neutral": 0.554
       },
       "BAR": {
         "home": 0.6553,
-        "away": 0.4605,
-        "neutral": 0.5516
+        "away": 0.4927,
+        "neutral": 0.5656
       },
       "RED": {
-        "home": 0.7333,
-        "away": 0.5115,
-        "neutral": 0.6054
+        "home": 0.7213,
+        "away": 0.5326,
+        "neutral": 0.6184
       }
     },
     "ULK": {
@@ -41222,9 +41327,9 @@
         "neutral": 0.4831
       },
       "MAD": {
-        "home": 0.4851,
+        "home": 0.5259,
         "away": 0.3447,
-        "neutral": 0.4226
+        "neutral": 0.4457
       },
       "ZAL": {
         "home": 0.6023,
@@ -41232,9 +41337,9 @@
         "neutral": 0.5083
       },
       "HTA": {
-        "home": 0.5768,
-        "away": 0.4232,
-        "neutral": 0.5028
+        "home": 0.6029,
+        "away": 0.4388,
+        "neutral": 0.5251
       },
       "PAN": {
         "home": 0.5816,
@@ -41269,9 +41374,9 @@
         "neutral": 0.4856
       },
       "MAD": {
-        "home": 0.5432,
-        "away": 0.3739,
-        "neutral": 0.4567
+        "home": 0.5322,
+        "away": 0.3223,
+        "neutral": 0.4373
       },
       "ULK": {
         "home": 0.5816,
@@ -41279,9 +41384,9 @@
         "neutral": 0.4917
       },
       "HTA": {
-        "home": 0.5939,
+        "home": 0.5436,
         "away": 0.4184,
-        "neutral": 0.5
+        "neutral": 0.488
       },
       "PAN": {
         "home": 0.5768,
@@ -41306,49 +41411,49 @@
     },
     "HTA": {
       "OLY": {
-        "home": 0.5228,
+        "home": 0.5073,
         "away": 0.3447,
         "neutral": 0.4344
       },
       "PAM": {
-        "home": 0.6129,
-        "away": 0.3871,
-        "neutral": 0.5003
+        "home": 0.5816,
+        "away": 0.4232,
+        "neutral": 0.5021
       },
       "MAD": {
         "home": 0.5259,
-        "away": 0.3489,
-        "neutral": 0.4357
+        "away": 0.3614,
+        "neutral": 0.4407
       },
       "ULK": {
-        "home": 0.5768,
-        "away": 0.4232,
-        "neutral": 0.4972
+        "home": 0.5612,
+        "away": 0.3971,
+        "neutral": 0.4749
       },
       "ZAL": {
         "home": 0.5816,
-        "away": 0.4061,
-        "neutral": 0.5
+        "away": 0.4564,
+        "neutral": 0.512
       },
       "PAN": {
-        "home": 0.5725,
-        "away": 0.422,
-        "neutral": 0.4873
+        "home": 0.5816,
+        "away": 0.3871,
+        "neutral": 0.4883
       },
       "MCO": {
-        "home": 0.5768,
-        "away": 0.4232,
-        "neutral": 0.5
+        "home": 0.5537,
+        "away": 0.3871,
+        "neutral": 0.4707
       },
       "BAR": {
-        "home": 0.6023,
-        "away": 0.4184,
-        "neutral": 0.5024
+        "home": 0.578,
+        "away": 0.4275,
+        "neutral": 0.5
       },
       "RED": {
-        "home": 0.6256,
-        "away": 0.4275,
-        "neutral": 0.5294
+        "home": 0.5939,
+        "away": 0.4473,
+        "neutral": 0.5211
       }
     },
     "PAN": {
@@ -41363,9 +41468,9 @@
         "neutral": 0.4888
       },
       "MAD": {
-        "home": 0.5768,
+        "home": 0.5322,
         "away": 0.3614,
-        "neutral": 0.4748
+        "neutral": 0.4506
       },
       "ULK": {
         "home": 0.6129,
@@ -41378,9 +41483,9 @@
         "neutral": 0.5144
       },
       "HTA": {
-        "home": 0.578,
-        "away": 0.4275,
-        "neutral": 0.5127
+        "home": 0.6129,
+        "away": 0.4184,
+        "neutral": 0.5117
       },
       "MCO": {
         "home": 0.6129,
@@ -41410,9 +41515,9 @@
         "neutral": 0.5
       },
       "MAD": {
-        "home": 0.5501,
+        "home": 0.5322,
         "away": 0.3489,
-        "neutral": 0.4533
+        "neutral": 0.446
       },
       "ULK": {
         "home": 0.6273,
@@ -41425,9 +41530,9 @@
         "neutral": 0.5161
       },
       "HTA": {
-        "home": 0.5768,
-        "away": 0.4232,
-        "neutral": 0.5
+        "home": 0.6129,
+        "away": 0.4463,
+        "neutral": 0.5293
       },
       "PAN": {
         "home": 0.5816,
@@ -41457,9 +41562,9 @@
         "neutral": 0.4955
       },
       "MAD": {
-        "home": 0.5395,
+        "home": 0.5073,
         "away": 0.3447,
-        "neutral": 0.4484
+        "neutral": 0.4344
       },
       "ULK": {
         "home": 0.5725,
@@ -41472,9 +41577,9 @@
         "neutral": 0.5024
       },
       "HTA": {
-        "home": 0.5816,
-        "away": 0.3977,
-        "neutral": 0.4976
+        "home": 0.5725,
+        "away": 0.422,
+        "neutral": 0.5
       },
       "PAN": {
         "home": 0.5669,
@@ -41504,9 +41609,9 @@
         "neutral": 0.4544
       },
       "MAD": {
-        "home": 0.4885,
-        "away": 0.2667,
-        "neutral": 0.3946
+        "home": 0.4674,
+        "away": 0.2787,
+        "neutral": 0.3816
       },
       "ULK": {
         "home": 0.5259,
@@ -41519,9 +41624,9 @@
         "neutral": 0.4567
       },
       "HTA": {
-        "home": 0.5725,
-        "away": 0.3744,
-        "neutral": 0.4706
+        "home": 0.5527,
+        "away": 0.4061,
+        "neutral": 0.4789
       },
       "PAN": {
         "home": 0.5259,
@@ -41612,9 +41717,19 @@
         "winner": null
       },
       "3v6": {
-        "games": [],
+        "games": [
+          {
+            "gamecode": 386,
+            "home": "MAD",
+            "away": "HTA",
+            "home_score": 86,
+            "away_score": 82,
+            "winner": "MAD",
+            "date": ""
+          }
+        ],
         "series": [
-          0,
+          1,
           0
         ],
         "higher_seed": "MAD",
@@ -41652,14 +41767,14 @@
     }
   },
   "championship_odds": {
-    "OLY": 24.1,
-    "PAM": 7.4,
-    "MAD": 18.5,
-    "ULK": 13.8,
-    "ZAL": 6.4,
-    "HTA": 8.1,
-    "PAN": 16.1,
-    "MCO": 5.5,
+    "OLY": 23.7,
+    "PAM": 7.3,
+    "MAD": 22.3,
+    "ULK": 14.4,
+    "ZAL": 6.1,
+    "HTA": 5.3,
+    "PAN": 15.7,
+    "MCO": 5.3,
     "BAR": 0.0,
     "RED": 0.0
   },
@@ -41775,6 +41890,22 @@
         "BAR": 0.0,
         "RED": 0.0
       }
+    },
+    {
+      "date": "2026-04-30",
+      "label": "QF Day 4",
+      "odds": {
+        "OLY": 23.7,
+        "PAM": 7.3,
+        "MAD": 22.3,
+        "ULK": 14.4,
+        "ZAL": 6.1,
+        "HTA": 5.3,
+        "PAN": 15.7,
+        "MCO": 5.3,
+        "BAR": 0.0,
+        "RED": 0.0
+      }
     }
   ],
   "playoff_recaps": [
@@ -41790,12 +41921,12 @@
       "pre_game_win_prob": 61.3,
       "is_upset": false,
       "championship_odds_before": {
-        "PAN": 10.9,
-        "MCO": 9.7
-      },
-      "championship_odds_after": {
         "PAN": 16.1,
         "MCO": 5.5
+      },
+      "championship_odds_after": {
+        "PAN": 15.7,
+        "MCO": 5.3
       }
     },
     {
@@ -41830,11 +41961,11 @@
       "pre_game_win_prob": 60.3,
       "is_upset": false,
       "championship_odds_before": {
-        "MCO": 9.7,
+        "MCO": 5.5,
         "BAR": 0.0
       },
       "championship_odds_after": {
-        "MCO": 5.5,
+        "MCO": 5.3,
         "BAR": 0.0
       }
     },
@@ -41855,12 +41986,12 @@
       ],
       "series_label": "OLY leads 1-0",
       "championship_odds_before": {
-        "OLY": 18.0,
-        "MCO": 9.7
-      },
-      "championship_odds_after": {
         "OLY": 24.1,
         "MCO": 5.5
+      },
+      "championship_odds_after": {
+        "OLY": 23.7,
+        "MCO": 5.3
       }
     },
     {
@@ -41880,12 +42011,37 @@
       ],
       "series_label": "PAN leads 1-0",
       "championship_odds_before": {
-        "PAM": 11.9,
-        "PAN": 10.9
-      },
-      "championship_odds_after": {
         "PAM": 7.4,
         "PAN": 16.1
+      },
+      "championship_odds_after": {
+        "PAM": 7.3,
+        "PAN": 15.7
+      }
+    },
+    {
+      "gamecode": 386,
+      "date": "",
+      "round": "QF 3v6 Game 1",
+      "home": "MAD",
+      "away": "HTA",
+      "home_score": 86,
+      "away_score": 82,
+      "winner": "MAD",
+      "pre_game_win_prob": 63.9,
+      "is_upset": false,
+      "series": [
+        1,
+        0
+      ],
+      "series_label": "MAD leads 1-0",
+      "championship_odds_before": {
+        "MAD": 18.5,
+        "HTA": 8.1
+      },
+      "championship_odds_after": {
+        "MAD": 22.3,
+        "HTA": 5.3
       }
     },
     {
@@ -41905,12 +42061,12 @@
       ],
       "series_label": "ULK leads 1-0",
       "championship_odds_before": {
-        "ULK": 11.5,
-        "ZAL": 10.9
-      },
-      "championship_odds_after": {
         "ULK": 13.8,
         "ZAL": 6.4
+      },
+      "championship_odds_after": {
+        "ULK": 14.4,
+        "ZAL": 6.1
       }
     }
   ],
@@ -41919,7 +42075,7 @@
       "team": "OLY",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 24.1,
+      "championship_odds": 23.7,
       "rounds": [
         {
           "round": "play_in_1",
@@ -41944,41 +42100,41 @@
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 78.0,
-          "win_prob": 56.7,
+          "reach_prob": 77.7,
+          "win_prob": 57.0,
           "branches": [
             {
               "opponent": "ULK",
-              "reach_prob_for_opp": 71.1,
-              "win_prob_vs": 57.7
+              "reach_prob_for_opp": 70.4,
+              "win_prob_vs": 58.0
             },
             {
               "opponent": "ZAL",
-              "reach_prob_for_opp": 28.9,
-              "win_prob_vs": 54.0
+              "reach_prob_for_opp": 29.6,
+              "win_prob_vs": 54.8
             }
           ]
         },
         {
           "round": "final",
           "status": "upcoming",
-          "reach_prob": 44.2,
-          "win_prob": 54.4,
+          "reach_prob": 44.3,
+          "win_prob": 53.1,
           "branches": [
             {
               "opponent": "MAD",
-              "reach_prob_for_opp": 35.4,
-              "win_prob_vs": 51.2
+              "reach_prob_for_opp": 41.8,
+              "win_prob_vs": 50.6
             },
             {
               "opponent": "PAN",
-              "reach_prob_for_opp": 32.7,
-              "win_prob_vs": 53.7
+              "reach_prob_for_opp": 31.2,
+              "win_prob_vs": 52.8
             },
             {
-              "opponent": "HTA",
-              "reach_prob_for_opp": 17.3,
-              "win_prob_vs": 60.1
+              "opponent": "PAM",
+              "reach_prob_for_opp": 15.5,
+              "win_prob_vs": 57.8
             }
           ]
         }
@@ -41988,7 +42144,7 @@
       "team": "MAD",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 18.5,
+      "championship_odds": 22.3,
       "rounds": [
         {
           "round": "play_in_1",
@@ -42002,55 +42158,52 @@
         },
         {
           "round": "qf",
-          "status": "upcoming",
-          "reach_prob": 100.0,
-          "win_prob": 65.0,
-          "branches": [
-            {
-              "opponent": "HTA",
-              "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 65.0
-            }
-          ]
+          "status": "in_progress",
+          "actual_opponent": "HTA",
+          "series": [
+            1,
+            0
+          ],
+          "reach_prob": 100.0
         },
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 65.0,
-          "win_prob": 53.8,
+          "reach_prob": 76.9,
+          "win_prob": 55.3,
           "branches": [
             {
               "opponent": "PAN",
-              "reach_prob_for_opp": 67.8,
-              "win_prob_vs": 53.0
+              "reach_prob_for_opp": 67.7,
+              "win_prob_vs": 55.5
             },
             {
               "opponent": "PAM",
-              "reach_prob_for_opp": 32.2,
-              "win_prob_vs": 55.3
+              "reach_prob_for_opp": 32.3,
+              "win_prob_vs": 54.9
             }
           ]
         },
         {
           "round": "final",
           "status": "upcoming",
-          "reach_prob": 34.9,
-          "win_prob": 53.8,
+          "reach_prob": 42.5,
+          "win_prob": 53.2,
           "branches": [
             {
               "opponent": "OLY",
-              "reach_prob_for_opp": 44.7,
-              "win_prob_vs": 48.8
+              "reach_prob_for_opp": 43.5,
+              "win_prob_vs": 49.4
             },
             {
               "opponent": "ULK",
-              "reach_prob_for_opp": 30.9,
-              "win_prob_vs": 60.3
+              "reach_prob_for_opp": 31.3,
+              "win_prob_vs": 54.4
             },
             {
               "opponent": "ZAL",
-              "reach_prob_for_opp": 13.5,
-              "win_prob_vs": 54.8
+              "reach_prob_for_opp": 13.0,
+              "win_prob_vs": 60.1
             }
           ]
         }
@@ -42060,7 +42213,7 @@
       "team": "PAN",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 16.1,
+      "championship_odds": 15.7,
       "rounds": [
         {
           "round": "play_in_1",
@@ -42091,41 +42244,41 @@
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 67.7,
-          "win_prob": 48.5,
+          "reach_prob": 67.2,
+          "win_prob": 46.7,
           "branches": [
             {
               "opponent": "MAD",
-              "reach_prob_for_opp": 65.1,
-              "win_prob_vs": 47.0
+              "reach_prob_for_opp": 77.4,
+              "win_prob_vs": 44.5
             },
             {
               "opponent": "HTA",
-              "reach_prob_for_opp": 34.9,
-              "win_prob_vs": 51.3
+              "reach_prob_for_opp": 22.6,
+              "win_prob_vs": 53.9
             }
           ]
         },
         {
           "round": "final",
           "status": "upcoming",
-          "reach_prob": 32.8,
-          "win_prob": 49.1,
+          "reach_prob": 31.4,
+          "win_prob": 50.0,
           "branches": [
             {
               "opponent": "OLY",
-              "reach_prob_for_opp": 44.0,
-              "win_prob_vs": 46.3
+              "reach_prob_for_opp": 44.1,
+              "win_prob_vs": 47.2
             },
             {
               "opponent": "ULK",
-              "reach_prob_for_opp": 31.4,
-              "win_prob_vs": 52.2
+              "reach_prob_for_opp": 31.0,
+              "win_prob_vs": 51.9
             },
             {
               "opponent": "ZAL",
-              "reach_prob_for_opp": 13.8,
-              "win_prob_vs": 50.0
+              "reach_prob_for_opp": 14.5,
+              "win_prob_vs": 55.1
             }
           ]
         }
@@ -42135,7 +42288,7 @@
       "team": "ULK",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 13.8,
+      "championship_odds": 14.4,
       "rounds": [
         {
           "round": "play_in_1",
@@ -42160,113 +42313,41 @@
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 70.9,
-          "win_prob": 44.0,
+          "reach_prob": 70.7,
+          "win_prob": 43.9,
           "branches": [
             {
               "opponent": "OLY",
-              "reach_prob_for_opp": 78.2,
-              "win_prob_vs": 42.3
+              "reach_prob_for_opp": 77.4,
+              "win_prob_vs": 42.0
             },
             {
               "opponent": "MCO",
-              "reach_prob_for_opp": 21.8,
-              "win_prob_vs": 50.1
+              "reach_prob_for_opp": 22.6,
+              "win_prob_vs": 50.4
             }
           ]
         },
         {
           "round": "final",
           "status": "upcoming",
-          "reach_prob": 31.2,
-          "win_prob": 45.5,
+          "reach_prob": 31.1,
+          "win_prob": 47.6,
           "branches": [
             {
               "opponent": "MAD",
-              "reach_prob_for_opp": 34.7,
-              "win_prob_vs": 39.7
+              "reach_prob_for_opp": 42.8,
+              "win_prob_vs": 45.6
             },
             {
               "opponent": "PAN",
-              "reach_prob_for_opp": 33.0,
-              "win_prob_vs": 47.8
-            },
-            {
-              "opponent": "HTA",
-              "reach_prob_for_opp": 16.5,
-              "win_prob_vs": 46.8
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "team": "HTA",
-      "status": "alive",
-      "eliminated_at": null,
-      "championship_odds": 8.1,
-      "rounds": [
-        {
-          "round": "play_in_1",
-          "status": "unreached",
-          "reach_prob": 0.0
-        },
-        {
-          "round": "play_in_2",
-          "status": "unreached",
-          "reach_prob": 0.0
-        },
-        {
-          "round": "qf",
-          "status": "upcoming",
-          "reach_prob": 100.0,
-          "win_prob": 35.0,
-          "branches": [
-            {
-              "opponent": "MAD",
-              "reach_prob_for_opp": 100.0,
-              "win_prob_vs": 35.0
-            }
-          ]
-        },
-        {
-          "round": "sf",
-          "status": "upcoming",
-          "reach_prob": 35.0,
-          "win_prob": 49.0,
-          "branches": [
-            {
-              "opponent": "PAN",
-              "reach_prob_for_opp": 67.4,
-              "win_prob_vs": 48.7
+              "reach_prob_for_opp": 31.3,
+              "win_prob_vs": 48.1
             },
             {
               "opponent": "PAM",
-              "reach_prob_for_opp": 32.6,
-              "win_prob_vs": 49.6
-            }
-          ]
-        },
-        {
-          "round": "final",
-          "status": "upcoming",
-          "reach_prob": 17.2,
-          "win_prob": 46.6,
-          "branches": [
-            {
-              "opponent": "OLY",
-              "reach_prob_for_opp": 44.6,
-              "win_prob_vs": 39.9
-            },
-            {
-              "opponent": "ULK",
-              "reach_prob_for_opp": 30.0,
-              "win_prob_vs": 53.2
-            },
-            {
-              "opponent": "ZAL",
-              "reach_prob_for_opp": 13.7,
-              "win_prob_vs": 52.8
+              "reach_prob_for_opp": 14.9,
+              "win_prob_vs": 49.8
             }
           ]
         }
@@ -42276,7 +42357,7 @@
       "team": "PAM",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 7.4,
+      "championship_odds": 7.3,
       "rounds": [
         {
           "round": "play_in_1",
@@ -42301,41 +42382,41 @@
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 32.3,
-          "win_prob": 46.7,
+          "reach_prob": 32.8,
+          "win_prob": 46.6,
           "branches": [
             {
               "opponent": "MAD",
-              "reach_prob_for_opp": 64.7,
-              "win_prob_vs": 44.7
+              "reach_prob_for_opp": 75.8,
+              "win_prob_vs": 45.1
             },
             {
               "opponent": "HTA",
-              "reach_prob_for_opp": 35.3,
-              "win_prob_vs": 50.4
+              "reach_prob_for_opp": 24.2,
+              "win_prob_vs": 51.1
             }
           ]
         },
         {
           "round": "final",
           "status": "upcoming",
-          "reach_prob": 15.1,
-          "win_prob": 46.7,
+          "reach_prob": 15.3,
+          "win_prob": 46.3,
           "branches": [
             {
               "opponent": "OLY",
-              "reach_prob_for_opp": 42.9,
-              "win_prob_vs": 43.5
+              "reach_prob_for_opp": 45.0,
+              "win_prob_vs": 42.2
             },
             {
               "opponent": "ULK",
-              "reach_prob_for_opp": 32.5,
-              "win_prob_vs": 47.9
+              "reach_prob_for_opp": 30.4,
+              "win_prob_vs": 50.2
             },
             {
               "opponent": "ZAL",
-              "reach_prob_for_opp": 13.6,
-              "win_prob_vs": 48.5
+              "reach_prob_for_opp": 14.1,
+              "win_prob_vs": 52.1
             }
           ]
         }
@@ -42345,7 +42426,7 @@
       "team": "ZAL",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 6.4,
+      "championship_odds": 6.1,
       "rounds": [
         {
           "round": "play_in_1",
@@ -42370,41 +42451,41 @@
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 29.1,
-          "win_prob": 46.9,
+          "reach_prob": 29.3,
+          "win_prob": 46.1,
           "branches": [
             {
               "opponent": "OLY",
-              "reach_prob_for_opp": 77.5,
-              "win_prob_vs": 46.0
+              "reach_prob_for_opp": 78.4,
+              "win_prob_vs": 45.2
             },
             {
               "opponent": "MCO",
-              "reach_prob_for_opp": 22.5,
-              "win_prob_vs": 49.8
+              "reach_prob_for_opp": 21.6,
+              "win_prob_vs": 49.1
             }
           ]
         },
         {
           "round": "final",
           "status": "upcoming",
-          "reach_prob": 13.6,
-          "win_prob": 48.1,
+          "reach_prob": 13.5,
+          "win_prob": 44.0,
           "branches": [
             {
               "opponent": "MAD",
-              "reach_prob_for_opp": 34.5,
-              "win_prob_vs": 45.2
+              "reach_prob_for_opp": 41.1,
+              "win_prob_vs": 39.9
             },
             {
               "opponent": "PAN",
-              "reach_prob_for_opp": 33.1,
-              "win_prob_vs": 50.0
+              "reach_prob_for_opp": 33.7,
+              "win_prob_vs": 44.9
             },
             {
-              "opponent": "HTA",
-              "reach_prob_for_opp": 17.2,
-              "win_prob_vs": 47.2
+              "opponent": "PAM",
+              "reach_prob_for_opp": 15.9,
+              "win_prob_vs": 47.9
             }
           ]
         }
@@ -42414,7 +42495,7 @@
       "team": "MCO",
       "status": "alive",
       "eliminated_at": null,
-      "championship_odds": 5.5,
+      "championship_odds": 5.3,
       "rounds": [
         {
           "round": "play_in_1",
@@ -42451,41 +42532,110 @@
         {
           "round": "sf",
           "status": "upcoming",
-          "reach_prob": 22.0,
+          "reach_prob": 22.3,
           "win_prob": 50.0,
           "branches": [
             {
               "opponent": "ULK",
-              "reach_prob_for_opp": 70.3,
-              "win_prob_vs": 49.9
+              "reach_prob_for_opp": 71.7,
+              "win_prob_vs": 49.6
             },
             {
               "opponent": "ZAL",
-              "reach_prob_for_opp": 29.7,
-              "win_prob_vs": 50.2
+              "reach_prob_for_opp": 28.3,
+              "win_prob_vs": 50.9
             }
           ]
         },
         {
           "round": "final",
           "status": "upcoming",
-          "reach_prob": 11.0,
-          "win_prob": 47.8,
+          "reach_prob": 11.2,
+          "win_prob": 48.1,
           "branches": [
             {
               "opponent": "MAD",
-              "reach_prob_for_opp": 34.5,
-              "win_prob_vs": 44.9
+              "reach_prob_for_opp": 46.2,
+              "win_prob_vs": 43.2
             },
             {
               "opponent": "PAN",
-              "reach_prob_for_opp": 32.3,
-              "win_prob_vs": 49.3
+              "reach_prob_for_opp": 29.6,
+              "win_prob_vs": 51.2
             },
             {
-              "opponent": "HTA",
-              "reach_prob_for_opp": 18.3,
-              "win_prob_vs": 51.7
+              "opponent": "PAM",
+              "reach_prob_for_opp": 14.3,
+              "win_prob_vs": 55.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "team": "HTA",
+      "status": "alive",
+      "eliminated_at": null,
+      "championship_odds": 5.3,
+      "rounds": [
+        {
+          "round": "play_in_1",
+          "status": "unreached",
+          "reach_prob": 0.0
+        },
+        {
+          "round": "play_in_2",
+          "status": "unreached",
+          "reach_prob": 0.0
+        },
+        {
+          "round": "qf",
+          "status": "in_progress",
+          "actual_opponent": "MAD",
+          "series": [
+            0,
+            1
+          ],
+          "reach_prob": 100.0
+        },
+        {
+          "round": "sf",
+          "status": "upcoming",
+          "reach_prob": 23.1,
+          "win_prob": 47.0,
+          "branches": [
+            {
+              "opponent": "PAN",
+              "reach_prob_for_opp": 65.6,
+              "win_prob_vs": 46.1
+            },
+            {
+              "opponent": "PAM",
+              "reach_prob_for_opp": 34.4,
+              "win_prob_vs": 48.9
+            }
+          ]
+        },
+        {
+          "round": "final",
+          "status": "upcoming",
+          "reach_prob": 10.9,
+          "win_prob": 46.2,
+          "branches": [
+            {
+              "opponent": "OLY",
+              "reach_prob_for_opp": 46.9,
+              "win_prob_vs": 43.5
+            },
+            {
+              "opponent": "ULK",
+              "reach_prob_for_opp": 31.4,
+              "win_prob_vs": 49.0
+            },
+            {
+              "opponent": "ZAL",
+              "reach_prob_for_opp": 11.6,
+              "win_prob_vs": 47.6
             }
           ]
         }
@@ -42604,8 +42754,8 @@
       },
       "winner": null,
       "series_win_prob": {
-        "high": 77.4,
-        "low": 22.6
+        "high": 77.8,
+        "low": 22.2
       },
       "games": [
         {
@@ -42733,7 +42883,7 @@
           {
             "metric": "adj_def",
             "label": "Adj. Defense",
-            "high": 83.1,
+            "high": 83.2,
             "low": 87.3,
             "lower_is_better": true
           },
@@ -42752,8 +42902,8 @@
           {
             "metric": "paint_pct",
             "label": "Paint %",
-            "high": 37.9,
-            "low": 40.2
+            "high": 38.2,
+            "low": 40.0
           },
           {
             "metric": "ft_rate",
@@ -42814,8 +42964,8 @@
       },
       "winner": null,
       "series_win_prob": {
-        "high": 32.6,
-        "low": 67.4
+        "high": 32.7,
+        "low": 67.3
       },
       "games": [
         {
@@ -42963,7 +43113,7 @@
             "metric": "paint_pct",
             "label": "Paint %",
             "high": 40.0,
-            "low": 41.6
+            "low": 41.8
           },
           {
             "metric": "ft_rate",
@@ -43017,30 +43167,27 @@
         "team": "HTA",
         "seed": 6
       },
-      "status": "not_started",
+      "status": "in_progress",
       "wins": {
-        "high": 0,
+        "high": 1,
         "low": 0
       },
       "winner": null,
       "series_win_prob": {
-        "high": 65.1,
-        "low": 34.9
+        "high": 76.7,
+        "low": 23.3
       },
       "games": [
         {
           "game_num": 1,
-          "status": "upcoming",
+          "status": "completed",
+          "date": "",
           "home": "MAD",
           "away": "HTA",
-          "pregame_wp": {
-            "home": 65.1,
-            "away": 34.9
-          },
-          "date": "Apr 29, 2026",
-          "tipoff": "20:45",
-          "arena": "MOVISTAR ARENA",
-          "tipoff_confirmed": true
+          "home_score": 86,
+          "away_score": 82,
+          "winner": "MAD",
+          "gamecode": 386
         },
         {
           "game_num": 2,
@@ -43048,8 +43195,8 @@
           "home": "MAD",
           "away": "HTA",
           "pregame_wp": {
-            "home": 65.1,
-            "away": 34.9
+            "home": 63.9,
+            "away": 36.1
           },
           "date": "May 01, 2026",
           "tipoff": "20:45",
@@ -43090,8 +43237,8 @@
           "home": "MAD",
           "away": "HTA",
           "pregame_wp": {
-            "home": 65.1,
-            "away": 34.9
+            "home": 63.9,
+            "away": 36.1
           },
           "date": "May 12, 2026",
           "tipoff": "00:00",
@@ -43117,7 +43264,28 @@
           "winner": "MAD"
         }
       ],
-      "momentum": null,
+      "momentum": {
+        "checkpoints": [
+          {
+            "label": "Pre-series",
+            "high_wp": 63.7,
+            "low_wp": 36.3
+          },
+          {
+            "label": "After G1",
+            "high_wp": 77.1,
+            "low_wp": 22.9
+          }
+        ],
+        "biggest_swing": {
+          "from_label": "Pre-series",
+          "to_label": "After G1",
+          "game_num": 1,
+          "delta_pct": 13.4,
+          "shifted_to": "high",
+          "winner_team": "MAD"
+        }
+      },
       "tale_of_the_tape": {
         "rows": [
           {
@@ -43129,21 +43297,21 @@
           {
             "metric": "adj_off",
             "label": "Adj. Offense",
-            "high": 88.3,
-            "low": 88.4
+            "high": 88.2,
+            "low": 88.2
           },
           {
             "metric": "adj_def",
             "label": "Adj. Defense",
-            "high": 82.9,
-            "low": 86.5,
+            "high": 82.8,
+            "low": 86.4,
             "lower_is_better": true
           },
           {
             "metric": "adj_net",
             "label": "Adj. Net",
             "high": 5.4,
-            "low": 1.9
+            "low": 1.8
           },
           {
             "metric": "three_pct",
@@ -43216,8 +43384,8 @@
       },
       "winner": null,
       "series_win_prob": {
-        "high": 70.8,
-        "low": 29.2
+        "high": 70.6,
+        "low": 29.4
       },
       "games": [
         {
@@ -43353,7 +43521,7 @@
             "metric": "adj_net",
             "label": "Adj. Net",
             "high": 1.5,
-            "low": 4.0
+            "low": 3.9
           },
           {
             "metric": "three_pct",
@@ -43365,7 +43533,7 @@
             "metric": "paint_pct",
             "label": "Paint %",
             "high": 37.8,
-            "low": 45.9
+            "low": 45.8
           },
           {
             "metric": "ft_rate",
