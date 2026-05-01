@@ -1,28 +1,28 @@
 [
     {
+        "Team": "OLY",
+        "Elo": 1604.9,
+        "Delta": 104.9
+    },
+    {
         "Team": "MAD",
         "Elo": 1604.5,
         "Delta": 104.5
     },
     {
-        "Team": "OLY",
-        "Elo": 1601.2,
-        "Delta": 101.2
-    },
-    {
-        "Team": "MCO",
-        "Elo": 1555.6,
-        "Delta": 55.6
-    },
-    {
         "Team": "PAN",
-        "Elo": 1553.9,
-        "Delta": 53.9
+        "Elo": 1559.2,
+        "Delta": 59.2
     },
     {
         "Team": "ULK",
-        "Elo": 1553.5,
-        "Delta": 53.5
+        "Elo": 1557.4,
+        "Delta": 57.4
+    },
+    {
+        "Team": "MCO",
+        "Elo": 1552.0,
+        "Delta": 52.0
     },
     {
         "Team": "BAR",
@@ -31,8 +31,8 @@
     },
     {
         "Team": "PAM",
-        "Elo": 1531.2,
-        "Delta": 31.2
+        "Elo": 1525.8,
+        "Delta": 25.8
     },
     {
         "Team": "HTA",
@@ -41,8 +41,8 @@
     },
     {
         "Team": "ZAL",
-        "Elo": 1520.8,
-        "Delta": 20.8
+        "Elo": 1517.0,
+        "Delta": 17.0
     },
     {
         "Team": "TEL",
