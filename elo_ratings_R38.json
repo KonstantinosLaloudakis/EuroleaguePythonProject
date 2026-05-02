@@ -1,13 +1,13 @@
 [
     {
+        "Team": "MAD",
+        "Elo": 1607.7,
+        "Delta": 107.7
+    },
+    {
         "Team": "OLY",
         "Elo": 1604.9,
         "Delta": 104.9
-    },
-    {
-        "Team": "MAD",
-        "Elo": 1604.5,
-        "Delta": 104.5
     },
     {
         "Team": "PAN",
@@ -36,8 +36,8 @@
     },
     {
         "Team": "HTA",
-        "Elo": 1525.4,
-        "Delta": 25.4
+        "Elo": 1522.2,
+        "Delta": 22.2
     },
     {
         "Team": "ZAL",

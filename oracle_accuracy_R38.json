@@ -1,38 +1,38 @@
 {
-  "n_games": 502,
-  "accuracy": 64.5,
-  "brier_score": 0.21,
-  "log_loss": 0.6025,
+  "n_games": 503,
+  "accuracy": 64.0,
+  "brier_score": 0.2117,
+  "log_loss": 0.6063,
   "calibration": [
     {
       "Bucket": "50-60%",
       "Count": 155,
-      "Accuracy": 48.4,
-      "AvgConfidence": 56.3
+      "Accuracy": 49.0,
+      "AvgConfidence": 56.4
     },
     {
       "Bucket": "60-70%",
-      "Count": 156,
-      "Accuracy": 60.3,
-      "AvgConfidence": 64.9
+      "Count": 154,
+      "Accuracy": 58.4,
+      "AvgConfidence": 65.0
     },
     {
       "Bucket": "70-80%",
-      "Count": 116,
-      "Accuracy": 73.3,
-      "AvgConfidence": 76.0
+      "Count": 114,
+      "Accuracy": 73.7,
+      "AvgConfidence": 76.1
     },
     {
       "Bucket": "80-90%",
-      "Count": 50,
-      "Accuracy": 92.0,
+      "Count": 57,
+      "Accuracy": 86.0,
       "AvgConfidence": 85.1
     },
     {
       "Bucket": "90%+",
-      "Count": 25,
-      "Accuracy": 96.0,
-      "AvgConfidence": 92.7
+      "Count": 23,
+      "Accuracy": 100.0,
+      "AvgConfidence": 92.9
     }
   ],
   "per_round": [
@@ -59,7 +59,7 @@
     {
       "Round": 5,
       "Games": 10,
-      "Accuracy": 70.0
+      "Accuracy": 60.0
     },
     {
       "Round": 6,
@@ -69,7 +69,7 @@
     {
       "Round": 7,
       "Games": 10,
-      "Accuracy": 80.0
+      "Accuracy": 70.0
     },
     {
       "Round": 8,
@@ -109,7 +109,7 @@
     {
       "Round": 15,
       "Games": 10,
-      "Accuracy": 60.0
+      "Accuracy": 50.0
     },
     {
       "Round": 16,
@@ -159,17 +159,17 @@
     {
       "Round": 25,
       "Games": 10,
-      "Accuracy": 70.0
+      "Accuracy": 60.0
     },
     {
       "Round": 26,
       "Games": 10,
-      "Accuracy": 60.0
+      "Accuracy": 50.0
     },
     {
       "Round": 27,
       "Games": 10,
-      "Accuracy": 40.0
+      "Accuracy": 50.0
     },
     {
       "Round": 28,
@@ -219,7 +219,7 @@
     {
       "Round": 37,
       "Games": 30,
-      "Accuracy": 46.7
+      "Accuracy": 50.0
     },
     {
       "Round": 38,
