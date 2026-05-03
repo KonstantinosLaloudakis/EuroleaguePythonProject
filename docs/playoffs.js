@@ -114,22 +114,25 @@ function seriesProbHCA(teamA, teamB, n) {
 }
 
 // Compute probability of each possible series outcome (e.g. 3-0, 3-1, 3-2, 0-3, ...)
-function seriesOutcomeProbs(teamA, teamB, n) {
+// startWinsA / startWinsB let us resume from the current series score.
+function seriesOutcomeProbs(teamA, teamB, n, startWinsA = 0, startWinsB = 0) {
     const need = Math.ceil(n / 2);
     const homePattern = [true, true, false, false, true];
 
+    // Only simulate games that haven't been played yet.
+    const startGame = startWinsA + startWinsB;
     const gameProbs = [];
-    for (let g = 0; g < n; g++) {
+    for (let g = startGame; g < n; g++) {
         gameProbs.push(homePattern[g]
             ? matchupProb(teamA, teamB, 'home')
             : matchupProb(teamA, teamB, 'away'));
     }
 
     let states = new Map();
-    states.set('0,0', 1.0);
+    states.set(`${startWinsA},${startWinsB}`, 1.0);
     const outcomes = {};           // "3-1" → probability
 
-    for (let g = 0; g < n; g++) {
+    for (let g = 0; g < gameProbs.length; g++) {
         const p = gameProbs[g];
         const next = new Map();
 
@@ -322,7 +325,7 @@ function renderMatchup(round, idx, seriesLen, neutral, label) {
             const nameA = teamA.name.split(' ').pop();
             const nameB = teamB.name.split(' ').pop();
             const scoreText = `${nameA} ${hW} - ${lW} ${nameB}`;
-            const prediction = matchupData.locked ? '' : getPredictedScore(teamA, teamB, seriesLen);
+            const prediction = matchupData.locked ? '' : getPredictedScore(teamA, teamB, seriesLen, hW, lW);
             badgeHTML = `<div class="series-badge">Best of ${seriesLen} · ${scoreText}${prediction}</div>`;
         } else {
             const prediction = getPredictedScore(teamA, teamB, seriesLen);
@@ -399,11 +402,12 @@ function probColor(p) {
 }
 
 // Series length distribution: mini bar chart showing P(in 3), P(in 4), P(in 5)
-function getPredictedScore(teamA, teamB, seriesLen) {
-    const outcomes = seriesOutcomeProbs(teamA, teamB, seriesLen);
+// winsA / winsB: games already won by each side (to resume from current series state)
+function getPredictedScore(teamA, teamB, seriesLen, winsA = 0, winsB = 0) {
+    const outcomes = seriesOutcomeProbs(teamA, teamB, seriesLen, winsA, winsB);
     const need = Math.ceil(seriesLen / 2);
 
-    // Group by series length (combine both winners)
+    // Group by total series length (combine both winners)
     const lengthProbs = {};
     for (const [key, prob] of Object.entries(outcomes)) {
         const [wA, wB] = key.split('-').map(Number);
@@ -417,10 +421,11 @@ function getPredictedScore(teamA, teamB, seriesLen) {
         if (prob > bestProb) { bestLen = Number(len); bestProb = prob; }
     }
 
-    // Build mini bar chart
-    const maxProb = Math.max(...Object.values(lengthProbs));
+    // Build mini bar chart — only show lengths still possible from current state
+    const minLen = Math.max(need, winsA + winsB + 1);
+    const maxProb = Math.max(...Object.values(lengthProbs), 1e-9);
     let html = '<div class="series-len-dist">';
-    for (let g = need; g <= seriesLen; g++) {
+    for (let g = minLen; g <= seriesLen; g++) {
         const p = lengthProbs[g] || 0;
         const pct = (p * 100).toFixed(0);
         const w = (p / maxProb) * 100;
