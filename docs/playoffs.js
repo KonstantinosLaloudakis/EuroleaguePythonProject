@@ -884,8 +884,10 @@ function loadFromURL() {
     
     if (!code) return;
 
-    // Reset first to get clean state
+    // Reset first to get clean state, then re-apply real results so
+    // seriesScore (used for live odds) is preserved before user picks are applied.
     resetBracketSilent();
+    if (_realResults) applyRealResults();
 
     const rounds = [
         { key: 'playin', count: 3 },
