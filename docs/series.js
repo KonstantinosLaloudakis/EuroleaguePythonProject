@@ -177,6 +177,7 @@ function renderTimeline(container, entry) {
     <h2 class="series-section-title">${title}</h2>
     <div class="series-timeline">${boxes}</div>
   `;
+  startCountdowns(container);
 }
 
 function renderGameBox(g, entry) {
@@ -218,6 +219,7 @@ function renderGameBox(g, entry) {
         <div class="series-game-num">${num}</div>
         <div class="series-game-venue">Neutral venue</div>
         <div class="series-game-date">${formatUpcoming(g)}</div>
+        <div class="series-game-countdown" data-tipoff-iso="${buildTipoffISO(g) || ''}"></div>
         ${wpLine}
       </div>
     `;
@@ -231,6 +233,7 @@ function renderGameBox(g, entry) {
       <div class="series-game-num">${num}</div>
       <div class="series-game-venue">${venue}</div>
       <div class="series-game-date">${formatUpcoming(g)}</div>
+      <div class="series-game-countdown" data-tipoff-iso="${buildTipoffISO(g) || ''}"></div>
       ${homeWp != null ? `<div class="series-game-wp">${g.home} ${homeWp.toFixed(0)}% / ${g.away} ${awayWp.toFixed(0)}%</div>` : ''}
     </div>
   `;
@@ -253,6 +256,48 @@ function _parseScheduleDate(str) {
   const mm = _MONTHS_3[m[1]];
   if (!mm) return null;
   return { yyyy: m[3], mm, dd: m[2].padStart(2, '0') };
+}
+
+// Build an ISO-8601 instant from a game's date + tipoff, treating it as CEST (+02:00).
+// Returns null if the data is missing or unconfirmed.
+function buildTipoffISO(g) {
+  if (!g || !g.date) return null;
+  const confirmed = g.tipoff_confirmed !== false;
+  const tipoff = g.tipoff;
+  if (!confirmed || !tipoff || tipoff === '00:00') return null;
+  const parts = _parseScheduleDate(g.date);
+  if (!parts) return null;
+  return `${parts.yyyy}-${parts.mm}-${parts.dd}T${tipoff}:00+02:00`;
+}
+
+// ── Countdown timers ────────────────────────────────────────────────────────
+function _formatCountdown(isoStr) {
+  if (!isoStr) return '';
+  const target = new Date(isoStr);
+  if (isNaN(target.getTime())) return '';
+  const now = Date.now();
+  const diff = target.getTime() - now;
+  if (diff <= 0) return diff > -3600000 ? '⏱ Starting soon' : ''; // hide after 1h past
+  const mins  = Math.floor(diff / 60000);
+  const hours = Math.floor(mins / 60);
+  const days  = Math.floor(hours / 24);
+  if (days >= 2) return `⏳ ${days}d ${hours % 24}h`;
+  if (days === 1) return `⏳ Tomorrow`;
+  if (hours >= 1) return `⏳ Today · ${hours}h ${mins % 60}m`;
+  return `⏳ ${mins}m`;
+}
+
+function startCountdowns(scope) {
+  const root = scope || document;
+  const tick = () => {
+    root.querySelectorAll('.series-game-countdown[data-tipoff-iso]').forEach(el => {
+      el.textContent = _formatCountdown(el.dataset.tipoffIso);
+    });
+  };
+  tick();
+  // Update every minute; store interval id on the root element to avoid duplicates
+  if (root._countdownTimer) clearInterval(root._countdownTimer);
+  root._countdownTimer = setInterval(tick, 60000);
 }
 
 function formatUpcoming(g) {

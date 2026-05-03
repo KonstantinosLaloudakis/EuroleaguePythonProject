@@ -567,6 +567,7 @@ function renderOracleCards(oracle) {
             </div>
             <div class="oracle-predicted">
                 ${isCoinFlip ? '<span class="coin-flip-badge">🪙 Coin flip</span>' : ''}
+                ${!isHomeWinner && !isCoinFlip ? `<span class="coin-flip-badge" style="background:${awayColor}22;color:${awayColor};border-color:${awayColor}55">📡 Away pick</span>` : ''}
                 Predicted: <strong style="color:${isHomeWinner ? homeColor : awayColor}">${winnerName}</strong>
                 <span class="oracle-conf ${confBadgeClass}">${conf}% conf · ±${margin} pts</span>
             </div>
