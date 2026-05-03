@@ -221,6 +221,7 @@ async function init() {
         renderChampionshipOdds(data.championship_odds_history || []);
         renderPlayoffRecaps(data.playoff_recaps || []);
         renderPathToTitle(data.path_to_title || []);
+        renderPlayoffPlayerStats(data.playoff_player_stats || []);
     } catch (err) {
         document.getElementById('bracket').innerHTML =
             `<p style="color:var(--accent-red);padding:1rem">Failed to load data: ${err}</p>`;
@@ -1650,3 +1651,108 @@ window.addEventListener('resize', () => {
     clearTimeout(_resizeTimer);
     _resizeTimer = setTimeout(drawConnectors, 150);
 });
+
+// ── Player of the Playoffs ────────────────────────────────────────────────
+let _poffAll = [];
+let _poffSort = { col: 'avg_pir', asc: false };
+let _poffTeamFilter = '';
+let _poffShowAll = false;
+const POFF_PAGE = 15;
+
+function renderPlayoffPlayerStats(players) {
+    const section = document.getElementById('playoff-players-section');
+    const filter  = document.getElementById('playoff-players-team-filter');
+    if (!section || !players.length) return;
+
+    _poffAll = players;
+    section.style.display = '';
+
+    // Populate team filter dropdown
+    const teams = [...new Set(players.map(p => p.team))].sort();
+    teams.forEach(t => {
+        const opt = document.createElement('option');
+        opt.value = t;
+        opt.textContent = t;
+        filter.appendChild(opt);
+    });
+
+    _renderPoffTable();
+}
+
+function _renderPoffTable() {
+    const tbody = document.getElementById('poff-tbody');
+    const btn   = document.getElementById('poff-show-all-btn');
+    if (!tbody) return;
+
+    let rows = _poffAll.filter(p => !_poffTeamFilter || p.team === _poffTeamFilter);
+
+    rows = [...rows].sort((a, b) => {
+        const va = a[_poffSort.col], vb = b[_poffSort.col];
+        if (typeof va === 'string') return _poffSort.asc ? va.localeCompare(vb) : vb.localeCompare(va);
+        return _poffSort.asc ? va - vb : vb - va;
+    });
+
+    const total   = rows.length;
+    const visible = _poffShowAll ? rows : rows.slice(0, POFF_PAGE);
+
+    tbody.innerHTML = visible.map((p, i) => {
+        const color = TEAM_COLORS[p.team] || '#6b7280';
+        return `<tr>
+            <td style="color:var(--text-muted);font-size:0.78rem">${i + 1}</td>
+            <td>
+                <div class="poff-td-player">
+                    <span class="poff-player-dot" style="background:${color}"></span>
+                    <div>
+                        <div class="poff-name">${p.name}</div>
+                        <div class="poff-team">${p.team}</div>
+                    </div>
+                </div>
+            </td>
+            <td>${p.gp}</td>
+            <td><strong>${p.avg_pir}</strong></td>
+            <td>${p.avg_pts}</td>
+            <td>${p.avg_reb}</td>
+            <td>${p.avg_ast}</td>
+            <td>${p.avg_stl}</td>
+            <td>${p.avg_blk}</td>
+        </tr>`;
+    }).join('');
+
+    // Show/hide expand button
+    if (total > POFF_PAGE) {
+        btn.style.display = '';
+        btn.textContent = _poffShowAll ? `Show top ${POFF_PAGE}` : `Show all ${total} players`;
+    } else {
+        btn.style.display = 'none';
+    }
+
+    // Update sort indicator on headers
+    const allTh = document.querySelectorAll('.poff-table thead th');
+    const colMap = ['', 'name', 'gp', 'avg_pir', 'avg_pts', 'avg_reb', 'avg_ast', 'avg_stl', 'avg_blk'];
+    allTh.forEach((th, i) => {
+        th.classList.remove('poff-sort-active');
+        th.textContent = th.textContent.replace(/ [▲▼]$/, '');
+        if (colMap[i] === _poffSort.col) {
+            th.classList.add('poff-sort-active');
+            th.textContent += _poffSort.asc ? ' ▲' : ' ▼';
+        }
+    });
+}
+
+window.sortPlayoffPlayers = function(col) {
+    _poffSort.asc = _poffSort.col === col ? !_poffSort.asc : col === 'name';
+    _poffSort.col = col;
+    _renderPoffTable();
+};
+
+window.filterPlayoffPlayers = function() {
+    const el = document.getElementById('playoff-players-team-filter');
+    _poffTeamFilter = el ? el.value : '';
+    _poffShowAll = false;
+    _renderPoffTable();
+};
+
+window.togglePlayoffPlayersAll = function() {
+    _poffShowAll = !_poffShowAll;
+    _renderPoffTable();
+};

@@ -209,6 +209,72 @@ def build_player_stats(mvp_data):
     return result
 
 
+def build_playoff_player_stats():
+    """Aggregate per-player averages from playoff games only (Gamecode > 380)."""
+    from collections import defaultdict
+
+    all_stats = load_json('mvp_all_game_stats_2025.json')
+    if not all_stats:
+        return []
+
+    playoff_games = [g for g in all_stats if g.get('Gamecode', 0) > 380]
+    if not playoff_games:
+        return []
+
+    agg = defaultdict(lambda: {
+        'name': '', 'team': '',
+        'pts': [], 'reb': [], 'ast': [], 'stl': [], 'blk': [], 'to_': [], 'pir': [],
+    })
+
+    for game in playoff_games:
+        for side in ('local.players', 'road.players'):
+            for entry in game.get(side, []):
+                p = entry.get('player', {})
+                s = entry.get('stats', {})
+                code = p.get('person', {}).get('code', '')
+                name = p.get('person', {}).get('name', '')
+                team = p.get('club', {}).get('code', '')
+                if not code or not name:
+                    continue
+                # Skip DNPs
+                if s.get('timePlayed', 0) == 0 and s.get('points', 0) == 0 and s.get('valuation', 0) == 0:
+                    continue
+                d = agg[code]
+                d['name'] = name
+                d['team'] = team
+                d['pts'].append(s.get('points', 0))
+                d['reb'].append(s.get('totalRebounds', 0))
+                d['ast'].append(s.get('assistances', 0))
+                d['stl'].append(s.get('steals', 0))
+                d['blk'].append(s.get('blocksFavour', 0))
+                d['to_'].append(s.get('turnovers', 0))
+                d['pir'].append(s.get('valuation', 0))
+
+    def avg(lst): return round(sum(lst) / len(lst), 1) if lst else 0.0
+
+    result = []
+    for code, d in agg.items():
+        gp = len(d['pts'])
+        if gp < 1:
+            continue
+        result.append({
+            'code': code,
+            'name': d['name'],
+            'team': d['team'],
+            'gp': gp,
+            'avg_pts': avg(d['pts']),
+            'avg_reb': avg(d['reb']),
+            'avg_ast': avg(d['ast']),
+            'avg_stl': avg(d['stl']),
+            'avg_blk': avg(d['blk']),
+            'avg_to':  avg(d['to_']),
+            'avg_pir': avg(d['pir']),
+        })
+
+    result.sort(key=lambda x: -x['avg_pir'])
+    return result
+
+
 # ── Shot stats aggregation ────────────────────────────────────────────────
 def build_shot_stats():
     """Aggregate shot data by zone for league, team, and player breakdowns."""
@@ -3221,6 +3287,7 @@ def main():
         'playoff_recaps': playoff_recaps,
         'path_to_title': path_to_title,
         'series': series_data,
+        'playoff_player_stats': build_playoff_player_stats(),
     }
 
     # ── Write output ─────────────────────────────────────────────────────────
