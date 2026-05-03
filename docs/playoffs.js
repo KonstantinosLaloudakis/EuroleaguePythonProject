@@ -338,7 +338,25 @@ function renderMatchup(round, idx, seriesLen, neutral, label) {
             const nameB = teamB.name.split(' ').pop();
             const scoreText = `${nameA} ${hW} - ${lW} ${nameB}`;
             const prediction = matchupData.locked ? '' : getPredictedScore(teamA, teamB, seriesLen, hW, lW);
-            badgeHTML = `<div class="series-badge">Best of ${seriesLen} · ${scoreText}${prediction}</div>`;
+
+            // Clinch probability: chance the series ends in the very next game
+            let clinchHTML = '';
+            if (!matchupData.locked && teamA && teamB) {
+                const need = Math.ceil(seriesLen / 2);
+                const nextIdx = hW + lW;
+                const qfHomePattern = [true, true, false, false, true]; // high seed home: G1,G2,G5
+                const highIsHome = nextIdx < qfHomePattern.length ? qfHomePattern[nextIdx] : true;
+                const venue = neutral ? 'neutral' : (highIsHome ? 'home' : 'away');
+                const pHigh = matchupProb(teamA, teamB, venue);
+                const aCanClinch = hW === need - 1;
+                const bCanClinch = lW === need - 1;
+                if (aCanClinch || bCanClinch) {
+                    let clinchP = aCanClinch && bCanClinch ? 1 : aCanClinch ? pHigh : 1 - pHigh;
+                    clinchHTML = `<div class="clinch-prob">🏁 Clinch next: ${(clinchP * 100).toFixed(0)}%</div>`;
+                }
+            }
+
+            badgeHTML = `<div class="series-badge">Best of ${seriesLen} · ${scoreText}${clinchHTML}${prediction}</div>`;
         } else {
             const prediction = getPredictedScore(teamA, teamB, seriesLen);
             badgeHTML = `<div class="series-badge">Best of ${seriesLen} · HCA 2-2-1<div class="series-prediction">${prediction}</div></div>`;
