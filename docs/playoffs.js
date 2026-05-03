@@ -45,6 +45,7 @@ let _champion = null;
 let _matchupProbs = {};  // pre-computed pairwise probabilities from backend
 let _realResults = null;  // locked playoff results from backend
 let _serverOdds = null;   // server-computed championship odds (authoritative initial view)
+let _seriesWinProbs = {}; // live series win probs from backend, keyed by slot id (qf1..qf4 etc)
 let _hasUserInteracted = false;  // set true on bracket click — switches MC to live sim
 
 // ── Elo win probability (fallback) ──────────────────────────────────────
@@ -184,6 +185,16 @@ async function init() {
         _realResults = data.playoff_results || null;
         _serverOdds = data.championship_odds || null;
 
+        // Extract per-slot series win probabilities from series hub data.
+        // These are computed by the backend accounting for games already played.
+        _seriesWinProbs = {};
+        const seriesData = data.series || {};
+        for (const [slotId, entry] of Object.entries(seriesData)) {
+            if (entry && entry.series_win_prob) {
+                _seriesWinProbs[slotId] = entry.series_win_prob;
+            }
+        }
+
         // Top 10 teams seeded 1-10
         _seeded = _teams.slice(0, 10).map((t, i) => ({
             ...t,
@@ -274,7 +285,20 @@ function renderMatchup(round, idx, seriesLen, neutral, label) {
     let probA = null, probB = null;
     if (teamA && teamB) {
         if (seriesLen > 1) {
-            probA = seriesProbHCA(teamA, teamB, seriesLen);
+            // For in-progress (live) series that haven't been decided yet,
+            // prefer the backend's series win probability which accounts for
+            // games already played (e.g. a 2-0 lead drastically shifts odds).
+            // Fall back to the from-scratch DP only if no live data is available.
+            const slotId = _seriesSlotId(round, idx);
+            const liveProbs = slotId && !m.locked && m.seriesScore &&
+                              (m.seriesScore[0] > 0 || m.seriesScore[1] > 0)
+                              ? _seriesWinProbs[slotId] : null;
+            if (liveProbs && liveProbs.high != null && liveProbs.low != null) {
+                // Backend uses high_seed/low_seed ordering; teamA is the higher seed (a)
+                probA = liveProbs.high / 100;
+            } else {
+                probA = seriesProbHCA(teamA, teamB, seriesLen);
+            }
         } else {
             probA = matchupProb(teamA, teamB, neutral ? 'neutral' : 'home');
         }
