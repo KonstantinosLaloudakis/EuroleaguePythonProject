@@ -61,6 +61,7 @@ function renderSeries(root, entry, dashboard) {
     <section id="series-hero" class="series-section"></section>
     <section id="series-tale" class="series-section"></section>
     <section id="series-momentum" class="series-section"></section>
+    <section id="series-simulate" class="series-section"></section>
     <section id="series-timeline" class="series-section"></section>
     <section id="series-h2h" class="series-section"></section>
     <section id="series-recaps" class="series-section"></section>
@@ -68,6 +69,7 @@ function renderSeries(root, entry, dashboard) {
   renderHero(document.getElementById('series-hero'), entry);
   renderTaleOfTheTape(document.getElementById('series-tale'), entry);
   renderMomentum(document.getElementById('series-momentum'), entry);
+  renderSimulate(document.getElementById('series-simulate'), entry, dashboard);
   renderTimeline(document.getElementById('series-timeline'), entry);
   renderH2H(document.getElementById('series-h2h'), entry);
   renderRecaps(document.getElementById('series-recaps'), entry, dashboard);
@@ -563,6 +565,138 @@ function _renderMomentumCallout(swing) {
     <div class="momentum-callout">
       <strong>Biggest swing:</strong>
       G${swing.game_num} — ${winner} win shifted series WP +${swing.delta_pct}%
+    </div>
+  `;
+}
+
+// ── Simulate From Here ─────────────────────────────────────────────────────
+// Port of seriesOutcomeProbs() from playoffs.js, self-contained in series.js.
+// Computes the probability of every possible final score from the current
+// series state (winsHigh, winsLow) using the matchup probs from dashboard.json.
+
+function computeOutcomeProbs(entry, matchupProbs) {
+  const high = entry.high_seed && entry.high_seed.team;
+  const low  = entry.low_seed  && entry.low_seed.team;
+  if (!high || !low) return null;
+
+  const fmt        = entry.format || 'best_of_5';
+  const targetWins = fmt === 'single_game' ? 1 : 3;
+  const pattern    = entry.home_pattern || ['high', 'high', 'low', 'low', 'high'];
+  const wH = (entry.wins && entry.wins.high) || 0;
+  const wL = (entry.wins && entry.wins.low)  || 0;
+
+  const pair = ((matchupProbs || {})[high] || {})[low] || {};
+  const getP = slot => {
+    if (slot === 'high')    return pair.home    != null ? pair.home    : 0.5;
+    if (slot === 'low')     return pair.away    != null ? pair.away    : 0.5;
+    /* neutral */           return pair.neutral != null ? pair.neutral : 0.5;
+  };
+
+  const gamesPlayed = wH + wL;
+  const remaining   = pattern.slice(gamesPlayed);
+  const outcomes    = {};
+  let   states      = new Map([[`${wH},${wL}`, 1.0]]);
+
+  for (const slot of remaining) {
+    const p    = getP(slot);
+    const next = new Map();
+    for (const [key, prob] of states) {
+      const [a, b] = key.split(',').map(Number);
+
+      const a1 = a + 1;
+      if (a1 >= targetWins) {
+        const k = `${a1}-${b}`;
+        outcomes[k] = (outcomes[k] || 0) + prob * p;
+      } else {
+        const k = `${a1},${b}`;
+        next.set(k, (next.get(k) || 0) + prob * p);
+      }
+
+      const b1 = b + 1;
+      if (b1 >= targetWins) {
+        const k = `${a}-${b1}`;
+        outcomes[k] = (outcomes[k] || 0) + prob * (1 - p);
+      } else {
+        const k = `${a},${b1}`;
+        next.set(k, (next.get(k) || 0) + prob * (1 - p));
+      }
+    }
+    states = next;
+  }
+  return outcomes;
+}
+
+function renderSimulate(container, entry, dashboard) {
+  if (!container) return;
+
+  // Only render for in-progress series (has games played, not yet complete)
+  const status = entry.status;
+  if (status !== 'in_progress') return;
+  const wH = (entry.wins && entry.wins.high) || 0;
+  const wL = (entry.wins && entry.wins.low)  || 0;
+  if (wH === 0 && wL === 0) return; // technically in_progress but no games yet
+
+  const high    = entry.high_seed && entry.high_seed.team;
+  const low     = entry.low_seed  && entry.low_seed.team;
+  const colorH  = teamColor(high);
+  const colorL  = teamColor(low);
+  const nameH   = teamName(high);
+  const nameL   = teamName(low);
+  const matchupProbs = (dashboard && dashboard.playoff_matchup_probs) || {};
+  const outcomes = computeOutcomeProbs(entry, matchupProbs);
+  if (!outcomes || Object.keys(outcomes).length === 0) return;
+
+  const targetWins = entry.format === 'single_game' ? 1 : 3;
+
+  // Sort outcomes: high-seed wins first (desc prob), then low-seed wins (desc prob)
+  const highWins = Object.entries(outcomes)
+    .filter(([k]) => Number(k.split('-')[0]) >= targetWins)
+    .sort((a, b) => b[1] - a[1]);
+  const lowWins = Object.entries(outcomes)
+    .filter(([k]) => Number(k.split('-')[1]) >= targetWins)
+    .sort((a, b) => b[1] - a[1]);
+  const sorted = [...highWins, ...lowWins];
+
+  const maxProb = Math.max(...sorted.map(([, p]) => p), 1e-9);
+  const probHighTotal = highWins.reduce((s, [, p]) => s + p, 0);
+
+  const bars = sorted.map(([key, prob]) => {
+    const [wA, wB] = key.split('-').map(Number);
+    const isHighWin = wA >= targetWins;
+    const color = isHighWin ? colorH : colorL;
+    const winner = isHighWin ? nameH : nameL;
+    const pct = (prob * 100).toFixed(1);
+    const barW = (prob / maxProb * 100).toFixed(1);
+    const label = isHighWin ? `${nameH} ${wA}–${wB}` : `${nameL} ${wB}–${wA}`;
+    return `
+      <div class="sim-bar-row">
+        <div class="sim-bar-label">${label}</div>
+        <div class="sim-bar-track">
+          <div class="sim-bar-fill" style="width:${barW}%;background:${color}"></div>
+        </div>
+        <div class="sim-bar-pct">${pct}%</div>
+      </div>`;
+  }).join('');
+
+  const currentScore = `${nameH} leads ${wH}–${wL}`;
+  const highPctStr   = (probHighTotal * 100).toFixed(1);
+  const lowPctStr    = ((1 - probHighTotal) * 100).toFixed(1);
+
+  container.innerHTML = `
+    <div class="stat-card sim-card">
+      <div class="sim-header">
+        <h3>🎲 Simulate From Here</h3>
+        <span class="sim-subhead">From ${currentScore} · Projected outcomes</span>
+      </div>
+      <div class="sim-summary">
+        <span style="color:${colorH}">${nameH}</span> wins series:
+        <strong style="color:${colorH}">${highPctStr}%</strong>
+        &nbsp;·&nbsp;
+        <span style="color:${colorL}">${nameL}</span> wins series:
+        <strong style="color:${colorL}">${lowPctStr}%</strong>
+      </div>
+      <div class="sim-bars">${bars}</div>
+      <div class="sim-note">Probabilities computed from pre-series matchup model, resuming from current score.</div>
     </div>
   `;
 }
