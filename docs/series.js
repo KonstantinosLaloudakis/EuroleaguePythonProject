@@ -274,9 +274,13 @@ function formatUpcoming(g) {
   const dt = new Date(iso);
   if (isNaN(dt.getTime())) return `${g.date} · ${tipoff}`;
 
-  // Format in the home arena's local timezone. Neutral/F4 games fall back to CET.
+  // 2025 Final Four venue: Barclays Arena, Hamburg — UTC+2 (CEST)
+  // Update this constant each season to reflect the host city's timezone.
+  const F4_VENUE_TIMEZONE = 'Europe/Berlin';
+
+  // Format in the home arena's local timezone; neutral/F4 games use venue timezone.
   const tz = (typeof TEAM_TIMEZONES !== 'undefined' && TEAM_TIMEZONES[g.home])
-             || 'Europe/Berlin';
+             || F4_VENUE_TIMEZONE;
   const dateLabel = dt.toLocaleDateString('en-US', {
     weekday: 'short', month: 'short', day: 'numeric', timeZone: tz,
   });

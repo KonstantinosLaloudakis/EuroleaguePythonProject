@@ -47,6 +47,7 @@ let _realResults = null;  // locked playoff results from backend
 let _serverOdds = null;   // server-computed championship odds (authoritative initial view)
 let _seriesWinProbs = {}; // live series win probs from backend, keyed by slot id (qf1..qf4 etc)
 let _hasUserInteracted = false;  // set true on bracket click — switches MC to live sim
+let _currentRound = 0;           // current season round, used to invalidate stale localStorage brackets
 
 // ── Elo win probability (fallback) ──────────────────────────────────────
 function eloWinProb(eloA, eloB, neutral = false) {
@@ -187,6 +188,7 @@ async function init() {
         _matchupProbs = data.playoff_matchup_probs || {};
         _realResults = data.playoff_results || null;
         _serverOdds = data.championship_odds || null;
+        _currentRound = data.round || 0;
 
         // Extract per-slot series win probabilities from series hub data.
         // These are computed by the backend accounting for games already played.
@@ -875,12 +877,15 @@ function updateURL() {
     }
     history.replaceState(null, '', url);
 
-    // Update LocalStorage
+    // Update LocalStorage — store bracket alongside the current round so stale
+    // picks from a previous round are never silently applied to a new bracket.
     try {
         if (hasPicks) {
             localStorage.setItem('euroleague_bracket', code);
+            localStorage.setItem('euroleague_bracket_round', String(_currentRound || 0));
         } else {
             localStorage.removeItem('euroleague_bracket');
+            localStorage.removeItem('euroleague_bracket_round');
         }
     } catch (e) {
         // Ignore errors if localStorage is blocked (e.g. incognito)
@@ -893,10 +898,17 @@ function loadFromURL() {
     
     if (!code) {
         try {
-            code = localStorage.getItem('euroleague_bracket');
+            const storedRound = localStorage.getItem('euroleague_bracket_round');
+            // Invalidate if the stored bracket is from a different round
+            if (storedRound != null && String(_currentRound || 0) !== storedRound) {
+                localStorage.removeItem('euroleague_bracket');
+                localStorage.removeItem('euroleague_bracket_round');
+            } else {
+                code = localStorage.getItem('euroleague_bracket');
+            }
         } catch (e) {}
     }
-    
+
     if (!code) return;
 
     // Reset first to get clean state, then re-apply real results so
@@ -1203,7 +1215,7 @@ function renderPlayoffRecaps(recaps) {
                 <span class="recap-badge round-badge">${r.round}</span>
                 ${r.series_label ? `<span>${r.series_label}</span>` : ''}
                 ${r.is_upset ? '<span class="recap-badge upset-badge">UPSET</span>' : ''}
-                <span>Win prob: ${r.pre_game_win_prob.toFixed(0)}%</span>
+                ${r.pre_game_win_prob != null ? `<span>Win prob: ${r.pre_game_win_prob.toFixed(0)}%</span>` : ''}
                 ${r.date ? `<span>${r.date}</span>` : ''}
                 ${replayHTML}
                 ${oddsHTML ? `<span style="margin-left:auto">${oddsHTML}</span>` : ''}
