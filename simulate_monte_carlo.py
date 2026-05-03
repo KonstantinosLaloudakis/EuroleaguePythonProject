@@ -288,7 +288,11 @@ def run_monte_carlo(num_simulations=10000):
         return
 
     # 3. Simulate
-    np.random.seed(42) # For reproducibility
+    # Seed from the round number so each round's simulations are reproducible
+    # but different from every other round (not stuck at a single fixed outcome).
+    _suffix = os.environ.get('EUROLEAGUE_ROUND_SUFFIX', '')
+    _round_num = int(_suffix.replace('_R', '')) if _suffix else None
+    np.random.seed(_round_num)  # None = truly random each run
     
     sim_wins = np.tile(base_wins, (num_simulations, 1))
     sim_pd = np.tile(base_pd, (num_simulations, 1))

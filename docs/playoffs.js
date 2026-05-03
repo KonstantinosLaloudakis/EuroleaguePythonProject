@@ -300,7 +300,17 @@ function renderMatchup(round, idx, seriesLen, neutral, label) {
                 // Backend uses high_seed/low_seed ordering; teamA is the higher seed (a)
                 probA = liveProbs.high / 100;
             } else {
-                probA = seriesProbHCA(teamA, teamB, seriesLen);
+                // No live backend probs — compute from the current series score so the
+                // % badge stays consistent with the In-3/4/5 length distribution chart.
+                const [wA, wB] = (m.seriesScore && !m.locked) ? m.seriesScore : [0, 0];
+                if (wA > 0 || wB > 0) {
+                    const need = Math.ceil(seriesLen / 2);
+                    const outcomes = seriesOutcomeProbs(teamA, teamB, seriesLen, wA, wB);
+                    probA = Object.entries(outcomes).reduce((sum, [k, p]) =>
+                        sum + (Number(k.split('-')[0]) >= need ? p : 0), 0);
+                } else {
+                    probA = seriesProbHCA(teamA, teamB, seriesLen);
+                }
             }
         } else {
             probA = matchupProb(teamA, teamB, neutral ? 'neutral' : 'home');

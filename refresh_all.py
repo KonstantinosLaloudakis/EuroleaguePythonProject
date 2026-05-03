@@ -198,6 +198,8 @@ def main():
         print(f"\n{BOLD}📦 PHASE 5: Git Automation{RESET}")
         import glob
         files_to_add = glob.glob(f"*{round_suffix}.png") + glob.glob(f"*{round_suffix}.json")
+        # Always include the dashboard export — it doesn't carry a round suffix
+        files_to_add += glob.glob('docs/data/current/*.json')
         if files_to_add:
             round_num = round_suffix.replace('_R', '')
             print(f"{CYAN}Staging {len(files_to_add)} files for Round {round_num}...{RESET}")
