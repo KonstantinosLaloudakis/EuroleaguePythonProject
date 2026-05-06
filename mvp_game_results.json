@@ -3129,11 +3129,11 @@
     },
     {
         "GameCode":392,
-        "LocalTeam":"UNKNOWN",
-        "RoadTeam":"UNKNOWN",
-        "LocalScore":0.0,
-        "RoadScore":0.0,
-        "Winner":"UNKNOWN"
+        "LocalTeam":"MCO",
+        "RoadTeam":"OLY",
+        "LocalScore":82.0,
+        "RoadScore":105.0,
+        "Winner":"OLY"
     },
     {
         "GameCode":393,
@@ -3145,22 +3145,14 @@
     },
     {
         "GameCode":394,
-        "LocalTeam":"UNKNOWN",
-        "RoadTeam":"UNKNOWN",
-        "LocalScore":0.0,
-        "RoadScore":0.0,
-        "Winner":"UNKNOWN"
+        "LocalTeam":"HTA",
+        "RoadTeam":"MAD",
+        "LocalScore":76.0,
+        "RoadScore":69.0,
+        "Winner":"HTA"
     },
     {
         "GameCode":395,
-        "LocalTeam":"UNKNOWN",
-        "RoadTeam":"UNKNOWN",
-        "LocalScore":0.0,
-        "RoadScore":0.0,
-        "Winner":"UNKNOWN"
-    },
-    {
-        "GameCode":396,
         "LocalTeam":"UNKNOWN",
         "RoadTeam":"UNKNOWN",
         "LocalScore":0.0,
@@ -3185,14 +3177,6 @@
     },
     {
         "GameCode":399,
-        "LocalTeam":"UNKNOWN",
-        "RoadTeam":"UNKNOWN",
-        "LocalScore":0.0,
-        "RoadScore":0.0,
-        "Winner":"UNKNOWN"
-    },
-    {
-        "GameCode":400,
         "LocalTeam":"UNKNOWN",
         "RoadTeam":"UNKNOWN",
         "LocalScore":0.0,

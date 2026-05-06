@@ -5892,7 +5892,7 @@
     "arenaname": "ARENA BOTEVGRAD",
     "confirmeddate": "true",
     "confirmedtime": "true",
-    "played": "false"
+    "played": "true"
   },
   {
     "gameday": "43",
@@ -5922,22 +5922,7 @@
     "arenaname": "SALLE GASTON MEDECIN",
     "confirmeddate": "true",
     "confirmedtime": "true",
-    "played": "false"
-  },
-  {
-    "gameday": "44",
-    "round": "PO",
-    "date": "May 07, 2026",
-    "startime": "19:30",
-    "gamecode": "E2025_396",
-    "hometeam": "AS MONACO",
-    "homecode": "MCO",
-    "awayteam": "OLYMPIACOS PIRAEUS",
-    "awaycode": "OLY",
-    "arenaname": "SALLE GASTON MEDECIN",
-    "confirmeddate": "true",
-    "confirmedtime": "true",
-    "played": "false"
+    "played": "true"
   },
   {
     "gameday": "44",
@@ -5995,21 +5980,6 @@
     "awayteam": "ZALGIRIS KAUNAS",
     "awaycode": "ZAL",
     "arenaname": "ULKER SPORTS AND EVENT HALL",
-    "confirmeddate": "false",
-    "confirmedtime": "false",
-    "played": "false"
-  },
-  {
-    "gameday": "45",
-    "round": "PO",
-    "date": "May 12, 2026",
-    "startime": "00:00",
-    "gamecode": "E2025_400",
-    "hometeam": "OLYMPIACOS PIRAEUS",
-    "homecode": "OLY",
-    "awayteam": "AS MONACO",
-    "awaycode": "MCO",
-    "arenaname": "PEACE AND FRIENDSHIP STADIUM",
     "confirmeddate": "false",
     "confirmedtime": "false",
     "played": "false"
