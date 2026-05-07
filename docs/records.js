@@ -137,10 +137,10 @@ function renderCard(rows, title, sub, isCareer, fmt) {
         : `<tr><th>#</th><th>Player · Season</th><th>Team</th><th>GP</th><th>${statWord}</th></tr>`;
 
     const trows = rows.map((r, i) => {
-        const hidden = i >= TOP_INITIAL ? ' hidden' : '';
+        const cls = [rankCls(i), i >= TOP_INITIAL ? 'hidden' : ''].filter(Boolean).join(' ');
         const meta   = isCareer ? `${r.seasons} season${r.seasons !== 1 ? 's' : ''}` : r.season;
         const col3   = isCareer ? r.seasons : (r.team_code || '—');
-        return `<tr class="${rankCls(i)}${hidden}">
+        return `<tr class="${cls}">
           <td class="${rankCls(i)}">${i + 1}</td>
           <td>
             <span class="p-name"><a href="player.html?code=${r.code}">${r.name}</a></span>
