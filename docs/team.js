@@ -233,7 +233,7 @@ function renderContributors(teamCode) {
     el.innerHTML = players.map(p => `
         <div class="contributor-row">
             <div>
-                <div class="contributor-name">${p.name}</div>
+                <div class="contributor-name"><a href="player.html?code=${p.code}" style="text-decoration:none;color:inherit">${p.name}</a></div>
                 <div class="contributor-pos">${p.position || ''} · ${p.gp} GP</div>
             </div>
             <div class="contributor-stats">
