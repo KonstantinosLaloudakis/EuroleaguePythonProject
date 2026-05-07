@@ -86,7 +86,8 @@ def main():
         )))
         results.append(('Fetch Player Career Stats', run_step(
             'Fetching all-season player career stats from Euroleague API',
-            'fetch_player_career_stats.py'
+            'fetch_player_career_stats.py',
+            ['--force']
         )))
         results.append(('Parse Game Data', run_step(
             'Parsing game results',
