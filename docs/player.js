@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     el.innerHTML = renderHero(player) + renderChart(player.seasons) + renderTableSection(player);
     setupTabs(player);
     setupSort(player);
-    setupSearch(careerData.index);
 });
 
 // ── Hero card ──────────────────────────────────────────────────────────────────
