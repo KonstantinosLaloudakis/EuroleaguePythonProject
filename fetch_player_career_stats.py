@@ -7,8 +7,8 @@ from euroleague_api.player_stats import PlayerStats
 OUT_FULL  = os.path.join('docs', 'data', 'current', 'player_career_stats.json')
 OUT_INDEX = os.path.join('docs', 'data', 'current', 'player_index.json')
 
-# Seasons: 2007-08 through 2024-25 (19 seasons)
-SEASONS = list(range(2007, 2025))
+# Seasons: 2007-08 through 2025-26 (19 seasons)
+SEASONS = list(range(2007, 2026))
 
 
 def season_label(code):
