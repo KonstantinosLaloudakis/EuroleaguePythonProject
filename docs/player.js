@@ -78,7 +78,7 @@ function renderChart(seasons) {
         const isCurrent = s.season_code === CURRENT_SEASON_CODE;
         const isPeak    = s.pir === peak && peak > 0;
         const fill  = isCurrent ? '#38bdf8' : isPeak ? '#818cf8' : '#2563eb';
-        const lbl   = s.season.slice(2, 4) + '-' + s.season.slice(7, 9);
+        const lbl   = s.season.slice(2, 4) + '-' + s.season.slice(5, 7);
         return `<rect x="${x}" y="${y}" width="${W_BAR}" height="${h}" fill="${fill}" rx="2"/>
                 <text x="${x + W_BAR / 2}" y="${H + 14}" text-anchor="middle" fill="#475569" font-size="7">${lbl}</text>`;
     }).join('');
