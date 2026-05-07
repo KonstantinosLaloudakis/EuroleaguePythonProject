@@ -93,12 +93,11 @@ def fetch_career_stats():
             df[final_col] = df[raw_col].apply(pct_to_float)
             df.drop(columns=[raw_col], inplace=True)
 
-    # We use 2P% as fg_pct (field goals inside the arc) — matches task spec fg_pct
-    if 'fg2_pct' in df.columns:
-        df['fg_pct'] = df['fg2_pct']
-
+    # The Euroleague API provides no overall FG% column — only twoPointersPercentage,
+    # threePointersPercentage, and freeThrowsPercentage. fg2_pct (2P%) is exposed as-is;
+    # the frontend should label it "2P%" rather than "FG%".
     stat_cols = ['gp', 'ppg', 'rpg', 'oreb', 'dreb', 'apg',
-                 'spg', 'bpg', 'tpg', 'fg_pct', 'fg3_pct', 'ft_pct', 'pir']
+                 'spg', 'bpg', 'tpg', 'fg2_pct', 'fg3_pct', 'ft_pct', 'pir']
 
     players_dict = {}
     index_list   = []
