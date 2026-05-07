@@ -6,7 +6,7 @@ let careerData = null;
 
 document.addEventListener('DOMContentLoaded', async () => {
     const code = new URLSearchParams(window.location.search).get('code');
-    if (!code) { showError('No player code in URL. Try player.html?code=P123456'); return; }
+    if (!code) { await showWelcome(); return; }
 
     try {
         careerData = await fetch(DATA_URL).then(r => r.json());
@@ -225,6 +225,69 @@ function setupSearch(index) {
         const first = dropdown.querySelector('.search-item');
         if (first) first.click();
     });
+}
+
+async function showWelcome() {
+    document.title = 'Player Search — EL Analytics';
+    document.getElementById('bc-name').textContent = 'Search';
+    const el = document.getElementById('player-content');
+    el.innerHTML = `
+    <div style="max-width:480px;margin:60px auto;text-align:center">
+      <div style="font-size:36px;margin-bottom:12px">🏀</div>
+      <h2 style="font-size:20px;font-weight:700;color:var(--text-primary);margin-bottom:6px">Player Career Search</h2>
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:24px">
+        1,148 players · 19 seasons · 2007–2025
+      </p>
+      <div style="position:relative">
+        <input id="welcome-search" type="text" placeholder="Type a player name…"
+          autocomplete="off"
+          style="width:100%;padding:12px 16px;font-size:15px;font-family:inherit;
+                 background:var(--bg-secondary);border:1px solid var(--border);
+                 border-radius:10px;color:var(--text-primary);outline:none;box-sizing:border-box">
+        <div id="welcome-dropdown"
+          style="display:none;position:absolute;top:calc(100% + 6px);left:0;right:0;
+                 background:var(--bg-secondary);border:1px solid var(--border);
+                 border-radius:10px;max-height:300px;overflow-y:auto;
+                 box-shadow:0 8px 24px rgba(0,0,0,.5);z-index:10;text-align:left"></div>
+      </div>
+    </div>`;
+
+    let index = [];
+    try {
+        const data = await fetch(DATA_URL).then(r => r.json());
+        index = data.index;
+        careerData = data;
+    } catch { return; }
+
+    const input = document.getElementById('welcome-search');
+    const drop  = document.getElementById('welcome-dropdown');
+    input.focus();
+
+    input.addEventListener('input', () => {
+        const q = input.value.trim().toLowerCase();
+        drop.innerHTML = '';
+        if (q.length < 2) { drop.style.display = 'none'; return; }
+        const matches = index.filter(p => p.name.toLowerCase().includes(q)).slice(0, 12);
+        if (!matches.length) { drop.style.display = 'none'; return; }
+        matches.forEach(p => {
+            const item = document.createElement('div');
+            item.style.cssText = 'padding:10px 14px;cursor:pointer;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:13px';
+            item.innerHTML = `<span style="color:var(--text-primary)">${p.name}</span><span style="font-size:11px;color:var(--text-muted)">${p.current_team || ''} · ${p.seasons}s</span>`;
+            item.addEventListener('mouseover', () => item.style.background = 'var(--bg-primary)');
+            item.addEventListener('mouseout',  () => item.style.background = '');
+            item.addEventListener('click', () => { window.location.href = `player.html?code=${encodeURIComponent(p.code)}`; });
+            drop.appendChild(item);
+        });
+        drop.style.display = 'block';
+    });
+    input.addEventListener('keydown', e => {
+        if (e.key === 'Enter') { const first = drop.querySelector('div'); if (first) first.click(); }
+    });
+    document.addEventListener('click', e => {
+        if (!input.contains(e.target) && !drop.contains(e.target)) drop.style.display = 'none';
+    });
+
+    setupSearch(index);
 }
 
 function showError(msg) {
