@@ -1,0 +1,170 @@
+import json
+import os
+import sys
+import pandas as pd
+from euroleague_api.player_stats import PlayerStats
+
+OUT_FULL  = os.path.join('docs', 'data', 'current', 'player_career_stats.json')
+OUT_INDEX = os.path.join('docs', 'data', 'current', 'player_index.json')
+
+# Seasons: 2007-08 through 2024-25 (19 seasons)
+SEASONS = list(range(2007, 2025))
+
+
+def season_label(code):
+    """'E2024' -> '2024-25'"""
+    year = int(code[1:])
+    return f"{year}-{str(year + 1)[-2:]}"
+
+
+def pct_to_float(val):
+    """Convert '52.1%' -> 52.1, or pass through if already numeric."""
+    if val is None:
+        return None
+    if isinstance(val, str):
+        s = val.strip('%')
+        try:
+            return float(s)
+        except ValueError:
+            return None
+    try:
+        return float(val)
+    except (TypeError, ValueError):
+        return None
+
+
+def fetch_career_stats():
+    force = '--force' in sys.argv
+    if os.path.exists(OUT_FULL) and not force:
+        print("player_career_stats.json exists — use --force to re-fetch")
+        return
+
+    print("Fetching per-season player traditional stats (2007-2025)…")
+    ps = PlayerStats()
+
+    frames = []
+    for season_year in SEASONS:
+        season_code = f"E{season_year}"
+        print(f"  Fetching {season_label(season_code)}…", end=' ', flush=True)
+        try:
+            df = ps.get_player_stats_single_season(
+                'traditional', season_year, statistic_mode='PerGame'
+            )
+            df['seasonCode'] = season_code
+            frames.append(df)
+            print(f"{len(df)} players")
+        except Exception as e:
+            print(f"ERROR: {e}")
+
+    if not frames:
+        print("No data fetched — aborting.")
+        return
+
+    df = pd.concat(frames, ignore_index=True)
+    print(f"Total rows: {len(df)}")
+
+    # Rename columns to internal names
+    col_map = {
+        'player.code':              'player_code',
+        'player.name':              'player_name',
+        'player.team.code':         'team_code',
+        'player.team.name':         'team_name',
+        'gamesPlayed':              'gp',
+        'pir':                      'pir',
+        'pointsScored':             'ppg',
+        'totalRebounds':            'rpg',
+        'offensiveRebounds':        'oreb',
+        'defensiveRebounds':        'dreb',
+        'assists':                  'apg',
+        'steals':                   'spg',
+        'blocks':                   'bpg',
+        'turnovers':                'tpg',
+        'twoPointersPercentage':    'fg2_pct_raw',
+        'threePointersPercentage':  'fg3_pct_raw',
+        'freeThrowsPercentage':     'ft_pct_raw',
+    }
+    df = df.rename(columns={k: v for k, v in col_map.items() if k in df.columns})
+
+    # Convert percentage strings to floats
+    for raw_col, final_col in [('fg2_pct_raw', 'fg2_pct'),
+                                ('fg3_pct_raw', 'fg3_pct'),
+                                ('ft_pct_raw',  'ft_pct')]:
+        if raw_col in df.columns:
+            df[final_col] = df[raw_col].apply(pct_to_float)
+            df.drop(columns=[raw_col], inplace=True)
+
+    # We use 2P% as fg_pct (field goals inside the arc) — matches task spec fg_pct
+    if 'fg2_pct' in df.columns:
+        df['fg_pct'] = df['fg2_pct']
+
+    stat_cols = ['gp', 'ppg', 'rpg', 'oreb', 'dreb', 'apg',
+                 'spg', 'bpg', 'tpg', 'fg_pct', 'fg3_pct', 'ft_pct', 'pir']
+
+    players_dict = {}
+    index_list   = []
+    name_to_code = {}
+
+    for code, grp in df.groupby('player_code', sort=False):
+        grp = grp.sort_values('seasonCode', ascending=False)
+        row0 = grp.iloc[0]
+
+        seasons = []
+        for _, r in grp.iterrows():
+            s = {
+                'season':      season_label(r['seasonCode']),
+                'season_code': r['seasonCode'],
+                'team_code':   str(r.get('team_code', '')),
+                'team_name':   str(r.get('team_name', '')),
+            }
+            for c in stat_cols:
+                val = r.get(c)
+                s[c] = round(float(val), 1) if pd.notna(val) else None
+            seasons.append(s)
+
+        total_gp = sum(s['gp'] for s in seasons if s['gp'])
+        career = {'gp': total_gp}
+        for c in [c for c in stat_cols if c != 'gp']:
+            vals = [(s[c], s['gp']) for s in seasons
+                    if s[c] is not None and s['gp']]
+            if vals:
+                career[c] = round(
+                    sum(v * g for v, g in vals) / sum(g for _, g in vals), 1
+                )
+            else:
+                career[c] = None
+
+        name = str(row0.get('player_name', ''))
+        players_dict[code] = {
+            'name':     name,
+            'position': '',       # not returned by traditional endpoint
+            'nationality': '',    # not returned by traditional endpoint
+            'seasons':  seasons,
+            'career':   career,
+        }
+
+        current_team = seasons[0]['team_code'] if seasons else ''
+        index_list.append({
+            'code':         code,
+            'name':         name,
+            'current_team': current_team,
+            'seasons':      len(seasons),
+        })
+        name_to_code[name.upper()] = code
+
+    out = {
+        'index':   sorted(index_list, key=lambda x: x['name']),
+        'players': players_dict,
+    }
+
+    os.makedirs(os.path.dirname(OUT_FULL), exist_ok=True)
+    with open(OUT_FULL, 'w', encoding='utf-8') as f:
+        json.dump(out, f, ensure_ascii=False, separators=(',', ':'))
+    print(f"Wrote {OUT_FULL} ({len(players_dict)} players)")
+
+    with open(OUT_INDEX, 'w', encoding='utf-8') as f:
+        json.dump(name_to_code, f, ensure_ascii=False, separators=(',', ':'))
+    print(f"Wrote {OUT_INDEX} ({len(name_to_code)} entries)")
+
+
+if __name__ == '__main__':
+    fetch_career_stats()
