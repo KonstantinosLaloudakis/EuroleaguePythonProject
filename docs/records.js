@@ -10,11 +10,11 @@ let _activeTab   = 'scoring';
 let _minGpCareer = 100;
 
 const TABS = [
-    { key: 'scoring',    label: 'Scoring',    careerLabel: 'Career Points',   careerSub: 'Accumulated total',   seasonLabel: 'Best Season PPG', seasonSub: 'Per-game average',   fmtC: v => Math.round(v).toLocaleString(), fmtS: v => v.toFixed(1) },
-    { key: 'playmaking', label: 'Playmaking', careerLabel: 'Career Assists',  careerSub: 'Accumulated total',   seasonLabel: 'Best Season APG', seasonSub: 'Per-game average',   fmtC: v => Math.round(v).toLocaleString(), fmtS: v => v.toFixed(1) },
-    { key: 'rebounding', label: 'Rebounding', careerLabel: 'Career Rebounds', careerSub: 'Accumulated total',   seasonLabel: 'Best Season RPG', seasonSub: 'Per-game average',   fmtC: v => Math.round(v).toLocaleString(), fmtS: v => v.toFixed(1) },
-    { key: 'defense',    label: 'Defense',    careerLabel: 'Career Steals',   careerSub: 'Accumulated total',   seasonLabel: 'Best Season SPG', seasonSub: 'Per-game average',   fmtC: v => Math.round(v).toLocaleString(), fmtS: v => v.toFixed(1) },
-    { key: 'efficiency', label: 'Efficiency', careerLabel: 'Career Avg PIR',  careerSub: 'GP-weighted average', seasonLabel: 'Best Season PIR', seasonSub: 'Per-game average',   fmtC: v => v.toFixed(1),                   fmtS: v => v.toFixed(1) },
+    { key: 'scoring',    label: 'Scoring',    careerLabel: 'Career Points',   careerSub: 'Accumulated total',   avgLabel: 'Career Avg PPG', avgSub: 'GP-weighted average', avgStat: 'ppg',     avgFmt: v => v.toFixed(1), seasonLabel: 'Best Season PPG', seasonSub: 'Per-game average',   fmtC: v => Math.round(v).toLocaleString(), fmtS: v => v.toFixed(1) },
+    { key: 'playmaking', label: 'Playmaking', careerLabel: 'Career Assists',  careerSub: 'Accumulated total',   avgLabel: 'Career Avg APG', avgSub: 'GP-weighted average', avgStat: 'apg',     avgFmt: v => v.toFixed(1), seasonLabel: 'Best Season APG', seasonSub: 'Per-game average',   fmtC: v => Math.round(v).toLocaleString(), fmtS: v => v.toFixed(1) },
+    { key: 'rebounding', label: 'Rebounding', careerLabel: 'Career Rebounds', careerSub: 'Accumulated total',   avgLabel: 'Career Avg RPG', avgSub: 'GP-weighted average', avgStat: 'rpg',     avgFmt: v => v.toFixed(1), seasonLabel: 'Best Season RPG', seasonSub: 'Per-game average',   fmtC: v => Math.round(v).toLocaleString(), fmtS: v => v.toFixed(1) },
+    { key: 'defense',    label: 'Defense',    careerLabel: 'Career Steals',   careerSub: 'Accumulated total',   avgLabel: 'Career Avg SPG', avgSub: 'GP-weighted average', avgStat: 'spg',     avgFmt: v => v.toFixed(1), seasonLabel: 'Best Season SPG', seasonSub: 'Per-game average',   fmtC: v => Math.round(v).toLocaleString(), fmtS: v => v.toFixed(1) },
+    { key: 'efficiency', label: 'Efficiency', careerLabel: 'Career Avg PIR',  careerSub: 'GP-weighted average', avgLabel: 'Career Avg 2P%', avgSub: 'GP-weighted average', avgStat: 'fg2_pct', avgFmt: v => v.toFixed(1) + '%', seasonLabel: 'Best Season PIR', seasonSub: 'Per-game average',   fmtC: v => v.toFixed(1),                   fmtS: v => v.toFixed(1) },
 ];
 
 // ── Entry point ────────────────────────────────────────────────────────────────
@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 function computeRankings(data, minGpCareer) {
     const players = Object.entries(data.players);
     const careerPts = [], careerAst = [], careerReb = [], careerStl = [], careerPIR = [];
+    const avgPPG = [], avgAPG = [], avgRPG = [], avgSPG = [], avgFg2 = [];
     const szPPG = [], szAPG = [], szRPG = [], szSPG = [], szPIR = [];
 
     for (const [code, p] of players) {
@@ -54,7 +55,12 @@ function computeRankings(data, minGpCareer) {
             careerAst.push({ ...base, value: Math.round(ast) });
             careerReb.push({ ...base, value: Math.round(reb) });
             careerStl.push({ ...base, value: Math.round(stl) });
-            if (p.career.pir != null) careerPIR.push({ ...base, value: p.career.pir });
+            if (p.career.pir    != null) careerPIR.push({ ...base, value: p.career.pir });
+            if (p.career.ppg    != null) avgPPG.push({ ...base, value: p.career.ppg });
+            if (p.career.apg    != null) avgAPG.push({ ...base, value: p.career.apg });
+            if (p.career.rpg    != null) avgRPG.push({ ...base, value: p.career.rpg });
+            if (p.career.spg    != null) avgSPG.push({ ...base, value: p.career.spg });
+            if (p.career.fg2_pct != null) avgFg2.push({ ...base, value: p.career.fg2_pct });
         }
 
         for (const s of p.seasons) {
@@ -70,11 +76,11 @@ function computeRankings(data, minGpCareer) {
 
     const top = arr => arr.sort((a, b) => b.value - a.value).slice(0, TOP_EXTENDED);
     return {
-        scoring:    { career: top(careerPts), season: top(szPPG) },
-        playmaking: { career: top(careerAst), season: top(szAPG) },
-        rebounding: { career: top(careerReb), season: top(szRPG) },
-        defense:    { career: top(careerStl), season: top(szSPG) },
-        efficiency: { career: top(careerPIR), season: top(szPIR) },
+        scoring:    { career: top(careerPts), avg: top(avgPPG), season: top(szPPG) },
+        playmaking: { career: top(careerAst), avg: top(avgAPG), season: top(szAPG) },
+        rebounding: { career: top(careerReb), avg: top(avgRPG), season: top(szRPG) },
+        defense:    { career: top(careerStl), avg: top(avgSPG), season: top(szSPG) },
+        efficiency: { career: top(careerPIR), avg: top(avgFg2), season: top(szPIR) },
     };
 }
 
@@ -93,7 +99,7 @@ function renderPage() {
         <option value="200"${_minGpCareer === 200 ? ' selected' : ''}>200 GP</option>
         <option value="0"${_minGpCareer ===   0 ? ' selected' : ''}>No minimum</option>
       </select>
-      <span class="filter-legend">· Career = accumulated totals &nbsp;·&nbsp; Single season = per-game averages &nbsp;·&nbsp; Season min: ${MIN_GP_SEASON} GP</span>
+      <span class="filter-legend">· Career totals = Σ(stat × GP) &nbsp;·&nbsp; Career averages = GP-weighted &nbsp;·&nbsp; Season min: ${MIN_GP_SEASON} GP</span>
     </div>`;
 
     const tab  = TABS.find(t => t.key === _activeTab);
@@ -103,8 +109,9 @@ function renderPage() {
     <div class="cat-tabs">${tabButtons}</div>
     ${filterHtml}
     <div class="records-grid">
-      ${renderCard(data.career, tab.careerLabel, tab.careerSub, true,  tab.fmtC)}
-      ${renderCard(data.season, tab.seasonLabel, tab.seasonSub, false, tab.fmtS)}
+      ${renderCard(data.career, tab.careerLabel, tab.careerSub, 'career', tab.fmtC)}
+      ${renderCard(data.avg,    tab.avgLabel,    tab.avgSub,    'avg',    tab.avgFmt)}
+      ${renderCard(data.season, tab.seasonLabel, tab.seasonSub, 'season', tab.fmtS)}
     </div>`;
 
     document.querySelectorAll('.cat-tab').forEach(btn => {
@@ -126,10 +133,11 @@ function renderPage() {
 }
 
 // ── Render one record card ─────────────────────────────────────────────────────
-function renderCard(rows, title, sub, isCareer, fmt) {
+function renderCard(rows, title, sub, type, fmt) {
     const rankCls  = i => i === 0 ? 'rank-1' : i === 1 ? 'rank-2' : i === 2 ? 'rank-3' : '';
-    const valCls   = isCareer ? 'val-career' : 'val-season';
-    const titleCls = isCareer ? 'career' : 'season';
+    const valCls   = type === 'season' ? 'val-season' : type === 'avg' ? 'val-avg' : 'val-career';
+    const titleCls = type; // 'career' | 'avg' | 'season'
+    const isCareer = type !== 'season';
     const statWord = title.split(' ').pop();
 
     const thead = isCareer

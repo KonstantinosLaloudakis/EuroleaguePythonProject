@@ -32,8 +32,9 @@
     }
     .filter-legend { font-size: 11px; color: #334155; }
 
-    .records-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    @media (max-width: 680px) { .records-grid { grid-template-columns: 1fr; } }
+    .records-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 900px) { .records-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 580px) { .records-grid { grid-template-columns: 1fr; } }
 
     .record-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
     .record-card-header {
@@ -42,6 +43,7 @@
     }
     .rch-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
     .rch-title.career { color: var(--accent-gold); }
+    .rch-title.avg    { color: #818cf8; }
     .rch-title.season { color: var(--accent-green); }
     .rch-sub { font-size: 10px; color: var(--text-muted); }
 
@@ -71,6 +73,7 @@
     .p-meta { font-size: 10px; color: var(--text-muted); display: block; margin-top: 1px; }
 
     .val-career { color: var(--accent-gold); font-weight: 700; }
+    .val-avg    { color: #818cf8; font-weight: 700; }
     .val-season { color: var(--accent-green); font-weight: 700; }
 
     .show-more-btn {
