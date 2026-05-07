@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!player) { showError(`Player not found: ${code}`); return; }
 
     document.title = `${player.name} — EL Analytics`;
-    document.getElementById('bc-name').textContent = player.name;
 
     const el = document.getElementById('player-content');
     el.innerHTML = renderHero(player) + renderChart(player.seasons) + renderTableSection(player);
@@ -227,8 +226,7 @@ function setupSearch(index) {
 }
 
 async function showWelcome() {
-    document.title = 'Player Search — EL Analytics';
-    document.getElementById('bc-name').textContent = 'Search';
+    document.title = 'Player Career Search — EL Analytics';
     const el = document.getElementById('player-content');
     el.innerHTML = `
     <div style="max-width:480px;margin:60px auto;text-align:center">
