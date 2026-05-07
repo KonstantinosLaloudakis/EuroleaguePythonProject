@@ -42,20 +42,13 @@ function computeRankings(data, minGpCareer) {
         const totalGp = p.career?.gp || 0;
 
         if (totalGp >= minGpCareer) {
-            let pts = 0, ast = 0, reb = 0, stl = 0;
-            for (const s of p.seasons) {
-                if (!s.gp) continue;
-                pts += (s.ppg || 0) * s.gp;
-                ast += (s.apg || 0) * s.gp;
-                reb += (s.rpg || 0) * s.gp;
-                stl += (s.spg || 0) * s.gp;
-            }
             const base = { code, name: p.name, image: p.image, seasons: p.seasons.length, gp: totalGp };
-            careerPts.push({ ...base, value: Math.round(pts) });
-            careerAst.push({ ...base, value: Math.round(ast) });
-            careerReb.push({ ...base, value: Math.round(reb) });
-            careerStl.push({ ...base, value: Math.round(stl) });
-            if (p.career.pir    != null) careerPIR.push({ ...base, value: p.career.pir });
+            // Use pre-computed totals from the JSON (exact, not re-derived from rounded per-game)
+            if (p.career.total_pts != null) careerPts.push({ ...base, value: Math.round(p.career.total_pts) });
+            if (p.career.total_ast != null) careerAst.push({ ...base, value: Math.round(p.career.total_ast) });
+            if (p.career.total_reb != null) careerReb.push({ ...base, value: Math.round(p.career.total_reb) });
+            if (p.career.total_stl != null) careerStl.push({ ...base, value: Math.round(p.career.total_stl) });
+            if (p.career.pir       != null) careerPIR.push({ ...base, value: p.career.pir });
             if (p.career.ppg    != null) avgPPG.push({ ...base, value: p.career.ppg });
             if (p.career.apg    != null) avgAPG.push({ ...base, value: p.career.apg });
             if (p.career.rpg    != null) avgRPG.push({ ...base, value: p.career.rpg });

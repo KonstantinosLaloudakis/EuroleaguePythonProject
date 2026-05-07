@@ -238,7 +238,8 @@ async function renderBoxScore(idx, roster, totals, color) {
         const pmColor = p.pm > 0 ? 'var(--accent-green)' : p.pm < 0 ? 'var(--accent-red)' : '';
         const pirColor = p.pir >= 20 ? 'var(--accent-green)' : p.pir >= 10 ? 'var(--accent-blue)' : '';
         const displayName = formatName(p.name);
-        const code = codeMap ? codeMap[p.name.toUpperCase()] : null;
+        const normName = n => n.toUpperCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+        const code = codeMap ? codeMap[normName(p.name)] : null;
         const nameHtml = code
             ? `<a href="player.html?code=${code}" style="text-decoration:none;color:inherit">${displayName}</a>`
             : displayName;
