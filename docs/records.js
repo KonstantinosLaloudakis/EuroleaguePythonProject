@@ -59,7 +59,7 @@ function computeRankings(data, minGpCareer) {
 
         for (const s of p.seasons) {
             if (!s.gp || s.gp < MIN_GP_SEASON) continue;
-            const base = { code, name: p.name, image: p.image, season: s.season, team_code: s.team_code, gp: s.gp };
+            const base = { code, name: p.name, image: p.image, season: s.season, team_code: s.team_code, team_name: s.team_name, gp: s.gp };
             if (s.ppg != null) szPPG.push({ ...base, value: s.ppg });
             if (s.apg != null) szAPG.push({ ...base, value: s.apg });
             if (s.rpg != null) szRPG.push({ ...base, value: s.rpg });
@@ -139,7 +139,7 @@ function renderCard(rows, title, sub, isCareer, fmt) {
     const trows = rows.map((r, i) => {
         const cls = [rankCls(i), i >= TOP_INITIAL ? 'hidden' : ''].filter(Boolean).join(' ');
         const meta   = isCareer ? `${r.seasons} season${r.seasons !== 1 ? 's' : ''}` : r.season;
-        const col3   = isCareer ? r.seasons : (r.team_code || '—');
+        const col3   = isCareer ? r.seasons : (r.team_name || r.team_code || '—');
         return `<tr class="${cls}">
           <td class="${rankCls(i)}">${i + 1}</td>
           <td>

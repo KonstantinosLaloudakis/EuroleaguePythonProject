@@ -144,7 +144,7 @@ function buildTable(player, tabKey) {
         const cells = cols.map(c => `<td class="${hl(c)}">${fmt(s[c])}</td>`).join('');
         return `<tr class="${isCur ? 'current-szn' : ''}">
           <td><span class="szn-link">${s.season}</span></td>
-          <td>${s.team_code}</td>
+          <td>${s.team_name || s.team_code}</td>
           <td style="text-align:right">${s.gp ?? '—'}</td>${cells}</tr>`;
     }).join('');
 
