@@ -162,6 +162,7 @@ function setupTabs(player) {
         btn.addEventListener('click', () => {
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+            _sortCol = null; _sortAsc = false; // reset sort state on tab switch
             document.getElementById('table-wrap').innerHTML =
                 '<div style="padding:0">' + buildTable(player, btn.dataset.tab) + '</div>';
             setupSort(player);
@@ -190,45 +191,6 @@ function setupSort(player) {
     });
 }
 
-// ── Search bar ─────────────────────────────────────────────────────────────────
-function setupSearch(index) {
-    const input    = document.getElementById('player-search');
-    const dropdown = document.getElementById('search-dropdown');
-    if (!input || !dropdown) return;
-
-    input.addEventListener('input', () => {
-        const q = input.value.trim().toLowerCase();
-        dropdown.innerHTML = '';
-        if (q.length < 2) { dropdown.classList.remove('open'); return; }
-
-        const matches = index.filter(p => p.name.toLowerCase().includes(q)).slice(0, 10);
-        if (!matches.length) { dropdown.classList.remove('open'); return; }
-
-        matches.forEach(p => {
-            const item = document.createElement('div');
-            item.className = 'search-item';
-            item.innerHTML = `<span>${p.name}</span><span class="si-team">${p.current_team || ''}</span>`;
-            item.addEventListener('click', () => {
-                window.location.href = `player.html?code=${encodeURIComponent(p.code)}`;
-            });
-            dropdown.appendChild(item);
-        });
-        dropdown.classList.add('open');
-    });
-
-    document.addEventListener('click', e => {
-        if (!input.contains(e.target) && !dropdown.contains(e.target)) {
-            dropdown.classList.remove('open');
-        }
-    });
-
-    input.addEventListener('keydown', e => {
-        if (e.key !== 'Enter') return;
-        const first = dropdown.querySelector('.search-item');
-        if (first) first.click();
-    });
-}
-
 async function showWelcome() {
     document.title = 'Player Career Search — EL Analytics';
     const el = document.getElementById('player-content');
@@ -236,8 +198,8 @@ async function showWelcome() {
     <div style="max-width:480px;margin:60px auto;text-align:center">
       <div style="font-size:36px;margin-bottom:12px">🏀</div>
       <h2 style="font-size:20px;font-weight:700;color:var(--text-primary);margin-bottom:6px">Player Career Search</h2>
-      <p style="font-size:13px;color:var(--text-muted);margin-bottom:24px">
-        1,148 players · 19 seasons · 2007–2025
+      <p id="player-count" style="font-size:13px;color:var(--text-muted);margin-bottom:24px">
+        Loading…
       </p>
       <div style="position:relative">
         <input id="welcome-search" type="text" placeholder="Type a player name…"
@@ -258,6 +220,8 @@ async function showWelcome() {
         const data = await fetch(DATA_URL).then(r => r.json());
         index = data.index;
         careerData = data;
+        document.getElementById('player-count').textContent =
+            `${index.length.toLocaleString()} players · 19 seasons · 2007–2025`;
     } catch { return; }
 
     const input = document.getElementById('welcome-search');
@@ -287,8 +251,6 @@ async function showWelcome() {
     document.addEventListener('click', e => {
         if (!input.contains(e.target) && !drop.contains(e.target)) drop.style.display = 'none';
     });
-
-    setupSearch(index);
 }
 
 function showError(msg) {
