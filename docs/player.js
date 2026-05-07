@@ -36,9 +36,13 @@ function renderHero(player) {
     const seasonLbl = current ? current.season : '—';
     const fmt = (v) => (v != null ? v.toFixed(1) : '—');
 
+    const avatarHtml = player.image
+        ? `<img class="hero-avatar" src="${player.image}" alt="${player.name}" onerror="this.outerHTML='<div class=\\'hero-avatar\\'>${initials}</div>'">`
+        : `<div class="hero-avatar">${initials}</div>`;
+
     return `
     <div class="hero-card">
-      <div class="hero-avatar">${initials}</div>
+      ${avatarHtml}
       <div>
         <div class="hero-name">${player.name}</div>
         <div class="hero-meta">${[player.position, player.nationality].filter(Boolean).join(' · ')}</div>

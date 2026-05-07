@@ -67,6 +67,7 @@ def fetch_career_stats():
     col_map = {
         'player.code':              'player_code',
         'player.name':              'player_name',
+        'player.imageUrl':          'image_url',
         'player.team.code':         'team_code',
         'player.team.name':         'team_name',
         'gamesPlayed':              'gp',
@@ -133,8 +134,11 @@ def fetch_career_stats():
                 career[c] = None
 
         name = str(row0.get('player_name', ''))
+        raw_img = row0.get('image_url')
+        image_url = str(raw_img) if raw_img and pd.notna(raw_img) else None
         players_dict[code] = {
             'name':     name,
+            'image':    image_url,
             'position': '',       # not returned by traditional endpoint
             'nationality': '',    # not returned by traditional endpoint
             'seasons':  seasons,
