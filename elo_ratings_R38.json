@@ -11,13 +11,13 @@
     },
     {
         "Team": "PAN",
-        "Elo": 1559.2,
-        "Delta": 59.2
+        "Elo": 1553.1,
+        "Delta": 53.1
     },
     {
         "Team": "ULK",
-        "Elo": 1557.4,
-        "Delta": 57.4
+        "Elo": 1552.5,
+        "Delta": 52.5
     },
     {
         "Team": "MCO",
@@ -30,19 +30,19 @@
         "Delta": 46.9
     },
     {
+        "Team": "PAM",
+        "Elo": 1532.0,
+        "Delta": 32.0
+    },
+    {
         "Team": "HTA",
         "Elo": 1527.7,
         "Delta": 27.7
     },
     {
-        "Team": "PAM",
-        "Elo": 1525.8,
-        "Delta": 25.8
-    },
-    {
         "Team": "ZAL",
-        "Elo": 1517.0,
-        "Delta": 17.0
+        "Elo": 1521.8,
+        "Delta": 21.8
     },
     {
         "Team": "TEL",

@@ -13,57 +13,57 @@
   },
   "league": {
     "A": {
-      "attempts": 2480,
-      "makes": 2328,
+      "attempts": 2487,
+      "makes": 2335,
       "fg_pct": 93.9,
       "pps": 1.88
     },
     "B": {
-      "attempts": 9735,
-      "makes": 5852,
+      "attempts": 9792,
+      "makes": 5886,
       "fg_pct": 60.1,
       "pps": 1.2
     },
     "C": {
-      "attempts": 7913,
-      "makes": 4508,
+      "attempts": 7961,
+      "makes": 4538,
       "fg_pct": 57.0,
       "pps": 1.14
     },
     "D": {
-      "attempts": 3156,
-      "makes": 1238,
-      "fg_pct": 39.2,
-      "pps": 0.78
+      "attempts": 3168,
+      "makes": 1244,
+      "fg_pct": 39.3,
+      "pps": 0.79
     },
     "E": {
-      "attempts": 3206,
-      "makes": 1292,
+      "attempts": 3227,
+      "makes": 1301,
       "fg_pct": 40.3,
       "pps": 0.81
     },
     "F": {
-      "attempts": 1597,
-      "makes": 654,
+      "attempts": 1601,
+      "makes": 656,
       "fg_pct": 41.0,
       "pps": 0.82
     },
     "G": {
-      "attempts": 1562,
-      "makes": 610,
+      "attempts": 1574,
+      "makes": 615,
       "fg_pct": 39.1,
       "pps": 0.78
     },
     "H": {
-      "attempts": 10213,
-      "makes": 3671,
+      "attempts": 10265,
+      "makes": 3686,
       "fg_pct": 35.9,
       "pps": 1.08
     },
     "I": {
-      "attempts": 10611,
-      "makes": 3835,
-      "fg_pct": 36.1,
+      "attempts": 10665,
+      "makes": 3856,
+      "fg_pct": 36.2,
       "pps": 1.08
     },
     "J": {
@@ -684,58 +684,58 @@
     },
     "PAN": {
       "A": {
-        "attempts": 123,
-        "makes": 117,
-        "fg_pct": 95.1,
+        "attempts": 124,
+        "makes": 118,
+        "fg_pct": 95.2,
         "pps": 1.9
       },
       "B": {
-        "attempts": 533,
-        "makes": 322,
-        "fg_pct": 60.4,
+        "attempts": 546,
+        "makes": 329,
+        "fg_pct": 60.3,
         "pps": 1.21
       },
       "C": {
-        "attempts": 449,
-        "makes": 267,
-        "fg_pct": 59.5,
+        "attempts": 460,
+        "makes": 274,
+        "fg_pct": 59.6,
         "pps": 1.19
       },
       "D": {
-        "attempts": 195,
-        "makes": 82,
-        "fg_pct": 42.1,
+        "attempts": 198,
+        "makes": 83,
+        "fg_pct": 41.9,
         "pps": 0.84
       },
       "E": {
-        "attempts": 197,
-        "makes": 80,
-        "fg_pct": 40.6,
-        "pps": 0.81
+        "attempts": 203,
+        "makes": 84,
+        "fg_pct": 41.4,
+        "pps": 0.83
       },
       "F": {
-        "attempts": 83,
-        "makes": 43,
-        "fg_pct": 51.8,
-        "pps": 1.04
+        "attempts": 84,
+        "makes": 44,
+        "fg_pct": 52.4,
+        "pps": 1.05
       },
       "G": {
-        "attempts": 98,
-        "makes": 39,
-        "fg_pct": 39.8,
+        "attempts": 100,
+        "makes": 40,
+        "fg_pct": 40.0,
         "pps": 0.81
       },
       "H": {
-        "attempts": 509,
-        "makes": 183,
-        "fg_pct": 36.0,
-        "pps": 1.08
+        "attempts": 527,
+        "makes": 188,
+        "fg_pct": 35.7,
+        "pps": 1.07
       },
       "I": {
-        "attempts": 466,
-        "makes": 166,
-        "fg_pct": 35.6,
-        "pps": 1.07
+        "attempts": 477,
+        "makes": 171,
+        "fg_pct": 35.8,
+        "pps": 1.08
       },
       "J": {
         "attempts": 6,
@@ -994,57 +994,57 @@
     },
     "ULK": {
       "A": {
-        "attempts": 94,
-        "makes": 87,
-        "fg_pct": 92.6,
+        "attempts": 96,
+        "makes": 89,
+        "fg_pct": 92.7,
         "pps": 1.85
       },
       "B": {
-        "attempts": 466,
-        "makes": 271,
-        "fg_pct": 58.2,
-        "pps": 1.16
+        "attempts": 486,
+        "makes": 285,
+        "fg_pct": 58.6,
+        "pps": 1.17
       },
       "C": {
-        "attempts": 375,
-        "makes": 208,
-        "fg_pct": 55.5,
-        "pps": 1.11
+        "attempts": 382,
+        "makes": 213,
+        "fg_pct": 55.8,
+        "pps": 1.12
       },
       "D": {
-        "attempts": 132,
-        "makes": 54,
-        "fg_pct": 40.9,
-        "pps": 0.82
+        "attempts": 135,
+        "makes": 56,
+        "fg_pct": 41.5,
+        "pps": 0.83
       },
       "E": {
-        "attempts": 176,
+        "attempts": 183,
         "makes": 83,
-        "fg_pct": 47.2,
-        "pps": 0.94
+        "fg_pct": 45.4,
+        "pps": 0.91
       },
       "F": {
-        "attempts": 80,
+        "attempts": 82,
         "makes": 29,
-        "fg_pct": 36.2,
-        "pps": 0.74
+        "fg_pct": 35.4,
+        "pps": 0.72
       },
       "G": {
-        "attempts": 110,
-        "makes": 46,
-        "fg_pct": 41.8,
-        "pps": 0.85
+        "attempts": 115,
+        "makes": 48,
+        "fg_pct": 41.7,
+        "pps": 0.84
       },
       "H": {
-        "attempts": 504,
-        "makes": 187,
-        "fg_pct": 37.1,
+        "attempts": 517,
+        "makes": 191,
+        "fg_pct": 36.9,
         "pps": 1.11
       },
       "I": {
-        "attempts": 535,
-        "makes": 192,
-        "fg_pct": 35.9,
+        "attempts": 541,
+        "makes": 195,
+        "fg_pct": 36.0,
         "pps": 1.08
       },
       "J": {
@@ -1118,34 +1118,34 @@
     },
     "ZAL": {
       "A": {
-        "attempts": 139,
-        "makes": 134,
-        "fg_pct": 96.4,
+        "attempts": 141,
+        "makes": 136,
+        "fg_pct": 96.5,
         "pps": 1.93
       },
       "B": {
-        "attempts": 522,
-        "makes": 304,
-        "fg_pct": 58.2,
+        "attempts": 529,
+        "makes": 307,
+        "fg_pct": 58.0,
         "pps": 1.16
       },
       "C": {
-        "attempts": 511,
-        "makes": 288,
+        "attempts": 527,
+        "makes": 297,
         "fg_pct": 56.4,
         "pps": 1.13
       },
       "D": {
-        "attempts": 138,
-        "makes": 53,
-        "fg_pct": 38.4,
-        "pps": 0.77
+        "attempts": 142,
+        "makes": 56,
+        "fg_pct": 39.4,
+        "pps": 0.79
       },
       "E": {
-        "attempts": 144,
-        "makes": 52,
-        "fg_pct": 36.1,
-        "pps": 0.72
+        "attempts": 146,
+        "makes": 53,
+        "fg_pct": 36.3,
+        "pps": 0.73
       },
       "F": {
         "attempts": 60,
@@ -1154,22 +1154,22 @@
         "pps": 0.67
       },
       "G": {
-        "attempts": 64,
+        "attempts": 67,
         "makes": 21,
-        "fg_pct": 32.8,
-        "pps": 0.66
+        "fg_pct": 31.3,
+        "pps": 0.63
       },
       "H": {
-        "attempts": 463,
-        "makes": 173,
-        "fg_pct": 37.4,
-        "pps": 1.12
+        "attempts": 470,
+        "makes": 174,
+        "fg_pct": 37.0,
+        "pps": 1.11
       },
       "I": {
-        "attempts": 515,
-        "makes": 209,
-        "fg_pct": 40.6,
-        "pps": 1.22
+        "attempts": 537,
+        "makes": 217,
+        "fg_pct": 40.4,
+        "pps": 1.21
       },
       "J": {
         "attempts": 1,
@@ -1242,57 +1242,57 @@
     },
     "PAM": {
       "A": {
-        "attempts": 169,
-        "makes": 153,
-        "fg_pct": 90.5,
+        "attempts": 171,
+        "makes": 155,
+        "fg_pct": 90.6,
         "pps": 1.81
       },
       "B": {
-        "attempts": 521,
-        "makes": 306,
+        "attempts": 538,
+        "makes": 316,
         "fg_pct": 58.7,
         "pps": 1.17
       },
       "C": {
-        "attempts": 405,
-        "makes": 234,
-        "fg_pct": 57.8,
+        "attempts": 419,
+        "makes": 243,
+        "fg_pct": 58.0,
         "pps": 1.16
       },
       "D": {
-        "attempts": 118,
+        "attempts": 120,
         "makes": 44,
-        "fg_pct": 37.3,
-        "pps": 0.75
+        "fg_pct": 36.7,
+        "pps": 0.73
       },
       "E": {
-        "attempts": 134,
-        "makes": 55,
-        "fg_pct": 41.0,
-        "pps": 0.82
+        "attempts": 140,
+        "makes": 59,
+        "fg_pct": 42.1,
+        "pps": 0.84
       },
       "F": {
-        "attempts": 48,
-        "makes": 20,
-        "fg_pct": 41.7,
-        "pps": 0.83
+        "attempts": 49,
+        "makes": 21,
+        "fg_pct": 42.9,
+        "pps": 0.86
       },
       "G": {
-        "attempts": 60,
-        "makes": 24,
-        "fg_pct": 40.0,
-        "pps": 0.8
+        "attempts": 62,
+        "makes": 26,
+        "fg_pct": 41.9,
+        "pps": 0.84
       },
       "H": {
-        "attempts": 592,
-        "makes": 214,
+        "attempts": 606,
+        "makes": 219,
         "fg_pct": 36.1,
         "pps": 1.08
       },
       "I": {
-        "attempts": 688,
-        "makes": 253,
-        "fg_pct": 36.8,
+        "attempts": 703,
+        "makes": 258,
+        "fg_pct": 36.7,
         "pps": 1.1
       }
     }
@@ -6598,7 +6598,7 @@
     },
     "SHORTS, TJ": {
       "team": "PAN",
-      "total_fga": 277,
+      "total_fga": 290,
       "zones": {
         "A": {
           "attempts": 3,
@@ -6607,52 +6607,52 @@
           "pps": 0.67
         },
         "B": {
-          "attempts": 54,
+          "attempts": 56,
           "makes": 29,
-          "fg_pct": 53.7,
-          "pps": 1.07
+          "fg_pct": 51.8,
+          "pps": 1.04
         },
         "C": {
-          "attempts": 81,
-          "makes": 47,
-          "fg_pct": 58.0,
-          "pps": 1.16
+          "attempts": 84,
+          "makes": 49,
+          "fg_pct": 58.3,
+          "pps": 1.17
         },
         "D": {
-          "attempts": 32,
+          "attempts": 33,
           "makes": 11,
-          "fg_pct": 34.4,
-          "pps": 0.69
+          "fg_pct": 33.3,
+          "pps": 0.67
         },
         "E": {
-          "attempts": 36,
-          "makes": 16,
-          "fg_pct": 44.4,
-          "pps": 0.89
+          "attempts": 37,
+          "makes": 17,
+          "fg_pct": 45.9,
+          "pps": 0.92
         },
         "F": {
-          "attempts": 11,
-          "makes": 7,
-          "fg_pct": 63.6,
-          "pps": 1.27
+          "attempts": 12,
+          "makes": 8,
+          "fg_pct": 66.7,
+          "pps": 1.33
         },
         "G": {
+          "attempts": 19,
+          "makes": 6,
+          "fg_pct": 31.6,
+          "pps": 0.63
+        },
+        "H": {
           "attempts": 18,
           "makes": 5,
           "fg_pct": 27.8,
-          "pps": 0.56
-        },
-        "H": {
-          "attempts": 17,
-          "makes": 5,
-          "fg_pct": 29.4,
-          "pps": 0.88
+          "pps": 0.83
         },
         "I": {
-          "attempts": 25,
-          "makes": 6,
-          "fg_pct": 24.0,
-          "pps": 0.72
+          "attempts": 28,
+          "makes": 8,
+          "fg_pct": 28.6,
+          "pps": 0.86
         }
       }
     },
@@ -6826,7 +6826,7 @@
     },
     "HERNANGOMEZ, JUANCHO": {
       "team": "PAN",
-      "total_fga": 253,
+      "total_fga": 256,
       "zones": {
         "A": {
           "attempts": 18,
@@ -6835,16 +6835,16 @@
           "pps": 2.0
         },
         "B": {
-          "attempts": 49,
-          "makes": 30,
-          "fg_pct": 61.2,
-          "pps": 1.22
+          "attempts": 50,
+          "makes": 31,
+          "fg_pct": 62.0,
+          "pps": 1.24
         },
         "C": {
-          "attempts": 36,
-          "makes": 22,
-          "fg_pct": 61.1,
-          "pps": 1.22
+          "attempts": 37,
+          "makes": 23,
+          "fg_pct": 62.2,
+          "pps": 1.24
         },
         "D": {
           "attempts": 3,
@@ -6871,10 +6871,10 @@
           "pps": 0.0
         },
         "H": {
-          "attempts": 80,
+          "attempts": 81,
           "makes": 32,
-          "fg_pct": 40.0,
-          "pps": 1.2
+          "fg_pct": 39.5,
+          "pps": 1.19
         },
         "I": {
           "attempts": 62,
@@ -6886,7 +6886,7 @@
     },
     "ROGKAVOPOULOS, NIKOLAOS": {
       "team": "PAN",
-      "total_fga": 130,
+      "total_fga": 144,
       "zones": {
         "A": {
           "attempts": 2,
@@ -6895,22 +6895,28 @@
           "pps": 1.0
         },
         "B": {
-          "attempts": 23,
-          "makes": 17,
-          "fg_pct": 73.9,
+          "attempts": 27,
+          "makes": 20,
+          "fg_pct": 74.1,
           "pps": 1.48
         },
         "C": {
-          "attempts": 20,
-          "makes": 14,
-          "fg_pct": 70.0,
-          "pps": 1.4
+          "attempts": 21,
+          "makes": 15,
+          "fg_pct": 71.4,
+          "pps": 1.43
         },
         "D": {
           "attempts": 9,
           "makes": 3,
           "fg_pct": 33.3,
           "pps": 0.67
+        },
+        "E": {
+          "attempts": 2,
+          "makes": 1,
+          "fg_pct": 50.0,
+          "pps": 1.0
         },
         "F": {
           "attempts": 4,
@@ -6925,16 +6931,16 @@
           "pps": 0.0
         },
         "H": {
-          "attempts": 36,
-          "makes": 13,
-          "fg_pct": 36.1,
-          "pps": 1.08
+          "attempts": 40,
+          "makes": 14,
+          "fg_pct": 35.0,
+          "pps": 1.05
         },
         "I": {
-          "attempts": 35,
-          "makes": 11,
-          "fg_pct": 31.4,
-          "pps": 0.94
+          "attempts": 38,
+          "makes": 12,
+          "fg_pct": 31.6,
+          "pps": 0.95
         }
       }
     },
@@ -7000,7 +7006,7 @@
     },
     "NUNN, KENDRICK": {
       "team": "PAN",
-      "total_fga": 476,
+      "total_fga": 483,
       "zones": {
         "A": {
           "attempts": 11,
@@ -7009,16 +7015,16 @@
           "pps": 1.82
         },
         "B": {
-          "attempts": 82,
-          "makes": 51,
-          "fg_pct": 62.2,
+          "attempts": 84,
+          "makes": 52,
+          "fg_pct": 61.9,
           "pps": 1.24
         },
         "C": {
-          "attempts": 70,
+          "attempts": 71,
           "makes": 41,
-          "fg_pct": 58.6,
-          "pps": 1.17
+          "fg_pct": 57.7,
+          "pps": 1.15
         },
         "D": {
           "attempts": 41,
@@ -7027,10 +7033,10 @@
           "pps": 0.93
         },
         "E": {
-          "attempts": 44,
-          "makes": 23,
-          "fg_pct": 52.3,
-          "pps": 1.05
+          "attempts": 45,
+          "makes": 24,
+          "fg_pct": 53.3,
+          "pps": 1.07
         },
         "F": {
           "attempts": 17,
@@ -7045,16 +7051,16 @@
           "pps": 1.19
         },
         "H": {
-          "attempts": 93,
-          "makes": 32,
-          "fg_pct": 34.4,
-          "pps": 1.03
+          "attempts": 95,
+          "makes": 34,
+          "fg_pct": 35.8,
+          "pps": 1.07
         },
         "I": {
-          "attempts": 89,
-          "makes": 37,
-          "fg_pct": 41.6,
-          "pps": 1.25
+          "attempts": 90,
+          "makes": 38,
+          "fg_pct": 42.2,
+          "pps": 1.27
         },
         "J": {
           "attempts": 2,
@@ -7522,7 +7528,7 @@
     },
     "GRANT, JERIAN": {
       "team": "PAN",
-      "total_fga": 222,
+      "total_fga": 224,
       "zones": {
         "A": {
           "attempts": 1,
@@ -7567,10 +7573,10 @@
           "pps": 1.0
         },
         "H": {
-          "attempts": 50,
+          "attempts": 52,
           "makes": 18,
-          "fg_pct": 36.0,
-          "pps": 1.08
+          "fg_pct": 34.6,
+          "pps": 1.04
         },
         "I": {
           "attempts": 37,
@@ -9010,7 +9016,7 @@
     },
     "HALL, DEVON": {
       "team": "ULK",
-      "total_fga": 218,
+      "total_fga": 229,
       "zones": {
         "A": {
           "attempts": 2,
@@ -9019,15 +9025,15 @@
           "pps": 2.0
         },
         "B": {
-          "attempts": 48,
-          "makes": 29,
+          "attempts": 53,
+          "makes": 32,
           "fg_pct": 60.4,
           "pps": 1.21
         },
         "C": {
-          "attempts": 32,
-          "makes": 18,
-          "fg_pct": 56.2,
+          "attempts": 34,
+          "makes": 19,
+          "fg_pct": 55.9,
           "pps": 1.12
         },
         "D": {
@@ -9043,22 +9049,22 @@
           "pps": 0.71
         },
         "F": {
-          "attempts": 4,
+          "attempts": 5,
           "makes": 3,
-          "fg_pct": 75.0,
-          "pps": 1.5
+          "fg_pct": 60.0,
+          "pps": 1.2
         },
         "G": {
-          "attempts": 10,
+          "attempts": 12,
           "makes": 5,
-          "fg_pct": 50.0,
-          "pps": 1.0
+          "fg_pct": 41.7,
+          "pps": 0.83
         },
         "H": {
-          "attempts": 52,
-          "makes": 15,
-          "fg_pct": 28.8,
-          "pps": 0.87
+          "attempts": 53,
+          "makes": 16,
+          "fg_pct": 30.2,
+          "pps": 0.91
         },
         "I": {
           "attempts": 50,
@@ -9076,7 +9082,7 @@
     },
     "HORTON TUCKER, TALEN": {
       "team": "ULK",
-      "total_fga": 452,
+      "total_fga": 463,
       "zones": {
         "A": {
           "attempts": 28,
@@ -9085,16 +9091,16 @@
           "pps": 1.93
         },
         "B": {
-          "attempts": 122,
-          "makes": 72,
-          "fg_pct": 59.0,
-          "pps": 1.18
+          "attempts": 126,
+          "makes": 75,
+          "fg_pct": 59.5,
+          "pps": 1.19
         },
         "C": {
-          "attempts": 102,
-          "makes": 53,
-          "fg_pct": 52.0,
-          "pps": 1.04
+          "attempts": 105,
+          "makes": 56,
+          "fg_pct": 53.3,
+          "pps": 1.07
         },
         "D": {
           "attempts": 19,
@@ -9103,10 +9109,10 @@
           "pps": 0.63
         },
         "E": {
-          "attempts": 24,
+          "attempts": 25,
           "makes": 12,
-          "fg_pct": 50.0,
-          "pps": 1.0
+          "fg_pct": 48.0,
+          "pps": 0.96
         },
         "F": {
           "attempts": 8,
@@ -9121,16 +9127,16 @@
           "pps": 0.89
         },
         "H": {
-          "attempts": 62,
+          "attempts": 63,
           "makes": 17,
-          "fg_pct": 27.4,
-          "pps": 0.82
+          "fg_pct": 27.0,
+          "pps": 0.81
         },
         "I": {
-          "attempts": 78,
+          "attempts": 80,
           "makes": 22,
-          "fg_pct": 28.2,
-          "pps": 0.85
+          "fg_pct": 27.5,
+          "pps": 0.82
         }
       }
     },
@@ -9196,7 +9202,7 @@
     },
     "COLSON, BONZIE": {
       "team": "ULK",
-      "total_fga": 189,
+      "total_fga": 192,
       "zones": {
         "A": {
           "attempts": 5,
@@ -9205,16 +9211,16 @@
           "pps": 1.6
         },
         "B": {
-          "attempts": 23,
-          "makes": 11,
-          "fg_pct": 47.8,
+          "attempts": 25,
+          "makes": 12,
+          "fg_pct": 48.0,
           "pps": 0.96
         },
         "C": {
-          "attempts": 23,
+          "attempts": 24,
           "makes": 16,
-          "fg_pct": 69.6,
-          "pps": 1.39
+          "fg_pct": 66.7,
+          "pps": 1.33
         },
         "D": {
           "attempts": 17,
@@ -9256,7 +9262,7 @@
     },
     "JANTUNEN, MIKAEL": {
       "team": "ULK",
-      "total_fga": 136,
+      "total_fga": 141,
       "zones": {
         "A": {
           "attempts": 1,
@@ -9265,10 +9271,10 @@
           "pps": 2.0
         },
         "B": {
-          "attempts": 27,
-          "makes": 17,
-          "fg_pct": 63.0,
-          "pps": 1.26
+          "attempts": 28,
+          "makes": 18,
+          "fg_pct": 64.3,
+          "pps": 1.29
         },
         "C": {
           "attempts": 14,
@@ -9277,13 +9283,13 @@
           "pps": 0.71
         },
         "D": {
-          "attempts": 5,
-          "makes": 2,
-          "fg_pct": 40.0,
-          "pps": 0.8
+          "attempts": 6,
+          "makes": 3,
+          "fg_pct": 50.0,
+          "pps": 1.0
         },
         "E": {
-          "attempts": 2,
+          "attempts": 3,
           "makes": 0,
           "fg_pct": 0.0,
           "pps": 0.0
@@ -9295,16 +9301,16 @@
           "pps": 1.0
         },
         "G": {
-          "attempts": 1,
+          "attempts": 2,
           "makes": 0,
           "fg_pct": 0.0,
           "pps": 0.0
         },
         "H": {
-          "attempts": 51,
+          "attempts": 52,
           "makes": 21,
-          "fg_pct": 41.2,
-          "pps": 1.24
+          "fg_pct": 40.4,
+          "pps": 1.21
         },
         "I": {
           "attempts": 33,
@@ -9538,7 +9544,7 @@
     },
     "MELLI, NICOLO": {
       "team": "ULK",
-      "total_fga": 183,
+      "total_fga": 187,
       "zones": {
         "A": {
           "attempts": 5,
@@ -9565,10 +9571,10 @@
           "pps": 0.67
         },
         "E": {
-          "attempts": 6,
+          "attempts": 7,
           "makes": 3,
-          "fg_pct": 50.0,
-          "pps": 1.0
+          "fg_pct": 42.9,
+          "pps": 0.86
         },
         "F": {
           "attempts": 9,
@@ -9583,16 +9589,16 @@
           "pps": 1.2
         },
         "H": {
-          "attempts": 42,
-          "makes": 17,
-          "fg_pct": 40.5,
-          "pps": 1.21
+          "attempts": 44,
+          "makes": 18,
+          "fg_pct": 40.9,
+          "pps": 1.23
         },
         "I": {
-          "attempts": 54,
+          "attempts": 55,
           "makes": 24,
-          "fg_pct": 44.4,
-          "pps": 1.33
+          "fg_pct": 43.6,
+          "pps": 1.31
         }
       }
     },
@@ -9658,61 +9664,61 @@
     },
     "BALDWIN IV, WADE": {
       "team": "ULK",
-      "total_fga": 420,
+      "total_fga": 437,
       "zones": {
         "A": {
-          "attempts": 16,
-          "makes": 16,
+          "attempts": 17,
+          "makes": 17,
           "fg_pct": 100.0,
           "pps": 2.0
         },
         "B": {
-          "attempts": 53,
-          "makes": 30,
-          "fg_pct": 56.6,
+          "attempts": 55,
+          "makes": 31,
+          "fg_pct": 56.4,
           "pps": 1.13
         },
         "C": {
-          "attempts": 54,
-          "makes": 31,
-          "fg_pct": 57.4,
-          "pps": 1.15
+          "attempts": 55,
+          "makes": 32,
+          "fg_pct": 58.2,
+          "pps": 1.16
         },
         "D": {
-          "attempts": 39,
-          "makes": 19,
-          "fg_pct": 48.7,
-          "pps": 0.97
+          "attempts": 41,
+          "makes": 20,
+          "fg_pct": 48.8,
+          "pps": 0.98
         },
         "E": {
-          "attempts": 63,
+          "attempts": 67,
           "makes": 32,
-          "fg_pct": 50.8,
-          "pps": 1.02
+          "fg_pct": 47.8,
+          "pps": 0.96
         },
         "F": {
-          "attempts": 28,
+          "attempts": 29,
           "makes": 9,
-          "fg_pct": 32.1,
-          "pps": 0.64
+          "fg_pct": 31.0,
+          "pps": 0.62
         },
         "G": {
-          "attempts": 46,
-          "makes": 21,
-          "fg_pct": 45.7,
-          "pps": 0.91
+          "attempts": 47,
+          "makes": 22,
+          "fg_pct": 46.8,
+          "pps": 0.94
         },
         "H": {
-          "attempts": 36,
+          "attempts": 39,
           "makes": 10,
-          "fg_pct": 27.8,
-          "pps": 0.83
+          "fg_pct": 25.6,
+          "pps": 0.77
         },
         "I": {
-          "attempts": 85,
-          "makes": 26,
-          "fg_pct": 30.6,
-          "pps": 0.92
+          "attempts": 87,
+          "makes": 28,
+          "fg_pct": 32.2,
+          "pps": 0.97
         }
       }
     },
@@ -9766,7 +9772,7 @@
     },
     "BIBEROVIC, TARIK": {
       "team": "ULK",
-      "total_fga": 334,
+      "total_fga": 341,
       "zones": {
         "A": {
           "attempts": 3,
@@ -9775,10 +9781,10 @@
           "pps": 2.0
         },
         "B": {
-          "attempts": 28,
-          "makes": 17,
-          "fg_pct": 60.7,
-          "pps": 1.21
+          "attempts": 30,
+          "makes": 18,
+          "fg_pct": 60.0,
+          "pps": 1.2
         },
         "C": {
           "attempts": 32,
@@ -9805,22 +9811,22 @@
           "pps": 0.29
         },
         "G": {
-          "attempts": 23,
-          "makes": 8,
-          "fg_pct": 34.8,
-          "pps": 0.74
+          "attempts": 24,
+          "makes": 9,
+          "fg_pct": 37.5,
+          "pps": 0.79
         },
         "H": {
-          "attempts": 108,
-          "makes": 50,
-          "fg_pct": 46.3,
-          "pps": 1.38
+          "attempts": 111,
+          "makes": 51,
+          "fg_pct": 45.9,
+          "pps": 1.37
         },
         "I": {
-          "attempts": 90,
-          "makes": 32,
-          "fg_pct": 35.6,
-          "pps": 1.07
+          "attempts": 91,
+          "makes": 33,
+          "fg_pct": 36.3,
+          "pps": 1.09
         }
       }
     },
@@ -10000,19 +10006,19 @@
     },
     "BIRCH, KHEM": {
       "team": "ULK",
-      "total_fga": 83,
+      "total_fga": 85,
       "zones": {
         "A": {
-          "attempts": 6,
-          "makes": 6,
+          "attempts": 7,
+          "makes": 7,
           "fg_pct": 100.0,
           "pps": 2.0
         },
         "B": {
-          "attempts": 37,
-          "makes": 21,
-          "fg_pct": 56.8,
-          "pps": 1.14
+          "attempts": 38,
+          "makes": 22,
+          "fg_pct": 57.9,
+          "pps": 1.16
         },
         "C": {
           "attempts": 26,
@@ -10342,7 +10348,7 @@
     },
     "WILLIAMS-GOSS, NIGEL": {
       "team": "ZAL",
-      "total_fga": 285,
+      "total_fga": 295,
       "zones": {
         "B": {
           "attempts": 65,
@@ -10351,16 +10357,16 @@
           "pps": 1.17
         },
         "C": {
-          "attempts": 65,
+          "attempts": 67,
           "makes": 32,
-          "fg_pct": 49.2,
-          "pps": 0.98
+          "fg_pct": 47.8,
+          "pps": 0.96
         },
         "D": {
-          "attempts": 21,
-          "makes": 13,
-          "fg_pct": 61.9,
-          "pps": 1.24
+          "attempts": 24,
+          "makes": 16,
+          "fg_pct": 66.7,
+          "pps": 1.33
         },
         "E": {
           "attempts": 31,
@@ -10381,16 +10387,16 @@
           "pps": 0.67
         },
         "H": {
-          "attempts": 26,
+          "attempts": 27,
           "makes": 11,
-          "fg_pct": 42.3,
-          "pps": 1.27
+          "fg_pct": 40.7,
+          "pps": 1.22
         },
         "I": {
-          "attempts": 43,
-          "makes": 16,
-          "fg_pct": 37.2,
-          "pps": 1.12
+          "attempts": 47,
+          "makes": 19,
+          "fg_pct": 40.4,
+          "pps": 1.21
         }
       }
     },
@@ -10516,7 +10522,7 @@
     },
     "SLEVA, DUSTIN": {
       "team": "ZAL",
-      "total_fga": 212,
+      "total_fga": 216,
       "zones": {
         "A": {
           "attempts": 6,
@@ -10525,10 +10531,10 @@
           "pps": 2.0
         },
         "B": {
-          "attempts": 31,
-          "makes": 16,
-          "fg_pct": 51.6,
-          "pps": 1.03
+          "attempts": 32,
+          "makes": 17,
+          "fg_pct": 53.1,
+          "pps": 1.06
         },
         "C": {
           "attempts": 16,
@@ -10567,10 +10573,10 @@
           "pps": 1.09
         },
         "I": {
-          "attempts": 56,
+          "attempts": 59,
           "makes": 26,
-          "fg_pct": 46.4,
-          "pps": 1.39
+          "fg_pct": 44.1,
+          "pps": 1.32
         }
       }
     },
@@ -10630,11 +10636,11 @@
     },
     "FRANCISCO, SYLVAIN": {
       "team": "ZAL",
-      "total_fga": 449,
+      "total_fga": 464,
       "zones": {
         "A": {
-          "attempts": 2,
-          "makes": 2,
+          "attempts": 3,
+          "makes": 3,
           "fg_pct": 100.0,
           "pps": 2.0
         },
@@ -10645,10 +10651,10 @@
           "pps": 1.26
         },
         "C": {
-          "attempts": 35,
+          "attempts": 37,
           "makes": 20,
-          "fg_pct": 57.1,
-          "pps": 1.14
+          "fg_pct": 54.1,
+          "pps": 1.08
         },
         "D": {
           "attempts": 21,
@@ -10657,10 +10663,10 @@
           "pps": 0.86
         },
         "E": {
-          "attempts": 13,
-          "makes": 2,
-          "fg_pct": 15.4,
-          "pps": 0.31
+          "attempts": 15,
+          "makes": 3,
+          "fg_pct": 20.0,
+          "pps": 0.4
         },
         "F": {
           "attempts": 7,
@@ -10669,28 +10675,28 @@
           "pps": 0.57
         },
         "G": {
-          "attempts": 11,
+          "attempts": 13,
           "makes": 4,
-          "fg_pct": 36.4,
-          "pps": 0.73
+          "fg_pct": 30.8,
+          "pps": 0.62
         },
         "H": {
-          "attempts": 121,
-          "makes": 39,
-          "fg_pct": 32.2,
+          "attempts": 124,
+          "makes": 40,
+          "fg_pct": 32.3,
           "pps": 0.97
         },
         "I": {
-          "attempts": 152,
-          "makes": 67,
-          "fg_pct": 44.1,
-          "pps": 1.32
+          "attempts": 157,
+          "makes": 68,
+          "fg_pct": 43.3,
+          "pps": 1.3
         }
       }
     },
     "LO, MAODO": {
       "team": "ZAL",
-      "total_fga": 210,
+      "total_fga": 214,
       "zones": {
         "A": {
           "attempts": 1,
@@ -10699,10 +10705,10 @@
           "pps": 0.0
         },
         "B": {
-          "attempts": 47,
+          "attempts": 48,
           "makes": 31,
-          "fg_pct": 66.0,
-          "pps": 1.32
+          "fg_pct": 64.6,
+          "pps": 1.29
         },
         "C": {
           "attempts": 36,
@@ -10729,40 +10735,40 @@
           "pps": 0.0
         },
         "H": {
-          "attempts": 52,
+          "attempts": 53,
           "makes": 25,
-          "fg_pct": 48.1,
-          "pps": 1.44
+          "fg_pct": 47.2,
+          "pps": 1.42
         },
         "I": {
-          "attempts": 58,
+          "attempts": 60,
           "makes": 19,
-          "fg_pct": 32.8,
-          "pps": 0.98
+          "fg_pct": 31.7,
+          "pps": 0.95
         }
       }
     },
     "WRIGHT, MOSES": {
       "team": "ZAL",
-      "total_fga": 346,
+      "total_fga": 352,
       "zones": {
         "A": {
-          "attempts": 73,
-          "makes": 72,
+          "attempts": 74,
+          "makes": 73,
           "fg_pct": 98.6,
           "pps": 1.97
         },
         "B": {
-          "attempts": 110,
-          "makes": 67,
-          "fg_pct": 60.9,
-          "pps": 1.22
+          "attempts": 112,
+          "makes": 68,
+          "fg_pct": 60.7,
+          "pps": 1.21
         },
         "C": {
-          "attempts": 75,
-          "makes": 41,
-          "fg_pct": 54.7,
-          "pps": 1.09
+          "attempts": 77,
+          "makes": 43,
+          "fg_pct": 55.8,
+          "pps": 1.12
         },
         "D": {
           "attempts": 21,
@@ -10783,10 +10789,10 @@
           "pps": 0.4
         },
         "G": {
-          "attempts": 8,
+          "attempts": 9,
           "makes": 3,
-          "fg_pct": 37.5,
-          "pps": 0.75
+          "fg_pct": 33.3,
+          "pps": 0.67
         },
         "H": {
           "attempts": 15,
@@ -10804,7 +10810,7 @@
     },
     "TUBELIS, AZUOLAS": {
       "team": "ZAL",
-      "total_fga": 328,
+      "total_fga": 342,
       "zones": {
         "A": {
           "attempts": 22,
@@ -10813,22 +10819,22 @@
           "pps": 1.91
         },
         "B": {
-          "attempts": 60,
-          "makes": 38,
-          "fg_pct": 63.3,
-          "pps": 1.27
-        },
-        "C": {
-          "attempts": 139,
-          "makes": 86,
+          "attempts": 63,
+          "makes": 39,
           "fg_pct": 61.9,
           "pps": 1.24
         },
+        "C": {
+          "attempts": 145,
+          "makes": 91,
+          "fg_pct": 62.8,
+          "pps": 1.26
+        },
         "D": {
-          "attempts": 12,
+          "attempts": 13,
           "makes": 7,
-          "fg_pct": 58.3,
-          "pps": 1.17
+          "fg_pct": 53.8,
+          "pps": 1.08
         },
         "E": {
           "attempts": 20,
@@ -10843,16 +10849,16 @@
           "pps": 0.0
         },
         "H": {
-          "attempts": 36,
+          "attempts": 37,
           "makes": 13,
-          "fg_pct": 36.1,
-          "pps": 1.08
+          "fg_pct": 35.1,
+          "pps": 1.05
         },
         "I": {
-          "attempts": 37,
-          "makes": 15,
-          "fg_pct": 40.5,
-          "pps": 1.22
+          "attempts": 40,
+          "makes": 18,
+          "fg_pct": 45.0,
+          "pps": 1.35
         }
       }
     },
@@ -11104,7 +11110,7 @@
     },
     "SIRVYDIS, DEIVIDAS": {
       "team": "ZAL",
-      "total_fga": 102,
+      "total_fga": 105,
       "zones": {
         "B": {
           "attempts": 6,
@@ -11113,10 +11119,10 @@
           "pps": 1.0
         },
         "C": {
-          "attempts": 16,
+          "attempts": 17,
           "makes": 11,
-          "fg_pct": 68.8,
-          "pps": 1.38
+          "fg_pct": 64.7,
+          "pps": 1.29
         },
         "D": {
           "attempts": 3,
@@ -11143,16 +11149,16 @@
           "pps": 0.81
         },
         "I": {
-          "attempts": 32,
+          "attempts": 34,
           "makes": 11,
-          "fg_pct": 34.4,
-          "pps": 1.03
+          "fg_pct": 32.4,
+          "pps": 0.97
         }
       }
     },
     "ULANOVAS, EDGARAS": {
       "team": "ZAL",
-      "total_fga": 139,
+      "total_fga": 144,
       "zones": {
         "A": {
           "attempts": 2,
@@ -11167,10 +11173,10 @@
           "pps": 0.9
         },
         "C": {
-          "attempts": 38,
-          "makes": 18,
-          "fg_pct": 47.4,
-          "pps": 0.95
+          "attempts": 41,
+          "makes": 20,
+          "fg_pct": 48.8,
+          "pps": 0.98
         },
         "D": {
           "attempts": 10,
@@ -11197,10 +11203,10 @@
           "pps": 1.5
         },
         "I": {
-          "attempts": 23,
+          "attempts": 25,
           "makes": 7,
-          "fg_pct": 30.4,
-          "pps": 0.91
+          "fg_pct": 28.0,
+          "pps": 0.84
         }
       }
     },
@@ -11260,7 +11266,7 @@
     },
     "BUTKEVICIUS, ARNAS": {
       "team": "ZAL",
-      "total_fga": 123,
+      "total_fga": 125,
       "zones": {
         "A": {
           "attempts": 5,
@@ -11305,16 +11311,16 @@
           "pps": 1.0
         },
         "H": {
-          "attempts": 34,
+          "attempts": 35,
           "makes": 18,
-          "fg_pct": 52.9,
-          "pps": 1.59
+          "fg_pct": 51.4,
+          "pps": 1.54
         },
         "I": {
-          "attempts": 40,
-          "makes": 20,
-          "fg_pct": 50.0,
-          "pps": 1.5
+          "attempts": 41,
+          "makes": 21,
+          "fg_pct": 51.2,
+          "pps": 1.54
         }
       }
     },
@@ -11446,7 +11452,7 @@
     },
     "TAYLOR, KAMERON": {
       "team": "PAM",
-      "total_fga": 301,
+      "total_fga": 309,
       "zones": {
         "A": {
           "attempts": 13,
@@ -11455,22 +11461,22 @@
           "pps": 2.0
         },
         "B": {
-          "attempts": 65,
-          "makes": 40,
-          "fg_pct": 61.5,
-          "pps": 1.23
+          "attempts": 66,
+          "makes": 41,
+          "fg_pct": 62.1,
+          "pps": 1.24
         },
         "C": {
-          "attempts": 38,
-          "makes": 25,
-          "fg_pct": 65.8,
-          "pps": 1.32
+          "attempts": 39,
+          "makes": 26,
+          "fg_pct": 66.7,
+          "pps": 1.33
         },
         "D": {
-          "attempts": 15,
+          "attempts": 16,
           "makes": 7,
-          "fg_pct": 46.7,
-          "pps": 0.93
+          "fg_pct": 43.8,
+          "pps": 0.88
         },
         "E": {
           "attempts": 15,
@@ -11479,22 +11485,22 @@
           "pps": 0.67
         },
         "F": {
-          "attempts": 6,
-          "makes": 4,
-          "fg_pct": 66.7,
-          "pps": 1.33
+          "attempts": 7,
+          "makes": 5,
+          "fg_pct": 71.4,
+          "pps": 1.43
         },
         "G": {
-          "attempts": 12,
-          "makes": 4,
-          "fg_pct": 33.3,
-          "pps": 0.67
+          "attempts": 13,
+          "makes": 5,
+          "fg_pct": 38.5,
+          "pps": 0.77
         },
         "H": {
-          "attempts": 68,
-          "makes": 29,
-          "fg_pct": 42.6,
-          "pps": 1.28
+          "attempts": 71,
+          "makes": 31,
+          "fg_pct": 43.7,
+          "pps": 1.31
         },
         "I": {
           "attempts": 69,
@@ -11506,13 +11512,13 @@
     },
     "DE COLO, NANDO": {
       "team": "ULK",
-      "total_fga": 186,
+      "total_fga": 190,
       "zones": {
         "B": {
-          "attempts": 41,
-          "makes": 30,
-          "fg_pct": 73.2,
-          "pps": 1.46
+          "attempts": 43,
+          "makes": 32,
+          "fg_pct": 74.4,
+          "pps": 1.49
         },
         "C": {
           "attempts": 15,
@@ -11545,10 +11551,10 @@
           "pps": 0.83
         },
         "H": {
-          "attempts": 47,
-          "makes": 16,
-          "fg_pct": 34.0,
-          "pps": 1.02
+          "attempts": 49,
+          "makes": 17,
+          "fg_pct": 34.7,
+          "pps": 1.04
         },
         "I": {
           "attempts": 49,
@@ -11668,7 +11674,7 @@
     },
     "REUVERS, NATHAN": {
       "team": "PAM",
-      "total_fga": 258,
+      "total_fga": 264,
       "zones": {
         "A": {
           "attempts": 41,
@@ -11677,16 +11683,16 @@
           "pps": 2.0
         },
         "B": {
-          "attempts": 49,
+          "attempts": 50,
           "makes": 33,
-          "fg_pct": 67.3,
-          "pps": 1.35
+          "fg_pct": 66.0,
+          "pps": 1.32
         },
         "C": {
-          "attempts": 33,
-          "makes": 20,
-          "fg_pct": 60.6,
-          "pps": 1.21
+          "attempts": 34,
+          "makes": 21,
+          "fg_pct": 61.8,
+          "pps": 1.24
         },
         "D": {
           "attempts": 10,
@@ -11695,10 +11701,10 @@
           "pps": 0.8
         },
         "E": {
-          "attempts": 7,
-          "makes": 4,
-          "fg_pct": 57.1,
-          "pps": 1.14
+          "attempts": 10,
+          "makes": 5,
+          "fg_pct": 50.0,
+          "pps": 1.0
         },
         "F": {
           "attempts": 2,
@@ -11719,16 +11725,16 @@
           "pps": 1.38
         },
         "I": {
-          "attempts": 76,
+          "attempts": 77,
           "makes": 32,
-          "fg_pct": 42.1,
-          "pps": 1.26
+          "fg_pct": 41.6,
+          "pps": 1.25
         }
       }
     },
     "DE LARREA, SERGIO": {
       "team": "PAM",
-      "total_fga": 85,
+      "total_fga": 91,
       "zones": {
         "A": {
           "attempts": 2,
@@ -11737,16 +11743,16 @@
           "pps": 2.0
         },
         "B": {
-          "attempts": 20,
-          "makes": 10,
-          "fg_pct": 50.0,
-          "pps": 1.0
+          "attempts": 23,
+          "makes": 11,
+          "fg_pct": 47.8,
+          "pps": 0.96
         },
         "C": {
-          "attempts": 6,
-          "makes": 3,
-          "fg_pct": 50.0,
-          "pps": 1.0
+          "attempts": 9,
+          "makes": 5,
+          "fg_pct": 55.6,
+          "pps": 1.11
         },
         "D": {
           "attempts": 6,
@@ -11788,7 +11794,7 @@
     },
     "SAKO, NEAL": {
       "team": "PAM",
-      "total_fga": 131,
+      "total_fga": 132,
       "zones": {
         "A": {
           "attempts": 35,
@@ -11803,10 +11809,10 @@
           "pps": 1.1
         },
         "C": {
-          "attempts": 50,
-          "makes": 30,
-          "fg_pct": 60.0,
-          "pps": 1.2
+          "attempts": 51,
+          "makes": 31,
+          "fg_pct": 60.8,
+          "pps": 1.22
         },
         "D": {
           "attempts": 9,
@@ -11902,13 +11908,13 @@
     },
     "THOMPSON, DARIUS": {
       "team": "PAM",
-      "total_fga": 285,
+      "total_fga": 291,
       "zones": {
         "A": {
-          "attempts": 10,
-          "makes": 8,
-          "fg_pct": 80.0,
-          "pps": 1.6
+          "attempts": 11,
+          "makes": 9,
+          "fg_pct": 81.8,
+          "pps": 1.64
         },
         "B": {
           "attempts": 42,
@@ -11929,10 +11935,10 @@
           "pps": 1.0
         },
         "E": {
-          "attempts": 26,
-          "makes": 13,
-          "fg_pct": 50.0,
-          "pps": 1.0
+          "attempts": 27,
+          "makes": 14,
+          "fg_pct": 51.9,
+          "pps": 1.04
         },
         "F": {
           "attempts": 4,
@@ -11947,10 +11953,10 @@
           "pps": 1.33
         },
         "H": {
-          "attempts": 56,
-          "makes": 20,
-          "fg_pct": 35.7,
-          "pps": 1.07
+          "attempts": 60,
+          "makes": 22,
+          "fg_pct": 36.7,
+          "pps": 1.1
         },
         "I": {
           "attempts": 98,
@@ -11962,11 +11968,11 @@
     },
     "PUERTO, JOSEP": {
       "team": "PAM",
-      "total_fga": 148,
+      "total_fga": 153,
       "zones": {
         "A": {
-          "attempts": 4,
-          "makes": 4,
+          "attempts": 5,
+          "makes": 5,
           "fg_pct": 100.0,
           "pps": 2.0
         },
@@ -12013,10 +12019,10 @@
           "pps": 1.12
         },
         "I": {
-          "attempts": 46,
-          "makes": 20,
-          "fg_pct": 43.5,
-          "pps": 1.28
+          "attempts": 50,
+          "makes": 22,
+          "fg_pct": 44.0,
+          "pps": 1.3
         }
       }
     },
@@ -12262,7 +12268,7 @@
     },
     "COSTELLO, MATTHEW": {
       "team": "PAM",
-      "total_fga": 167,
+      "total_fga": 172,
       "zones": {
         "A": {
           "attempts": 7,
@@ -12277,16 +12283,22 @@
           "pps": 1.24
         },
         "C": {
-          "attempts": 21,
+          "attempts": 23,
           "makes": 17,
-          "fg_pct": 81.0,
-          "pps": 1.62
+          "fg_pct": 73.9,
+          "pps": 1.48
         },
         "D": {
           "attempts": 4,
           "makes": 2,
           "fg_pct": 50.0,
           "pps": 1.0
+        },
+        "E": {
+          "attempts": 1,
+          "makes": 1,
+          "fg_pct": 100.0,
+          "pps": 2.0
         },
         "F": {
           "attempts": 3,
@@ -12307,16 +12319,16 @@
           "pps": 1.13
         },
         "I": {
-          "attempts": 56,
-          "makes": 23,
-          "fg_pct": 41.1,
-          "pps": 1.23
+          "attempts": 58,
+          "makes": 25,
+          "fg_pct": 43.1,
+          "pps": 1.29
         }
       }
     },
     "PRADILLA, JAIME": {
       "team": "PAM",
-      "total_fga": 208,
+      "total_fga": 210,
       "zones": {
         "A": {
           "attempts": 12,
@@ -12325,10 +12337,10 @@
           "pps": 2.0
         },
         "B": {
-          "attempts": 57,
+          "attempts": 58,
           "makes": 39,
-          "fg_pct": 68.4,
-          "pps": 1.37
+          "fg_pct": 67.2,
+          "pps": 1.34
         },
         "C": {
           "attempts": 40,
@@ -12337,10 +12349,10 @@
           "pps": 1.15
         },
         "D": {
-          "attempts": 14,
+          "attempts": 15,
           "makes": 8,
-          "fg_pct": 57.1,
-          "pps": 1.14
+          "fg_pct": 53.3,
+          "pps": 1.07
         },
         "E": {
           "attempts": 6,
@@ -12898,7 +12910,7 @@
     },
     "OSMAN, CEDI": {
       "team": "PAN",
-      "total_fga": 311,
+      "total_fga": 318,
       "zones": {
         "A": {
           "attempts": 8,
@@ -12907,16 +12919,16 @@
           "pps": 1.75
         },
         "B": {
-          "attempts": 53,
-          "makes": 36,
-          "fg_pct": 67.9,
-          "pps": 1.36
+          "attempts": 55,
+          "makes": 37,
+          "fg_pct": 67.3,
+          "pps": 1.35
         },
         "C": {
-          "attempts": 48,
-          "makes": 26,
-          "fg_pct": 54.2,
-          "pps": 1.08
+          "attempts": 49,
+          "makes": 27,
+          "fg_pct": 55.1,
+          "pps": 1.1
         },
         "D": {
           "attempts": 15,
@@ -12925,10 +12937,10 @@
           "pps": 0.93
         },
         "E": {
-          "attempts": 19,
+          "attempts": 20,
           "makes": 7,
-          "fg_pct": 36.8,
-          "pps": 0.74
+          "fg_pct": 35.0,
+          "pps": 0.7
         },
         "F": {
           "attempts": 2,
@@ -12943,16 +12955,16 @@
           "pps": 0.7
         },
         "H": {
-          "attempts": 63,
-          "makes": 23,
-          "fg_pct": 36.5,
-          "pps": 1.1
+          "attempts": 64,
+          "makes": 24,
+          "fg_pct": 37.5,
+          "pps": 1.12
         },
         "I": {
-          "attempts": 92,
+          "attempts": 94,
           "makes": 36,
-          "fg_pct": 39.1,
-          "pps": 1.17
+          "fg_pct": 38.3,
+          "pps": 1.15
         },
         "J": {
           "attempts": 1,
@@ -13420,7 +13432,7 @@
     },
     "BADIO, BRANCOU": {
       "team": "PAM",
-      "total_fga": 320,
+      "total_fga": 334,
       "zones": {
         "A": {
           "attempts": 7,
@@ -13429,16 +13441,16 @@
           "pps": 2.0
         },
         "B": {
-          "attempts": 40,
-          "makes": 26,
-          "fg_pct": 65.0,
+          "attempts": 43,
+          "makes": 28,
+          "fg_pct": 65.1,
           "pps": 1.3
         },
         "C": {
-          "attempts": 33,
-          "makes": 19,
-          "fg_pct": 57.6,
-          "pps": 1.15
+          "attempts": 34,
+          "makes": 20,
+          "fg_pct": 58.8,
+          "pps": 1.18
         },
         "D": {
           "attempts": 12,
@@ -13447,10 +13459,10 @@
           "pps": 1.0
         },
         "E": {
-          "attempts": 21,
-          "makes": 9,
-          "fg_pct": 42.9,
-          "pps": 0.86
+          "attempts": 22,
+          "makes": 10,
+          "fg_pct": 45.5,
+          "pps": 0.91
         },
         "F": {
           "attempts": 13,
@@ -13465,16 +13477,16 @@
           "pps": 0.89
         },
         "H": {
-          "attempts": 103,
-          "makes": 42,
-          "fg_pct": 40.8,
-          "pps": 1.22
+          "attempts": 108,
+          "makes": 43,
+          "fg_pct": 39.8,
+          "pps": 1.19
         },
         "I": {
-          "attempts": 82,
-          "makes": 24,
-          "fg_pct": 29.3,
-          "pps": 0.88
+          "attempts": 86,
+          "makes": 25,
+          "fg_pct": 29.1,
+          "pps": 0.87
         }
       }
     },
@@ -13756,7 +13768,7 @@
     },
     "MONTERO, JEAN": {
       "team": "PAM",
-      "total_fga": 364,
+      "total_fga": 378,
       "zones": {
         "A": {
           "attempts": 7,
@@ -13765,16 +13777,16 @@
           "pps": 2.0
         },
         "B": {
-          "attempts": 59,
-          "makes": 28,
-          "fg_pct": 47.5,
-          "pps": 0.95
+          "attempts": 65,
+          "makes": 32,
+          "fg_pct": 49.2,
+          "pps": 0.98
         },
         "C": {
-          "attempts": 50,
-          "makes": 28,
-          "fg_pct": 56.0,
-          "pps": 1.12
+          "attempts": 53,
+          "makes": 31,
+          "fg_pct": 58.5,
+          "pps": 1.17
         },
         "D": {
           "attempts": 18,
@@ -13795,22 +13807,22 @@
           "pps": 0.75
         },
         "G": {
-          "attempts": 10,
-          "makes": 5,
-          "fg_pct": 50.0,
-          "pps": 1.0
+          "attempts": 11,
+          "makes": 6,
+          "fg_pct": 54.5,
+          "pps": 1.09
         },
         "H": {
-          "attempts": 91,
+          "attempts": 93,
           "makes": 31,
-          "fg_pct": 34.1,
-          "pps": 1.02
+          "fg_pct": 33.3,
+          "pps": 1.0
         },
         "I": {
-          "attempts": 99,
+          "attempts": 101,
           "makes": 30,
-          "fg_pct": 30.3,
-          "pps": 0.91
+          "fg_pct": 29.7,
+          "pps": 0.89
         }
       }
     },
@@ -14260,7 +14272,7 @@
     },
     "KEY, BRAXTON": {
       "team": "PAM",
-      "total_fga": 145,
+      "total_fga": 151,
       "zones": {
         "A": {
           "attempts": 16,
@@ -14269,16 +14281,16 @@
           "pps": 1.62
         },
         "B": {
-          "attempts": 28,
-          "makes": 18,
-          "fg_pct": 64.3,
-          "pps": 1.29
+          "attempts": 30,
+          "makes": 20,
+          "fg_pct": 66.7,
+          "pps": 1.33
         },
         "C": {
-          "attempts": 35,
+          "attempts": 37,
           "makes": 20,
-          "fg_pct": 57.1,
-          "pps": 1.14
+          "fg_pct": 54.1,
+          "pps": 1.08
         },
         "D": {
           "attempts": 6,
@@ -14311,16 +14323,16 @@
           "pps": 0.88
         },
         "I": {
-          "attempts": 25,
+          "attempts": 27,
           "makes": 5,
-          "fg_pct": 20.0,
-          "pps": 0.6
+          "fg_pct": 18.5,
+          "pps": 0.56
         }
       }
     },
     "FARIED, KENNETH": {
       "team": "PAN",
-      "total_fga": 131,
+      "total_fga": 133,
       "zones": {
         "A": {
           "attempts": 32,
@@ -14329,16 +14341,16 @@
           "pps": 1.94
         },
         "B": {
-          "attempts": 59,
-          "makes": 31,
-          "fg_pct": 52.5,
-          "pps": 1.05
+          "attempts": 60,
+          "makes": 32,
+          "fg_pct": 53.3,
+          "pps": 1.07
         },
         "C": {
-          "attempts": 28,
-          "makes": 15,
-          "fg_pct": 53.6,
-          "pps": 1.07
+          "attempts": 29,
+          "makes": 16,
+          "fg_pct": 55.2,
+          "pps": 1.1
         },
         "D": {
           "attempts": 2,
@@ -15346,7 +15358,7 @@
     },
     "HAYES-DAVIS, NIGEL": {
       "team": "PAN",
-      "total_fga": 143,
+      "total_fga": 157,
       "zones": {
         "A": {
           "attempts": 4,
@@ -15355,28 +15367,28 @@
           "pps": 2.0
         },
         "B": {
-          "attempts": 24,
+          "attempts": 25,
           "makes": 13,
-          "fg_pct": 54.2,
-          "pps": 1.08
+          "fg_pct": 52.0,
+          "pps": 1.04
         },
         "C": {
-          "attempts": 12,
+          "attempts": 13,
           "makes": 7,
-          "fg_pct": 58.3,
-          "pps": 1.17
+          "fg_pct": 53.8,
+          "pps": 1.08
         },
         "D": {
-          "attempts": 19,
-          "makes": 8,
-          "fg_pct": 42.1,
-          "pps": 0.84
-        },
-        "E": {
-          "attempts": 7,
-          "makes": 3,
+          "attempts": 21,
+          "makes": 9,
           "fg_pct": 42.9,
           "pps": 0.86
+        },
+        "E": {
+          "attempts": 8,
+          "makes": 4,
+          "fg_pct": 50.0,
+          "pps": 1.0
         },
         "F": {
           "attempts": 3,
@@ -15391,26 +15403,26 @@
           "pps": 0.6
         },
         "H": {
-          "attempts": 38,
-          "makes": 18,
-          "fg_pct": 47.4,
-          "pps": 1.42
+          "attempts": 45,
+          "makes": 19,
+          "fg_pct": 42.2,
+          "pps": 1.27
         },
         "I": {
-          "attempts": 26,
-          "makes": 7,
-          "fg_pct": 26.9,
-          "pps": 0.81
+          "attempts": 28,
+          "makes": 8,
+          "fg_pct": 28.6,
+          "pps": 0.86
         }
       }
     },
     "LESSORT, MATHIAS": {
       "team": "PAN",
-      "total_fga": 60,
+      "total_fga": 63,
       "zones": {
         "A": {
-          "attempts": 8,
-          "makes": 8,
+          "attempts": 9,
+          "makes": 9,
           "fg_pct": 100.0,
           "pps": 2.0
         },
@@ -15421,10 +15433,10 @@
           "pps": 1.14
         },
         "C": {
-          "attempts": 23,
-          "makes": 13,
-          "fg_pct": 56.5,
-          "pps": 1.13
+          "attempts": 25,
+          "makes": 14,
+          "fg_pct": 56.0,
+          "pps": 1.12
         },
         "D": {
           "attempts": 2,
@@ -15458,7 +15470,7 @@
       "fg_pct": [
         [
           48.6,
-          42.1,
+          40.0,
           80.0,
           null,
           null,
@@ -15481,22 +15493,22 @@
           null,
           null,
           44.4,
-          40.6
+          40.0
         ],
         [
-          43.6,
+          43.3,
           35.6,
           60.0,
           14.3,
           30.8,
           36.7,
           40.9,
-          42.9,
+          45.5,
           42.1,
           57.1,
           67.6,
           84.9,
-          94.3,
+          94.4,
           78.2,
           53.5,
           48.1,
@@ -15507,11 +15519,11 @@
           36.4,
           71.4,
           38.1,
-          39.1,
+          39.4,
           45.9
         ],
         [
-          36.4,
+          36.6,
           41.3,
           42.1,
           33.3,
@@ -15520,97 +15532,97 @@
           28.2,
           47.6,
           40.4,
-          55.5,
+          55.7,
           68.3,
           80.9,
           94.5,
-          77.6,
-          64.0,
+          77.7,
+          64.1,
           42.8,
-          40.5,
-          35.2,
-          46.7,
+          41.2,
+          33.9,
+          46.2,
           41.3,
           39.7,
           40.9,
           38.9,
-          36.2,
-          37.4
+          36.0,
+          37.7
         ],
         [
-          47.3,
-          51.1,
+          47.0,
+          50.5,
           57.1,
           31.2,
           40.4,
           42.9,
           39.3,
           28.4,
-          34.0,
-          48.8,
-          60.8,
+          34.9,
+          48.5,
+          60.7,
           65.7,
-          66.0,
+          66.1,
           61.2,
-          57.3,
-          45.6,
-          29.2,
-          31.0,
+          57.1,
+          45.4,
+          29.8,
+          30.6,
           48.5,
           44.0,
-          47.4,
+          46.6,
           40.0,
           46.2,
           37.3,
-          40.2
+          40.7
         ],
         [
           36.1,
           39.8,
           80.0,
           11.1,
-          33.3,
+          32.5,
           31.9,
-          37.7,
+          37.1,
           34.0,
           38.3,
-          41.5,
-          47.0,
-          54.9,
-          59.7,
+          41.6,
+          47.1,
+          54.7,
+          59.8,
           52.5,
           40.9,
-          44.3,
+          44.5,
           26.8,
           50.8,
           23.1,
-          46.0,
+          46.9,
           46.2,
           23.5,
           60.0,
-          43.8,
+          43.9,
           41.1
         ],
         [
           40.0,
-          38.5,
+          38.2,
           null,
           77.8,
           22.2,
-          27.9,
+          28.9,
           28.4,
           32.3,
           40.8,
           40.4,
-          44.9,
+          45.0,
           42.7,
           47.0,
           49.6,
           39.8,
-          39.6,
-          30.0,
+          39.3,
+          32.3,
           38.9,
-          41.8,
+          40.6,
           22.6,
           40.0,
           14.3,
@@ -15620,7 +15632,7 @@
         ],
         [
           42.9,
-          36.8,
+          36.5,
           50.0,
           42.9,
           31.2,
@@ -15628,43 +15640,43 @@
           34.6,
           43.4,
           31.8,
-          39.8,
+          39.5,
           37.0,
-          39.0,
-          43.0,
-          42.5,
-          37.3,
-          43.2,
-          32.4,
+          39.2,
+          43.1,
+          42.8,
+          37.1,
+          42.9,
+          31.4,
           42.9,
           42.9,
           36.8,
-          19.4,
+          18.2,
           33.3,
           46.2,
-          42.5,
+          42.3,
           18.8
         ],
         [
           null,
-          36.4,
+          36.0,
           48.1,
           null,
           42.1,
-          36.4,
+          35.6,
           45.3,
           44.7,
-          32.2,
-          43.3,
+          33.3,
+          43.5,
           41.8,
-          40.3,
+          40.0,
           42.5,
-          34.7,
+          35.1,
           30.3,
           41.1,
-          50.0,
-          30.8,
-          38.8,
+          49.1,
+          32.1,
+          39.7,
           32.4,
           46.7,
           null,
@@ -15675,7 +15687,7 @@
         [
           null,
           36.4,
-          35.7,
+          36.0,
           50.0,
           null,
           45.0,
@@ -15686,27 +15698,27 @@
           44.1,
           40.4,
           48.7,
-          41.6,
+          42.6,
           47.1,
           52.9,
-          40.7,
-          42.0,
           40.0,
-          32.1,
+          41.2,
+          40.0,
+          34.5,
           20.0,
           44.0,
-          43.4,
+          43.3,
           34.7,
           null
         ],
         [
           null,
           27.7,
-          33.7,
+          33.8,
           45.1,
           null,
           33.3,
-          29.4,
+          31.4,
           39.5,
           63.4,
           44.9,
@@ -15714,24 +15726,24 @@
           40.7,
           37.9,
           39.1,
-          38.5,
+          37.5,
           40.5,
           50.0,
-          44.2,
+          45.5,
           25.0,
           38.5,
           16.7,
           45.6,
-          40.8,
-          27.8,
+          40.7,
+          28.6,
           null
         ],
         [
           null,
           40.7,
-          37.0,
-          35.2,
-          40.1,
+          37.1,
+          35.1,
+          40.6,
           null,
           56.2,
           46.7,
@@ -15747,9 +15759,9 @@
           11.8,
           26.7,
           null,
-          38.2,
-          34.1,
-          40.5,
+          38.5,
+          34.5,
+          40.1,
           40.0,
           null
         ],
@@ -15757,25 +15769,25 @@
           null,
           35.7,
           32.1,
-          33.3,
+          33.4,
           35.8,
-          34.9,
+          35.1,
           44.4,
           null,
-          30.8,
+          35.7,
           56.2,
           33.3,
           46.9,
-          31.4,
+          30.6,
           25.0,
           53.8,
           25.0,
           76.9,
           null,
-          50.0,
+          54.5,
           39.5,
           34.1,
-          36.0,
+          36.1,
           34.9,
           42.9,
           null
@@ -15785,7 +15797,7 @@
           30.0,
           30.9,
           34.0,
-          34.6,
+          34.7,
           34.6,
           41.6,
           55.6,
@@ -15799,10 +15811,10 @@
           null,
           null,
           32.4,
-          32.6,
-          35.6,
+          32.7,
+          35.7,
           33.8,
-          32.6,
+          32.4,
           32.5,
           33.3,
           null
@@ -15813,9 +15825,9 @@
           43.9,
           32.4,
           39.4,
-          36.5,
-          33.7,
-          38.2,
+          36.6,
+          33.9,
+          37.9,
           40.4,
           32.2,
           28.6,
@@ -15824,9 +15836,9 @@
           12.5,
           40.0,
           40.8,
-          32.9,
+          33.3,
           37.0,
-          30.4,
+          29.9,
           33.3,
           30.1,
           34.1,
@@ -15840,20 +15852,20 @@
           30.0,
           39.1,
           33.3,
-          29.7,
-          38.5,
-          30.9,
+          29.4,
+          38.1,
+          30.7,
           35.1,
-          36.0,
+          36.1,
           33.7,
           39.5,
-          37.5,
-          40.5,
-          43.8,
-          40.4,
-          32.7,
-          30.0,
-          34.3,
+          37.3,
+          40.8,
+          44.1,
+          40.6,
+          32.6,
+          29.6,
+          34.1,
           35.1,
           30.0,
           40.9,
@@ -15865,15 +15877,15 @@
           null,
           null,
           33.3,
-          36.8,
+          35.0,
           32.4,
           24.4,
           32.3,
-          33.9,
-          34.2,
           33.3,
-          28.8,
-          37.5,
+          33.8,
+          33.3,
+          28.6,
+          37.9,
           38.0,
           33.5,
           31.6,
@@ -15896,12 +15908,12 @@
           22.2,
           0.0,
           30.0,
-          25.8,
+          25.0,
           40.0,
           27.3,
           17.6,
           26.0,
-          34.8,
+          34.4,
           35.4,
           23.2,
           26.3,
@@ -16135,7 +16147,7 @@
       "attempts": [
         [
           74,
-          19,
+          20,
           5,
           0,
           0,
@@ -16158,22 +16170,22 @@
           0,
           0,
           27,
-          64
+          65
         ],
         [
-          273,
+          275,
           104,
           15,
           14,
           13,
           30,
           22,
-          21,
+          22,
           19,
           49,
           102,
           86,
-          743,
+          744,
           55,
           71,
           27,
@@ -16184,11 +16196,11 @@
           22,
           14,
           21,
-          192,
+          193,
           268
         ],
         [
-          236,
+          238,
           92,
           19,
           27,
@@ -16197,97 +16209,97 @@
           78,
           63,
           114,
-          348,
-          1372,
-          878,
-          1680,
-          812,
-          947,
+          350,
+          1377,
+          886,
+          1687,
+          817,
+          950,
           264,
-          84,
-          54,
-          92,
+          85,
+          56,
+          93,
           75,
           58,
           22,
           18,
-          160,
-          190
+          161,
+          191
         ],
         [
-          165,
-          92,
+          166,
+          93,
           7,
           16,
           47,
           77,
           84,
           81,
-          144,
-          514,
-          1484,
-          1338,
-          559,
-          1211,
-          1116,
-          397,
-          120,
-          84,
+          146,
+          518,
+          1491,
+          1347,
+          563,
+          1227,
+          1127,
+          399,
+          121,
+          85,
           97,
           75,
-          57,
+          58,
           20,
           13,
           142,
-          107
+          108
         ],
         [
           72,
           113,
           5,
           9,
-          39,
+          40,
           47,
-          61,
+          62,
           53,
           94,
-          241,
-          542,
-          833,
-          915,
-          729,
+          243,
+          546,
+          837,
+          919,
+          733,
           460,
-          228,
+          229,
           82,
           59,
           65,
-          63,
+          64,
           26,
           17,
           5,
-          137,
+          139,
           56
         ],
         [
           20,
-          143,
+          144,
           0,
           9,
           27,
-          43,
+          45,
           67,
           65,
           71,
           156,
-          287,
+          289,
           496,
-          651,
+          653,
           524,
           254,
-          182,
-          60,
+          183,
+          62,
           54,
-          67,
+          69,
           53,
           20,
           7,
@@ -16297,7 +16309,7 @@
         ],
         [
           14,
-          220,
+          222,
           8,
           7,
           16,
@@ -16305,43 +16317,43 @@
           78,
           53,
           44,
-          113,
+          114,
           162,
-          272,
-          349,
-          287,
-          158,
-          111,
-          34,
+          273,
+          353,
+          290,
+          159,
+          112,
+          35,
           56,
           63,
           38,
-          31,
+          33,
           6,
           13,
-          181,
+          182,
           16
         ],
         [
           0,
-          184,
+          186,
           81,
           0,
           19,
-          44,
+          45,
           75,
           47,
-          59,
-          90,
+          60,
+          92,
           67,
-          134,
+          135,
           226,
-          170,
+          171,
           109,
           107,
-          54,
-          52,
-          67,
+          55,
+          53,
+          68,
           37,
           15,
           0,
@@ -16352,7 +16364,7 @@
         [
           0,
           107,
-          238,
+          239,
           8,
           0,
           20,
@@ -16363,27 +16375,27 @@
           59,
           104,
           150,
-          113,
+          115,
           68,
           70,
-          59,
-          50,
           60,
-          28,
+          51,
+          60,
+          29,
           10,
           25,
-          251,
+          254,
           101,
           0
         ],
         [
           0,
           47,
-          332,
+          334,
           144,
           0,
           6,
-          34,
+          35,
           43,
           41,
           49,
@@ -16391,24 +16403,24 @@
           81,
           140,
           87,
-          39,
+          40,
           42,
           54,
-          43,
+          44,
           40,
           13,
           6,
           193,
-          287,
-          54,
+          290,
+          56,
           0
         ],
         [
           0,
           27,
-          227,
-          392,
-          142,
+          229,
+          393,
+          143,
           0,
           16,
           30,
@@ -16424,9 +16436,9 @@
           17,
           15,
           0,
-          199,
-          369,
           200,
+          374,
+          202,
           25,
           0
         ],
@@ -16434,25 +16446,25 @@
           0,
           14,
           156,
-          357,
-          475,
-          169,
+          362,
+          478,
+          171,
           9,
           0,
-          13,
+          14,
           16,
           15,
           32,
-          35,
+          36,
           20,
           13,
           8,
           13,
           0,
-          10,
+          11,
           223,
-          501,
-          314,
+          504,
+          316,
           146,
           14,
           0
@@ -16462,7 +16474,7 @@
           10,
           97,
           191,
-          335,
+          337,
           402,
           255,
           18,
@@ -16476,10 +16488,10 @@
           0,
           0,
           34,
-          282,
-          365,
+          284,
+          367,
           399,
-          224,
+          225,
           83,
           6,
           0
@@ -16490,9 +16502,9 @@
           41,
           105,
           218,
-          233,
-          303,
-          233,
+          235,
+          304,
+          235,
           141,
           59,
           14,
@@ -16501,10 +16513,10 @@
           8,
           20,
           76,
-          152,
+          153,
           257,
-          293,
-          228,
+          298,
+          231,
           216,
           123,
           40,
@@ -16517,20 +16529,20 @@
           20,
           46,
           90,
-          101,
-          117,
-          152,
-          168,
-          189,
+          102,
+          118,
+          153,
+          171,
+          191,
           187,
           243,
-          299,
-          232,
-          169,
-          203,
-          171,
-          150,
-          137,
+          300,
+          233,
+          170,
+          207,
+          172,
+          152,
+          138,
           74,
           90,
           44,
@@ -16542,15 +16554,15 @@
           0,
           0,
           6,
-          19,
+          20,
           34,
           41,
           65,
-          59,
-          73,
+          60,
+          74,
           72,
-          111,
-          168,
+          112,
+          169,
           221,
           197,
           114,
@@ -16573,12 +16585,12 @@
           9,
           12,
           30,
-          31,
+          32,
           35,
           44,
           34,
           77,
-          89,
+          90,
           79,
           69,
           57,
@@ -30428,7 +30440,7 @@
             33.3
           ],
           [
-            33.3,
+            31.2,
             57.1,
             null,
             null,
@@ -30441,8 +30453,8 @@
             64.1,
             67.4,
             96.7,
-            87.2,
-            63.2,
+            87.5,
+            65.0,
             42.9,
             50.0,
             33.3,
@@ -30464,14 +30476,14 @@
             null,
             14.3,
             28.6,
-            47.1,
-            67.6,
-            70.3,
-            64.7,
-            67.4,
+            44.4,
+            66.7,
+            69.9,
+            66.7,
             67.0,
+            65.6,
             35.3,
-            null,
+            50.0,
             20.0,
             null,
             50.0,
@@ -30488,13 +30500,13 @@
             null,
             50.0,
             50.0,
-            66.7,
+            50.0,
             16.7,
             33.3,
-            46.2,
-            48.6,
+            46.7,
+            50.0,
             39.5,
-            63.6,
+            64.3,
             47.9,
             42.1,
             38.5,
@@ -30505,7 +30517,7 @@
             null,
             null,
             null,
-            66.7,
+            60.0,
             50.0
           ],
           [
@@ -30514,18 +30526,18 @@
             null,
             null,
             null,
-            null,
+            50.0,
             50.0,
             25.0,
             60.0,
             71.4,
             60.0,
             38.9,
-            55.9,
+            57.1,
             34.8,
             44.4,
-            28.6,
-            66.7,
+            26.7,
+            75.0,
             null,
             0.0,
             0.0,
@@ -30537,7 +30549,7 @@
           ],
           [
             null,
-            23.1,
+            21.4,
             null,
             null,
             null,
@@ -30549,8 +30561,8 @@
             50.0,
             50.0,
             43.8,
-            47.6,
-            77.8,
+            50.0,
+            70.0,
             58.3,
             0.0,
             42.9,
@@ -30564,7 +30576,7 @@
           ],
           [
             null,
-            41.7,
+            35.7,
             null,
             null,
             null,
@@ -30574,7 +30586,7 @@
             25.0,
             57.1,
             20.0,
-            75.0,
+            66.7,
             33.3,
             22.2,
             75.0,
@@ -30592,7 +30604,7 @@
           [
             null,
             33.3,
-            42.1,
+            45.0,
             null,
             null,
             null,
@@ -30603,7 +30615,7 @@
             25.0,
             25.0,
             58.3,
-            62.5,
+            66.7,
             20.0,
             50.0,
             0.0,
@@ -30619,7 +30631,7 @@
           [
             null,
             null,
-            34.6,
+            33.3,
             25.0,
             null,
             null,
@@ -30634,21 +30646,21 @@
             50.0,
             25.0,
             66.7,
-            0.0,
+            33.3,
             50.0,
             null,
             null,
             60.0,
             50.0,
-            null,
+            100.0,
             null
           ],
           [
             null,
             null,
-            20.0,
+            18.8,
             40.6,
-            25.0,
+            33.3,
             null,
             null,
             null,
@@ -30665,8 +30677,8 @@
             null,
             null,
             66.7,
-            42.9,
-            33.3,
+            46.7,
+            30.0,
             null,
             null
           ],
@@ -30674,8 +30686,8 @@
             null,
             null,
             57.1,
-            36.4,
-            34.6,
+            34.8,
+            33.3,
             50.0,
             null,
             null,
@@ -30692,7 +30704,7 @@
             null,
             40.0,
             28.6,
-            29.4,
+            33.3,
             50.0,
             0.0,
             null
@@ -30702,7 +30714,7 @@
             0.0,
             0.0,
             50.0,
-            25.0,
+            28.6,
             58.3,
             46.2,
             null,
@@ -30730,8 +30742,8 @@
             null,
             25.0,
             37.5,
-            22.2,
-            14.3,
+            30.0,
+            20.0,
             25.0,
             50.0,
             0.0,
@@ -30743,7 +30755,7 @@
             40.0,
             33.3,
             44.4,
-            42.9,
+            37.5,
             0.0,
             28.6,
             50.0,
@@ -30761,13 +30773,13 @@
             25.0,
             25.0,
             80.0,
-            14.3,
+            12.5,
             16.7,
             45.5,
             36.4,
             42.9,
             63.6,
-            33.3,
+            36.4,
             55.6,
             66.7,
             14.3,
@@ -30786,7 +30798,7 @@
             null,
             50.0,
             null,
-            33.3,
+            25.0,
             50.0,
             20.0,
             50.0,
@@ -31052,7 +31064,7 @@
         "attempts": [
           [
             10,
-            2,
+            3,
             0,
             0,
             0,
@@ -31105,7 +31117,7 @@
             15
           ],
           [
-            15,
+            16,
             7,
             0,
             0,
@@ -31118,8 +31130,8 @@
             64,
             43,
             91,
-            39,
-            38,
+            40,
+            40,
             14,
             2,
             3,
@@ -31132,7 +31144,7 @@
             7
           ],
           [
-            5,
+            6,
             3,
             0,
             0,
@@ -31141,14 +31153,14 @@
             0,
             7,
             7,
-            17,
-            105,
-            101,
-            17,
-            86,
+            18,
+            108,
+            103,
+            18,
             88,
+            93,
             17,
-            0,
+            2,
             10,
             0,
             4,
@@ -31165,24 +31177,24 @@
             0,
             2,
             2,
-            3,
+            4,
             6,
             3,
-            13,
-            37,
+            15,
+            40,
             43,
-            55,
+            56,
             48,
             38,
             13,
             3,
             0,
             2,
-            2,
-            0,
-            0,
-            0,
             3,
+            0,
+            0,
+            0,
+            5,
             2
           ],
           [
@@ -31191,18 +31203,18 @@
             0,
             0,
             0,
-            0,
+            2,
             2,
             4,
             5,
             7,
             10,
             18,
-            34,
+            35,
             23,
             18,
-            14,
-            3,
+            15,
+            4,
             0,
             2,
             3,
@@ -31214,7 +31226,7 @@
           ],
           [
             0,
-            13,
+            14,
             0,
             0,
             0,
@@ -31226,14 +31238,14 @@
             16,
             20,
             16,
-            21,
-            9,
+            22,
+            10,
             12,
             3,
             7,
             9,
             2,
-            2,
+            3,
             0,
             2,
             8,
@@ -31241,7 +31253,7 @@
           ],
           [
             0,
-            12,
+            14,
             0,
             0,
             0,
@@ -31251,7 +31263,7 @@
             4,
             7,
             5,
-            8,
+            9,
             12,
             9,
             4,
@@ -31269,7 +31281,7 @@
           [
             0,
             9,
-            19,
+            20,
             0,
             0,
             0,
@@ -31280,7 +31292,7 @@
             4,
             8,
             12,
-            8,
+            9,
             5,
             4,
             2,
@@ -31296,7 +31308,7 @@
           [
             0,
             0,
-            26,
+            27,
             8,
             0,
             0,
@@ -31311,21 +31323,21 @@
             2,
             4,
             6,
-            2,
+            3,
             2,
             0,
             0,
             5,
             24,
-            0,
+            2,
             0
           ],
           [
             0,
             0,
-            15,
+            16,
             32,
-            8,
+            9,
             0,
             0,
             0,
@@ -31342,8 +31354,8 @@
             0,
             0,
             9,
-            14,
-            9,
+            15,
+            10,
             0,
             0
           ],
@@ -31351,8 +31363,8 @@
             0,
             0,
             7,
-            22,
-            26,
+            23,
+            27,
             8,
             0,
             0,
@@ -31369,7 +31381,7 @@
             0,
             5,
             21,
-            17,
+            18,
             4,
             2,
             0
@@ -31379,7 +31391,7 @@
             2,
             3,
             8,
-            12,
+            14,
             12,
             13,
             0,
@@ -31407,8 +31419,8 @@
             0,
             4,
             8,
-            9,
-            14,
+            10,
+            15,
             12,
             6,
             2,
@@ -31420,8 +31432,8 @@
             5,
             3,
             9,
-            14,
-            7,
+            16,
+            8,
             7,
             4,
             0,
@@ -31438,13 +31450,13 @@
             4,
             4,
             10,
-            7,
+            8,
             12,
             11,
             11,
             7,
             11,
-            9,
+            11,
             9,
             3,
             7,
@@ -31463,7 +31475,7 @@
             0,
             2,
             0,
-            3,
+            4,
             2,
             5,
             4,
@@ -37188,12 +37200,12 @@
             null,
             66.7,
             null,
-            50.0,
+            66.7,
             null,
             80.0,
             45.5,
             60.0,
-            93.8,
+            93.9,
             100.0,
             0.0,
             33.3,
@@ -37204,11 +37216,11 @@
             25.0,
             50.0,
             33.3,
-            18.2,
+            25.0,
             44.4
           ],
           [
-            33.3,
+            37.5,
             0.0,
             0.0,
             0.0,
@@ -37217,16 +37229,16 @@
             0.0,
             50.0,
             10.0,
-            47.6,
-            75.2,
-            86.5,
-            92.7,
-            80.4,
+            50.0,
+            75.9,
+            86.4,
+            92.9,
+            81.2,
             61.4,
             63.6,
             60.0,
-            44.4,
-            75.0,
+            36.4,
+            60.0,
             20.0,
             50.0,
             null,
@@ -37236,19 +37248,19 @@
           ],
           [
             85.7,
-            83.3,
+            71.4,
             null,
             null,
             33.3,
             33.3,
             null,
             0.0,
-            42.9,
-            12.5,
-            54.7,
-            59.7,
-            68.4,
-            61.4,
+            50.0,
+            12.0,
+            54.5,
+            58.7,
+            69.2,
+            61.7,
             48.9,
             42.9,
             36.4,
@@ -37266,14 +37278,14 @@
             28.6,
             null,
             null,
-            null,
+            0.0,
             0.0,
             33.3,
             0.0,
             50.0,
             14.3,
             47.1,
-            52.2,
+            52.0,
             53.3,
             42.9,
             21.4,
@@ -37299,7 +37311,7 @@
             null,
             0.0,
             0.0,
-            40.0,
+            42.9,
             22.2,
             52.4,
             55.6,
@@ -37307,7 +37319,7 @@
             33.3,
             33.3,
             50.0,
-            33.3,
+            25.0,
             28.6,
             50.0,
             null,
@@ -37328,10 +37340,10 @@
             55.6,
             50.0,
             66.7,
-            33.3,
-            33.3,
+            31.2,
+            31.2,
             62.5,
-            66.7,
+            57.1,
             0.0,
             66.7,
             50.0,
@@ -37348,10 +37360,10 @@
             42.9,
             null,
             null,
-            null,
+            50.0,
             null,
             25.0,
-            25.0,
+            40.0,
             50.0,
             100.0,
             66.7,
@@ -37359,8 +37371,8 @@
             50.0,
             57.1,
             50.0,
-            60.0,
-            33.3,
+            50.0,
+            42.9,
             20.0,
             60.0,
             50.0,
@@ -37386,10 +37398,10 @@
             0.0,
             66.7,
             75.0,
-            80.0,
+            66.7,
             66.7,
             0.0,
-            0.0,
+            16.7,
             null,
             40.0,
             27.8,
@@ -37411,7 +37423,7 @@
             25.0,
             25.0,
             0.0,
-            33.3,
+            25.0,
             100.0,
             66.7,
             100.0,
@@ -37427,7 +37439,7 @@
             null,
             null,
             25.0,
-            43.8,
+            41.2,
             21.4,
             null,
             null,
@@ -37444,7 +37456,7 @@
             null,
             0.0,
             null,
-            30.8,
+            35.7,
             18.8,
             40.0,
             null,
@@ -37455,8 +37467,8 @@
             null,
             33.3,
             80.0,
-            45.0,
-            60.0,
+            47.6,
+            58.3,
             0.0,
             null,
             null,
@@ -37512,7 +37524,7 @@
             50.0,
             50.0,
             40.0,
-            50.0,
+            47.6,
             50.0,
             33.3,
             null,
@@ -37524,7 +37536,7 @@
             30.8,
             50.0,
             25.0,
-            30.8,
+            28.6,
             10.0,
             0.0,
             null,
@@ -37540,17 +37552,17 @@
             0.0,
             50.0,
             0.0,
-            42.9,
+            37.5,
             38.5,
             27.3,
             38.1,
             44.4,
             31.2,
             35.7,
-            8.3,
+            14.3,
             37.5,
             33.3,
-            60.0,
+            50.0,
             null,
             25.0,
             null,
@@ -37569,8 +37581,8 @@
             null,
             null,
             0.0,
+            25.0,
             33.3,
-            20.0,
             0.0,
             40.0,
             20.0,
@@ -37865,12 +37877,12 @@
             0,
             3,
             0,
-            2,
+            3,
             0,
             5,
             11,
             5,
-            32,
+            33,
             2,
             3,
             3,
@@ -37881,11 +37893,11 @@
             4,
             2,
             3,
-            11,
+            12,
             18
           ],
           [
-            15,
+            16,
             2,
             2,
             2,
@@ -37894,16 +37906,16 @@
             2,
             6,
             10,
-            21,
-            113,
-            37,
-            55,
-            46,
+            22,
+            116,
+            44,
+            56,
+            48,
             70,
             22,
             5,
-            9,
-            4,
+            11,
+            5,
             5,
             4,
             0,
@@ -37913,19 +37925,19 @@
           ],
           [
             7,
-            6,
+            7,
             0,
             0,
             3,
             3,
             0,
             4,
-            7,
-            24,
-            64,
-            62,
-            38,
-            44,
+            8,
+            25,
+            66,
+            63,
+            39,
+            47,
             47,
             14,
             11,
@@ -37943,14 +37955,14 @@
             7,
             0,
             0,
-            0,
+            2,
             3,
             3,
             2,
             2,
             7,
             17,
-            23,
+            25,
             45,
             21,
             14,
@@ -37976,7 +37988,7 @@
             0,
             5,
             3,
-            5,
+            7,
             9,
             21,
             18,
@@ -37984,7 +37996,7 @@
             3,
             3,
             4,
-            3,
+            4,
             7,
             2,
             0,
@@ -38005,15 +38017,15 @@
             9,
             6,
             9,
-            15,
-            15,
+            16,
+            16,
             8,
-            6,
-            3,
+            7,
+            4,
             3,
             2,
             2,
-            3,
+            4,
             0,
             0,
             15,
@@ -38025,10 +38037,10 @@
             7,
             0,
             0,
-            0,
+            2,
             0,
             4,
-            4,
+            5,
             4,
             2,
             6,
@@ -38036,8 +38048,8 @@
             8,
             7,
             6,
-            5,
             6,
+            7,
             5,
             5,
             2,
@@ -38063,10 +38075,10 @@
             3,
             6,
             8,
-            5,
+            6,
             3,
             2,
-            5,
+            6,
             0,
             5,
             18,
@@ -38088,7 +38100,7 @@
             4,
             12,
             2,
-            3,
+            4,
             2,
             9,
             2,
@@ -38104,7 +38116,7 @@
             0,
             0,
             8,
-            16,
+            17,
             14,
             0,
             0,
@@ -38121,7 +38133,7 @@
             0,
             2,
             0,
-            13,
+            14,
             16,
             5,
             0,
@@ -38132,8 +38144,8 @@
             0,
             3,
             5,
-            20,
-            10,
+            21,
+            12,
             2,
             0,
             0,
@@ -38189,7 +38201,7 @@
             6,
             2,
             15,
-            20,
+            21,
             10,
             12,
             0,
@@ -38201,7 +38213,7 @@
             13,
             10,
             12,
-            13,
+            14,
             10,
             3,
             0,
@@ -38214,20 +38226,20 @@
             0,
             0,
             2,
-            4,
+            5,
             2,
-            4,
-            7,
+            5,
+            8,
             13,
             11,
             21,
             18,
             16,
             14,
-            12,
+            14,
             8,
             6,
-            5,
+            6,
             0,
             4,
             0,
@@ -38246,8 +38258,8 @@
             0,
             0,
             3,
-            3,
-            5,
+            4,
+            6,
             7,
             10,
             5,
@@ -39929,22 +39941,22 @@
             75.0,
             25.0,
             33.3,
-            25.0,
-            64.2,
-            84.1,
+            30.8,
+            63.2,
+            84.3,
             97.3,
-            76.9,
-            65.2,
+            77.2,
+            66.0,
             14.3,
-            60.0,
+            66.7,
             null,
             0.0,
             0.0,
             0.0,
             null,
             33.3,
-            33.3,
-            40.0
+            30.8,
+            45.5
           ],
           [
             46.7,
@@ -39956,13 +39968,13 @@
             0.0,
             0.0,
             28.6,
-            39.1,
+            37.5,
             46.2,
-            60.0,
-            62.5,
-            52.8,
-            46.2,
-            35.7,
+            59.3,
+            61.5,
+            53.1,
+            44.8,
+            33.3,
             41.7,
             null,
             50.0,
@@ -39971,7 +39983,7 @@
             null,
             null,
             55.6,
-            50.0
+            55.6
           ],
           [
             null,
@@ -39986,7 +39998,7 @@
             66.7,
             43.5,
             58.3,
-            63.0,
+            63.8,
             50.0,
             38.1,
             64.3,
@@ -40002,7 +40014,7 @@
           ],
           [
             null,
-            44.4,
+            40.0,
             null,
             null,
             0.0,
@@ -40037,10 +40049,10 @@
             50.0,
             33.3,
             null,
-            100.0,
+            80.0,
             60.0,
-            50.0,
-            40.0,
+            53.8,
+            40.9,
             31.6,
             22.2,
             66.7,
@@ -40051,7 +40063,7 @@
             null,
             null,
             null,
-            57.1,
+            50.0,
             50.0
           ],
           [
@@ -40068,7 +40080,7 @@
             null,
             25.0,
             28.6,
-            42.9,
+            50.0,
             0.0,
             0.0,
             100.0,
@@ -40099,12 +40111,12 @@
             66.7,
             75.0,
             0.0,
-            null,
+            0.0,
             66.7,
             null,
             null,
             null,
-            58.3,
+            53.8,
             null,
             null
           ],
@@ -40131,7 +40143,7 @@
             null,
             null,
             37.5,
-            55.6,
+            60.0,
             null,
             null
           ],
@@ -40157,7 +40169,7 @@
             66.7,
             null,
             60.0,
-            46.7,
+            44.4,
             71.4,
             null,
             null
@@ -40167,7 +40179,7 @@
             null,
             33.3,
             25.0,
-            44.4,
+            42.1,
             41.7,
             null,
             null,
@@ -40183,7 +40195,7 @@
             null,
             null,
             58.3,
-            51.9,
+            50.0,
             100.0,
             null,
             null,
@@ -40208,8 +40220,8 @@
             null,
             null,
             50.0,
-            52.2,
-            34.5,
+            52.0,
+            35.5,
             25.0,
             57.1,
             null,
@@ -40224,7 +40236,7 @@
             50.0,
             12.5,
             36.0,
-            37.5,
+            35.3,
             64.7,
             0.0,
             null,
@@ -40235,7 +40247,7 @@
             33.3,
             55.6,
             36.7,
-            30.0,
+            27.3,
             44.4,
             0.0,
             66.7,
@@ -40250,18 +40262,18 @@
             null,
             0.0,
             null,
-            50.0,
+            33.3,
             8.3,
-            23.5,
+            26.3,
             40.0,
             25.0,
             9.1,
             53.6,
-            35.7,
+            40.0,
             64.3,
             30.0,
-            14.3,
-            14.3,
+            12.5,
+            12.5,
             50.0,
             null,
             50.0,
@@ -40310,7 +40322,7 @@
             null,
             0.0,
             null,
-            66.7,
+            50.0,
             33.3,
             0.0,
             33.3,
@@ -40606,22 +40618,22 @@
             4,
             4,
             6,
-            12,
-            67,
-            88,
-            111,
-            91,
-            46,
+            13,
+            68,
+            89,
+            113,
+            92,
+            47,
             7,
-            5,
+            6,
             0,
             2,
             5,
             2,
             0,
             3,
-            12,
-            10
+            13,
+            11
           ],
           [
             15,
@@ -40633,13 +40645,13 @@
             5,
             2,
             7,
-            23,
-            80,
-            85,
             24,
-            89,
-            65,
-            14,
+            80,
+            86,
+            26,
+            96,
+            67,
+            15,
             12,
             0,
             2,
@@ -40648,7 +40660,7 @@
             0,
             0,
             9,
-            8
+            9
           ],
           [
             0,
@@ -40663,8 +40675,8 @@
             6,
             23,
             36,
-            46,
-            46,
+            47,
+            48,
             21,
             14,
             4,
@@ -40679,7 +40691,7 @@
           ],
           [
             0,
-            9,
+            10,
             0,
             0,
             2,
@@ -40714,10 +40726,10 @@
             4,
             3,
             0,
-            4,
+            5,
             15,
-            12,
-            20,
+            13,
+            22,
             19,
             9,
             3,
@@ -40728,7 +40740,7 @@
             0,
             0,
             0,
-            7,
+            8,
             2
           ],
           [
@@ -40741,11 +40753,11 @@
             3,
             2,
             0,
-            3,
+            4,
             0,
             4,
             14,
-            7,
+            8,
             4,
             2,
             2,
@@ -40776,12 +40788,12 @@
             3,
             4,
             5,
-            0,
+            2,
             3,
             0,
             0,
             0,
-            12,
+            13,
             0,
             0
           ],
@@ -40808,7 +40820,7 @@
             0,
             0,
             8,
-            9,
+            10,
             0,
             0
           ],
@@ -40834,17 +40846,17 @@
             3,
             0,
             5,
-            15,
-            7,
-            0,
-            0
-          ],
-          [
-            0,
-            0,
-            3,
-            8,
             18,
+            7,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            8,
+            19,
             12,
             0,
             0,
@@ -40860,7 +40872,7 @@
             0,
             0,
             12,
-            27,
+            30,
             2,
             0,
             0,
@@ -40885,8 +40897,8 @@
             0,
             0,
             2,
-            23,
-            29,
+            25,
+            31,
             16,
             7,
             0,
@@ -40901,7 +40913,7 @@
             2,
             8,
             25,
-            16,
+            17,
             17,
             2,
             0,
@@ -40912,7 +40924,7 @@
             6,
             9,
             30,
-            20,
+            22,
             9,
             4,
             3,
@@ -40927,18 +40939,18 @@
             0,
             2,
             0,
-            2,
+            3,
             12,
-            17,
+            19,
             20,
             12,
             11,
             28,
-            14,
+            15,
             14,
             20,
-            7,
-            7,
+            8,
+            8,
             4,
             0,
             2,
@@ -40982,12 +40994,12 @@
             0,
             0,
             0,
-            2,
-            0,
-            0,
-            2,
-            0,
             3,
+            0,
+            0,
+            2,
+            0,
+            4,
             3,
             4,
             3,
@@ -42605,7 +42617,7 @@
             0.0
           ],
           [
-            32.0,
+            29.6,
             33.3,
             100.0,
             null,
@@ -42642,10 +42654,10 @@
             null,
             33.3,
             52.6,
-            65.7,
+            66.0,
             77.8,
-            88.0,
-            85.5,
+            87.4,
+            85.7,
             50.0,
             50.0,
             0.0,
@@ -42667,16 +42679,16 @@
             71.4,
             40.0,
             75.0,
-            16.7,
-            45.5,
-            56.7,
-            62.5,
+            28.6,
+            43.5,
+            56.5,
+            65.2,
             62.1,
-            54.8,
-            56.4,
-            50.0,
+            56.1,
+            55.8,
+            42.9,
             66.7,
-            null,
+            0.0,
             0.0,
             100.0,
             null,
@@ -42696,12 +42708,12 @@
             50.0,
             66.7,
             23.1,
-            46.7,
-            50.0,
-            41.9,
-            47.8,
+            43.8,
+            46.9,
+            44.4,
+            48.0,
             54.5,
-            75.0,
+            77.8,
             0.0,
             25.0,
             0.0,
@@ -42725,13 +42737,13 @@
             41.7,
             45.0,
             23.5,
-            34.5,
+            33.3,
             36.7,
             22.2,
             66.7,
-            null,
             100.0,
-            66.7,
+            100.0,
+            50.0,
             null,
             null,
             null,
@@ -42741,7 +42753,7 @@
           ],
           [
             null,
-            44.4,
+            40.0,
             null,
             null,
             null,
@@ -42752,8 +42764,8 @@
             16.7,
             33.3,
             13.3,
-            26.7,
-            37.5,
+            31.2,
+            41.2,
             20.0,
             40.0,
             0.0,
@@ -42776,7 +42788,7 @@
             66.7,
             null,
             null,
-            50.0,
+            33.3,
             null,
             50.0,
             40.0,
@@ -42785,7 +42797,7 @@
             40.0,
             100.0,
             null,
-            66.7,
+            75.0,
             null,
             null,
             null,
@@ -42807,7 +42819,7 @@
             null,
             null,
             50.0,
-            62.5,
+            66.7,
             50.0,
             62.5,
             null,
@@ -42816,14 +42828,14 @@
             null,
             null,
             33.3,
-            68.8,
+            66.7,
             20.0,
             null
           ],
           [
             null,
             null,
-            23.5,
+            27.8,
             50.0,
             null,
             null,
@@ -42843,14 +42855,14 @@
             null,
             0.0,
             50.0,
-            25.0,
-            null,
+            21.4,
+            0.0,
             null
           ],
           [
             null,
             null,
-            20.0,
+            33.3,
             29.4,
             38.5,
             null,
@@ -42869,8 +42881,8 @@
             null,
             null,
             42.9,
-            26.7,
-            33.3,
+            29.0,
+            28.6,
             null,
             null
           ],
@@ -42878,12 +42890,12 @@
             null,
             null,
             44.4,
-            23.5,
+            28.6,
             38.3,
             37.1,
             null,
             null,
-            null,
+            100.0,
             100.0,
             null,
             null,
@@ -42893,10 +42905,10 @@
             null,
             null,
             50.0,
-            33.3,
+            50.0,
             36.0,
             42.9,
-            27.3,
+            25.0,
             50.0,
             null,
             null
@@ -42923,7 +42935,7 @@
             22.2,
             45.2,
             33.3,
-            54.5,
+            50.0,
             20.0,
             null,
             null
@@ -42934,7 +42946,7 @@
             100.0,
             60.0,
             37.5,
-            50.0,
+            40.0,
             21.4,
             45.5,
             40.0,
@@ -42945,10 +42957,10 @@
             null,
             null,
             50.0,
-            33.3,
+            40.0,
             38.1,
-            18.2,
-            25.0,
+            17.4,
+            30.8,
             12.5,
             28.6,
             33.3,
@@ -42965,15 +42977,15 @@
             75.0,
             44.4,
             33.3,
-            33.3,
+            40.0,
             50.0,
             55.6,
-            47.4,
+            45.0,
             37.5,
-            50.0,
+            55.6,
             70.0,
             33.3,
-            33.3,
+            28.6,
             25.0,
             22.2,
             50.0,
@@ -42986,7 +42998,7 @@
             null,
             null,
             0.0,
-            null,
+            0.0,
             null,
             null,
             null,
@@ -43279,10 +43291,10 @@
             0,
             0,
             9,
-            2
+            3
           ],
           [
-            25,
+            27,
             27,
             3,
             0,
@@ -43319,10 +43331,10 @@
             0,
             3,
             19,
-            102,
+            103,
             90,
-            83,
-            83,
+            87,
+            84,
             72,
             4,
             2,
@@ -43344,16 +43356,16 @@
             7,
             5,
             4,
-            6,
-            22,
-            67,
-            64,
+            7,
+            23,
+            69,
+            69,
             29,
-            62,
-            39,
+            66,
+            43,
+            7,
             6,
-            6,
-            0,
+            2,
             5,
             3,
             0,
@@ -43373,12 +43385,12 @@
             2,
             3,
             13,
-            15,
-            30,
-            43,
-            23,
+            16,
+            32,
+            45,
+            25,
             22,
-            8,
+            9,
             2,
             4,
             2,
@@ -43402,13 +43414,13 @@
             12,
             20,
             17,
-            29,
+            30,
             30,
             9,
             9,
-            0,
             2,
-            3,
+            2,
+            4,
             0,
             0,
             0,
@@ -43418,7 +43430,7 @@
           ],
           [
             0,
-            9,
+            10,
             0,
             0,
             0,
@@ -43429,8 +43441,8 @@
             6,
             3,
             15,
-            15,
             16,
+            17,
             10,
             5,
             2,
@@ -43453,7 +43465,7 @@
             3,
             0,
             0,
-            2,
+            3,
             0,
             4,
             5,
@@ -43462,7 +43474,7 @@
             5,
             2,
             0,
-            3,
+            4,
             0,
             0,
             0,
@@ -43484,7 +43496,7 @@
             0,
             0,
             2,
-            8,
+            9,
             2,
             8,
             0,
@@ -43493,14 +43505,14 @@
             0,
             0,
             3,
-            16,
+            18,
             5,
             0
           ],
           [
             0,
             0,
-            17,
+            18,
             10,
             0,
             0,
@@ -43520,14 +43532,14 @@
             0,
             2,
             18,
-            12,
-            0,
+            14,
+            2,
             0
           ],
           [
             0,
             0,
-            5,
+            6,
             34,
             13,
             0,
@@ -43546,8 +43558,8 @@
             0,
             0,
             21,
-            30,
-            6,
+            31,
+            7,
             0,
             0
           ],
@@ -43555,12 +43567,12 @@
             0,
             0,
             9,
-            17,
+            21,
             47,
             35,
             0,
             0,
-            0,
+            2,
             2,
             0,
             0,
@@ -43570,10 +43582,10 @@
             0,
             0,
             2,
-            3,
+            4,
             25,
             42,
-            11,
+            12,
             2,
             0,
             0
@@ -43600,7 +43612,7 @@
             27,
             31,
             21,
-            11,
+            12,
             5,
             0,
             0
@@ -43611,7 +43623,7 @@
             2,
             5,
             8,
-            4,
+            5,
             14,
             11,
             15,
@@ -43622,10 +43634,10 @@
             0,
             0,
             6,
-            9,
+            10,
             21,
-            22,
-            12,
+            23,
+            13,
             16,
             7,
             3,
@@ -43642,15 +43654,15 @@
             4,
             9,
             9,
-            9,
+            10,
             8,
             9,
-            19,
+            20,
             16,
-            8,
+            9,
             10,
             6,
-            6,
+            7,
             8,
             9,
             8,
@@ -43663,12 +43675,12 @@
             0,
             0,
             2,
-            0,
-            0,
-            0,
-            0,
-            0,
             2,
+            0,
+            0,
+            0,
+            0,
+            3,
             3,
             2,
             0,
