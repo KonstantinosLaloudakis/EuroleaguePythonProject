@@ -141,7 +141,7 @@ function _renderLeaderboard() {
         return `<tr>
             <td class="lb-rank">${i + 1}</td>
             <td class="lb-player-cell">
-                <span class="lb-player-name">${p.name}</span>
+                <a class="lb-player-name" href="player.html?code=${p.code}" style="text-decoration:none;color:inherit">${p.name}</a>
                 <span class="lb-player-meta">${badge}${p.position || ''}</span>
             </td>
             ${statCells}
