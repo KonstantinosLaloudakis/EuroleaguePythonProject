@@ -5,6 +5,15 @@ let _rounds = [];      // sorted list of available round numbers
 let _currentRound = 0;
 let _isInitialLoad = true;  // only auto-expand game on first load
 
+let _playerCodeMap = null;
+async function _getPlayerCodeMap() {
+    if (_playerCodeMap) return _playerCodeMap;
+    try {
+        _playerCodeMap = await fetch('data/current/player_index.json').then(r => r.json());
+    } catch { _playerCodeMap = {}; }
+    return _playerCodeMap;
+}
+
 // ── Boot ──────────────────────────────────────────────────────────────────
 fetchJSON('data/current/game_recaps.json')
     .then(data => {
@@ -193,7 +202,7 @@ function toggleBoxScore(idx) {
 }
 
 // ── Box score tab switching ──────────────────────────────────────────────
-function showTab(idx, side) {
+async function showTab(idx, side) {
     const games = _recaps.rounds[String(_currentRound)] || [];
     const g = games[idx];
     if (!g) return;
@@ -207,10 +216,10 @@ function showTab(idx, side) {
     const teamCode = side === 'home' ? g.home : g.away;
     const color = TEAM_COLORS[teamCode] || '#3b82f6';
 
-    renderBoxScore(idx, roster, totals, color);
+    await renderBoxScore(idx, roster, totals, color);
 }
 
-function renderBoxScore(idx, roster, totals, color) {
+async function renderBoxScore(idx, roster, totals, color) {
     const container = document.getElementById(`bs-content-${idx}`);
 
     const starters = roster.filter(p => p.starter);
@@ -222,13 +231,20 @@ function renderBoxScore(idx, roster, totals, color) {
         ${cols.map(c => `<th class="num">${c}</th>`).join('')}
     </tr>`;
 
-    function playerRow(p) {
+    const codeMap = await _getPlayerCodeMap();
+
+    function playerRow(p, codeMap) {
         const pm = p.pm > 0 ? `+${p.pm}` : p.pm;
         const pmColor = p.pm > 0 ? 'var(--accent-green)' : p.pm < 0 ? 'var(--accent-red)' : '';
         const pirColor = p.pir >= 20 ? 'var(--accent-green)' : p.pir >= 10 ? 'var(--accent-blue)' : '';
+        const displayName = formatName(p.name);
+        const code = codeMap ? codeMap[p.name.toUpperCase()] : null;
+        const nameHtml = code
+            ? `<a href="player.html?code=${code}" style="text-decoration:none;color:inherit">${displayName}</a>`
+            : displayName;
         return `<tr>
             <td>
-                <span class="player-name">${formatName(p.name)}</span>
+                <span class="player-name">${nameHtml}</span>
                 ${p.starter ? '<span class="starter-tag">S</span>' : ''}
             </td>
             <td class="num">${p.min}</td>
@@ -246,9 +262,9 @@ function renderBoxScore(idx, roster, totals, color) {
         </tr>`;
     }
 
-    const starterRows = starters.map(playerRow).join('');
+    const starterRows = starters.map(p => playerRow(p, codeMap)).join('');
     const benchRows = bench.length > 0
-        ? `<tr class="bench-sep"><td colspan="${cols.length + 1}">Bench</td></tr>` + bench.map(playerRow).join('')
+        ? `<tr class="bench-sep"><td colspan="${cols.length + 1}">Bench</td></tr>` + bench.map(p => playerRow(p, codeMap)).join('')
         : '';
 
     const totalsRow = `<tr class="totals-row">
