@@ -84,6 +84,10 @@ def main():
             'fetch_schedule.py',
             ['--force']
         )))
+        results.append(('Fetch Player Career Stats', run_step(
+            'Fetching all-season player career stats from Euroleague API',
+            'fetch_player_career_stats.py'
+        )))
         results.append(('Parse Game Data', run_step(
             'Parsing game results',
             'parse_mvp_data.py'
