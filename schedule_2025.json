@@ -5952,7 +5952,7 @@
     "arenaname": "ARENA BOTEVGRAD",
     "confirmeddate": "true",
     "confirmedtime": "true",
-    "played": "false"
+    "played": "true"
   },
   {
     "gameday": "44",
@@ -5980,21 +5980,6 @@
     "awayteam": "ZALGIRIS KAUNAS",
     "awaycode": "ZAL",
     "arenaname": "ULKER SPORTS AND EVENT HALL",
-    "confirmeddate": "false",
-    "confirmedtime": "false",
-    "played": "false"
-  },
-  {
-    "gameday": "45",
-    "round": "PO",
-    "date": "May 12, 2026",
-    "startime": "00:00",
-    "gamecode": "E2025_402",
-    "hometeam": "REAL MADRID",
-    "homecode": "MAD",
-    "awayteam": "HAPOEL IBI TEL AVIV",
-    "awaycode": "HTA",
-    "arenaname": "MOVISTAR ARENA",
     "confirmeddate": "false",
     "confirmedtime": "false",
     "played": "false"

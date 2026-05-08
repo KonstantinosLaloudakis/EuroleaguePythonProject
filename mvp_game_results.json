@@ -3169,11 +3169,11 @@
     },
     {
         "GameCode":398,
-        "LocalTeam":"UNKNOWN",
-        "RoadTeam":"UNKNOWN",
-        "LocalScore":0.0,
-        "RoadScore":0.0,
-        "Winner":"UNKNOWN"
+        "LocalTeam":"HTA",
+        "RoadTeam":"MAD",
+        "LocalScore":81.0,
+        "RoadScore":87.0,
+        "Winner":"MAD"
     },
     {
         "GameCode":399,
@@ -3185,14 +3185,6 @@
     },
     {
         "GameCode":401,
-        "LocalTeam":"UNKNOWN",
-        "RoadTeam":"UNKNOWN",
-        "LocalScore":0.0,
-        "RoadScore":0.0,
-        "Winner":"UNKNOWN"
-    },
-    {
-        "GameCode":402,
         "LocalTeam":"UNKNOWN",
         "RoadTeam":"UNKNOWN",
         "LocalScore":0.0,
