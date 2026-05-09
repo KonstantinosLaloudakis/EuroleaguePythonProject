@@ -5937,7 +5937,7 @@
     "arenaname": "ZALGIRIO ARENA",
     "confirmeddate": "true",
     "confirmedtime": "true",
-    "played": "false"
+    "played": "true"
   },
   {
     "gameday": "44",
@@ -5967,36 +5967,21 @@
     "arenaname": "TELEKOM CENTER ATHENS",
     "confirmeddate": "true",
     "confirmedtime": "true",
-    "played": "false"
+    "played": "true"
   },
   {
     "gameday": "45",
     "round": "PO",
-    "date": "May 12, 2026",
-    "startime": "00:00",
-    "gamecode": "E2025_401",
-    "hometeam": "FENERBAHCE BEKO ISTANBUL",
-    "homecode": "ULK",
-    "awayteam": "ZALGIRIS KAUNAS",
-    "awaycode": "ZAL",
-    "arenaname": "ULKER SPORTS AND EVENT HALL",
-    "confirmeddate": "false",
-    "confirmedtime": "false",
-    "played": "false"
-  },
-  {
-    "gameday": "45",
-    "round": "PO",
-    "date": "May 12, 2026",
-    "startime": "00:00",
+    "date": "May 13, 2026",
+    "startime": "21:00",
     "gamecode": "E2025_403",
     "hometeam": "VALENCIA BASKET",
     "homecode": "PAM",
     "awayteam": "PANATHINAIKOS AKTOR ATHENS",
     "awaycode": "PAN",
     "arenaname": "ROIG ARENA",
-    "confirmeddate": "false",
-    "confirmedtime": "false",
+    "confirmeddate": "true",
+    "confirmedtime": "true",
     "played": "false"
   }
 ]

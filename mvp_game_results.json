@@ -3161,11 +3161,11 @@
     },
     {
         "GameCode":397,
-        "LocalTeam":"UNKNOWN",
-        "RoadTeam":"UNKNOWN",
-        "LocalScore":0.0,
-        "RoadScore":0.0,
-        "Winner":"UNKNOWN"
+        "LocalTeam":"ZAL",
+        "RoadTeam":"ULK",
+        "LocalScore":90.0,
+        "RoadScore":94.0,
+        "Winner":"ULK"
     },
     {
         "GameCode":398,
@@ -3177,19 +3177,11 @@
     },
     {
         "GameCode":399,
-        "LocalTeam":"UNKNOWN",
-        "RoadTeam":"UNKNOWN",
-        "LocalScore":0.0,
-        "RoadScore":0.0,
-        "Winner":"UNKNOWN"
-    },
-    {
-        "GameCode":401,
-        "LocalTeam":"UNKNOWN",
-        "RoadTeam":"UNKNOWN",
-        "LocalScore":0.0,
-        "RoadScore":0.0,
-        "Winner":"UNKNOWN"
+        "LocalTeam":"PAN",
+        "RoadTeam":"PAM",
+        "LocalScore":86.0,
+        "RoadScore":89.0,
+        "Winner":"PAM"
     },
     {
         "GameCode":403,
