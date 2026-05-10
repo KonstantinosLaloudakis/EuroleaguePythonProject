@@ -1,6 +1,6 @@
 {
   "round": 38,
-  "updated": "2026-05-09T04:38:25Z",
+  "updated": "2026-05-10T04:54:42Z",
   "teams": [
     {
       "team": "OLY",
@@ -308,7 +308,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 82.5,
+      "gci": 83.4,
       "drama_avg": 3.88,
       "comeback_count": 1
     },
@@ -618,7 +618,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 61.4,
+      "gci": 63.7,
       "drama_avg": 4.13,
       "comeback_count": 3
     },
@@ -928,7 +928,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 75.1,
+      "gci": 75.9,
       "drama_avg": 3.64,
       "comeback_count": 1
     },
@@ -1238,9 +1238,9 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 66.6,
-      "drama_avg": 3.59,
-      "comeback_count": 3
+      "gci": 64.8,
+      "drama_avg": 3.74,
+      "comeback_count": 4
     },
     {
       "team": "ZAL",
@@ -1548,8 +1548,8 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 63.2,
-      "drama_avg": 3.68,
+      "gci": 58.7,
+      "drama_avg": 3.82,
       "comeback_count": 2
     },
     {
@@ -1858,7 +1858,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 58.2,
+      "gci": 58.7,
       "drama_avg": 3.84,
       "comeback_count": 2
     },
@@ -2168,8 +2168,8 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 58.8,
-      "drama_avg": 3.77,
+      "gci": 57.6,
+      "drama_avg": 3.78,
       "comeback_count": 3
     },
     {
@@ -2478,7 +2478,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 56.0,
+      "gci": 56.5,
       "drama_avg": 3.68,
       "comeback_count": 3
     },
@@ -2788,7 +2788,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 51.7,
+      "gci": 52.1,
       "drama_avg": 3.82,
       "comeback_count": 1
     },
@@ -3098,7 +3098,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 51.9,
+      "gci": 52.3,
       "drama_avg": 4.06,
       "comeback_count": 4
     },
@@ -3408,7 +3408,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 50.6,
+      "gci": 51.0,
       "drama_avg": 4.12,
       "comeback_count": 4
     },
@@ -3718,7 +3718,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 43.5,
+      "gci": 43.8,
       "drama_avg": 4.24,
       "comeback_count": 3
     },
@@ -4028,7 +4028,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 50.4,
+      "gci": 50.8,
       "drama_avg": 3.65,
       "comeback_count": 1
     },
@@ -4338,7 +4338,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 48.3,
+      "gci": 48.7,
       "drama_avg": 3.57,
       "comeback_count": 2
     },
@@ -4958,7 +4958,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 44.6,
+      "gci": 44.9,
       "drama_avg": 3.82,
       "comeback_count": 1
     },
@@ -5268,7 +5268,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 32.2,
+      "gci": 32.3,
       "drama_avg": 3.71,
       "comeback_count": 0
     },
@@ -5578,7 +5578,7 @@
         "19": 0.0,
         "20": 0.0
       },
-      "gci": 34.9,
+      "gci": 35.0,
       "drama_avg": 4.25,
       "comeback_count": 2
     },
@@ -6198,7 +6198,7 @@
         "19": 0.0,
         "20": 100.0
       },
-      "gci": 16.5,
+      "gci": 16.3,
       "drama_avg": 3.87,
       "comeback_count": 3
     }
@@ -6208,7 +6208,7 @@
       "rank": 1,
       "player": "VEZENKOV, SASHA",
       "team": "OLY",
-      "mvp_score": 90.63,
+      "mvp_score": 90.46,
       "avg_pir": 23.12,
       "avg_gmsc": 16.05,
       "wpa": 1349.9,
@@ -6225,7 +6225,7 @@
       "mvp_score": 87.85,
       "avg_pir": 19.5,
       "avg_gmsc": 13.47,
-      "wpa": 1608.1,
+      "wpa": 1711.8,
       "team_win_pct": 60.5,
       "clutch_eff": 0.5252,
       "clutch_pts": 34.0,
@@ -6234,9 +6234,23 @@
     },
     {
       "rank": 3,
+      "player": "BALDWIN IV, WADE",
+      "team": "ULK",
+      "mvp_score": 83.45,
+      "avg_pir": 16.38,
+      "avg_gmsc": 11.01,
+      "wpa": 1503.9,
+      "team_win_pct": 63.2,
+      "clutch_eff": 0.5905,
+      "clutch_pts": 33.0,
+      "consistency": 0.6963,
+      "gp": 37
+    },
+    {
+      "rank": 4,
       "player": "BRYANT, ELIJAH",
       "team": "HTA",
-      "mvp_score": 83.12,
+      "mvp_score": 82.96,
       "avg_pir": 20.59,
       "avg_gmsc": 12.77,
       "wpa": 1275.3,
@@ -6247,27 +6261,13 @@
       "gp": 34
     },
     {
-      "rank": 4,
-      "player": "BALDWIN IV, WADE",
-      "team": "ULK",
-      "mvp_score": 82.62,
-      "avg_pir": 16.38,
-      "avg_gmsc": 11.01,
-      "wpa": 1410.5,
-      "team_win_pct": 63.2,
-      "clutch_eff": 0.5905,
-      "clutch_pts": 33.0,
-      "consistency": 0.6963,
-      "gp": 37
-    },
-    {
       "rank": 5,
       "player": "NUNN, KENDRICK",
       "team": "PAN",
-      "mvp_score": 81.69,
+      "mvp_score": 82.1,
       "avg_pir": 16.81,
       "avg_gmsc": 12.6,
-      "wpa": 1473.6,
+      "wpa": 1529.4,
       "team_win_pct": 57.9,
       "clutch_eff": 0.502,
       "clutch_pts": 26.0,
@@ -6278,7 +6278,7 @@
       "rank": 6,
       "player": "JAMES, MIKE",
       "team": "MCO",
-      "mvp_score": 81.44,
+      "mvp_score": 81.26,
       "avg_pir": 18.88,
       "avg_gmsc": 12.98,
       "wpa": 1377.2,
@@ -6290,9 +6290,23 @@
     },
     {
       "rank": 7,
+      "player": "HORTON TUCKER, TALEN",
+      "team": "ULK",
+      "mvp_score": 80.6,
+      "avg_pir": 14.67,
+      "avg_gmsc": 10.36,
+      "wpa": 1445.0,
+      "team_win_pct": 63.2,
+      "clutch_eff": 0.6894,
+      "clutch_pts": 31.0,
+      "consistency": 0.6197,
+      "gp": 36
+    },
+    {
+      "rank": 8,
       "player": "MONEKE, CHIMA",
       "team": "RED",
-      "mvp_score": 80.06,
+      "mvp_score": 79.91,
       "avg_pir": 18.23,
       "avg_gmsc": 11.89,
       "wpa": 1155.8,
@@ -6303,10 +6317,10 @@
       "gp": 35
     },
     {
-      "rank": 8,
+      "rank": 9,
       "player": "DORSEY, TYLER",
       "team": "OLY",
-      "mvp_score": 80.0,
+      "mvp_score": 79.82,
       "avg_pir": 15.08,
       "avg_gmsc": 11.31,
       "wpa": 1430.6,
@@ -6317,24 +6331,24 @@
       "gp": 38
     },
     {
-      "rank": 9,
-      "player": "HORTON TUCKER, TALEN",
-      "team": "ULK",
-      "mvp_score": 79.71,
-      "avg_pir": 14.67,
-      "avg_gmsc": 10.36,
-      "wpa": 1346.9,
-      "team_win_pct": 63.2,
-      "clutch_eff": 0.6894,
-      "clutch_pts": 31.0,
-      "consistency": 0.6197,
-      "gp": 36
+      "rank": 10,
+      "player": "MONTERO, JEAN",
+      "team": "PAM",
+      "mvp_score": 79.66,
+      "avg_pir": 16.44,
+      "avg_gmsc": 11.43,
+      "wpa": 1284.8,
+      "team_win_pct": 65.8,
+      "clutch_eff": 0.4006,
+      "clutch_pts": 21.0,
+      "consistency": 0.6546,
+      "gp": 32
     },
     {
-      "rank": 10,
+      "rank": 11,
       "player": "MILUTINOV, NIKOLA",
       "team": "OLY",
-      "mvp_score": 79.5,
+      "mvp_score": 79.42,
       "avg_pir": 20.09,
       "avg_gmsc": 12.39,
       "wpa": 720.0,
@@ -6345,10 +6359,10 @@
       "gp": 35
     },
     {
-      "rank": 11,
+      "rank": 12,
       "player": "HIFI, NADIR",
       "team": "PRS",
-      "mvp_score": 79.47,
+      "mvp_score": 79.28,
       "avg_pir": 17.57,
       "avg_gmsc": 12.26,
       "wpa": 1443.1,
@@ -6359,24 +6373,10 @@
       "gp": 37
     },
     {
-      "rank": 12,
-      "player": "MONTERO, JEAN",
-      "team": "PAM",
-      "mvp_score": 78.86,
-      "avg_pir": 16.44,
-      "avg_gmsc": 11.43,
-      "wpa": 1196.3,
-      "team_win_pct": 65.8,
-      "clutch_eff": 0.4006,
-      "clutch_pts": 21.0,
-      "consistency": 0.6546,
-      "gp": 32
-    },
-    {
       "rank": 13,
       "player": "WRIGHT IV, MCKINLEY",
       "team": "DUB",
-      "mvp_score": 78.5,
+      "mvp_score": 78.33,
       "avg_pir": 15.71,
       "avg_gmsc": 11.41,
       "wpa": 1346.9,
@@ -6390,7 +6390,7 @@
       "rank": 14,
       "player": "NWORA, JORDAN",
       "team": "RED",
-      "mvp_score": 77.64,
+      "mvp_score": 77.48,
       "avg_pir": 16.18,
       "avg_gmsc": 11.37,
       "wpa": 1229.7,
@@ -6402,16 +6402,16 @@
     },
     {
       "rank": 15,
-      "player": "OTURU, DAN",
-      "team": "HTA",
-      "mvp_score": 76.96,
-      "avg_pir": 16.08,
-      "avg_gmsc": 11.7,
-      "wpa": 1151.3,
+      "player": "WRIGHT, MOSES",
+      "team": "ZAL",
+      "mvp_score": 76.97,
+      "avg_pir": 17.37,
+      "avg_gmsc": 11.42,
+      "wpa": 1300.6,
       "team_win_pct": 60.5,
-      "clutch_eff": 0.4052,
-      "clutch_pts": 18.0,
-      "consistency": 0.6825,
+      "clutch_eff": 0.0677,
+      "clutch_pts": 6.0,
+      "consistency": 0.6505,
       "gp": 38
     }
   ],
@@ -8674,7 +8674,7 @@
       "fg_pct": 54.2,
       "fg3_pct": 39.9,
       "ft_pct": 89.3,
-      "mvp_score": 90.6,
+      "mvp_score": 90.5,
       "mvp_rank": 1,
       "wpa": 1349.9,
       "consistency": 0.747,
@@ -8696,8 +8696,8 @@
       "fg_pct": 67.7,
       "fg3_pct": 0.0,
       "ft_pct": 78.6,
-      "mvp_score": 79.5,
-      "mvp_rank": 10,
+      "mvp_score": 79.4,
+      "mvp_rank": 11,
       "wpa": 720.0,
       "consistency": 0.759,
       "clutch_eff": 0.343
@@ -8718,8 +8718,8 @@
       "fg_pct": 52.7,
       "fg3_pct": 37.2,
       "ft_pct": 89.3,
-      "mvp_score": 83.1,
-      "mvp_rank": 3,
+      "mvp_score": 83.0,
+      "mvp_rank": 4,
       "wpa": 1275.3,
       "consistency": 0.703,
       "clutch_eff": 0.197
@@ -8742,7 +8742,7 @@
       "ft_pct": 79.9,
       "mvp_score": 87.8,
       "mvp_rank": 2,
-      "wpa": 1608.1,
+      "wpa": 1711.8,
       "consistency": 0.681,
       "clutch_eff": 0.525
     },
@@ -8762,7 +8762,7 @@
       "fg_pct": 42.3,
       "fg3_pct": 32.7,
       "ft_pct": 86.0,
-      "mvp_score": 81.4,
+      "mvp_score": 81.3,
       "mvp_rank": 6,
       "wpa": 1377.2,
       "consistency": 0.742,
@@ -8784,8 +8784,8 @@
       "fg_pct": 55.7,
       "fg3_pct": 34.3,
       "ft_pct": 77.4,
-      "mvp_score": 80.1,
-      "mvp_rank": 7,
+      "mvp_score": 79.9,
+      "mvp_rank": 8,
       "wpa": 1155.8,
       "consistency": 0.689,
       "clutch_eff": 0.496
@@ -8807,7 +8807,7 @@
       "fg3_pct": 32.0,
       "ft_pct": 85.4,
       "mvp_score": 65.5,
-      "mvp_rank": 42,
+      "mvp_rank": 43,
       "wpa": 601.2,
       "consistency": 0.671,
       "clutch_eff": 0.392
@@ -8828,9 +8828,9 @@
       "fg_pct": 42.3,
       "fg3_pct": 32.5,
       "ft_pct": 87.9,
-      "mvp_score": 78.9,
-      "mvp_rank": 12,
-      "wpa": 1196.3,
+      "mvp_score": 79.7,
+      "mvp_rank": 10,
+      "wpa": 1284.8,
       "consistency": 0.655,
       "clutch_eff": 0.401
     },
@@ -8850,8 +8850,8 @@
       "fg_pct": 41.5,
       "fg3_pct": 35.1,
       "ft_pct": 84.2,
-      "mvp_score": 79.5,
-      "mvp_rank": 11,
+      "mvp_score": 79.3,
+      "mvp_rank": 12,
       "wpa": 1443.1,
       "consistency": 0.673,
       "clutch_eff": 0.543
@@ -8872,7 +8872,7 @@
       "fg_pct": 56.3,
       "fg3_pct": 32.3,
       "ft_pct": 82.1,
-      "mvp_score": 75.2,
+      "mvp_score": 75.0,
       "mvp_rank": 18,
       "wpa": 1091.1,
       "consistency": 0.659,
@@ -8894,9 +8894,9 @@
       "fg_pct": 60.1,
       "fg3_pct": 30.6,
       "ft_pct": 73.3,
-      "mvp_score": 76.6,
-      "mvp_rank": 17,
-      "wpa": 1250.8,
+      "mvp_score": 77.0,
+      "mvp_rank": 15,
+      "wpa": 1300.6,
       "consistency": 0.65,
       "clutch_eff": 0.068
     },
@@ -8916,8 +8916,8 @@
       "fg_pct": 70.8,
       "fg3_pct": 0.0,
       "ft_pct": 64.3,
-      "mvp_score": 77.0,
-      "mvp_rank": 15,
+      "mvp_score": 76.8,
+      "mvp_rank": 16,
       "wpa": 1151.3,
       "consistency": 0.682,
       "clutch_eff": 0.405
@@ -8938,8 +8938,8 @@
       "fg_pct": 46.3,
       "fg3_pct": 28.6,
       "ft_pct": 90.2,
-      "mvp_score": 65.4,
-      "mvp_rank": 43,
+      "mvp_score": 65.3,
+      "mvp_rank": 44,
       "wpa": 698.3,
       "consistency": 0.672,
       "clutch_eff": 0.0
@@ -8960,9 +8960,9 @@
       "fg_pct": 45.7,
       "fg3_pct": 30.0,
       "ft_pct": 79.2,
-      "mvp_score": 82.6,
-      "mvp_rank": 4,
-      "wpa": 1410.5,
+      "mvp_score": 83.5,
+      "mvp_rank": 3,
+      "wpa": 1503.9,
       "consistency": 0.696,
       "clutch_eff": 0.591
     },
@@ -8982,8 +8982,8 @@
       "fg_pct": 47.6,
       "fg3_pct": 41.2,
       "ft_pct": 89.8,
-      "mvp_score": 76.7,
-      "mvp_rank": 16,
+      "mvp_score": 76.5,
+      "mvp_rank": 17,
       "wpa": 1488.0,
       "consistency": 0.743,
       "clutch_eff": 0.459
@@ -9004,8 +9004,8 @@
       "fg_pct": 52.8,
       "fg3_pct": 30.4,
       "ft_pct": 86.4,
-      "mvp_score": 68.8,
-      "mvp_rank": 29,
+      "mvp_score": 68.7,
+      "mvp_rank": 30,
       "wpa": 818.0,
       "consistency": 0.699,
       "clutch_eff": 0.257
@@ -9026,9 +9026,9 @@
       "fg_pct": 50.9,
       "fg3_pct": 38.7,
       "ft_pct": 88.9,
-      "mvp_score": 81.7,
+      "mvp_score": 82.1,
       "mvp_rank": 5,
-      "wpa": 1473.6,
+      "wpa": 1529.4,
       "consistency": 0.621,
       "clutch_eff": 0.502
     },
@@ -9048,7 +9048,7 @@
       "fg_pct": 47.1,
       "fg3_pct": 35.6,
       "ft_pct": 80.6,
-      "mvp_score": 77.6,
+      "mvp_score": 77.5,
       "mvp_rank": 14,
       "wpa": 1229.7,
       "consistency": 0.669,
@@ -9070,7 +9070,7 @@
       "fg_pct": 51.7,
       "fg3_pct": 37.8,
       "ft_pct": 85.3,
-      "mvp_score": 78.5,
+      "mvp_score": 78.3,
       "mvp_rank": 13,
       "wpa": 1346.9,
       "consistency": 0.591,
@@ -9092,7 +9092,7 @@
       "fg_pct": 46.6,
       "fg3_pct": 36.0,
       "ft_pct": 88.2,
-      "mvp_score": 64.1,
+      "mvp_score": 64.0,
       "mvp_rank": 52,
       "wpa": 478.8,
       "consistency": 0.594,
@@ -9114,7 +9114,7 @@
       "fg_pct": 68.9,
       "fg3_pct": 0.0,
       "ft_pct": 73.0,
-      "mvp_score": 69.5,
+      "mvp_score": 69.4,
       "mvp_rank": 26,
       "wpa": 692.9,
       "consistency": 0.673,
@@ -9136,7 +9136,7 @@
       "fg_pct": 54.8,
       "fg3_pct": 39.4,
       "ft_pct": 81.3,
-      "mvp_score": 67.6,
+      "mvp_score": 67.5,
       "mvp_rank": 37,
       "wpa": 907.1,
       "consistency": 0.64,
@@ -9158,8 +9158,8 @@
       "fg_pct": 53.7,
       "fg3_pct": 36.5,
       "ft_pct": 81.9,
-      "mvp_score": 71.9,
-      "mvp_rank": 23,
+      "mvp_score": 71.8,
+      "mvp_rank": 22,
       "wpa": 845.0,
       "consistency": 0.66,
       "clutch_eff": 0.438
@@ -9180,7 +9180,7 @@
       "fg_pct": 46.9,
       "fg3_pct": 43.1,
       "ft_pct": 89.2,
-      "mvp_score": 59.6,
+      "mvp_score": 59.5,
       "mvp_rank": 80,
       "wpa": 465.3,
       "consistency": 0.696,
@@ -9202,7 +9202,7 @@
       "fg_pct": 50.6,
       "fg3_pct": 49.5,
       "ft_pct": 82.4,
-      "mvp_score": 66.4,
+      "mvp_score": 66.3,
       "mvp_rank": 41,
       "wpa": 820.2,
       "consistency": 0.679,
@@ -9224,8 +9224,8 @@
       "fg_pct": 43.0,
       "fg3_pct": 33.0,
       "ft_pct": 60.5,
-      "mvp_score": 71.9,
-      "mvp_rank": 22,
+      "mvp_score": 71.8,
+      "mvp_rank": 23,
       "wpa": 1002.6,
       "consistency": 0.659,
       "clutch_eff": 0.319
@@ -9246,7 +9246,7 @@
       "fg_pct": 44.4,
       "fg3_pct": 43.1,
       "ft_pct": 85.2,
-      "mvp_score": 74.2,
+      "mvp_score": 74.0,
       "mvp_rank": 19,
       "wpa": 1136.7,
       "consistency": 0.624,
@@ -9268,8 +9268,8 @@
       "fg_pct": 46.3,
       "fg3_pct": 38.7,
       "ft_pct": 72.6,
-      "mvp_score": 68.8,
-      "mvp_rank": 30,
+      "mvp_score": 68.6,
+      "mvp_rank": 31,
       "wpa": 1032.2,
       "consistency": 0.589,
       "clutch_eff": 0.124
@@ -9290,7 +9290,7 @@
       "fg_pct": 50.4,
       "fg3_pct": 44.1,
       "ft_pct": 78.7,
-      "mvp_score": 73.0,
+      "mvp_score": 72.9,
       "mvp_rank": 20,
       "wpa": 1014.0,
       "consistency": 0.615,
@@ -9334,8 +9334,8 @@
       "fg_pct": 41.6,
       "fg3_pct": 34.3,
       "ft_pct": 82.8,
-      "mvp_score": 68.2,
-      "mvp_rank": 34,
+      "mvp_score": 68.1,
+      "mvp_rank": 35,
       "wpa": 1088.0,
       "consistency": 0.592,
       "clutch_eff": 0.312
@@ -9356,8 +9356,8 @@
       "fg_pct": 49.0,
       "fg3_pct": 31.0,
       "ft_pct": 82.7,
-      "mvp_score": 64.9,
-      "mvp_rank": 49,
+      "mvp_score": 64.8,
+      "mvp_rank": 50,
       "wpa": 754.6,
       "consistency": 0.689,
       "clutch_eff": 0.25
@@ -9378,9 +9378,9 @@
       "fg_pct": 47.9,
       "fg3_pct": 27.1,
       "ft_pct": 75.1,
-      "mvp_score": 79.7,
-      "mvp_rank": 9,
-      "wpa": 1346.9,
+      "mvp_score": 80.6,
+      "mvp_rank": 7,
+      "wpa": 1445.0,
       "consistency": 0.62,
       "clutch_eff": 0.689
     },
@@ -9400,8 +9400,8 @@
       "fg_pct": 45.3,
       "fg3_pct": 39.0,
       "ft_pct": 79.1,
-      "mvp_score": 80.0,
-      "mvp_rank": 8,
+      "mvp_score": 79.8,
+      "mvp_rank": 9,
       "wpa": 1430.6,
       "consistency": 0.643,
       "clutch_eff": 0.413
@@ -9422,7 +9422,7 @@
       "fg_pct": 51.6,
       "fg3_pct": 34.1,
       "ft_pct": 81.9,
-      "mvp_score": 67.4,
+      "mvp_score": 67.3,
       "mvp_rank": 38,
       "wpa": 1015.2,
       "consistency": 0.611,
@@ -9444,8 +9444,8 @@
       "fg_pct": 42.2,
       "fg3_pct": 31.4,
       "ft_pct": 78.8,
-      "mvp_score": 68.2,
-      "mvp_rank": 35,
+      "mvp_score": 68.1,
+      "mvp_rank": 36,
       "wpa": 954.4,
       "consistency": 0.625,
       "clutch_eff": 0.294
@@ -9466,8 +9466,8 @@
       "fg_pct": 51.3,
       "fg3_pct": 44.4,
       "ft_pct": 82.4,
-      "mvp_score": 61.0,
-      "mvp_rank": 74,
+      "mvp_score": 60.9,
+      "mvp_rank": 73,
       "wpa": 442.3,
       "consistency": 0.649,
       "clutch_eff": 0.354
@@ -9488,7 +9488,7 @@
       "fg_pct": 67.5,
       "fg3_pct": 0.0,
       "ft_pct": 66.3,
-      "mvp_score": 60.2,
+      "mvp_score": 60.1,
       "mvp_rank": 77,
       "wpa": 564.6,
       "consistency": 0.567,
@@ -9532,7 +9532,7 @@
       "fg_pct": 49.0,
       "fg3_pct": 31.4,
       "ft_pct": 79.6,
-      "mvp_score": 69.9,
+      "mvp_score": 69.8,
       "mvp_rank": 25,
       "wpa": 962.4,
       "consistency": 0.687,
@@ -9556,7 +9556,7 @@
       "ft_pct": 97.9,
       "mvp_score": 65.0,
       "mvp_rank": 47,
-      "wpa": 796.2,
+      "wpa": 801.6,
       "consistency": 0.619,
       "clutch_eff": 0.666
     },
@@ -9576,9 +9576,9 @@
       "fg_pct": 50.8,
       "fg3_pct": 39.2,
       "ft_pct": 82.4,
-      "mvp_score": 70.4,
+      "mvp_score": 70.6,
       "mvp_rank": 24,
-      "wpa": 994.5,
+      "wpa": 1021.8,
       "consistency": 0.634,
       "clutch_eff": 0.184
     },
@@ -9598,7 +9598,7 @@
       "fg_pct": 45.6,
       "fg3_pct": 41.4,
       "ft_pct": 86.6,
-      "mvp_score": 72.4,
+      "mvp_score": 72.2,
       "mvp_rank": 21,
       "wpa": 1231.5,
       "consistency": 0.534,
@@ -9620,9 +9620,9 @@
       "fg_pct": 42.7,
       "fg3_pct": 33.8,
       "ft_pct": 86.4,
-      "mvp_score": 63.1,
-      "mvp_rank": 57,
-      "wpa": 521.7,
+      "mvp_score": 63.4,
+      "mvp_rank": 54,
+      "wpa": 554.5,
       "consistency": 0.667,
       "clutch_eff": 0.0
     },
@@ -9642,9 +9642,9 @@
       "fg_pct": 47.3,
       "fg3_pct": 37.8,
       "ft_pct": 82.9,
-      "mvp_score": 64.6,
-      "mvp_rank": 50,
-      "wpa": 882.8,
+      "mvp_score": 65.6,
+      "mvp_rank": 42,
+      "wpa": 985.4,
       "consistency": 0.569,
       "clutch_eff": 0.085
     },
@@ -9664,8 +9664,8 @@
       "fg_pct": 44.2,
       "fg3_pct": 37.4,
       "ft_pct": 87.6,
-      "mvp_score": 65.3,
-      "mvp_rank": 44,
+      "mvp_score": 65.2,
+      "mvp_rank": 45,
       "wpa": 955.6,
       "consistency": 0.578,
       "clutch_eff": 0.356
@@ -9686,7 +9686,7 @@
       "fg_pct": 47.8,
       "fg3_pct": 39.3,
       "ft_pct": 82.1,
-      "mvp_score": 62.6,
+      "mvp_score": 62.5,
       "mvp_rank": 61,
       "wpa": 699.3,
       "consistency": 0.625,
@@ -9708,9 +9708,9 @@
       "fg_pct": 58.2,
       "fg3_pct": 40.5,
       "ft_pct": 71.0,
-      "mvp_score": 68.6,
-      "mvp_rank": 32,
-      "wpa": 1117.0,
+      "mvp_score": 68.9,
+      "mvp_rank": 28,
+      "wpa": 1156.2,
       "consistency": 0.632,
       "clutch_eff": 0.202
     },
@@ -9730,9 +9730,9 @@
       "fg_pct": 59.7,
       "fg3_pct": 0.0,
       "ft_pct": 66.7,
-      "mvp_score": 57.3,
+      "mvp_score": 57.4,
       "mvp_rank": 97,
-      "wpa": 183.7,
+      "wpa": 195.2,
       "consistency": 0.678,
       "clutch_eff": 0.0
     },
@@ -9752,7 +9752,7 @@
       "fg_pct": 39.4,
       "fg3_pct": 35.1,
       "ft_pct": 75.8,
-      "mvp_score": 63.1,
+      "mvp_score": 63.0,
       "mvp_rank": 58,
       "wpa": 821.5,
       "consistency": 0.584,
@@ -9774,7 +9774,7 @@
       "fg_pct": 43.2,
       "fg3_pct": 37.5,
       "ft_pct": 90.5,
-      "mvp_score": 64.1,
+      "mvp_score": 64.0,
       "mvp_rank": 51,
       "wpa": 712.2,
       "consistency": 0.577,
@@ -9797,7 +9797,7 @@
       "fg3_pct": 41.7,
       "ft_pct": 85.1,
       "mvp_score": 58.4,
-      "mvp_rank": 87,
+      "mvp_rank": 88,
       "wpa": 449.8,
       "consistency": 0.645,
       "clutch_eff": 0.116
@@ -9818,7 +9818,7 @@
       "fg_pct": 45.6,
       "fg3_pct": 42.1,
       "ft_pct": 83.8,
-      "mvp_score": 62.2,
+      "mvp_score": 62.0,
       "mvp_rank": 63,
       "wpa": 1005.4,
       "consistency": 0.595,
@@ -9862,9 +9862,9 @@
       "fg_pct": 49.0,
       "fg3_pct": 36.3,
       "ft_pct": 75.0,
-      "mvp_score": 63.6,
+      "mvp_score": 63.7,
       "mvp_rank": 53,
-      "wpa": 696.5,
+      "wpa": 718.5,
       "consistency": 0.613,
       "clutch_eff": 0.084
     },
@@ -9906,7 +9906,7 @@
       "fg_pct": 46.7,
       "fg3_pct": 36.7,
       "ft_pct": 91.4,
-      "mvp_score": 61.8,
+      "mvp_score": 61.7,
       "mvp_rank": 65,
       "wpa": 887.1,
       "consistency": 0.612,
@@ -9928,7 +9928,7 @@
       "fg_pct": 58.9,
       "fg3_pct": 27.1,
       "ft_pct": 80.7,
-      "mvp_score": 65.2,
+      "mvp_score": 65.1,
       "mvp_rank": 46,
       "wpa": 752.7,
       "consistency": 0.67,
@@ -9950,7 +9950,7 @@
       "fg_pct": 41.5,
       "fg3_pct": 37.8,
       "ft_pct": 89.4,
-      "mvp_score": 67.2,
+      "mvp_score": 67.1,
       "mvp_rank": 39,
       "wpa": 1011.9,
       "consistency": 0.55,
@@ -9972,8 +9972,8 @@
       "fg_pct": 76.9,
       "fg3_pct": 0.0,
       "ft_pct": 77.5,
-      "mvp_score": 58.8,
-      "mvp_rank": 85,
+      "mvp_score": 58.7,
+      "mvp_rank": 84,
       "wpa": 423.6,
       "consistency": 0.589,
       "clutch_eff": 0.054
@@ -9994,7 +9994,7 @@
       "fg_pct": 47.8,
       "fg3_pct": 42.3,
       "ft_pct": 87.7,
-      "mvp_score": 69.0,
+      "mvp_score": 68.9,
       "mvp_rank": 27,
       "wpa": 938.4,
       "consistency": 0.617,
@@ -10016,7 +10016,7 @@
       "fg_pct": 42.1,
       "fg3_pct": 33.8,
       "ft_pct": 83.7,
-      "mvp_score": 66.7,
+      "mvp_score": 66.6,
       "mvp_rank": 40,
       "wpa": 1056.2,
       "consistency": 0.574,
@@ -10038,7 +10038,7 @@
       "fg_pct": 42.0,
       "fg3_pct": 30.0,
       "ft_pct": 81.2,
-      "mvp_score": 68.4,
+      "mvp_score": 68.3,
       "mvp_rank": 33,
       "wpa": 1202.6,
       "consistency": 0.598,
@@ -10060,7 +10060,7 @@
       "fg_pct": 51.9,
       "fg3_pct": 40.7,
       "ft_pct": 78.4,
-      "mvp_score": 61.9,
+      "mvp_score": 61.7,
       "mvp_rank": 64,
       "wpa": 988.8,
       "consistency": 0.626,
@@ -10082,8 +10082,8 @@
       "fg_pct": 49.1,
       "fg3_pct": 37.7,
       "ft_pct": 81.9,
-      "mvp_score": 61.0,
-      "mvp_rank": 72,
+      "mvp_score": 60.9,
+      "mvp_rank": 74,
       "wpa": 667.8,
       "consistency": 0.639,
       "clutch_eff": 0.387
@@ -10104,8 +10104,8 @@
       "fg_pct": 41.4,
       "fg3_pct": 30.9,
       "ft_pct": 89.5,
-      "mvp_score": 61.4,
-      "mvp_rank": 69,
+      "mvp_score": 61.3,
+      "mvp_rank": 71,
       "wpa": 826.3,
       "consistency": 0.587,
       "clutch_eff": 0.025
@@ -10148,7 +10148,7 @@
       "fg_pct": 47.3,
       "fg3_pct": 38.3,
       "ft_pct": 90.2,
-      "mvp_score": 62.7,
+      "mvp_score": 62.5,
       "mvp_rank": 60,
       "wpa": 893.9,
       "consistency": 0.622,
@@ -10171,7 +10171,7 @@
       "fg3_pct": 31.8,
       "ft_pct": 78.1,
       "mvp_score": 52.3,
-      "mvp_rank": 127,
+      "mvp_rank": 128,
       "wpa": 434.5,
       "consistency": 0.593,
       "clutch_eff": 0.022
@@ -10193,7 +10193,7 @@
       "fg3_pct": 36.6,
       "ft_pct": 75.4,
       "mvp_score": 57.5,
-      "mvp_rank": 95,
+      "mvp_rank": 96,
       "wpa": 741.1,
       "consistency": 0.55,
       "clutch_eff": 0.351
@@ -10214,8 +10214,8 @@
       "fg_pct": 45.7,
       "fg3_pct": 39.2,
       "ft_pct": 90.5,
-      "mvp_score": 63.4,
-      "mvp_rank": 55,
+      "mvp_score": 63.3,
+      "mvp_rank": 56,
       "wpa": 1068.6,
       "consistency": 0.557,
       "clutch_eff": 0.315
@@ -10236,7 +10236,7 @@
       "fg_pct": 45.0,
       "fg3_pct": 37.7,
       "ft_pct": 80.0,
-      "mvp_score": 62.6,
+      "mvp_score": 62.5,
       "mvp_rank": 62,
       "wpa": 757.9,
       "consistency": 0.54,
@@ -10258,8 +10258,8 @@
       "fg_pct": 39.4,
       "fg3_pct": 31.9,
       "ft_pct": 79.8,
-      "mvp_score": 68.8,
-      "mvp_rank": 31,
+      "mvp_score": 68.6,
+      "mvp_rank": 32,
       "wpa": 1407.4,
       "consistency": 0.524,
       "clutch_eff": 0.617
@@ -10280,8 +10280,8 @@
       "fg_pct": 42.9,
       "fg3_pct": 36.0,
       "ft_pct": 84.0,
-      "mvp_score": 61.2,
-      "mvp_rank": 71,
+      "mvp_score": 61.1,
+      "mvp_rank": 72,
       "wpa": 707.0,
       "consistency": 0.594,
       "clutch_eff": 0.129
@@ -10302,9 +10302,9 @@
       "fg_pct": 46.1,
       "fg3_pct": 38.5,
       "ft_pct": 78.7,
-      "mvp_score": 63.3,
-      "mvp_rank": 56,
-      "wpa": 857.5,
+      "mvp_score": 63.2,
+      "mvp_rank": 57,
+      "wpa": 857.4,
       "consistency": 0.563,
       "clutch_eff": 0.19
     },
@@ -10324,9 +10324,9 @@
       "fg_pct": 59.1,
       "fg3_pct": 42.4,
       "ft_pct": 65.4,
-      "mvp_score": 67.8,
-      "mvp_rank": 36,
-      "wpa": 1002.8,
+      "mvp_score": 68.1,
+      "mvp_rank": 34,
+      "wpa": 1048.8,
       "consistency": 0.553,
       "clutch_eff": 0.292
     },
@@ -10390,7 +10390,7 @@
       "fg_pct": 62.9,
       "fg3_pct": 33.3,
       "ft_pct": 79.4,
-      "mvp_score": 55.9,
+      "mvp_score": 55.8,
       "mvp_rank": 104,
       "wpa": 535.9,
       "consistency": 0.557,
@@ -10412,8 +10412,8 @@
       "fg_pct": 40.4,
       "fg3_pct": 34.6,
       "ft_pct": 85.8,
-      "mvp_score": 58.3,
-      "mvp_rank": 89,
+      "mvp_score": 58.2,
+      "mvp_rank": 91,
       "wpa": 953.1,
       "consistency": 0.52,
       "clutch_eff": 0.192
@@ -10434,7 +10434,7 @@
       "fg_pct": 49.6,
       "fg3_pct": 28.7,
       "ft_pct": 90.9,
-      "mvp_score": 56.1,
+      "mvp_score": 56.0,
       "mvp_rank": 103,
       "wpa": 746.3,
       "consistency": 0.67,
@@ -10456,8 +10456,8 @@
       "fg_pct": 44.0,
       "fg3_pct": 36.4,
       "ft_pct": 81.2,
-      "mvp_score": 65.0,
-      "mvp_rank": 48,
+      "mvp_score": 64.9,
+      "mvp_rank": 49,
       "wpa": 905.5,
       "consistency": 0.529,
       "clutch_eff": 0.446
@@ -10522,7 +10522,7 @@
       "fg_pct": 47.0,
       "fg3_pct": 34.6,
       "ft_pct": 86.8,
-      "mvp_score": 55.2,
+      "mvp_score": 55.1,
       "mvp_rank": 109,
       "wpa": 522.6,
       "consistency": 0.593,
@@ -10544,7 +10544,7 @@
       "fg_pct": 45.2,
       "fg3_pct": 41.6,
       "ft_pct": 82.4,
-      "mvp_score": 62.8,
+      "mvp_score": 62.7,
       "mvp_rank": 59,
       "wpa": 1080.4,
       "consistency": 0.552,
@@ -10566,8 +10566,8 @@
       "fg_pct": 46.0,
       "fg3_pct": 40.0,
       "ft_pct": 84.5,
-      "mvp_score": 68.9,
-      "mvp_rank": 28,
+      "mvp_score": 68.7,
+      "mvp_rank": 29,
       "wpa": 1247.6,
       "consistency": 0.606,
       "clutch_eff": 0.338
@@ -10588,7 +10588,7 @@
       "fg_pct": 59.8,
       "fg3_pct": 0.0,
       "ft_pct": 74.7,
-      "mvp_score": 53.8,
+      "mvp_score": 53.7,
       "mvp_rank": 120,
       "wpa": 450.0,
       "consistency": 0.598,
@@ -10610,7 +10610,7 @@
       "fg_pct": 54.3,
       "fg3_pct": 31.8,
       "ft_pct": 65.2,
-      "mvp_score": 60.7,
+      "mvp_score": 60.6,
       "mvp_rank": 75,
       "wpa": 856.6,
       "consistency": 0.568,
@@ -10632,7 +10632,7 @@
       "fg_pct": 43.2,
       "fg3_pct": 32.0,
       "ft_pct": 82.4,
-      "mvp_score": 59.7,
+      "mvp_score": 59.6,
       "mvp_rank": 79,
       "wpa": 749.4,
       "consistency": 0.625,
@@ -10654,7 +10654,7 @@
       "fg_pct": 71.3,
       "fg3_pct": 0.0,
       "ft_pct": 76.6,
-      "mvp_score": 59.2,
+      "mvp_score": 59.1,
       "mvp_rank": 82,
       "wpa": 661.8,
       "consistency": 0.55,
@@ -10676,9 +10676,9 @@
       "fg_pct": 47.7,
       "fg3_pct": 43.1,
       "ft_pct": 55.2,
-      "mvp_score": 56.7,
-      "mvp_rank": 100,
-      "wpa": 401.9,
+      "mvp_score": 57.0,
+      "mvp_rank": 99,
+      "wpa": 425.6,
       "consistency": 0.623,
       "clutch_eff": 0.107
     },
@@ -10698,9 +10698,9 @@
       "fg_pct": 47.8,
       "fg3_pct": 40.7,
       "ft_pct": 85.4,
-      "mvp_score": 65.2,
-      "mvp_rank": 45,
-      "wpa": 884.6,
+      "mvp_score": 64.9,
+      "mvp_rank": 48,
+      "wpa": 866.2,
       "consistency": 0.559,
       "clutch_eff": 0.278
     },
@@ -10720,8 +10720,8 @@
       "fg_pct": 50.5,
       "fg3_pct": 18.1,
       "ft_pct": 55.2,
-      "mvp_score": 50.2,
-      "mvp_rank": 142,
+      "mvp_score": 50.1,
+      "mvp_rank": 143,
       "wpa": 526.4,
       "consistency": 0.568,
       "clutch_eff": 0.104
@@ -10743,7 +10743,7 @@
       "fg3_pct": 33.8,
       "ft_pct": 83.1,
       "mvp_score": 54.6,
-      "mvp_rank": 112,
+      "mvp_rank": 113,
       "wpa": 618.4,
       "consistency": 0.526,
       "clutch_eff": 0.231
@@ -10765,7 +10765,7 @@
       "fg3_pct": 28.3,
       "ft_pct": 53.8,
       "mvp_score": 50.0,
-      "mvp_rank": 144,
+      "mvp_rank": 145,
       "wpa": 269.4,
       "consistency": 0.622,
       "clutch_eff": 0.123
@@ -10787,7 +10787,7 @@
       "fg3_pct": 35.0,
       "ft_pct": 82.9,
       "mvp_score": 57.5,
-      "mvp_rank": 94,
+      "mvp_rank": 95,
       "wpa": 743.1,
       "consistency": 0.57,
       "clutch_eff": 0.352
@@ -10852,7 +10852,7 @@
       "fg_pct": 62.9,
       "fg3_pct": 50.0,
       "ft_pct": 73.9,
-      "mvp_score": 55.7,
+      "mvp_score": 55.6,
       "mvp_rank": 106,
       "wpa": 442.5,
       "consistency": 0.574,
@@ -10875,7 +10875,7 @@
       "fg3_pct": 30.2,
       "ft_pct": 81.2,
       "mvp_score": 52.4,
-      "mvp_rank": 126,
+      "mvp_rank": 127,
       "wpa": 258.1,
       "consistency": 0.557,
       "clutch_eff": 0.225
@@ -10897,7 +10897,7 @@
       "fg3_pct": 28.6,
       "ft_pct": 75.9,
       "mvp_score": 54.6,
-      "mvp_rank": 113,
+      "mvp_rank": 112,
       "wpa": 601.0,
       "consistency": 0.561,
       "clutch_eff": 0.1
@@ -10962,9 +10962,9 @@
       "fg_pct": 43.0,
       "fg3_pct": 34.3,
       "ft_pct": 84.6,
-      "mvp_score": 61.3,
+      "mvp_score": 61.4,
       "mvp_rank": 70,
-      "wpa": 926.3,
+      "wpa": 948.3,
       "consistency": 0.58,
       "clutch_eff": 0.077
     },
@@ -10984,7 +10984,7 @@
       "fg_pct": 46.4,
       "fg3_pct": 41.8,
       "ft_pct": 72.5,
-      "mvp_score": 54.0,
+      "mvp_score": 53.9,
       "mvp_rank": 119,
       "wpa": 620.6,
       "consistency": 0.53,
@@ -11006,9 +11006,9 @@
       "fg_pct": 53.0,
       "fg3_pct": 35.4,
       "ft_pct": 76.0,
-      "mvp_score": 58.1,
-      "mvp_rank": 91,
-      "wpa": 536.4,
+      "mvp_score": 58.5,
+      "mvp_rank": 87,
+      "wpa": 570.8,
       "consistency": 0.638,
       "clutch_eff": 0.118
     },
@@ -11028,7 +11028,7 @@
       "fg_pct": 64.4,
       "fg3_pct": 0.0,
       "ft_pct": 68.0,
-      "mvp_score": 52.1,
+      "mvp_score": 52.0,
       "mvp_rank": 129,
       "wpa": 290.1,
       "consistency": 0.46,
@@ -11073,8 +11073,8 @@
       "fg3_pct": 49.0,
       "ft_pct": 89.8,
       "mvp_score": 58.3,
-      "mvp_rank": 88,
-      "wpa": 612.6,
+      "mvp_rank": 89,
+      "wpa": 615.8,
       "consistency": 0.592,
       "clutch_eff": 0.083
     },
@@ -11095,7 +11095,7 @@
       "fg3_pct": 28.0,
       "ft_pct": 63.2,
       "mvp_score": 46.4,
-      "mvp_rank": 172,
+      "mvp_rank": 174,
       "wpa": 473.8,
       "consistency": 0.506,
       "clutch_eff": 0.103
@@ -11116,7 +11116,7 @@
       "fg_pct": 38.8,
       "fg3_pct": 38.5,
       "ft_pct": 76.5,
-      "mvp_score": 54.1,
+      "mvp_score": 54.0,
       "mvp_rank": 118,
       "wpa": 646.3,
       "consistency": 0.526,
@@ -11140,7 +11140,7 @@
       "ft_pct": 84.5,
       "mvp_score": 58.2,
       "mvp_rank": 90,
-      "wpa": 555.6,
+      "wpa": 562.3,
       "consistency": 0.609,
       "clutch_eff": 0.18
     },
@@ -11160,7 +11160,7 @@
       "fg_pct": 42.5,
       "fg3_pct": 29.5,
       "ft_pct": 84.0,
-      "mvp_score": 54.9,
+      "mvp_score": 54.8,
       "mvp_rank": 110,
       "wpa": 767.3,
       "consistency": 0.491,
@@ -11183,7 +11183,7 @@
       "fg3_pct": 44.7,
       "ft_pct": 90.1,
       "mvp_score": 46.4,
-      "mvp_rank": 173,
+      "mvp_rank": 171,
       "wpa": 0.0,
       "consistency": 0.532,
       "clutch_eff": 0.246
@@ -11204,7 +11204,7 @@
       "fg_pct": 56.5,
       "fg3_pct": 36.9,
       "ft_pct": 82.1,
-      "mvp_score": 58.1,
+      "mvp_score": 58.0,
       "mvp_rank": 92,
       "wpa": 556.7,
       "consistency": 0.6,
@@ -11226,8 +11226,8 @@
       "fg_pct": 41.5,
       "fg3_pct": 30.8,
       "ft_pct": 80.0,
-      "mvp_score": 58.8,
-      "mvp_rank": 84,
+      "mvp_score": 58.7,
+      "mvp_rank": 85,
       "wpa": 839.6,
       "consistency": 0.518,
       "clutch_eff": 0.381
@@ -11248,8 +11248,8 @@
       "fg_pct": 40.6,
       "fg3_pct": 36.7,
       "ft_pct": 80.3,
-      "mvp_score": 63.4,
-      "mvp_rank": 54,
+      "mvp_score": 63.3,
+      "mvp_rank": 55,
       "wpa": 979.5,
       "consistency": 0.474,
       "clutch_eff": 0.425
@@ -11358,8 +11358,8 @@
       "fg_pct": 47.8,
       "fg3_pct": 39.3,
       "ft_pct": 68.4,
-      "mvp_score": 54.3,
-      "mvp_rank": 116,
+      "mvp_score": 54.2,
+      "mvp_rank": 115,
       "wpa": 501.1,
       "consistency": 0.571,
       "clutch_eff": 0.0
@@ -11381,7 +11381,7 @@
       "fg3_pct": 48.8,
       "ft_pct": 72.7,
       "mvp_score": 56.9,
-      "mvp_rank": 99,
+      "mvp_rank": 100,
       "wpa": 551.1,
       "consistency": 0.513,
       "clutch_eff": 0.347
@@ -11404,7 +11404,7 @@
       "ft_pct": 71.7,
       "mvp_score": 56.3,
       "mvp_rank": 102,
-      "wpa": 768.0,
+      "wpa": 769.4,
       "consistency": 0.475,
       "clutch_eff": 0.189
     },
@@ -11424,9 +11424,9 @@
       "fg_pct": 46.0,
       "fg3_pct": 41.8,
       "ft_pct": 95.1,
-      "mvp_score": 61.0,
-      "mvp_rank": 73,
-      "wpa": 934.6,
+      "mvp_score": 61.5,
+      "mvp_rank": 69,
+      "wpa": 992.8,
       "consistency": 0.489,
       "clutch_eff": 0.298
     },
@@ -11446,9 +11446,9 @@
       "fg_pct": 44.9,
       "fg3_pct": 32.0,
       "ft_pct": 73.0,
-      "mvp_score": 58.7,
+      "mvp_score": 58.6,
       "mvp_rank": 86,
-      "wpa": 646.2,
+      "wpa": 648.7,
       "consistency": 0.54,
       "clutch_eff": 0.189
     },
@@ -11490,9 +11490,9 @@
       "fg_pct": 44.8,
       "fg3_pct": 34.4,
       "ft_pct": 81.5,
-      "mvp_score": 54.4,
+      "mvp_score": 54.6,
       "mvp_rank": 114,
-      "wpa": 588.1,
+      "wpa": 604.4,
       "consistency": 0.536,
       "clutch_eff": 0.037
     },
@@ -11534,7 +11534,7 @@
       "fg_pct": 44.2,
       "fg3_pct": 39.0,
       "ft_pct": 78.3,
-      "mvp_score": 50.7,
+      "mvp_score": 50.6,
       "mvp_rank": 135,
       "wpa": 572.9,
       "consistency": 0.506,
@@ -11556,8 +11556,8 @@
       "fg_pct": 46.2,
       "fg3_pct": 41.7,
       "ft_pct": 78.7,
-      "mvp_score": 49.8,
-      "mvp_rank": 149,
+      "mvp_score": 49.7,
+      "mvp_rank": 150,
       "wpa": 483.6,
       "consistency": 0.559,
       "clutch_eff": 0.09
@@ -11578,7 +11578,7 @@
       "fg_pct": 51.9,
       "fg3_pct": 39.4,
       "ft_pct": 83.6,
-      "mvp_score": 57.9,
+      "mvp_score": 57.8,
       "mvp_rank": 93,
       "wpa": 636.7,
       "consistency": 0.515,
@@ -11644,7 +11644,7 @@
       "fg_pct": 46.6,
       "fg3_pct": 35.8,
       "ft_pct": 75.6,
-      "mvp_score": 55.9,
+      "mvp_score": 55.8,
       "mvp_rank": 105,
       "wpa": 554.7,
       "consistency": 0.584,
@@ -11667,7 +11667,7 @@
       "fg3_pct": 0.0,
       "ft_pct": 65.5,
       "mvp_score": 52.5,
-      "mvp_rank": 125,
+      "mvp_rank": 126,
       "wpa": 390.1,
       "consistency": 0.492,
       "clutch_eff": 0.069
@@ -11688,7 +11688,7 @@
       "fg_pct": 59.6,
       "fg3_pct": 18.8,
       "ft_pct": 91.7,
-      "mvp_score": 49.2,
+      "mvp_score": 49.1,
       "mvp_rank": 151,
       "wpa": 447.9,
       "consistency": 0.501,
@@ -11710,7 +11710,7 @@
       "fg_pct": 48.3,
       "fg3_pct": 39.5,
       "ft_pct": 49.1,
-      "mvp_score": 55.4,
+      "mvp_score": 55.3,
       "mvp_rank": 107,
       "wpa": 575.3,
       "consistency": 0.564,
@@ -11776,9 +11776,9 @@
       "fg_pct": 55.5,
       "fg3_pct": 50.6,
       "ft_pct": 82.6,
-      "mvp_score": 52.8,
-      "mvp_rank": 124,
-      "wpa": 433.7,
+      "mvp_score": 52.9,
+      "mvp_rank": 125,
+      "wpa": 445.3,
       "consistency": 0.501,
       "clutch_eff": 0.088
     },
@@ -11799,7 +11799,7 @@
       "fg3_pct": 0.0,
       "ft_pct": 91.7,
       "mvp_score": 41.3,
-      "mvp_rank": 226,
+      "mvp_rank": 225,
       "wpa": 2.9,
       "consistency": 0.459,
       "clutch_eff": 0.0
@@ -11821,7 +11821,7 @@
       "fg3_pct": 60.0,
       "ft_pct": 69.2,
       "mvp_score": 49.7,
-      "mvp_rank": 150,
+      "mvp_rank": 149,
       "wpa": 182.6,
       "consistency": 0.663,
       "clutch_eff": 0.0
@@ -11931,7 +11931,7 @@
       "fg3_pct": 25.0,
       "ft_pct": 91.7,
       "mvp_score": 41.5,
-      "mvp_rank": 219,
+      "mvp_rank": 218,
       "wpa": 58.8,
       "consistency": 0.437,
       "clutch_eff": 0.0
@@ -11997,7 +11997,7 @@
       "fg3_pct": 34.9,
       "ft_pct": 76.0,
       "mvp_score": 46.0,
-      "mvp_rank": 176,
+      "mvp_rank": 177,
       "wpa": 399.0,
       "consistency": 0.517,
       "clutch_eff": 0.0
@@ -12041,7 +12041,7 @@
       "fg3_pct": 38.7,
       "ft_pct": 66.7,
       "mvp_score": 46.1,
-      "mvp_rank": 175,
+      "mvp_rank": 176,
       "wpa": 410.0,
       "consistency": 0.502,
       "clutch_eff": 0.111
@@ -12107,7 +12107,7 @@
       "fg3_pct": 25.0,
       "ft_pct": 65.7,
       "mvp_score": 50.2,
-      "mvp_rank": 141,
+      "mvp_rank": 142,
       "wpa": 435.3,
       "consistency": 0.461,
       "clutch_eff": 0.102
@@ -12129,8 +12129,8 @@
       "fg3_pct": 39.1,
       "ft_pct": 80.0,
       "mvp_score": 57.5,
-      "mvp_rank": 96,
-      "wpa": 664.4,
+      "mvp_rank": 94,
+      "wpa": 673.1,
       "consistency": 0.52,
       "clutch_eff": 0.279
     },
@@ -12173,7 +12173,7 @@
       "fg3_pct": 40.0,
       "ft_pct": 71.4,
       "mvp_score": 43.0,
-      "mvp_rank": 200,
+      "mvp_rank": 201,
       "wpa": 354.2,
       "consistency": 0.374,
       "clutch_eff": 0.034
@@ -12194,8 +12194,8 @@
       "fg_pct": 40.1,
       "fg3_pct": 34.9,
       "ft_pct": 80.8,
-      "mvp_score": 50.0,
-      "mvp_rank": 145,
+      "mvp_score": 49.9,
+      "mvp_rank": 146,
       "wpa": 534.4,
       "consistency": 0.424,
       "clutch_eff": 0.394
@@ -12282,9 +12282,9 @@
       "fg_pct": 44.4,
       "fg3_pct": 41.3,
       "ft_pct": 80.7,
-      "mvp_score": 52.3,
-      "mvp_rank": 128,
-      "wpa": 415.4,
+      "mvp_score": 53.0,
+      "mvp_rank": 124,
+      "wpa": 475.2,
       "consistency": 0.534,
       "clutch_eff": 0.271
     },
@@ -12304,7 +12304,7 @@
       "fg_pct": 64.0,
       "fg3_pct": 60.0,
       "ft_pct": 66.0,
-      "mvp_score": 49.0,
+      "mvp_score": 48.9,
       "mvp_rank": 153,
       "wpa": 426.7,
       "consistency": 0.5,
@@ -12370,7 +12370,7 @@
       "fg_pct": 46.6,
       "fg3_pct": 40.9,
       "ft_pct": 87.5,
-      "mvp_score": 50.8,
+      "mvp_score": 50.7,
       "mvp_rank": 134,
       "wpa": 509.0,
       "consistency": 0.502,
@@ -12437,7 +12437,7 @@
       "fg3_pct": 40.0,
       "ft_pct": 67.3,
       "mvp_score": 50.3,
-      "mvp_rank": 140,
+      "mvp_rank": 141,
       "wpa": 461.4,
       "consistency": 0.534,
       "clutch_eff": 0.091
@@ -12458,7 +12458,7 @@
       "fg_pct": 44.0,
       "fg3_pct": 35.4,
       "ft_pct": 79.7,
-      "mvp_score": 48.9,
+      "mvp_score": 48.8,
       "mvp_rank": 154,
       "wpa": 586.4,
       "consistency": 0.511,
@@ -12481,7 +12481,7 @@
       "fg3_pct": 35.0,
       "ft_pct": 66.7,
       "mvp_score": 41.5,
-      "mvp_rank": 218,
+      "mvp_rank": 219,
       "wpa": 327.8,
       "consistency": 0.473,
       "clutch_eff": 0.105
@@ -12502,9 +12502,9 @@
       "fg_pct": 58.4,
       "fg3_pct": 0.0,
       "ft_pct": 41.1,
-      "mvp_score": 50.5,
+      "mvp_score": 50.4,
       "mvp_rank": 138,
-      "wpa": 376.5,
+      "wpa": 377.7,
       "consistency": 0.481,
       "clutch_eff": 0.0
     },
@@ -12546,9 +12546,9 @@
       "fg_pct": 45.2,
       "fg3_pct": 23.5,
       "ft_pct": 62.1,
-      "mvp_score": 49.9,
-      "mvp_rank": 147,
-      "wpa": 404.5,
+      "mvp_score": 50.3,
+      "mvp_rank": 140,
+      "wpa": 449.7,
       "consistency": 0.495,
       "clutch_eff": 0.036
     },
@@ -12590,8 +12590,8 @@
       "fg_pct": 49.3,
       "fg3_pct": 40.0,
       "ft_pct": 80.4,
-      "mvp_score": 50.0,
-      "mvp_rank": 146,
+      "mvp_score": 49.9,
+      "mvp_rank": 147,
       "wpa": 530.1,
       "consistency": 0.523,
       "clutch_eff": 0.244
@@ -12612,9 +12612,9 @@
       "fg_pct": 41.9,
       "fg3_pct": 40.8,
       "ft_pct": 74.6,
-      "mvp_score": 51.7,
+      "mvp_score": 51.9,
       "mvp_rank": 130,
-      "wpa": 516.2,
+      "wpa": 543.3,
       "consistency": 0.507,
       "clutch_eff": 0.063
     },
@@ -12635,7 +12635,7 @@
       "fg3_pct": 30.6,
       "ft_pct": 80.6,
       "mvp_score": 41.8,
-      "mvp_rank": 214,
+      "mvp_rank": 215,
       "wpa": 284.8,
       "consistency": 0.466,
       "clutch_eff": 0.022
@@ -12656,8 +12656,8 @@
       "fg_pct": 43.3,
       "fg3_pct": 25.7,
       "ft_pct": 84.6,
-      "mvp_score": 44.7,
-      "mvp_rank": 186,
+      "mvp_score": 44.6,
+      "mvp_rank": 187,
       "wpa": 332.6,
       "consistency": 0.522,
       "clutch_eff": 0.048
@@ -12678,8 +12678,8 @@
       "fg_pct": 45.2,
       "fg3_pct": 35.1,
       "ft_pct": 86.7,
-      "mvp_score": 54.3,
-      "mvp_rank": 115,
+      "mvp_score": 54.2,
+      "mvp_rank": 116,
       "wpa": 812.0,
       "consistency": 0.448,
       "clutch_eff": 0.181
@@ -12700,8 +12700,8 @@
       "fg_pct": 35.6,
       "fg3_pct": 30.2,
       "ft_pct": 91.4,
-      "mvp_score": 43.1,
-      "mvp_rank": 197,
+      "mvp_score": 43.0,
+      "mvp_rank": 198,
       "wpa": 389.5,
       "consistency": 0.467,
       "clutch_eff": 0.253
@@ -12744,7 +12744,7 @@
       "fg_pct": 54.9,
       "fg3_pct": 0.0,
       "ft_pct": 67.6,
-      "mvp_score": 42.5,
+      "mvp_score": 42.4,
       "mvp_rank": 206,
       "wpa": 226.9,
       "consistency": 0.358,
@@ -12767,7 +12767,7 @@
       "fg3_pct": 42.3,
       "ft_pct": 78.6,
       "mvp_score": 43.1,
-      "mvp_rank": 198,
+      "mvp_rank": 197,
       "wpa": 272.9,
       "consistency": 0.499,
       "clutch_eff": 0.0
@@ -12854,8 +12854,8 @@
       "fg_pct": 46.9,
       "fg3_pct": 53.3,
       "ft_pct": 78.6,
-      "mvp_score": 41.3,
-      "mvp_rank": 222,
+      "mvp_score": 41.4,
+      "mvp_rank": 221,
       "wpa": 40.1,
       "consistency": 0.354,
       "clutch_eff": 0.0
@@ -12877,7 +12877,7 @@
       "fg3_pct": 33.5,
       "ft_pct": 85.0,
       "mvp_score": 46.4,
-      "mvp_rank": 171,
+      "mvp_rank": 172,
       "wpa": 426.7,
       "consistency": 0.43,
       "clutch_eff": 0.06
@@ -12920,8 +12920,8 @@
       "fg_pct": 46.6,
       "fg3_pct": 30.4,
       "ft_pct": 60.4,
-      "mvp_score": 44.2,
-      "mvp_rank": 189,
+      "mvp_score": 44.1,
+      "mvp_rank": 190,
       "wpa": 478.2,
       "consistency": 0.463,
       "clutch_eff": 0.0
@@ -12965,7 +12965,7 @@
       "fg3_pct": 34.1,
       "ft_pct": 86.8,
       "mvp_score": 50.1,
-      "mvp_rank": 143,
+      "mvp_rank": 144,
       "wpa": 372.0,
       "consistency": 0.489,
       "clutch_eff": 0.237
@@ -12986,7 +12986,7 @@
       "fg_pct": 33.3,
       "fg3_pct": 20.0,
       "ft_pct": 0.0,
-      "mvp_score": 38.0,
+      "mvp_score": 38.1,
       "mvp_rank": 257,
       "wpa": 14.6,
       "consistency": 0.549,
@@ -13009,7 +13009,7 @@
       "fg3_pct": 0.0,
       "ft_pct": 40.7,
       "mvp_score": 46.3,
-      "mvp_rank": 174,
+      "mvp_rank": 175,
       "wpa": 245.2,
       "consistency": 0.489,
       "clutch_eff": 0.0
@@ -13075,7 +13075,7 @@
       "fg3_pct": 29.3,
       "ft_pct": 94.7,
       "mvp_score": 41.3,
-      "mvp_rank": 225,
+      "mvp_rank": 226,
       "wpa": 196.4,
       "consistency": 0.406,
       "clutch_eff": 0.17
@@ -13096,7 +13096,7 @@
       "fg_pct": 51.9,
       "fg3_pct": 0.0,
       "ft_pct": 67.1,
-      "mvp_score": 43.2,
+      "mvp_score": 43.1,
       "mvp_rank": 195,
       "wpa": 516.8,
       "consistency": 0.412,
@@ -13118,8 +13118,8 @@
       "fg_pct": 39.9,
       "fg3_pct": 37.4,
       "ft_pct": 89.7,
-      "mvp_score": 45.8,
-      "mvp_rank": 177,
+      "mvp_score": 45.7,
+      "mvp_rank": 178,
       "wpa": 384.1,
       "consistency": 0.442,
       "clutch_eff": 0.324
@@ -13140,7 +13140,7 @@
       "fg_pct": 46.5,
       "fg3_pct": 40.8,
       "ft_pct": 86.7,
-      "mvp_score": 48.3,
+      "mvp_score": 48.2,
       "mvp_rank": 158,
       "wpa": 417.9,
       "consistency": 0.518,
@@ -13163,7 +13163,7 @@
       "fg3_pct": 35.0,
       "ft_pct": 85.7,
       "mvp_score": 40.5,
-      "mvp_rank": 235,
+      "mvp_rank": 236,
       "wpa": 188.0,
       "consistency": 0.492,
       "clutch_eff": 0.06
@@ -13184,9 +13184,9 @@
       "fg_pct": 63.2,
       "fg3_pct": 0.0,
       "ft_pct": 68.3,
-      "mvp_score": 45.5,
-      "mvp_rank": 180,
-      "wpa": 230.4,
+      "mvp_score": 46.4,
+      "mvp_rank": 173,
+      "wpa": 311.4,
       "consistency": 0.445,
       "clutch_eff": 0.086
     },
@@ -13251,7 +13251,7 @@
       "fg3_pct": 32.9,
       "ft_pct": 88.5,
       "mvp_score": 45.4,
-      "mvp_rank": 181,
+      "mvp_rank": 182,
       "wpa": 354.4,
       "consistency": 0.379,
       "clutch_eff": 0.104
@@ -13273,7 +13273,7 @@
       "fg3_pct": 25.6,
       "ft_pct": 70.8,
       "mvp_score": 45.5,
-      "mvp_rank": 179,
+      "mvp_rank": 181,
       "wpa": 485.9,
       "consistency": 0.394,
       "clutch_eff": 0.188
@@ -13317,7 +13317,7 @@
       "fg3_pct": 38.0,
       "ft_pct": 88.9,
       "mvp_score": 44.7,
-      "mvp_rank": 185,
+      "mvp_rank": 186,
       "wpa": 301.7,
       "consistency": 0.457,
       "clutch_eff": 0.027
@@ -13383,7 +13383,7 @@
       "fg3_pct": 25.9,
       "ft_pct": 56.2,
       "mvp_score": 41.3,
-      "mvp_rank": 223,
+      "mvp_rank": 222,
       "wpa": 219.9,
       "consistency": 0.522,
       "clutch_eff": 0.056
@@ -13404,9 +13404,9 @@
       "fg_pct": 42.9,
       "fg3_pct": 38.1,
       "ft_pct": 71.4,
-      "mvp_score": 45.4,
-      "mvp_rank": 182,
-      "wpa": 320.0,
+      "mvp_score": 45.5,
+      "mvp_rank": 180,
+      "wpa": 325.5,
       "consistency": 0.415,
       "clutch_eff": 0.0
     },
@@ -13449,7 +13449,7 @@
       "fg3_pct": 38.2,
       "ft_pct": 86.4,
       "mvp_score": 40.8,
-      "mvp_rank": 229,
+      "mvp_rank": 230,
       "wpa": 231.8,
       "consistency": 0.423,
       "clutch_eff": 0.0
@@ -13493,7 +13493,7 @@
       "fg3_pct": 45.2,
       "ft_pct": 100.0,
       "mvp_score": 44.1,
-      "mvp_rank": 190,
+      "mvp_rank": 189,
       "wpa": 218.6,
       "consistency": 0.412,
       "clutch_eff": 0.093
@@ -13514,9 +13514,9 @@
       "fg_pct": 63.4,
       "fg3_pct": 0.0,
       "ft_pct": 88.9,
-      "mvp_score": 44.6,
-      "mvp_rank": 187,
-      "wpa": 115.4,
+      "mvp_score": 44.8,
+      "mvp_rank": 185,
+      "wpa": 131.3,
       "consistency": 0.475,
       "clutch_eff": 0.0
     },
@@ -13536,7 +13536,7 @@
       "fg_pct": 47.8,
       "fg3_pct": 42.1,
       "ft_pct": 75.0,
-      "mvp_score": 43.1,
+      "mvp_score": 43.0,
       "mvp_rank": 199,
       "wpa": 364.3,
       "consistency": 0.491,
@@ -13668,7 +13668,7 @@
       "fg_pct": 36.6,
       "fg3_pct": 29.7,
       "ft_pct": 73.3,
-      "mvp_score": 48.4,
+      "mvp_score": 48.3,
       "mvp_rank": 157,
       "wpa": 417.1,
       "consistency": 0.45,
@@ -13690,7 +13690,7 @@
       "fg_pct": 38.5,
       "fg3_pct": 39.8,
       "ft_pct": 75.0,
-      "mvp_score": 41.7,
+      "mvp_score": 41.6,
       "mvp_rank": 217,
       "wpa": 323.5,
       "consistency": 0.473,
@@ -13735,7 +13735,7 @@
       "fg3_pct": 29.5,
       "ft_pct": 75.6,
       "mvp_score": 41.3,
-      "mvp_rank": 221,
+      "mvp_rank": 223,
       "wpa": 520.3,
       "consistency": 0.348,
       "clutch_eff": 0.092
@@ -13800,8 +13800,8 @@
       "fg_pct": 41.4,
       "fg3_pct": 32.8,
       "ft_pct": 72.2,
-      "mvp_score": 36.6,
-      "mvp_rank": 269,
+      "mvp_score": 36.5,
+      "mvp_rank": 270,
       "wpa": 279.5,
       "consistency": 0.437,
       "clutch_eff": 0.047
@@ -13933,7 +13933,7 @@
       "fg3_pct": 46.6,
       "ft_pct": 80.0,
       "mvp_score": 45.7,
-      "mvp_rank": 178,
+      "mvp_rank": 179,
       "wpa": 311.8,
       "consistency": 0.491,
       "clutch_eff": 0.0
@@ -13977,8 +13977,8 @@
       "fg3_pct": 29.7,
       "ft_pct": 93.3,
       "mvp_score": 40.8,
-      "mvp_rank": 230,
-      "wpa": 200.0,
+      "mvp_rank": 229,
+      "wpa": 203.1,
       "consistency": 0.329,
       "clutch_eff": 0.0
     },
@@ -14131,7 +14131,7 @@
       "fg3_pct": 29.1,
       "ft_pct": 76.5,
       "mvp_score": 40.5,
-      "mvp_rank": 236,
+      "mvp_rank": 235,
       "wpa": 163.4,
       "consistency": 0.428,
       "clutch_eff": 0.0
@@ -14152,7 +14152,7 @@
       "fg_pct": 41.4,
       "fg3_pct": 50.0,
       "ft_pct": 80.0,
-      "mvp_score": 38.7,
+      "mvp_score": 38.8,
       "mvp_rank": 249,
       "wpa": 90.4,
       "consistency": 0.275,
@@ -14241,7 +14241,7 @@
       "fg3_pct": 33.8,
       "ft_pct": 76.9,
       "mvp_score": 43.0,
-      "mvp_rank": 201,
+      "mvp_rank": 200,
       "wpa": 249.2,
       "consistency": 0.39,
       "clutch_eff": 0.014
@@ -14262,9 +14262,9 @@
       "fg_pct": 35.0,
       "fg3_pct": 32.1,
       "ft_pct": 100.0,
-      "mvp_score": 35.7,
-      "mvp_rank": 279,
-      "wpa": 28.9,
+      "mvp_score": 35.8,
+      "mvp_rank": 275,
+      "wpa": 43.7,
       "consistency": 0.185,
       "clutch_eff": 0.0
     },
@@ -14285,7 +14285,7 @@
       "fg3_pct": 30.0,
       "ft_pct": 100.0,
       "mvp_score": 37.0,
-      "mvp_rank": 264,
+      "mvp_rank": 266,
       "wpa": 196.4,
       "consistency": 0.318,
       "clutch_eff": 0.013
@@ -14351,7 +14351,7 @@
       "fg3_pct": 34.9,
       "ft_pct": 75.0,
       "mvp_score": 37.1,
-      "mvp_rank": 260,
+      "mvp_rank": 261,
       "wpa": 158.5,
       "consistency": 0.29,
       "clutch_eff": 0.13
@@ -14372,7 +14372,7 @@
       "fg_pct": 38.6,
       "fg3_pct": 35.0,
       "ft_pct": 84.2,
-      "mvp_score": 39.5,
+      "mvp_score": 39.6,
       "mvp_rank": 245,
       "wpa": 108.8,
       "consistency": 0.297,
@@ -14461,7 +14461,7 @@
       "fg3_pct": 31.8,
       "ft_pct": 28.6,
       "mvp_score": 41.8,
-      "mvp_rank": 215,
+      "mvp_rank": 214,
       "wpa": 162.9,
       "consistency": 0.409,
       "clutch_eff": 0.0
@@ -14504,7 +14504,7 @@
       "fg_pct": 58.3,
       "fg3_pct": 0.0,
       "ft_pct": 50.0,
-      "mvp_score": 38.1,
+      "mvp_score": 38.2,
       "mvp_rank": 255,
       "wpa": 19.9,
       "consistency": 0.233,
@@ -14570,7 +14570,7 @@
       "fg_pct": 61.5,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 33.9,
+      "mvp_score": 34.0,
       "mvp_rank": 297,
       "wpa": 37.7,
       "consistency": 0.354,
@@ -14658,8 +14658,8 @@
       "fg_pct": 53.3,
       "fg3_pct": 60.0,
       "ft_pct": 100.0,
-      "mvp_score": 35.7,
-      "mvp_rank": 276,
+      "mvp_score": 35.8,
+      "mvp_rank": 277,
       "wpa": 23.0,
       "consistency": 0.234,
       "clutch_eff": 0.0
@@ -14724,7 +14724,7 @@
       "fg_pct": 34.9,
       "fg3_pct": 17.2,
       "ft_pct": 100.0,
-      "mvp_score": 34.2,
+      "mvp_score": 34.3,
       "mvp_rank": 293,
       "wpa": 66.7,
       "consistency": 0.341,
@@ -14769,7 +14769,7 @@
       "fg3_pct": 32.0,
       "ft_pct": 0.0,
       "mvp_score": 36.5,
-      "mvp_rank": 270,
+      "mvp_rank": 269,
       "wpa": 90.4,
       "consistency": 0.287,
       "clutch_eff": 0.0
@@ -14812,7 +14812,7 @@
       "fg_pct": 37.5,
       "fg3_pct": 0.0,
       "ft_pct": 75.0,
-      "mvp_score": 32.8,
+      "mvp_score": 32.9,
       "mvp_rank": 304,
       "wpa": 29.4,
       "consistency": 0.225,
@@ -14856,7 +14856,7 @@
       "fg_pct": 40.0,
       "fg3_pct": 31.2,
       "ft_pct": 81.2,
-      "mvp_score": 37.5,
+      "mvp_score": 37.6,
       "mvp_rank": 258,
       "wpa": 84.3,
       "consistency": 0.253,
@@ -14878,7 +14878,7 @@
       "fg_pct": 17.6,
       "fg3_pct": 0.0,
       "ft_pct": 58.3,
-      "mvp_score": 38.4,
+      "mvp_score": 38.5,
       "mvp_rank": 252,
       "wpa": 24.1,
       "consistency": 0.242,
@@ -14967,7 +14967,7 @@
       "fg3_pct": 32.0,
       "ft_pct": 50.0,
       "mvp_score": 35.7,
-      "mvp_rank": 278,
+      "mvp_rank": 279,
       "wpa": 19.2,
       "consistency": 0.138,
       "clutch_eff": 0.0
@@ -15142,7 +15142,7 @@
       "fg_pct": 46.7,
       "fg3_pct": 33.3,
       "ft_pct": 50.0,
-      "mvp_score": 35.3,
+      "mvp_score": 35.4,
       "mvp_rank": 284,
       "wpa": -0.1,
       "consistency": 0.114,
@@ -15209,7 +15209,7 @@
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
       "mvp_score": 35.7,
-      "mvp_rank": 277,
+      "mvp_rank": 278,
       "wpa": 2.8,
       "consistency": 0.216,
       "clutch_eff": 0.0
@@ -15362,7 +15362,7 @@
       "fg_pct": 0.0,
       "fg3_pct": 0.0,
       "ft_pct": 50.0,
-      "mvp_score": 30.2,
+      "mvp_score": 30.3,
       "mvp_rank": 315,
       "wpa": 0.0,
       "consistency": 0.137,
@@ -15406,7 +15406,7 @@
       "fg_pct": 21.4,
       "fg3_pct": 12.5,
       "ft_pct": 0.0,
-      "mvp_score": 27.7,
+      "mvp_score": 27.8,
       "mvp_rank": 320,
       "wpa": 11.6,
       "consistency": 0.037,
@@ -15472,7 +15472,7 @@
       "fg_pct": 33.3,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 27.5,
+      "mvp_score": 27.6,
       "mvp_rank": 321,
       "wpa": 2.6,
       "consistency": 0.051,
@@ -15589,18 +15589,6 @@
       "RAPM_Rank": 9
     },
     {
-      "player": "DORSEY, TYLER",
-      "team": "OLY",
-      "RAPM": 1.33,
-      "ORAPM": 0.95,
-      "DRAPM": 0.64,
-      "RAPM_basic": 0.97,
-      "prior": 0.46,
-      "est_minutes": 1848.0,
-      "possessions": 3235.0,
-      "RAPM_Rank": 10
-    },
-    {
       "player": "SMITS, ROLANDS",
       "team": "IST",
       "RAPM": 1.33,
@@ -15610,6 +15598,18 @@
       "prior": 0.02,
       "est_minutes": 1178.0,
       "possessions": 2062.0,
+      "RAPM_Rank": 10
+    },
+    {
+      "player": "DORSEY, TYLER",
+      "team": "OLY",
+      "RAPM": 1.33,
+      "ORAPM": 0.95,
+      "DRAPM": 0.64,
+      "RAPM_basic": 0.97,
+      "prior": 0.46,
+      "est_minutes": 1848.0,
+      "possessions": 3235.0,
       "RAPM_Rank": 11
     },
     {
@@ -15769,18 +15769,6 @@
       "RAPM_Rank": 24
     },
     {
-      "player": "EBOUA, PAUL",
-      "team": "ASV",
-      "RAPM": 1.12,
-      "ORAPM": 0.5,
-      "DRAPM": 0.52,
-      "RAPM_basic": 1.03,
-      "prior": 0.09,
-      "est_minutes": 491.0,
-      "possessions": 859.0,
-      "RAPM_Rank": 25
-    },
-    {
       "player": "FORREST, TRENT",
       "team": "BAS",
       "RAPM": 1.12,
@@ -15790,6 +15778,18 @@
       "prior": 0.21,
       "est_minutes": 1199.0,
       "possessions": 2099.0,
+      "RAPM_Rank": 25
+    },
+    {
+      "player": "EBOUA, PAUL",
+      "team": "ASV",
+      "RAPM": 1.12,
+      "ORAPM": 0.5,
+      "DRAPM": 0.52,
+      "RAPM_basic": 1.03,
+      "prior": 0.09,
+      "est_minutes": 491.0,
+      "possessions": 859.0,
       "RAPM_Rank": 26
     },
     {
@@ -15841,18 +15841,6 @@
       "RAPM_Rank": 30
     },
     {
-      "player": "FOURNIER, EVAN",
-      "team": "OLY",
-      "RAPM": 1.0,
-      "ORAPM": 1.07,
-      "DRAPM": 0.16,
-      "RAPM_basic": 0.71,
-      "prior": 0.33,
-      "est_minutes": 1407.0,
-      "possessions": 2462.0,
-      "RAPM_Rank": 31
-    },
-    {
       "player": "PAYNE, CAMERON",
       "team": "PAR",
       "RAPM": 1.0,
@@ -15862,19 +15850,19 @@
       "prior": 0.34,
       "est_minutes": 497.0,
       "possessions": 869.0,
-      "RAPM_Rank": 32
+      "RAPM_Rank": 31
     },
     {
-      "player": "BROOKS, ARMONI",
-      "team": "MIL",
-      "RAPM": 0.97,
-      "ORAPM": 0.97,
-      "DRAPM": 0.18,
-      "RAPM_basic": 0.62,
-      "prior": 0.4,
-      "est_minutes": 1521.0,
-      "possessions": 2662.0,
-      "RAPM_Rank": 33
+      "player": "FOURNIER, EVAN",
+      "team": "OLY",
+      "RAPM": 1.0,
+      "ORAPM": 1.07,
+      "DRAPM": 0.16,
+      "RAPM_basic": 0.71,
+      "prior": 0.33,
+      "est_minutes": 1407.0,
+      "possessions": 2462.0,
+      "RAPM_Rank": 32
     },
     {
       "player": "AVRAMOVIC, ALEKSA",
@@ -15886,6 +15874,18 @@
       "prior": 0.37,
       "est_minutes": 680.0,
       "possessions": 1190.0,
+      "RAPM_Rank": 33
+    },
+    {
+      "player": "BROOKS, ARMONI",
+      "team": "MIL",
+      "RAPM": 0.97,
+      "ORAPM": 0.97,
+      "DRAPM": 0.18,
+      "RAPM_basic": 0.62,
+      "prior": 0.4,
+      "est_minutes": 1521.0,
+      "possessions": 2662.0,
       "RAPM_Rank": 34
     },
     {
@@ -15949,18 +15949,6 @@
       "RAPM_Rank": 39
     },
     {
-      "player": "JONES, TYRIQUE",
-      "team": "OLY",
-      "RAPM": 0.88,
-      "ORAPM": 0.68,
-      "DRAPM": 0.3,
-      "RAPM_basic": 0.71,
-      "prior": 0.18,
-      "est_minutes": 1231.0,
-      "possessions": 2155.0,
-      "RAPM_Rank": 40
-    },
-    {
       "player": "MALEDON, THEO",
       "team": "MAD",
       "RAPM": 0.88,
@@ -15970,6 +15958,18 @@
       "prior": 0.34,
       "est_minutes": 1058.0,
       "possessions": 1852.0,
+      "RAPM_Rank": 40
+    },
+    {
+      "player": "JONES, TYRIQUE",
+      "team": "OLY",
+      "RAPM": 0.88,
+      "ORAPM": 0.68,
+      "DRAPM": 0.3,
+      "RAPM_basic": 0.71,
+      "prior": 0.18,
+      "est_minutes": 1231.0,
+      "possessions": 2155.0,
       "RAPM_Rank": 41
     },
     {
@@ -16165,18 +16165,6 @@
       "RAPM_Rank": 57
     },
     {
-      "player": "VAUTIER, BASTIEN",
-      "team": "ASV",
-      "RAPM": 0.67,
-      "ORAPM": -0.16,
-      "DRAPM": 0.64,
-      "RAPM_basic": 0.52,
-      "prior": 0.15,
-      "est_minutes": 973.0,
-      "possessions": 1703.0,
-      "RAPM_Rank": 58
-    },
-    {
       "player": "PUERTO, JOSEP",
       "team": "PAM",
       "RAPM": 0.67,
@@ -16186,6 +16174,18 @@
       "prior": 0.0,
       "est_minutes": 1031.0,
       "possessions": 1804.0,
+      "RAPM_Rank": 58
+    },
+    {
+      "player": "VAUTIER, BASTIEN",
+      "team": "ASV",
+      "RAPM": 0.67,
+      "ORAPM": -0.16,
+      "DRAPM": 0.64,
+      "RAPM_basic": 0.52,
+      "prior": 0.15,
+      "est_minutes": 973.0,
+      "possessions": 1703.0,
       "RAPM_Rank": 59
     },
     {
@@ -16345,18 +16345,6 @@
       "RAPM_Rank": 72
     },
     {
-      "player": "MOORE, OMARI",
-      "team": "PAM",
-      "RAPM": 0.52,
-      "ORAPM": -0.86,
-      "DRAPM": 1.07,
-      "RAPM_basic": 0.33,
-      "prior": 0.2,
-      "est_minutes": 1402.0,
-      "possessions": 2454.0,
-      "RAPM_Rank": 73
-    },
-    {
       "player": "SHENGELIA, TORNIKE",
       "team": "BAR",
       "RAPM": 0.52,
@@ -16366,6 +16354,18 @@
       "prior": 0.26,
       "est_minutes": 1418.0,
       "possessions": 2482.0,
+      "RAPM_Rank": 73
+    },
+    {
+      "player": "MOORE, OMARI",
+      "team": "PAM",
+      "RAPM": 0.52,
+      "ORAPM": -0.86,
+      "DRAPM": 1.07,
+      "RAPM_basic": 0.33,
+      "prior": 0.2,
+      "est_minutes": 1402.0,
+      "possessions": 2454.0,
       "RAPM_Rank": 74
     },
     {
@@ -16441,18 +16441,6 @@
       "RAPM_Rank": 80
     },
     {
-      "player": "DOBRIC, OGNJEN",
-      "team": "RED",
-      "RAPM": 0.46,
-      "ORAPM": 0.35,
-      "DRAPM": 0.2,
-      "RAPM_basic": 0.35,
-      "prior": 0.09,
-      "est_minutes": 549.0,
-      "possessions": 961.0,
-      "RAPM_Rank": 81
-    },
-    {
       "player": "LEDAY, ZACH",
       "team": "MIL",
       "RAPM": 0.46,
@@ -16462,19 +16450,19 @@
       "prior": 0.29,
       "est_minutes": 1408.0,
       "possessions": 2464.0,
-      "RAPM_Rank": 82
+      "RAPM_Rank": 81
     },
     {
-      "player": "BIRCH, KHEM",
-      "team": "ULK",
-      "RAPM": 0.45,
-      "ORAPM": -0.33,
-      "DRAPM": 0.67,
-      "RAPM_basic": 0.56,
-      "prior": -0.16,
-      "est_minutes": 1157.0,
-      "possessions": 2025.0,
-      "RAPM_Rank": 83
+      "player": "DOBRIC, OGNJEN",
+      "team": "RED",
+      "RAPM": 0.46,
+      "ORAPM": 0.35,
+      "DRAPM": 0.2,
+      "RAPM_basic": 0.35,
+      "prior": 0.09,
+      "est_minutes": 549.0,
+      "possessions": 961.0,
+      "RAPM_Rank": 82
     },
     {
       "player": "PARRA, JOEL",
@@ -16486,6 +16474,18 @@
       "prior": -0.05,
       "est_minutes": 1403.0,
       "possessions": 2455.0,
+      "RAPM_Rank": 83
+    },
+    {
+      "player": "BIRCH, KHEM",
+      "team": "ULK",
+      "RAPM": 0.45,
+      "ORAPM": -0.33,
+      "DRAPM": 0.67,
+      "RAPM_basic": 0.56,
+      "prior": -0.16,
+      "est_minutes": 1157.0,
+      "possessions": 2025.0,
       "RAPM_Rank": 84
     },
     {
@@ -16525,18 +16525,6 @@
       "RAPM_Rank": 87
     },
     {
-      "player": "CLARK III, JIMMY",
-      "team": "TEL",
-      "RAPM": 0.42,
-      "ORAPM": 0.98,
-      "DRAPM": -0.25,
-      "RAPM_basic": 0.15,
-      "prior": 0.3,
-      "est_minutes": 1380.0,
-      "possessions": 2415.0,
-      "RAPM_Rank": 88
-    },
-    {
       "player": "BRIZUELA, DARIO",
       "team": "BAR",
       "RAPM": 0.42,
@@ -16546,6 +16534,18 @@
       "prior": 0.4,
       "est_minutes": 1023.0,
       "possessions": 1790.0,
+      "RAPM_Rank": 88
+    },
+    {
+      "player": "CLARK III, JIMMY",
+      "team": "TEL",
+      "RAPM": 0.42,
+      "ORAPM": 0.98,
+      "DRAPM": -0.25,
+      "RAPM_basic": 0.15,
+      "prior": 0.3,
+      "est_minutes": 1380.0,
+      "possessions": 2415.0,
       "RAPM_Rank": 89
     },
     {
@@ -16681,18 +16681,6 @@
       "RAPM_Rank": 100
     },
     {
-      "player": "DECK, GABRIEL",
-      "team": "MAD",
-      "RAPM": 0.32,
-      "ORAPM": -0.27,
-      "DRAPM": 0.51,
-      "RAPM_basic": 0.29,
-      "prior": 0.03,
-      "est_minutes": 1363.0,
-      "possessions": 2385.0,
-      "RAPM_Rank": 101
-    },
-    {
       "player": "SLEVA, DUSTIN",
       "team": "ZAL",
       "RAPM": 0.32,
@@ -16702,6 +16690,18 @@
       "prior": 0.05,
       "est_minutes": 1296.0,
       "possessions": 2269.0,
+      "RAPM_Rank": 101
+    },
+    {
+      "player": "DECK, GABRIEL",
+      "team": "MAD",
+      "RAPM": 0.32,
+      "ORAPM": -0.27,
+      "DRAPM": 0.51,
+      "RAPM_basic": 0.29,
+      "prior": 0.03,
+      "est_minutes": 1363.0,
+      "possessions": 2385.0,
       "RAPM_Rank": 102
     },
     {
@@ -16729,6 +16729,18 @@
       "RAPM_Rank": 104
     },
     {
+      "player": "LLULL, SERGIO",
+      "team": "MAD",
+      "RAPM": 0.28,
+      "ORAPM": 0.11,
+      "DRAPM": 0.12,
+      "RAPM_basic": 0.32,
+      "prior": -0.02,
+      "est_minutes": 761.0,
+      "possessions": 1331.0,
+      "RAPM_Rank": 105
+    },
+    {
       "player": "SEDEKERSKIS, TADAS",
       "team": "BAS",
       "RAPM": 0.28,
@@ -16738,7 +16750,7 @@
       "prior": 0.03,
       "est_minutes": 619.0,
       "possessions": 1083.0,
-      "RAPM_Rank": 105
+      "RAPM_Rank": 106
     },
     {
       "player": "PUNTER, KEVIN",
@@ -16750,18 +16762,6 @@
       "prior": 0.32,
       "est_minutes": 1813.0,
       "possessions": 3173.0,
-      "RAPM_Rank": 106
-    },
-    {
-      "player": "LLULL, SERGIO",
-      "team": "MAD",
-      "RAPM": 0.28,
-      "ORAPM": 0.11,
-      "DRAPM": 0.12,
-      "RAPM_basic": 0.32,
-      "prior": -0.02,
-      "est_minutes": 761.0,
-      "possessions": 1331.0,
       "RAPM_Rank": 107
     },
     {
@@ -16801,18 +16801,6 @@
       "RAPM_Rank": 110
     },
     {
-      "player": "FAYE, MOUHAMED",
-      "team": "PRS",
-      "RAPM": 0.24,
-      "ORAPM": 0.06,
-      "DRAPM": 0.03,
-      "RAPM_basic": 0.36,
-      "prior": -0.11,
-      "est_minutes": 1293.0,
-      "possessions": 2262.0,
-      "RAPM_Rank": 111
-    },
-    {
       "player": "GIFFEY, NIELS",
       "team": "MUN",
       "RAPM": 0.24,
@@ -16822,7 +16810,7 @@
       "prior": 0.01,
       "est_minutes": 774.0,
       "possessions": 1354.0,
-      "RAPM_Rank": 112
+      "RAPM_Rank": 111
     },
     {
       "player": "LEAF, TJ",
@@ -16834,7 +16822,7 @@
       "prior": 0.26,
       "est_minutes": 903.0,
       "possessions": 1580.0,
-      "RAPM_Rank": 113
+      "RAPM_Rank": 112
     },
     {
       "player": "MALCOLM, COLLIN",
@@ -16846,6 +16834,18 @@
       "prior": -0.09,
       "est_minutes": 1685.0,
       "possessions": 2949.0,
+      "RAPM_Rank": 113
+    },
+    {
+      "player": "FAYE, MOUHAMED",
+      "team": "PRS",
+      "RAPM": 0.24,
+      "ORAPM": 0.06,
+      "DRAPM": 0.03,
+      "RAPM_basic": 0.36,
+      "prior": -0.11,
+      "est_minutes": 1293.0,
+      "possessions": 2262.0,
       "RAPM_Rank": 114
     },
     {
@@ -16861,18 +16861,6 @@
       "RAPM_Rank": 115
     },
     {
-      "player": "MONEKE, CHIMA",
-      "team": "RED",
-      "RAPM": 0.22,
-      "ORAPM": 0.36,
-      "DRAPM": -0.04,
-      "RAPM_basic": 0.0,
-      "prior": 0.27,
-      "est_minutes": 1762.0,
-      "possessions": 3083.0,
-      "RAPM_Rank": 116
-    },
-    {
       "player": "KALAITZAKIS, PANAGIOTIS",
       "team": "PAN",
       "RAPM": 0.22,
@@ -16882,6 +16870,18 @@
       "prior": -0.21,
       "est_minutes": 388.0,
       "possessions": 679.0,
+      "RAPM_Rank": 116
+    },
+    {
+      "player": "MONEKE, CHIMA",
+      "team": "RED",
+      "RAPM": 0.22,
+      "ORAPM": 0.36,
+      "DRAPM": -0.04,
+      "RAPM_basic": 0.0,
+      "prior": 0.27,
+      "est_minutes": 1762.0,
+      "possessions": 3083.0,
       "RAPM_Rank": 117
     },
     {
@@ -16909,18 +16909,6 @@
       "RAPM_Rank": 119
     },
     {
-      "player": "BLAKENEY, ANTONIO",
-      "team": "HTA",
-      "RAPM": 0.2,
-      "ORAPM": -0.07,
-      "DRAPM": 0.33,
-      "RAPM_basic": -0.1,
-      "prior": 0.37,
-      "est_minutes": 1476.0,
-      "possessions": 2583.0,
-      "RAPM_Rank": 120
-    },
-    {
       "player": "BOLMARO, LEANDRO",
       "team": "MIL",
       "RAPM": 0.2,
@@ -16930,6 +16918,18 @@
       "prior": 0.18,
       "est_minutes": 1220.0,
       "possessions": 2135.0,
+      "RAPM_Rank": 120
+    },
+    {
+      "player": "BLAKENEY, ANTONIO",
+      "team": "HTA",
+      "RAPM": 0.2,
+      "ORAPM": -0.07,
+      "DRAPM": 0.33,
+      "RAPM_basic": -0.1,
+      "prior": 0.37,
+      "est_minutes": 1476.0,
+      "possessions": 2583.0,
       "RAPM_Rank": 121
     },
     {
@@ -16969,18 +16969,6 @@
       "RAPM_Rank": 124
     },
     {
-      "player": "HOMMES, DAULTON",
-      "team": "PRS",
-      "RAPM": 0.14,
-      "ORAPM": 0.41,
-      "DRAPM": -0.36,
-      "RAPM_basic": 0.11,
-      "prior": 0.03,
-      "est_minutes": 559.0,
-      "possessions": 978.0,
-      "RAPM_Rank": 125
-    },
-    {
       "player": "LARKIN, SHANE",
       "team": "IST",
       "RAPM": 0.14,
@@ -16990,6 +16978,18 @@
       "prior": 0.28,
       "est_minutes": 694.0,
       "possessions": 1215.0,
+      "RAPM_Rank": 125
+    },
+    {
+      "player": "HOMMES, DAULTON",
+      "team": "PRS",
+      "RAPM": 0.14,
+      "ORAPM": 0.41,
+      "DRAPM": -0.36,
+      "RAPM_basic": 0.11,
+      "prior": 0.03,
+      "est_minutes": 559.0,
+      "possessions": 978.0,
       "RAPM_Rank": 126
     },
     {
@@ -17005,15 +17005,15 @@
       "RAPM_Rank": 127
     },
     {
-      "player": "TAYLOR, BRANDON",
-      "team": "VIR",
+      "player": "DESSERT, BRICE",
+      "team": "IST",
       "RAPM": 0.13,
-      "ORAPM": -0.22,
-      "DRAPM": 0.4,
-      "RAPM_basic": 0.07,
-      "prior": 0.06,
-      "est_minutes": 215.0,
-      "possessions": 376.0,
+      "ORAPM": -0.31,
+      "DRAPM": 0.54,
+      "RAPM_basic": 0.02,
+      "prior": 0.1,
+      "est_minutes": 343.0,
+      "possessions": 600.0,
       "RAPM_Rank": 128
     },
     {
@@ -17029,15 +17029,15 @@
       "RAPM_Rank": 129
     },
     {
-      "player": "DESSERT, BRICE",
-      "team": "IST",
+      "player": "TAYLOR, BRANDON",
+      "team": "VIR",
       "RAPM": 0.13,
-      "ORAPM": -0.31,
-      "DRAPM": 0.54,
-      "RAPM_basic": 0.02,
-      "prior": 0.1,
-      "est_minutes": 343.0,
-      "possessions": 600.0,
+      "ORAPM": -0.22,
+      "DRAPM": 0.4,
+      "RAPM_basic": 0.07,
+      "prior": 0.06,
+      "est_minutes": 215.0,
+      "possessions": 376.0,
       "RAPM_Rank": 130
     },
     {
@@ -17065,18 +17065,6 @@
       "RAPM_Rank": 132
     },
     {
-      "player": "BACOT JR., ARMANDO",
-      "team": "ULK",
-      "RAPM": 0.09,
-      "ORAPM": -0.12,
-      "DRAPM": 0.2,
-      "RAPM_basic": 0.23,
-      "prior": -0.16,
-      "est_minutes": 486.0,
-      "possessions": 850.0,
-      "RAPM_Rank": 133
-    },
-    {
       "player": "RUBSTAVICIUS, MANTAS",
       "team": "ZAL",
       "RAPM": 0.09,
@@ -17086,31 +17074,19 @@
       "prior": 0.14,
       "est_minutes": 237.0,
       "possessions": 414.0,
+      "RAPM_Rank": 133
+    },
+    {
+      "player": "BACOT JR., ARMANDO",
+      "team": "ULK",
+      "RAPM": 0.09,
+      "ORAPM": -0.12,
+      "DRAPM": 0.2,
+      "RAPM_basic": 0.23,
+      "prior": -0.16,
+      "est_minutes": 486.0,
+      "possessions": 850.0,
       "RAPM_Rank": 134
-    },
-    {
-      "player": "CAMPAZZO, FACUNDO",
-      "team": "MAD",
-      "RAPM": 0.08,
-      "ORAPM": -0.64,
-      "DRAPM": 0.62,
-      "RAPM_basic": -0.19,
-      "prior": 0.3,
-      "est_minutes": 1683.0,
-      "possessions": 2945.0,
-      "RAPM_Rank": 135
-    },
-    {
-      "player": "DIALLO, ALPHA",
-      "team": "MCO",
-      "RAPM": 0.08,
-      "ORAPM": 0.13,
-      "DRAPM": -0.29,
-      "RAPM_basic": -0.02,
-      "prior": 0.14,
-      "est_minutes": 2040.0,
-      "possessions": 3570.0,
-      "RAPM_Rank": 136
     },
     {
       "player": "SIRVYDIS, DEIVIDAS",
@@ -17122,19 +17098,31 @@
       "prior": 0.03,
       "est_minutes": 568.0,
       "possessions": 995.0,
-      "RAPM_Rank": 137
+      "RAPM_Rank": 135
     },
     {
-      "player": "OUATTARA, YAKUBA",
-      "team": "PRS",
-      "RAPM": 0.07,
-      "ORAPM": -0.29,
-      "DRAPM": 0.23,
-      "RAPM_basic": 0.02,
-      "prior": 0.04,
-      "est_minutes": 1141.0,
-      "possessions": 1997.0,
-      "RAPM_Rank": 138
+      "player": "CAMPAZZO, FACUNDO",
+      "team": "MAD",
+      "RAPM": 0.08,
+      "ORAPM": -0.64,
+      "DRAPM": 0.62,
+      "RAPM_basic": -0.19,
+      "prior": 0.3,
+      "est_minutes": 1683.0,
+      "possessions": 2945.0,
+      "RAPM_Rank": 136
+    },
+    {
+      "player": "DIALLO, ALPHA",
+      "team": "MCO",
+      "RAPM": 0.08,
+      "ORAPM": 0.13,
+      "DRAPM": -0.29,
+      "RAPM_basic": -0.02,
+      "prior": 0.14,
+      "est_minutes": 2040.0,
+      "possessions": 3570.0,
+      "RAPM_Rank": 137
     },
     {
       "player": "NUNN, KENDRICK",
@@ -17146,6 +17134,18 @@
       "prior": 0.46,
       "est_minutes": 1572.0,
       "possessions": 2752.0,
+      "RAPM_Rank": 138
+    },
+    {
+      "player": "OUATTARA, YAKUBA",
+      "team": "PRS",
+      "RAPM": 0.07,
+      "ORAPM": -0.29,
+      "DRAPM": 0.23,
+      "RAPM_basic": 0.02,
+      "prior": 0.04,
+      "est_minutes": 1141.0,
+      "possessions": 1997.0,
       "RAPM_Rank": 139
     },
     {
@@ -17161,6 +17161,18 @@
       "RAPM_Rank": 140
     },
     {
+      "player": "WEILER-BABB, NICK",
+      "team": "IST",
+      "RAPM": 0.05,
+      "ORAPM": -0.05,
+      "DRAPM": 0.51,
+      "RAPM_basic": 0.03,
+      "prior": -0.06,
+      "est_minutes": 1971.0,
+      "possessions": 3449.0,
+      "RAPM_Rank": 141
+    },
+    {
       "player": "MCKISSIC, SHAQUIELLE",
       "team": "OLY",
       "RAPM": 0.05,
@@ -17170,7 +17182,7 @@
       "prior": 0.06,
       "est_minutes": 445.0,
       "possessions": 779.0,
-      "RAPM_Rank": 141
+      "RAPM_Rank": 142
     },
     {
       "player": "JONES, KAI",
@@ -17182,18 +17194,6 @@
       "prior": -0.09,
       "est_minutes": 976.0,
       "possessions": 1709.0,
-      "RAPM_Rank": 142
-    },
-    {
-      "player": "WEILER-BABB, NICK",
-      "team": "IST",
-      "RAPM": 0.05,
-      "ORAPM": -0.05,
-      "DRAPM": 0.51,
-      "RAPM_basic": 0.03,
-      "prior": -0.06,
-      "est_minutes": 1971.0,
-      "possessions": 3449.0,
       "RAPM_Rank": 143
     },
     {
@@ -17221,18 +17221,6 @@
       "RAPM_Rank": 145
     },
     {
-      "player": "DINWIDDIE, SPENCER",
-      "team": "MUN",
-      "RAPM": -0.01,
-      "ORAPM": -0.38,
-      "DRAPM": 0.34,
-      "RAPM_basic": -0.27,
-      "prior": 0.27,
-      "est_minutes": 531.0,
-      "possessions": 929.0,
-      "RAPM_Rank": 146
-    },
-    {
       "player": "NEDOVIC, NEMANJA",
       "team": "MCO",
       "RAPM": -0.01,
@@ -17242,6 +17230,18 @@
       "prior": 0.21,
       "est_minutes": 867.0,
       "possessions": 1518.0,
+      "RAPM_Rank": 146
+    },
+    {
+      "player": "DINWIDDIE, SPENCER",
+      "team": "MUN",
+      "RAPM": -0.01,
+      "ORAPM": -0.38,
+      "DRAPM": 0.34,
+      "RAPM_basic": -0.27,
+      "prior": 0.27,
+      "est_minutes": 531.0,
+      "possessions": 929.0,
       "RAPM_Rank": 147
     },
     {
@@ -17269,6 +17269,18 @@
       "RAPM_Rank": 149
     },
     {
+      "player": "DAVIDOVAC, DEJAN",
+      "team": "RED",
+      "RAPM": -0.04,
+      "ORAPM": -0.14,
+      "DRAPM": 0.24,
+      "RAPM_basic": 0.12,
+      "prior": -0.23,
+      "est_minutes": 640.0,
+      "possessions": 1120.0,
+      "RAPM_Rank": 150
+    },
+    {
       "player": "BEGARIN, JUHANN",
       "team": "MCO",
       "RAPM": -0.04,
@@ -17278,7 +17290,7 @@
       "prior": 0.01,
       "est_minutes": 339.0,
       "possessions": 593.0,
-      "RAPM_Rank": 150
+      "RAPM_Rank": 151
     },
     {
       "player": "ODIASE, TAI",
@@ -17290,18 +17302,6 @@
       "prior": -0.07,
       "est_minutes": 538.0,
       "possessions": 942.0,
-      "RAPM_Rank": 151
-    },
-    {
-      "player": "DAVIDOVAC, DEJAN",
-      "team": "RED",
-      "RAPM": -0.04,
-      "ORAPM": -0.14,
-      "DRAPM": 0.24,
-      "RAPM_basic": 0.12,
-      "prior": -0.23,
-      "est_minutes": 640.0,
-      "possessions": 1120.0,
       "RAPM_Rank": 152
     },
     {
@@ -17377,18 +17377,6 @@
       "RAPM_Rank": 158
     },
     {
-      "player": "CALE, MYLES",
-      "team": "BAR",
-      "RAPM": -0.09,
-      "ORAPM": -0.5,
-      "DRAPM": 0.46,
-      "RAPM_basic": 0.01,
-      "prior": -0.19,
-      "est_minutes": 989.0,
-      "possessions": 1731.0,
-      "RAPM_Rank": 159
-    },
-    {
       "player": "GINAT, TOMER",
       "team": "HTA",
       "RAPM": -0.09,
@@ -17398,6 +17386,18 @@
       "prior": 0.02,
       "est_minutes": 274.0,
       "possessions": 479.0,
+      "RAPM_Rank": 159
+    },
+    {
+      "player": "CALE, MYLES",
+      "team": "BAR",
+      "RAPM": -0.09,
+      "ORAPM": -0.5,
+      "DRAPM": 0.46,
+      "RAPM_basic": 0.01,
+      "prior": -0.19,
+      "est_minutes": 989.0,
+      "possessions": 1731.0,
       "RAPM_Rank": 160
     },
     {
@@ -17413,18 +17413,6 @@
       "RAPM_Rank": 161
     },
     {
-      "player": "BONGA, ISAAC",
-      "team": "PAR",
-      "RAPM": -0.12,
-      "ORAPM": -0.06,
-      "DRAPM": 0.12,
-      "RAPM_basic": -0.16,
-      "prior": 0.04,
-      "est_minutes": 2039.0,
-      "possessions": 3569.0,
-      "RAPM_Rank": 162
-    },
-    {
       "player": "BIRSEN, METECAN",
       "team": "ULK",
       "RAPM": -0.12,
@@ -17434,6 +17422,18 @@
       "prior": -0.2,
       "est_minutes": 522.0,
       "possessions": 913.0,
+      "RAPM_Rank": 162
+    },
+    {
+      "player": "BONGA, ISAAC",
+      "team": "PAR",
+      "RAPM": -0.12,
+      "ORAPM": -0.06,
+      "DRAPM": 0.13,
+      "RAPM_basic": -0.16,
+      "prior": 0.04,
+      "est_minutes": 2039.0,
+      "possessions": 3569.0,
       "RAPM_Rank": 163
     },
     {
@@ -17449,18 +17449,6 @@
       "RAPM_Rank": 164
     },
     {
-      "player": "MANNION, NICCOLO",
-      "team": "MIL",
-      "RAPM": -0.13,
-      "ORAPM": -0.22,
-      "DRAPM": 0.13,
-      "RAPM_basic": -0.25,
-      "prior": 0.11,
-      "est_minutes": 447.0,
-      "possessions": 782.0,
-      "RAPM_Rank": 165
-    },
-    {
       "player": "DIARRA, ALIOU",
       "team": "VIR",
       "RAPM": -0.13,
@@ -17470,19 +17458,19 @@
       "prior": 0.15,
       "est_minutes": 482.0,
       "possessions": 843.0,
-      "RAPM_Rank": 166
+      "RAPM_Rank": 165
     },
     {
-      "player": "SWIDER, COLE",
-      "team": "IST",
-      "RAPM": -0.14,
-      "ORAPM": 0.18,
-      "DRAPM": -0.16,
-      "RAPM_basic": -0.5,
-      "prior": 0.38,
-      "est_minutes": 543.0,
-      "possessions": 951.0,
-      "RAPM_Rank": 167
+      "player": "MANNION, NICCOLO",
+      "team": "MIL",
+      "RAPM": -0.13,
+      "ORAPM": -0.22,
+      "DRAPM": 0.13,
+      "RAPM_basic": -0.25,
+      "prior": 0.11,
+      "est_minutes": 447.0,
+      "possessions": 782.0,
+      "RAPM_Rank": 166
     },
     {
       "player": "EDWARDS, KESSLER",
@@ -17494,6 +17482,18 @@
       "prior": -0.04,
       "est_minutes": 227.0,
       "possessions": 397.0,
+      "RAPM_Rank": 167
+    },
+    {
+      "player": "SWIDER, COLE",
+      "team": "IST",
+      "RAPM": -0.14,
+      "ORAPM": 0.18,
+      "DRAPM": -0.16,
+      "RAPM_basic": -0.5,
+      "prior": 0.38,
+      "est_minutes": 543.0,
+      "possessions": 951.0,
       "RAPM_Rank": 168
     },
     {
@@ -17641,18 +17641,6 @@
       "RAPM_Rank": 180
     },
     {
-      "player": "TAVARES, WALTER",
-      "team": "MAD",
-      "RAPM": -0.23,
-      "ORAPM": -0.02,
-      "DRAPM": -0.32,
-      "RAPM_basic": -0.33,
-      "prior": 0.12,
-      "est_minutes": 1537.0,
-      "possessions": 2690.0,
-      "RAPM_Rank": 181
-    },
-    {
       "player": "ALSTON JR. , DERRICK",
       "team": "VIR",
       "RAPM": -0.23,
@@ -17662,6 +17650,18 @@
       "prior": 0.18,
       "est_minutes": 869.0,
       "possessions": 1521.0,
+      "RAPM_Rank": 181
+    },
+    {
+      "player": "TAVARES, WALTER",
+      "team": "MAD",
+      "RAPM": -0.23,
+      "ORAPM": -0.02,
+      "DRAPM": -0.32,
+      "RAPM_basic": -0.33,
+      "prior": 0.12,
+      "est_minutes": 1537.0,
+      "possessions": 2690.0,
       "RAPM_Rank": 182
     },
     {
@@ -17689,18 +17689,6 @@
       "RAPM_Rank": 184
     },
     {
-      "player": "TARPEY, TERRY",
-      "team": "MCO",
-      "RAPM": -0.26,
-      "ORAPM": -0.03,
-      "DRAPM": -0.29,
-      "RAPM_basic": -0.2,
-      "prior": -0.09,
-      "est_minutes": 461.0,
-      "possessions": 806.0,
-      "RAPM_Rank": 185
-    },
-    {
       "player": "NGOUAMA, MEHDY",
       "team": "ASV",
       "RAPM": -0.26,
@@ -17710,6 +17698,18 @@
       "prior": -0.02,
       "est_minutes": 258.0,
       "possessions": 451.0,
+      "RAPM_Rank": 185
+    },
+    {
+      "player": "TARPEY, TERRY",
+      "team": "MCO",
+      "RAPM": -0.26,
+      "ORAPM": -0.03,
+      "DRAPM": -0.29,
+      "RAPM_basic": -0.2,
+      "prior": -0.09,
+      "est_minutes": 461.0,
+      "possessions": 806.0,
       "RAPM_Rank": 186
     },
     {
@@ -17737,18 +17737,6 @@
       "RAPM_Rank": 188
     },
     {
-      "player": "LOYD, JORDAN",
-      "team": "IST",
-      "RAPM": -0.28,
-      "ORAPM": -0.28,
-      "DRAPM": 0.32,
-      "RAPM_basic": -0.51,
-      "prior": 0.23,
-      "est_minutes": 1426.0,
-      "possessions": 2496.0,
-      "RAPM_Rank": 189
-    },
-    {
       "player": "MOTLEY, JOHNATHAN",
       "team": "HTA",
       "RAPM": -0.28,
@@ -17758,6 +17746,18 @@
       "prior": 0.34,
       "est_minutes": 1063.0,
       "possessions": 1859.0,
+      "RAPM_Rank": 189
+    },
+    {
+      "player": "LOYD, JORDAN",
+      "team": "IST",
+      "RAPM": -0.28,
+      "ORAPM": -0.28,
+      "DRAPM": 0.32,
+      "RAPM_basic": -0.51,
+      "prior": 0.23,
+      "est_minutes": 1426.0,
+      "possessions": 2496.0,
       "RAPM_Rank": 190
     },
     {
@@ -17785,18 +17785,6 @@
       "RAPM_Rank": 192
     },
     {
-      "player": "BACON, DWAYNE",
-      "team": "DUB",
-      "RAPM": -0.32,
-      "ORAPM": 0.45,
-      "DRAPM": -0.66,
-      "RAPM_basic": -0.59,
-      "prior": 0.35,
-      "est_minutes": 1783.0,
-      "possessions": 3120.0,
-      "RAPM_Rank": 193
-    },
-    {
       "player": "HEZONJA, MARIO",
       "team": "MAD",
       "RAPM": -0.32,
@@ -17806,6 +17794,18 @@
       "prior": 0.43,
       "est_minutes": 1527.0,
       "possessions": 2672.0,
+      "RAPM_Rank": 193
+    },
+    {
+      "player": "BACON, DWAYNE",
+      "team": "DUB",
+      "RAPM": -0.32,
+      "ORAPM": 0.45,
+      "DRAPM": -0.66,
+      "RAPM_basic": -0.59,
+      "prior": 0.35,
+      "est_minutes": 1783.0,
+      "possessions": 3120.0,
       "RAPM_Rank": 194
     },
     {
@@ -17833,15 +17833,15 @@
       "RAPM_Rank": 196
     },
     {
-      "player": "MILUTINOV, NIKOLA",
-      "team": "OLY",
+      "player": "VESELY, JAN",
+      "team": "BAR",
       "RAPM": -0.35,
-      "ORAPM": 0.13,
-      "DRAPM": -0.27,
-      "RAPM_basic": -0.51,
-      "prior": 0.21,
-      "est_minutes": 1374.0,
-      "possessions": 2405.0,
+      "ORAPM": -0.52,
+      "DRAPM": 0.17,
+      "RAPM_basic": -0.47,
+      "prior": 0.13,
+      "est_minutes": 1324.0,
+      "possessions": 2317.0,
       "RAPM_Rank": 197
     },
     {
@@ -17857,15 +17857,15 @@
       "RAPM_Rank": 198
     },
     {
-      "player": "VESELY, JAN",
-      "team": "BAR",
+      "player": "MILUTINOV, NIKOLA",
+      "team": "OLY",
       "RAPM": -0.35,
-      "ORAPM": -0.52,
-      "DRAPM": 0.17,
-      "RAPM_basic": -0.47,
-      "prior": 0.13,
-      "est_minutes": 1324.0,
-      "possessions": 2317.0,
+      "ORAPM": 0.13,
+      "DRAPM": -0.27,
+      "RAPM_basic": -0.51,
+      "prior": 0.21,
+      "est_minutes": 1374.0,
+      "possessions": 2405.0,
       "RAPM_Rank": 199
     },
     {
@@ -17953,18 +17953,6 @@
       "RAPM_Rank": 206
     },
     {
-      "player": "DUNSTON, BRYANT",
-      "team": "MIL",
-      "RAPM": -0.42,
-      "ORAPM": -0.65,
-      "DRAPM": 0.28,
-      "RAPM_basic": -0.33,
-      "prior": -0.12,
-      "est_minutes": 420.0,
-      "possessions": 735.0,
-      "RAPM_Rank": 207
-    },
-    {
       "player": "DIAKITE, MAMADI",
       "team": "BAS",
       "RAPM": -0.42,
@@ -17974,19 +17962,19 @@
       "prior": 0.16,
       "est_minutes": 1358.0,
       "possessions": 2376.0,
-      "RAPM_Rank": 208
+      "RAPM_Rank": 207
     },
     {
-      "player": "ATAMNA, ADAM",
-      "team": "ASV",
-      "RAPM": -0.44,
-      "ORAPM": -0.68,
-      "DRAPM": 0.15,
-      "RAPM_basic": -0.24,
-      "prior": -0.24,
-      "est_minutes": 339.0,
-      "possessions": 593.0,
-      "RAPM_Rank": 209
+      "player": "DUNSTON, BRYANT",
+      "team": "MIL",
+      "RAPM": -0.42,
+      "ORAPM": -0.65,
+      "DRAPM": 0.28,
+      "RAPM_basic": -0.33,
+      "prior": -0.12,
+      "est_minutes": 420.0,
+      "possessions": 735.0,
+      "RAPM_Rank": 208
     },
     {
       "player": "BROWN, LORENZO",
@@ -17998,7 +17986,7 @@
       "prior": 0.18,
       "est_minutes": 336.0,
       "possessions": 589.0,
-      "RAPM_Rank": 210
+      "RAPM_Rank": 209
     },
     {
       "player": "YILMAZ, ERKAN",
@@ -18010,6 +17998,18 @@
       "prior": -0.32,
       "est_minutes": 322.0,
       "possessions": 564.0,
+      "RAPM_Rank": 210
+    },
+    {
+      "player": "ATAMNA, ADAM",
+      "team": "ASV",
+      "RAPM": -0.44,
+      "ORAPM": -0.68,
+      "DRAPM": 0.15,
+      "RAPM_basic": -0.24,
+      "prior": -0.24,
+      "est_minutes": 339.0,
+      "possessions": 593.0,
       "RAPM_Rank": 211
     },
     {
@@ -18157,18 +18157,6 @@
       "RAPM_Rank": 223
     },
     {
-      "player": "BUTKEVICIUS, ARNAS",
-      "team": "ZAL",
-      "RAPM": -0.55,
-      "ORAPM": -0.15,
-      "DRAPM": -0.54,
-      "RAPM_basic": -0.53,
-      "prior": -0.03,
-      "est_minutes": 1145.0,
-      "possessions": 2003.0,
-      "RAPM_Rank": 224
-    },
-    {
       "player": "MORGAN, JEREMY",
       "team": "PRS",
       "RAPM": -0.55,
@@ -18178,6 +18166,18 @@
       "prior": -0.04,
       "est_minutes": 1148.0,
       "possessions": 2010.0,
+      "RAPM_Rank": 224
+    },
+    {
+      "player": "BUTKEVICIUS, ARNAS",
+      "team": "ZAL",
+      "RAPM": -0.55,
+      "ORAPM": -0.15,
+      "DRAPM": -0.54,
+      "RAPM_basic": -0.53,
+      "prior": -0.03,
+      "est_minutes": 1145.0,
+      "possessions": 2003.0,
       "RAPM_Rank": 225
     },
     {
@@ -18205,18 +18205,6 @@
       "RAPM_Rank": 227
     },
     {
-      "player": "BOLOMBOY, JOEL",
-      "team": "RED",
-      "RAPM": -0.57,
-      "ORAPM": -0.59,
-      "DRAPM": 0.03,
-      "RAPM_basic": -0.64,
-      "prior": 0.07,
-      "est_minutes": 309.0,
-      "possessions": 542.0,
-      "RAPM_Rank": 228
-    },
-    {
       "player": "HALL, DEVON",
       "team": "ULK",
       "RAPM": -0.57,
@@ -18226,6 +18214,18 @@
       "prior": 0.02,
       "est_minutes": 1274.0,
       "possessions": 2230.0,
+      "RAPM_Rank": 228
+    },
+    {
+      "player": "BOLOMBOY, JOEL",
+      "team": "RED",
+      "RAPM": -0.57,
+      "ORAPM": -0.59,
+      "DRAPM": 0.03,
+      "RAPM_basic": -0.64,
+      "prior": 0.07,
+      "est_minutes": 309.0,
+      "possessions": 542.0,
       "RAPM_Rank": 229
     },
     {
@@ -18253,18 +18253,6 @@
       "RAPM_Rank": 231
     },
     {
-      "player": "OKEKE, CHUMA",
-      "team": "MAD",
-      "RAPM": -0.62,
-      "ORAPM": -0.39,
-      "DRAPM": -0.35,
-      "RAPM_basic": -0.65,
-      "prior": 0.0,
-      "est_minutes": 1187.0,
-      "possessions": 2077.0,
-      "RAPM_Rank": 232
-    },
-    {
       "player": "SAKO, NEAL",
       "team": "PAM",
       "RAPM": -0.62,
@@ -18274,6 +18262,18 @@
       "prior": 0.02,
       "est_minutes": 885.0,
       "possessions": 1549.0,
+      "RAPM_Rank": 232
+    },
+    {
+      "player": "OKEKE, CHUMA",
+      "team": "MAD",
+      "RAPM": -0.62,
+      "ORAPM": -0.39,
+      "DRAPM": -0.35,
+      "RAPM_basic": -0.65,
+      "prior": 0.0,
+      "est_minutes": 1187.0,
+      "possessions": 2077.0,
       "RAPM_Rank": 233
     },
     {
@@ -18541,18 +18541,6 @@
       "RAPM_Rank": 255
     },
     {
-      "player": "SMAILAGIC, ALEN",
-      "team": "VIR",
-      "RAPM": -0.89,
-      "ORAPM": -0.27,
-      "DRAPM": -0.73,
-      "RAPM_basic": -1.05,
-      "prior": 0.17,
-      "est_minutes": 944.0,
-      "possessions": 1652.0,
-      "RAPM_Rank": 256
-    },
-    {
       "player": "GUDURIC, MARKO",
       "team": "MIL",
       "RAPM": -0.89,
@@ -18562,6 +18550,18 @@
       "prior": 0.21,
       "est_minutes": 1453.0,
       "possessions": 2543.0,
+      "RAPM_Rank": 256
+    },
+    {
+      "player": "SMAILAGIC, ALEN",
+      "team": "VIR",
+      "RAPM": -0.89,
+      "ORAPM": -0.27,
+      "DRAPM": -0.73,
+      "RAPM_basic": -1.05,
+      "prior": 0.17,
+      "est_minutes": 944.0,
+      "possessions": 1652.0,
       "RAPM_Rank": 257
     },
     {
@@ -18577,18 +18577,6 @@
       "RAPM_Rank": 258
     },
     {
-      "player": "KRAMER, DAVID",
-      "team": "MAD",
-      "RAPM": -0.93,
-      "ORAPM": -0.47,
-      "DRAPM": -0.45,
-      "RAPM_basic": -0.78,
-      "prior": -0.17,
-      "est_minutes": 315.0,
-      "possessions": 551.0,
-      "RAPM_Rank": 259
-    },
-    {
       "player": "ROGKAVOPOULOS, NIKOLAOS",
       "team": "PAN",
       "RAPM": -0.93,
@@ -18598,6 +18586,18 @@
       "prior": 0.2,
       "est_minutes": 798.0,
       "possessions": 1396.0,
+      "RAPM_Rank": 259
+    },
+    {
+      "player": "KRAMER, DAVID",
+      "team": "MAD",
+      "RAPM": -0.93,
+      "ORAPM": -0.47,
+      "DRAPM": -0.45,
+      "RAPM_basic": -0.78,
+      "prior": -0.17,
+      "est_minutes": 315.0,
+      "possessions": 551.0,
       "RAPM_Rank": 260
     },
     {
@@ -26353,7 +26353,7 @@
   "game_control": {
     "teams": {
       "ASV": {
-        "gci": 16.5,
+        "gci": 16.3,
         "dominance_avg": -0.1175,
         "control_pct": 0.1388,
         "crunch_swing_avg": -0.0766,
@@ -26362,7 +26362,7 @@
         "comeback_rating": 0.74,
         "comeback_count": 3,
         "home_gci": 26.6,
-        "away_gci": 6.5,
+        "away_gci": 6.1,
         "win_quality_hist": [
           4,
           4,
@@ -26761,7 +26761,7 @@
         ]
       },
       "BAR": {
-        "gci": 51.7,
+        "gci": 52.1,
         "dominance_avg": -0.0037,
         "control_pct": 0.3269,
         "crunch_swing_avg": 0.0579,
@@ -26769,8 +26769,8 @@
         "drama_avg": 3.8184,
         "comeback_rating": 0.6306,
         "comeback_count": 1,
-        "home_gci": 54.3,
-        "away_gci": 49.0,
+        "home_gci": 54.8,
+        "away_gci": 49.4,
         "win_quality_hist": [
           6,
           7,
@@ -27189,7 +27189,7 @@
         ]
       },
       "BAS": {
-        "gci": 34.9,
+        "gci": 35.0,
         "dominance_avg": -0.0537,
         "control_pct": 0.2582,
         "crunch_swing_avg": -0.0317,
@@ -27197,8 +27197,8 @@
         "drama_avg": 4.2488,
         "comeback_rating": 0.6417,
         "comeback_count": 2,
-        "home_gci": 63.2,
-        "away_gci": 6.5,
+        "home_gci": 63.8,
+        "away_gci": 6.2,
         "win_quality_hist": [
           4,
           5,
@@ -27597,7 +27597,7 @@
         ]
       },
       "DUB": {
-        "gci": 50.6,
+        "gci": 51.0,
         "dominance_avg": 0.0162,
         "control_pct": 0.3522,
         "crunch_swing_avg": -0.0264,
@@ -27605,8 +27605,8 @@
         "drama_avg": 4.125,
         "comeback_rating": 0.6464,
         "comeback_count": 4,
-        "home_gci": 70.6,
-        "away_gci": 30.7,
+        "home_gci": 71.3,
+        "away_gci": 30.8,
         "win_quality_hist": [
           3,
           9,
@@ -28005,7 +28005,7 @@
         ]
       },
       "HTA": {
-        "gci": 58.2,
+        "gci": 58.7,
         "dominance_avg": 0.025,
         "control_pct": 0.3611,
         "crunch_swing_avg": 0.0316,
@@ -28013,8 +28013,8 @@
         "drama_avg": 3.8418,
         "comeback_rating": 0.6465,
         "comeback_count": 2,
-        "home_gci": 73.5,
-        "away_gci": 42.9,
+        "home_gci": 74.3,
+        "away_gci": 43.2,
         "win_quality_hist": [
           10,
           6,
@@ -28462,7 +28462,7 @@
         "comeback_rating": 0.6636,
         "comeback_count": 3,
         "home_gci": 28.0,
-        "away_gci": 25.1,
+        "away_gci": 25.0,
         "win_quality_hist": [
           5,
           3,
@@ -28861,7 +28861,7 @@
         ]
       },
       "MAD": {
-        "gci": 75.1,
+        "gci": 75.9,
         "dominance_avg": 0.0769,
         "control_pct": 0.4432,
         "crunch_swing_avg": 0.0384,
@@ -28870,7 +28870,7 @@
         "comeback_rating": 0.6091,
         "comeback_count": 1,
         "home_gci": 100.0,
-        "away_gci": 37.7,
+        "away_gci": 37.9,
         "win_quality_hist": [
           8,
           7,
@@ -29309,7 +29309,7 @@
         ]
       },
       "MCO": {
-        "gci": 56.0,
+        "gci": 56.5,
         "dominance_avg": 0.0089,
         "control_pct": 0.3586,
         "crunch_swing_avg": 0.0206,
@@ -29317,8 +29317,8 @@
         "drama_avg": 3.6793,
         "comeback_rating": 0.6134,
         "comeback_count": 3,
-        "home_gci": 78.1,
-        "away_gci": 35.0,
+        "home_gci": 78.9,
+        "away_gci": 35.1,
         "win_quality_hist": [
           4,
           7,
@@ -29767,7 +29767,7 @@
         ]
       },
       "MIL": {
-        "gci": 50.4,
+        "gci": 50.8,
         "dominance_avg": -0.0001,
         "control_pct": 0.3441,
         "crunch_swing_avg": -0.0758,
@@ -29775,7 +29775,7 @@
         "drama_avg": 3.6515,
         "comeback_rating": 0.6102,
         "comeback_count": 1,
-        "home_gci": 71.7,
+        "home_gci": 72.5,
         "away_gci": 29.1,
         "win_quality_hist": [
           3,
@@ -30175,7 +30175,7 @@
         ]
       },
       "MUN": {
-        "gci": 48.3,
+        "gci": 48.7,
         "dominance_avg": -0.0241,
         "control_pct": 0.2911,
         "crunch_swing_avg": -0.0036,
@@ -30183,7 +30183,7 @@
         "drama_avg": 3.5678,
         "comeback_rating": 0.6475,
         "comeback_count": 2,
-        "home_gci": 65.7,
+        "home_gci": 66.3,
         "away_gci": 31.0,
         "win_quality_hist": [
           5,
@@ -30583,7 +30583,7 @@
         ]
       },
       "OLY": {
-        "gci": 82.5,
+        "gci": 83.4,
         "dominance_avg": 0.1192,
         "control_pct": 0.5161,
         "crunch_swing_avg": 0.0337,
@@ -30592,7 +30592,7 @@
         "comeback_rating": 0.6112,
         "comeback_count": 1,
         "home_gci": 100.0,
-        "away_gci": 61.1,
+        "away_gci": 61.6,
         "win_quality_hist": [
           3,
           10,
@@ -31021,20 +31021,20 @@
         ]
       },
       "PAM": {
-        "gci": 61.4,
-        "dominance_avg": 0.045,
-        "control_pct": 0.3786,
-        "crunch_swing_avg": 0.0353,
-        "killer_instinct": -0.0392,
-        "drama_avg": 4.1256,
-        "comeback_rating": 0.6233,
+        "gci": 63.7,
+        "dominance_avg": 0.0489,
+        "control_pct": 0.3886,
+        "crunch_swing_avg": 0.0409,
+        "killer_instinct": -0.0367,
+        "drama_avg": 4.1319,
+        "comeback_rating": 0.6199,
         "comeback_count": 3,
-        "home_gci": 77.1,
-        "away_gci": 44.9,
+        "home_gci": 77.9,
+        "away_gci": 49.6,
         "win_quality_hist": [
           10,
           5,
-          8,
+          9,
           3,
           0
         ],
@@ -31455,20 +31455,30 @@
             "drama": 3.324,
             "home_score": 87,
             "away_score": 91
+          },
+          {
+            "gamecode": 399,
+            "opponent": "PAN",
+            "is_home": false,
+            "is_win": true,
+            "dominance": 0.211,
+            "drama": 4.39,
+            "home_score": 86,
+            "away_score": 89
           }
         ]
       },
       "PAN": {
-        "gci": 58.8,
-        "dominance_avg": 0.025,
-        "control_pct": 0.3563,
-        "crunch_swing_avg": 0.0029,
-        "killer_instinct": 0.0159,
-        "drama_avg": 3.7653,
+        "gci": 57.6,
+        "dominance_avg": 0.0195,
+        "control_pct": 0.348,
+        "crunch_swing_avg": -0.0034,
+        "killer_instinct": 0.0155,
+        "drama_avg": 3.7798,
         "comeback_rating": 0.636,
         "comeback_count": 3,
-        "home_gci": 69.2,
-        "away_gci": 48.4,
+        "home_gci": 66.0,
+        "away_gci": 48.8,
         "win_quality_hist": [
           7,
           9,
@@ -31479,7 +31489,7 @@
         "loss_quality_hist": [
           6,
           1,
-          9,
+          10,
           1,
           0
         ],
@@ -31903,6 +31913,16 @@
             "drama": 3.324,
             "home_score": 87,
             "away_score": 91
+          },
+          {
+            "gamecode": 399,
+            "opponent": "PAM",
+            "is_home": true,
+            "is_win": false,
+            "dominance": -0.211,
+            "drama": 4.39,
+            "home_score": 86,
+            "away_score": 89
           }
         ]
       },
@@ -31915,8 +31935,8 @@
         "drama_avg": 4.1814,
         "comeback_rating": 0.684,
         "comeback_count": 4,
-        "home_gci": 30.4,
-        "away_gci": 23.6,
+        "home_gci": 30.5,
+        "away_gci": 23.5,
         "win_quality_hist": [
           3,
           9,
@@ -32315,7 +32335,7 @@
         ]
       },
       "PRS": {
-        "gci": 44.6,
+        "gci": 44.9,
         "dominance_avg": -0.0107,
         "control_pct": 0.3102,
         "crunch_swing_avg": -0.0671,
@@ -32323,8 +32343,8 @@
         "drama_avg": 3.8228,
         "comeback_rating": 0.6078,
         "comeback_count": 1,
-        "home_gci": 47.8,
-        "away_gci": 41.3,
+        "home_gci": 48.2,
+        "away_gci": 41.6,
         "win_quality_hist": [
           1,
           6,
@@ -32723,7 +32743,7 @@
         ]
       },
       "RED": {
-        "gci": 51.9,
+        "gci": 52.3,
         "dominance_avg": 0.0082,
         "control_pct": 0.3155,
         "crunch_swing_avg": 0.0381,
@@ -32731,8 +32751,8 @@
         "drama_avg": 4.056,
         "comeback_rating": 0.6727,
         "comeback_count": 4,
-        "home_gci": 69.0,
-        "away_gci": 35.6,
+        "home_gci": 69.7,
+        "away_gci": 35.7,
         "win_quality_hist": [
           9,
           6,
@@ -33141,7 +33161,7 @@
         ]
       },
       "TEL": {
-        "gci": 43.5,
+        "gci": 43.8,
         "dominance_avg": -0.034,
         "control_pct": 0.2835,
         "crunch_swing_avg": 0.028,
@@ -33149,8 +33169,8 @@
         "drama_avg": 4.2402,
         "comeback_rating": 0.6654,
         "comeback_count": 3,
-        "home_gci": 47.9,
-        "away_gci": 39.1,
+        "home_gci": 48.3,
+        "away_gci": 39.3,
         "win_quality_hist": [
           7,
           8,
@@ -33549,18 +33569,18 @@
         ]
       },
       "ULK": {
-        "gci": 66.6,
-        "dominance_avg": 0.0303,
-        "control_pct": 0.3921,
-        "crunch_swing_avg": 0.0319,
-        "killer_instinct": 0.0546,
-        "drama_avg": 3.5914,
-        "comeback_rating": 0.6279,
-        "comeback_count": 3,
-        "home_gci": 85.9,
-        "away_gci": 46.3,
+        "gci": 64.8,
+        "dominance_avg": 0.0307,
+        "control_pct": 0.3898,
+        "crunch_swing_avg": 0.0462,
+        "killer_instinct": 0.004,
+        "drama_avg": 3.7369,
+        "comeback_rating": 0.6402,
+        "comeback_count": 4,
+        "home_gci": 86.9,
+        "away_gci": 42.6,
         "win_quality_hist": [
-          11,
+          12,
           2,
           9,
           4,
@@ -33983,11 +34003,21 @@
             "drama": 4.103,
             "home_score": 81,
             "away_score": 78
+          },
+          {
+            "gamecode": 397,
+            "opponent": "ZAL",
+            "is_home": false,
+            "is_win": true,
+            "dominance": 0.046,
+            "drama": 9.701,
+            "home_score": 90,
+            "away_score": 94
           }
         ]
       },
       "VIR": {
-        "gci": 32.2,
+        "gci": 32.3,
         "dominance_avg": -0.0639,
         "control_pct": 0.2107,
         "crunch_swing_avg": -0.0536,
@@ -33995,8 +34025,8 @@
         "drama_avg": 3.7065,
         "comeback_rating": 0.6321,
         "comeback_count": 0,
-        "home_gci": 47.1,
-        "away_gci": 17.3,
+        "home_gci": 47.5,
+        "away_gci": 17.1,
         "win_quality_hist": [
           4,
           8,
@@ -34395,16 +34425,16 @@
         ]
       },
       "ZAL": {
-        "gci": 63.2,
-        "dominance_avg": 0.0364,
-        "control_pct": 0.3875,
-        "crunch_swing_avg": 0.0396,
-        "killer_instinct": -0.0111,
-        "drama_avg": 3.681,
+        "gci": 58.7,
+        "dominance_avg": 0.0344,
+        "control_pct": 0.3822,
+        "crunch_swing_avg": 0.0235,
+        "killer_instinct": -0.0627,
+        "drama_avg": 3.8243,
         "comeback_rating": 0.6139,
         "comeback_count": 2,
-        "home_gci": 83.4,
-        "away_gci": 44.0,
+        "home_gci": 73.2,
+        "away_gci": 44.3,
         "win_quality_hist": [
           7,
           8,
@@ -34413,7 +34443,7 @@
           0
         ],
         "loss_quality_hist": [
-          7,
+          8,
           4,
           4,
           2,
@@ -34829,6 +34859,16 @@
             "drama": 4.103,
             "home_score": 81,
             "away_score": 78
+          },
+          {
+            "gamecode": 397,
+            "opponent": "ULK",
+            "is_home": true,
+            "is_win": false,
+            "dominance": -0.046,
+            "drama": 9.701,
+            "home_score": 90,
+            "away_score": 94
           }
         ]
       }
@@ -40760,6 +40800,21 @@
         "crunch_away": 0.0591
       },
       {
+        "gamecode": 397,
+        "home": "ZAL",
+        "away": "ULK",
+        "home_score": 90,
+        "away_score": 94,
+        "winner": "ULK",
+        "dominance": -0.0465,
+        "drama": 9.7012,
+        "comeback": 0.9603,
+        "control_home": 0.1635,
+        "control_away": 0.2981,
+        "crunch_home": -0.6362,
+        "crunch_away": 0.6362
+      },
+      {
         "gamecode": 398,
         "home": "HTA",
         "away": "MAD",
@@ -40773,6 +40828,21 @@
         "control_away": 0.7753,
         "crunch_home": -0.1956,
         "crunch_away": 0.1956
+      },
+      {
+        "gamecode": 399,
+        "home": "PAN",
+        "away": "PAM",
+        "home_score": 86,
+        "away_score": 89,
+        "winner": "PAM",
+        "dominance": -0.2106,
+        "drama": 4.3903,
+        "comeback": 0.5305,
+        "control_home": 0.0,
+        "control_away": 0.7979,
+        "crunch_home": -0.2679,
+        "crunch_away": 0.2679
       }
     ],
     "storylines": [
@@ -40781,7 +40851,7 @@
         "team": "OLY",
         "color": "#4ecdc4",
         "text": "Controlled 52% of game time on average. 21 dominant wins this season.",
-        "stat_label": "GCI 82.5",
+        "stat_label": "GCI 83.4",
         "stat_sub": "#1 Overall"
       },
       {
@@ -40802,193 +40872,193 @@
       },
       {
         "label": "The Closers",
-        "team": "ULK",
+        "team": "MAD",
         "color": "#a8e6cf",
-        "text": "Best at closing out games. Average net WP gain of +0.05 per game when leading in Q4.",
-        "stat_label": "Killer +0.05",
+        "text": "Best at closing out games. Average net WP gain of +0.04 per game when leading in Q4.",
+        "stat_label": "Killer +0.04",
         "stat_sub": "#1 Closer"
       },
       {
         "label": "Fortress",
-        "team": "MAD",
+        "team": "MCO",
         "color": "#a855f7",
-        "text": "Strongest home court advantage. Dominance gap of 0.21 between home and away.",
-        "stat_label": "Gap 0.21",
+        "text": "Strongest home court advantage. Dominance gap of 0.19 between home and away.",
+        "stat_label": "Gap 0.19",
         "stat_sub": "#1 Home Court"
       }
     ],
     "game_of_round": {
-      "gamecode": 391,
+      "gamecode": 397,
       "round": 38,
-      "home": "PAM",
-      "away": "PAN",
-      "home_score": 105,
-      "away_score": 107,
-      "winner": "PAN",
-      "drama": 7.2996,
-      "comeback": 0.7676,
-      "crunch_home": -0.3131,
-      "dominance": -0.0284,
+      "home": "ZAL",
+      "away": "ULK",
+      "home_score": 90,
+      "away_score": 94,
+      "winner": "ULK",
+      "drama": 9.7012,
+      "comeback": 0.9603,
+      "crunch_home": -0.6362,
+      "dominance": -0.0465,
       "wp_curve": [
         [
           0.0,
-          0.5186
+          0.388
         ],
         [
-          0.0022,
-          0.4814
+          0.0095,
+          0.4243
         ],
         [
-          0.0455,
-          0.6304
+          0.025,
+          0.4426
         ],
         [
-          0.0656,
-          0.5576
+          0.0522,
+          0.3668
         ],
         [
-          0.0757,
-          0.5194
+          0.0863,
+          0.4212
         ],
         [
-          0.0962,
-          0.4804
+          0.1108,
+          0.4202
         ],
         [
-          0.1037,
-          0.4607
+          0.1281,
+          0.3614
         ],
         [
-          0.1325,
-          0.48
+          0.1526,
+          0.3787
         ],
         [
-          0.1409,
-          0.4203
-        ],
-        [
-          0.175,
-          0.5205
-        ],
-        [
-          0.2231,
-          0.4369
-        ],
-        [
-          0.2419,
-          0.4362
-        ],
-        [
-          0.2655,
-          0.3725
-        ],
-        [
-          0.2848,
-          0.478
-        ],
-        [
-          0.2979,
-          0.5
-        ],
-        [
-          0.3508,
-          0.4539
-        ],
-        [
-          0.3731,
-          0.5469
-        ],
-        [
-          0.4252,
-          0.5732
-        ],
-        [
-          0.4532,
-          0.4748
-        ],
-        [
-          0.4689,
-          0.4745
-        ],
-        [
-          0.5087,
-          0.6047
-        ],
-        [
-          0.5262,
-          0.6066
-        ],
-        [
-          0.5363,
-          0.5273
-        ],
-        [
-          0.5599,
-          0.5
-        ],
-        [
-          0.6299,
-          0.4391
-        ],
-        [
-          0.6807,
-          0.6591
-        ],
-        [
-          0.7012,
-          0.633
-        ],
-        [
-          0.717,
-          0.5696
-        ],
-        [
-          0.7375,
-          0.3926
-        ],
-        [
-          0.769,
-          0.2829
-        ],
-        [
-          0.8132,
-          0.3735
-        ],
-        [
-          0.832,
-          0.3258
-        ],
-        [
-          0.8753,
-          0.2199
-        ],
-        [
-          0.892,
-          0.2877
-        ],
-        [
-          0.9239,
-          0.5671
-        ],
-        [
-          0.9339,
+          0.1589,
           0.359
         ],
         [
-          0.9493,
+          0.2439,
+          0.4136
+        ],
+        [
+          0.2766,
+          0.4555
+        ],
+        [
+          0.2897,
+          0.4775
+        ],
+        [
+          0.3152,
+          0.4771
+        ],
+        [
+          0.3556,
+          0.4295
+        ],
+        [
+          0.3597,
+          0.4062
+        ],
+        [
+          0.3701,
+          0.4055
+        ],
+        [
+          0.3756,
+          0.4521
+        ],
+        [
+          0.4055,
+          0.3564
+        ],
+        [
+          0.4314,
+          0.3767
+        ],
+        [
+          0.495,
+          0.3948
+        ],
+        [
+          0.5363,
+          0.3903
+        ],
+        [
+          0.5699,
+          0.5576
+        ],
+        [
+          0.6312,
+          0.5622
+        ],
+        [
+          0.6494,
+          0.6255
+        ],
+        [
+          0.6685,
+          0.6289
+        ],
+        [
+          0.6998,
+          0.4654
+        ],
+        [
+          0.7162,
           0.5
         ],
         [
-          0.965,
-          0.7676
+          0.738,
+          0.6094
         ],
         [
-          0.9773,
-          0.5
+          0.7593,
+          0.5768
         ],
         [
-          0.9978,
-          0.5
+          0.7988,
+          0.5838
+        ],
+        [
+          0.8338,
+          0.6362
+        ],
+        [
+          0.8719,
+          0.6045
+        ],
+        [
+          0.8955,
+          0.6154
+        ],
+        [
+          0.9019,
+          0.7251
+        ],
+        [
+          0.9146,
+          0.2143
+        ],
+        [
+          0.9396,
+          0.2252
+        ],
+        [
+          0.955,
+          0.143
+        ],
+        [
+          0.9823,
+          0.7579
+        ],
+        [
+          0.9891,
+          0.1014
+        ],
+        [
+          0.9977,
+          0.9603
         ],
         [
           1.0,
@@ -41347,177 +41417,177 @@
         ]
       },
       "biggest_comeback": {
-        "gamecode": 239,
-        "home": "PAR",
-        "away": "HTA",
-        "home_score": 104,
-        "away_score": 101,
-        "comeback": 0.9507,
-        "winner": "PAR",
+        "gamecode": 397,
+        "home": "ZAL",
+        "away": "ULK",
+        "home_score": 90,
+        "away_score": 94,
+        "comeback": 0.9603,
+        "winner": "ULK",
         "wp_curve": [
           [
             0.0,
-            0.5558
+            0.388
           ],
           [
-            0.0242,
-            0.4811
+            0.0095,
+            0.4243
           ],
           [
-            0.065,
-            0.4423
+            0.025,
+            0.4426
           ],
           [
-            0.1212,
-            0.3827
+            0.0522,
+            0.3668
           ],
           [
-            0.1379,
-            0.3817
+            0.0863,
+            0.4212
           ],
           [
-            0.1616,
-            0.361
+            0.1108,
+            0.4202
           ],
           [
-            0.1691,
-            0.3418
+            0.1281,
+            0.3614
           ],
           [
-            0.1981,
-            0.3028
+            0.1526,
+            0.3787
           ],
           [
-            0.289,
-            0.2095
+            0.1589,
+            0.359
           ],
           [
-            0.3022,
-            0.2225
+            0.2439,
+            0.4136
           ],
           [
-            0.3162,
-            0.1645
+            0.2766,
+            0.4555
           ],
           [
-            0.3483,
-            0.1591
+            0.2897,
+            0.4775
           ],
           [
-            0.3667,
-            0.1559
+            0.3152,
+            0.4771
           ],
           [
-            0.408,
-            0.1153
+            0.3556,
+            0.4295
           ],
           [
-            0.4365,
-            0.1203
+            0.3597,
+            0.4062
           ],
           [
-            0.4401,
-            0.1002
+            0.3701,
+            0.4055
           ],
           [
-            0.5015,
-            0.0732
+            0.3756,
+            0.4521
           ],
           [
-            0.5235,
-            0.0694
+            0.4055,
+            0.3564
           ],
           [
-            0.5626,
-            0.0694
+            0.4314,
+            0.3767
           ],
           [
-            0.5859,
-            0.0804
+            0.495,
+            0.3948
           ],
           [
-            0.6078,
-            0.0677
+            0.5363,
+            0.3903
           ],
           [
-            0.6482,
-            0.094
+            0.5699,
+            0.5576
           ],
           [
-            0.6623,
-            0.1271
+            0.6312,
+            0.5622
           ],
           [
-            0.6904,
-            0.1046
+            0.6494,
+            0.6255
           ],
           [
-            0.7268,
-            0.1526
+            0.6685,
+            0.6289
           ],
           [
-            0.7466,
-            0.2339
+            0.6998,
+            0.4654
           ],
           [
-            0.7813,
-            0.2773
+            0.7162,
+            0.5
           ],
           [
-            0.8419,
-            0.1125
+            0.738,
+            0.6094
           ],
           [
-            0.8603,
-            0.2317
+            0.7593,
+            0.5768
           ],
           [
-            0.8906,
-            0.4438
+            0.7988,
+            0.5838
           ],
           [
-            0.9003,
-            0.1604
+            0.8338,
+            0.6362
           ],
           [
-            0.9289,
-            0.6984
+            0.8719,
+            0.6045
           ],
           [
-            0.9521,
-            0.1143
+            0.8955,
+            0.6154
           ],
           [
-            0.9649,
-            0.8799
+            0.9019,
+            0.7251
           ],
           [
-            0.9838,
-            0.9492
+            0.9146,
+            0.2143
           ],
           [
-            0.9859,
-            0.9777
+            0.9396,
+            0.2252
           ],
           [
-            0.9899,
-            0.9513
+            0.955,
+            0.143
           ],
           [
-            0.993,
-            0.9354
+            0.9823,
+            0.7579
           ],
           [
-            0.9965,
-            0.9777
+            0.9891,
+            0.1014
           ],
           [
-            0.9969,
-            0.9366
+            0.9977,
+            0.9603
           ],
           [
             1.0,
-            1.0
+            0.0
           ]
         ]
       }
@@ -42499,6 +42569,22 @@
         "BAR": 0.0,
         "RED": 0.0
       }
+    },
+    {
+      "date": "2026-05-10",
+      "label": "QF Day 15",
+      "odds": {
+        "OLY": 30.4,
+        "PAM": 12.1,
+        "MAD": 28.6,
+        "ULK": 20.6,
+        "ZAL": 0.0,
+        "HTA": 0.0,
+        "PAN": 8.3,
+        "MCO": 0.0,
+        "BAR": 0.0,
+        "RED": 0.0
+      }
     }
   ],
   "playoff_recaps": [
@@ -42514,7 +42600,7 @@
       "pre_game_win_prob": 61.3,
       "is_upset": false,
       "championship_odds_before": {
-        "PAN": 15.4,
+        "PAN": 8.3,
         "MCO": 0.0
       },
       "championship_odds_after": {
@@ -42579,7 +42665,7 @@
       ],
       "series_label": "OLY leads 1-0",
       "championship_odds_before": {
-        "OLY": 32.2,
+        "OLY": 30.4,
         "MCO": 0.0
       },
       "championship_odds_after": {
@@ -42604,7 +42690,7 @@
       ],
       "series_label": "OLY leads 2-0",
       "championship_odds_before": {
-        "OLY": 32.2,
+        "OLY": 30.4,
         "MCO": 0.0
       },
       "championship_odds_after": {
@@ -42630,7 +42716,7 @@
       "series_label": "OLY leads 3-0",
       "championship_odds_before": {
         "MCO": 0.0,
-        "OLY": 32.2
+        "OLY": 30.4
       },
       "championship_odds_after": {
         "MCO": 0.0,
@@ -42654,8 +42740,8 @@
       ],
       "series_label": "PAN leads 1-0",
       "championship_odds_before": {
-        "PAM": 5.2,
-        "PAN": 15.4
+        "PAM": 12.1,
+        "PAN": 8.3
       },
       "championship_odds_after": {
         "PAM": 12.1,
@@ -42679,8 +42765,8 @@
       ],
       "series_label": "PAN leads 2-0",
       "championship_odds_before": {
-        "PAM": 5.2,
-        "PAN": 15.4
+        "PAM": 12.1,
+        "PAN": 8.3
       },
       "championship_odds_after": {
         "PAM": 12.1,
@@ -42704,8 +42790,8 @@
       ],
       "series_label": "PAN leads 2-1",
       "championship_odds_before": {
-        "PAN": 15.4,
-        "PAM": 5.2
+        "PAN": 8.3,
+        "PAM": 12.1
       },
       "championship_odds_after": {
         "PAN": 8.3,
@@ -42729,8 +42815,8 @@
       ],
       "series_label": "Series tied 2-2",
       "championship_odds_before": {
-        "PAN": 15.4,
-        "PAM": 5.2
+        "PAN": 8.3,
+        "PAM": 12.1
       },
       "championship_odds_after": {
         "PAN": 8.3,
@@ -42754,7 +42840,7 @@
       ],
       "series_label": "MAD leads 1-0",
       "championship_odds_before": {
-        "MAD": 28.1,
+        "MAD": 28.6,
         "HTA": 0.0
       },
       "championship_odds_after": {
@@ -42779,7 +42865,7 @@
       ],
       "series_label": "MAD leads 2-0",
       "championship_odds_before": {
-        "MAD": 28.1,
+        "MAD": 28.6,
         "HTA": 0.0
       },
       "championship_odds_after": {
@@ -42805,7 +42891,7 @@
       "series_label": "MAD leads 2-1",
       "championship_odds_before": {
         "HTA": 0.0,
-        "MAD": 28.1
+        "MAD": 28.6
       },
       "championship_odds_after": {
         "HTA": 0.0,
@@ -42830,7 +42916,7 @@
       "series_label": "MAD leads 3-1",
       "championship_odds_before": {
         "HTA": 0.0,
-        "MAD": 28.1
+        "MAD": 28.6
       },
       "championship_odds_after": {
         "HTA": 0.0,
@@ -42854,8 +42940,8 @@
       ],
       "series_label": "ULK leads 1-0",
       "championship_odds_before": {
-        "ULK": 15.1,
-        "ZAL": 4.1
+        "ULK": 20.6,
+        "ZAL": 0.0
       },
       "championship_odds_after": {
         "ULK": 20.6,
@@ -42879,8 +42965,8 @@
       ],
       "series_label": "ULK leads 2-0",
       "championship_odds_before": {
-        "ULK": 15.1,
-        "ZAL": 4.1
+        "ULK": 20.6,
+        "ZAL": 0.0
       },
       "championship_odds_after": {
         "ULK": 20.6,
@@ -42904,8 +42990,8 @@
       ],
       "series_label": "ULK leads 2-1",
       "championship_odds_before": {
-        "ZAL": 4.1,
-        "ULK": 15.1
+        "ZAL": 0.0,
+        "ULK": 20.6
       },
       "championship_odds_after": {
         "ZAL": 0.0,
@@ -42929,8 +43015,8 @@
       ],
       "series_label": "ULK leads 3-1",
       "championship_odds_before": {
-        "ZAL": 4.1,
-        "ULK": 15.1
+        "ZAL": 0.0,
+        "ULK": 20.6
       },
       "championship_odds_after": {
         "ZAL": 0.0,
@@ -43853,7 +43939,7 @@
             "metric": "paint_pct",
             "label": "Paint %",
             "high": 40.2,
-            "low": 41.5
+            "low": 41.7
           },
           {
             "metric": "ft_rate",
@@ -44268,8 +44354,8 @@
           {
             "metric": "paint_pct",
             "label": "Paint %",
-            "high": 38.0,
-            "low": 45.7
+            "high": 38.1,
+            "low": 45.4
           },
           {
             "metric": "ft_rate",
@@ -44398,7 +44484,7 @@
             "metric": "paint_pct",
             "label": "Paint %",
             "high": 37.5,
-            "low": 38.0
+            "low": 38.1
           },
           {
             "metric": "ft_rate",
