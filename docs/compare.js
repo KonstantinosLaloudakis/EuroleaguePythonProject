@@ -73,3 +73,74 @@ function renderAll() {
   renderToT();
   renderSeasonTables();
 }
+
+function setupSearch(slot) {
+  const input    = document.getElementById(`input-${slot}`);
+  const dropdown = document.getElementById(`dropdown-${slot}`);
+  let activeIdx  = -1;
+
+  function hideDropdown() {
+    dropdown.style.display = 'none';
+    dropdown.innerHTML = '';
+    activeIdx = -1;
+  }
+
+  function selectItem(code) {
+    const player = _lookup[code];
+    if (!player) return;
+    if (slot === 'a') _slotA = Object.assign({ _code: code }, player);
+    else              _slotB = Object.assign({ _code: code }, player);
+    updateURL();
+    syncInputs();
+    hideDropdown();
+    renderAll();
+  }
+
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    if (q.length < 1) { hideDropdown(); return; }
+
+    const matches = _index
+      .filter(p => p.name.toLowerCase().includes(q))
+      .slice(0, 12);
+
+    if (matches.length === 0) { hideDropdown(); return; }
+
+    dropdown.innerHTML = matches.map((p, i) => `
+      <div class="autocomplete-item" data-code="${p.code}" data-idx="${i}">
+        <span>${p.name}</span>
+        <span class="autocomplete-item-meta">${p.current_team || ''} · ${p.seasons} szn${p.seasons !== 1 ? 's' : ''}</span>
+      </div>
+    `).join('');
+    dropdown.style.display = 'block';
+    activeIdx = -1;
+  });
+
+  dropdown.addEventListener('mousedown', e => {
+    const item = e.target.closest('.autocomplete-item');
+    if (item) selectItem(item.dataset.code);
+  });
+
+  input.addEventListener('keydown', e => {
+    const items = dropdown.querySelectorAll('.autocomplete-item');
+    if (!items.length) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      activeIdx = Math.min(activeIdx + 1, items.length - 1);
+      items.forEach((el, i) => el.classList.toggle('active', i === activeIdx));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      activeIdx = Math.max(activeIdx - 1, 0);
+      items.forEach((el, i) => el.classList.toggle('active', i === activeIdx));
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      const active = dropdown.querySelector('.autocomplete-item.active');
+      if (active) selectItem(active.dataset.code);
+      else if (items.length === 1) selectItem(items[0].dataset.code);
+    } else if (e.key === 'Escape') {
+      hideDropdown();
+    }
+  });
+
+  input.addEventListener('blur', () => setTimeout(hideDropdown, 150));
+}
