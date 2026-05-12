@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f1117">
+  <title>Player Comparison — Euroleague Analytics</title>
+  <meta name="description" content="Compare any two Euroleague players across their careers: scoring, rebounding, playmaking, efficiency.">
+  <meta property="og:title" content="Player Comparison — Euroleague Analytics">
+  <meta property="og:description" content="Side-by-side career comparison for any two players in 19 seasons of Euroleague history.">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .compare-page { max-width: 1100px; margin: 0 auto; padding: 20px 16px; }
+
+    /* ── Search row ────────────────────────────────────────────── */
+    .compare-search-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 12px;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+    .search-slot { position: relative; }
+    .search-slot label {
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 6px;
+    }
+    .search-slot input {
+      width: 100%;
+      padding: 10px 14px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text-primary);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color .15s;
+    }
+    .search-slot input:focus { border-color: var(--accent-blue); }
+    .autocomplete-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-top: none;
+      border-radius: 0 0 var(--radius) var(--radius);
+      max-height: 260px;
+      overflow-y: auto;
+      z-index: 100;
+    }
+    .autocomplete-item {
+      padding: 9px 14px;
+      cursor: pointer;
+      font-size: 13px;
+      color: var(--text-primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    .autocomplete-item:hover, .autocomplete-item.active { background: #1a2744; }
+    .autocomplete-item-meta { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
+    .swap-btn {
+      margin-top: 24px;
+      padding: 10px 14px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text-muted);
+      font-size: 16px;
+      cursor: pointer;
+      transition: color .15s, border-color .15s;
+    }
+    .swap-btn:hover { color: var(--text-primary); border-color: var(--accent-blue); }
+
+    /* ── Hero cards ────────────────────────────────────────────── */
+    .compare-heroes {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .compare-hero-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--team-color, var(--accent-blue));
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .compare-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--team-color, #1d4ed8);
+      border: 2px solid var(--team-color, #2563eb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+    .compare-hero-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 3px;
+    }
+    .compare-hero-meta { font-size: 11px; color: var(--text-muted); margin-bottom: 6px; }
+    .compare-hero-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tag { padding: 2px 10px; border-radius: 999px; font-size: 11px; font-weight: 500; }
+    .tag-team { background: #1e3a8a; color: #93c5fd; }
+    .tag-span { background: var(--bg-secondary); color: var(--text-muted); border: 1px solid var(--border); }
+    .compare-vs {
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-align: center;
+      user-select: none;
+    }
+    .compare-hero-prompt {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+      padding: 24px;
+    }
+
+    /* ── Tale of the Tape ──────────────────────────────────────── */
+    .tot-rows { display: flex; flex-direction: column; gap: 0.45rem; margin-top: 1rem; }
+    .tot-row-block {}
+    .tot-row {
+      display: grid;
+      grid-template-columns: 70px 1fr 70px;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .tot-row-label {
+      text-align: center;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.2rem;
+    }
+    .tot-bar-wrap {
+      display: flex;
+      height: 24px;
+      background: var(--bg-secondary);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .tot-bar-half {
+      display: flex;
+      align-items: center;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      padding: 0 0.5rem;
+      transition: width 0.3s ease;
+    }
+    .tot-bar-half.high { justify-content: flex-end; border-radius: 4px 0 0 4px; }
+    .tot-bar-half.low  { justify-content: flex-start; border-radius: 0 4px 4px 0; }
+    .tot-bar-half.dim  { opacity: 0.45; }
+    .tot-value { font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--text-primary); text-align: center; }
+    .tot-value.high { text-align: right; }
+    .tot-value.low  { text-align: left; }
+    .tot-value.dim  { color: var(--text-muted); font-weight: 600; }
+
+    /* ── Season tables ──────────────────────────────────────────── */
+    .compare-tables-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .compare-table-wrap {}
+    .compare-table-header {
+      padding: 10px 12px;
+      border-radius: var(--radius) var(--radius) 0 0;
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .stat-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .stat-table thead th {
+      padding: 7px 8px;
+      text-align: right;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      background: var(--bg-primary);
+      white-space: nowrap;
+    }
+    .stat-table thead th:first-child,
+    .stat-table thead th:nth-child(2) { text-align: left; }
+    .stat-table tbody tr { border-bottom: 1px solid #0f1929; }
+    .stat-table tbody tr:hover { background: #1a2744; }
+    .stat-table td { padding: 7px 8px; text-align: right; color: var(--text-secondary); }
+    .stat-table td:first-child { text-align: left; }
+    .stat-table td:nth-child(2) { text-align: left; color: var(--text-muted); font-size: 11px; }
+    .career-row { background: var(--bg-primary) !important; font-weight: 700; border-top: 2px solid var(--border) !important; }
+    .career-row td { color: var(--text-secondary); }
+
+    /* ── Empty / error states ───────────────────────────────────── */
+    .compare-empty { text-align: center; color: var(--text-muted); font-size: 13px; padding: 40px 20px; }
+
+    /* ── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 767px) {
+      .compare-search-row { grid-template-columns: 1fr; }
+      .swap-btn { margin-top: 0; width: 100%; }
+      .compare-heroes { grid-template-columns: 1fr; }
+      .compare-vs { display: none; }
+      .compare-tables-row { grid-template-columns: 1fr; }
+      .tot-row { grid-template-columns: 56px 1fr 56px; gap: 0.35rem; }
+      .tot-value { font-size: 0.75rem; }
+      .tot-bar-half { font-size: 0.68rem; padding: 0 0.35rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <span class="site-nav-brand">🏀 Euroleague Analytics</span>
+    <a href="index.html" class="nav-link">Season Hub</a>
+    <a href="team.html" class="nav-link">Team Deep-Dive</a>
+    <a href="players.html" class="nav-link">Player Stats</a>
+    <a href="player.html" class="nav-link">Careers</a>
+    <a href="compare.html" class="nav-link active">Compare</a>
+    <a href="h2h.html" class="nav-link">Head-to-Head</a>
+    <a href="recap.html" class="nav-link">Game Recap</a>
+    <a href="shots.html" class="nav-link">Shot Lab</a>
+    <a href="network.html" class="nav-link">Playmaking</a>
+    <a href="replay.html" class="nav-link">Game Replay</a>
+    <a href="records.html" class="nav-link">All-Time Records</a>
+    <a href="playoffs.html" class="nav-link">Playoffs</a>
+    <a href="mvp.html" class="nav-link">MVP Race</a>
+    <a href="game-control.html" class="nav-link">Game Control</a>
+    <a href="gci-history.html" class="nav-link">GCI History</a>
+    <a href="about.html" class="nav-link">About</a>
+  </nav>
+
+  <main class="compare-page">
+    <div class="compare-search-row">
+      <div class="search-slot" id="slot-a">
+        <label>Player A</label>
+        <input type="text" id="input-a" placeholder="Search player…" autocomplete="off">
+        <div class="autocomplete-dropdown" id="dropdown-a" style="display:none"></div>
+      </div>
+      <button class="swap-btn" id="swap-btn" title="Swap players">⇄</button>
+      <div class="search-slot" id="slot-b">
+        <label>Player B</label>
+        <input type="text" id="input-b" placeholder="Search player…" autocomplete="off">
+        <div class="autocomplete-dropdown" id="dropdown-b" style="display:none"></div>
+      </div>
+    </div>
+
+    <div id="compare-heroes"></div>
+    <div id="compare-tot"></div>
+    <div id="compare-tables"></div>
+  </main>
+
+  <script src="constants.js"></script>
+  <script src="compare.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5f641b8c23db459fa52246a9414adfb3"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>
