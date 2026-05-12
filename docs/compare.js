@@ -203,3 +203,52 @@ function renderHeroCards() {
       </div>`;
   }
 }
+
+function renderToT() {
+  const el = document.getElementById('compare-tot');
+  if (!_slotA || !_slotB) { el.innerHTML = ''; return; }
+
+  const careerA = _slotA.career || {};
+  const careerB = _slotB.career || {};
+  const colorA  = lastTeamColor(_slotA);
+  const colorB  = lastTeamColor(_slotB);
+
+  const rowsHtml = TOT_STATS.map(({ key, label, pct }) => {
+    const vA = careerA[key];
+    const vB = careerB[key];
+    if (vA == null && vB == null) return '';
+
+    const numA   = Number(vA) || 0;
+    const numB   = Number(vB) || 0;
+    const aWins  = numA >= numB;
+    const total  = numA + numB || 1;
+    const pctA   = Math.max(15, Math.min(85, Math.round((numA / total) * 100)));
+    const pctB   = 100 - pctA;
+    const suffix = pct ? '%' : '';
+
+    return `
+      <div class="tot-row-block">
+        <div class="tot-row-label">${label}</div>
+        <div class="tot-row">
+          <div class="tot-value high ${!aWins ? 'dim' : ''}">${fmt(vA)}${suffix}</div>
+          <div class="tot-bar-wrap">
+            <div class="tot-bar-half high ${!aWins ? 'dim' : ''}"
+                 style="width:${pctA}%;background:${colorA}"></div>
+            <div class="tot-bar-half low ${aWins ? 'dim' : ''}"
+                 style="width:${pctB}%;background:${colorB}"></div>
+          </div>
+          <div class="tot-value low ${aWins ? 'dim' : ''}">${fmt(vB)}${suffix}</div>
+        </div>
+      </div>`;
+  }).join('');
+
+  el.innerHTML = `
+    <div class="stat-card">
+      <h3>Career Averages</h3>
+      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px">
+        <span style="color:${colorA};font-weight:700">${_slotA.name}</span>
+        <span style="color:${colorB};font-weight:700">${_slotB.name}</span>
+      </div>
+      <div class="tot-rows">${rowsHtml}</div>
+    </div>`;
+}
