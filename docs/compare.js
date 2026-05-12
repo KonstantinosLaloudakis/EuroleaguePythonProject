@@ -166,7 +166,7 @@ function renderHeroCard(player) {
   const avatarHtml = player.image
     ? `<img class="compare-avatar" src="${player.image}" alt="${player.name}"
            style="--team-color:${color}"
-           onerror="this.outerHTML='<div class=\\'compare-avatar\\' style=\\'--team-color:${color}\\'>${initials}</div>'"`
+           onerror="this.outerHTML='<div class=\\'compare-avatar\\' style=\\'--team-color:${color}\\'>${initials}</div>'">``
     : `<div class="compare-avatar" style="--team-color:${color}">${initials}</div>`;
 
   return `
@@ -221,9 +221,19 @@ function renderToT() {
     const numA   = Number(vA) || 0;
     const numB   = Number(vB) || 0;
     const aWins  = numA >= numB;
-    const total  = numA + numB || 1;
-    const pctA   = Math.max(15, Math.min(85, Math.round((numA / total) * 100)));
-    const pctB   = 100 - pctA;
+    let pctA, pctB;
+    if (pct) {
+      // percentage stats: scale bars relative to 100% max so 52% vs 48% shows nearly equal bars
+      pctA = Math.max(15, Math.min(85, Math.round(numA)));
+      pctB = Math.max(15, Math.min(85, Math.round(numB)));
+      const sumAB = pctA + pctB;
+      pctA = Math.round((pctA / sumAB) * 100);
+      pctB = 100 - pctA;
+    } else {
+      const total = numA + numB || 1;
+      pctA = Math.max(15, Math.min(85, Math.round((numA / total) * 100)));
+      pctB = 100 - pctA;
+    }
     const suffix = pct ? '%' : '';
 
     return `
@@ -310,7 +320,7 @@ function renderSeasonTables() {
 document.addEventListener('DOMContentLoaded', async () => {
   let data;
   try {
-    data = await fetch(COMPARE_DATA_URL).then(r => r.json());
+    data = await fetchJSON(COMPARE_DATA_URL);
   } catch {
     document.getElementById('compare-heroes').innerHTML =
       '<p class="compare-empty">Could not load player data.</p>';
