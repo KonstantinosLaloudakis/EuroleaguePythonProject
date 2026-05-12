@@ -144,3 +144,62 @@ function setupSearch(slot) {
 
   input.addEventListener('blur', () => setTimeout(hideDropdown, 150));
 }
+
+function renderHeroCard(player) {
+  const color    = lastTeamColor(player);
+  const initials = playerInitials(player);
+  const current  = player.seasons && player.seasons[0];
+  const first    = player.seasons && player.seasons[player.seasons.length - 1];
+  const span = (first && current && first !== current)
+    ? `${first.season.slice(0, 4)}–${current.season.slice(5)}`
+    : (current ? current.season : '');
+
+  const teams = [];
+  const seen  = new Set();
+  (player.seasons || []).forEach(s => {
+    if (s.team_name && !seen.has(s.team_code)) {
+      seen.add(s.team_code);
+      teams.push(s.team_name);
+    }
+  });
+
+  const avatarHtml = player.image
+    ? `<img class="compare-avatar" src="${player.image}" alt="${player.name}"
+           style="--team-color:${color}"
+           onerror="this.outerHTML='<div class=\\'compare-avatar\\' style=\\'--team-color:${color}\\'>${initials}</div>'"`
+    : `<div class="compare-avatar" style="--team-color:${color}">${initials}</div>`;
+
+  return `
+    <div class="compare-hero-card" style="--team-color:${color}">
+      ${avatarHtml}
+      <div>
+        <div class="compare-hero-name">${player.name}</div>
+        <div class="compare-hero-meta">${[player.position, player.nationality].filter(Boolean).join(' · ')}</div>
+        <div class="compare-hero-tags">
+          ${current ? `<span class="tag tag-team">${current.team_name || current.team_code}</span>` : ''}
+          <span class="tag tag-span">${player.seasons.length} season${player.seasons.length !== 1 ? 's' : ''}${span ? ' · ' + span : ''}</span>
+        </div>
+      </div>
+    </div>`;
+}
+
+function renderHeroCards() {
+  const el = document.getElementById('compare-heroes');
+  if (!_slotA && !_slotB) { el.innerHTML = ''; return; }
+
+  if (_slotA && _slotB) {
+    el.innerHTML = `
+      <div class="compare-heroes">
+        ${renderHeroCard(_slotA)}
+        <div class="compare-vs">VS</div>
+        ${renderHeroCard(_slotB)}
+      </div>`;
+  } else {
+    const player = _slotA || _slotB;
+    el.innerHTML = `
+      <div class="compare-heroes" style="grid-template-columns:1fr">
+        ${renderHeroCard(player)}
+        <p class="compare-hero-prompt">Search a second player to compare</p>
+      </div>`;
+  }
+}
