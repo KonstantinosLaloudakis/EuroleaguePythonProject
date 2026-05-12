@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f1117">
+  <title>Championship Chase — Euroleague Analytics</title>
+  <meta name="description" content="Track how every team's Euroleague title probability evolved through the 2024-25 playoffs — round by round.">
+  <meta property="og:title" content="Championship Chase — Euroleague Analytics">
+  <meta property="og:description" content="Title probability for every contender through the 2024-25 Euroleague playoffs, round by round.">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .chase-page { max-width: 1100px; margin: 0 auto; padding: 20px 16px; }
+
+    /* ── Page header ──────────────────────────────────────── */
+    .chase-header { margin-bottom: 20px; }
+    .chase-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .chase-subtitle { font-size: 13px; color: var(--text-muted); }
+
+    /* ── Hero strip ───────────────────────────────────────── */
+    .chase-hero {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .chase-hero-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--card-accent, var(--accent-blue));
+      border-radius: var(--radius);
+      padding: 14px 16px;
+    }
+    .chase-hero-label {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 4px;
+    }
+    .chase-hero-value {
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .chase-hero-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+    /* ── Chart card ───────────────────────────────────────── */
+    .chase-chart-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .chase-card-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .chase-card-hint { font-size: 11px; color: var(--text-muted); margin-bottom: 12px; }
+    #chase-chart { width: 100%; height: 380px; }
+
+    /* ── Table card ───────────────────────────────────────── */
+    .chase-table-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      overflow-x: auto;
+    }
+    .chase-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .chase-table thead th {
+      padding: 7px 10px;
+      text-align: right;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      background: var(--bg-primary);
+      position: sticky;
+      top: 0;
+    }
+    .chase-table thead th:first-child { text-align: left; }
+    .chase-table tbody tr { border-bottom: 1px solid #0f1929; }
+    .chase-table tbody tr:hover { background: #1a2744; }
+    .chase-table td { padding: 7px 10px; text-align: right; color: var(--text-secondary); }
+    .chase-table td:first-child { text-align: left; font-weight: 700; }
+    .chase-table tr.eliminated td { color: var(--text-muted); font-weight: 400; }
+    .chase-table tr.eliminated td:first-child { font-weight: 400; }
+    .delta-pos { color: var(--accent-green); font-weight: 700; }
+    .delta-neg { color: var(--accent-red); font-weight: 700; }
+    .delta-zero { color: var(--text-muted); }
+
+    /* ── Responsive ───────────────────────────────────────── */
+    @media (max-width: 767px) {
+      .chase-hero { grid-template-columns: 1fr; }
+      .chase-title { font-size: 22px; }
+      #chase-chart { height: 300px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <span class="site-nav-brand">🏀 Euroleague Analytics</span>
+    <a href="index.html" class="nav-link">Season Hub</a>
+    <a href="team.html" class="nav-link">Team Deep-Dive</a>
+    <a href="players.html" class="nav-link">Player Stats</a>
+    <a href="player.html" class="nav-link">Careers</a>
+    <a href="compare.html" class="nav-link">Compare</a>
+    <a href="h2h.html" class="nav-link">Head-to-Head</a>
+    <a href="recap.html" class="nav-link">Game Recap</a>
+    <a href="shots.html" class="nav-link">Shot Lab</a>
+    <a href="playoffs.html" class="nav-link">Playoffs</a>
+    <a href="mvp.html" class="nav-link">MVP Race</a>
+    <div class="nav-more">
+      <span class="nav-link nav-more-btn active">More ▾</span>
+      <div class="nav-more-dropdown">
+        <a href="network.html" class="nav-link">Playmaking</a>
+        <a href="replay.html" class="nav-link">Game Replay</a>
+        <a href="records.html" class="nav-link">All-Time Records</a>
+        <a href="game-control.html" class="nav-link">Game Control</a>
+        <a href="gci-history.html" class="nav-link">GCI History</a>
+        <a href="title-race.html" class="nav-link active">Title Race</a>
+      </div>
+    </div>
+    <a href="about.html" class="nav-link">About</a>
+  </nav>
+
+  <main class="chase-page">
+    <div class="chase-header">
+      <h1 class="chase-title">🏆 2024-25 Championship Chase</h1>
+      <p class="chase-subtitle">Title probability for every contender through the playoffs · updated each round</p>
+    </div>
+
+    <div id="chase-hero" class="chase-hero"></div>
+
+    <div class="chase-chart-card">
+      <div class="chase-card-title">Title Probability Over the Season</div>
+      <div class="chase-card-hint">Click legend to show/hide teams · hover for exact values</div>
+      <div id="chase-chart"></div>
+    </div>
+
+    <div class="chase-table-card">
+      <div class="chase-card-title" style="margin-bottom:12px">Round-by-Round Odds</div>
+      <div id="chase-table"></div>
+    </div>
+  </main>
+
+  <script src="constants.js"></script>
+  <script src="title-race.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5f641b8c23db459fa52246a9414adfb3"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>
