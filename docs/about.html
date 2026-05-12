@@ -638,6 +638,24 @@
             </ul>
         </div>
 
+        <!-- ── Lineup Net Ratings ────────────────────────────────── -->
+        <div class="about-section">
+          <h3>📋 Lineup Net Ratings</h3>
+          <p>
+            <span class="metric-name">Lineup Net Ratings</span> measures the combined impact of 5-man
+            units and 2-man pairs on the scoreboard, expressed as points scored or allowed per 100
+            possessions while that group was on the floor together.
+          </p>
+          <ul>
+            <li><span class="metric-name">ORtg</span> — Points scored per 100 possessions when the unit was on the floor.</li>
+            <li><span class="metric-name">DRtg</span> — Points allowed per 100 possessions. Lower is better.</li>
+            <li><span class="metric-name">Net Rtg</span> — ORtg minus DRtg. Positive means the unit outscored opponents.</li>
+            <li><span class="metric-name">Poss</span> — Estimated possessions, using the standard formula: FGA + 0.44 × FTA + TO − OREB.</li>
+            <li>Minimum threshold: 75 possessions for 5-man lineups, 150 for pairs. Units below this are hidden to reduce small-sample noise.</li>
+            <li>Unlike RAPM, lineup ratings are <em>raw</em> — they do not adjust for the quality of opponents faced. A great lineup on a weak schedule will look better than it truly is.</li>
+          </ul>
+        </div>
+
     </main>
 
     <footer class="site-footer">
