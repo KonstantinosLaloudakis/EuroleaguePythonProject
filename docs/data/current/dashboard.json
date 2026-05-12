@@ -1,6 +1,6 @@
 {
   "round": 38,
-  "updated": "2026-05-11T05:10:15Z",
+  "updated": "2026-05-12T04:46:30Z",
   "teams": [
     {
       "team": "OLY",
@@ -12971,6 +12971,28 @@
       "clutch_eff": 0.237
     },
     {
+      "code": "007853",
+      "name": "MCKISSIC, SHAQUIELLE",
+      "team": "OLY",
+      "position": "Guard",
+      "gp": 25,
+      "avg_pts": 4.4,
+      "avg_reb": 1.2,
+      "avg_ast": 1.5,
+      "avg_stl": 0.8,
+      "avg_to": 0.4,
+      "avg_blk": 0.0,
+      "avg_pir": 5.3,
+      "fg_pct": 45.7,
+      "fg3_pct": 25.7,
+      "ft_pct": 64.3,
+      "mvp_score": 47.2,
+      "mvp_rank": 169,
+      "wpa": 270.7,
+      "consistency": 0.491,
+      "clutch_eff": 0.046
+    },
+    {
       "code": "005844",
       "name": "PAPAGIANNIS, GEORGIOS",
       "team": "IST",
@@ -13035,28 +13057,6 @@
       "wpa": 385.5,
       "consistency": 0.52,
       "clutch_eff": 0.133
-    },
-    {
-      "code": "007853",
-      "name": "MCKISSIC, SHAQUIELLE",
-      "team": "OLY",
-      "position": "Guard",
-      "gp": 25,
-      "avg_pts": 4.4,
-      "avg_reb": 1.2,
-      "avg_ast": 1.4,
-      "avg_stl": 0.8,
-      "avg_to": 0.4,
-      "avg_blk": 0.0,
-      "avg_pir": 5.2,
-      "fg_pct": 45.7,
-      "fg3_pct": 25.7,
-      "ft_pct": 64.3,
-      "mvp_score": 47.2,
-      "mvp_rank": 169,
-      "wpa": 270.7,
-      "consistency": 0.491,
-      "clutch_eff": 0.046
     },
     {
       "code": "012745",
@@ -17177,7 +17177,7 @@
       "team": "OLY",
       "RAPM": 0.05,
       "ORAPM": -0.19,
-      "DRAPM": 0.37,
+      "DRAPM": 0.38,
       "RAPM_basic": -0.02,
       "prior": 0.06,
       "est_minutes": 445.0,
@@ -17429,7 +17429,7 @@
       "team": "PAR",
       "RAPM": -0.12,
       "ORAPM": -0.06,
-      "DRAPM": 0.13,
+      "DRAPM": 0.12,
       "RAPM_basic": -0.16,
       "prior": 0.04,
       "est_minutes": 2039.0,
@@ -20073,8 +20073,8 @@
     {
       "player": "MCKISSIC, SHAQUIELLE",
       "team": "OLY",
-      "wpa": 270.69,
-      "plays": 358,
+      "wpa": 270.59,
+      "plays": 359,
       "rank": 197
     },
     {
@@ -42601,6 +42601,22 @@
         "BAR": 0.0,
         "RED": 0.0
       }
+    },
+    {
+      "date": "2026-05-12",
+      "label": "QF Day 15",
+      "odds": {
+        "OLY": 30.4,
+        "PAM": 12.1,
+        "MAD": 28.6,
+        "ULK": 20.6,
+        "ZAL": 0.0,
+        "HTA": 0.0,
+        "PAN": 8.3,
+        "MCO": 0.0,
+        "BAR": 0.0,
+        "RED": 0.0
+      }
     }
   ],
   "playoff_recaps": [
@@ -45189,6 +45205,19 @@
       "avg_pir": 10.0
     },
     {
+      "code": "007853",
+      "name": "MCKISSIC, SHAQUIELLE",
+      "team": "OLY",
+      "gp": 3,
+      "avg_pts": 8.7,
+      "avg_reb": 1.7,
+      "avg_ast": 1.3,
+      "avg_stl": 0.3,
+      "avg_blk": 0.0,
+      "avg_to": 0.0,
+      "avg_pir": 10.0
+    },
+    {
       "code": "002329",
       "name": "ULANOVAS, EDGARAS",
       "team": "ZAL",
@@ -45226,19 +45255,6 @@
       "avg_blk": 0.0,
       "avg_to": 2.0,
       "avg_pir": 9.8
-    },
-    {
-      "code": "007853",
-      "name": "MCKISSIC, SHAQUIELLE",
-      "team": "OLY",
-      "gp": 3,
-      "avg_pts": 8.7,
-      "avg_reb": 1.7,
-      "avg_ast": 1.0,
-      "avg_stl": 0.3,
-      "avg_blk": 0.0,
-      "avg_to": 0.0,
-      "avg_pir": 9.7
     },
     {
       "code": "014168",
