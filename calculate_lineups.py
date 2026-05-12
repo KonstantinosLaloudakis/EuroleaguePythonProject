@@ -76,11 +76,11 @@ def process_season(season):
     def to_records(agg, min_poss):
         records = []
         for (team, lineup), d in agg.items():
-            if d['poss'] < min_poss:
-                continue
             # combined poss from extract_stints counts both teams' plays;
             # divide by 2 to get per-team possession estimate
             team_poss = d['poss'] / 2
+            if team_poss < min_poss:
+                continue
             ortg = d['pts_for']    / team_poss * 100
             drtg = d['pts_against']/ team_poss * 100
             records.append({

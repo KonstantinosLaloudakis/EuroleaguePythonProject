@@ -83,8 +83,10 @@ function renderTable() {
 
   rows.sort((a, b) => {
     const av = a[sortCol], bv = b[sortCol];
-    if (typeof av === 'string') return sortAsc ? av.localeCompare(bv) : bv.localeCompare(av);
-    return sortAsc ? av - bv : bv - av;
+    const aStr = Array.isArray(av) ? av.join(', ') : av;
+    const bStr = Array.isArray(bv) ? bv.join(', ') : bv;
+    if (typeof aStr === 'string') return sortAsc ? aStr.localeCompare(bStr) : bStr.localeCompare(aStr);
+    return sortAsc ? aStr - bStr : bStr - aStr;
   });
 
   const minPoss = activeTab === 'fiveman' ? MIN_POSS_5 : MIN_POSS_2;
