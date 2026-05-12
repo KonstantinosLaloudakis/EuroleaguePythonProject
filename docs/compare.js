@@ -252,3 +252,86 @@ function renderToT() {
       <div class="tot-rows">${rowsHtml}</div>
     </div>`;
 }
+
+function buildSeasonTable(player) {
+  const color  = lastTeamColor(player);
+  const career = player.career || {};
+
+  const headerCols = TABLE_COLS.map(c => `<th>${c.label}</th>`).join('');
+  const careerCols = TABLE_COLS.map(c => `<td>${fmt(career[c.key], c.dec)}</td>`).join('');
+
+  const seasonRows = (player.seasons || []).map(s => {
+    const cols = TABLE_COLS.map(c => `<td>${fmt(s[c.key], c.dec)}</td>`).join('');
+    return `<tr>
+      <td>${s.season}</td>
+      <td>${s.team_name || s.team_code}</td>
+      <td>${s.gp != null ? Math.round(s.gp) : '—'}</td>
+      ${cols}
+    </tr>`;
+  }).join('');
+
+  return `
+    <div class="compare-table-wrap">
+      <div class="compare-table-header" style="background:${color}">${player.name}</div>
+      <table class="stat-table">
+        <thead>
+          <tr>
+            <th style="text-align:left">Season</th>
+            <th style="text-align:left">Team</th>
+            <th>GP</th>
+            ${headerCols}
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="career-row">
+            <td>Career</td>
+            <td></td>
+            <td>${career.gp != null ? Math.round(career.gp) : '—'}</td>
+            ${careerCols}
+          </tr>
+          ${seasonRows}
+        </tbody>
+      </table>
+    </div>`;
+}
+
+function renderSeasonTables() {
+  const el = document.getElementById('compare-tables');
+  if (!_slotA && !_slotB) { el.innerHTML = ''; return; }
+
+  if (_slotA && _slotB) {
+    el.innerHTML = `<div class="compare-tables-row">${buildSeasonTable(_slotA)}${buildSeasonTable(_slotB)}</div>`;
+  } else {
+    const player = _slotA || _slotB;
+    el.innerHTML = `<div>${buildSeasonTable(player)}</div>`;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  let data;
+  try {
+    data = await fetch(COMPARE_DATA_URL).then(r => r.json());
+  } catch {
+    document.getElementById('compare-heroes').innerHTML =
+      '<p class="compare-empty">Could not load player data.</p>';
+    return;
+  }
+  buildLookup(data);
+
+  const { a, b } = getParams();
+  if (a && _lookup[a]) _slotA = Object.assign({ _code: a }, _lookup[a]);
+  if (b && _lookup[b]) _slotB = Object.assign({ _code: b }, _lookup[b]);
+
+  setupSearch('a');
+  setupSearch('b');
+
+  document.getElementById('swap-btn').addEventListener('click', () => {
+    [_slotA, _slotB] = [_slotB, _slotA];
+    updateURL();
+    syncInputs();
+    renderAll();
+  });
+
+  syncInputs();
+  renderAll();
+});
