@@ -644,7 +644,7 @@ footer {
     position: sticky;
     top: 0;
     z-index: 100;
-    overflow-x: auto;
+    overflow-x: clip;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
 }
