@@ -14,7 +14,7 @@ def parse_lineup(val):
         return None
     try:
         players = ast.literal_eval(val) if isinstance(val, str) else val
-        if isinstance(players, list) and len(players) == 5:
+        if isinstance(players, list) and len(players) == 5 and len(set(players)) == 5:
             return tuple(sorted(players))
     except Exception:
         pass

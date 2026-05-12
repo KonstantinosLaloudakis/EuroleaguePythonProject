@@ -78,13 +78,16 @@ def process_season(season):
         for (team, lineup), d in agg.items():
             if d['poss'] < min_poss:
                 continue
-            ortg = d['pts_for']    / d['poss'] * 100
-            drtg = d['pts_against']/ d['poss'] * 100
+            # combined poss from extract_stints counts both teams' plays;
+            # divide by 2 to get per-team possession estimate
+            team_poss = d['poss'] / 2
+            ortg = d['pts_for']    / team_poss * 100
+            drtg = d['pts_against']/ team_poss * 100
             records.append({
                 'season': season,
                 'team':   team,
                 'players': list(lineup),
-                'poss':   round(d['poss'], 1),
+                'poss':   round(team_poss, 1),
                 'ortg':   round(ortg, 1),
                 'drtg':   round(drtg, 1),
                 'netrtg': round(ortg - drtg, 1),

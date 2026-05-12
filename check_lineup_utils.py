@@ -14,6 +14,7 @@ assert result == tuple(sorted(result)), "should be sorted"
 assert parse_lineup(None) is None, "None → None"
 assert parse_lineup(float('nan')) is None, "nan → None"
 assert parse_lineup("['A', 'B']") is None, "< 5 players → None"
+assert parse_lineup("['A, B', 'C, D', 'E, F', 'A, B', 'G, H']") is None, "duplicate player → None"
 
 # constants exported
 assert '2FGM' in FGA_TYPES
