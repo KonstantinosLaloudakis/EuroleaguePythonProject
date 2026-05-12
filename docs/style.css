@@ -680,6 +680,43 @@ footer {
     background: rgba(168, 85, 247, 0.12);
 }
 
+/* ── More ▾ dropdown ─────────────────────────────────────── */
+.nav-more {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-more-btn {
+    cursor: default;
+    user-select: none;
+}
+
+.nav-more-dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    min-width: 160px;
+    padding: 4px;
+    z-index: 200;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.nav-more:hover .nav-more-dropdown,
+.nav-more:focus-within .nav-more-dropdown {
+    display: flex;
+}
+
+.nav-more-dropdown .nav-link {
+    border-radius: 6px;
+    width: 100%;
+}
+
 /* ── Playoff Banner ──────────────────────────────────────── */
 .playoff-banner {
     display: flex;
