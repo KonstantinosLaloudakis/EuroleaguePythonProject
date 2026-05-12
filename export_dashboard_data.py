@@ -1884,12 +1884,13 @@ def main():
         qf = playoff_results.get('qf', {})
         qf_games = sum(len(q.get('games', [])) for q in qf.values())
         if qf_games > 0:
-            return f'QF G{qf_games}'
+            qf_round = (qf_games + 3) // 4  # ceil(qf_games / 4)
+            return f'QF Round {qf_round}'
 
         pi = playoff_results.get('play_in', {})
         pi_count = sum(1 for k in ['game_a', 'game_b', 'game_c'] if pi.get(k) and pi[k].get('winner'))
         if pi_count > 0:
-            return f'Play-In G{pi_count}'
+            return 'After Play-Ins'
 
         return 'Playoffs'
 
