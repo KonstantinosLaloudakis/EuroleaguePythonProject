@@ -73,10 +73,25 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function renderChart(checkpoints) {
-  // Use date as X axis — labels repeat across checkpoints (e.g. "QF Day 8" × 4)
-  // so dates (always unique) prevent duplicate tick marks.
-  const dates  = checkpoints.map(c => c.date);
-  const latest = checkpoints[checkpoints.length - 1];
+  // X axis: numeric indices 0…N-1. Many checkpoints share the same label
+  // (e.g. "QF Day 8" × 4), so we only show a tick at the FIRST occurrence
+  // of each unique label — no duplicate tick marks, no confusing dates.
+  const indices = checkpoints.map((_, i) => i);
+  const latest  = checkpoints[checkpoints.length - 1];
+
+  // Build tick positions and labels for unique labels only
+  const seenLabels = new Set();
+  const tickvals   = [];
+  const ticktext   = [];
+  checkpoints.forEach((c, i) => {
+    if (!seenLabels.has(c.label)) {
+      seenLabels.add(c.label);
+      tickvals.push(i);
+      ticktext.push(c.label);
+    }
+  });
+
+  const firstQFIdx = checkpoints.findIndex(c => c.label.startsWith('QF'));
 
   const allTeams = Object.entries(latest.odds)
     .sort((a, b) => b[1] - a[1])
@@ -88,7 +103,7 @@ function renderChart(checkpoints) {
     const yValues      = checkpoints.map(c => c.odds[code] ?? 0);
 
     return {
-      x: dates,
+      x: indices,
       y: yValues,
       name: teamName(code),
       type: 'scatter',
@@ -101,19 +116,16 @@ function renderChart(checkpoints) {
     };
   });
 
-  const firstQF = checkpoints.find(c => c.label.startsWith('QF'));
-  const qfDate  = firstQF ? firstQF.date : null;
-
   const layout = {
     paper_bgcolor: 'transparent',
     plot_bgcolor:  'transparent',
     font:  { color: '#9ca3af', family: 'Inter, sans-serif', size: 11 },
     xaxis: {
-      type:       'date',
+      tickvals,
+      ticktext,
       gridcolor:  '#2d2e3a',
       tickangle:  -40,
       automargin: true,
-      tickformat: '%b %d',
     },
     yaxis: {
       title:      { text: 'Title Probability (%)', font: { size: 11 } },
@@ -129,16 +141,16 @@ function renderChart(checkpoints) {
       font:        { size: 11 },
     },
     margin: { t: 16, r: 16, b: 80, l: 60 },
-    shapes: qfDate ? [{
+    shapes: firstQFIdx >= 0 ? [{
       type: 'line',
       xref: 'x', yref: 'paper',
-      x0: qfDate, x1: qfDate,
+      x0: firstQFIdx, x1: firstQFIdx,
       y0: 0, y1: 1,
       line: { color: '#f59e0b', width: 1.5, dash: 'dot' },
     }] : [],
-    annotations: qfDate ? [{
+    annotations: firstQFIdx >= 0 ? [{
       xref: 'x', yref: 'paper',
-      x: qfDate, y: 0.98,
+      x: firstQFIdx, y: 0.98,
       text: 'Quarters begin',
       showarrow: false,
       font: { color: '#f59e0b', size: 10 },
@@ -160,7 +172,7 @@ function renderTable(checkpoints) {
     .map(([code]) => code);
 
   const headerCells = checkpoints.map(c =>
-    `<th title="${c.label} · ${c.date}">${c.date.slice(5)}</th>`
+    `<th title="${c.label}">${c.label.length > 10 ? c.label.slice(0, 9) + '…' : c.label}</th>`
   ).join('');
 
   const rows = allTeams.map(code => {
