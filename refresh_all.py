@@ -153,6 +153,10 @@ def main():
             'Computing Regularized Adjusted Plus-Minus (RAPM)',
             'calculate_rapm.py'
         )))
+        results.append(('Lineup Net Ratings', run_step(
+            'Computing Lineup Net Ratings (5-man + pairs)',
+            'calculate_lineups.py'
+        )))
         results.append(('GCI Ratings', run_step(
             'Computing Game Control Index (GCI)',
             'calculate_gci.py'
