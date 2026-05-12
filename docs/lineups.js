@@ -23,6 +23,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   activeSeason = Math.max(...lineupData.seasons);
   buildSeasonSelector();
   buildTeamFilter();
+  document.getElementById('team-select').addEventListener('change', () => {
+    activeTeam = document.getElementById('team-select').value;
+    renderTable();
+  });
   bindTabButtons();
   renderTable();
 });
@@ -55,10 +59,6 @@ function buildTeamFilter() {
     opt.textContent = (typeof TEAM_NAMES !== 'undefined' && TEAM_NAMES[t]) || t;
     if (t === activeTeam) opt.selected = true;
     sel.appendChild(opt);
-  });
-  sel.addEventListener('change', () => {
-    activeTeam = sel.value;
-    renderTable();
   });
 }
 
