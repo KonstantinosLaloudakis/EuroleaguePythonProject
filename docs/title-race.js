@@ -146,3 +146,49 @@ function renderChart(checkpoints) {
 
   Plotly.newPlot('chase-chart', traces, layout, { displayModeBar: false, responsive: true });
 }
+
+function renderTable(checkpoints) {
+  const latest     = checkpoints[checkpoints.length - 1];
+  const prePlayoff = checkpoints[0];
+  const labels     = checkpoints.map(c => c.label);
+
+  const allTeams = Object.entries(latest.odds)
+    .sort((a, b) => b[1] - a[1])
+    .map(([code]) => code);
+
+  const headerCells = labels.map(l =>
+    `<th title="${l}">${l.length > 10 ? l.slice(0, 9) + '…' : l}</th>`
+  ).join('');
+
+  const rows = allTeams.map(code => {
+    const isEliminated = latest.odds[code] === 0;
+    const delta        = (latest.odds[code] ?? 0) - (prePlayoff.odds[code] || 0);
+    const deltaClass   = delta > 0.05 ? 'delta-pos' : delta < -0.05 ? 'delta-neg' : 'delta-zero';
+    const deltaStr     = delta > 0.05 ? `+${delta.toFixed(1)}pp` : delta < -0.05 ? `${delta.toFixed(1)}pp` : '—';
+    const color        = teamColor(code);
+
+    const cells = checkpoints.map(c => {
+      const v = c.odds[code] ?? 0;
+      return `<td>${v === 0 ? '—' : v.toFixed(1) + '%'}</td>`;
+    }).join('');
+
+    return `
+      <tr class="${isEliminated ? 'eliminated' : ''}">
+        <td style="color:${isEliminated ? 'var(--text-muted)' : color}">${code}</td>
+        ${cells}
+        <td class="${deltaClass}">${deltaStr}</td>
+      </tr>`;
+  }).join('');
+
+  document.getElementById('chase-table').innerHTML = `
+    <table class="chase-table">
+      <thead>
+        <tr>
+          <th>Team</th>
+          ${headerCells}
+          <th>Δ</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+}
