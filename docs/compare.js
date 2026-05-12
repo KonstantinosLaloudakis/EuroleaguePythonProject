@@ -166,7 +166,7 @@ function renderHeroCard(player) {
   const avatarHtml = player.image
     ? `<img class="compare-avatar" src="${player.image}" alt="${player.name}"
            style="--team-color:${color}"
-           onerror="this.outerHTML='<div class=\\'compare-avatar\\' style=\\'--team-color:${color}\\'>${initials}</div>'">``
+           onerror="this.outerHTML='<div class=\\'compare-avatar\\' style=\\'--team-color:${color}\\'>${initials}</div>'">`
     : `<div class="compare-avatar" style="--team-color:${color}">${initials}</div>`;
 
   return `
