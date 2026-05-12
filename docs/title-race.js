@@ -73,25 +73,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function renderChart(checkpoints) {
-  // X axis: numeric indices 0…N-1. Many checkpoints share the same label
-  // (e.g. "QF Day 8" × 4), so we only show a tick at the FIRST occurrence
-  // of each unique label — no duplicate tick marks, no confusing dates.
-  const indices = checkpoints.map((_, i) => i);
-  const latest  = checkpoints[checkpoints.length - 1];
-
-  // Build tick positions and labels for unique labels only
-  const seenLabels = new Set();
-  const tickvals   = [];
-  const ticktext   = [];
-  checkpoints.forEach((c, i) => {
-    if (!seenLabels.has(c.label)) {
-      seenLabels.add(c.label);
-      tickvals.push(i);
-      ticktext.push(c.label);
-    }
+  // Deduplicate: keep only the LAST checkpoint per unique label.
+  // Multiple checkpoints share the same label (e.g. "QF Round 2" × 4);
+  // the last one has the most up-to-date odds for that round.
+  const labelMap = new Map();
+  checkpoints.forEach(c => labelMap.set(c.label, c));
+  // Preserve original label order
+  const seenOrder = [];
+  checkpoints.forEach(c => {
+    if (!seenOrder.includes(c.label)) seenOrder.push(c.label);
   });
+  const dedupedCheckpoints = seenOrder.map(l => labelMap.get(l));
 
-  const firstQFIdx = checkpoints.findIndex(c => c.label.startsWith('QF'));
+  const labels = dedupedCheckpoints.map(c => c.label);
+  const latest = checkpoints[checkpoints.length - 1];
 
   const allTeams = Object.entries(latest.odds)
     .sort((a, b) => b[1] - a[1])
@@ -100,10 +95,10 @@ function renderChart(checkpoints) {
   const traces = allTeams.map(code => {
     const isEliminated = latest.odds[code] === 0;
     const color        = teamColor(code);
-    const yValues      = checkpoints.map(c => c.odds[code] ?? 0);
+    const yValues      = dedupedCheckpoints.map(c => c.odds[code] ?? 0);
 
     return {
-      x: indices,
+      x: labels,
       y: yValues,
       name: teamName(code),
       type: 'scatter',
@@ -111,8 +106,9 @@ function renderChart(checkpoints) {
       line:   { color, width: isEliminated ? 1.5 : 2.5, dash: isEliminated ? 'dash' : 'solid' },
       marker: { color, size: isEliminated ? 3 : 5 },
       opacity: isEliminated ? 0.4 : 1.0,
-      customdata: checkpoints.map(c => c.label),
-      hovertemplate: `<b>${teamName(code)}</b><br>%{y:.1f}%<br><span style="color:#6b7280">%{customdata}</span><extra></extra>`,
+      // Eliminated teams hidden by default — togglable via legend click
+      visible: isEliminated ? 'legendonly' : true,
+      hovertemplate: `<b>${teamName(code)}</b><br>%{y:.1f}%<extra></extra>`,
     };
   });
 
@@ -121,10 +117,8 @@ function renderChart(checkpoints) {
     plot_bgcolor:  'transparent',
     font:  { color: '#9ca3af', family: 'Inter, sans-serif', size: 11 },
     xaxis: {
-      tickvals,
-      ticktext,
       gridcolor:  '#2d2e3a',
-      tickangle:  -40,
+      tickangle:  -20,
       automargin: true,
     },
     yaxis: {
@@ -141,22 +135,8 @@ function renderChart(checkpoints) {
       font:        { size: 11 },
     },
     margin: { t: 16, r: 16, b: 80, l: 60 },
-    shapes: firstQFIdx >= 0 ? [{
-      type: 'line',
-      xref: 'x', yref: 'paper',
-      x0: firstQFIdx, x1: firstQFIdx,
-      y0: 0, y1: 1,
-      line: { color: '#f59e0b', width: 1.5, dash: 'dot' },
-    }] : [],
-    annotations: firstQFIdx >= 0 ? [{
-      xref: 'x', yref: 'paper',
-      x: firstQFIdx, y: 0.98,
-      text: 'Quarters begin',
-      showarrow: false,
-      font: { color: '#f59e0b', size: 10 },
-      xanchor: 'left',
-      yanchor: 'top',
-    }] : [],
+    shapes: [],
+    annotations: [],
   };
 
   Plotly.newPlot('chase-chart', traces, layout, { displayModeBar: false, responsive: true });
@@ -165,14 +145,20 @@ function renderChart(checkpoints) {
 function renderTable(checkpoints) {
   const latest     = checkpoints[checkpoints.length - 1];
   const prePlayoff = checkpoints[0];
-  const labels     = checkpoints.map(c => c.label);
+
+  // Deduplicate same as chart: keep last checkpoint per unique label
+  const labelMap = new Map();
+  checkpoints.forEach(c => labelMap.set(c.label, c));
+  const seenOrder = [];
+  checkpoints.forEach(c => { if (!seenOrder.includes(c.label)) seenOrder.push(c.label); });
+  const dedupedCheckpoints = seenOrder.map(l => labelMap.get(l));
 
   const allTeams = Object.entries(latest.odds)
     .sort((a, b) => b[1] - a[1])
     .map(([code]) => code);
 
-  const headerCells = checkpoints.map(c =>
-    `<th title="${c.label}">${c.label.length > 10 ? c.label.slice(0, 9) + '…' : c.label}</th>`
+  const headerCells = dedupedCheckpoints.map(c =>
+    `<th>${c.label}</th>`
   ).join('');
 
   const rows = allTeams.map(code => {
@@ -182,7 +168,7 @@ function renderTable(checkpoints) {
     const deltaStr     = delta > 0.05 ? `+${delta.toFixed(1)}pp` : delta < -0.05 ? `${delta.toFixed(1)}pp` : '—';
     const color        = teamColor(code);
 
-    const cells = checkpoints.map(c => {
+    const cells = dedupedCheckpoints.map(c => {
       const v = c.odds[code] ?? 0;
       return `<td>${v === 0 ? '—' : v.toFixed(1) + '%'}</td>`;
     }).join('');
