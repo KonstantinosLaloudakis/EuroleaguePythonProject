@@ -5982,6 +5982,36 @@
     "arenaname": "ROIG ARENA",
     "confirmeddate": "true",
     "confirmedtime": "true",
+    "played": "true"
+  },
+  {
+    "gameday": "46",
+    "round": "FF",
+    "date": "May 22, 2026",
+    "startime": "17:00",
+    "gamecode": "E2025_404",
+    "hometeam": "OLYMPIACOS PIRAEUS",
+    "homecode": "OLY",
+    "awayteam": "FENERBAHCE BEKO ISTANBUL",
+    "awaycode": "ULK",
+    "arenaname": "TELEKOM CENTER ATHENS",
+    "confirmeddate": "true",
+    "confirmedtime": "true",
+    "played": "false"
+  },
+  {
+    "gameday": "46",
+    "round": "FF",
+    "date": "May 22, 2026",
+    "startime": "20:00",
+    "gamecode": "E2025_405",
+    "hometeam": "VALENCIA BASKET",
+    "homecode": "PAM",
+    "awayteam": "REAL MADRID",
+    "awaycode": "MAD",
+    "arenaname": "TELEKOM CENTER ATHENS",
+    "confirmeddate": "true",
+    "confirmedtime": "true",
     "played": "false"
   }
 ]

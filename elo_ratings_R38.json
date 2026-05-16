@@ -15,11 +15,6 @@
         "Delta": 57.8
     },
     {
-        "Team": "PAN",
-        "Elo": 1547.1,
-        "Delta": 47.1
-    },
-    {
         "Team": "MCO",
         "Elo": 1547.0,
         "Delta": 47.0
@@ -30,9 +25,14 @@
         "Delta": 46.9
     },
     {
+        "Team": "PAN",
+        "Elo": 1542.6,
+        "Delta": 42.6
+    },
+    {
         "Team": "PAM",
-        "Elo": 1538.0,
-        "Delta": 38.0
+        "Elo": 1542.4,
+        "Delta": 42.4
     },
     {
         "Team": "HTA",
