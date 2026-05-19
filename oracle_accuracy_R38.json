@@ -1,38 +1,38 @@
 {
-  "n_games": 480,
+  "n_games": 511,
   "accuracy": 64.6,
-  "brier_score": 0.2102,
-  "log_loss": 0.6038,
+  "brier_score": 0.2087,
+  "log_loss": 0.6004,
   "calibration": [
     {
       "Bucket": "50-60%",
-      "Count": 150,
-      "Accuracy": 45.3,
-      "AvgConfidence": 56.3
+      "Count": 158,
+      "Accuracy": 50.0,
+      "AvgConfidence": 56.5
     },
     {
       "Bucket": "60-70%",
-      "Count": 151,
-      "Accuracy": 65.6,
-      "AvgConfidence": 64.7
+      "Count": 150,
+      "Accuracy": 58.0,
+      "AvgConfidence": 64.9
     },
     {
       "Bucket": "70-80%",
-      "Count": 116,
-      "Accuracy": 73.3,
-      "AvgConfidence": 76.1
+      "Count": 124,
+      "Accuracy": 75.0,
+      "AvgConfidence": 76.0
     },
     {
       "Bucket": "80-90%",
-      "Count": 35,
-      "Accuracy": 88.6,
-      "AvgConfidence": 85.2
+      "Count": 58,
+      "Accuracy": 87.9,
+      "AvgConfidence": 85.1
     },
     {
       "Bucket": "90%+",
-      "Count": 28,
-      "Accuracy": 96.4,
-      "AvgConfidence": 93.2
+      "Count": 21,
+      "Accuracy": 95.2,
+      "AvgConfidence": 92.9
     }
   ],
   "per_round": [
@@ -79,7 +79,7 @@
     {
       "Round": 9,
       "Games": 10,
-      "Accuracy": 60.0
+      "Accuracy": 50.0
     },
     {
       "Round": 10,
@@ -94,7 +94,7 @@
     {
       "Round": 12,
       "Games": 10,
-      "Accuracy": 80.0
+      "Accuracy": 70.0
     },
     {
       "Round": 13,
@@ -104,7 +104,7 @@
     {
       "Round": 14,
       "Games": 10,
-      "Accuracy": 60.0
+      "Accuracy": 70.0
     },
     {
       "Round": 15,
@@ -114,22 +114,22 @@
     {
       "Round": 16,
       "Games": 10,
-      "Accuracy": 20.0
+      "Accuracy": 10.0
     },
     {
       "Round": 17,
       "Games": 10,
-      "Accuracy": 90.0
+      "Accuracy": 80.0
     },
     {
       "Round": 18,
       "Games": 10,
-      "Accuracy": 60.0
+      "Accuracy": 70.0
     },
     {
       "Round": 19,
-      "Games": 4,
-      "Accuracy": 75.0
+      "Games": 10,
+      "Accuracy": 60.0
     },
     {
       "Round": 20,
@@ -139,7 +139,7 @@
     {
       "Round": 21,
       "Games": 10,
-      "Accuracy": 90.0
+      "Accuracy": 80.0
     },
     {
       "Round": 22,
@@ -149,7 +149,7 @@
     {
       "Round": 23,
       "Games": 10,
-      "Accuracy": 70.0
+      "Accuracy": 80.0
     },
     {
       "Round": 24,
@@ -209,7 +209,7 @@
     {
       "Round": 35,
       "Games": 30,
-      "Accuracy": 66.7
+      "Accuracy": 70.0
     },
     {
       "Round": 36,
@@ -223,8 +223,8 @@
     },
     {
       "Round": 38,
-      "Games": 9,
-      "Accuracy": 100.0
+      "Games": 30,
+      "Accuracy": 80.0
     },
     {
       "Round": 39,
