@@ -5997,7 +5997,7 @@
     "arenaname": "TELEKOM CENTER ATHENS",
     "confirmeddate": "true",
     "confirmedtime": "true",
-    "played": "false"
+    "played": "true"
   },
   {
     "gameday": "46",
@@ -6007,6 +6007,21 @@
     "gamecode": "E2025_405",
     "hometeam": "VALENCIA BASKET",
     "homecode": "PAM",
+    "awayteam": "REAL MADRID",
+    "awaycode": "MAD",
+    "arenaname": "TELEKOM CENTER ATHENS",
+    "confirmeddate": "true",
+    "confirmedtime": "true",
+    "played": "true"
+  },
+  {
+    "gameday": "47",
+    "round": "FF",
+    "date": "May 24, 2026",
+    "startime": "20:00",
+    "gamecode": "E2025_406",
+    "hometeam": "OLYMPIACOS PIRAEUS",
+    "homecode": "OLY",
     "awayteam": "REAL MADRID",
     "awaycode": "MAD",
     "arenaname": "TELEKOM CENTER ATHENS",
