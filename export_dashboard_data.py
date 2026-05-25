@@ -1527,6 +1527,9 @@ def compute_championship_finals_history():
             continue
 
         final_a, final_b = plays[-1]
+        if final_a == final_b:
+            print(f'  [WARN] championship finals {season}: game {final_gc} ended tied {final_a}-{final_b}, skipping')
+            continue
         winner = ta if final_a > final_b else tb
 
         # ── Lead changes & times tied ────────────────────────────────────
