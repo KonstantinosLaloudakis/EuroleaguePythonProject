@@ -222,6 +222,7 @@ async function init() {
         renderPlayoffRecaps(data.playoff_recaps || []);
         renderPathToTitle(data.path_to_title || []);
         renderPlayoffPlayerStats(data.playoff_player_stats || []);
+        renderChampionshipFinals(data.championship_finals_history || []);
     } catch (err) {
         document.getElementById('bracket').innerHTML =
             `<p style="color:var(--accent-red);padding:1rem">Failed to load data: ${err}</p>`;
@@ -1105,15 +1106,23 @@ function renderChampionshipOdds(history) {
 
     section.style.display = '';
 
+    // Deduplicate by label: keep the last entry for each label so each
+    // phase appears as a single point on the x-axis (no zigzag).
+    const seen = new Map();
+    for (const h of history) {
+        seen.set(h.label || h.date, h);
+    }
+    const deduped = Array.from(seen.values());
+
     const allTeams = new Set();
-    for (const entry of history) {
+    for (const entry of deduped) {
         for (const code of Object.keys(entry.odds || {})) allTeams.add(code);
     }
 
     const traces = [];
     for (const code of allTeams) {
-        const xs = history.map(h => h.label || h.date);
-        const ys = history.map(h => (h.odds || {})[code] || 0);
+        const xs = deduped.map(h => h.label || h.date);
+        const ys = deduped.map(h => (h.odds || {})[code] || 0);
         const color = TEAM_COLORS[code] || '#555';
         const name = (_seeded.find(t => t.team === code) || {}).name || code;
         const isEliminated = ys[ys.length - 1] === 0 && ys.some(v => v > 0);
@@ -1640,6 +1649,58 @@ function togglePathDetail(teamCode) {
         renderPathDetailTree(entry, td);
     }
     _pttExpanded = teamCode;
+}
+
+// ── Championship Finals History ───────────────────────────────────────────
+function renderChampionshipFinals(data) {
+    const section = document.getElementById('championship-finals-section');
+    const container = document.getElementById('championship-finals-list');
+    if (!section || !container || !data || !data.length) return;
+
+    section.style.display = '';
+
+    let html = '';
+    data.forEach((entry, i) => {
+        const rank = i + 1;
+        const winnerIsHome = entry.winner === entry.home;
+        const winnerName = winnerIsHome ? entry.home_name : entry.away_name;
+        const loserName  = winnerIsHome ? entry.away_name : entry.home_name;
+        const winnerCode = entry.winner;
+        const loserCode  = winnerIsHome ? entry.away : entry.home;
+        const winScore   = winnerIsHome ? entry.home_score : entry.away_score;
+        const loseScore  = winnerIsHome ? entry.away_score : entry.home_score;
+        const winColor   = TEAM_COLORS[winnerCode] || '#555';
+        const loseColor  = TEAM_COLORS[loserCode]  || '#555';
+
+        const comebackPill = entry.max_deficit_overcome > 0
+            ? `<span class="cf-pill cf-pill-comeback">Comeback: ${entry.max_deficit_overcome}pts</span>`
+            : `<span class="cf-pill cf-pill-wire">Wire-to-wire</span>`;
+
+        const replayLink = entry.has_replay
+            ? `<a class="cf-replay" href="replay.html?season=${entry.season}&gamecode=${entry.gamecode}">▶ Replay</a>`
+            : '';
+
+        html += `<div class="cf-card">
+            <div class="cf-rank">#${rank}</div>
+            <div class="cf-season">${entry.season}</div>
+            <div class="cf-matchup">
+                <div class="cf-teams">
+                    <span class="cf-winner" style="color:${winColor}">${winnerName}</span>
+                    <span style="color:var(--text-muted);font-weight:400;margin:0 0.3rem">vs</span>
+                    <span class="cf-loser" style="color:${loseColor}">${loserName}</span>
+                    <span style="color:var(--text-muted);font-weight:400;margin-left:0.4rem">${winScore}–${loseScore}</span>
+                </div>
+                <div class="cf-stats">
+                    <span class="cf-pill cf-pill-lead">${entry.lead_changes} lead changes</span>
+                    <span class="cf-pill cf-pill-tied">${entry.times_tied} tied</span>
+                    ${comebackPill}
+                </div>
+            </div>
+            ${replayLink}
+        </div>`;
+    });
+
+    container.innerHTML = html;
 }
 
 // ── Boot ──────────────────────────────────────────────────────────────────
