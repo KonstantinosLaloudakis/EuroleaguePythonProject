@@ -781,6 +781,95 @@
             .poff-table { font-size: 0.75rem; }
             .poff-th-player { min-width: 110px; }
         }
+
+        /* ── Championship Finals History ─────────────────────────── */
+        .cf-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            display: grid;
+            grid-template-columns: 2.5rem 3.5rem 1fr auto;
+            gap: 0.6rem;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            transition: background 0.12s ease;
+        }
+
+        .cf-card:hover { background: var(--bg-secondary); }
+
+        .cf-rank {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .cf-season {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        .cf-matchup {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .cf-teams {
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        .cf-winner { font-weight: 800; }
+        .cf-loser  { opacity: 0.45; }
+
+        .cf-stats {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            font-size: 0.72rem;
+        }
+
+        .cf-pill {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 0.15rem 0.45rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .cf-pill-lead { color: var(--accent-blue, #60a5fa); }
+        .cf-pill-tied { color: #a78bfa; }
+        .cf-pill-comeback { color: #f59e0b; }
+        .cf-pill-wire { color: var(--text-muted); }
+
+        .cf-replay {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            white-space: nowrap;
+            text-decoration: none;
+            padding: 0.25rem 0.5rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+
+        .cf-replay:hover {
+            color: var(--text-primary);
+            border-color: var(--border-hover);
+        }
+
+        @media (max-width: 600px) {
+            .cf-card { grid-template-columns: 2rem 3rem 1fr; }
+            .cf-replay { display: none; }
+        }
     </style>
 </head>
 
@@ -912,6 +1001,13 @@
                 <button class="bracket-ctrl-btn" id="poff-show-all-btn"
                         onclick="togglePlayoffPlayersAll()" style="display:none"></button>
             </div>
+        </div>
+        <div class="stat-card" id="championship-finals-section" style="margin-top:1rem;display:none">
+            <h3>🏆 Championship Finals — All-Time Ranking</h3>
+            <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:1rem">
+                All 19 Euroleague championship finals ranked by lead changes — the most contested games at the top.
+            </p>
+            <div id="championship-finals-list"></div>
         </div>
     </main>
 
