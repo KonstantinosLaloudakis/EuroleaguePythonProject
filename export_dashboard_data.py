@@ -1544,7 +1544,7 @@ def compute_championship_finals_history():
                 # Don't update prev_sign — keep memory of who was last leading
             else:
                 curr_sign = 1 if a > b else -1
-                if prev_sign != 0 and curr_sign != prev_sign:
+                if curr_sign != prev_sign:
                     lead_changes += 1
                 prev_sign = curr_sign
 
