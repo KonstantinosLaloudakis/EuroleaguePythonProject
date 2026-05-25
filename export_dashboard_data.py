@@ -1486,6 +1486,96 @@ def build_tale_of_the_tape(high_team, low_team, teams_by_code,
     return {'rows': rows, 'edges': edges}
 
 
+def compute_championship_finals_history():
+    """
+    For each season 2007-2025, load the championship final WP replay JSON
+    (highest gamecode in docs/data/{season}/), compute lead changes / times
+    tied / max deficit, and return a list sorted by lead_changes descending.
+    """
+    results = []
+    replay_base = os.path.join('docs', 'data')
+
+    for season in range(2007, 2026):
+        season_dir = os.path.join(replay_base, str(season))
+        if not os.path.isdir(season_dir):
+            continue
+
+        # Championship final = highest gamecode in the season directory
+        gc_files = [
+            f for f in os.listdir(season_dir)
+            if f.endswith('.json') and f[:-5].isdigit()
+        ]
+        if not gc_files:
+            continue
+        final_gc = max(int(f[:-5]) for f in gc_files)
+
+        path = os.path.join(season_dir, f'{final_gc}.json')
+        try:
+            with open(path, 'r', encoding='utf-8') as fh:
+                data = json.load(fh)
+        except Exception as e:
+            print(f'  [WARN] championship finals: could not load {path}: {e}')
+            continue
+
+        ta = data.get('ta', '')
+        tb = data.get('tb', '')
+        timeline = data.get('timeline', [])
+
+        # Extract only scoring plays (entries that have 'a' and 'b')
+        plays = [(p['a'], p['b']) for p in timeline if 'a' in p and 'b' in p]
+        if not plays:
+            continue
+
+        final_a, final_b = plays[-1]
+        winner = ta if final_a > final_b else tb
+
+        # ── Lead changes & times tied ────────────────────────────────────
+        lead_changes = 0
+        times_tied = 0
+        prev_sign = 0  # sign of (a - b) after last non-zero moment
+
+        for a, b in plays:
+            if a == b:
+                if prev_sign != 0:
+                    times_tied += 1
+                # Don't update prev_sign — keep memory of who was last leading
+            else:
+                curr_sign = 1 if a > b else -1
+                if prev_sign != 0 and curr_sign != prev_sign:
+                    lead_changes += 1
+                prev_sign = curr_sign
+
+        # ── Max deficit overcome by winner ───────────────────────────────
+        max_deficit = 0
+        for a, b in plays:
+            if winner == ta:
+                deficit = b - a  # winner is ta; how far behind were they?
+            else:
+                deficit = a - b  # winner is tb
+            if deficit > max_deficit:
+                max_deficit = deficit
+
+        results.append({
+            'season': season,
+            'gamecode': final_gc,
+            'home': ta,
+            'away': tb,
+            'home_name': TEAM_NAMES.get(ta, ta),
+            'away_name': TEAM_NAMES.get(tb, tb),
+            'home_score': int(final_a),
+            'away_score': int(final_b),
+            'winner': winner,
+            'lead_changes': lead_changes,
+            'times_tied': times_tied,
+            'max_deficit_overcome': max_deficit,
+            'has_replay': True,
+        })
+
+    results.sort(key=lambda x: x['lead_changes'], reverse=True)
+    print(f'  Championship finals history: {len(results)} seasons computed')
+    return results
+
+
 def main():
     print(f"\n=== Dashboard Export ===")
     if 'EUROLEAGUE_ROUND_SUFFIX' in os.environ:
@@ -1882,9 +1972,9 @@ def main():
             return 'Final Four'
 
         qf = playoff_results.get('qf', {})
-        qf_games = sum(len(q.get('games', [])) for q in qf.values())
-        if qf_games > 0:
-            qf_round = (qf_games + 3) // 4  # ceil(qf_games / 4)
+        qf_series_lengths = [len(q.get('games', [])) for q in qf.values()]
+        if any(n > 0 for n in qf_series_lengths):
+            qf_round = max(qf_series_lengths)
             return f'QF Round {qf_round}'
 
         pi = playoff_results.get('play_in', {})
@@ -3289,6 +3379,7 @@ def main():
         'path_to_title': path_to_title,
         'series': series_data,
         'playoff_player_stats': build_playoff_player_stats(),
+        'championship_finals_history': compute_championship_finals_history(),
     }
 
     # ── Write output ─────────────────────────────────────────────────────────
