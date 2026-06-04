@@ -1,6 +1,6 @@
 {
   "round": 38,
-  "updated": "2026-06-02T05:40:42Z",
+  "updated": "2026-06-04T06:11:49Z",
   "teams": [
     {
       "team": "OLY",
@@ -18567,2124 +18567,2124 @@
   ],
   "wpa": [
     {
-      "player": "FRANCISCO, SYLVAIN",
-      "team": "ZAL",
-      "wpa": 1711.84,
-      "plays": 1929,
+      "player": "NUNN, KENDRICK",
+      "team": "PAN",
+      "wpa": 1703.12,
+      "plays": 1428,
       "rank": 1
     },
     {
-      "player": "NUNN, KENDRICK",
-      "team": "PAN",
-      "wpa": 1545.1,
-      "plays": 1428,
+      "player": "FRANCISCO, SYLVAIN",
+      "team": "ZAL",
+      "wpa": 1695.89,
+      "plays": 1929,
       "rank": 2
     },
     {
       "player": "BALDWIN IV, WADE",
       "team": "ULK",
-      "wpa": 1513.74,
+      "wpa": 1610.76,
       "plays": 1696,
       "rank": 3
     },
     {
       "player": "LUWAWU-CABARROT, TIMOTHE",
       "team": "BAS",
-      "wpa": 1487.98,
+      "wpa": 1598.4,
       "plays": 1383,
       "rank": 4
     },
     {
+      "player": "VEZENKOV, SASHA",
+      "team": "OLY",
+      "wpa": 1597.46,
+      "plays": 1326,
+      "rank": 5
+    },
+    {
       "player": "HORTON TUCKER, TALEN",
       "team": "ULK",
-      "wpa": 1479.97,
+      "wpa": 1534.03,
       "plays": 1700,
-      "rank": 5
+      "rank": 6
     },
     {
       "player": "DORSEY, TYLER",
       "team": "OLY",
-      "wpa": 1460.44,
+      "wpa": 1525.74,
       "plays": 1402,
-      "rank": 6
+      "rank": 7
     },
     {
       "player": "HIFI, NADIR",
       "team": "PRS",
-      "wpa": 1443.14,
+      "wpa": 1492.8,
       "plays": 1812,
-      "rank": 7
+      "rank": 8
     },
     {
       "player": "EDWARDS, CARSEN",
       "team": "VIR",
-      "wpa": 1407.42,
+      "wpa": 1483.89,
       "plays": 1465,
-      "rank": 8
-    },
-    {
-      "player": "VEZENKOV, SASHA",
-      "team": "OLY",
-      "wpa": 1395.78,
-      "plays": 1326,
       "rank": 9
-    },
-    {
-      "player": "JAMES, MIKE",
-      "team": "MCO",
-      "wpa": 1377.19,
-      "plays": 1648,
-      "rank": 10
     },
     {
       "player": "WRIGHT IV, MCKINLEY",
       "team": "DUB",
-      "wpa": 1346.89,
+      "wpa": 1423.07,
       "plays": 1371,
+      "rank": 10
+    },
+    {
+      "player": "NWORA, JORDAN",
+      "team": "RED",
+      "wpa": 1360.89,
+      "plays": 1275,
       "rank": 11
     },
     {
-      "player": "MONTERO, JEAN",
-      "team": "PAM",
-      "wpa": 1320.58,
-      "plays": 1531,
+      "player": "JAMES, MIKE",
+      "team": "MCO",
+      "wpa": 1357.96,
+      "plays": 1648,
       "rank": 12
     },
     {
       "player": "HEZONJA, MARIO",
       "team": "MAD",
-      "wpa": 1302.77,
+      "wpa": 1354.6,
       "plays": 1418,
       "rank": 13
     },
     {
-      "player": "WRIGHT, MOSES",
-      "team": "ZAL",
-      "wpa": 1300.61,
-      "plays": 1479,
+      "player": "MONTERO, JEAN",
+      "team": "PAM",
+      "wpa": 1324.41,
+      "plays": 1531,
       "rank": 14
-    },
-    {
-      "player": "BRYANT, ELIJAH",
-      "team": "HTA",
-      "wpa": 1275.34,
-      "plays": 1406,
-      "rank": 15
-    },
-    {
-      "player": "BLAKENEY, ANTONIO",
-      "team": "HTA",
-      "wpa": 1247.62,
-      "plays": 1063,
-      "rank": 16
     },
     {
       "player": "PUNTER, KEVIN",
       "team": "BAR",
-      "wpa": 1231.53,
+      "wpa": 1312.64,
       "plays": 1268,
+      "rank": 15
+    },
+    {
+      "player": "BRYANT, ELIJAH",
+      "team": "HTA",
+      "wpa": 1309.8,
+      "plays": 1406,
+      "rank": 16
+    },
+    {
+      "player": "WRIGHT, MOSES",
+      "team": "ZAL",
+      "wpa": 1289.73,
+      "plays": 1479,
       "rank": 17
     },
     {
-      "player": "NWORA, JORDAN",
-      "team": "RED",
-      "wpa": 1229.7,
-      "plays": 1275,
+      "player": "BLAKENEY, ANTONIO",
+      "team": "HTA",
+      "wpa": 1285.33,
+      "plays": 1063,
       "rank": 18
-    },
-    {
-      "player": "CAMPAZZO, FACUNDO",
-      "team": "MAD",
-      "wpa": 1180.93,
-      "plays": 1436,
-      "rank": 19
-    },
-    {
-      "player": "TUBELIS, AZUOLAS",
-      "team": "ZAL",
-      "wpa": 1156.25,
-      "plays": 1253,
-      "rank": 20
-    },
-    {
-      "player": "MONEKE, CHIMA",
-      "team": "RED",
-      "wpa": 1155.78,
-      "plays": 1320,
-      "rank": 21
     },
     {
       "player": "OTURU, DAN",
       "team": "HTA",
-      "wpa": 1151.31,
+      "wpa": 1259.33,
       "plays": 1361,
+      "rank": 19
+    },
+    {
+      "player": "CAMPAZZO, FACUNDO",
+      "team": "MAD",
+      "wpa": 1232.13,
+      "plays": 1436,
+      "rank": 20
+    },
+    {
+      "player": "BIBEROVIC, TARIK",
+      "team": "ULK",
+      "wpa": 1187.57,
+      "plays": 1121,
+      "rank": 21
+    },
+    {
+      "player": "MONEKE, CHIMA",
+      "team": "RED",
+      "wpa": 1182.92,
+      "plays": 1320,
       "rank": 22
-    },
-    {
-      "player": "REUVERS, NATHAN",
-      "team": "PAM",
-      "wpa": 1119.95,
-      "plays": 1303,
-      "rank": 23
-    },
-    {
-      "player": "FOURNIER, EVAN",
-      "team": "OLY",
-      "wpa": 1093.8,
-      "plays": 1057,
-      "rank": 24
     },
     {
       "player": "KABENGELE, MFIONDU",
       "team": "DUB",
-      "wpa": 1091.12,
+      "wpa": 1166.2,
       "plays": 1223,
-      "rank": 25
-    },
-    {
-      "player": "ROBINSON, JUSTIN",
-      "team": "PRS",
-      "wpa": 1087.98,
-      "plays": 1505,
-      "rank": 26
-    },
-    {
-      "player": "BROOKS, ARMONI",
-      "team": "MIL",
-      "wpa": 1080.4,
-      "plays": 1061,
-      "rank": 27
+      "rank": 23
     },
     {
       "player": "BROWN, STERLING",
       "team": "PAR",
-      "wpa": 1068.6,
+      "wpa": 1160.26,
       "plays": 1113,
-      "rank": 28
+      "rank": 24
+    },
+    {
+      "player": "FOURNIER, EVAN",
+      "team": "OLY",
+      "wpa": 1150.5,
+      "plays": 1057,
+      "rank": 25
+    },
+    {
+      "player": "TUBELIS, AZUOLAS",
+      "team": "ZAL",
+      "wpa": 1138.86,
+      "plays": 1253,
+      "rank": 26
+    },
+    {
+      "player": "SORKIN, ROMAN",
+      "team": "TEL",
+      "wpa": 1127.76,
+      "plays": 1258,
+      "rank": 27
     },
     {
       "player": "LYLES, TREY",
       "team": "MAD",
-      "wpa": 1066.14,
+      "wpa": 1118.81,
       "plays": 1299,
-      "rank": 29
-    },
-    {
-      "player": "TAYLOR, KAMERON",
-      "team": "PAM",
-      "wpa": 1057.71,
-      "plays": 1330,
-      "rank": 30
+      "rank": 28
     },
     {
       "player": "OKOBO, ELIE",
       "team": "MCO",
-      "wpa": 1056.25,
+      "wpa": 1111.62,
       "plays": 1310,
+      "rank": 29
+    },
+    {
+      "player": "OSMAN, CEDI",
+      "team": "PAN",
+      "wpa": 1098.41,
+      "plays": 1145,
+      "rank": 30
+    },
+    {
+      "player": "OBST, ANDREAS",
+      "team": "MUN",
+      "wpa": 1085.66,
+      "plays": 1032,
       "rank": 31
     },
     {
       "player": "CLYBURN, WILL",
       "team": "BAR",
-      "wpa": 1032.22,
+      "wpa": 1085.01,
       "plays": 1088,
       "rank": 32
     },
     {
-      "player": "BIBEROVIC, TARIK",
-      "team": "ULK",
-      "wpa": 1024.22,
-      "plays": 1121,
+      "player": "ROBINSON, JUSTIN",
+      "team": "PRS",
+      "wpa": 1082.18,
+      "plays": 1505,
       "rank": 33
     },
     {
-      "player": "BADIO, BRANCOU",
-      "team": "PAM",
-      "wpa": 1015.59,
-      "plays": 1282,
+      "player": "BROOKS, ARMONI",
+      "team": "MIL",
+      "wpa": 1063.58,
+      "plays": 1061,
       "rank": 34
-    },
-    {
-      "player": "SORKIN, ROMAN",
-      "team": "TEL",
-      "wpa": 1015.2,
-      "plays": 1258,
-      "rank": 35
-    },
-    {
-      "player": "OSMAN, CEDI",
-      "team": "PAN",
-      "wpa": 1012.82,
-      "plays": 1145,
-      "rank": 36
-    },
-    {
-      "player": "OBST, ANDREAS",
-      "team": "MUN",
-      "wpa": 1011.92,
-      "plays": 1032,
-      "rank": 37
     },
     {
       "player": "WATSON, GLYNN",
       "team": "ASV",
-      "wpa": 1005.38,
+      "wpa": 1049.96,
       "plays": 1004,
-      "rank": 38
+      "rank": 35
+    },
+    {
+      "player": "BADIO, BRANCOU",
+      "team": "PAM",
+      "wpa": 1045.93,
+      "plays": 1282,
+      "rank": 36
     },
     {
       "player": "MILLER-MCINTYRE, CODI",
       "team": "RED",
-      "wpa": 1002.59,
+      "wpa": 1036.97,
       "plays": 1538,
+      "rank": 37
+    },
+    {
+      "player": "JONES, CHRIS",
+      "team": "HTA",
+      "wpa": 1020.79,
+      "plays": 1109,
+      "rank": 38
+    },
+    {
+      "player": "TAYLOR, KAMERON",
+      "team": "PAM",
+      "wpa": 1014.26,
+      "plays": 1330,
       "rank": 39
     },
     {
-      "player": "OSMANI, ERCAN",
-      "team": "IST",
-      "wpa": 988.82,
-      "plays": 1052,
+      "player": "REUVERS, NATHAN",
+      "team": "PAM",
+      "wpa": 1011.96,
+      "plays": 1303,
       "rank": 40
     },
     {
-      "player": "DIALLO, ALPHA",
-      "team": "MCO",
-      "wpa": 962.44,
-      "plays": 1299,
+      "player": "BUTLER, JARED",
+      "team": "RED",
+      "wpa": 1001.76,
+      "plays": 1096,
       "rank": 41
     },
     {
-      "player": "SHIELDS, SHAVON",
-      "team": "MIL",
-      "wpa": 955.63,
-      "plays": 1087,
+      "player": "CLARK III, JIMMY",
+      "team": "TEL",
+      "wpa": 994.9,
+      "plays": 1152,
       "rank": 42
     },
     {
       "player": "BACON, DWAYNE",
       "team": "DUB",
-      "wpa": 954.4,
+      "wpa": 993.38,
       "plays": 1167,
       "rank": 43
     },
     {
-      "player": "LOYD, JORDAN",
-      "team": "IST",
-      "wpa": 953.09,
-      "plays": 1020,
-      "rank": 44
-    },
-    {
-      "player": "JONES, CHRIS",
-      "team": "HTA",
-      "wpa": 938.37,
-      "plays": 1109,
-      "rank": 45
-    },
-    {
-      "player": "PETRUSEV, FILIP",
-      "team": "DUB",
-      "wpa": 907.14,
-      "plays": 1186,
-      "rank": 46
-    },
-    {
-      "player": "BUTLER, JARED",
-      "team": "RED",
-      "wpa": 905.48,
-      "plays": 1096,
-      "rank": 47
-    },
-    {
-      "player": "GUDURIC, MARKO",
+      "player": "SHIELDS, SHAVON",
       "team": "MIL",
-      "wpa": 893.94,
-      "plays": 1069,
-      "rank": 48
+      "wpa": 986.09,
+      "plays": 1087,
+      "rank": 44
     },
     {
       "player": "MORGAN, MATTHEW",
       "team": "VIR",
-      "wpa": 887.1,
+      "wpa": 981.16,
       "plays": 1064,
-      "rank": 49
+      "rank": 45
     },
     {
-      "player": "THOMPSON, DARIUS",
-      "team": "PAM",
-      "wpa": 882.33,
-      "plays": 1173,
-      "rank": 50
-    },
-    {
-      "player": "WILLIAMS-GOSS, NIGEL",
-      "team": "ZAL",
-      "wpa": 857.45,
-      "plays": 1053,
-      "rank": 51
-    },
-    {
-      "player": "BLOSSOMGAME, JARON",
-      "team": "MCO",
-      "wpa": 856.65,
-      "plays": 1044,
-      "rank": 52
-    },
-    {
-      "player": "SHENGELIA, TORNIKE",
-      "team": "BAR",
-      "wpa": 844.96,
-      "plays": 1180,
-      "rank": 53
-    },
-    {
-      "player": "CLARK III, JIMMY",
-      "team": "TEL",
-      "wpa": 839.55,
-      "plays": 1152,
-      "rank": 54
-    },
-    {
-      "player": "MICIC, VASILIJE",
-      "team": "HTA",
-      "wpa": 826.34,
-      "plays": 1358,
-      "rank": 55
-    },
-    {
-      "player": "WALKER IV, LONNIE",
-      "team": "TEL",
-      "wpa": 821.5,
-      "plays": 1018,
-      "rank": 56
-    },
-    {
-      "player": "LEDAY, ZACH",
-      "team": "MIL",
-      "wpa": 820.2,
-      "plays": 877,
-      "rank": 57
+      "player": "OSMANI, ERCAN",
+      "team": "IST",
+      "wpa": 955.27,
+      "plays": 1052,
+      "rank": 46
     },
     {
       "player": "HOARD, JAYLEN",
       "team": "TEL",
-      "wpa": 817.97,
+      "wpa": 947.86,
       "plays": 1139,
-      "rank": 58
+      "rank": 47
     },
     {
-      "player": "BRIZUELA, DARIO",
-      "team": "BAR",
-      "wpa": 812.01,
-      "plays": 825,
-      "rank": 59
+      "player": "DIALLO, ALPHA",
+      "team": "MCO",
+      "wpa": 947.14,
+      "plays": 1299,
+      "rank": 48
     },
     {
       "player": "DE COLO, NANDO",
       "team": "ASV",
-      "wpa": 809.26,
+      "wpa": 947.1,
       "plays": 953,
+      "rank": 49
+    },
+    {
+      "player": "LOYD, JORDAN",
+      "team": "IST",
+      "wpa": 931.75,
+      "plays": 1020,
+      "rank": 50
+    },
+    {
+      "player": "PETRUSEV, FILIP",
+      "team": "DUB",
+      "wpa": 919.71,
+      "plays": 1186,
+      "rank": 51
+    },
+    {
+      "player": "SHENGELIA, TORNIKE",
+      "team": "BAR",
+      "wpa": 907.42,
+      "plays": 1180,
+      "rank": 52
+    },
+    {
+      "player": "MICIC, VASILIJE",
+      "team": "HTA",
+      "wpa": 904.19,
+      "plays": 1358,
+      "rank": 53
+    },
+    {
+      "player": "BLOSSOMGAME, JARON",
+      "team": "MCO",
+      "wpa": 886.18,
+      "plays": 1044,
+      "rank": 54
+    },
+    {
+      "player": "WALKER IV, LONNIE",
+      "team": "TEL",
+      "wpa": 886.09,
+      "plays": 1018,
+      "rank": 55
+    },
+    {
+      "player": "THOMPSON, DARIUS",
+      "team": "PAM",
+      "wpa": 882.86,
+      "plays": 1173,
+      "rank": 56
+    },
+    {
+      "player": "GUDURIC, MARKO",
+      "team": "MIL",
+      "wpa": 873.01,
+      "plays": 1069,
+      "rank": 57
+    },
+    {
+      "player": "MILUTINOV, NIKOLA",
+      "team": "OLY",
+      "wpa": 852.07,
+      "plays": 1135,
+      "rank": 58
+    },
+    {
+      "player": "STRAZEL, MATTHEW",
+      "team": "MCO",
+      "wpa": 840.92,
+      "plays": 1204,
+      "rank": 59
+    },
+    {
+      "player": "WILLIAMS-GOSS, NIGEL",
+      "team": "ZAL",
+      "wpa": 834.42,
+      "plays": 1053,
       "rank": 60
     },
     {
       "player": "ALSTON JR., DERRICK",
       "team": "VIR",
-      "wpa": 776.5,
+      "wpa": 834.18,
       "plays": 926,
       "rank": 61
     },
     {
-      "player": "SHORTS, TJ",
-      "team": "PAN",
-      "wpa": 769.39,
-      "plays": 1108,
+      "player": "BRIZUELA, DARIO",
+      "team": "BAR",
+      "wpa": 830.79,
+      "plays": 825,
       "rank": 62
-    },
-    {
-      "player": "CORDINIER, ISAIA",
-      "team": "IST",
-      "wpa": 767.34,
-      "plays": 829,
-      "rank": 63
-    },
-    {
-      "player": "JESSUP, JUSTINIAN",
-      "team": "MUN",
-      "wpa": 759.4,
-      "plays": 748,
-      "rank": 64
     },
     {
       "player": "WASHINGTON, DUANE",
       "team": "PAR",
-      "wpa": 757.88,
+      "wpa": 826.06,
       "plays": 780,
+      "rank": 63
+    },
+    {
+      "player": "LEDAY, ZACH",
+      "team": "MIL",
+      "wpa": 824.77,
+      "plays": 877,
+      "rank": 64
+    },
+    {
+      "player": "SHORTS, TJ",
+      "team": "PAN",
+      "wpa": 814.04,
+      "plays": 1108,
       "rank": 65
+    },
+    {
+      "player": "CORDINIER, ISAIA",
+      "team": "IST",
+      "wpa": 805.4,
+      "plays": 829,
+      "rank": 66
     },
     {
       "player": "BONGA, ISAAC",
       "team": "PAR",
-      "wpa": 754.56,
+      "wpa": 801.65,
       "plays": 1136,
-      "rank": 66
-    },
-    {
-      "player": "THEIS, DANIEL",
-      "team": "MCO",
-      "wpa": 752.72,
-      "plays": 1015,
       "rank": 67
     },
     {
       "player": "BRISSETT, O'SHAE J",
       "team": "TEL",
-      "wpa": 749.4,
+      "wpa": 794.45,
       "plays": 1016,
       "rank": 68
     },
     {
-      "player": "MILUTINOV, NIKOLA",
-      "team": "OLY",
-      "wpa": 748.67,
-      "plays": 1135,
+      "player": "VESELY, JAN",
+      "team": "BAR",
+      "wpa": 789.96,
+      "plays": 927,
       "rank": 69
     },
     {
       "player": "SIMMONS, KOBI",
       "team": "BAS",
-      "wpa": 746.25,
+      "wpa": 786.99,
       "plays": 948,
       "rank": 70
     },
     {
-      "player": "VILDOZA, LUCA",
-      "team": "VIR",
-      "wpa": 743.13,
-      "plays": 841,
+      "player": "SLOUKAS, KOSTAS",
+      "team": "PAN",
+      "wpa": 783.56,
+      "plays": 1168,
       "rank": 71
     },
     {
-      "player": "WEILER-BABB, NICK",
-      "team": "IST",
-      "wpa": 741.12,
-      "plays": 1085,
+      "player": "THEIS, DANIEL",
+      "team": "MCO",
+      "wpa": 781.78,
+      "plays": 1015,
       "rank": 72
     },
     {
       "player": "HERNANGOMEZ, JUANCHO",
       "team": "PAN",
-      "wpa": 737.59,
+      "wpa": 781.29,
       "plays": 1023,
       "rank": 73
     },
     {
-      "player": "VESELY, JAN",
-      "team": "BAR",
-      "wpa": 728.23,
-      "plays": 927,
+      "player": "TAVARES, WALTER",
+      "team": "MAD",
+      "wpa": 780.88,
+      "plays": 1195,
       "rank": 74
     },
     {
-      "player": "SLOUKAS, KOSTAS",
-      "team": "PAN",
-      "wpa": 712.22,
-      "plays": 1168,
+      "player": "FORREST, TRENT",
+      "team": "BAS",
+      "wpa": 776.53,
+      "plays": 932,
       "rank": 75
     },
     {
-      "player": "STRAZEL, MATTHEW",
-      "team": "MCO",
-      "wpa": 707.04,
-      "plays": 1204,
+      "player": "WEILER-BABB, NICK",
+      "team": "IST",
+      "wpa": 775.93,
+      "plays": 1085,
       "rank": 76
     },
     {
-      "player": "MIROTIC, NIKOLA",
-      "team": "MCO",
-      "wpa": 699.29,
-      "plays": 876,
+      "player": "MALEDON, THEO",
+      "team": "MAD",
+      "wpa": 763.33,
+      "plays": 1064,
       "rank": 77
     },
     {
-      "player": "JONES, CARLIK",
-      "team": "PAR",
-      "wpa": 698.28,
-      "plays": 592,
+      "player": "MOORE, OMARI",
+      "team": "PAM",
+      "wpa": 760.84,
+      "plays": 1112,
       "rank": 78
     },
     {
       "player": "PETERS, ALEC",
       "team": "OLY",
-      "wpa": 696.06,
+      "wpa": 750.3,
       "plays": 823,
       "rank": 79
     },
     {
-      "player": "TAVARES, WALTER",
-      "team": "MAD",
-      "wpa": 692.9,
-      "plays": 1195,
+      "player": "JONES, CARLIK",
+      "team": "PAR",
+      "wpa": 742.34,
+      "plays": 592,
       "rank": 80
-    },
-    {
-      "player": "FORREST, TRENT",
-      "team": "BAS",
-      "wpa": 689.95,
-      "plays": 932,
-      "rank": 81
-    },
-    {
-      "player": "LO, MAODO",
-      "team": "ZAL",
-      "wpa": 673.11,
-      "plays": 970,
-      "rank": 82
-    },
-    {
-      "player": "ELLIS, QUINN",
-      "team": "MIL",
-      "wpa": 667.79,
-      "plays": 1023,
-      "rank": 83
-    },
-    {
-      "player": "IZUNDU, EBUKA",
-      "team": "RED",
-      "wpa": 661.84,
-      "plays": 720,
-      "rank": 84
-    },
-    {
-      "player": "MALEDON, THEO",
-      "team": "MAD",
-      "wpa": 655.55,
-      "plays": 1064,
-      "rank": 85
-    },
-    {
-      "player": "MOORE, OMARI",
-      "team": "PAM",
-      "wpa": 648.7,
-      "plays": 1112,
-      "rank": 86
-    },
-    {
-      "player": "BLATT, TAMIR",
-      "team": "TEL",
-      "wpa": 646.27,
-      "plays": 939,
-      "rank": 87
-    },
-    {
-      "player": "DOZIER, PJ",
-      "team": "IST",
-      "wpa": 628.33,
-      "plays": 769,
-      "rank": 88
-    },
-    {
-      "player": "SATORANSKY, TOMAS",
-      "team": "BAR",
-      "wpa": 626.49,
-      "plays": 937,
-      "rank": 89
-    },
-    {
-      "player": "MIKE, ISIAHA",
-      "team": "MUN",
-      "wpa": 620.62,
-      "plays": 987,
-      "rank": 90
-    },
-    {
-      "player": "DIAKITE, MAMADI",
-      "team": "BAS",
-      "wpa": 618.38,
-      "plays": 1070,
-      "rank": 91
-    },
-    {
-      "player": "COLSON, BONZIE",
-      "team": "ULK",
-      "wpa": 615.83,
-      "plays": 834,
-      "rank": 92
-    },
-    {
-      "player": "GRANT, JERIAN",
-      "team": "PAN",
-      "wpa": 614.56,
-      "plays": 1043,
-      "rank": 93
-    },
-    {
-      "player": "DECK, GABRIEL",
-      "team": "MAD",
-      "wpa": 608.38,
-      "plays": 836,
-      "rank": 94
-    },
-    {
-      "player": "PRADILLA, JAIME",
-      "team": "PAM",
-      "wpa": 606.14,
-      "plays": 1121,
-      "rank": 95
-    },
-    {
-      "player": "ANGOLA, BRAIAN",
-      "team": "ASV",
-      "wpa": 601.18,
-      "plays": 591,
-      "rank": 96
-    },
-    {
-      "player": "BOOKER, DEVIN",
-      "team": "MIL",
-      "wpa": 600.99,
-      "plays": 892,
-      "rank": 97
-    },
-    {
-      "player": "COSTELLO, MATTHEW",
-      "team": "PAM",
-      "wpa": 591.77,
-      "plays": 979,
-      "rank": 98
     },
     {
       "player": "JONES, TYRIQUE",
       "team": "PAR",
-      "wpa": 589.39,
+      "wpa": 732.96,
       "plays": 913,
-      "rank": 99
+      "rank": 81
     },
     {
-      "player": "M'BAYE, AMATH",
-      "team": "PRS",
-      "wpa": 586.42,
-      "plays": 896,
-      "rank": 100
+      "player": "JESSUP, JUSTINIAN",
+      "team": "MUN",
+      "wpa": 728.0,
+      "plays": 748,
+      "rank": 82
     },
     {
-      "player": "HAYES-DAVIS, NIGEL",
-      "team": "PAN",
-      "wpa": 580.76,
-      "plays": 487,
-      "rank": 101
+      "player": "VILDOZA, LUCA",
+      "team": "VIR",
+      "wpa": 718.05,
+      "plays": 841,
+      "rank": 83
     },
     {
-      "player": "NEBO, JOSH",
+      "player": "MIROTIC, NIKOLA",
+      "team": "MCO",
+      "wpa": 716.99,
+      "plays": 876,
+      "rank": 84
+    },
+    {
+      "player": "LO, MAODO",
+      "team": "ZAL",
+      "wpa": 691.61,
+      "plays": 970,
+      "rank": 85
+    },
+    {
+      "player": "BLATT, TAMIR",
+      "team": "TEL",
+      "wpa": 688.93,
+      "plays": 939,
+      "rank": 86
+    },
+    {
+      "player": "MIKE, ISIAHA",
+      "team": "MUN",
+      "wpa": 675.98,
+      "plays": 987,
+      "rank": 87
+    },
+    {
+      "player": "IZUNDU, EBUKA",
+      "team": "RED",
+      "wpa": 673.84,
+      "plays": 720,
+      "rank": 88
+    },
+    {
+      "player": "DIAKITE, MAMADI",
+      "team": "BAS",
+      "wpa": 659.62,
+      "plays": 1070,
+      "rank": 89
+    },
+    {
+      "player": "ELLIS, QUINN",
       "team": "MIL",
-      "wpa": 579.81,
-      "plays": 730,
-      "rank": 102
+      "wpa": 648.09,
+      "plays": 1023,
+      "rank": 90
     },
     {
-      "player": "RHODEN, JARED",
-      "team": "PRS",
-      "wpa": 572.88,
-      "plays": 851,
-      "rank": 103
-    },
-    {
-      "player": "HALL, DEVON",
-      "team": "ULK",
-      "wpa": 562.31,
-      "plays": 1066,
-      "rank": 104
+      "player": "GRANT, JERIAN",
+      "team": "PAN",
+      "wpa": 646.84,
+      "plays": 1043,
+      "rank": 91
     },
     {
       "player": "OJELEYE, SEMI",
       "team": "RED",
-      "wpa": 554.71,
+      "wpa": 646.57,
       "plays": 877,
-      "rank": 105
+      "rank": 92
     },
     {
-      "player": "MOTLEY, JOHNATHAN",
-      "team": "HTA",
-      "wpa": 551.05,
-      "plays": 727,
-      "rank": 106
+      "player": "COLSON, BONZIE",
+      "team": "ULK",
+      "wpa": 637.51,
+      "plays": 834,
+      "rank": 93
     },
     {
-      "player": "HAYES, KEVARRIUS",
-      "team": "MCO",
-      "wpa": 548.17,
-      "plays": 856,
-      "rank": 107
+      "player": "VAUTIER, BASTIEN",
+      "team": "ASV",
+      "wpa": 637.24,
+      "plays": 861,
+      "rank": 94
     },
     {
-      "player": "SLEVA, DUSTIN",
-      "team": "ZAL",
-      "wpa": 543.31,
-      "plays": 988,
-      "rank": 108
+      "player": "DECK, GABRIEL",
+      "team": "MAD",
+      "wpa": 633.82,
+      "plays": 836,
+      "rank": 95
     },
     {
-      "player": "NIANG, SALIOU",
-      "team": "VIR",
-      "wpa": 535.87,
-      "plays": 1014,
-      "rank": 109
+      "player": "BOOKER, DEVIN",
+      "team": "MIL",
+      "wpa": 632.4,
+      "plays": 892,
+      "rank": 96
+    },
+    {
+      "player": "SATORANSKY, TOMAS",
+      "team": "BAR",
+      "wpa": 625.53,
+      "plays": 937,
+      "rank": 97
+    },
+    {
+      "player": "HEURTEL, THOMAS",
+      "team": "ASV",
+      "wpa": 625.22,
+      "plays": 761,
+      "rank": 98
+    },
+    {
+      "player": "PRADILLA, JAIME",
+      "team": "PAM",
+      "wpa": 623.42,
+      "plays": 1121,
+      "rank": 99
     },
     {
       "player": "HOWARD, MARKUS",
       "team": "BAS",
-      "wpa": 534.36,
+      "wpa": 623.32,
       "plays": 663,
-      "rank": 110
+      "rank": 100
+    },
+    {
+      "player": "DOZIER, PJ",
+      "team": "IST",
+      "wpa": 621.83,
+      "plays": 769,
+      "rank": 101
+    },
+    {
+      "player": "FERNANDO, BRUNO",
+      "team": "MAD",
+      "wpa": 609.24,
+      "plays": 959,
+      "rank": 102
+    },
+    {
+      "player": "COSTELLO, MATTHEW",
+      "team": "PAM",
+      "wpa": 607.32,
+      "plays": 979,
+      "rank": 103
+    },
+    {
+      "player": "M'BAYE, AMATH",
+      "team": "PRS",
+      "wpa": 602.01,
+      "plays": 896,
+      "rank": 104
+    },
+    {
+      "player": "HALL, DEVON",
+      "team": "ULK",
+      "wpa": 600.16,
+      "plays": 1066,
+      "rank": 105
+    },
+    {
+      "player": "NIANG, SALIOU",
+      "team": "VIR",
+      "wpa": 598.27,
+      "plays": 1014,
+      "rank": 106
+    },
+    {
+      "player": "RHODEN, JARED",
+      "team": "PRS",
+      "wpa": 597.14,
+      "plays": 851,
+      "rank": 107
     },
     {
       "player": "SANTOS, MARCIO",
       "team": "TEL",
-      "wpa": 530.15,
+      "wpa": 596.39,
       "plays": 882,
+      "rank": 108
+    },
+    {
+      "player": "SLEVA, DUSTIN",
+      "team": "ZAL",
+      "wpa": 589.52,
+      "plays": 988,
+      "rank": 109
+    },
+    {
+      "player": "MOTLEY, JOHNATHAN",
+      "team": "HTA",
+      "wpa": 589.36,
+      "plays": 727,
+      "rank": 110
+    },
+    {
+      "player": "ANGOLA, BRAIAN",
+      "team": "ASV",
+      "wpa": 580.65,
+      "plays": 591,
       "rank": 111
     },
     {
       "player": "NDIAYE, MBAYE",
       "team": "ASV",
-      "wpa": 526.44,
+      "wpa": 568.75,
       "plays": 916,
       "rank": 112
     },
     {
-      "player": "MALCOLM, COLLIN",
-      "team": "HTA",
-      "wpa": 526.36,
-      "plays": 823,
-      "rank": 113
-    },
-    {
       "player": "LUCIC, VLADIMIR",
       "team": "MUN",
-      "wpa": 522.61,
+      "wpa": 556.42,
       "plays": 804,
-      "rank": 114
-    },
-    {
-      "player": "HAZER, SEHMUS",
-      "team": "IST",
-      "wpa": 520.3,
-      "plays": 565,
-      "rank": 115
-    },
-    {
-      "player": "VAUTIER, BASTIEN",
-      "team": "ASV",
-      "wpa": 516.76,
-      "plays": 861,
-      "rank": 116
-    },
-    {
-      "player": "OKEKE, CHUMA",
-      "team": "MAD",
-      "wpa": 515.85,
-      "plays": 731,
-      "rank": 117
+      "rank": 113
     },
     {
       "player": "SMITS, ROLANDS",
       "team": "IST",
-      "wpa": 513.73,
+      "wpa": 553.05,
       "plays": 770,
-      "rank": 118
+      "rank": 114
     },
     {
-      "player": "HEURTEL, THOMAS",
-      "team": "ASV",
-      "wpa": 513.52,
-      "plays": 761,
-      "rank": 119
+      "player": "HAYES-DAVIS, NIGEL",
+      "team": "PAN",
+      "wpa": 550.67,
+      "plays": 487,
+      "rank": 115
     },
     {
-      "player": "AVRAMOVIC, ALEKSA",
-      "team": "DUB",
-      "wpa": 512.93,
-      "plays": 585,
-      "rank": 120
-    },
-    {
-      "player": "FELIZ, ANDRES",
+      "player": "OKEKE, CHUMA",
       "team": "MAD",
-      "wpa": 512.13,
-      "plays": 820,
-      "rank": 121
+      "wpa": 544.83,
+      "plays": 731,
+      "rank": 116
     },
     {
       "player": "ANDERSON, JUSTIN",
       "team": "DUB",
-      "wpa": 508.96,
+      "wpa": 541.46,
       "plays": 641,
-      "rank": 122
-    },
-    {
-      "player": "BOLMARO, LEANDRO",
-      "team": "MIL",
-      "wpa": 501.55,
-      "plays": 878,
-      "rank": 123
-    },
-    {
-      "player": "KEY, BRAXTON",
-      "team": "PAM",
-      "wpa": 497.03,
-      "plays": 887,
-      "rank": 124
-    },
-    {
-      "player": "RATHAN-MAYES, XAVIER",
-      "team": "MUN",
-      "wpa": 485.91,
-      "plays": 728,
-      "rank": 125
-    },
-    {
-      "player": "STEVENS, LAMAR",
-      "team": "PRS",
-      "wpa": 483.56,
-      "plays": 700,
-      "rank": 126
-    },
-    {
-      "player": "MUSA, DZANAN",
-      "team": "DUB",
-      "wpa": 478.76,
-      "plays": 616,
-      "rank": 127
-    },
-    {
-      "player": "JALLOW, KARIM",
-      "team": "VIR",
-      "wpa": 478.23,
-      "plays": 774,
-      "rank": 128
-    },
-    {
-      "player": "ULANOVAS, EDGARAS",
-      "team": "ZAL",
-      "wpa": 475.17,
-      "plays": 826,
-      "rank": 129
-    },
-    {
-      "player": "HARRISON, SHAQUILLE",
-      "team": "ASV",
-      "wpa": 473.81,
-      "plays": 804,
-      "rank": 130
-    },
-    {
-      "player": "LARKIN, SHANE",
-      "team": "IST",
-      "wpa": 465.26,
-      "plays": 413,
-      "rank": 131
+      "rank": 117
     },
     {
       "player": "KALINIC, NIKOLA",
       "team": "RED",
-      "wpa": 461.39,
+      "wpa": 538.86,
       "plays": 906,
-      "rank": 132
+      "rank": 118
     },
     {
-      "player": "LUNDBERG, IFFE",
-      "team": "TEL",
-      "wpa": 454.26,
-      "plays": 468,
-      "rank": 133
-    },
-    {
-      "player": "DIOUF, MOUHAMET",
-      "team": "VIR",
-      "wpa": 450.03,
-      "plays": 886,
-      "rank": 134
-    },
-    {
-      "player": "LEAF, TJ",
-      "team": "TEL",
-      "wpa": 449.78,
-      "plays": 583,
-      "rank": 135
-    },
-    {
-      "player": "DA SILVA, OSCAR",
-      "team": "MUN",
-      "wpa": 447.91,
-      "plays": 669,
-      "rank": 136
-    },
-    {
-      "player": "BUTKEVICIUS, ARNAS",
-      "team": "ZAL",
-      "wpa": 445.29,
-      "plays": 760,
-      "rank": 137
-    },
-    {
-      "player": "SPAGNOLO, MATTEO",
-      "team": "BAS",
-      "wpa": 443.03,
-      "plays": 758,
-      "rank": 138
-    },
-    {
-      "player": "FERNANDO, BRUNO",
+      "player": "FELIZ, ANDRES",
       "team": "MAD",
-      "wpa": 442.52,
-      "plays": 959,
-      "rank": 139
+      "wpa": 536.41,
+      "plays": 820,
+      "rank": 119
     },
     {
-      "player": "DIMITRIJEVIC, NENO",
-      "team": "MUN",
-      "wpa": 442.27,
-      "plays": 503,
-      "rank": 140
+      "player": "MALCOLM, COLLIN",
+      "team": "HTA",
+      "wpa": 525.72,
+      "plays": 823,
+      "rank": 120
+    },
+    {
+      "player": "NEBO, JOSH",
+      "team": "MIL",
+      "wpa": 525.56,
+      "plays": 730,
+      "rank": 121
+    },
+    {
+      "player": "HAYES, KEVARRIUS",
+      "team": "MCO",
+      "wpa": 520.92,
+      "plays": 856,
+      "rank": 122
+    },
+    {
+      "player": "ULANOVAS, EDGARAS",
+      "team": "ZAL",
+      "wpa": 510.86,
+      "plays": 826,
+      "rank": 123
+    },
+    {
+      "player": "HARRISON, SHAQUILLE",
+      "team": "ASV",
+      "wpa": 510.66,
+      "plays": 804,
+      "rank": 124
     },
     {
       "player": "OSETKOWSKI, DYLAN",
       "team": "PAR",
-      "wpa": 439.37,
+      "wpa": 509.31,
       "plays": 739,
-      "rank": 141
-    },
-    {
-      "player": "HERNANGOMEZ, WILLY",
-      "team": "BAR",
-      "wpa": 435.26,
-      "plays": 854,
-      "rank": 142
-    },
-    {
-      "player": "OMORUYI, EUGENE",
-      "team": "BAS",
-      "wpa": 434.45,
-      "plays": 804,
-      "rank": 143
-    },
-    {
-      "player": "GARUBA, USMAN",
-      "team": "MAD",
-      "wpa": 429.75,
-      "plays": 726,
-      "rank": 144
-    },
-    {
-      "player": "MELLI, NICOLO",
-      "team": "ULK",
-      "wpa": 427.67,
-      "plays": 1040,
-      "rank": 145
+      "rank": 125
     },
     {
       "player": "HALL, DONTA",
       "team": "OLY",
-      "wpa": 427.38,
+      "wpa": 509.12,
       "plays": 749,
-      "rank": 146
+      "rank": 126
     },
     {
-      "player": "BERTANS, DAVIS",
+      "player": "RATHAN-MAYES, XAVIER",
+      "team": "MUN",
+      "wpa": 505.04,
+      "plays": 728,
+      "rank": 127
+    },
+    {
+      "player": "BOLMARO, LEANDRO",
+      "team": "MIL",
+      "wpa": 496.33,
+      "plays": 878,
+      "rank": 128
+    },
+    {
+      "player": "MUSA, DZANAN",
       "team": "DUB",
-      "wpa": 426.66,
-      "plays": 648,
-      "rank": 147
+      "wpa": 495.14,
+      "plays": 616,
+      "rank": 129
     },
     {
       "player": "WARD, TYSON",
       "team": "OLY",
-      "wpa": 423.79,
+      "wpa": 491.72,
       "plays": 820,
-      "rank": 148
+      "rank": 130
     },
     {
-      "player": "PARRA, JOEL",
-      "team": "BAR",
-      "wpa": 419.82,
-      "plays": 759,
-      "rank": 149
+      "player": "KEY, BRAXTON",
+      "team": "PAM",
+      "wpa": 490.71,
+      "plays": 887,
+      "rank": 131
     },
     {
-      "player": "GABRIEL, WENYEN",
-      "team": "MUN",
-      "wpa": 419.01,
-      "plays": 848,
-      "rank": 150
+      "player": "JALLOW, KARIM",
+      "team": "VIR",
+      "wpa": 488.4,
+      "plays": 774,
+      "rank": 132
     },
     {
-      "player": "NEDOVIC, NEMANJA",
-      "team": "MCO",
-      "wpa": 417.92,
-      "plays": 591,
-      "rank": 151
-    },
-    {
-      "player": "WAINRIGHT, ISH",
-      "team": "HTA",
-      "wpa": 417.11,
-      "plays": 752,
-      "rank": 152
-    },
-    {
-      "player": "KURUCS, RODIONS",
-      "team": "BAS",
-      "wpa": 409.97,
-      "plays": 741,
-      "rank": 153
+      "player": "HAZER, SEHMUS",
+      "team": "IST",
+      "wpa": 485.31,
+      "plays": 565,
+      "rank": 133
     },
     {
       "player": "SMAILAGIC, ALEN",
       "team": "VIR",
-      "wpa": 398.99,
+      "wpa": 482.98,
       "plays": 663,
-      "rank": 154
+      "rank": 134
     },
     {
-      "player": "SAKO, NEAL",
-      "team": "PAM",
-      "wpa": 391.96,
-      "plays": 956,
-      "rank": 155
+      "player": "KURUCS, RODIONS",
+      "team": "BAS",
+      "wpa": 482.37,
+      "plays": 741,
+      "rank": 135
     },
     {
-      "player": "FARIED, KENNETH",
-      "team": "PAN",
-      "wpa": 389.6,
-      "plays": 703,
-      "rank": 156
+      "player": "OMORUYI, EUGENE",
+      "team": "BAS",
+      "wpa": 481.39,
+      "plays": 804,
+      "rank": 136
     },
     {
-      "player": "SELJAAS, ZACHARY",
-      "team": "ASV",
-      "wpa": 389.51,
-      "plays": 783,
-      "rank": 157
+      "player": "GARUBA, USMAN",
+      "team": "MAD",
+      "wpa": 481.27,
+      "plays": 726,
+      "rank": 137
     },
     {
-      "player": "PUERTO, JOSEP",
-      "team": "PAM",
-      "wpa": 385.47,
-      "plays": 710,
-      "rank": 158
-    },
-    {
-      "player": "MCCORMACK, DAVID",
+      "player": "GABRIEL, WENYEN",
       "team": "MUN",
-      "wpa": 385.16,
-      "plays": 619,
-      "rank": 159
+      "wpa": 480.94,
+      "plays": 848,
+      "rank": 138
+    },
+    {
+      "player": "DIOUF, MOUHAMET",
+      "team": "VIR",
+      "wpa": 479.59,
+      "plays": 886,
+      "rank": 139
+    },
+    {
+      "player": "MELLI, NICOLO",
+      "team": "ULK",
+      "wpa": 473.37,
+      "plays": 1040,
+      "rank": 140
+    },
+    {
+      "player": "HERNANGOMEZ, WILLY",
+      "team": "BAR",
+      "wpa": 471.13,
+      "plays": 854,
+      "rank": 141
+    },
+    {
+      "player": "TRAORE, ARMEL",
+      "team": "ASV",
+      "wpa": 468.98,
+      "plays": 730,
+      "rank": 142
+    },
+    {
+      "player": "LEAF, TJ",
+      "team": "TEL",
+      "wpa": 466.05,
+      "plays": 583,
+      "rank": 143
+    },
+    {
+      "player": "BERTANS, DAVIS",
+      "team": "DUB",
+      "wpa": 460.5,
+      "plays": 648,
+      "rank": 144
+    },
+    {
+      "player": "AVRAMOVIC, ALEKSA",
+      "team": "DUB",
+      "wpa": 454.49,
+      "plays": 585,
+      "rank": 145
+    },
+    {
+      "player": "SPAGNOLO, MATTEO",
+      "team": "BAS",
+      "wpa": 446.96,
+      "plays": 758,
+      "rank": 146
+    },
+    {
+      "player": "LARKIN, SHANE",
+      "team": "IST",
+      "wpa": 443.65,
+      "plays": 413,
+      "rank": 147
+    },
+    {
+      "player": "STEVENS, LAMAR",
+      "team": "PRS",
+      "wpa": 438.79,
+      "plays": 700,
+      "rank": 148
     },
     {
       "player": "HERRERA, SEBASTIAN",
       "team": "PRS",
-      "wpa": 384.1,
+      "wpa": 435.07,
       "plays": 900,
-      "rank": 160
+      "rank": 149
+    },
+    {
+      "player": "PARRA, JOEL",
+      "team": "BAR",
+      "wpa": 433.24,
+      "plays": 759,
+      "rank": 150
+    },
+    {
+      "player": "SELJAAS, ZACHARY",
+      "team": "ASV",
+      "wpa": 428.42,
+      "plays": 783,
+      "rank": 151
+    },
+    {
+      "player": "DIMITRIJEVIC, NENO",
+      "team": "MUN",
+      "wpa": 428.37,
+      "plays": 503,
+      "rank": 152
+    },
+    {
+      "player": "WAINRIGHT, ISH",
+      "team": "HTA",
+      "wpa": 426.44,
+      "plays": 752,
+      "rank": 153
+    },
+    {
+      "player": "WALKUP, THOMAS",
+      "team": "OLY",
+      "wpa": 416.99,
+      "plays": 929,
+      "rank": 154
+    },
+    {
+      "player": "DA SILVA, OSCAR",
+      "team": "MUN",
+      "wpa": 415.8,
+      "plays": 669,
+      "rank": 155
+    },
+    {
+      "player": "SAKO, NEAL",
+      "team": "PAM",
+      "wpa": 414.08,
+      "plays": 956,
+      "rank": 156
+    },
+    {
+      "player": "BUTKEVICIUS, ARNAS",
+      "team": "ZAL",
+      "wpa": 412.7,
+      "plays": 760,
+      "rank": 157
+    },
+    {
+      "player": "FARIED, KENNETH",
+      "team": "PAN",
+      "wpa": 408.27,
+      "plays": 703,
+      "rank": 158
     },
     {
       "player": "FAYE, MOUHAMED",
       "team": "PRS",
-      "wpa": 381.47,
+      "wpa": 403.81,
       "plays": 997,
+      "rank": 159
+    },
+    {
+      "player": "PUERTO, JOSEP",
+      "team": "PAM",
+      "wpa": 401.98,
+      "plays": 710,
+      "rank": 160
+    },
+    {
+      "player": "NEDOVIC, NEMANJA",
+      "team": "MCO",
+      "wpa": 395.49,
+      "plays": 591,
       "rank": 161
     },
     {
       "player": "JANTUNEN, MIKAEL",
       "team": "ULK",
-      "wpa": 370.15,
+      "wpa": 392.75,
       "plays": 862,
       "rank": 162
     },
     {
-      "player": "WALKUP, THOMAS",
+      "player": "LEE, SABEN",
       "team": "OLY",
-      "wpa": 369.37,
-      "plays": 929,
+      "wpa": 389.44,
+      "plays": 597,
       "rank": 163
     },
     {
-      "player": "RICCI, GIAMPAOLO",
-      "team": "MIL",
-      "wpa": 364.32,
-      "plays": 607,
+      "player": "LUNDBERG, IFFE",
+      "team": "TEL",
+      "wpa": 387.47,
+      "plays": 468,
       "rank": 164
     },
     {
-      "player": "ROGKAVOPOULOS, NIKOLAOS",
-      "team": "PAN",
-      "wpa": 357.04,
-      "plays": 488,
+      "player": "MCCORMACK, DAVID",
+      "team": "MUN",
+      "wpa": 383.97,
+      "plays": 619,
       "rank": 165
-    },
-    {
-      "player": "DOWTIN JR, JEFFREY",
-      "team": "TEL",
-      "wpa": 354.21,
-      "plays": 410,
-      "rank": 166
-    },
-    {
-      "player": "WILLIS, DEREK",
-      "team": "PRS",
-      "wpa": 343.59,
-      "plays": 721,
-      "rank": 167
-    },
-    {
-      "player": "DE LARREA, SERGIO",
-      "team": "PAM",
-      "wpa": 340.31,
-      "plays": 576,
-      "rank": 168
-    },
-    {
-      "player": "ABALDE, ALBERTO",
-      "team": "MAD",
-      "wpa": 338.0,
-      "plays": 642,
-      "rank": 169
     },
     {
       "player": "MILTON, SHAKE",
       "team": "PAR",
-      "wpa": 332.58,
+      "wpa": 372.55,
       "plays": 527,
-      "rank": 170
+      "rank": 166
     },
     {
-      "player": "AJINCA, MELVIN",
-      "team": "ASV",
-      "wpa": 332.12,
-      "plays": 597,
-      "rank": 171
-    },
-    {
-      "player": "ODIASE, TAI",
-      "team": "HTA",
-      "wpa": 331.51,
-      "plays": 385,
-      "rank": 172
-    },
-    {
-      "player": "LEE, SABEN",
-      "team": "OLY",
-      "wpa": 330.71,
-      "plays": 597,
-      "rank": 173
-    },
-    {
-      "player": "MASSA, BODIAN",
-      "team": "ASV",
-      "wpa": 330.2,
-      "plays": 783,
-      "rank": 174
-    },
-    {
-      "player": "LLULL, SERGIO",
-      "team": "MAD",
-      "wpa": 328.68,
-      "plays": 511,
-      "rank": 175
-    },
-    {
-      "player": "TRAORE, ARMEL",
-      "team": "ASV",
-      "wpa": 327.82,
-      "plays": 730,
-      "rank": 176
-    },
-    {
-      "player": "BOSTON JR., BRANDON",
-      "team": "ULK",
-      "wpa": 326.16,
-      "plays": 461,
-      "rank": 177
-    },
-    {
-      "player": "OUATTARA, YAKUBA",
-      "team": "PRS",
-      "wpa": 323.55,
-      "plays": 789,
-      "rank": 178
-    },
-    {
-      "player": "DOKOSSI, ALLAN",
-      "team": "PRS",
-      "wpa": 322.77,
-      "plays": 945,
-      "rank": 179
+      "player": "DE LARREA, SERGIO",
+      "team": "PAM",
+      "wpa": 372.34,
+      "plays": 576,
+      "rank": 167
     },
     {
       "player": "DIALLO, HAMIDOU",
       "team": "BAS",
-      "wpa": 319.88,
+      "wpa": 368.46,
       "plays": 502,
-      "rank": 180
+      "rank": 168
     },
     {
-      "player": "BIRCH, KHEM",
+      "player": "OUATTARA, YAKUBA",
+      "team": "PRS",
+      "wpa": 361.0,
+      "plays": 789,
+      "rank": 169
+    },
+    {
+      "player": "BOSTON JR., BRANDON",
       "team": "ULK",
-      "wpa": 316.1,
-      "plays": 1003,
-      "rank": 181
+      "wpa": 356.89,
+      "plays": 461,
+      "rank": 170
     },
     {
-      "player": "MITOGLOU, KONSTANTINOS",
-      "team": "PAN",
-      "wpa": 304.12,
-      "plays": 535,
-      "rank": 182
+      "player": "WILLIS, DEREK",
+      "team": "PRS",
+      "wpa": 354.81,
+      "plays": 721,
+      "rank": 171
     },
     {
-      "player": "NORRIS, MILES",
-      "team": "BAR",
-      "wpa": 301.7,
-      "plays": 465,
-      "rank": 183
+      "player": "MASSA, BODIAN",
+      "team": "ASV",
+      "wpa": 351.95,
+      "plays": 783,
+      "rank": 172
+    },
+    {
+      "player": "ABALDE, ALBERTO",
+      "team": "MAD",
+      "wpa": 348.12,
+      "plays": 642,
+      "rank": 173
+    },
+    {
+      "player": "AJINCA, MELVIN",
+      "team": "ASV",
+      "wpa": 347.11,
+      "plays": 597,
+      "rank": 174
     },
     {
       "player": "EBOUA, PAUL",
       "team": "ASV",
-      "wpa": 295.71,
+      "wpa": 344.02,
       "plays": 451,
-      "rank": 184
+      "rank": 175
     },
     {
-      "player": "RAYMAN, WILLIAM",
-      "team": "TEL",
-      "wpa": 292.87,
-      "plays": 651,
-      "rank": 185
+      "player": "ROGKAVOPOULOS, NIKOLAOS",
+      "team": "PAN",
+      "wpa": 341.64,
+      "plays": 488,
+      "rank": 176
     },
     {
       "player": "HOLMES, RICHAUN",
       "team": "PAN",
-      "wpa": 290.14,
+      "wpa": 339.16,
       "plays": 457,
-      "rank": 186
+      "rank": 177
     },
     {
-      "player": "SWIDER, COLE",
-      "team": "IST",
-      "wpa": 288.4,
-      "plays": 346,
-      "rank": 187
-    },
-    {
-      "player": "CALATHES, NICK",
-      "team": "PAR",
-      "wpa": 287.51,
-      "plays": 748,
-      "rank": 188
-    },
-    {
-      "player": "NOWELL, MARKQUIS",
-      "team": "BAS",
-      "wpa": 284.85,
-      "plays": 599,
-      "rank": 189
+      "player": "DOKOSSI, ALLAN",
+      "team": "PRS",
+      "wpa": 333.73,
+      "plays": 945,
+      "rank": 178
     },
     {
       "player": "LAPROVITTOLA, NICOLAS",
       "team": "BAR",
-      "wpa": 284.5,
+      "wpa": 332.22,
       "plays": 521,
-      "rank": 190
+      "rank": 179
     },
     {
-      "player": "MOTIEJUNAS, DONATAS",
-      "team": "RED",
-      "wpa": 283.45,
-      "plays": 495,
-      "rank": 191
-    },
-    {
-      "player": "MCKISSIC, SHAQUIELLE",
-      "team": "OLY",
-      "wpa": 282.12,
-      "plays": 379,
-      "rank": 192
-    },
-    {
-      "player": "LIGHTY, DAVID",
-      "team": "ASV",
-      "wpa": 279.48,
-      "plays": 563,
-      "rank": 193
-    },
-    {
-      "player": "POIRIER, VINCENT",
+      "player": "SWIDER, COLE",
       "team": "IST",
-      "wpa": 274.27,
-      "plays": 355,
-      "rank": 194
+      "wpa": 329.16,
+      "plays": 346,
+      "rank": 180
+    },
+    {
+      "player": "DOWTIN JR, JEFFREY",
+      "team": "TEL",
+      "wpa": 328.8,
+      "plays": 410,
+      "rank": 181
     },
     {
       "player": "MORGAN, JEREMY",
       "team": "PRS",
-      "wpa": 272.89,
+      "wpa": 316.83,
       "plays": 780,
-      "rank": 195
+      "rank": 182
     },
     {
-      "player": "DIARRA, ALIOU",
-      "team": "VIR",
-      "wpa": 271.33,
-      "plays": 468,
-      "rank": 196
+      "player": "RICCI, GIAMPAOLO",
+      "team": "MIL",
+      "wpa": 316.21,
+      "plays": 607,
+      "rank": 183
     },
     {
-      "player": "JEKIRI, TONYE",
-      "team": "PAR",
-      "wpa": 271.06,
-      "plays": 393,
-      "rank": 197
+      "player": "MOTIEJUNAS, DONATAS",
+      "team": "RED",
+      "wpa": 316.14,
+      "plays": 495,
+      "rank": 184
     },
     {
-      "player": "SEDEKERSKIS, TADAS",
-      "team": "BAS",
-      "wpa": 269.38,
-      "plays": 317,
-      "rank": 198
-    },
-    {
-      "player": "DINWIDDIE, SPENCER",
-      "team": "MUN",
-      "wpa": 258.06,
-      "plays": 370,
-      "rank": 199
-    },
-    {
-      "player": "BRAZDEIKIS, IGNAS",
-      "team": "ZAL",
-      "wpa": 249.18,
-      "plays": 615,
-      "rank": 200
-    },
-    {
-      "player": "JACKSON, EDWIN",
-      "team": "ASV",
-      "wpa": 246.63,
-      "plays": 411,
-      "rank": 201
-    },
-    {
-      "player": "BIRUTIS, LAURYNAS",
-      "team": "ZAL",
-      "wpa": 245.23,
-      "plays": 594,
-      "rank": 202
-    },
-    {
-      "player": "BEGARIN, JUHANN",
-      "team": "MCO",
-      "wpa": 244.85,
-      "plays": 368,
-      "rank": 203
-    },
-    {
-      "player": "FRISCH, CLEMENT",
-      "team": "BAS",
-      "wpa": 241.42,
-      "plays": 535,
-      "rank": 204
+      "player": "LLULL, SERGIO",
+      "team": "MAD",
+      "wpa": 311.84,
+      "plays": 511,
+      "rank": 185
     },
     {
       "player": "GIFFEY, NIELS",
       "team": "MUN",
-      "wpa": 239.05,
+      "wpa": 304.8,
       "plays": 465,
+      "rank": 186
+    },
+    {
+      "player": "RAYMAN, WILLIAM",
+      "team": "TEL",
+      "wpa": 304.24,
+      "plays": 651,
+      "rank": 187
+    },
+    {
+      "player": "FRISCH, CLEMENT",
+      "team": "BAS",
+      "wpa": 303.96,
+      "plays": 535,
+      "rank": 188
+    },
+    {
+      "player": "MITOGLOU, KONSTANTINOS",
+      "team": "PAN",
+      "wpa": 300.19,
+      "plays": 535,
+      "rank": 189
+    },
+    {
+      "player": "LIGHTY, DAVID",
+      "team": "ASV",
+      "wpa": 298.72,
+      "plays": 563,
+      "rank": 190
+    },
+    {
+      "player": "ODIASE, TAI",
+      "team": "HTA",
+      "wpa": 297.45,
+      "plays": 385,
+      "rank": 191
+    },
+    {
+      "player": "CALATHES, NICK",
+      "team": "PAR",
+      "wpa": 296.25,
+      "plays": 748,
+      "rank": 192
+    },
+    {
+      "player": "BIRCH, KHEM",
+      "team": "ULK",
+      "wpa": 295.8,
+      "plays": 1003,
+      "rank": 193
+    },
+    {
+      "player": "NOWELL, MARKQUIS",
+      "team": "BAS",
+      "wpa": 294.79,
+      "plays": 599,
+      "rank": 194
+    },
+    {
+      "player": "NORRIS, MILES",
+      "team": "BAR",
+      "wpa": 293.16,
+      "plays": 465,
+      "rank": 195
+    },
+    {
+      "player": "BIRUTIS, LAURYNAS",
+      "team": "ZAL",
+      "wpa": 290.27,
+      "plays": 594,
+      "rank": 196
+    },
+    {
+      "player": "DINWIDDIE, SPENCER",
+      "team": "MUN",
+      "wpa": 288.15,
+      "plays": 370,
+      "rank": 197
+    },
+    {
+      "player": "JEKIRI, TONYE",
+      "team": "PAR",
+      "wpa": 285.99,
+      "plays": 393,
+      "rank": 198
+    },
+    {
+      "player": "JACKSON, EDWIN",
+      "team": "ASV",
+      "wpa": 275.1,
+      "plays": 411,
+      "rank": 199
+    },
+    {
+      "player": "DIARRA, ALIOU",
+      "team": "VIR",
+      "wpa": 273.2,
+      "plays": 468,
+      "rank": 200
+    },
+    {
+      "player": "DIOP, KHALIFA",
+      "team": "BAS",
+      "wpa": 272.51,
+      "plays": 628,
+      "rank": 201
+    },
+    {
+      "player": "POIRIER, VINCENT",
+      "team": "IST",
+      "wpa": 264.89,
+      "plays": 355,
+      "rank": 202
+    },
+    {
+      "player": "BRAZDEIKIS, IGNAS",
+      "team": "ZAL",
+      "wpa": 260.26,
+      "plays": 615,
+      "rank": 203
+    },
+    {
+      "player": "BEGARIN, JUHANN",
+      "team": "MCO",
+      "wpa": 259.84,
+      "plays": 368,
+      "rank": 204
+    },
+    {
+      "player": "NTILIKINA, FRANK",
+      "team": "OLY",
+      "wpa": 254.5,
+      "plays": 457,
       "rank": 205
     },
     {
-      "player": "HACKETT, DANIEL",
-      "team": "VIR",
-      "wpa": 233.99,
-      "plays": 589,
+      "player": "DOBRIC, OGNJEN",
+      "team": "RED",
+      "wpa": 249.5,
+      "plays": 334,
       "rank": 206
     },
     {
       "player": "PAYNE, CAMERON",
       "team": "PAR",
-      "wpa": 233.39,
+      "wpa": 249.16,
       "plays": 349,
       "rank": 207
     },
     {
-      "player": "DIBARTOLOMEO, JOHN",
-      "team": "TEL",
-      "wpa": 231.79,
-      "plays": 446,
+      "player": "MCKISSIC, SHAQUIELLE",
+      "team": "OLY",
+      "wpa": 243.79,
+      "plays": 379,
       "rank": 208
     },
     {
-      "player": "DIOP, KHALIFA",
+      "player": "SEDEKERSKIS, TADAS",
       "team": "BAS",
-      "wpa": 229.39,
-      "plays": 628,
+      "wpa": 240.69,
+      "plays": 317,
       "rank": 209
-    },
-    {
-      "player": "KAMENJAS, KENAN",
-      "team": "DUB",
-      "wpa": 226.9,
-      "plays": 443,
-      "rank": 210
-    },
-    {
-      "player": "JONES, KAI",
-      "team": "IST",
-      "wpa": 223.29,
-      "plays": 571,
-      "rank": 211
-    },
-    {
-      "player": "CAVALIERE, LEOPOLD",
-      "team": "PRS",
-      "wpa": 219.9,
-      "plays": 719,
-      "rank": 212
-    },
-    {
-      "player": "DOBRIC, OGNJEN",
-      "team": "RED",
-      "wpa": 218.62,
-      "plays": 334,
-      "rank": 213
-    },
-    {
-      "player": "PREPELIC, KLEMEN",
-      "team": "DUB",
-      "wpa": 218.58,
-      "plays": 451,
-      "rank": 214
-    },
-    {
-      "player": "PAJOLA, ALESSANDRO",
-      "team": "VIR",
-      "wpa": 212.43,
-      "plays": 593,
-      "rank": 215
-    },
-    {
-      "player": "NTILIKINA, FRANK",
-      "team": "OLY",
-      "wpa": 203.52,
-      "plays": 457,
-      "rank": 216
-    },
-    {
-      "player": "SIRVYDIS, DEIVIDAS",
-      "team": "ZAL",
-      "wpa": 203.09,
-      "plays": 382,
-      "rank": 217
-    },
-    {
-      "player": "LESSORT, MATHIAS",
-      "team": "PAN",
-      "wpa": 201.53,
-      "plays": 448,
-      "rank": 218
-    },
-    {
-      "player": "DESSERT, BRICE",
-      "team": "IST",
-      "wpa": 200.43,
-      "plays": 286,
-      "rank": 219
-    },
-    {
-      "player": "JOVIC, STEFAN",
-      "team": "MUN",
-      "wpa": 198.46,
-      "plays": 444,
-      "rank": 220
     },
     {
       "player": "POKUSEVSKI, ALEKSEJ",
       "team": "PAR",
-      "wpa": 196.43,
+      "wpa": 236.07,
       "plays": 348,
-      "rank": 221
+      "rank": 210
     },
     {
-      "player": "PARKER, JABARI",
-      "team": "PAR",
-      "wpa": 196.37,
-      "plays": 329,
-      "rank": 222
-    },
-    {
-      "player": "RADZEVICIUS, GYTIS",
-      "team": "BAS",
-      "wpa": 188.02,
-      "plays": 457,
-      "rank": 223
-    },
-    {
-      "player": "YURTSEVEN, OMER",
-      "team": "PAN",
-      "wpa": 184.76,
-      "plays": 369,
-      "rank": 224
-    },
-    {
-      "player": "LEN, ALEX",
-      "team": "MAD",
-      "wpa": 184.18,
-      "plays": 306,
-      "rank": 225
+      "player": "DIBARTOLOMEO, JOHN",
+      "team": "TEL",
+      "wpa": 234.7,
+      "plays": 446,
+      "rank": 211
     },
     {
       "player": "BOLOMBOY, JOEL",
       "team": "RED",
-      "wpa": 182.6,
+      "wpa": 226.35,
       "plays": 303,
-      "rank": 226
+      "rank": 212
     },
     {
-      "player": "VOIGTMANN, JOHANNES",
+      "player": "CAVALIERE, LEOPOLD",
+      "team": "PRS",
+      "wpa": 224.91,
+      "plays": 719,
+      "rank": 213
+    },
+    {
+      "player": "YURTSEVEN, OMER",
+      "team": "PAN",
+      "wpa": 223.92,
+      "plays": 369,
+      "rank": 214
+    },
+    {
+      "player": "HACKETT, DANIEL",
+      "team": "VIR",
+      "wpa": 223.3,
+      "plays": 589,
+      "rank": 215
+    },
+    {
+      "player": "RADZEVICIUS, GYTIS",
+      "team": "BAS",
+      "wpa": 221.86,
+      "plays": 457,
+      "rank": 216
+    },
+    {
+      "player": "JOVIC, STEFAN",
       "team": "MUN",
-      "wpa": 174.13,
-      "plays": 368,
-      "rank": 227
+      "wpa": 220.78,
+      "plays": 444,
+      "rank": 217
+    },
+    {
+      "player": "PARKER, JABARI",
+      "team": "PAR",
+      "wpa": 219.8,
+      "plays": 329,
+      "rank": 218
+    },
+    {
+      "player": "BEAUBOIS, RODRIGUE",
+      "team": "IST",
+      "wpa": 217.82,
+      "plays": 289,
+      "rank": 219
     },
     {
       "player": "MARINKOVIC, VANJA",
       "team": "PAR",
-      "wpa": 166.76,
+      "wpa": 216.0,
       "plays": 348,
-      "rank": 228
+      "rank": 220
     },
     {
       "player": "CALE, MYLES",
       "team": "BAR",
-      "wpa": 163.37,
+      "wpa": 213.76,
       "plays": 513,
+      "rank": 221
+    },
+    {
+      "player": "JONES, KAI",
+      "team": "IST",
+      "wpa": 209.86,
+      "plays": 571,
+      "rank": 222
+    },
+    {
+      "player": "PAJOLA, ALESSANDRO",
+      "team": "VIR",
+      "wpa": 208.41,
+      "plays": 593,
+      "rank": 223
+    },
+    {
+      "player": "VOIGTMANN, JOHANNES",
+      "team": "MUN",
+      "wpa": 206.14,
+      "plays": 368,
+      "rank": 224
+    },
+    {
+      "player": "DESSERT, BRICE",
+      "team": "IST",
+      "wpa": 203.76,
+      "plays": 286,
+      "rank": 225
+    },
+    {
+      "player": "KAMENJAS, KENAN",
+      "team": "DUB",
+      "wpa": 203.74,
+      "plays": 443,
+      "rank": 226
+    },
+    {
+      "player": "LESSORT, MATHIAS",
+      "team": "PAN",
+      "wpa": 202.11,
+      "plays": 448,
+      "rank": 227
+    },
+    {
+      "player": "PREPELIC, KLEMEN",
+      "team": "DUB",
+      "wpa": 195.19,
+      "plays": 451,
+      "rank": 228
+    },
+    {
+      "player": "BITIM, ONURALP",
+      "team": "ULK",
+      "wpa": 194.99,
+      "plays": 433,
       "rank": 229
     },
     {
       "player": "PAPANIKOLAOU, KOSTAS",
       "team": "OLY",
-      "wpa": 162.92,
+      "wpa": 193.02,
       "plays": 469,
       "rank": 230
     },
     {
-      "player": "LAKIC, ARIJAN",
-      "team": "PAR",
-      "wpa": 158.54,
-      "plays": 343,
+      "player": "SIRVYDIS, DEIVIDAS",
+      "team": "ZAL",
+      "wpa": 190.66,
+      "plays": 382,
       "rank": 231
-    },
-    {
-      "player": "BITIM, ONURALP",
-      "team": "ULK",
-      "wpa": 156.51,
-      "plays": 433,
-      "rank": 232
-    },
-    {
-      "player": "HOMMES, DAULTON",
-      "team": "PRS",
-      "wpa": 154.36,
-      "plays": 433,
-      "rank": 233
-    },
-    {
-      "player": "JOSEPH, CORY",
-      "team": "OLY",
-      "wpa": 153.59,
-      "plays": 315,
-      "rank": 234
     },
     {
       "player": "ABASS, AWUDU",
       "team": "DUB",
-      "wpa": 151.91,
+      "wpa": 186.67,
       "plays": 417,
+      "rank": 232
+    },
+    {
+      "player": "LEN, ALEX",
+      "team": "MAD",
+      "wpa": 177.78,
+      "plays": 306,
+      "rank": 233
+    },
+    {
+      "player": "HOMMES, DAULTON",
+      "team": "PRS",
+      "wpa": 172.65,
+      "plays": 433,
+      "rank": 234
+    },
+    {
+      "player": "JOSEPH, CORY",
+      "team": "OLY",
+      "wpa": 172.25,
+      "plays": 315,
       "rank": 235
     },
     {
-      "player": "LAVI, GUR",
-      "team": "TEL",
-      "wpa": 149.74,
-      "plays": 209,
+      "player": "AKELE, NICOLA",
+      "team": "VIR",
+      "wpa": 170.89,
+      "plays": 320,
       "rank": 236
     },
     {
-      "player": "BEAUBOIS, RODRIGUE",
-      "team": "IST",
-      "wpa": 145.28,
-      "plays": 289,
+      "player": "LAKIC, ARIJAN",
+      "team": "PAR",
+      "wpa": 160.16,
+      "plays": 343,
       "rank": 237
     },
     {
-      "player": "KONDIC, KOSTA",
-      "team": "DUB",
-      "wpa": 142.8,
-      "plays": 244,
+      "player": "DOS SANTOS, YAGO",
+      "team": "RED",
+      "wpa": 157.55,
+      "plays": 378,
       "rank": 238
     },
     {
-      "player": "GINAT, TOMER",
-      "team": "HTA",
-      "wpa": 138.3,
-      "plays": 178,
+      "player": "MANNION, NICCOLO",
+      "team": "MIL",
+      "wpa": 150.15,
+      "plays": 329,
       "rank": 239
     },
     {
       "player": "HOLLATZ, JUSTUS",
       "team": "MUN",
-      "wpa": 135.13,
+      "wpa": 149.27,
       "plays": 471,
       "rank": 240
     },
     {
-      "player": "SILVA, CHRIS",
-      "team": "ULK",
-      "wpa": 133.0,
-      "plays": 265,
+      "player": "KONDIC, KOSTA",
+      "team": "DUB",
+      "wpa": 146.27,
+      "plays": 244,
       "rank": 241
-    },
-    {
-      "player": "MANNION, NICCOLO",
-      "team": "MIL",
-      "wpa": 130.36,
-      "plays": 329,
-      "rank": 242
-    },
-    {
-      "player": "CARTER, TYSON",
-      "team": "RED",
-      "wpa": 129.52,
-      "plays": 194,
-      "rank": 243
-    },
-    {
-      "player": "AKELE, NICOLA",
-      "team": "VIR",
-      "wpa": 129.01,
-      "plays": 320,
-      "rank": 244
-    },
-    {
-      "player": "MADAR, YAM",
-      "team": "HTA",
-      "wpa": 127.53,
-      "plays": 220,
-      "rank": 245
-    },
-    {
-      "player": "DAVIDOVAC, DEJAN",
-      "team": "RED",
-      "wpa": 124.32,
-      "plays": 265,
-      "rank": 246
-    },
-    {
-      "player": "DOS SANTOS, YAGO",
-      "team": "RED",
-      "wpa": 123.13,
-      "plays": 378,
-      "rank": 247
     },
     {
       "player": "TARPEY, TERRY",
       "team": "MCO",
-      "wpa": 121.57,
+      "wpa": 145.94,
       "plays": 318,
-      "rank": 248
+      "rank": 242
     },
     {
-      "player": "BIRSEN, METECAN",
+      "player": "SILVA, CHRIS",
       "team": "ULK",
-      "wpa": 108.79,
-      "plays": 331,
-      "rank": 249
+      "wpa": 145.78,
+      "plays": 265,
+      "rank": 243
+    },
+    {
+      "player": "LAVI, GUR",
+      "team": "TEL",
+      "wpa": 144.37,
+      "plays": 209,
+      "rank": 244
     },
     {
       "player": "BROWN, LORENZO",
       "team": "MIL",
-      "wpa": 104.9,
+      "wpa": 141.66,
       "plays": 236,
-      "rank": 250
+      "rank": 245
+    },
+    {
+      "player": "GINAT, TOMER",
+      "team": "HTA",
+      "wpa": 139.8,
+      "plays": 178,
+      "rank": 246
+    },
+    {
+      "player": "DAVIDOVAC, DEJAN",
+      "team": "RED",
+      "wpa": 131.26,
+      "plays": 265,
+      "rank": 247
     },
     {
       "player": "BALDWIN, KAMAR",
       "team": "MUN",
-      "wpa": 104.19,
+      "wpa": 126.99,
       "plays": 206,
-      "rank": 251
-    },
-    {
-      "player": "DUNSTON, BRYANT",
-      "team": "MIL",
-      "wpa": 103.57,
-      "plays": 246,
-      "rank": 252
-    },
-    {
-      "player": "FALL, YOUSSOUPHA",
-      "team": "BAR",
-      "wpa": 94.85,
-      "plays": 192,
-      "rank": 253
-    },
-    {
-      "player": "HANKINS, ZACHARY",
-      "team": "TEL",
-      "wpa": 94.07,
-      "plays": 156,
-      "rank": 254
-    },
-    {
-      "player": "CABOCLO, BRUNO",
-      "team": "DUB",
-      "wpa": 93.25,
-      "plays": 192,
-      "rank": 255
+      "rank": 248
     },
     {
       "player": "ENNIS, TYLER",
       "team": "HTA",
-      "wpa": 90.4,
+      "wpa": 124.28,
       "plays": 120,
-      "rank": 256
-    },
-    {
-      "player": "MARCOS, JUANI",
-      "team": "BAR",
-      "wpa": 90.37,
-      "plays": 324,
-      "rank": 257
+      "rank": 249
     },
     {
       "player": "ELLIS, BOOGIE",
       "team": "DUB",
-      "wpa": 89.3,
+      "wpa": 116.3,
       "plays": 135,
-      "rank": 258
+      "rank": 250
+    },
+    {
+      "player": "CARTER, TYSON",
+      "team": "RED",
+      "wpa": 112.6,
+      "plays": 194,
+      "rank": 251
+    },
+    {
+      "player": "CABOCLO, BRUNO",
+      "team": "DUB",
+      "wpa": 112.33,
+      "plays": 192,
+      "rank": 252
+    },
+    {
+      "player": "BIRSEN, METECAN",
+      "team": "ULK",
+      "wpa": 111.86,
+      "plays": 331,
+      "rank": 253
+    },
+    {
+      "player": "MADAR, YAM",
+      "team": "HTA",
+      "wpa": 106.37,
+      "plays": 220,
+      "rank": 254
     },
     {
       "player": "BACOT JR., ARMANDO",
       "team": "ULK",
-      "wpa": 84.28,
+      "wpa": 101.88,
       "plays": 394,
-      "rank": 259
+      "rank": 255
     },
     {
       "player": "TOLIOPOULOS, VASSILIS",
       "team": "PAN",
-      "wpa": 79.02,
+      "wpa": 96.38,
       "plays": 136,
-      "rank": 260
+      "rank": 256
     },
     {
-      "player": "AYAYI, JOEL",
-      "team": "PRS",
-      "wpa": 75.24,
-      "plays": 226,
-      "rank": 261
+      "player": "HANKINS, ZACHARY",
+      "team": "TEL",
+      "wpa": 94.99,
+      "plays": 156,
+      "rank": 257
     },
     {
-      "player": "GIEDRAITIS, DOVYDAS",
-      "team": "ZAL",
-      "wpa": 70.44,
-      "plays": 309,
-      "rank": 262
+      "player": "MARCOS, JUANI",
+      "team": "BAR",
+      "wpa": 93.63,
+      "plays": 324,
+      "rank": 258
+    },
+    {
+      "player": "DUNSTON, BRYANT",
+      "team": "MIL",
+      "wpa": 92.65,
+      "plays": 246,
+      "rank": 259
     },
     {
       "player": "RIVERO, JASIEL",
       "team": "RED",
-      "wpa": 70.32,
+      "wpa": 90.52,
       "plays": 116,
-      "rank": 263
+      "rank": 260
     },
     {
       "player": "BAKO, ISMAEL",
       "team": "PRS",
-      "wpa": 68.74,
+      "wpa": 90.33,
       "plays": 156,
+      "rank": 261
+    },
+    {
+      "player": "FALL, YOUSSOUPHA",
+      "team": "BAR",
+      "wpa": 86.93,
+      "plays": 192,
+      "rank": 262
+    },
+    {
+      "player": "AYAYI, JOEL",
+      "team": "PRS",
+      "wpa": 73.55,
+      "plays": 226,
+      "rank": 263
+    },
+    {
+      "player": "WILBEKIN, SCOTTIE",
+      "team": "ULK",
+      "wpa": 71.93,
+      "plays": 125,
       "rank": 264
     },
     {
-      "player": "GRAHAM, DEVONTE",
-      "team": "RED",
-      "wpa": 68.33,
-      "plays": 101,
+      "player": "SAMANIC, LUKA",
+      "team": "BAS",
+      "wpa": 68.86,
+      "plays": 116,
       "rank": 265
     },
     {
       "player": "SESTINA, NATHAN",
       "team": "PAM",
-      "wpa": 66.7,
+      "wpa": 64.77,
       "plays": 146,
       "rank": 266
     },
     {
-      "player": "WILBEKIN, SCOTTIE",
-      "team": "ULK",
-      "wpa": 61.31,
-      "plays": 125,
+      "player": "GIEDRAITIS, DOVYDAS",
+      "team": "ZAL",
+      "wpa": 61.91,
+      "plays": 309,
       "rank": 267
-    },
-    {
-      "player": "SAMANIC, LUKA",
-      "team": "BAS",
-      "wpa": 58.81,
-      "plays": 116,
-      "rank": 268
     },
     {
       "player": "YILMAZ, ERKAN",
       "team": "IST",
-      "wpa": 56.15,
+      "wpa": 61.41,
       "plays": 249,
-      "rank": 269
-    },
-    {
-      "player": "TAYLOR, BRANDON",
-      "team": "VIR",
-      "wpa": 49.59,
-      "plays": 108,
-      "rank": 270
+      "rank": 268
     },
     {
       "player": "SAMODUROV, ALEXANDROS",
       "team": "PAN",
-      "wpa": 44.44,
+      "wpa": 60.27,
       "plays": 97,
-      "rank": 271
+      "rank": 269
     },
     {
-      "player": "VILLAR, RAFA",
-      "team": "BAS",
-      "wpa": 43.19,
-      "plays": 212,
-      "rank": 272
-    },
-    {
-      "player": "GRIGONIS, MARIUS",
-      "team": "PAN",
-      "wpa": 42.9,
-      "plays": 124,
-      "rank": 273
+      "player": "GRAHAM, DEVONTE",
+      "team": "RED",
+      "wpa": 56.02,
+      "plays": 101,
+      "rank": 270
     },
     {
       "player": "EDWARDS, KESSLER",
       "team": "HTA",
-      "wpa": 40.07,
+      "wpa": 48.99,
       "plays": 185,
-      "rank": 274
-    },
-    {
-      "player": "RANDOLPH, LEVI",
-      "team": "HTA",
-      "wpa": 38.63,
-      "plays": 121,
-      "rank": 275
-    },
-    {
-      "player": "SHAHRVIN, ENZO",
-      "team": "PRS",
-      "wpa": 37.74,
-      "plays": 158,
-      "rank": 276
-    },
-    {
-      "player": "NGOUAMA, MEHDY",
-      "team": "ASV",
-      "wpa": 34.85,
-      "plays": 202,
-      "rank": 277
-    },
-    {
-      "player": "RADANOV, ALEKSA",
-      "team": "PAR",
-      "wpa": 34.78,
-      "plays": 87,
-      "rank": 278
-    },
-    {
-      "player": "ATAMNA, ADAM",
-      "team": "ASV",
-      "wpa": 34.47,
-      "plays": 244,
-      "rank": 279
-    },
-    {
-      "player": "FERRARI, FRANCESCO",
-      "team": "VIR",
-      "wpa": 33.78,
-      "plays": 138,
-      "rank": 280
-    },
-    {
-      "player": "TONUT, STEFANO",
-      "team": "MIL",
-      "wpa": 29.36,
-      "plays": 92,
-      "rank": 281
+      "rank": 271
     },
     {
       "player": "ZAGARS, ARTURS",
       "team": "ULK",
-      "wpa": 27.76,
+      "wpa": 46.21,
       "plays": 87,
-      "rank": 282
+      "rank": 272
     },
     {
-      "player": "MUTAF, DAVID",
-      "team": "IST",
-      "wpa": 24.93,
-      "plays": 62,
-      "rank": 283
+      "player": "NGOUAMA, MEHDY",
+      "team": "ASV",
+      "wpa": 45.25,
+      "plays": 202,
+      "rank": 273
     },
     {
-      "player": "LOPEZ-AROSTEGUI, XABI",
-      "team": "PAM",
-      "wpa": 24.61,
-      "plays": 116,
-      "rank": 284
+      "player": "TAYLOR, BRANDON",
+      "team": "VIR",
+      "wpa": 44.56,
+      "plays": 108,
+      "rank": 274
+    },
+    {
+      "player": "VILLAR, RAFA",
+      "team": "BAS",
+      "wpa": 42.87,
+      "plays": 212,
+      "rank": 275
+    },
+    {
+      "player": "ATAMNA, ADAM",
+      "team": "ASV",
+      "wpa": 42.73,
+      "plays": 244,
+      "rank": 276
+    },
+    {
+      "player": "RANDOLPH, LEVI",
+      "team": "HTA",
+      "wpa": 40.58,
+      "plays": 121,
+      "rank": 277
+    },
+    {
+      "player": "GRIGONIS, MARIUS",
+      "team": "PAN",
+      "wpa": 39.88,
+      "plays": 124,
+      "rank": 278
+    },
+    {
+      "player": "FERRARI, FRANCESCO",
+      "team": "VIR",
+      "wpa": 37.2,
+      "plays": 138,
+      "rank": 279
     },
     {
       "player": "SANLI, SERTAC",
       "team": "DUB",
-      "wpa": 24.14,
+      "wpa": 36.57,
       "plays": 62,
-      "rank": 285
+      "rank": 280
+    },
+    {
+      "player": "SHAHRVIN, ENZO",
+      "team": "PRS",
+      "wpa": 36.35,
+      "plays": 158,
+      "rank": 281
     },
     {
       "player": "MORRIS, MONTE",
       "team": "OLY",
-      "wpa": 24.12,
+      "wpa": 35.66,
       "plays": 102,
-      "rank": 286
+      "rank": 282
     },
     {
       "player": "FLACCADORI, DIEGO",
       "team": "MIL",
-      "wpa": 23.94,
+      "wpa": 31.88,
       "plays": 62,
-      "rank": 287
-    },
-    {
-      "player": "TIMOR, BAR",
-      "team": "HTA",
-      "wpa": 22.98,
-      "plays": 66,
-      "rank": 288
-    },
-    {
-      "player": "KEITA, SAYON",
-      "team": "BAR",
-      "wpa": 19.94,
-      "plays": 69,
-      "rank": 289
+      "rank": 283
     },
     {
       "player": "KRAMER, DAVID",
       "team": "MAD",
-      "wpa": 19.16,
+      "wpa": 31.6,
       "plays": 168,
-      "rank": 290
+      "rank": 284
     },
     {
-      "player": "KALAITZAKIS, PANAGIOTIS",
-      "team": "PAN",
-      "wpa": 16.61,
-      "plays": 264,
-      "rank": 291
+      "player": "LOPEZ-AROSTEGUI, XABI",
+      "team": "PAM",
+      "wpa": 31.35,
+      "plays": 116,
+      "rank": 285
     },
     {
-      "player": "PLAVSIC, UROS",
-      "team": "RED",
-      "wpa": 14.89,
-      "plays": 61,
-      "rank": 292
-    },
-    {
-      "player": "PAPAGIANNIS, GEORGIOS",
-      "team": "IST",
-      "wpa": 14.6,
-      "plays": 86,
-      "rank": 293
+      "player": "RADANOV, ALEKSA",
+      "team": "PAR",
+      "wpa": 28.1,
+      "plays": 87,
+      "rank": 286
     },
     {
       "player": "MILJENOVIC, STEFAN",
       "team": "RED",
-      "wpa": 13.83,
+      "wpa": 26.34,
       "plays": 135,
+      "rank": 287
+    },
+    {
+      "player": "KALAITZAKIS, PANAGIOTIS",
+      "team": "PAN",
+      "wpa": 25.02,
+      "plays": 264,
+      "rank": 288
+    },
+    {
+      "player": "TIMOR, BAR",
+      "team": "HTA",
+      "wpa": 24.82,
+      "plays": 66,
+      "rank": 289
+    },
+    {
+      "player": "SIMA, YANKUBA",
+      "team": "PAM",
+      "wpa": 22.46,
+      "plays": 98,
+      "rank": 290
+    },
+    {
+      "player": "PAPAGIANNIS, GEORGIOS",
+      "team": "IST",
+      "wpa": 19.54,
+      "plays": 86,
+      "rank": 291
+    },
+    {
+      "player": "KEITA, SAYON",
+      "team": "BAR",
+      "wpa": 19.06,
+      "plays": 69,
+      "rank": 292
+    },
+    {
+      "player": "PLAVSIC, UROS",
+      "team": "RED",
+      "wpa": 19.02,
+      "plays": 61,
+      "rank": 293
+    },
+    {
+      "player": "MUTAF, DAVID",
+      "team": "IST",
+      "wpa": 17.67,
+      "plays": 62,
       "rank": 294
+    },
+    {
+      "player": "TONUT, STEFANO",
+      "team": "MIL",
+      "wpa": 15.06,
+      "plays": 92,
+      "rank": 295
     },
     {
       "player": "JOKSIMOVIC, STEFAN",
       "team": "BAS",
-      "wpa": 11.61,
+      "wpa": 13.85,
       "plays": 73,
-      "rank": 295
-    },
-    {
-      "player": "KRATZER, LEON",
-      "team": "MUN",
-      "wpa": 11.36,
-      "plays": 71,
       "rank": 296
     },
     {
-      "player": "PROCIDA, GABRIELE",
-      "team": "MAD",
-      "wpa": 8.08,
-      "plays": 51,
+      "player": "DANGUBIC, NEMANJA",
+      "team": "DUB",
+      "wpa": 13.08,
+      "plays": 140,
       "rank": 297
     },
     {
       "player": "MAKOUNDOU, YOAN",
       "team": "MCO",
-      "wpa": 2.9,
+      "wpa": 9.44,
       "plays": 58,
       "rank": 298
     },
     {
-      "player": "NOGUES, ISAAC",
-      "team": "PAM",
-      "wpa": 2.83,
-      "plays": 79,
-      "rank": 299
-    },
-    {
-      "player": "BAIOCCHI, MATTEO",
-      "team": "VIR",
-      "wpa": 2.59,
+      "player": "PROCIDA, GABRIELE",
+      "team": "MAD",
+      "wpa": 8.61,
       "plays": 51,
-      "rank": 300
+      "rank": 299
     },
     {
       "player": "RUBSTAVICIUS, MANTAS",
       "team": "ZAL",
-      "wpa": 2.15,
+      "wpa": 6.61,
       "plays": 118,
+      "rank": 300
+    },
+    {
+      "player": "KRATZER, LEON",
+      "team": "MUN",
+      "wpa": 5.92,
+      "plays": 71,
       "rank": 301
     },
     {
-      "player": "DANGUBIC, NEMANJA",
-      "team": "DUB",
-      "wpa": 0.21,
-      "plays": 140,
+      "player": "BAIOCCHI, MATTEO",
+      "team": "VIR",
+      "wpa": 2.89,
+      "plays": 51,
       "rank": 302
     },
     {
-      "player": "SIMA, YANKUBA",
+      "player": "NOGUES, ISAAC",
       "team": "PAM",
-      "wpa": -0.06,
-      "plays": 98,
+      "wpa": -0.57,
+      "plays": 79,
       "rank": 303
     }
   ],
@@ -25992,56 +25992,50 @@
   },
   "accuracy": {
     "n_games": 514,
-    "accuracy": 64.4,
-    "brier_score": 0.2111,
-    "log_loss": 0.6064,
+    "accuracy": 65.8,
+    "brier_score": 0.2174,
+    "log_loss": 0.6256,
     "calibration": [
       {
         "Bucket": "50-60%",
-        "Count": 156,
-        "Accuracy": 50.6,
-        "AvgConfidence": 56.4
+        "Count": 302,
+        "Accuracy": 56.0,
+        "AvgConfidence": 54.9
       },
       {
         "Bucket": "60-70%",
-        "Count": 155,
-        "Accuracy": 57.4,
-        "AvgConfidence": 64.9
+        "Count": 162,
+        "Accuracy": 78.4,
+        "AvgConfidence": 64.2
       },
       {
         "Bucket": "70-80%",
-        "Count": 124,
-        "Accuracy": 73.4,
-        "AvgConfidence": 75.9
+        "Count": 46,
+        "Accuracy": 82.6,
+        "AvgConfidence": 75.0
       },
       {
         "Bucket": "80-90%",
-        "Count": 54,
-        "Accuracy": 88.9,
-        "AvgConfidence": 84.9
-      },
-      {
-        "Bucket": "90%+",
-        "Count": 25,
-        "Accuracy": 96.0,
-        "AvgConfidence": 93.4
+        "Count": 4,
+        "Accuracy": 100.0,
+        "AvgConfidence": 83.0
       }
     ],
     "per_round": [
       {
         "Round": 1,
         "Games": 10,
-        "Accuracy": 60.0
+        "Accuracy": 70.0
       },
       {
         "Round": 2,
         "Games": 10,
-        "Accuracy": 70.0
+        "Accuracy": 50.0
       },
       {
         "Round": 3,
         "Games": 10,
-        "Accuracy": 80.0
+        "Accuracy": 70.0
       },
       {
         "Round": 4,
@@ -26051,17 +26045,17 @@
       {
         "Round": 5,
         "Games": 10,
-        "Accuracy": 70.0
+        "Accuracy": 40.0
       },
       {
         "Round": 6,
         "Games": 10,
-        "Accuracy": 50.0
+        "Accuracy": 60.0
       },
       {
         "Round": 7,
         "Games": 10,
-        "Accuracy": 70.0
+        "Accuracy": 60.0
       },
       {
         "Round": 8,
@@ -26071,22 +26065,22 @@
       {
         "Round": 9,
         "Games": 10,
-        "Accuracy": 50.0
+        "Accuracy": 70.0
       },
       {
         "Round": 10,
         "Games": 10,
-        "Accuracy": 80.0
+        "Accuracy": 90.0
       },
       {
         "Round": 11,
         "Games": 10,
-        "Accuracy": 50.0
+        "Accuracy": 60.0
       },
       {
         "Round": 12,
         "Games": 10,
-        "Accuracy": 70.0
+        "Accuracy": 80.0
       },
       {
         "Round": 13,
@@ -26096,12 +26090,12 @@
       {
         "Round": 14,
         "Games": 10,
-        "Accuracy": 70.0
+        "Accuracy": 50.0
       },
       {
         "Round": 15,
         "Games": 10,
-        "Accuracy": 70.0
+        "Accuracy": 60.0
       },
       {
         "Round": 16,
@@ -26116,7 +26110,7 @@
       {
         "Round": 18,
         "Games": 10,
-        "Accuracy": 70.0
+        "Accuracy": 60.0
       },
       {
         "Round": 19,
@@ -26126,12 +26120,12 @@
       {
         "Round": 20,
         "Games": 10,
-        "Accuracy": 60.0
+        "Accuracy": 70.0
       },
       {
         "Round": 21,
         "Games": 10,
-        "Accuracy": 80.0
+        "Accuracy": 90.0
       },
       {
         "Round": 22,
@@ -26141,12 +26135,12 @@
       {
         "Round": 23,
         "Games": 10,
-        "Accuracy": 70.0
+        "Accuracy": 80.0
       },
       {
         "Round": 24,
         "Games": 10,
-        "Accuracy": 50.0
+        "Accuracy": 60.0
       },
       {
         "Round": 25,
@@ -26176,17 +26170,17 @@
       {
         "Round": 30,
         "Games": 10,
-        "Accuracy": 50.0
+        "Accuracy": 70.0
       },
       {
         "Round": 31,
         "Games": 10,
-        "Accuracy": 50.0
+        "Accuracy": 60.0
       },
       {
         "Round": 32,
         "Games": 30,
-        "Accuracy": 60.0
+        "Accuracy": 63.3
       },
       {
         "Round": 33,
@@ -26196,7 +26190,7 @@
       {
         "Round": 34,
         "Games": 20,
-        "Accuracy": 75.0
+        "Accuracy": 70.0
       },
       {
         "Round": 35,
@@ -26206,17 +26200,17 @@
       {
         "Round": 36,
         "Games": 20,
-        "Accuracy": 65.0
+        "Accuracy": 75.0
       },
       {
         "Round": 37,
         "Games": 30,
-        "Accuracy": 50.0
+        "Accuracy": 56.7
       },
       {
         "Round": 38,
         "Games": 30,
-        "Accuracy": 80.0
+        "Accuracy": 83.3
       },
       {
         "Round": 39,
@@ -41611,472 +41605,472 @@
   "playoff_matchup_probs": {
     "OLY": {
       "PAM": {
-        "home": 0.6553,
-        "away": 0.4741,
-        "neutral": 0.5648
+        "home": 0.5856,
+        "away": 0.4743,
+        "neutral": 0.5297
       },
       "MAD": {
-        "home": 0.6273,
-        "away": 0.4275,
-        "neutral": 0.5288
+        "home": 0.5725,
+        "away": 0.4558,
+        "neutral": 0.5162
       },
       "ULK": {
-        "home": 0.6675,
-        "away": 0.5045,
-        "neutral": 0.5859
+        "home": 0.598,
+        "away": 0.4858,
+        "neutral": 0.5424
       },
       "ZAL": {
-        "home": 0.6777,
-        "away": 0.4927,
-        "neutral": 0.5857
+        "home": 0.5929,
+        "away": 0.4811,
+        "neutral": 0.5372
       },
       "HTA": {
-        "home": 0.7029,
-        "away": 0.4388,
-        "neutral": 0.5617
+        "home": 0.6014,
+        "away": 0.4898,
+        "neutral": 0.5459
       },
       "PAN": {
-        "home": 0.6617,
-        "away": 0.4937,
-        "neutral": 0.5827
+        "home": 0.5949,
+        "away": 0.482,
+        "neutral": 0.5392
       },
       "MCO": {
-        "home": 0.6675,
-        "away": 0.543,
-        "neutral": 0.5997
+        "home": 0.6031,
+        "away": 0.489,
+        "neutral": 0.5477
       },
       "BAR": {
-        "home": 0.6735,
-        "away": 0.4568,
-        "neutral": 0.5592
+        "home": 0.6045,
+        "away": 0.4947,
+        "neutral": 0.5492
       },
       "RED": {
-        "home": 0.7396,
-        "away": 0.5652,
-        "neutral": 0.6511
+        "home": 0.609,
+        "away": 0.4973,
+        "neutral": 0.5539
       }
     },
     "PAM": {
       "OLY": {
-        "home": 0.5259,
-        "away": 0.3447,
-        "neutral": 0.4352
+        "home": 0.5257,
+        "away": 0.4144,
+        "neutral": 0.4703
       },
       "MAD": {
-        "home": 0.5322,
-        "away": 0.3614,
-        "neutral": 0.4493
+        "home": 0.5419,
+        "away": 0.4265,
+        "neutral": 0.4866
       },
       "ULK": {
-        "home": 0.5816,
-        "away": 0.3977,
-        "neutral": 0.4923
+        "home": 0.5679,
+        "away": 0.4562,
+        "neutral": 0.5128
       },
       "ZAL": {
-        "home": 0.578,
-        "away": 0.4184,
-        "neutral": 0.5
+        "home": 0.5627,
+        "away": 0.4516,
+        "neutral": 0.5076
       },
       "HTA": {
-        "home": 0.6023,
-        "away": 0.4275,
-        "neutral": 0.5139
+        "home": 0.5713,
+        "away": 0.4602,
+        "neutral": 0.5164
       },
       "PAN": {
-        "home": 0.6129,
-        "away": 0.4061,
-        "neutral": 0.5117
+        "home": 0.5647,
+        "away": 0.4525,
+        "neutral": 0.5096
       },
       "MCO": {
-        "home": 0.5939,
-        "away": 0.4275,
-        "neutral": 0.5144
+        "home": 0.5731,
+        "away": 0.4594,
+        "neutral": 0.5181
       },
       "BAR": {
-        "home": 0.5939,
-        "away": 0.4184,
-        "neutral": 0.5045
+        "home": 0.5745,
+        "away": 0.4651,
+        "neutral": 0.5196
       },
       "RED": {
-        "home": 0.6511,
-        "away": 0.4927,
-        "neutral": 0.5656
+        "home": 0.5792,
+        "away": 0.4677,
+        "neutral": 0.5244
       }
     },
     "MAD": {
       "OLY": {
-        "home": 0.5725,
-        "away": 0.3727,
-        "neutral": 0.4712
+        "home": 0.5442,
+        "away": 0.4275,
+        "neutral": 0.4838
       },
       "PAM": {
-        "home": 0.6386,
-        "away": 0.4678,
-        "neutral": 0.5507
+        "home": 0.5735,
+        "away": 0.4581,
+        "neutral": 0.5134
       },
       "ULK": {
-        "home": 0.6553,
-        "away": 0.4678,
-        "neutral": 0.555
+        "home": 0.586,
+        "away": 0.4696,
+        "neutral": 0.5262
       },
       "ZAL": {
-        "home": 0.6777,
-        "away": 0.4605,
-        "neutral": 0.5712
+        "home": 0.5809,
+        "away": 0.4649,
+        "neutral": 0.521
       },
       "HTA": {
-        "home": 0.6977,
-        "away": 0.4906,
-        "neutral": 0.5804
+        "home": 0.5894,
+        "away": 0.4736,
+        "neutral": 0.5298
       },
       "PAN": {
-        "home": 0.6511,
-        "away": 0.4927,
-        "neutral": 0.5645
+        "home": 0.5829,
+        "away": 0.4658,
+        "neutral": 0.523
       },
       "MCO": {
-        "home": 0.6617,
-        "away": 0.5115,
-        "neutral": 0.5801
+        "home": 0.5911,
+        "away": 0.4728,
+        "neutral": 0.5315
       },
       "BAR": {
-        "home": 0.6617,
-        "away": 0.5149,
-        "neutral": 0.5801
+        "home": 0.5926,
+        "away": 0.4785,
+        "neutral": 0.533
       },
       "RED": {
-        "home": 0.6977,
-        "away": 0.5787,
-        "neutral": 0.6225
+        "home": 0.5971,
+        "away": 0.4811,
+        "neutral": 0.5377
       }
     },
     "ULK": {
       "OLY": {
-        "home": 0.4955,
-        "away": 0.3325,
-        "neutral": 0.4141
+        "home": 0.5142,
+        "away": 0.402,
+        "neutral": 0.4576
       },
       "PAM": {
-        "home": 0.6023,
-        "away": 0.4184,
-        "neutral": 0.5077
+        "home": 0.5438,
+        "away": 0.4321,
+        "neutral": 0.4872
       },
       "MAD": {
-        "home": 0.5322,
-        "away": 0.3447,
-        "neutral": 0.445
+        "home": 0.5304,
+        "away": 0.414,
+        "neutral": 0.4738
       },
       "ZAL": {
-        "home": 0.6129,
-        "away": 0.4232,
-        "neutral": 0.5147
+        "home": 0.5513,
+        "away": 0.4389,
+        "neutral": 0.4947
       },
       "HTA": {
-        "home": 0.6129,
-        "away": 0.4463,
-        "neutral": 0.5312
+        "home": 0.56,
+        "away": 0.4475,
+        "neutral": 0.5036
       },
       "PAN": {
-        "home": 0.6023,
-        "away": 0.4184,
-        "neutral": 0.5045
+        "home": 0.5533,
+        "away": 0.4398,
+        "neutral": 0.4968
       },
       "MCO": {
-        "home": 0.5939,
-        "away": 0.4232,
-        "neutral": 0.5073
+        "home": 0.5617,
+        "away": 0.4467,
+        "neutral": 0.5053
       },
       "BAR": {
-        "home": 0.5939,
-        "away": 0.4275,
-        "neutral": 0.5073
+        "home": 0.5632,
+        "away": 0.4523,
+        "neutral": 0.5068
       },
       "RED": {
-        "home": 0.6386,
-        "away": 0.4741,
-        "neutral": 0.5593
+        "home": 0.5678,
+        "away": 0.4549,
+        "neutral": 0.5116
       }
     },
     "ZAL": {
       "OLY": {
-        "home": 0.5073,
-        "away": 0.3223,
-        "neutral": 0.4143
+        "home": 0.5189,
+        "away": 0.4071,
+        "neutral": 0.4628
       },
       "PAM": {
-        "home": 0.5816,
-        "away": 0.422,
-        "neutral": 0.5
+        "home": 0.5484,
+        "away": 0.4373,
+        "neutral": 0.4924
       },
       "MAD": {
-        "home": 0.5395,
-        "away": 0.3223,
-        "neutral": 0.4288
+        "home": 0.5351,
+        "away": 0.4191,
+        "neutral": 0.479
       },
       "ULK": {
-        "home": 0.5768,
-        "away": 0.3871,
-        "neutral": 0.4853
+        "home": 0.5611,
+        "away": 0.4487,
+        "neutral": 0.5053
       },
       "HTA": {
-        "home": 0.5816,
-        "away": 0.4463,
-        "neutral": 0.5099
+        "home": 0.5646,
+        "away": 0.4527,
+        "neutral": 0.5088
       },
       "PAN": {
-        "home": 0.5768,
-        "away": 0.3871,
-        "neutral": 0.4868
+        "home": 0.5579,
+        "away": 0.445,
+        "neutral": 0.5021
       },
       "MCO": {
-        "home": 0.5725,
-        "away": 0.3977,
-        "neutral": 0.4861
+        "home": 0.5663,
+        "away": 0.4519,
+        "neutral": 0.5106
       },
       "BAR": {
-        "home": 0.5725,
-        "away": 0.3977,
-        "neutral": 0.4861
+        "home": 0.5678,
+        "away": 0.4576,
+        "neutral": 0.5121
       },
       "RED": {
-        "home": 0.6386,
-        "away": 0.4331,
-        "neutral": 0.5351
+        "home": 0.5724,
+        "away": 0.4602,
+        "neutral": 0.5168
       }
     },
     "HTA": {
       "OLY": {
-        "home": 0.5612,
-        "away": 0.2971,
-        "neutral": 0.4383
+        "home": 0.5102,
+        "away": 0.3986,
+        "neutral": 0.4541
       },
       "PAM": {
-        "home": 0.5725,
-        "away": 0.3977,
-        "neutral": 0.4861
+        "home": 0.5398,
+        "away": 0.4287,
+        "neutral": 0.4836
       },
       "MAD": {
-        "home": 0.5094,
-        "away": 0.3023,
-        "neutral": 0.4196
+        "home": 0.5264,
+        "away": 0.4106,
+        "neutral": 0.4702
       },
       "ULK": {
-        "home": 0.5537,
-        "away": 0.3871,
-        "neutral": 0.4688
+        "home": 0.5525,
+        "away": 0.44,
+        "neutral": 0.4964
       },
       "ZAL": {
-        "home": 0.5537,
-        "away": 0.4184,
-        "neutral": 0.4901
+        "home": 0.5473,
+        "away": 0.4354,
+        "neutral": 0.4912
       },
       "PAN": {
-        "home": 0.5725,
-        "away": 0.3871,
-        "neutral": 0.4796
+        "home": 0.5493,
+        "away": 0.4363,
+        "neutral": 0.4932
       },
       "MCO": {
-        "home": 0.5768,
-        "away": 0.4061,
-        "neutral": 0.4927
+        "home": 0.5578,
+        "away": 0.4432,
+        "neutral": 0.5017
       },
       "BAR": {
-        "home": 0.5768,
-        "away": 0.4184,
-        "neutral": 0.4927
+        "home": 0.5592,
+        "away": 0.4488,
+        "neutral": 0.5032
       },
       "RED": {
-        "home": 0.6129,
-        "away": 0.4275,
-        "neutral": 0.5175
+        "home": 0.5639,
+        "away": 0.4514,
+        "neutral": 0.508
       }
     },
     "PAN": {
       "OLY": {
-        "home": 0.5063,
-        "away": 0.3383,
-        "neutral": 0.4173
+        "home": 0.518,
+        "away": 0.4051,
+        "neutral": 0.4608
       },
       "PAM": {
-        "home": 0.5939,
-        "away": 0.3871,
-        "neutral": 0.4883
+        "home": 0.5475,
+        "away": 0.4353,
+        "neutral": 0.4904
       },
       "MAD": {
-        "home": 0.5073,
-        "away": 0.3489,
-        "neutral": 0.4355
+        "home": 0.5342,
+        "away": 0.4171,
+        "neutral": 0.477
       },
       "ULK": {
-        "home": 0.5816,
-        "away": 0.3977,
-        "neutral": 0.4955
+        "home": 0.5602,
+        "away": 0.4467,
+        "neutral": 0.5032
       },
       "ZAL": {
-        "home": 0.6129,
-        "away": 0.4232,
-        "neutral": 0.5132
-      },
-      "HTA": {
-        "home": 0.6129,
-        "away": 0.4275,
-        "neutral": 0.5204
-      },
-      "MCO": {
-        "home": 0.5612,
-        "away": 0.4061,
+        "home": 0.555,
+        "away": 0.4421,
         "neutral": 0.4979
       },
+      "HTA": {
+        "home": 0.5637,
+        "away": 0.4507,
+        "neutral": 0.5068
+      },
+      "MCO": {
+        "home": 0.5654,
+        "away": 0.4499,
+        "neutral": 0.5085
+      },
       "BAR": {
-        "home": 0.5612,
-        "away": 0.4232,
-        "neutral": 0.5
+        "home": 0.5669,
+        "away": 0.4555,
+        "neutral": 0.51
       },
       "RED": {
-        "home": 0.6386,
-        "away": 0.4678,
-        "neutral": 0.5494
+        "home": 0.5715,
+        "away": 0.4581,
+        "neutral": 0.5148
       }
     },
     "MCO": {
       "OLY": {
-        "home": 0.457,
-        "away": 0.3325,
-        "neutral": 0.4003
+        "home": 0.511,
+        "away": 0.3969,
+        "neutral": 0.4523
       },
       "PAM": {
-        "home": 0.5725,
-        "away": 0.4061,
-        "neutral": 0.4856
+        "home": 0.5406,
+        "away": 0.4269,
+        "neutral": 0.4819
       },
       "MAD": {
-        "home": 0.4885,
-        "away": 0.3383,
-        "neutral": 0.4199
+        "home": 0.5272,
+        "away": 0.4089,
+        "neutral": 0.4685
       },
       "ULK": {
-        "home": 0.5768,
-        "away": 0.4061,
-        "neutral": 0.4927
+        "home": 0.5533,
+        "away": 0.4383,
+        "neutral": 0.4947
       },
       "ZAL": {
-        "home": 0.6023,
-        "away": 0.4275,
-        "neutral": 0.5139
+        "home": 0.5481,
+        "away": 0.4337,
+        "neutral": 0.4894
       },
       "HTA": {
-        "home": 0.5939,
-        "away": 0.4232,
-        "neutral": 0.5073
+        "home": 0.5568,
+        "away": 0.4422,
+        "neutral": 0.4983
       },
       "PAN": {
-        "home": 0.5939,
-        "away": 0.4388,
-        "neutral": 0.5021
+        "home": 0.5501,
+        "away": 0.4346,
+        "neutral": 0.4915
       },
       "BAR": {
-        "home": 0.6023,
-        "away": 0.4061,
-        "neutral": 0.5
+        "home": 0.56,
+        "away": 0.4471,
+        "neutral": 0.5015
       },
       "RED": {
-        "home": 0.6386,
-        "away": 0.5098,
-        "neutral": 0.5644
+        "home": 0.5647,
+        "away": 0.4497,
+        "neutral": 0.5063
       }
     },
     "BAR": {
       "OLY": {
-        "home": 0.5432,
-        "away": 0.3265,
-        "neutral": 0.4408
+        "home": 0.5053,
+        "away": 0.3955,
+        "neutral": 0.4508
       },
       "PAM": {
-        "home": 0.5816,
-        "away": 0.4061,
-        "neutral": 0.4955
+        "home": 0.5349,
+        "away": 0.4255,
+        "neutral": 0.4804
       },
       "MAD": {
-        "home": 0.4851,
-        "away": 0.3383,
-        "neutral": 0.4199
+        "home": 0.5215,
+        "away": 0.4074,
+        "neutral": 0.467
       },
       "ULK": {
-        "home": 0.5725,
-        "away": 0.4061,
-        "neutral": 0.4927
+        "home": 0.5477,
+        "away": 0.4368,
+        "neutral": 0.4932
       },
       "ZAL": {
-        "home": 0.6023,
-        "away": 0.4275,
-        "neutral": 0.5139
+        "home": 0.5424,
+        "away": 0.4322,
+        "neutral": 0.4879
       },
       "HTA": {
-        "home": 0.5816,
-        "away": 0.4232,
-        "neutral": 0.5073
+        "home": 0.5512,
+        "away": 0.4408,
+        "neutral": 0.4968
       },
       "PAN": {
-        "home": 0.5768,
-        "away": 0.4388,
-        "neutral": 0.5
+        "home": 0.5445,
+        "away": 0.4331,
+        "neutral": 0.49
       },
       "MCO": {
-        "home": 0.5939,
-        "away": 0.3977,
-        "neutral": 0.5
+        "home": 0.5529,
+        "away": 0.44,
+        "neutral": 0.4985
       },
       "RED": {
-        "home": 0.6362,
-        "away": 0.4937,
-        "neutral": 0.5644
+        "home": 0.5591,
+        "away": 0.4482,
+        "neutral": 0.5048
       }
     },
     "RED": {
       "OLY": {
-        "home": 0.4348,
-        "away": 0.2604,
-        "neutral": 0.3489
+        "home": 0.5027,
+        "away": 0.391,
+        "neutral": 0.4461
       },
       "PAM": {
-        "home": 0.5073,
-        "away": 0.3489,
-        "neutral": 0.4344
+        "home": 0.5323,
+        "away": 0.4208,
+        "neutral": 0.4756
       },
       "MAD": {
-        "home": 0.4213,
-        "away": 0.3023,
-        "neutral": 0.3775
+        "home": 0.5189,
+        "away": 0.4029,
+        "neutral": 0.4623
       },
       "ULK": {
-        "home": 0.5259,
-        "away": 0.3614,
-        "neutral": 0.4407
+        "home": 0.5451,
+        "away": 0.4322,
+        "neutral": 0.4884
       },
       "ZAL": {
-        "home": 0.5669,
-        "away": 0.3614,
-        "neutral": 0.4649
+        "home": 0.5398,
+        "away": 0.4276,
+        "neutral": 0.4832
       },
       "HTA": {
-        "home": 0.5725,
-        "away": 0.3871,
-        "neutral": 0.4825
+        "home": 0.5486,
+        "away": 0.4361,
+        "neutral": 0.492
       },
       "PAN": {
-        "home": 0.5322,
-        "away": 0.3614,
-        "neutral": 0.4506
+        "home": 0.5419,
+        "away": 0.4285,
+        "neutral": 0.4852
       },
       "MCO": {
-        "home": 0.4902,
-        "away": 0.3614,
-        "neutral": 0.4356
+        "home": 0.5503,
+        "away": 0.4353,
+        "neutral": 0.4937
       },
       "BAR": {
-        "home": 0.5063,
-        "away": 0.3638,
-        "neutral": 0.4356
+        "home": 0.5518,
+        "away": 0.4409,
+        "neutral": 0.4952
       }
     }
   },
@@ -42985,6 +42979,22 @@
         "BAR": 0.0,
         "RED": 0.0
       }
+    },
+    {
+      "date": "2026-06-04",
+      "label": "Final",
+      "odds": {
+        "OLY": 100.0,
+        "PAM": 0.0,
+        "MAD": 0.0,
+        "ULK": 0.0,
+        "ZAL": 0.0,
+        "HTA": 0.0,
+        "PAN": 0.0,
+        "MCO": 0.0,
+        "BAR": 0.0,
+        "RED": 0.0
+      }
     }
   ],
   "playoff_recaps": [
@@ -42997,7 +43007,7 @@
       "home_score": 87,
       "away_score": 79,
       "winner": "PAN",
-      "pre_game_win_prob": 56.1,
+      "pre_game_win_prob": 56.5,
       "is_upset": false,
       "championship_odds_before": {
         "PAN": 0.0,
@@ -43017,7 +43027,7 @@
       "home_score": 80,
       "away_score": 72,
       "winner": "BAR",
-      "pre_game_win_prob": 63.6,
+      "pre_game_win_prob": 55.9,
       "is_upset": false,
       "championship_odds_before": {
         "BAR": 0.0,
@@ -43037,7 +43047,7 @@
       "home_score": 79,
       "away_score": 70,
       "winner": "MCO",
-      "pre_game_win_prob": 60.2,
+      "pre_game_win_prob": 56.0,
       "is_upset": false,
       "championship_odds_before": {
         "MCO": 0.0,
@@ -43057,7 +43067,7 @@
       "home_score": 91,
       "away_score": 70,
       "winner": "OLY",
-      "pre_game_win_prob": 66.8,
+      "pre_game_win_prob": 60.3,
       "is_upset": false,
       "series": [
         1,
@@ -43082,7 +43092,7 @@
       "home_score": 94,
       "away_score": 64,
       "winner": "OLY",
-      "pre_game_win_prob": 66.8,
+      "pre_game_win_prob": 60.3,
       "is_upset": false,
       "series": [
         2,
@@ -43107,7 +43117,7 @@
       "home_score": 82,
       "away_score": 105,
       "winner": "OLY",
-      "pre_game_win_prob": 54.3,
+      "pre_game_win_prob": 48.9,
       "is_upset": false,
       "series": [
         3,
@@ -43132,8 +43142,8 @@
       "home_score": 67,
       "away_score": 68,
       "winner": "PAN",
-      "pre_game_win_prob": 38.7,
-      "is_upset": true,
+      "pre_game_win_prob": 43.5,
+      "is_upset": false,
       "series": [
         0,
         1
@@ -43157,8 +43167,8 @@
       "home_score": 105,
       "away_score": 107,
       "winner": "PAN",
-      "pre_game_win_prob": 38.7,
-      "is_upset": true,
+      "pre_game_win_prob": 43.5,
+      "is_upset": false,
       "series": [
         0,
         2
@@ -43182,7 +43192,7 @@
       "home_score": 87,
       "away_score": 91,
       "winner": "PAM",
-      "pre_game_win_prob": 40.6,
+      "pre_game_win_prob": 45.2,
       "is_upset": false,
       "series": [
         1,
@@ -43207,7 +43217,7 @@
       "home_score": 86,
       "away_score": 89,
       "winner": "PAM",
-      "pre_game_win_prob": 40.6,
+      "pre_game_win_prob": 45.2,
       "is_upset": false,
       "series": [
         2,
@@ -43232,7 +43242,7 @@
       "home_score": 81,
       "away_score": 64,
       "winner": "PAM",
-      "pre_game_win_prob": 61.3,
+      "pre_game_win_prob": 56.5,
       "is_upset": false,
       "series": [
         3,
@@ -43257,7 +43267,7 @@
       "home_score": 86,
       "away_score": 82,
       "winner": "MAD",
-      "pre_game_win_prob": 69.8,
+      "pre_game_win_prob": 58.9,
       "is_upset": false,
       "series": [
         1,
@@ -43282,7 +43292,7 @@
       "home_score": 102,
       "away_score": 75,
       "winner": "MAD",
-      "pre_game_win_prob": 69.8,
+      "pre_game_win_prob": 58.9,
       "is_upset": false,
       "series": [
         2,
@@ -43307,7 +43317,7 @@
       "home_score": 76,
       "away_score": 69,
       "winner": "HTA",
-      "pre_game_win_prob": 50.9,
+      "pre_game_win_prob": 52.6,
       "is_upset": false,
       "series": [
         2,
@@ -43332,7 +43342,7 @@
       "home_score": 81,
       "away_score": 87,
       "winner": "MAD",
-      "pre_game_win_prob": 49.1,
+      "pre_game_win_prob": 47.4,
       "is_upset": false,
       "series": [
         3,
@@ -43357,7 +43367,7 @@
       "home_score": 89,
       "away_score": 78,
       "winner": "ULK",
-      "pre_game_win_prob": 61.3,
+      "pre_game_win_prob": 55.1,
       "is_upset": false,
       "series": [
         1,
@@ -43382,7 +43392,7 @@
       "home_score": 86,
       "away_score": 74,
       "winner": "ULK",
-      "pre_game_win_prob": 61.3,
+      "pre_game_win_prob": 55.1,
       "is_upset": false,
       "series": [
         2,
@@ -43407,7 +43417,7 @@
       "home_score": 81,
       "away_score": 78,
       "winner": "ZAL",
-      "pre_game_win_prob": 57.7,
+      "pre_game_win_prob": 56.1,
       "is_upset": false,
       "series": [
         2,
@@ -43432,7 +43442,7 @@
       "home_score": 90,
       "away_score": 94,
       "winner": "ULK",
-      "pre_game_win_prob": 42.3,
+      "pre_game_win_prob": 43.9,
       "is_upset": false,
       "series": [
         3,
@@ -43457,7 +43467,7 @@
       "home_score": 79,
       "away_score": 61,
       "winner": "OLY",
-      "pre_game_win_prob": 58.6,
+      "pre_game_win_prob": 54.2,
       "is_upset": false,
       "championship_odds_before": {
         "OLY": 100.0,
@@ -43477,7 +43487,7 @@
       "home_score": 90,
       "away_score": 105,
       "winner": "MAD",
-      "pre_game_win_prob": 55.1,
+      "pre_game_win_prob": 51.3,
       "is_upset": false,
       "championship_odds_before": {
         "PAM": 0.0,
@@ -43497,7 +43507,7 @@
       "home_score": 92,
       "away_score": 85,
       "winner": "OLY",
-      "pre_game_win_prob": 52.9,
+      "pre_game_win_prob": 51.6,
       "is_upset": false,
       "championship_odds_before": {
         "OLY": 100.0,
@@ -44061,18 +44071,18 @@
         "checkpoints": [
           {
             "label": "Pre-series",
-            "high_wp": 71.4,
-            "low_wp": 28.6
+            "high_wp": 60.8,
+            "low_wp": 39.2
           },
           {
             "label": "After G1",
-            "high_wp": 82.9,
-            "low_wp": 17.1
+            "high_wp": 75.5,
+            "low_wp": 24.5
           },
           {
             "label": "After G2",
-            "high_wp": 93.1,
-            "low_wp": 6.9
+            "high_wp": 89.6,
+            "low_wp": 10.4
           },
           {
             "label": "After G3",
@@ -44084,7 +44094,7 @@
           "from_label": "Pre-series",
           "to_label": "After G1",
           "game_num": 1,
-          "delta_pct": 11.5,
+          "delta_pct": 14.7,
           "shifted_to": "high",
           "winner_team": "OLY"
         }
@@ -44269,28 +44279,28 @@
         "checkpoints": [
           {
             "label": "Pre-series",
-            "high_wp": 55.8,
-            "low_wp": 44.2
+            "high_wp": 53.7,
+            "low_wp": 46.3
           },
           {
             "label": "After G1",
-            "high_wp": 32.1,
-            "low_wp": 67.9
+            "high_wp": 32.4,
+            "low_wp": 67.6
           },
           {
             "label": "After G2",
-            "high_wp": 10.1,
-            "low_wp": 89.9
+            "high_wp": 11.6,
+            "low_wp": 88.4
           },
           {
             "label": "After G3",
-            "high_wp": 24.9,
-            "low_wp": 75.1
+            "high_wp": 25.6,
+            "low_wp": 74.4
           },
           {
             "label": "After G4",
-            "high_wp": 61.3,
-            "low_wp": 38.7
+            "high_wp": 56.5,
+            "low_wp": 43.5
           },
           {
             "label": "After G5",
@@ -44302,7 +44312,7 @@
           "from_label": "After G4",
           "to_label": "After G5",
           "game_num": 5,
-          "delta_pct": 38.7,
+          "delta_pct": 43.5,
           "shifted_to": "high",
           "winner_team": "PAM"
         }
@@ -44482,23 +44492,23 @@
         "checkpoints": [
           {
             "label": "Pre-series",
-            "high_wp": 71.3,
-            "low_wp": 28.7
+            "high_wp": 58.1,
+            "low_wp": 41.9
           },
           {
             "label": "After G1",
-            "high_wp": 82.1,
-            "low_wp": 17.9
+            "high_wp": 73.5,
+            "low_wp": 26.5
           },
           {
             "label": "After G2",
-            "high_wp": 92.2,
-            "low_wp": 7.8
+            "high_wp": 88.6,
+            "low_wp": 11.4
           },
           {
             "label": "After G3",
-            "high_wp": 84.6,
-            "low_wp": 15.4
+            "high_wp": 78.4,
+            "low_wp": 21.6
           },
           {
             "label": "After G4",
@@ -44510,7 +44520,7 @@
           "from_label": "After G3",
           "to_label": "After G4",
           "game_num": 4,
-          "delta_pct": 15.4,
+          "delta_pct": 21.6,
           "shifted_to": "high",
           "winner_team": "MAD"
         }
@@ -44690,23 +44700,23 @@
         "checkpoints": [
           {
             "label": "Pre-series",
-            "high_wp": 57.1,
-            "low_wp": 42.9
+            "high_wp": 51.2,
+            "low_wp": 48.8
           },
           {
             "label": "After G1",
-            "high_wp": 71.9,
-            "low_wp": 28.1
+            "high_wp": 68.2,
+            "low_wp": 31.8
           },
           {
             "label": "After G2",
-            "high_wp": 87.1,
-            "low_wp": 12.9
+            "high_wp": 85.9,
+            "low_wp": 14.1
           },
           {
             "label": "After G3",
-            "high_wp": 77.7,
-            "low_wp": 22.3
+            "high_wp": 74.8,
+            "low_wp": 25.2
           },
           {
             "label": "After G4",
@@ -44718,7 +44728,7 @@
           "from_label": "After G3",
           "to_label": "After G4",
           "game_num": 4,
-          "delta_pct": 22.3,
+          "delta_pct": 25.2,
           "shifted_to": "high",
           "winner_team": "ULK"
         }
@@ -44855,8 +44865,8 @@
         "checkpoints": [
           {
             "label": "Pre-series",
-            "high_wp": 58.6,
-            "low_wp": 41.4
+            "high_wp": 54.2,
+            "low_wp": 45.8
           },
           {
             "label": "After G1",
@@ -44868,7 +44878,7 @@
           "from_label": "Pre-series",
           "to_label": "After G1",
           "game_num": 1,
-          "delta_pct": 41.4,
+          "delta_pct": 45.8,
           "shifted_to": "high",
           "winner_team": "OLY"
         }
@@ -45005,8 +45015,8 @@
         "checkpoints": [
           {
             "label": "Pre-series",
-            "high_wp": 44.9,
-            "low_wp": 55.1
+            "high_wp": 48.7,
+            "low_wp": 51.3
           },
           {
             "label": "After G1",
@@ -45018,7 +45028,7 @@
           "from_label": "Pre-series",
           "to_label": "After G1",
           "game_num": 1,
-          "delta_pct": 44.9,
+          "delta_pct": 48.7,
           "shifted_to": "low",
           "winner_team": "MAD"
         }
@@ -45155,8 +45165,8 @@
         "checkpoints": [
           {
             "label": "Pre-series",
-            "high_wp": 52.9,
-            "low_wp": 47.1
+            "high_wp": 51.6,
+            "low_wp": 48.4
           },
           {
             "label": "After G1",
@@ -45168,7 +45178,7 @@
           "from_label": "Pre-series",
           "to_label": "After G1",
           "game_num": 1,
-          "delta_pct": 47.1,
+          "delta_pct": 48.4,
           "shifted_to": "high",
           "winner_team": "OLY"
         }
