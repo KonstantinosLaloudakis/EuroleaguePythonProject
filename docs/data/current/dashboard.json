@@ -1,6 +1,6 @@
 {
   "round": 38,
-  "updated": "2026-07-16T04:06:17Z",
+  "updated": "2026-07-17T04:05:00Z",
   "teams": [
     {
       "team": "OLY",
@@ -6208,10 +6208,10 @@
       "rank": 1,
       "player": "VEZENKOV, SASHA",
       "team": "OLY",
-      "mvp_score": 89.81,
+      "mvp_score": 90.71,
       "avg_pir": 23.12,
       "avg_gmsc": 16.05,
-      "wpa": 159.6,
+      "wpa": 139.0,
       "team_win_pct": 68.4,
       "clutch_eff": 0.4577,
       "clutch_pts": 26.0,
@@ -6220,51 +6220,9 @@
     },
     {
       "rank": 2,
-      "player": "BALDWIN IV, WADE",
-      "team": "ULK",
-      "mvp_score": 83.81,
-      "avg_pir": 16.38,
-      "avg_gmsc": 11.01,
-      "wpa": 192.7,
-      "team_win_pct": 63.2,
-      "clutch_eff": 0.5905,
-      "clutch_pts": 33.0,
-      "consistency": 0.6963,
-      "gp": 37
-    },
-    {
-      "rank": 3,
-      "player": "NUNN, KENDRICK",
-      "team": "PAN",
-      "mvp_score": 82.81,
-      "avg_pir": 16.81,
-      "avg_gmsc": 12.6,
-      "wpa": 254.9,
-      "team_win_pct": 57.9,
-      "clutch_eff": 0.502,
-      "clutch_pts": 26.0,
-      "consistency": 0.6208,
-      "gp": 31
-    },
-    {
-      "rank": 4,
-      "player": "MILUTINOV, NIKOLA",
-      "team": "OLY",
-      "mvp_score": 81.68,
-      "avg_pir": 20.09,
-      "avg_gmsc": 12.39,
-      "wpa": 111.0,
-      "team_win_pct": 68.4,
-      "clutch_eff": 0.3429,
-      "clutch_pts": 12.0,
-      "consistency": 0.7593,
-      "gp": 35
-    },
-    {
-      "rank": 5,
       "player": "FRANCISCO, SYLVAIN",
       "team": "ZAL",
-      "mvp_score": 81.64,
+      "mvp_score": 83.97,
       "avg_pir": 19.5,
       "avg_gmsc": 13.47,
       "wpa": 123.8,
@@ -6275,24 +6233,38 @@
       "gp": 38
     },
     {
-      "rank": 6,
-      "player": "JAMES, MIKE",
-      "team": "MCO",
-      "mvp_score": 80.77,
-      "avg_pir": 18.88,
-      "avg_gmsc": 12.98,
-      "wpa": 165.2,
-      "team_win_pct": 57.9,
-      "clutch_eff": 0.2029,
-      "clutch_pts": 22.0,
-      "consistency": 0.7423,
-      "gp": 34
+      "rank": 3,
+      "player": "BALDWIN IV, WADE",
+      "team": "ULK",
+      "mvp_score": 83.41,
+      "avg_pir": 16.38,
+      "avg_gmsc": 11.01,
+      "wpa": 153.1,
+      "team_win_pct": 63.2,
+      "clutch_eff": 0.5905,
+      "clutch_pts": 33.0,
+      "consistency": 0.6963,
+      "gp": 37
     },
     {
-      "rank": 7,
+      "rank": 4,
+      "player": "NUNN, KENDRICK",
+      "team": "PAN",
+      "mvp_score": 82.81,
+      "avg_pir": 16.81,
+      "avg_gmsc": 12.6,
+      "wpa": 196.2,
+      "team_win_pct": 57.9,
+      "clutch_eff": 0.502,
+      "clutch_pts": 26.0,
+      "consistency": 0.6208,
+      "gp": 31
+    },
+    {
+      "rank": 5,
       "player": "MONEKE, CHIMA",
       "team": "RED",
-      "mvp_score": 80.07,
+      "mvp_score": 82.72,
       "avg_pir": 18.23,
       "avg_gmsc": 11.89,
       "wpa": 143.6,
@@ -6303,38 +6275,38 @@
       "gp": 35
     },
     {
-      "rank": 8,
-      "player": "HIFI, NADIR",
-      "team": "PRS",
-      "mvp_score": 79.85,
-      "avg_pir": 17.57,
-      "avg_gmsc": 12.26,
-      "wpa": 187.2,
-      "team_win_pct": 39.5,
-      "clutch_eff": 0.5427,
-      "clutch_pts": 43.0,
-      "consistency": 0.6734,
-      "gp": 37
+      "rank": 6,
+      "player": "MILUTINOV, NIKOLA",
+      "team": "OLY",
+      "mvp_score": 81.69,
+      "avg_pir": 20.09,
+      "avg_gmsc": 12.39,
+      "wpa": 89.4,
+      "team_win_pct": 68.4,
+      "clutch_eff": 0.3429,
+      "clutch_pts": 12.0,
+      "consistency": 0.7593,
+      "gp": 35
     },
     {
-      "rank": 9,
-      "player": "BRYANT, ELIJAH",
-      "team": "HTA",
-      "mvp_score": 79.71,
-      "avg_pir": 20.59,
-      "avg_gmsc": 12.77,
-      "wpa": 117.5,
-      "team_win_pct": 60.5,
-      "clutch_eff": 0.1966,
-      "clutch_pts": 13.0,
-      "consistency": 0.7032,
+      "rank": 7,
+      "player": "JAMES, MIKE",
+      "team": "MCO",
+      "mvp_score": 81.44,
+      "avg_pir": 18.88,
+      "avg_gmsc": 12.98,
+      "wpa": 141.1,
+      "team_win_pct": 57.9,
+      "clutch_eff": 0.2029,
+      "clutch_pts": 22.0,
+      "consistency": 0.7423,
       "gp": 34
     },
     {
-      "rank": 10,
+      "rank": 8,
       "player": "NWORA, JORDAN",
       "team": "RED",
-      "mvp_score": 77.85,
+      "mvp_score": 80.71,
       "avg_pir": 16.18,
       "avg_gmsc": 11.37,
       "wpa": 156.0,
@@ -6345,38 +6317,10 @@
       "gp": 33
     },
     {
-      "rank": 11,
-      "player": "LUWAWU-CABARROT, TIMOTHE",
-      "team": "BAS",
-      "mvp_score": 77.68,
-      "avg_pir": 16.39,
-      "avg_gmsc": 12.38,
-      "wpa": 227.9,
-      "team_win_pct": 34.2,
-      "clutch_eff": 0.4592,
-      "clutch_pts": 22.0,
-      "consistency": 0.7428,
-      "gp": 36
-    },
-    {
-      "rank": 12,
-      "player": "DORSEY, TYLER",
-      "team": "OLY",
-      "mvp_score": 75.76,
-      "avg_pir": 15.08,
-      "avg_gmsc": 11.31,
-      "wpa": 128.4,
-      "team_win_pct": 68.4,
-      "clutch_eff": 0.4127,
-      "clutch_pts": 27.0,
-      "consistency": 0.6432,
-      "gp": 38
-    },
-    {
-      "rank": 13,
+      "rank": 9,
       "player": "HORTON TUCKER, TALEN",
       "team": "ULK",
-      "mvp_score": 75.57,
+      "mvp_score": 77.81,
       "avg_pir": 14.67,
       "avg_gmsc": 10.36,
       "wpa": 118.3,
@@ -6387,31 +6331,87 @@
       "gp": 36
     },
     {
-      "rank": 14,
-      "player": "KABENGELE, MFIONDU",
-      "team": "DUB",
-      "mvp_score": 75.13,
-      "avg_pir": 17.36,
-      "avg_gmsc": 11.99,
-      "wpa": 134.0,
-      "team_win_pct": 50.0,
-      "clutch_eff": 0.3202,
-      "clutch_pts": 15.0,
-      "consistency": 0.6585,
+      "rank": 10,
+      "player": "HIFI, NADIR",
+      "team": "PRS",
+      "mvp_score": 77.76,
+      "avg_pir": 17.57,
+      "avg_gmsc": 12.26,
+      "wpa": 131.1,
+      "team_win_pct": 39.5,
+      "clutch_eff": 0.5427,
+      "clutch_pts": 43.0,
+      "consistency": 0.6734,
+      "gp": 37
+    },
+    {
+      "rank": 11,
+      "player": "LUWAWU-CABARROT, TIMOTHE",
+      "team": "BAS",
+      "mvp_score": 77.68,
+      "avg_pir": 16.39,
+      "avg_gmsc": 12.38,
+      "wpa": 182.3,
+      "team_win_pct": 34.2,
+      "clutch_eff": 0.4592,
+      "clutch_pts": 22.0,
+      "consistency": 0.7428,
       "gp": 36
     },
     {
-      "rank": 15,
+      "rank": 12,
+      "player": "BRYANT, ELIJAH",
+      "team": "HTA",
+      "mvp_score": 77.55,
+      "avg_pir": 20.59,
+      "avg_gmsc": 12.77,
+      "wpa": 72.4,
+      "team_win_pct": 60.5,
+      "clutch_eff": 0.1966,
+      "clutch_pts": 13.0,
+      "consistency": 0.7032,
+      "gp": 34
+    },
+    {
+      "rank": 13,
+      "player": "DORSEY, TYLER",
+      "team": "OLY",
+      "mvp_score": 76.46,
+      "avg_pir": 15.08,
+      "avg_gmsc": 11.31,
+      "wpa": 110.8,
+      "team_win_pct": 68.4,
+      "clutch_eff": 0.4127,
+      "clutch_pts": 27.0,
+      "consistency": 0.6432,
+      "gp": 38
+    },
+    {
+      "rank": 14,
       "player": "OTURU, DAN",
       "team": "HTA",
-      "mvp_score": 74.89,
+      "mvp_score": 75.38,
       "avg_pir": 16.08,
       "avg_gmsc": 11.7,
-      "wpa": 117.2,
+      "wpa": 99.4,
       "team_win_pct": 60.5,
       "clutch_eff": 0.4052,
       "clutch_pts": 18.0,
       "consistency": 0.6825,
+      "gp": 38
+    },
+    {
+      "rank": 15,
+      "player": "WRIGHT, MOSES",
+      "team": "ZAL",
+      "mvp_score": 75.3,
+      "avg_pir": 17.37,
+      "avg_gmsc": 11.42,
+      "wpa": 113.6,
+      "team_win_pct": 60.5,
+      "clutch_eff": 0.0677,
+      "clutch_pts": 6.0,
+      "consistency": 0.6505,
       "gp": 38
     }
   ],
@@ -8674,9 +8674,9 @@
       "fg_pct": 54.1,
       "fg3_pct": 40.5,
       "ft_pct": 89.0,
-      "mvp_score": 89.8,
+      "mvp_score": 90.7,
       "mvp_rank": 1,
-      "wpa": 159.6,
+      "wpa": 139.0,
       "consistency": 0.747,
       "clutch_eff": 0.458
     },
@@ -8696,9 +8696,9 @@
       "fg_pct": 52.7,
       "fg3_pct": 37.2,
       "ft_pct": 89.3,
-      "mvp_score": 79.7,
-      "mvp_rank": 9,
-      "wpa": 117.5,
+      "mvp_score": 77.5,
+      "mvp_rank": 12,
+      "wpa": 72.4,
       "consistency": 0.703,
       "clutch_eff": 0.197
     },
@@ -8719,8 +8719,8 @@
       "fg3_pct": 0.0,
       "ft_pct": 78.1,
       "mvp_score": 81.7,
-      "mvp_rank": 4,
-      "wpa": 111.0,
+      "mvp_rank": 6,
+      "wpa": 89.4,
       "consistency": 0.759,
       "clutch_eff": 0.343
     },
@@ -8740,8 +8740,8 @@
       "fg_pct": 43.5,
       "fg3_pct": 38.6,
       "ft_pct": 79.9,
-      "mvp_score": 81.6,
-      "mvp_rank": 5,
+      "mvp_score": 84.0,
+      "mvp_rank": 2,
       "wpa": 123.8,
       "consistency": 0.681,
       "clutch_eff": 0.525
@@ -8762,9 +8762,9 @@
       "fg_pct": 42.3,
       "fg3_pct": 32.7,
       "ft_pct": 86.0,
-      "mvp_score": 80.8,
-      "mvp_rank": 6,
-      "wpa": 165.2,
+      "mvp_score": 81.4,
+      "mvp_rank": 7,
+      "wpa": 141.1,
       "consistency": 0.742,
       "clutch_eff": 0.203
     },
@@ -8784,8 +8784,8 @@
       "fg_pct": 55.7,
       "fg3_pct": 34.3,
       "ft_pct": 77.4,
-      "mvp_score": 80.1,
-      "mvp_rank": 7,
+      "mvp_score": 82.7,
+      "mvp_rank": 5,
       "wpa": 143.6,
       "consistency": 0.689,
       "clutch_eff": 0.496
@@ -8806,8 +8806,8 @@
       "fg_pct": 41.8,
       "fg3_pct": 32.4,
       "ft_pct": 88.2,
-      "mvp_score": 66.8,
-      "mvp_rank": 38,
+      "mvp_score": 67.1,
+      "mvp_rank": 34,
       "wpa": 0.0,
       "consistency": 0.655,
       "clutch_eff": 0.401
@@ -8828,8 +8828,8 @@
       "fg_pct": 42.8,
       "fg3_pct": 32.0,
       "ft_pct": 85.4,
-      "mvp_score": 60.0,
-      "mvp_rank": 72,
+      "mvp_score": 60.3,
+      "mvp_rank": 73,
       "wpa": 0.0,
       "consistency": 0.671,
       "clutch_eff": 0.392
@@ -8850,9 +8850,9 @@
       "fg_pct": 41.5,
       "fg3_pct": 35.1,
       "ft_pct": 84.2,
-      "mvp_score": 79.9,
-      "mvp_rank": 8,
-      "wpa": 187.2,
+      "mvp_score": 77.8,
+      "mvp_rank": 10,
+      "wpa": 131.1,
       "consistency": 0.673,
       "clutch_eff": 0.543
     },
@@ -8872,9 +8872,9 @@
       "fg_pct": 56.3,
       "fg3_pct": 32.3,
       "ft_pct": 82.1,
-      "mvp_score": 75.1,
-      "mvp_rank": 14,
-      "wpa": 134.0,
+      "mvp_score": 72.3,
+      "mvp_rank": 17,
+      "wpa": 79.6,
       "consistency": 0.659,
       "clutch_eff": 0.32
     },
@@ -8894,8 +8894,8 @@
       "fg_pct": 60.1,
       "fg3_pct": 30.6,
       "ft_pct": 73.3,
-      "mvp_score": 73.1,
-      "mvp_rank": 17,
+      "mvp_score": 75.3,
+      "mvp_rank": 15,
       "wpa": 113.6,
       "consistency": 0.65,
       "clutch_eff": 0.068
@@ -8916,9 +8916,9 @@
       "fg_pct": 70.8,
       "fg3_pct": 0.0,
       "ft_pct": 64.3,
-      "mvp_score": 74.9,
-      "mvp_rank": 15,
-      "wpa": 117.2,
+      "mvp_score": 75.4,
+      "mvp_rank": 14,
+      "wpa": 99.4,
       "consistency": 0.682,
       "clutch_eff": 0.405
     },
@@ -8939,8 +8939,8 @@
       "fg3_pct": 28.6,
       "ft_pct": 90.2,
       "mvp_score": 63.5,
-      "mvp_rank": 56,
-      "wpa": 58.3,
+      "mvp_rank": 58,
+      "wpa": 45.1,
       "consistency": 0.672,
       "clutch_eff": 0.0
     },
@@ -8962,7 +8962,7 @@
       "ft_pct": 89.8,
       "mvp_score": 77.7,
       "mvp_rank": 11,
-      "wpa": 227.9,
+      "wpa": 182.3,
       "consistency": 0.743,
       "clutch_eff": 0.459
     },
@@ -8982,9 +8982,9 @@
       "fg_pct": 45.6,
       "fg3_pct": 29.3,
       "ft_pct": 78.5,
-      "mvp_score": 83.8,
-      "mvp_rank": 2,
-      "wpa": 192.7,
+      "mvp_score": 83.4,
+      "mvp_rank": 3,
+      "wpa": 153.1,
       "consistency": 0.696,
       "clutch_eff": 0.591
     },
@@ -9004,9 +9004,9 @@
       "fg_pct": 52.8,
       "fg3_pct": 30.4,
       "ft_pct": 86.4,
-      "mvp_score": 69.6,
-      "mvp_rank": 25,
-      "wpa": 107.3,
+      "mvp_score": 70.9,
+      "mvp_rank": 21,
+      "wpa": 99.6,
       "consistency": 0.699,
       "clutch_eff": 0.257
     },
@@ -9026,8 +9026,8 @@
       "fg_pct": 47.1,
       "fg3_pct": 35.6,
       "ft_pct": 80.6,
-      "mvp_score": 77.8,
-      "mvp_rank": 10,
+      "mvp_score": 80.7,
+      "mvp_rank": 8,
       "wpa": 156.0,
       "consistency": 0.669,
       "clutch_eff": 0.486
@@ -9048,9 +9048,9 @@
       "fg_pct": 51.7,
       "fg3_pct": 37.8,
       "ft_pct": 85.3,
-      "mvp_score": 72.1,
-      "mvp_rank": 19,
-      "wpa": 90.8,
+      "mvp_score": 69.9,
+      "mvp_rank": 24,
+      "wpa": 49.4,
       "consistency": 0.591,
       "clutch_eff": 1.251
     },
@@ -9070,8 +9070,8 @@
       "fg_pct": 46.6,
       "fg3_pct": 36.0,
       "ft_pct": 88.2,
-      "mvp_score": 64.6,
-      "mvp_rank": 52,
+      "mvp_score": 65.8,
+      "mvp_rank": 38,
       "wpa": 57.9,
       "consistency": 0.594,
       "clutch_eff": 0.167
@@ -9093,8 +9093,8 @@
       "fg3_pct": 38.0,
       "ft_pct": 88.9,
       "mvp_score": 82.8,
-      "mvp_rank": 3,
-      "wpa": 254.9,
+      "mvp_rank": 4,
+      "wpa": 196.2,
       "consistency": 0.621,
       "clutch_eff": 0.502
     },
@@ -9114,9 +9114,9 @@
       "fg_pct": 68.9,
       "fg3_pct": 0.0,
       "ft_pct": 73.0,
-      "mvp_score": 69.7,
-      "mvp_rank": 24,
-      "wpa": 83.5,
+      "mvp_score": 68.1,
+      "mvp_rank": 28,
+      "wpa": 49.8,
       "consistency": 0.673,
       "clutch_eff": 0.143
     },
@@ -9136,9 +9136,9 @@
       "fg_pct": 54.8,
       "fg3_pct": 39.4,
       "ft_pct": 81.3,
-      "mvp_score": 69.2,
-      "mvp_rank": 28,
-      "wpa": 128.4,
+      "mvp_score": 65.3,
+      "mvp_rank": 42,
+      "wpa": 63.7,
       "consistency": 0.64,
       "clutch_eff": 0.061
     },
@@ -9158,9 +9158,9 @@
       "fg_pct": 53.7,
       "fg3_pct": 36.5,
       "ft_pct": 81.9,
-      "mvp_score": 74.0,
-      "mvp_rank": 16,
-      "wpa": 127.6,
+      "mvp_score": 71.5,
+      "mvp_rank": 19,
+      "wpa": 77.0,
       "consistency": 0.66,
       "clutch_eff": 0.438
     },
@@ -9180,9 +9180,9 @@
       "fg_pct": 46.9,
       "fg3_pct": 43.1,
       "ft_pct": 89.2,
-      "mvp_score": 67.3,
-      "mvp_rank": 33,
-      "wpa": 145.0,
+      "mvp_score": 64.4,
+      "mvp_rank": 53,
+      "wpa": 87.9,
       "consistency": 0.696,
       "clutch_eff": 0.128
     },
@@ -9202,8 +9202,8 @@
       "fg_pct": 50.6,
       "fg3_pct": 49.5,
       "ft_pct": 82.4,
-      "mvp_score": 65.1,
-      "mvp_rank": 47,
+      "mvp_score": 66.7,
+      "mvp_rank": 35,
       "wpa": 81.1,
       "consistency": 0.679,
       "clutch_eff": 0.171
@@ -9224,9 +9224,9 @@
       "fg_pct": 51.1,
       "fg3_pct": 45.9,
       "ft_pct": 78.6,
-      "mvp_score": 69.3,
-      "mvp_rank": 27,
-      "wpa": 78.5,
+      "mvp_score": 67.8,
+      "mvp_rank": 30,
+      "wpa": 46.2,
       "consistency": 0.615,
       "clutch_eff": 0.452
     },
@@ -9246,8 +9246,8 @@
       "fg_pct": 43.0,
       "fg3_pct": 33.0,
       "ft_pct": 60.5,
-      "mvp_score": 72.5,
-      "mvp_rank": 18,
+      "mvp_score": 74.9,
+      "mvp_rank": 16,
       "wpa": 129.9,
       "consistency": 0.659,
       "clutch_eff": 0.319
@@ -9268,9 +9268,9 @@
       "fg_pct": 46.3,
       "fg3_pct": 38.7,
       "ft_pct": 72.6,
-      "mvp_score": 71.6,
-      "mvp_rank": 21,
-      "wpa": 161.1,
+      "mvp_score": 71.9,
+      "mvp_rank": 18,
+      "wpa": 134.7,
       "consistency": 0.589,
       "clutch_eff": 0.124
     },
@@ -9290,9 +9290,9 @@
       "fg_pct": 43.9,
       "fg3_pct": 28.1,
       "ft_pct": 86.1,
-      "mvp_score": 66.0,
-      "mvp_rank": 42,
-      "wpa": 151.8,
+      "mvp_score": 67.5,
+      "mvp_rank": 32,
+      "wpa": 139.3,
       "consistency": 0.581,
       "clutch_eff": 0.173
     },
@@ -9312,8 +9312,8 @@
       "fg_pct": 47.6,
       "fg3_pct": 26.5,
       "ft_pct": 75.7,
-      "mvp_score": 75.6,
-      "mvp_rank": 13,
+      "mvp_score": 77.8,
+      "mvp_rank": 9,
       "wpa": 118.3,
       "consistency": 0.62,
       "clutch_eff": 0.689
@@ -9334,9 +9334,9 @@
       "fg_pct": 43.7,
       "fg3_pct": 42.1,
       "ft_pct": 84.4,
-      "mvp_score": 69.8,
-      "mvp_rank": 23,
-      "wpa": 86.0,
+      "mvp_score": 70.9,
+      "mvp_rank": 22,
+      "wpa": 80.0,
       "consistency": 0.624,
       "clutch_eff": 0.347
     },
@@ -9356,9 +9356,9 @@
       "fg_pct": 41.6,
       "fg3_pct": 34.3,
       "ft_pct": 82.8,
-      "mvp_score": 66.5,
-      "mvp_rank": 39,
-      "wpa": 113.3,
+      "mvp_score": 63.8,
+      "mvp_rank": 55,
+      "wpa": 62.9,
       "consistency": 0.592,
       "clutch_eff": 0.312
     },
@@ -9378,9 +9378,9 @@
       "fg_pct": 49.0,
       "fg3_pct": 31.0,
       "ft_pct": 82.7,
-      "mvp_score": 64.1,
-      "mvp_rank": 53,
-      "wpa": 79.2,
+      "mvp_score": 64.9,
+      "mvp_rank": 46,
+      "wpa": 70.6,
       "consistency": 0.689,
       "clutch_eff": 0.25
     },
@@ -9400,9 +9400,9 @@
       "fg_pct": 51.6,
       "fg3_pct": 34.1,
       "ft_pct": 81.9,
-      "mvp_score": 63.4,
-      "mvp_rank": 57,
-      "wpa": 74.0,
+      "mvp_score": 64.5,
+      "mvp_rank": 51,
+      "wpa": 70.0,
       "consistency": 0.611,
       "clutch_eff": 0.182
     },
@@ -9422,9 +9422,9 @@
       "fg_pct": 42.2,
       "fg3_pct": 31.4,
       "ft_pct": 78.8,
-      "mvp_score": 62.9,
-      "mvp_rank": 59,
-      "wpa": 50.9,
+      "mvp_score": 63.5,
+      "mvp_rank": 57,
+      "wpa": 45.1,
       "consistency": 0.625,
       "clutch_eff": 0.294
     },
@@ -9444,8 +9444,8 @@
       "fg_pct": 51.3,
       "fg3_pct": 44.4,
       "ft_pct": 82.4,
-      "mvp_score": 57.2,
-      "mvp_rank": 96,
+      "mvp_score": 57.5,
+      "mvp_rank": 87,
       "wpa": 0.0,
       "consistency": 0.649,
       "clutch_eff": 0.354
@@ -9466,9 +9466,9 @@
       "fg_pct": 44.6,
       "fg3_pct": 38.6,
       "ft_pct": 78.9,
-      "mvp_score": 75.8,
-      "mvp_rank": 12,
-      "wpa": 128.4,
+      "mvp_score": 76.5,
+      "mvp_rank": 13,
+      "wpa": 110.8,
       "consistency": 0.643,
       "clutch_eff": 0.413
     },
@@ -9488,8 +9488,8 @@
       "fg_pct": 67.6,
       "fg3_pct": 0.0,
       "ft_pct": 66.3,
-      "mvp_score": 60.1,
-      "mvp_rank": 71,
+      "mvp_score": 61.1,
+      "mvp_rank": 68,
       "wpa": 46.1,
       "consistency": 0.675,
       "clutch_eff": 0.154
@@ -9510,9 +9510,9 @@
       "fg_pct": 49.0,
       "fg3_pct": 31.4,
       "ft_pct": 79.6,
-      "mvp_score": 67.9,
-      "mvp_rank": 31,
-      "wpa": 92.2,
+      "mvp_score": 67.3,
+      "mvp_rank": 33,
+      "wpa": 68.1,
       "consistency": 0.687,
       "clutch_eff": 0.272
     },
@@ -9533,8 +9533,8 @@
       "fg3_pct": 38.7,
       "ft_pct": 82.4,
       "mvp_score": 65.0,
-      "mvp_rank": 49,
-      "wpa": 54.9,
+      "mvp_rank": 45,
+      "wpa": 42.0,
       "consistency": 0.634,
       "clutch_eff": 0.184
     },
@@ -9554,9 +9554,9 @@
       "fg_pct": 45.6,
       "fg3_pct": 41.4,
       "ft_pct": 86.6,
-      "mvp_score": 70.8,
-      "mvp_rank": 22,
-      "wpa": 134.7,
+      "mvp_score": 71.4,
+      "mvp_rank": 20,
+      "wpa": 114.8,
       "consistency": 0.534,
       "clutch_eff": 0.442
     },
@@ -9576,9 +9576,9 @@
       "fg_pct": 52.8,
       "fg3_pct": 43.1,
       "ft_pct": 97.9,
-      "mvp_score": 67.2,
-      "mvp_rank": 36,
-      "wpa": 121.3,
+      "mvp_score": 64.8,
+      "mvp_rank": 47,
+      "wpa": 73.4,
       "consistency": 0.619,
       "clutch_eff": 0.666
     },
@@ -9598,9 +9598,9 @@
       "fg_pct": 67.3,
       "fg3_pct": 0.0,
       "ft_pct": 66.3,
-      "mvp_score": 63.6,
-      "mvp_rank": 55,
-      "wpa": 105.3,
+      "mvp_score": 64.7,
+      "mvp_rank": 49,
+      "wpa": 95.2,
       "consistency": 0.567,
       "clutch_eff": 0.181
     },
@@ -9620,8 +9620,8 @@
       "fg_pct": 42.7,
       "fg3_pct": 34.1,
       "ft_pct": 86.4,
-      "mvp_score": 58.4,
-      "mvp_rank": 83,
+      "mvp_score": 58.7,
+      "mvp_rank": 81,
       "wpa": 0.0,
       "consistency": 0.667,
       "clutch_eff": 0.0
@@ -9642,8 +9642,8 @@
       "fg_pct": 44.2,
       "fg3_pct": 37.4,
       "ft_pct": 87.6,
-      "mvp_score": 64.6,
-      "mvp_rank": 51,
+      "mvp_score": 66.7,
+      "mvp_rank": 36,
       "wpa": 107.7,
       "consistency": 0.578,
       "clutch_eff": 0.356
@@ -9664,9 +9664,9 @@
       "fg_pct": 47.8,
       "fg3_pct": 39.3,
       "ft_pct": 82.1,
-      "mvp_score": 65.8,
-      "mvp_rank": 43,
-      "wpa": 120.9,
+      "mvp_score": 65.1,
+      "mvp_rank": 44,
+      "wpa": 89.9,
       "consistency": 0.625,
       "clutch_eff": 0.035
     },
@@ -9686,8 +9686,8 @@
       "fg_pct": 58.2,
       "fg3_pct": 40.5,
       "ft_pct": 71.0,
-      "mvp_score": 60.9,
-      "mvp_rank": 65,
+      "mvp_score": 61.9,
+      "mvp_rank": 63,
       "wpa": 43.1,
       "consistency": 0.632,
       "clutch_eff": 0.202
@@ -9708,9 +9708,9 @@
       "fg_pct": 47.1,
       "fg3_pct": 38.1,
       "ft_pct": 81.9,
-      "mvp_score": 63.0,
-      "mvp_rank": 58,
-      "wpa": 87.2,
+      "mvp_score": 61.3,
+      "mvp_rank": 66,
+      "wpa": 51.7,
       "consistency": 0.569,
       "clutch_eff": 0.085
     },
@@ -9730,9 +9730,9 @@
       "fg_pct": 39.4,
       "fg3_pct": 35.1,
       "ft_pct": 75.8,
-      "mvp_score": 61.7,
-      "mvp_rank": 62,
-      "wpa": 81.6,
+      "mvp_score": 62.6,
+      "mvp_rank": 61,
+      "wpa": 74.0,
       "consistency": 0.584,
       "clutch_eff": 0.254
     },
@@ -9752,9 +9752,9 @@
       "fg_pct": 43.2,
       "fg3_pct": 37.5,
       "ft_pct": 90.5,
-      "mvp_score": 61.7,
-      "mvp_rank": 63,
-      "wpa": 53.5,
+      "mvp_score": 62.2,
+      "mvp_rank": 62,
+      "wpa": 46.8,
       "consistency": 0.577,
       "clutch_eff": 0.194
     },
@@ -9774,9 +9774,9 @@
       "fg_pct": 61.3,
       "fg3_pct": 41.7,
       "ft_pct": 85.1,
-      "mvp_score": 59.0,
-      "mvp_rank": 81,
-      "wpa": 54.1,
+      "mvp_score": 60.1,
+      "mvp_rank": 75,
+      "wpa": 53.3,
       "consistency": 0.645,
       "clutch_eff": 0.116
     },
@@ -9796,9 +9796,9 @@
       "fg_pct": 45.6,
       "fg3_pct": 42.1,
       "ft_pct": 83.8,
-      "mvp_score": 60.9,
-      "mvp_rank": 66,
-      "wpa": 106.9,
+      "mvp_score": 60.4,
+      "mvp_rank": 72,
+      "wpa": 81.3,
       "consistency": 0.595,
       "clutch_eff": 0.439
     },
@@ -9818,9 +9818,9 @@
       "fg_pct": 47.9,
       "fg3_pct": 13.6,
       "ft_pct": 68.9,
-      "mvp_score": 66.1,
-      "mvp_rank": 41,
-      "wpa": 138.1,
+      "mvp_score": 65.2,
+      "mvp_rank": 43,
+      "wpa": 102.9,
       "consistency": 0.626,
       "clutch_eff": 0.453
     },
@@ -9840,9 +9840,9 @@
       "fg_pct": 42.6,
       "fg3_pct": 30.6,
       "ft_pct": 80.5,
-      "mvp_score": 64.9,
-      "mvp_rank": 50,
-      "wpa": 106.2,
+      "mvp_score": 65.4,
+      "mvp_rank": 40,
+      "wpa": 90.2,
       "consistency": 0.598,
       "clutch_eff": 0.121
     },
@@ -9862,8 +9862,8 @@
       "fg_pct": 43.0,
       "fg3_pct": 32.4,
       "ft_pct": 86.0,
-      "mvp_score": 57.8,
-      "mvp_rank": 88,
+      "mvp_score": 58.1,
+      "mvp_rank": 84,
       "wpa": 0.0,
       "consistency": 0.671,
       "clutch_eff": 0.46
@@ -9884,9 +9884,9 @@
       "fg_pct": 49.1,
       "fg3_pct": 36.2,
       "ft_pct": 75.0,
-      "mvp_score": 66.5,
-      "mvp_rank": 40,
-      "wpa": 117.0,
+      "mvp_score": 67.6,
+      "mvp_rank": 31,
+      "wpa": 105.7,
       "consistency": 0.613,
       "clutch_eff": 0.084
     },
@@ -9906,9 +9906,9 @@
       "fg_pct": 46.7,
       "fg3_pct": 36.7,
       "ft_pct": 91.4,
-      "mvp_score": 61.9,
-      "mvp_rank": 61,
-      "wpa": 108.6,
+      "mvp_score": 65.4,
+      "mvp_rank": 41,
+      "wpa": 122.5,
       "consistency": 0.612,
       "clutch_eff": 0.247
     },
@@ -9928,9 +9928,9 @@
       "fg_pct": 58.9,
       "fg3_pct": 27.1,
       "ft_pct": 80.7,
-      "mvp_score": 68.1,
-      "mvp_rank": 29,
-      "wpa": 123.8,
+      "mvp_score": 68.3,
+      "mvp_rank": 27,
+      "wpa": 102.0,
       "consistency": 0.67,
       "clutch_eff": 0.204
     },
@@ -9950,8 +9950,8 @@
       "fg_pct": 58.8,
       "fg3_pct": 0.0,
       "ft_pct": 66.7,
-      "mvp_score": 56.4,
-      "mvp_rank": 100,
+      "mvp_score": 56.7,
+      "mvp_rank": 96,
       "wpa": 0.0,
       "consistency": 0.678,
       "clutch_eff": 0.0
@@ -9972,9 +9972,9 @@
       "fg_pct": 41.5,
       "fg3_pct": 37.8,
       "ft_pct": 89.4,
-      "mvp_score": 67.1,
-      "mvp_rank": 37,
-      "wpa": 122.2,
+      "mvp_score": 67.8,
+      "mvp_rank": 29,
+      "wpa": 106.2,
       "consistency": 0.55,
       "clutch_eff": 0.57
     },
@@ -9994,9 +9994,9 @@
       "fg_pct": 47.8,
       "fg3_pct": 42.3,
       "ft_pct": 87.7,
-      "mvp_score": 72.1,
-      "mvp_rank": 20,
-      "wpa": 152.6,
+      "mvp_score": 69.5,
+      "mvp_rank": 25,
+      "wpa": 96.7,
       "consistency": 0.617,
       "clutch_eff": 0.54
     },
@@ -10016,9 +10016,9 @@
       "fg_pct": 42.1,
       "fg3_pct": 33.8,
       "ft_pct": 83.7,
-      "mvp_score": 65.0,
-      "mvp_rank": 48,
-      "wpa": 109.3,
+      "mvp_score": 65.6,
+      "mvp_rank": 39,
+      "wpa": 93.6,
       "consistency": 0.574,
       "clutch_eff": 0.109
     },
@@ -10038,9 +10038,9 @@
       "fg_pct": 76.5,
       "fg3_pct": 0.0,
       "ft_pct": 76.0,
-      "mvp_score": 60.6,
-      "mvp_rank": 67,
-      "wpa": 66.5,
+      "mvp_score": 55.5,
+      "mvp_rank": 104,
+      "wpa": 0.0,
       "consistency": 0.589,
       "clutch_eff": 0.054
     },
@@ -10060,9 +10060,9 @@
       "fg_pct": 51.9,
       "fg3_pct": 40.7,
       "ft_pct": 78.4,
-      "mvp_score": 65.1,
-      "mvp_rank": 46,
-      "wpa": 160.6,
+      "mvp_score": 64.4,
+      "mvp_rank": 54,
+      "wpa": 123.7,
       "consistency": 0.626,
       "clutch_eff": 0.375
     },
@@ -10082,8 +10082,8 @@
       "fg_pct": 49.1,
       "fg3_pct": 37.7,
       "ft_pct": 81.9,
-      "mvp_score": 56.4,
-      "mvp_rank": 101,
+      "mvp_score": 57.0,
+      "mvp_rank": 92,
       "wpa": 20.4,
       "consistency": 0.639,
       "clutch_eff": 0.387
@@ -10104,9 +10104,9 @@
       "fg_pct": 41.4,
       "fg3_pct": 30.9,
       "ft_pct": 89.5,
-      "mvp_score": 64.0,
-      "mvp_rank": 54,
-      "wpa": 131.0,
+      "mvp_score": 61.3,
+      "mvp_rank": 67,
+      "wpa": 77.5,
       "consistency": 0.587,
       "clutch_eff": 0.025
     },
@@ -10126,8 +10126,8 @@
       "fg_pct": 45.6,
       "fg3_pct": 32.0,
       "ft_pct": 86.9,
-      "mvp_score": 56.3,
-      "mvp_rank": 102,
+      "mvp_score": 56.6,
+      "mvp_rank": 98,
       "wpa": 0.0,
       "consistency": 0.565,
       "clutch_eff": 0.212
@@ -10148,8 +10148,8 @@
       "fg_pct": 47.3,
       "fg3_pct": 38.3,
       "ft_pct": 90.2,
-      "mvp_score": 60.1,
-      "mvp_rank": 70,
+      "mvp_score": 61.7,
+      "mvp_rank": 64,
       "wpa": 76.4,
       "consistency": 0.622,
       "clutch_eff": 0.33
@@ -10170,8 +10170,8 @@
       "fg_pct": 42.9,
       "fg3_pct": 31.8,
       "ft_pct": 78.1,
-      "mvp_score": 48.7,
-      "mvp_rank": 154,
+      "mvp_score": 49.0,
+      "mvp_rank": 150,
       "wpa": 0.0,
       "consistency": 0.593,
       "clutch_eff": 0.022
@@ -10192,8 +10192,8 @@
       "fg_pct": 40.9,
       "fg3_pct": 36.6,
       "ft_pct": 75.4,
-      "mvp_score": 55.3,
-      "mvp_rank": 109,
+      "mvp_score": 56.6,
+      "mvp_rank": 97,
       "wpa": 59.7,
       "consistency": 0.55,
       "clutch_eff": 0.351
@@ -10214,9 +10214,9 @@
       "fg_pct": 45.7,
       "fg3_pct": 39.2,
       "ft_pct": 90.5,
-      "mvp_score": 62.0,
-      "mvp_rank": 60,
-      "wpa": 114.0,
+      "mvp_score": 63.2,
+      "mvp_rank": 59,
+      "wpa": 104.0,
       "consistency": 0.557,
       "clutch_eff": 0.315
     },
@@ -10236,9 +10236,9 @@
       "fg_pct": 45.0,
       "fg3_pct": 37.7,
       "ft_pct": 80.0,
-      "mvp_score": 59.3,
-      "mvp_rank": 79,
-      "wpa": 48.7,
+      "mvp_score": 55.7,
+      "mvp_rank": 103,
+      "wpa": 0.0,
       "consistency": 0.54,
       "clutch_eff": 1.135
     },
@@ -10258,9 +10258,9 @@
       "fg_pct": 39.4,
       "fg3_pct": 31.9,
       "ft_pct": 79.8,
-      "mvp_score": 67.5,
-      "mvp_rank": 32,
-      "wpa": 161.8,
+      "mvp_score": 64.7,
+      "mvp_rank": 48,
+      "wpa": 103.2,
       "consistency": 0.524,
       "clutch_eff": 0.617
     },
@@ -10280,9 +10280,9 @@
       "fg_pct": 42.9,
       "fg3_pct": 36.0,
       "ft_pct": 84.0,
-      "mvp_score": 60.0,
-      "mvp_rank": 73,
-      "wpa": 67.4,
+      "mvp_score": 59.5,
+      "mvp_rank": 78,
+      "wpa": 48.3,
       "consistency": 0.594,
       "clutch_eff": 0.129
     },
@@ -10302,8 +10302,8 @@
       "fg_pct": 46.1,
       "fg3_pct": 38.5,
       "ft_pct": 78.7,
-      "mvp_score": 67.2,
-      "mvp_rank": 35,
+      "mvp_score": 70.0,
+      "mvp_rank": 23,
       "wpa": 150.6,
       "consistency": 0.563,
       "clutch_eff": 0.19
@@ -10324,9 +10324,9 @@
       "fg_pct": 59.2,
       "fg3_pct": 41.5,
       "ft_pct": 66.7,
-      "mvp_score": 65.3,
-      "mvp_rank": 45,
-      "wpa": 92.0,
+      "mvp_score": 64.5,
+      "mvp_rank": 52,
+      "wpa": 65.0,
       "consistency": 0.553,
       "clutch_eff": 0.292
     },
@@ -10346,8 +10346,8 @@
       "fg_pct": 52.4,
       "fg3_pct": 0.0,
       "ft_pct": 75.0,
-      "mvp_score": 49.4,
-      "mvp_rank": 146,
+      "mvp_score": 49.7,
+      "mvp_rank": 143,
       "wpa": 0.0,
       "consistency": 0.585,
       "clutch_eff": 0.171
@@ -10369,8 +10369,8 @@
       "fg3_pct": 48.9,
       "ft_pct": 73.3,
       "mvp_score": 59.8,
-      "mvp_rank": 75,
-      "wpa": 63.6,
+      "mvp_rank": 77,
+      "wpa": 49.9,
       "consistency": 0.59,
       "clutch_eff": 0.203
     },
@@ -10390,9 +10390,9 @@
       "fg_pct": 62.9,
       "fg3_pct": 33.3,
       "ft_pct": 79.4,
-      "mvp_score": 58.2,
-      "mvp_rank": 85,
-      "wpa": 87.9,
+      "mvp_score": 57.5,
+      "mvp_rank": 88,
+      "wpa": 63.0,
       "consistency": 0.557,
       "clutch_eff": 0.263
     },
@@ -10412,9 +10412,9 @@
       "fg_pct": 40.4,
       "fg3_pct": 34.6,
       "ft_pct": 85.8,
-      "mvp_score": 59.4,
-      "mvp_rank": 78,
-      "wpa": 128.7,
+      "mvp_score": 61.1,
+      "mvp_rank": 69,
+      "wpa": 122.0,
       "consistency": 0.52,
       "clutch_eff": 0.192
     },
@@ -10434,8 +10434,8 @@
       "fg_pct": 49.6,
       "fg3_pct": 28.7,
       "ft_pct": 90.9,
-      "mvp_score": 49.0,
-      "mvp_rank": 149,
+      "mvp_score": 49.3,
+      "mvp_rank": 146,
       "wpa": 0.0,
       "consistency": 0.67,
       "clutch_eff": 0.055
@@ -10456,8 +10456,8 @@
       "fg_pct": 44.0,
       "fg3_pct": 36.4,
       "ft_pct": 81.2,
-      "mvp_score": 56.1,
-      "mvp_rank": 104,
+      "mvp_score": 56.4,
+      "mvp_rank": 99,
       "wpa": 0.0,
       "consistency": 0.529,
       "clutch_eff": 0.446
@@ -10478,8 +10478,8 @@
       "fg_pct": 40.2,
       "fg3_pct": 33.3,
       "ft_pct": 86.2,
-      "mvp_score": 51.7,
-      "mvp_rank": 128,
+      "mvp_score": 52.0,
+      "mvp_rank": 126,
       "wpa": 0.0,
       "consistency": 0.556,
       "clutch_eff": 0.235
@@ -10500,8 +10500,8 @@
       "fg_pct": 46.8,
       "fg3_pct": 39.6,
       "ft_pct": 80.6,
-      "mvp_score": 57.5,
-      "mvp_rank": 91,
+      "mvp_score": 58.8,
+      "mvp_rank": 80,
       "wpa": 63.7,
       "consistency": 0.548,
       "clutch_eff": 0.274
@@ -10522,9 +10522,9 @@
       "fg_pct": 47.0,
       "fg3_pct": 34.6,
       "ft_pct": 86.8,
-      "mvp_score": 58.1,
-      "mvp_rank": 87,
-      "wpa": 93.0,
+      "mvp_score": 57.8,
+      "mvp_rank": 85,
+      "wpa": 71.1,
       "consistency": 0.593,
       "clutch_eff": 0.063
     },
@@ -10544,8 +10544,8 @@
       "fg_pct": 45.2,
       "fg3_pct": 41.6,
       "ft_pct": 82.4,
-      "mvp_score": 61.4,
-      "mvp_rank": 64,
+      "mvp_score": 63.6,
+      "mvp_rank": 56,
       "wpa": 115.5,
       "consistency": 0.552,
       "clutch_eff": 0.265
@@ -10566,9 +10566,9 @@
       "fg_pct": 46.0,
       "fg3_pct": 40.0,
       "ft_pct": 84.5,
-      "mvp_score": 69.4,
+      "mvp_score": 68.8,
       "mvp_rank": 26,
-      "wpa": 162.8,
+      "wpa": 125.6,
       "consistency": 0.606,
       "clutch_eff": 0.338
     },
@@ -10588,9 +10588,9 @@
       "fg_pct": 59.8,
       "fg3_pct": 0.0,
       "ft_pct": 74.7,
-      "mvp_score": 51.9,
+      "mvp_score": 51.8,
       "mvp_rank": 127,
-      "wpa": 23.8,
+      "wpa": 15.7,
       "consistency": 0.598,
       "clutch_eff": 0.194
     },
@@ -10610,9 +10610,9 @@
       "fg_pct": 54.3,
       "fg3_pct": 31.8,
       "ft_pct": 65.2,
-      "mvp_score": 55.7,
+      "mvp_score": 55.2,
       "mvp_rank": 108,
-      "wpa": 40.8,
+      "wpa": 26.4,
       "consistency": 0.568,
       "clutch_eff": 0.039
     },
@@ -10632,9 +10632,9 @@
       "fg_pct": 43.2,
       "fg3_pct": 32.0,
       "ft_pct": 82.4,
-      "mvp_score": 58.4,
-      "mvp_rank": 84,
-      "wpa": 73.1,
+      "mvp_score": 59.2,
+      "mvp_rank": 79,
+      "wpa": 65.5,
       "consistency": 0.625,
       "clutch_eff": 0.234
     },
@@ -10654,8 +10654,8 @@
       "fg_pct": 71.3,
       "fg3_pct": 0.0,
       "ft_pct": 76.6,
-      "mvp_score": 59.8,
-      "mvp_rank": 76,
+      "mvp_score": 61.4,
+      "mvp_rank": 65,
       "wpa": 83.1,
       "consistency": 0.55,
       "clutch_eff": 0.249
@@ -10676,9 +10676,9 @@
       "fg_pct": 50.5,
       "fg3_pct": 18.1,
       "ft_pct": 55.2,
-      "mvp_score": 49.4,
-      "mvp_rank": 145,
-      "wpa": 48.6,
+      "mvp_score": 50.8,
+      "mvp_rank": 135,
+      "wpa": 51.5,
       "consistency": 0.568,
       "clutch_eff": 0.104
     },
@@ -10698,9 +10698,9 @@
       "fg_pct": 47.3,
       "fg3_pct": 42.1,
       "ft_pct": 55.2,
-      "mvp_score": 57.4,
-      "mvp_rank": 92,
-      "wpa": 48.6,
+      "mvp_score": 56.9,
+      "mvp_rank": 93,
+      "wpa": 32.4,
       "consistency": 0.623,
       "clutch_eff": 0.107
     },
@@ -10720,9 +10720,9 @@
       "fg_pct": 54.6,
       "fg3_pct": 33.8,
       "ft_pct": 83.1,
-      "mvp_score": 50.4,
-      "mvp_rank": 136,
-      "wpa": 18.7,
+      "mvp_score": 49.2,
+      "mvp_rank": 147,
+      "wpa": 0.0,
       "consistency": 0.526,
       "clutch_eff": 0.231
     },
@@ -10742,9 +10742,9 @@
       "fg_pct": 50.6,
       "fg3_pct": 28.3,
       "ft_pct": 53.8,
-      "mvp_score": 57.3,
+      "mvp_score": 56.8,
       "mvp_rank": 94,
-      "wpa": 112.9,
+      "wpa": 85.9,
       "consistency": 0.622,
       "clutch_eff": 0.123
     },
@@ -10764,9 +10764,9 @@
       "fg_pct": 45.2,
       "fg3_pct": 35.0,
       "ft_pct": 82.9,
-      "mvp_score": 56.7,
-      "mvp_rank": 99,
-      "wpa": 76.5,
+      "mvp_score": 54.5,
+      "mvp_rank": 112,
+      "wpa": 38.1,
       "consistency": 0.57,
       "clutch_eff": 0.352
     },
@@ -10786,9 +10786,9 @@
       "fg_pct": 47.0,
       "fg3_pct": 40.2,
       "ft_pct": 85.4,
-      "mvp_score": 67.9,
-      "mvp_rank": 30,
-      "wpa": 139.4,
+      "mvp_score": 66.3,
+      "mvp_rank": 37,
+      "wpa": 96.5,
       "consistency": 0.559,
       "clutch_eff": 0.278
     },
@@ -10808,8 +10808,8 @@
       "fg_pct": 42.1,
       "fg3_pct": 33.7,
       "ft_pct": 78.4,
-      "mvp_score": 49.6,
-      "mvp_rank": 143,
+      "mvp_score": 49.9,
+      "mvp_rank": 142,
       "wpa": 0.0,
       "consistency": 0.544,
       "clutch_eff": 0.064
@@ -10830,8 +10830,8 @@
       "fg_pct": 54.5,
       "fg3_pct": 0.0,
       "ft_pct": 69.6,
-      "mvp_score": 48.7,
-      "mvp_rank": 153,
+      "mvp_score": 49.0,
+      "mvp_rank": 149,
       "wpa": 0.0,
       "consistency": 0.567,
       "clutch_eff": 0.067
@@ -10852,9 +10852,9 @@
       "fg_pct": 62.9,
       "fg3_pct": 50.0,
       "ft_pct": 73.9,
-      "mvp_score": 54.9,
-      "mvp_rank": 110,
-      "wpa": 36.8,
+      "mvp_score": 55.4,
+      "mvp_rank": 105,
+      "wpa": 32.9,
       "consistency": 0.574,
       "clutch_eff": 0.412
     },
@@ -10874,8 +10874,8 @@
       "fg_pct": 38.9,
       "fg3_pct": 30.2,
       "ft_pct": 81.2,
-      "mvp_score": 50.7,
-      "mvp_rank": 133,
+      "mvp_score": 50.9,
+      "mvp_rank": 134,
       "wpa": 0.0,
       "consistency": 0.557,
       "clutch_eff": 0.225
@@ -10896,8 +10896,8 @@
       "fg_pct": 49.8,
       "fg3_pct": 28.6,
       "ft_pct": 75.9,
-      "mvp_score": 55.9,
-      "mvp_rank": 105,
+      "mvp_score": 57.6,
+      "mvp_rank": 86,
       "wpa": 83.8,
       "consistency": 0.561,
       "clutch_eff": 0.1
@@ -10918,8 +10918,8 @@
       "fg_pct": 42.6,
       "fg3_pct": 33.6,
       "ft_pct": 86.3,
-      "mvp_score": 52.2,
-      "mvp_rank": 123,
+      "mvp_score": 52.5,
+      "mvp_rank": 121,
       "wpa": 0.0,
       "consistency": 0.58,
       "clutch_eff": 0.077
@@ -10940,8 +10940,8 @@
       "fg_pct": 41.2,
       "fg3_pct": 36.7,
       "ft_pct": 76.9,
-      "mvp_score": 60.0,
-      "mvp_rank": 74,
+      "mvp_score": 60.9,
+      "mvp_rank": 71,
       "wpa": 39.6,
       "consistency": 0.582,
       "clutch_eff": 0.47
@@ -10962,9 +10962,9 @@
       "fg_pct": 54.5,
       "fg3_pct": 29.4,
       "ft_pct": 77.3,
-      "mvp_score": 59.3,
-      "mvp_rank": 80,
-      "wpa": 90.4,
+      "mvp_score": 58.5,
+      "mvp_rank": 82,
+      "wpa": 64.1,
       "consistency": 0.594,
       "clutch_eff": 0.198
     },
@@ -10984,9 +10984,9 @@
       "fg_pct": 53.0,
       "fg3_pct": 35.6,
       "ft_pct": 74.1,
-      "mvp_score": 56.8,
-      "mvp_rank": 98,
-      "wpa": 42.4,
+      "mvp_score": 57.1,
+      "mvp_rank": 91,
+      "wpa": 35.2,
       "consistency": 0.638,
       "clutch_eff": 0.118
     },
@@ -11006,9 +11006,9 @@
       "fg_pct": 46.4,
       "fg3_pct": 41.8,
       "ft_pct": 72.5,
-      "mvp_score": 57.7,
+      "mvp_score": 57.5,
       "mvp_rank": 89,
-      "wpa": 116.1,
+      "wpa": 91.0,
       "consistency": 0.53,
       "clutch_eff": 0.095
     },
@@ -11028,9 +11028,9 @@
       "fg_pct": 64.4,
       "fg3_pct": 0.0,
       "ft_pct": 68.0,
-      "mvp_score": 58.2,
-      "mvp_rank": 86,
-      "wpa": 101.5,
+      "mvp_score": 53.4,
+      "mvp_rank": 119,
+      "wpa": 31.8,
       "consistency": 0.46,
       "clutch_eff": 0.12
     },
@@ -11050,8 +11050,8 @@
       "fg_pct": 40.5,
       "fg3_pct": 36.9,
       "ft_pct": 80.8,
-      "mvp_score": 59.5,
-      "mvp_rank": 77,
+      "mvp_score": 61.0,
+      "mvp_rank": 70,
       "wpa": 70.8,
       "consistency": 0.474,
       "clutch_eff": 0.425
@@ -11072,8 +11072,8 @@
       "fg_pct": 42.0,
       "fg3_pct": 37.0,
       "ft_pct": 80.4,
-      "mvp_score": 44.1,
-      "mvp_rank": 196,
+      "mvp_score": 44.4,
+      "mvp_rank": 191,
       "wpa": 0.0,
       "consistency": 0.511,
       "clutch_eff": 0.231
@@ -11094,8 +11094,8 @@
       "fg_pct": 44.9,
       "fg3_pct": 28.0,
       "ft_pct": 63.2,
-      "mvp_score": 42.3,
-      "mvp_rank": 216,
+      "mvp_score": 42.6,
+      "mvp_rank": 210,
       "wpa": 0.0,
       "consistency": 0.506,
       "clutch_eff": 0.103
@@ -11116,9 +11116,9 @@
       "fg_pct": 38.8,
       "fg3_pct": 38.5,
       "ft_pct": 76.5,
-      "mvp_score": 53.5,
-      "mvp_rank": 118,
-      "wpa": 66.6,
+      "mvp_score": 54.4,
+      "mvp_rank": 114,
+      "wpa": 62.0,
       "consistency": 0.526,
       "clutch_eff": 0.07
     },
@@ -11138,9 +11138,9 @@
       "fg_pct": 42.5,
       "fg3_pct": 29.5,
       "ft_pct": 84.0,
-      "mvp_score": 60.2,
-      "mvp_rank": 69,
-      "wpa": 156.5,
+      "mvp_score": 56.8,
+      "mvp_rank": 95,
+      "wpa": 91.8,
       "consistency": 0.491,
       "clutch_eff": 0.385
     },
@@ -11160,7 +11160,7 @@
       "fg_pct": 45.9,
       "fg3_pct": 44.7,
       "ft_pct": 90.1,
-      "mvp_score": 47.5,
+      "mvp_score": 47.8,
       "mvp_rank": 164,
       "wpa": 0.0,
       "consistency": 0.532,
@@ -11182,9 +11182,9 @@
       "fg_pct": 54.9,
       "fg3_pct": 33.8,
       "ft_pct": 82.5,
-      "mvp_score": 57.3,
-      "mvp_rank": 95,
-      "wpa": 51.7,
+      "mvp_score": 58.1,
+      "mvp_rank": 83,
+      "wpa": 48.3,
       "consistency": 0.6,
       "clutch_eff": 0.211
     },
@@ -11204,9 +11204,9 @@
       "fg_pct": 49.0,
       "fg3_pct": 48.5,
       "ft_pct": 89.8,
-      "mvp_score": 60.5,
-      "mvp_rank": 68,
-      "wpa": 96.7,
+      "mvp_score": 60.0,
+      "mvp_rank": 76,
+      "wpa": 72.1,
       "consistency": 0.592,
       "clutch_eff": 0.083
     },
@@ -11226,9 +11226,9 @@
       "fg_pct": 41.5,
       "fg3_pct": 30.8,
       "ft_pct": 80.0,
-      "mvp_score": 51.9,
-      "mvp_rank": 126,
-      "wpa": 15.9,
+      "mvp_score": 52.6,
+      "mvp_rank": 120,
+      "wpa": 16.4,
       "consistency": 0.518,
       "clutch_eff": 0.381
     },
@@ -11248,9 +11248,9 @@
       "fg_pct": 71.7,
       "fg3_pct": 0.0,
       "ft_pct": 40.9,
-      "mvp_score": 48.4,
-      "mvp_rank": 157,
-      "wpa": 32.5,
+      "mvp_score": 48.6,
+      "mvp_rank": 155,
+      "wpa": 26.3,
       "consistency": 0.582,
       "clutch_eff": 0.0
     },
@@ -11270,8 +11270,8 @@
       "fg_pct": 44.1,
       "fg3_pct": 38.5,
       "ft_pct": 81.0,
-      "mvp_score": 42.1,
-      "mvp_rank": 217,
+      "mvp_score": 42.4,
+      "mvp_rank": 212,
       "wpa": 0.0,
       "consistency": 0.383,
       "clutch_eff": 0.0
@@ -11292,9 +11292,9 @@
       "fg_pct": 54.5,
       "fg3_pct": 41.8,
       "ft_pct": 83.5,
-      "mvp_score": 56.8,
-      "mvp_rank": 97,
-      "wpa": 60.1,
+      "mvp_score": 52.3,
+      "mvp_rank": 122,
+      "wpa": 0.0,
       "consistency": 0.515,
       "clutch_eff": 0.277
     },
@@ -11314,9 +11314,9 @@
       "fg_pct": 50.5,
       "fg3_pct": 41.7,
       "ft_pct": 75.6,
-      "mvp_score": 53.6,
-      "mvp_rank": 115,
-      "wpa": 36.5,
+      "mvp_score": 54.5,
+      "mvp_rank": 111,
+      "wpa": 36.4,
       "consistency": 0.552,
       "clutch_eff": 0.073
     },
@@ -11337,8 +11337,8 @@
       "fg3_pct": 0.0,
       "ft_pct": 80.6,
       "mvp_score": 48.9,
-      "mvp_rank": 150,
-      "wpa": 25.4,
+      "mvp_rank": 151,
+      "wpa": 17.7,
       "consistency": 0.472,
       "clutch_eff": 0.0
     },
@@ -11358,9 +11358,9 @@
       "fg_pct": 42.0,
       "fg3_pct": 29.1,
       "ft_pct": 84.5,
-      "mvp_score": 65.8,
-      "mvp_rank": 44,
-      "wpa": 154.9,
+      "mvp_score": 62.9,
+      "mvp_rank": 60,
+      "wpa": 96.2,
       "consistency": 0.609,
       "clutch_eff": 0.18
     },
@@ -11380,9 +11380,9 @@
       "fg_pct": 45.0,
       "fg3_pct": 34.4,
       "ft_pct": 81.5,
-      "mvp_score": 53.9,
-      "mvp_rank": 114,
-      "wpa": 59.7,
+      "mvp_score": 54.1,
+      "mvp_rank": 116,
+      "wpa": 48.7,
       "consistency": 0.536,
       "clutch_eff": 0.037
     },
@@ -11402,9 +11402,9 @@
       "fg_pct": 46.1,
       "fg3_pct": 41.9,
       "ft_pct": 95.2,
-      "mvp_score": 55.8,
-      "mvp_rank": 107,
-      "wpa": 49.5,
+      "mvp_score": 55.2,
+      "mvp_rank": 109,
+      "wpa": 31.7,
       "consistency": 0.489,
       "clutch_eff": 0.298
     },
@@ -11424,9 +11424,9 @@
       "fg_pct": 61.5,
       "fg3_pct": 48.8,
       "ft_pct": 72.7,
-      "mvp_score": 56.2,
-      "mvp_rank": 103,
-      "wpa": 51.8,
+      "mvp_score": 52.3,
+      "mvp_rank": 123,
+      "wpa": 0.0,
       "consistency": 0.513,
       "clutch_eff": 0.347
     },
@@ -11446,8 +11446,8 @@
       "fg_pct": 44.8,
       "fg3_pct": 29.6,
       "ft_pct": 75.9,
-      "mvp_score": 51.0,
-      "mvp_rank": 130,
+      "mvp_score": 51.7,
+      "mvp_rank": 128,
       "wpa": 24.6,
       "consistency": 0.406,
       "clutch_eff": 0.156
@@ -11468,9 +11468,9 @@
       "fg_pct": 47.1,
       "fg3_pct": 38.6,
       "ft_pct": 68.4,
-      "mvp_score": 55.9,
+      "mvp_score": 55.4,
       "mvp_rank": 106,
-      "wpa": 74.1,
+      "wpa": 54.0,
       "consistency": 0.571,
       "clutch_eff": 0.0
     },
@@ -11490,9 +11490,9 @@
       "fg_pct": 45.6,
       "fg3_pct": 36.9,
       "ft_pct": 80.6,
-      "mvp_score": 50.4,
-      "mvp_rank": 137,
-      "wpa": 57.5,
+      "mvp_score": 50.0,
+      "mvp_rank": 140,
+      "wpa": 40.5,
       "consistency": 0.514,
       "clutch_eff": 0.132
     },
@@ -11512,8 +11512,8 @@
       "fg_pct": 44.2,
       "fg3_pct": 39.0,
       "ft_pct": 78.3,
-      "mvp_score": 45.5,
-      "mvp_rank": 180,
+      "mvp_score": 45.8,
+      "mvp_rank": 179,
       "wpa": 0.0,
       "consistency": 0.506,
       "clutch_eff": 0.102
@@ -11534,8 +11534,8 @@
       "fg_pct": 46.2,
       "fg3_pct": 41.7,
       "ft_pct": 78.7,
-      "mvp_score": 45.6,
-      "mvp_rank": 179,
+      "mvp_score": 45.9,
+      "mvp_rank": 178,
       "wpa": 0.0,
       "consistency": 0.559,
       "clutch_eff": 0.09
@@ -11556,9 +11556,9 @@
       "fg_pct": 45.5,
       "fg3_pct": 29.2,
       "ft_pct": 71.7,
-      "mvp_score": 53.4,
-      "mvp_rank": 119,
-      "wpa": 54.6,
+      "mvp_score": 54.4,
+      "mvp_rank": 115,
+      "wpa": 52.6,
       "consistency": 0.475,
       "clutch_eff": 0.189
     },
@@ -11578,9 +11578,9 @@
       "fg_pct": 48.1,
       "fg3_pct": 38.0,
       "ft_pct": 96.8,
-      "mvp_score": 50.3,
-      "mvp_rank": 138,
-      "wpa": 50.0,
+      "mvp_score": 49.9,
+      "mvp_rank": 141,
+      "wpa": 33.9,
       "consistency": 0.538,
       "clutch_eff": 0.083
     },
@@ -11600,9 +11600,9 @@
       "fg_pct": 45.3,
       "fg3_pct": 26.4,
       "ft_pct": 68.4,
-      "mvp_score": 57.6,
-      "mvp_rank": 90,
-      "wpa": 78.0,
+      "mvp_score": 55.9,
+      "mvp_rank": 101,
+      "wpa": 43.9,
       "consistency": 0.645,
       "clutch_eff": 0.017
     },
@@ -11622,8 +11622,8 @@
       "fg_pct": 46.6,
       "fg3_pct": 35.8,
       "ft_pct": 75.6,
-      "mvp_score": 53.6,
-      "mvp_rank": 116,
+      "mvp_score": 54.5,
+      "mvp_rank": 113,
       "wpa": 33.9,
       "consistency": 0.584,
       "clutch_eff": 0.338
@@ -11644,9 +11644,9 @@
       "fg_pct": 44.6,
       "fg3_pct": 32.0,
       "ft_pct": 73.0,
-      "mvp_score": 67.2,
-      "mvp_rank": 34,
-      "wpa": 179.5,
+      "mvp_score": 64.6,
+      "mvp_rank": 50,
+      "wpa": 119.6,
       "consistency": 0.54,
       "clutch_eff": 0.189
     },
@@ -11666,8 +11666,8 @@
       "fg_pct": 59.6,
       "fg3_pct": 18.8,
       "ft_pct": 91.7,
-      "mvp_score": 45.4,
-      "mvp_rank": 184,
+      "mvp_score": 45.7,
+      "mvp_rank": 181,
       "wpa": 0.0,
       "consistency": 0.501,
       "clutch_eff": 0.056
@@ -11688,8 +11688,8 @@
       "fg_pct": 50.0,
       "fg3_pct": 37.9,
       "ft_pct": 75.0,
-      "mvp_score": 48.1,
-      "mvp_rank": 160,
+      "mvp_score": 48.6,
+      "mvp_rank": 156,
       "wpa": 16.1,
       "consistency": 0.554,
       "clutch_eff": 0.217
@@ -11710,9 +11710,9 @@
       "fg_pct": 59.4,
       "fg3_pct": 0.0,
       "ft_pct": 70.8,
-      "mvp_score": 47.4,
+      "mvp_score": 47.8,
       "mvp_rank": 166,
-      "wpa": 29.9,
+      "wpa": 25.6,
       "consistency": 0.442,
       "clutch_eff": 0.106
     },
@@ -11732,8 +11732,8 @@
       "fg_pct": 55.5,
       "fg3_pct": 50.6,
       "ft_pct": 82.6,
-      "mvp_score": 54.9,
-      "mvp_rank": 111,
+      "mvp_score": 56.3,
+      "mvp_rank": 100,
       "wpa": 71.1,
       "consistency": 0.501,
       "clutch_eff": 0.088
@@ -11754,8 +11754,8 @@
       "fg_pct": 71.4,
       "fg3_pct": 0.0,
       "ft_pct": 91.7,
-      "mvp_score": 42.3,
-      "mvp_rank": 215,
+      "mvp_score": 42.6,
+      "mvp_rank": 208,
       "wpa": 0.0,
       "consistency": 0.459,
       "clutch_eff": 0.0
@@ -11776,8 +11776,8 @@
       "fg_pct": 59.3,
       "fg3_pct": 60.0,
       "ft_pct": 69.2,
-      "mvp_score": 48.8,
-      "mvp_rank": 151,
+      "mvp_score": 49.1,
+      "mvp_rank": 148,
       "wpa": 0.0,
       "consistency": 0.663,
       "clutch_eff": 0.0
@@ -11798,8 +11798,8 @@
       "fg_pct": 60.7,
       "fg3_pct": 0.0,
       "ft_pct": 65.5,
-      "mvp_score": 49.3,
-      "mvp_rank": 147,
+      "mvp_score": 49.6,
+      "mvp_rank": 144,
       "wpa": 0.0,
       "consistency": 0.492,
       "clutch_eff": 0.069
@@ -11820,8 +11820,8 @@
       "fg_pct": 47.4,
       "fg3_pct": 40.4,
       "ft_pct": 65.1,
-      "mvp_score": 40.3,
-      "mvp_rank": 237,
+      "mvp_score": 40.6,
+      "mvp_rank": 230,
       "wpa": 0.0,
       "consistency": 0.538,
       "clutch_eff": 0.0
@@ -11842,9 +11842,9 @@
       "fg_pct": 92.1,
       "fg3_pct": 0.0,
       "ft_pct": 66.7,
-      "mvp_score": 44.9,
-      "mvp_rank": 188,
-      "wpa": 38.3,
+      "mvp_score": 44.3,
+      "mvp_rank": 194,
+      "wpa": 22.8,
       "consistency": 0.511,
       "clutch_eff": 0.0
     },
@@ -11864,9 +11864,9 @@
       "fg_pct": 47.3,
       "fg3_pct": 39.5,
       "ft_pct": 47.5,
-      "mvp_score": 57.4,
-      "mvp_rank": 93,
-      "wpa": 89.0,
+      "mvp_score": 57.3,
+      "mvp_rank": 90,
+      "wpa": 70.7,
       "consistency": 0.564,
       "clutch_eff": 0.041
     },
@@ -11886,9 +11886,9 @@
       "fg_pct": 43.8,
       "fg3_pct": 35.8,
       "ft_pct": 88.4,
-      "mvp_score": 48.8,
-      "mvp_rank": 152,
-      "wpa": 63.5,
+      "mvp_score": 48.7,
+      "mvp_rank": 154,
+      "wpa": 48.7,
       "consistency": 0.499,
       "clutch_eff": 0.027
     },
@@ -11908,8 +11908,8 @@
       "fg_pct": 59.6,
       "fg3_pct": 35.7,
       "ft_pct": 59.7,
-      "mvp_score": 50.2,
-      "mvp_rank": 139,
+      "mvp_score": 51.4,
+      "mvp_rank": 131,
       "wpa": 55.0,
       "consistency": 0.535,
       "clutch_eff": 0.0
@@ -11930,9 +11930,9 @@
       "fg_pct": 47.8,
       "fg3_pct": 25.0,
       "ft_pct": 91.7,
-      "mvp_score": 45.4,
-      "mvp_rank": 181,
-      "wpa": 43.2,
+      "mvp_score": 43.8,
+      "mvp_rank": 196,
+      "wpa": 16.2,
       "consistency": 0.437,
       "clutch_eff": 0.0
     },
@@ -11952,8 +11952,8 @@
       "fg_pct": 42.4,
       "fg3_pct": 35.2,
       "ft_pct": 92.0,
-      "mvp_score": 50.6,
-      "mvp_rank": 134,
+      "mvp_score": 51.6,
+      "mvp_rank": 130,
       "wpa": 44.3,
       "consistency": 0.492,
       "clutch_eff": 0.058
@@ -11974,9 +11974,9 @@
       "fg_pct": 60.9,
       "fg3_pct": 0.0,
       "ft_pct": 71.9,
-      "mvp_score": 49.2,
-      "mvp_rank": 148,
-      "wpa": 6.8,
+      "mvp_score": 48.7,
+      "mvp_rank": 153,
+      "wpa": -2.2,
       "consistency": 0.508,
       "clutch_eff": 0.171
     },
@@ -11996,9 +11996,9 @@
       "fg_pct": 47.4,
       "fg3_pct": 34.9,
       "ft_pct": 76.0,
-      "mvp_score": 47.8,
-      "mvp_rank": 163,
-      "wpa": 63.0,
+      "mvp_score": 48.6,
+      "mvp_rank": 157,
+      "wpa": 56.8,
       "consistency": 0.517,
       "clutch_eff": 0.0
     },
@@ -12018,9 +12018,9 @@
       "fg_pct": 65.2,
       "fg3_pct": 0.0,
       "ft_pct": 49.0,
-      "mvp_score": 47.2,
-      "mvp_rank": 169,
-      "wpa": 28.7,
+      "mvp_score": 46.7,
+      "mvp_rank": 174,
+      "wpa": 16.0,
       "consistency": 0.579,
       "clutch_eff": 0.146
     },
@@ -12040,8 +12040,8 @@
       "fg_pct": 46.8,
       "fg3_pct": 38.7,
       "ft_pct": 66.7,
-      "mvp_score": 42.7,
-      "mvp_rank": 205,
+      "mvp_score": 43.0,
+      "mvp_rank": 201,
       "wpa": 0.0,
       "consistency": 0.502,
       "clutch_eff": 0.111
@@ -12062,9 +12062,9 @@
       "fg_pct": 37.7,
       "fg3_pct": 33.7,
       "ft_pct": 71.4,
-      "mvp_score": 48.6,
-      "mvp_rank": 156,
-      "wpa": 47.9,
+      "mvp_score": 45.0,
+      "mvp_rank": 185,
+      "wpa": 0.0,
       "consistency": 0.454,
       "clutch_eff": 0.353
     },
@@ -12084,9 +12084,9 @@
       "fg_pct": 51.0,
       "fg3_pct": 25.0,
       "ft_pct": 65.7,
-      "mvp_score": 52.4,
-      "mvp_rank": 122,
-      "wpa": 72.4,
+      "mvp_score": 52.1,
+      "mvp_rank": 124,
+      "wpa": 54.3,
       "consistency": 0.461,
       "clutch_eff": 0.102
     },
@@ -12106,8 +12106,8 @@
       "fg_pct": 44.3,
       "fg3_pct": 39.1,
       "ft_pct": 80.0,
-      "mvp_score": 58.5,
-      "mvp_rank": 82,
+      "mvp_score": 60.3,
+      "mvp_rank": 74,
       "wpa": 89.3,
       "consistency": 0.52,
       "clutch_eff": 0.279
@@ -12128,8 +12128,8 @@
       "fg_pct": 74.3,
       "fg3_pct": 80.0,
       "ft_pct": 69.2,
-      "mvp_score": 42.5,
-      "mvp_rank": 209,
+      "mvp_score": 42.8,
+      "mvp_rank": 203,
       "wpa": 0.0,
       "consistency": 0.427,
       "clutch_eff": 0.0
@@ -12150,9 +12150,9 @@
       "fg_pct": 41.7,
       "fg3_pct": 40.0,
       "ft_pct": 71.4,
-      "mvp_score": 47.4,
-      "mvp_rank": 165,
-      "wpa": 89.1,
+      "mvp_score": 48.5,
+      "mvp_rank": 158,
+      "wpa": 82.3,
       "consistency": 0.374,
       "clutch_eff": 0.034
     },
@@ -12172,9 +12172,9 @@
       "fg_pct": 40.1,
       "fg3_pct": 34.9,
       "ft_pct": 80.8,
-      "mvp_score": 53.4,
-      "mvp_rank": 120,
-      "wpa": 100.9,
+      "mvp_score": 55.4,
+      "mvp_rank": 107,
+      "wpa": 101.2,
       "consistency": 0.424,
       "clutch_eff": 0.394
     },
@@ -12194,9 +12194,9 @@
       "fg_pct": 35.2,
       "fg3_pct": 27.1,
       "ft_pct": 66.7,
-      "mvp_score": 46.6,
-      "mvp_rank": 173,
-      "wpa": 30.6,
+      "mvp_score": 47.8,
+      "mvp_rank": 165,
+      "wpa": 34.6,
       "consistency": 0.534,
       "clutch_eff": 0.174
     },
@@ -12216,9 +12216,9 @@
       "fg_pct": 48.6,
       "fg3_pct": 29.4,
       "ft_pct": 79.1,
-      "mvp_score": 49.8,
-      "mvp_rank": 140,
-      "wpa": 43.5,
+      "mvp_score": 49.4,
+      "mvp_rank": 145,
+      "wpa": 28.2,
       "consistency": 0.503,
       "clutch_eff": 0.018
     },
@@ -12238,8 +12238,8 @@
       "fg_pct": 45.3,
       "fg3_pct": 35.0,
       "ft_pct": 100.0,
-      "mvp_score": 47.4,
-      "mvp_rank": 167,
+      "mvp_score": 48.4,
+      "mvp_rank": 159,
       "wpa": 43.5,
       "consistency": 0.514,
       "clutch_eff": 0.0
@@ -12260,7 +12260,7 @@
       "fg_pct": 44.4,
       "fg3_pct": 34.4,
       "ft_pct": 80.8,
-      "mvp_score": 47.3,
+      "mvp_score": 47.6,
       "mvp_rank": 168,
       "wpa": 0.0,
       "consistency": 0.521,
@@ -12282,9 +12282,9 @@
       "fg_pct": 48.1,
       "fg3_pct": 41.2,
       "ft_pct": 73.0,
-      "mvp_score": 54.4,
-      "mvp_rank": 112,
-      "wpa": 90.6,
+      "mvp_score": 55.8,
+      "mvp_rank": 102,
+      "wpa": 86.8,
       "consistency": 0.491,
       "clutch_eff": 0.078
     },
@@ -12304,8 +12304,8 @@
       "fg_pct": 44.4,
       "fg3_pct": 41.3,
       "ft_pct": 80.7,
-      "mvp_score": 53.6,
-      "mvp_rank": 117,
+      "mvp_score": 54.9,
+      "mvp_rank": 110,
       "wpa": 58.2,
       "consistency": 0.534,
       "clutch_eff": 0.271
@@ -12326,8 +12326,8 @@
       "fg_pct": 47.1,
       "fg3_pct": 24.5,
       "ft_pct": 64.5,
-      "mvp_score": 46.5,
-      "mvp_rank": 174,
+      "mvp_score": 46.8,
+      "mvp_rank": 172,
       "wpa": 0.0,
       "consistency": 0.495,
       "clutch_eff": 0.036
@@ -12348,8 +12348,8 @@
       "fg_pct": 68.8,
       "fg3_pct": 0.0,
       "ft_pct": 55.2,
-      "mvp_score": 40.5,
-      "mvp_rank": 234,
+      "mvp_score": 40.8,
+      "mvp_rank": 227,
       "wpa": 0.0,
       "consistency": 0.462,
       "clutch_eff": 0.0
@@ -12370,8 +12370,8 @@
       "fg_pct": 63.3,
       "fg3_pct": 60.0,
       "ft_pct": 66.0,
-      "mvp_score": 45.4,
-      "mvp_rank": 183,
+      "mvp_score": 45.7,
+      "mvp_rank": 180,
       "wpa": 0.0,
       "consistency": 0.5,
       "clutch_eff": 0.0
@@ -12392,9 +12392,9 @@
       "fg_pct": 47.3,
       "fg3_pct": 34.1,
       "ft_pct": 78.6,
-      "mvp_score": 42.0,
-      "mvp_rank": 219,
-      "wpa": 16.6,
+      "mvp_score": 41.0,
+      "mvp_rank": 224,
+      "wpa": 0.0,
       "consistency": 0.458,
       "clutch_eff": 0.0
     },
@@ -12414,8 +12414,8 @@
       "fg_pct": 46.6,
       "fg3_pct": 40.9,
       "ft_pct": 87.5,
-      "mvp_score": 46.3,
-      "mvp_rank": 176,
+      "mvp_score": 46.6,
+      "mvp_rank": 175,
       "wpa": 0.0,
       "consistency": 0.502,
       "clutch_eff": 0.255
@@ -12436,8 +12436,8 @@
       "fg_pct": 44.4,
       "fg3_pct": 36.6,
       "ft_pct": 75.0,
-      "mvp_score": 41.2,
-      "mvp_rank": 228,
+      "mvp_score": 41.5,
+      "mvp_rank": 221,
       "wpa": 0.0,
       "consistency": 0.4,
       "clutch_eff": 0.064
@@ -12458,8 +12458,8 @@
       "fg_pct": 44.9,
       "fg3_pct": 40.0,
       "ft_pct": 67.3,
-      "mvp_score": 50.5,
-      "mvp_rank": 135,
+      "mvp_score": 51.6,
+      "mvp_rank": 129,
       "wpa": 51.0,
       "consistency": 0.534,
       "clutch_eff": 0.091
@@ -12480,9 +12480,9 @@
       "fg_pct": 44.0,
       "fg3_pct": 35.4,
       "ft_pct": 79.7,
-      "mvp_score": 48.3,
-      "mvp_rank": 158,
-      "wpa": 59.0,
+      "mvp_score": 47.6,
+      "mvp_rank": 169,
+      "wpa": 38.4,
       "consistency": 0.511,
       "clutch_eff": 0.178
     },
@@ -12502,9 +12502,9 @@
       "fg_pct": 56.2,
       "fg3_pct": 35.0,
       "ft_pct": 66.7,
-      "mvp_score": 43.1,
-      "mvp_rank": 201,
-      "wpa": 50.9,
+      "mvp_score": 39.3,
+      "mvp_rank": 252,
+      "wpa": 0.0,
       "consistency": 0.473,
       "clutch_eff": 0.105
     },
@@ -12524,9 +12524,9 @@
       "fg_pct": 59.2,
       "fg3_pct": 0.0,
       "ft_pct": 38.0,
-      "mvp_score": 52.1,
-      "mvp_rank": 125,
-      "wpa": 57.4,
+      "mvp_score": 51.3,
+      "mvp_rank": 132,
+      "wpa": 36.2,
       "consistency": 0.481,
       "clutch_eff": 0.0
     },
@@ -12546,9 +12546,9 @@
       "fg_pct": 69.1,
       "fg3_pct": 0.0,
       "ft_pct": 56.2,
-      "mvp_score": 46.8,
-      "mvp_rank": 171,
-      "wpa": 71.8,
+      "mvp_score": 48.3,
+      "mvp_rank": 160,
+      "wpa": 72.3,
       "consistency": 0.558,
       "clutch_eff": 0.0
     },
@@ -12568,9 +12568,9 @@
       "fg_pct": 50.0,
       "fg3_pct": 32.9,
       "ft_pct": 73.3,
-      "mvp_score": 45.4,
-      "mvp_rank": 182,
-      "wpa": 32.1,
+      "mvp_score": 46.2,
+      "mvp_rank": 176,
+      "wpa": 31.9,
       "consistency": 0.493,
       "clutch_eff": 0.299
     },
@@ -12590,9 +12590,9 @@
       "fg_pct": 49.3,
       "fg3_pct": 40.0,
       "ft_pct": 80.4,
-      "mvp_score": 50.7,
-      "mvp_rank": 132,
-      "wpa": 67.8,
+      "mvp_score": 50.4,
+      "mvp_rank": 138,
+      "wpa": 49.5,
       "consistency": 0.523,
       "clutch_eff": 0.244
     },
@@ -12612,8 +12612,8 @@
       "fg_pct": 41.9,
       "fg3_pct": 40.8,
       "ft_pct": 74.6,
-      "mvp_score": 49.7,
-      "mvp_rank": 142,
+      "mvp_score": 50.6,
+      "mvp_rank": 136,
       "wpa": 32.4,
       "consistency": 0.507,
       "clutch_eff": 0.063
@@ -12634,9 +12634,9 @@
       "fg_pct": 40.9,
       "fg3_pct": 30.6,
       "ft_pct": 80.6,
-      "mvp_score": 45.3,
-      "mvp_rank": 185,
-      "wpa": 68.9,
+      "mvp_score": 44.5,
+      "mvp_rank": 190,
+      "wpa": 45.0,
       "consistency": 0.466,
       "clutch_eff": 0.022
     },
@@ -12656,8 +12656,8 @@
       "fg_pct": 43.3,
       "fg3_pct": 25.7,
       "ft_pct": 84.6,
-      "mvp_score": 47.0,
-      "mvp_rank": 170,
+      "mvp_score": 48.3,
+      "mvp_rank": 161,
       "wpa": 60.5,
       "consistency": 0.522,
       "clutch_eff": 0.048
@@ -12678,9 +12678,9 @@
       "fg_pct": 45.2,
       "fg3_pct": 35.1,
       "ft_pct": 86.7,
-      "mvp_score": 52.6,
-      "mvp_rank": 121,
-      "wpa": 75.5,
+      "mvp_score": 46.8,
+      "mvp_rank": 173,
+      "wpa": 0.0,
       "consistency": 0.448,
       "clutch_eff": 0.181
     },
@@ -12701,8 +12701,8 @@
       "fg3_pct": 30.2,
       "ft_pct": 91.4,
       "mvp_score": 44.3,
-      "mvp_rank": 195,
-      "wpa": 54.4,
+      "mvp_rank": 193,
+      "wpa": 41.9,
       "consistency": 0.467,
       "clutch_eff": 0.253
     },
@@ -12722,8 +12722,8 @@
       "fg_pct": 37.2,
       "fg3_pct": 29.3,
       "ft_pct": 56.2,
-      "mvp_score": 40.6,
-      "mvp_rank": 233,
+      "mvp_score": 40.9,
+      "mvp_rank": 226,
       "wpa": 0.0,
       "consistency": 0.483,
       "clutch_eff": 0.002
@@ -12744,8 +12744,8 @@
       "fg_pct": 54.9,
       "fg3_pct": 0.0,
       "ft_pct": 67.6,
-      "mvp_score": 41.1,
-      "mvp_rank": 229,
+      "mvp_score": 41.4,
+      "mvp_rank": 223,
       "wpa": 0.0,
       "consistency": 0.358,
       "clutch_eff": 0.0
@@ -12766,9 +12766,9 @@
       "fg_pct": 43.6,
       "fg3_pct": 42.3,
       "ft_pct": 78.6,
-      "mvp_score": 43.9,
-      "mvp_rank": 197,
-      "wpa": 33.0,
+      "mvp_score": 44.6,
+      "mvp_rank": 188,
+      "wpa": 32.0,
       "consistency": 0.499,
       "clutch_eff": 0.0
     },
@@ -12788,8 +12788,8 @@
       "fg_pct": 47.2,
       "fg3_pct": 44.0,
       "ft_pct": 50.0,
-      "mvp_score": 44.5,
-      "mvp_rank": 193,
+      "mvp_score": 44.8,
+      "mvp_rank": 187,
       "wpa": 0.0,
       "consistency": 0.445,
       "clutch_eff": 0.0
@@ -12810,9 +12810,9 @@
       "fg_pct": 55.4,
       "fg3_pct": 18.2,
       "ft_pct": 44.9,
-      "mvp_score": 48.0,
-      "mvp_rank": 161,
-      "wpa": 54.2,
+      "mvp_score": 48.1,
+      "mvp_rank": 163,
+      "wpa": 42.8,
       "consistency": 0.444,
       "clutch_eff": 0.193
     },
@@ -12832,9 +12832,9 @@
       "fg_pct": 37.9,
       "fg3_pct": 27.3,
       "ft_pct": 90.9,
-      "mvp_score": 48.0,
-      "mvp_rank": 162,
-      "wpa": 78.2,
+      "mvp_score": 48.7,
+      "mvp_rank": 152,
+      "wpa": 69.5,
       "consistency": 0.454,
       "clutch_eff": 0.0
     },
@@ -12854,8 +12854,8 @@
       "fg_pct": 46.9,
       "fg3_pct": 53.3,
       "ft_pct": 78.6,
-      "mvp_score": 42.0,
-      "mvp_rank": 218,
+      "mvp_score": 42.3,
+      "mvp_rank": 213,
       "wpa": 0.0,
       "consistency": 0.354,
       "clutch_eff": 0.0
@@ -12876,9 +12876,9 @@
       "fg_pct": 35.7,
       "fg3_pct": 33.5,
       "ft_pct": 85.0,
-      "mvp_score": 50.9,
-      "mvp_rank": 131,
-      "wpa": 100.1,
+      "mvp_score": 46.9,
+      "mvp_rank": 171,
+      "wpa": 38.6,
       "consistency": 0.43,
       "clutch_eff": 0.06
     },
@@ -12898,9 +12898,9 @@
       "fg_pct": 46.6,
       "fg3_pct": 30.4,
       "ft_pct": 60.4,
-      "mvp_score": 43.2,
-      "mvp_rank": 200,
-      "wpa": 39.1,
+      "mvp_score": 42.6,
+      "mvp_rank": 211,
+      "wpa": 23.3,
       "consistency": 0.463,
       "clutch_eff": 0.0
     },
@@ -12920,8 +12920,8 @@
       "fg_pct": 68.3,
       "fg3_pct": 0.0,
       "ft_pct": 53.3,
-      "mvp_score": 39.2,
-      "mvp_rank": 250,
+      "mvp_score": 39.5,
+      "mvp_rank": 246,
       "wpa": 0.0,
       "consistency": 0.468,
       "clutch_eff": 0.105
@@ -12942,9 +12942,9 @@
       "fg_pct": 44.1,
       "fg3_pct": 23.3,
       "ft_pct": 81.2,
-      "mvp_score": 48.2,
-      "mvp_rank": 159,
-      "wpa": 35.0,
+      "mvp_score": 47.7,
+      "mvp_rank": 167,
+      "wpa": 20.3,
       "consistency": 0.434,
       "clutch_eff": 0.212
     },
@@ -12965,8 +12965,8 @@
       "fg3_pct": 20.0,
       "ft_pct": 0.0,
       "mvp_score": 40.0,
-      "mvp_rank": 241,
-      "wpa": 12.1,
+      "mvp_rank": 240,
+      "wpa": 7.1,
       "consistency": 0.549,
       "clutch_eff": 0.0
     },
@@ -12986,8 +12986,8 @@
       "fg_pct": 69.2,
       "fg3_pct": 0.0,
       "ft_pct": 40.7,
-      "mvp_score": 49.7,
-      "mvp_rank": 141,
+      "mvp_score": 51.1,
+      "mvp_rank": 133,
       "wpa": 62.0,
       "consistency": 0.489,
       "clutch_eff": 0.0
@@ -13008,9 +13008,9 @@
       "fg_pct": 45.1,
       "fg3_pct": 40.2,
       "ft_pct": 73.1,
-      "mvp_score": 52.1,
-      "mvp_rank": 124,
-      "wpa": 59.6,
+      "mvp_score": 53.5,
+      "mvp_rank": 118,
+      "wpa": 60.6,
       "consistency": 0.52,
       "clutch_eff": 0.133
     },
@@ -13030,9 +13030,9 @@
       "fg_pct": 39.1,
       "fg3_pct": 29.3,
       "ft_pct": 94.7,
-      "mvp_score": 46.4,
-      "mvp_rank": 175,
-      "wpa": 75.7,
+      "mvp_score": 44.5,
+      "mvp_rank": 189,
+      "wpa": 40.8,
       "consistency": 0.406,
       "clutch_eff": 0.17
     },
@@ -13052,9 +13052,9 @@
       "fg_pct": 51.9,
       "fg3_pct": 0.0,
       "ft_pct": 67.1,
-      "mvp_score": 42.4,
-      "mvp_rank": 214,
-      "wpa": 46.3,
+      "mvp_score": 42.6,
+      "mvp_rank": 209,
+      "wpa": 38.1,
       "consistency": 0.412,
       "clutch_eff": 0.264
     },
@@ -13074,9 +13074,9 @@
       "fg_pct": 39.9,
       "fg3_pct": 37.4,
       "ft_pct": 89.7,
-      "mvp_score": 44.8,
-      "mvp_rank": 190,
-      "wpa": 26.5,
+      "mvp_score": 42.7,
+      "mvp_rank": 206,
+      "wpa": -2.7,
       "consistency": 0.442,
       "clutch_eff": 0.324
     },
@@ -13096,9 +13096,9 @@
       "fg_pct": 46.5,
       "fg3_pct": 40.8,
       "ft_pct": 86.7,
-      "mvp_score": 45.3,
-      "mvp_rank": 187,
-      "wpa": 5.9,
+      "mvp_score": 45.1,
+      "mvp_rank": 184,
+      "wpa": 0.0,
       "consistency": 0.518,
       "clutch_eff": 0.0
     },
@@ -13118,8 +13118,8 @@
       "fg_pct": 45.3,
       "fg3_pct": 25.6,
       "ft_pct": 63.6,
-      "mvp_score": 45.3,
-      "mvp_rank": 186,
+      "mvp_score": 45.6,
+      "mvp_rank": 182,
       "wpa": 0.0,
       "consistency": 0.491,
       "clutch_eff": 0.046
@@ -13140,8 +13140,8 @@
       "fg_pct": 50.5,
       "fg3_pct": 35.0,
       "ft_pct": 85.7,
-      "mvp_score": 39.6,
-      "mvp_rank": 245,
+      "mvp_score": 39.9,
+      "mvp_rank": 241,
       "wpa": 0.0,
       "consistency": 0.492,
       "clutch_eff": 0.06
@@ -13162,9 +13162,9 @@
       "fg_pct": 62.9,
       "fg3_pct": 0.0,
       "ft_pct": 67.7,
-      "mvp_score": 44.9,
-      "mvp_rank": 189,
-      "wpa": 9.6,
+      "mvp_score": 45.3,
+      "mvp_rank": 183,
+      "wpa": 9.1,
       "consistency": 0.445,
       "clutch_eff": 0.086
     },
@@ -13184,9 +13184,9 @@
       "fg_pct": 38.5,
       "fg3_pct": 32.2,
       "ft_pct": 86.8,
-      "mvp_score": 54.4,
-      "mvp_rank": 113,
-      "wpa": 89.5,
+      "mvp_score": 54.0,
+      "mvp_rank": 117,
+      "wpa": 67.1,
       "consistency": 0.489,
       "clutch_eff": 0.237
     },
@@ -13206,9 +13206,9 @@
       "fg_pct": 54.4,
       "fg3_pct": 42.4,
       "ft_pct": 100.0,
-      "mvp_score": 41.0,
-      "mvp_rank": 231,
-      "wpa": 23.5,
+      "mvp_score": 39.4,
+      "mvp_rank": 249,
+      "wpa": 0.0,
       "consistency": 0.487,
       "clutch_eff": 0.059
     },
@@ -13228,8 +13228,8 @@
       "fg_pct": 68.8,
       "fg3_pct": 0.0,
       "ft_pct": 61.5,
-      "mvp_score": 38.4,
-      "mvp_rank": 258,
+      "mvp_score": 38.7,
+      "mvp_rank": 257,
       "wpa": 0.0,
       "consistency": 0.288,
       "clutch_eff": 0.0
@@ -13250,9 +13250,9 @@
       "fg_pct": 34.6,
       "fg3_pct": 25.6,
       "ft_pct": 70.8,
-      "mvp_score": 46.7,
-      "mvp_rank": 172,
-      "wpa": 67.4,
+      "mvp_score": 48.2,
+      "mvp_rank": 162,
+      "wpa": 68.1,
       "consistency": 0.394,
       "clutch_eff": 0.188
     },
@@ -13272,8 +13272,8 @@
       "fg_pct": 47.3,
       "fg3_pct": 35.7,
       "ft_pct": 100.0,
-      "mvp_score": 35.9,
-      "mvp_rank": 284,
+      "mvp_score": 36.2,
+      "mvp_rank": 283,
       "wpa": 0.0,
       "consistency": 0.395,
       "clutch_eff": 0.02
@@ -13294,9 +13294,9 @@
       "fg_pct": 47.4,
       "fg3_pct": 38.0,
       "ft_pct": 88.9,
-      "mvp_score": 44.4,
-      "mvp_rank": 194,
-      "wpa": 24.1,
+      "mvp_score": 42.8,
+      "mvp_rank": 204,
+      "wpa": 0.0,
       "consistency": 0.457,
       "clutch_eff": 0.027
     },
@@ -13316,8 +13316,8 @@
       "fg_pct": 61.5,
       "fg3_pct": 0.0,
       "ft_pct": 73.9,
-      "mvp_score": 37.1,
-      "mvp_rank": 269,
+      "mvp_score": 37.4,
+      "mvp_rank": 265,
       "wpa": 0.0,
       "consistency": 0.388,
       "clutch_eff": 0.0
@@ -13338,8 +13338,8 @@
       "fg_pct": 41.9,
       "fg3_pct": 45.2,
       "ft_pct": 73.3,
-      "mvp_score": 40.7,
-      "mvp_rank": 232,
+      "mvp_score": 41.0,
+      "mvp_rank": 225,
       "wpa": 0.0,
       "consistency": 0.454,
       "clutch_eff": 0.103
@@ -13360,8 +13360,8 @@
       "fg_pct": 46.3,
       "fg3_pct": 32.1,
       "ft_pct": 89.3,
-      "mvp_score": 46.0,
-      "mvp_rank": 178,
+      "mvp_score": 46.9,
+      "mvp_rank": 170,
       "wpa": 40.7,
       "consistency": 0.379,
       "clutch_eff": 0.104
@@ -13382,9 +13382,9 @@
       "fg_pct": 48.5,
       "fg3_pct": 25.9,
       "ft_pct": 56.2,
-      "mvp_score": 41.4,
-      "mvp_rank": 225,
-      "wpa": 17.5,
+      "mvp_score": 41.9,
+      "mvp_rank": 217,
+      "wpa": 16.2,
       "consistency": 0.522,
       "clutch_eff": 0.056
     },
@@ -13404,9 +13404,9 @@
       "fg_pct": 43.4,
       "fg3_pct": 39.6,
       "ft_pct": 72.2,
-      "mvp_score": 51.2,
-      "mvp_rank": 129,
-      "wpa": 101.0,
+      "mvp_score": 52.1,
+      "mvp_rank": 125,
+      "wpa": 89.7,
       "consistency": 0.415,
       "clutch_eff": 0.0
     },
@@ -13426,8 +13426,8 @@
       "fg_pct": 76.9,
       "fg3_pct": 0.0,
       "ft_pct": 66.7,
-      "mvp_score": 38.6,
-      "mvp_rank": 256,
+      "mvp_score": 38.9,
+      "mvp_rank": 255,
       "wpa": 0.0,
       "consistency": 0.406,
       "clutch_eff": 0.0
@@ -13448,8 +13448,8 @@
       "fg_pct": 39.0,
       "fg3_pct": 38.2,
       "ft_pct": 86.4,
-      "mvp_score": 39.4,
-      "mvp_rank": 246,
+      "mvp_score": 39.7,
+      "mvp_rank": 243,
       "wpa": 0.0,
       "consistency": 0.423,
       "clutch_eff": 0.0
@@ -13470,9 +13470,9 @@
       "fg_pct": 40.9,
       "fg3_pct": 40.4,
       "ft_pct": 75.0,
-      "mvp_score": 41.5,
-      "mvp_rank": 224,
-      "wpa": 27.0,
+      "mvp_score": 40.1,
+      "mvp_rank": 237,
+      "wpa": 5.4,
       "consistency": 0.479,
       "clutch_eff": 0.064
     },
@@ -13492,8 +13492,8 @@
       "fg_pct": 45.4,
       "fg3_pct": 45.2,
       "ft_pct": 100.0,
-      "mvp_score": 42.9,
-      "mvp_rank": 203,
+      "mvp_score": 43.2,
+      "mvp_rank": 200,
       "wpa": 0.0,
       "consistency": 0.412,
       "clutch_eff": 0.093
@@ -13514,8 +13514,8 @@
       "fg_pct": 47.8,
       "fg3_pct": 42.1,
       "ft_pct": 75.0,
-      "mvp_score": 40.2,
-      "mvp_rank": 239,
+      "mvp_score": 40.5,
+      "mvp_rank": 232,
       "wpa": 0.0,
       "consistency": 0.491,
       "clutch_eff": 0.0
@@ -13536,9 +13536,9 @@
       "fg_pct": 49.6,
       "fg3_pct": 50.0,
       "ft_pct": 54.2,
-      "mvp_score": 39.9,
-      "mvp_rank": 243,
-      "wpa": 52.7,
+      "mvp_score": 40.2,
+      "mvp_rank": 234,
+      "wpa": 43.8,
       "consistency": 0.461,
       "clutch_eff": 0.066
     },
@@ -13558,8 +13558,8 @@
       "fg_pct": 60.7,
       "fg3_pct": 0.0,
       "ft_pct": 69.2,
-      "mvp_score": 42.4,
-      "mvp_rank": 212,
+      "mvp_score": 42.7,
+      "mvp_rank": 205,
       "wpa": 0.0,
       "consistency": 0.422,
       "clutch_eff": 0.0
@@ -13580,8 +13580,8 @@
       "fg_pct": 46.3,
       "fg3_pct": 45.1,
       "ft_pct": 76.2,
-      "mvp_score": 42.5,
-      "mvp_rank": 208,
+      "mvp_score": 43.4,
+      "mvp_rank": 199,
       "wpa": 34.8,
       "consistency": 0.507,
       "clutch_eff": 0.102
@@ -13602,9 +13602,9 @@
       "fg_pct": 40.5,
       "fg3_pct": 41.0,
       "ft_pct": 66.7,
-      "mvp_score": 39.0,
-      "mvp_rank": 253,
-      "wpa": 57.7,
+      "mvp_score": 39.4,
+      "mvp_rank": 247,
+      "wpa": 49.2,
       "consistency": 0.414,
       "clutch_eff": 0.0
     },
@@ -13624,9 +13624,9 @@
       "fg_pct": 37.6,
       "fg3_pct": 33.3,
       "ft_pct": 77.8,
-      "mvp_score": 41.9,
-      "mvp_rank": 220,
-      "wpa": 26.8,
+      "mvp_score": 40.0,
+      "mvp_rank": 238,
+      "wpa": 0.0,
       "consistency": 0.472,
       "clutch_eff": 0.059
     },
@@ -13646,9 +13646,9 @@
       "fg_pct": 36.6,
       "fg3_pct": 29.7,
       "ft_pct": 73.3,
-      "mvp_score": 49.6,
-      "mvp_rank": 144,
-      "wpa": 57.8,
+      "mvp_score": 50.0,
+      "mvp_rank": 139,
+      "wpa": 49.8,
       "consistency": 0.45,
       "clutch_eff": 0.158
     },
@@ -13668,9 +13668,9 @@
       "fg_pct": 38.5,
       "fg3_pct": 39.8,
       "ft_pct": 75.0,
-      "mvp_score": 42.7,
-      "mvp_rank": 206,
-      "wpa": 43.2,
+      "mvp_score": 43.7,
+      "mvp_rank": 197,
+      "wpa": 43.0,
       "consistency": 0.473,
       "clutch_eff": 0.047
     },
@@ -13690,9 +13690,9 @@
       "fg_pct": 36.4,
       "fg3_pct": 25.0,
       "ft_pct": 80.0,
-      "mvp_score": 40.2,
-      "mvp_rank": 238,
-      "wpa": 14.9,
+      "mvp_score": 39.3,
+      "mvp_rank": 251,
+      "wpa": 0.0,
       "consistency": 0.316,
       "clutch_eff": 0.0
     },
@@ -13712,8 +13712,8 @@
       "fg_pct": 61.4,
       "fg3_pct": 0.0,
       "ft_pct": 88.9,
-      "mvp_score": 44.5,
-      "mvp_rank": 192,
+      "mvp_score": 44.8,
+      "mvp_rank": 186,
       "wpa": 0.0,
       "consistency": 0.475,
       "clutch_eff": 0.0
@@ -13734,8 +13734,8 @@
       "fg_pct": 40.9,
       "fg3_pct": 29.5,
       "ft_pct": 75.6,
-      "mvp_score": 36.7,
-      "mvp_rank": 272,
+      "mvp_score": 37.0,
+      "mvp_rank": 270,
       "wpa": 0.0,
       "consistency": 0.348,
       "clutch_eff": 0.092
@@ -13756,8 +13756,8 @@
       "fg_pct": 51.0,
       "fg3_pct": 48.1,
       "ft_pct": 94.7,
-      "mvp_score": 35.0,
-      "mvp_rank": 294,
+      "mvp_score": 35.3,
+      "mvp_rank": 292,
       "wpa": 0.0,
       "consistency": 0.328,
       "clutch_eff": 0.0
@@ -13778,8 +13778,8 @@
       "fg_pct": 60.3,
       "fg3_pct": 0.0,
       "ft_pct": 74.1,
-      "mvp_score": 41.5,
-      "mvp_rank": 223,
+      "mvp_score": 41.8,
+      "mvp_rank": 218,
       "wpa": 0.0,
       "consistency": 0.401,
       "clutch_eff": 0.0
@@ -13800,9 +13800,9 @@
       "fg_pct": 41.4,
       "fg3_pct": 32.8,
       "ft_pct": 72.2,
-      "mvp_score": 38.9,
-      "mvp_rank": 254,
-      "wpa": 53.7,
+      "mvp_score": 37.3,
+      "mvp_rank": 266,
+      "wpa": 24.8,
       "consistency": 0.437,
       "clutch_eff": 0.047
     },
@@ -13822,8 +13822,8 @@
       "fg_pct": 40.7,
       "fg3_pct": 31.6,
       "ft_pct": 88.2,
-      "mvp_score": 40.4,
-      "mvp_rank": 236,
+      "mvp_score": 40.7,
+      "mvp_rank": 229,
       "wpa": 0.0,
       "consistency": 0.386,
       "clutch_eff": 0.19
@@ -13844,8 +13844,8 @@
       "fg_pct": 46.4,
       "fg3_pct": 46.9,
       "ft_pct": 80.0,
-      "mvp_score": 43.4,
-      "mvp_rank": 199,
+      "mvp_score": 43.7,
+      "mvp_rank": 198,
       "wpa": 0.0,
       "consistency": 0.491,
       "clutch_eff": 0.0
@@ -13866,8 +13866,8 @@
       "fg_pct": 45.5,
       "fg3_pct": 32.6,
       "ft_pct": 76.9,
-      "mvp_score": 42.6,
-      "mvp_rank": 207,
+      "mvp_score": 42.9,
+      "mvp_rank": 202,
       "wpa": 0.0,
       "consistency": 0.361,
       "clutch_eff": 0.067
@@ -13888,9 +13888,9 @@
       "fg_pct": 45.2,
       "fg3_pct": 34.5,
       "ft_pct": 85.2,
-      "mvp_score": 46.0,
+      "mvp_score": 45.9,
       "mvp_rank": 177,
-      "wpa": 90.8,
+      "wpa": 70.7,
       "consistency": 0.435,
       "clutch_eff": 0.02
     },
@@ -13910,8 +13910,8 @@
       "fg_pct": 51.1,
       "fg3_pct": 0.0,
       "ft_pct": 76.7,
-      "mvp_score": 41.7,
-      "mvp_rank": 221,
+      "mvp_score": 42.0,
+      "mvp_rank": 216,
       "wpa": 0.0,
       "consistency": 0.283,
       "clutch_eff": 0.208
@@ -13932,8 +13932,8 @@
       "fg_pct": 40.4,
       "fg3_pct": 25.0,
       "ft_pct": 81.0,
-      "mvp_score": 39.7,
-      "mvp_rank": 244,
+      "mvp_score": 40.0,
+      "mvp_rank": 239,
       "wpa": 0.0,
       "consistency": 0.36,
       "clutch_eff": 0.083
@@ -13954,8 +13954,8 @@
       "fg_pct": 55.3,
       "fg3_pct": 41.7,
       "ft_pct": 72.7,
-      "mvp_score": 43.1,
-      "mvp_rank": 202,
+      "mvp_score": 44.0,
+      "mvp_rank": 195,
       "wpa": 40.4,
       "consistency": 0.443,
       "clutch_eff": 0.086
@@ -13976,8 +13976,8 @@
       "fg_pct": 36.1,
       "fg3_pct": 29.7,
       "ft_pct": 93.3,
-      "mvp_score": 41.0,
-      "mvp_rank": 230,
+      "mvp_score": 41.6,
+      "mvp_rank": 220,
       "wpa": 16.3,
       "consistency": 0.329,
       "clutch_eff": 0.0
@@ -13998,9 +13998,9 @@
       "fg_pct": 35.7,
       "fg3_pct": 32.7,
       "ft_pct": 80.0,
-      "mvp_score": 37.8,
-      "mvp_rank": 264,
-      "wpa": 49.6,
+      "mvp_score": 34.0,
+      "mvp_rank": 304,
+      "wpa": 0.0,
       "consistency": 0.346,
       "clutch_eff": 0.114
     },
@@ -14020,7 +14020,7 @@
       "fg_pct": 34.0,
       "fg3_pct": 34.4,
       "ft_pct": 100.0,
-      "mvp_score": 36.5,
+      "mvp_score": 36.8,
       "mvp_rank": 276,
       "wpa": 0.0,
       "consistency": 0.185,
@@ -14042,8 +14042,8 @@
       "fg_pct": 35.0,
       "fg3_pct": 18.2,
       "ft_pct": 84.6,
-      "mvp_score": 35.8,
-      "mvp_rank": 289,
+      "mvp_score": 36.1,
+      "mvp_rank": 287,
       "wpa": 0.0,
       "consistency": 0.42,
       "clutch_eff": 0.0
@@ -14064,9 +14064,9 @@
       "fg_pct": 37.1,
       "fg3_pct": 32.1,
       "ft_pct": 79.4,
-      "mvp_score": 42.8,
-      "mvp_rank": 204,
-      "wpa": 50.0,
+      "mvp_score": 39.0,
+      "mvp_rank": 254,
+      "wpa": 0.0,
       "consistency": 0.32,
       "clutch_eff": 0.114
     },
@@ -14086,8 +14086,8 @@
       "fg_pct": 57.1,
       "fg3_pct": 45.8,
       "ft_pct": 62.5,
-      "mvp_score": 40.4,
-      "mvp_rank": 235,
+      "mvp_score": 40.7,
+      "mvp_rank": 228,
       "wpa": 0.0,
       "consistency": 0.432,
       "clutch_eff": 0.086
@@ -14108,8 +14108,8 @@
       "fg_pct": 60.5,
       "fg3_pct": 41.7,
       "ft_pct": 80.0,
-      "mvp_score": 38.5,
-      "mvp_rank": 257,
+      "mvp_score": 38.8,
+      "mvp_rank": 256,
       "wpa": 0.0,
       "consistency": 0.37,
       "clutch_eff": 0.181
@@ -14130,8 +14130,8 @@
       "fg_pct": 39.1,
       "fg3_pct": 36.4,
       "ft_pct": 55.6,
-      "mvp_score": 39.3,
-      "mvp_rank": 249,
+      "mvp_score": 40.2,
+      "mvp_rank": 235,
       "wpa": 37.1,
       "consistency": 0.347,
       "clutch_eff": 0.0
@@ -14152,9 +14152,9 @@
       "fg_pct": 39.4,
       "fg3_pct": 29.1,
       "ft_pct": 76.5,
-      "mvp_score": 44.7,
-      "mvp_rank": 191,
-      "wpa": 59.7,
+      "mvp_score": 40.1,
+      "mvp_rank": 236,
+      "wpa": 0.0,
       "consistency": 0.428,
       "clutch_eff": 0.0
     },
@@ -14174,8 +14174,8 @@
       "fg_pct": 41.4,
       "fg3_pct": 50.0,
       "ft_pct": 80.0,
-      "mvp_score": 38.9,
-      "mvp_rank": 255,
+      "mvp_score": 39.2,
+      "mvp_rank": 253,
       "wpa": 0.0,
       "consistency": 0.275,
       "clutch_eff": 0.084
@@ -14196,7 +14196,7 @@
       "fg_pct": 62.0,
       "fg3_pct": 33.3,
       "ft_pct": 50.0,
-      "mvp_score": 36.5,
+      "mvp_score": 36.8,
       "mvp_rank": 275,
       "wpa": 0.0,
       "consistency": 0.36,
@@ -14218,8 +14218,8 @@
       "fg_pct": 28.3,
       "fg3_pct": 16.0,
       "ft_pct": 84.2,
-      "mvp_score": 39.1,
-      "mvp_rank": 251,
+      "mvp_score": 39.4,
+      "mvp_rank": 248,
       "wpa": 0.0,
       "consistency": 0.264,
       "clutch_eff": 0.087
@@ -14240,9 +14240,9 @@
       "fg_pct": 47.6,
       "fg3_pct": 10.0,
       "ft_pct": 38.5,
-      "mvp_score": 42.5,
-      "mvp_rank": 210,
-      "wpa": 28.2,
+      "mvp_score": 40.5,
+      "mvp_rank": 231,
+      "wpa": 0.0,
       "consistency": 0.45,
       "clutch_eff": 0.03
     },
@@ -14262,8 +14262,8 @@
       "fg_pct": 36.8,
       "fg3_pct": 33.8,
       "ft_pct": 76.9,
-      "mvp_score": 41.4,
-      "mvp_rank": 226,
+      "mvp_score": 41.7,
+      "mvp_rank": 219,
       "wpa": 0.0,
       "consistency": 0.39,
       "clutch_eff": 0.014
@@ -14284,8 +14284,8 @@
       "fg_pct": 41.8,
       "fg3_pct": 30.0,
       "ft_pct": 100.0,
-      "mvp_score": 36.0,
-      "mvp_rank": 283,
+      "mvp_score": 36.3,
+      "mvp_rank": 282,
       "wpa": 0.0,
       "consistency": 0.318,
       "clutch_eff": 0.013
@@ -14306,8 +14306,8 @@
       "fg_pct": 37.2,
       "fg3_pct": 38.0,
       "ft_pct": 66.0,
-      "mvp_score": 37.8,
-      "mvp_rank": 263,
+      "mvp_score": 38.1,
+      "mvp_rank": 261,
       "wpa": 0.0,
       "consistency": 0.372,
       "clutch_eff": 0.015
@@ -14328,8 +14328,8 @@
       "fg_pct": 60.9,
       "fg3_pct": 33.3,
       "ft_pct": 66.7,
-      "mvp_score": 39.4,
-      "mvp_rank": 247,
+      "mvp_score": 39.7,
+      "mvp_rank": 244,
       "wpa": 0.0,
       "consistency": 0.361,
       "clutch_eff": 0.0
@@ -14350,7 +14350,7 @@
       "fg_pct": 39.3,
       "fg3_pct": 34.9,
       "ft_pct": 75.0,
-      "mvp_score": 36.5,
+      "mvp_score": 36.8,
       "mvp_rank": 274,
       "wpa": 0.0,
       "consistency": 0.29,
@@ -14372,9 +14372,9 @@
       "fg_pct": 38.6,
       "fg3_pct": 35.0,
       "ft_pct": 84.2,
-      "mvp_score": 41.6,
-      "mvp_rank": 222,
-      "wpa": 26.6,
+      "mvp_score": 39.8,
+      "mvp_rank": 242,
+      "wpa": 0.0,
       "consistency": 0.297,
       "clutch_eff": 0.018
     },
@@ -14394,9 +14394,9 @@
       "fg_pct": 37.8,
       "fg3_pct": 22.7,
       "ft_pct": 0.0,
-      "mvp_score": 36.4,
-      "mvp_rank": 280,
-      "wpa": 18.6,
+      "mvp_score": 35.2,
+      "mvp_rank": 293,
+      "wpa": 0.0,
       "consistency": 0.342,
       "clutch_eff": 0.0
     },
@@ -14416,9 +14416,9 @@
       "fg_pct": 61.5,
       "fg3_pct": 0.0,
       "ft_pct": 43.8,
-      "mvp_score": 37.3,
-      "mvp_rank": 267,
-      "wpa": 17.5,
+      "mvp_score": 37.4,
+      "mvp_rank": 264,
+      "wpa": 12.7,
       "consistency": 0.393,
       "clutch_eff": 0.0
     },
@@ -14438,8 +14438,8 @@
       "fg_pct": 38.1,
       "fg3_pct": 36.5,
       "ft_pct": 84.2,
-      "mvp_score": 42.4,
-      "mvp_rank": 213,
+      "mvp_score": 42.7,
+      "mvp_rank": 207,
       "wpa": 0.0,
       "consistency": 0.368,
       "clutch_eff": 0.022
@@ -14460,8 +14460,8 @@
       "fg_pct": 58.3,
       "fg3_pct": 0.0,
       "ft_pct": 50.0,
-      "mvp_score": 39.0,
-      "mvp_rank": 252,
+      "mvp_score": 39.3,
+      "mvp_rank": 250,
       "wpa": 0.0,
       "consistency": 0.233,
       "clutch_eff": 0.222
@@ -14482,9 +14482,9 @@
       "fg_pct": 42.5,
       "fg3_pct": 33.3,
       "ft_pct": 64.3,
-      "mvp_score": 37.9,
-      "mvp_rank": 262,
-      "wpa": 13.4,
+      "mvp_score": 37.1,
+      "mvp_rank": 269,
+      "wpa": 0.0,
       "consistency": 0.307,
       "clutch_eff": 0.0
     },
@@ -14504,9 +14504,9 @@
       "fg_pct": 50.0,
       "fg3_pct": 36.4,
       "ft_pct": 53.8,
-      "mvp_score": 42.5,
-      "mvp_rank": 211,
-      "wpa": 6.7,
+      "mvp_score": 42.2,
+      "mvp_rank": 215,
+      "wpa": 0.0,
       "consistency": 0.37,
       "clutch_eff": 0.172
     },
@@ -14526,9 +14526,9 @@
       "fg_pct": 35.6,
       "fg3_pct": 31.1,
       "ft_pct": 28.6,
-      "mvp_score": 40.1,
-      "mvp_rank": 240,
-      "wpa": -12.1,
+      "mvp_score": 41.4,
+      "mvp_rank": 222,
+      "wpa": 0.0,
       "consistency": 0.409,
       "clutch_eff": 0.0
     },
@@ -14548,7 +14548,7 @@
       "fg_pct": 31.6,
       "fg3_pct": 30.0,
       "ft_pct": 82.4,
-      "mvp_score": 36.4,
+      "mvp_score": 36.7,
       "mvp_rank": 278,
       "wpa": 0.0,
       "consistency": 0.302,
@@ -14570,8 +14570,8 @@
       "fg_pct": 61.5,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 34.6,
-      "mvp_rank": 296,
+      "mvp_score": 34.9,
+      "mvp_rank": 295,
       "wpa": 0.0,
       "consistency": 0.354,
       "clutch_eff": 0.0
@@ -14592,8 +14592,8 @@
       "fg_pct": 33.3,
       "fg3_pct": 31.0,
       "ft_pct": 100.0,
-      "mvp_score": 48.7,
-      "mvp_rank": 155,
+      "mvp_score": 50.5,
+      "mvp_rank": 137,
       "wpa": 92.9,
       "consistency": 0.253,
       "clutch_eff": 0.395
@@ -14614,7 +14614,7 @@
       "fg_pct": 40.9,
       "fg3_pct": 47.1,
       "ft_pct": 100.0,
-      "mvp_score": 33.2,
+      "mvp_score": 33.5,
       "mvp_rank": 308,
       "wpa": 0.0,
       "consistency": 0.294,
@@ -14636,9 +14636,9 @@
       "fg_pct": 29.5,
       "fg3_pct": 26.8,
       "ft_pct": 66.7,
-      "mvp_score": 43.8,
-      "mvp_rank": 198,
-      "wpa": 44.7,
+      "mvp_score": 44.3,
+      "mvp_rank": 192,
+      "wpa": 38.8,
       "consistency": 0.378,
       "clutch_eff": 0.0
     },
@@ -14658,8 +14658,8 @@
       "fg_pct": 53.3,
       "fg3_pct": 60.0,
       "ft_pct": 100.0,
-      "mvp_score": 36.6,
-      "mvp_rank": 273,
+      "mvp_score": 36.9,
+      "mvp_rank": 272,
       "wpa": 0.0,
       "consistency": 0.234,
       "clutch_eff": 0.0
@@ -14680,8 +14680,8 @@
       "fg_pct": 37.8,
       "fg3_pct": 28.6,
       "ft_pct": 50.0,
-      "mvp_score": 40.0,
-      "mvp_rank": 242,
+      "mvp_score": 40.3,
+      "mvp_rank": 233,
       "wpa": 0.0,
       "consistency": 0.36,
       "clutch_eff": 0.083
@@ -14702,7 +14702,7 @@
       "fg_pct": 31.8,
       "fg3_pct": 8.3,
       "ft_pct": 68.4,
-      "mvp_score": 31.8,
+      "mvp_score": 32.1,
       "mvp_rank": 311,
       "wpa": 0.0,
       "consistency": 0.308,
@@ -14724,8 +14724,8 @@
       "fg_pct": 34.9,
       "fg3_pct": 17.2,
       "ft_pct": 100.0,
-      "mvp_score": 34.6,
-      "mvp_rank": 297,
+      "mvp_score": 34.9,
+      "mvp_rank": 296,
       "wpa": 0.0,
       "consistency": 0.341,
       "clutch_eff": 0.0
@@ -14746,8 +14746,8 @@
       "fg_pct": 23.5,
       "fg3_pct": 20.8,
       "ft_pct": 88.9,
-      "mvp_score": 41.3,
-      "mvp_rank": 227,
+      "mvp_score": 42.2,
+      "mvp_rank": 214,
       "wpa": 35.9,
       "consistency": 0.38,
       "clutch_eff": 0.138
@@ -14768,9 +14768,9 @@
       "fg_pct": 32.4,
       "fg3_pct": 32.0,
       "ft_pct": 0.0,
-      "mvp_score": 35.9,
-      "mvp_rank": 285,
-      "wpa": -9.2,
+      "mvp_score": 37.0,
+      "mvp_rank": 271,
+      "wpa": 0.0,
       "consistency": 0.287,
       "clutch_eff": 0.0
     },
@@ -14790,8 +14790,8 @@
       "fg_pct": 66.7,
       "fg3_pct": 66.7,
       "ft_pct": 100.0,
-      "mvp_score": 35.2,
-      "mvp_rank": 291,
+      "mvp_score": 35.5,
+      "mvp_rank": 289,
       "wpa": 0.0,
       "consistency": 0.302,
       "clutch_eff": 0.0
@@ -14812,7 +14812,7 @@
       "fg_pct": 37.5,
       "fg3_pct": 0.0,
       "ft_pct": 75.0,
-      "mvp_score": 33.6,
+      "mvp_score": 33.9,
       "mvp_rank": 305,
       "wpa": 0.0,
       "consistency": 0.225,
@@ -14834,7 +14834,7 @@
       "fg_pct": 50.0,
       "fg3_pct": 45.5,
       "ft_pct": 50.0,
-      "mvp_score": 30.6,
+      "mvp_score": 30.9,
       "mvp_rank": 316,
       "wpa": 0.0,
       "consistency": 0.244,
@@ -14856,8 +14856,8 @@
       "fg_pct": 40.0,
       "fg3_pct": 31.2,
       "ft_pct": 81.2,
-      "mvp_score": 37.7,
-      "mvp_rank": 265,
+      "mvp_score": 38.0,
+      "mvp_rank": 262,
       "wpa": 0.0,
       "consistency": 0.253,
       "clutch_eff": 0.0
@@ -14878,8 +14878,8 @@
       "fg_pct": 17.6,
       "fg3_pct": 0.0,
       "ft_pct": 58.3,
-      "mvp_score": 39.3,
-      "mvp_rank": 248,
+      "mvp_score": 39.6,
+      "mvp_rank": 245,
       "wpa": 0.0,
       "consistency": 0.242,
       "clutch_eff": 0.072
@@ -14900,7 +14900,7 @@
       "fg_pct": 44.0,
       "fg3_pct": 23.1,
       "ft_pct": 33.3,
-      "mvp_score": 36.4,
+      "mvp_score": 36.7,
       "mvp_rank": 279,
       "wpa": 0.0,
       "consistency": 0.267,
@@ -14922,7 +14922,7 @@
       "fg_pct": 47.1,
       "fg3_pct": 0.0,
       "ft_pct": 100.0,
-      "mvp_score": 31.6,
+      "mvp_score": 31.9,
       "mvp_rank": 312,
       "wpa": 0.0,
       "consistency": 0.277,
@@ -14944,9 +14944,9 @@
       "fg_pct": 33.3,
       "fg3_pct": 32.0,
       "ft_pct": 50.0,
-      "mvp_score": 37.7,
-      "mvp_rank": 266,
-      "wpa": 13.8,
+      "mvp_score": 36.9,
+      "mvp_rank": 273,
+      "wpa": 0.0,
       "consistency": 0.138,
       "clutch_eff": 0.0
     },
@@ -14966,8 +14966,8 @@
       "fg_pct": 36.0,
       "fg3_pct": 43.8,
       "ft_pct": 100.0,
-      "mvp_score": 35.9,
-      "mvp_rank": 286,
+      "mvp_score": 36.2,
+      "mvp_rank": 284,
       "wpa": 0.0,
       "consistency": 0.154,
       "clutch_eff": 0.0
@@ -14988,8 +14988,8 @@
       "fg_pct": 40.0,
       "fg3_pct": 40.0,
       "ft_pct": 100.0,
-      "mvp_score": 35.9,
-      "mvp_rank": 287,
+      "mvp_score": 36.2,
+      "mvp_rank": 285,
       "wpa": 0.0,
       "consistency": 0.118,
       "clutch_eff": 0.0
@@ -15010,8 +15010,8 @@
       "fg_pct": 23.3,
       "fg3_pct": 25.0,
       "ft_pct": 20.0,
-      "mvp_score": 34.5,
-      "mvp_rank": 298,
+      "mvp_score": 34.8,
+      "mvp_rank": 297,
       "wpa": 0.0,
       "consistency": 0.088,
       "clutch_eff": 0.0
@@ -15032,7 +15032,7 @@
       "fg_pct": 57.1,
       "fg3_pct": 50.0,
       "ft_pct": 57.1,
-      "mvp_score": 32.7,
+      "mvp_score": 33.0,
       "mvp_rank": 309,
       "wpa": 0.0,
       "consistency": 0.18,
@@ -15054,8 +15054,8 @@
       "fg_pct": 33.3,
       "fg3_pct": 33.3,
       "ft_pct": 57.1,
-      "mvp_score": 37.2,
-      "mvp_rank": 268,
+      "mvp_score": 37.5,
+      "mvp_rank": 263,
       "wpa": 0.0,
       "consistency": 0.344,
       "clutch_eff": 0.0
@@ -15076,8 +15076,8 @@
       "fg_pct": 35.0,
       "fg3_pct": 20.0,
       "ft_pct": 33.3,
-      "mvp_score": 33.8,
-      "mvp_rank": 304,
+      "mvp_score": 34.1,
+      "mvp_rank": 303,
       "wpa": 0.0,
       "consistency": 0.215,
       "clutch_eff": 0.0
@@ -15098,8 +15098,8 @@
       "fg_pct": 28.6,
       "fg3_pct": 0.0,
       "ft_pct": 50.0,
-      "mvp_score": 34.6,
-      "mvp_rank": 295,
+      "mvp_score": 34.9,
+      "mvp_rank": 294,
       "wpa": 0.0,
       "consistency": 0.122,
       "clutch_eff": 0.0
@@ -15120,8 +15120,8 @@
       "fg_pct": 33.3,
       "fg3_pct": 31.2,
       "ft_pct": 0.0,
-      "mvp_score": 34.2,
-      "mvp_rank": 302,
+      "mvp_score": 34.5,
+      "mvp_rank": 301,
       "wpa": 0.0,
       "consistency": 0.044,
       "clutch_eff": 0.0
@@ -15142,8 +15142,8 @@
       "fg_pct": 13.8,
       "fg3_pct": 13.2,
       "ft_pct": 75.0,
-      "mvp_score": 27.4,
-      "mvp_rank": 323,
+      "mvp_score": 27.7,
+      "mvp_rank": 322,
       "wpa": 0.0,
       "consistency": 0.093,
       "clutch_eff": 0.0
@@ -15164,7 +15164,7 @@
       "fg_pct": 46.7,
       "fg3_pct": 33.3,
       "ft_pct": 50.0,
-      "mvp_score": 36.4,
+      "mvp_score": 36.7,
       "mvp_rank": 277,
       "wpa": 0.0,
       "consistency": 0.114,
@@ -15186,7 +15186,7 @@
       "fg_pct": 37.5,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 30.5,
+      "mvp_score": 30.8,
       "mvp_rank": 317,
       "wpa": 0.0,
       "consistency": 0.1,
@@ -15208,8 +15208,8 @@
       "fg_pct": 0.0,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 36.8,
-      "mvp_rank": 271,
+      "mvp_score": 37.1,
+      "mvp_rank": 268,
       "wpa": 0.0,
       "consistency": 0.216,
       "clutch_eff": 0.0
@@ -15230,8 +15230,8 @@
       "fg_pct": 23.8,
       "fg3_pct": 21.4,
       "ft_pct": 80.0,
-      "mvp_score": 36.2,
-      "mvp_rank": 281,
+      "mvp_score": 36.5,
+      "mvp_rank": 280,
       "wpa": 0.0,
       "consistency": 0.098,
       "clutch_eff": 0.0
@@ -15252,9 +15252,9 @@
       "fg_pct": 20.4,
       "fg3_pct": 16.7,
       "ft_pct": 86.7,
-      "mvp_score": 28.0,
-      "mvp_rank": 322,
-      "wpa": 10.4,
+      "mvp_score": 27.5,
+      "mvp_rank": 323,
+      "wpa": 0.0,
       "consistency": 0.068,
       "clutch_eff": 0.0
     },
@@ -15274,7 +15274,7 @@
       "fg_pct": 38.5,
       "fg3_pct": 28.6,
       "ft_pct": 0.0,
-      "mvp_score": 31.1,
+      "mvp_score": 31.4,
       "mvp_rank": 315,
       "wpa": 0.0,
       "consistency": 0.04,
@@ -15296,8 +15296,8 @@
       "fg_pct": 29.4,
       "fg3_pct": 30.8,
       "ft_pct": 100.0,
-      "mvp_score": 35.2,
-      "mvp_rank": 292,
+      "mvp_score": 35.5,
+      "mvp_rank": 290,
       "wpa": 0.0,
       "consistency": 0.043,
       "clutch_eff": 0.0
@@ -15318,8 +15318,8 @@
       "fg_pct": 50.0,
       "fg3_pct": 100.0,
       "ft_pct": 0.0,
-      "mvp_score": 35.1,
-      "mvp_rank": 293,
+      "mvp_score": 35.4,
+      "mvp_rank": 291,
       "wpa": 0.0,
       "consistency": 0.109,
       "clutch_eff": 0.0
@@ -15340,8 +15340,8 @@
       "fg_pct": 16.7,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 36.2,
-      "mvp_rank": 282,
+      "mvp_score": 36.5,
+      "mvp_rank": 281,
       "wpa": 0.0,
       "consistency": 0.057,
       "clutch_eff": 0.0
@@ -15362,7 +15362,7 @@
       "fg_pct": 0.0,
       "fg3_pct": 0.0,
       "ft_pct": 50.0,
-      "mvp_score": 31.4,
+      "mvp_score": 31.7,
       "mvp_rank": 313,
       "wpa": 0.0,
       "consistency": 0.137,
@@ -15384,7 +15384,7 @@
       "fg_pct": 66.7,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 31.3,
+      "mvp_score": 31.6,
       "mvp_rank": 314,
       "wpa": 0.0,
       "consistency": 0.075,
@@ -15406,7 +15406,7 @@
       "fg_pct": 21.4,
       "fg3_pct": 12.5,
       "ft_pct": 0.0,
-      "mvp_score": 28.7,
+      "mvp_score": 29.0,
       "mvp_rank": 320,
       "wpa": 0.0,
       "consistency": 0.037,
@@ -15428,7 +15428,7 @@
       "fg_pct": 40.0,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 32.2,
+      "mvp_score": 32.5,
       "mvp_rank": 310,
       "wpa": 0.0,
       "consistency": 0.067,
@@ -15450,7 +15450,7 @@
       "fg_pct": 0.0,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 30.4,
+      "mvp_score": 30.7,
       "mvp_rank": 318,
       "wpa": 0.0,
       "consistency": 0.091,
@@ -15472,7 +15472,7 @@
       "fg_pct": 33.3,
       "fg3_pct": 0.0,
       "ft_pct": 0.0,
-      "mvp_score": 28.6,
+      "mvp_score": 28.9,
       "mvp_rank": 321,
       "wpa": 0.0,
       "consistency": 0.051,
@@ -18581,1208 +18581,1145 @@
       "rank": 2
     },
     {
-      "player": "NWORA, JORDAN",
-      "team": "RED",
-      "wpa": 156.01,
-      "plays": 174,
-      "rank": 3
-    },
-    {
       "player": "BALDWIN IV, WADE",
       "team": "ULK",
       "wpa": 153.07,
       "plays": 147,
-      "rank": 4
-    },
-    {
-      "player": "WILLIAMS-GOSS, NIGEL",
-      "team": "ZAL",
-      "wpa": 150.6,
-      "plays": 131,
-      "rank": 5
-    },
-    {
-      "player": "MONEKE, CHIMA",
-      "team": "RED",
-      "wpa": 143.56,
-      "plays": 162,
-      "rank": 6
+      "rank": 3
     },
     {
       "player": "JAMES, MIKE",
       "team": "MCO",
       "wpa": 141.13,
       "plays": 114,
-      "rank": 7
+      "rank": 4
     },
     {
       "player": "FORREST, TRENT",
       "team": "BAS",
       "wpa": 139.31,
       "plays": 137,
-      "rank": 8
+      "rank": 5
     },
     {
       "player": "VEZENKOV, SASHA",
       "team": "OLY",
       "wpa": 138.98,
       "plays": 131,
-      "rank": 9
+      "rank": 6
     },
     {
       "player": "CLYBURN, WILL",
       "team": "BAR",
       "wpa": 134.68,
       "plays": 112,
-      "rank": 10
+      "rank": 7
     },
     {
       "player": "HIFI, NADIR",
       "team": "PRS",
       "wpa": 131.05,
       "plays": 157,
-      "rank": 11
-    },
-    {
-      "player": "MILLER-MCINTYRE, CODI",
-      "team": "RED",
-      "wpa": 129.93,
-      "plays": 141,
-      "rank": 12
+      "rank": 8
     },
     {
       "player": "BLAKENEY, ANTONIO",
       "team": "HTA",
       "wpa": 125.58,
       "plays": 87,
-      "rank": 13
-    },
-    {
-      "player": "FRANCISCO, SYLVAIN",
-      "team": "ZAL",
-      "wpa": 123.83,
-      "plays": 178,
-      "rank": 14
+      "rank": 9
     },
     {
       "player": "OSMANI, ERCAN",
       "team": "IST",
       "wpa": 123.7,
       "plays": 114,
-      "rank": 15
+      "rank": 10
     },
     {
       "player": "MORGAN, MATTHEW",
       "team": "VIR",
       "wpa": 122.55,
       "plays": 92,
-      "rank": 16
+      "rank": 11
+    },
+    {
+      "player": "WILLIAMS-GOSS, NIGEL",
+      "team": "ZAL",
+      "wpa": 122.37,
+      "plays": 85,
+      "rank": 12
     },
     {
       "player": "LOYD, JORDAN",
       "team": "IST",
       "wpa": 122.04,
       "plays": 91,
-      "rank": 17
+      "rank": 13
     },
     {
       "player": "MOORE, OMARI",
       "team": "PAM",
       "wpa": 119.61,
       "plays": 136,
-      "rank": 18
+      "rank": 14
+    },
+    {
+      "player": "MILLER-MCINTYRE, CODI",
+      "team": "RED",
+      "wpa": 119.23,
+      "plays": 110,
+      "rank": 15
     },
     {
       "player": "HORTON TUCKER, TALEN",
       "team": "ULK",
       "wpa": 118.25,
       "plays": 158,
-      "rank": 19
-    },
-    {
-      "player": "BROOKS, ARMONI",
-      "team": "MIL",
-      "wpa": 115.53,
-      "plays": 99,
-      "rank": 20
+      "rank": 16
     },
     {
       "player": "PUNTER, KEVIN",
       "team": "BAR",
       "wpa": 114.84,
       "plays": 114,
-      "rank": 21
+      "rank": 17
     },
     {
-      "player": "WRIGHT, MOSES",
-      "team": "ZAL",
-      "wpa": 113.62,
+      "player": "MONEKE, CHIMA",
+      "team": "RED",
+      "wpa": 114.55,
       "plays": 130,
-      "rank": 22
+      "rank": 18
     },
     {
       "player": "DORSEY, TYLER",
       "team": "OLY",
       "wpa": 110.84,
       "plays": 112,
-      "rank": 23
-    },
-    {
-      "player": "SHIELDS, SHAVON",
-      "team": "MIL",
-      "wpa": 107.69,
-      "plays": 116,
-      "rank": 24
-    },
-    {
-      "player": "OBST, ANDREAS",
-      "team": "MUN",
-      "wpa": 106.2,
-      "plays": 116,
-      "rank": 25
+      "rank": 19
     },
     {
       "player": "HERNANGOMEZ, JUANCHO",
       "team": "PAN",
       "wpa": 105.66,
       "plays": 98,
-      "rank": 26
+      "rank": 20
     },
     {
       "player": "BROWN, STERLING",
       "team": "PAR",
       "wpa": 103.96,
       "plays": 95,
-      "rank": 27
+      "rank": 21
     },
     {
       "player": "EDWARDS, CARSEN",
       "team": "VIR",
       "wpa": 103.16,
       "plays": 110,
-      "rank": 28
+      "rank": 22
     },
     {
       "player": "DIALLO, HAMIDOU",
       "team": "BAS",
       "wpa": 102.94,
       "plays": 111,
-      "rank": 29
+      "rank": 23
     },
     {
       "player": "THEIS, DANIEL",
       "team": "MCO",
       "wpa": 101.98,
       "plays": 91,
-      "rank": 30
+      "rank": 24
     },
     {
       "player": "HOWARD, MARKUS",
       "team": "BAS",
       "wpa": 101.16,
       "plays": 88,
-      "rank": 31
+      "rank": 25
     },
     {
       "player": "HOARD, JAYLEN",
       "team": "TEL",
       "wpa": 99.59,
       "plays": 96,
-      "rank": 32
+      "rank": 26
     },
     {
       "player": "OTURU, DAN",
       "team": "HTA",
       "wpa": 99.37,
       "plays": 95,
-      "rank": 33
+      "rank": 27
+    },
+    {
+      "player": "BROOKS, ARMONI",
+      "team": "MIL",
+      "wpa": 98.11,
+      "plays": 71,
+      "rank": 28
     },
     {
       "player": "JONES, CHRIS",
       "team": "HTA",
       "wpa": 96.74,
       "plays": 84,
-      "rank": 34
+      "rank": 29
     },
     {
       "player": "THOMPSON, DARIUS",
       "team": "PAM",
       "wpa": 96.55,
       "plays": 96,
-      "rank": 35
+      "rank": 30
     },
     {
       "player": "HALL, DEVON",
       "team": "ULK",
       "wpa": 96.17,
       "plays": 105,
-      "rank": 36
+      "rank": 31
     },
     {
       "player": "JONES, TYRIQUE",
       "team": "PAR",
       "wpa": 95.17,
       "plays": 97,
-      "rank": 37
+      "rank": 32
+    },
+    {
+      "player": "WRIGHT, MOSES",
+      "team": "ZAL",
+      "wpa": 95.08,
+      "plays": 99,
+      "rank": 33
+    },
+    {
+      "player": "FRANCISCO, SYLVAIN",
+      "team": "ZAL",
+      "wpa": 94.93,
+      "plays": 131,
+      "rank": 34
+    },
+    {
+      "player": "NWORA, JORDAN",
+      "team": "RED",
+      "wpa": 93.75,
+      "plays": 119,
+      "rank": 35
     },
     {
       "player": "OKOBO, ELIE",
       "team": "MCO",
       "wpa": 93.64,
       "plays": 87,
-      "rank": 38
+      "rank": 36
     },
     {
       "player": "CARTER, TYSON",
       "team": "RED",
       "wpa": 92.87,
       "plays": 99,
-      "rank": 39
+      "rank": 37
     },
     {
       "player": "CORDINIER, ISAIA",
       "team": "IST",
       "wpa": 91.82,
       "plays": 95,
-      "rank": 40
-    },
-    {
-      "player": "MIKE, ISIAHA",
-      "team": "MUN",
-      "wpa": 91.01,
-      "plays": 107,
-      "rank": 41
+      "rank": 38
     },
     {
       "player": "HEZONJA, MARIO",
       "team": "MAD",
       "wpa": 90.21,
       "plays": 96,
-      "rank": 42
+      "rank": 39
     },
     {
       "player": "MIROTIC, NIKOLA",
       "team": "MCO",
       "wpa": 89.88,
       "plays": 114,
-      "rank": 43
+      "rank": 40
     },
     {
       "player": "DE LARREA, SERGIO",
       "team": "PAM",
       "wpa": 89.66,
       "plays": 93,
-      "rank": 44
+      "rank": 41
     },
     {
       "player": "MILUTINOV, NIKOLA",
       "team": "OLY",
       "wpa": 89.36,
       "plays": 95,
-      "rank": 45
-    },
-    {
-      "player": "LO, MAODO",
-      "team": "ZAL",
-      "wpa": 89.35,
-      "plays": 119,
-      "rank": 46
+      "rank": 42
     },
     {
       "player": "LARKIN, SHANE",
       "team": "IST",
       "wpa": 87.9,
       "plays": 116,
-      "rank": 47
+      "rank": 43
     },
     {
       "player": "FELIZ, ANDRES",
       "team": "MAD",
       "wpa": 86.76,
       "plays": 72,
-      "rank": 48
+      "rank": 44
+    },
+    {
+      "player": "SHIELDS, SHAVON",
+      "team": "MIL",
+      "wpa": 86.59,
+      "plays": 87,
+      "rank": 45
     },
     {
       "player": "SEDEKERSKIS, TADAS",
       "team": "BAS",
       "wpa": 85.94,
       "plays": 83,
-      "rank": 49
-    },
-    {
-      "player": "BOOKER, DEVIN",
-      "team": "MIL",
-      "wpa": 83.81,
-      "plays": 109,
-      "rank": 50
-    },
-    {
-      "player": "IZUNDU, EBUKA",
-      "team": "RED",
-      "wpa": 83.14,
-      "plays": 75,
-      "rank": 51
+      "rank": 46
     },
     {
       "player": "DOWTIN JR, JEFFREY",
       "team": "TEL",
       "wpa": 82.27,
       "plays": 83,
-      "rank": 52
+      "rank": 47
+    },
+    {
+      "player": "GUDURIC, MARKO",
+      "team": "MIL",
+      "wpa": 81.36,
+      "plays": 90,
+      "rank": 48
     },
     {
       "player": "WATSON, GLYNN",
       "team": "ASV",
       "wpa": 81.31,
       "plays": 103,
-      "rank": 53
+      "rank": 49
     },
     {
       "player": "LEDAY, ZACH",
       "team": "MIL",
       "wpa": 81.14,
       "plays": 99,
-      "rank": 54
+      "rank": 50
     },
     {
       "player": "CAMPAZZO, FACUNDO",
       "team": "MAD",
       "wpa": 79.96,
       "plays": 84,
-      "rank": 55
+      "rank": 51
     },
     {
       "player": "KABENGELE, MFIONDU",
       "team": "DUB",
       "wpa": 79.58,
       "plays": 86,
-      "rank": 56
+      "rank": 52
+    },
+    {
+      "player": "OBST, ANDREAS",
+      "team": "MUN",
+      "wpa": 79.42,
+      "plays": 84,
+      "rank": 53
     },
     {
       "player": "MICIC, VASILIJE",
       "team": "HTA",
       "wpa": 77.5,
       "plays": 107,
-      "rank": 57
+      "rank": 54
     },
     {
       "player": "SHENGELIA, TORNIKE",
       "team": "BAR",
       "wpa": 77.0,
       "plays": 102,
-      "rank": 58
-    },
-    {
-      "player": "GUDURIC, MARKO",
-      "team": "MIL",
-      "wpa": 76.44,
-      "plays": 116,
-      "rank": 59
+      "rank": 55
     },
     {
       "player": "WALKER IV, LONNIE",
       "team": "TEL",
       "wpa": 74.02,
       "plays": 105,
-      "rank": 60
+      "rank": 56
     },
     {
       "player": "DE COLO, NANDO",
       "team": "ASV",
       "wpa": 73.43,
       "plays": 65,
-      "rank": 61
+      "rank": 57
     },
     {
       "player": "BRYANT, ELIJAH",
       "team": "HTA",
       "wpa": 72.42,
       "plays": 91,
-      "rank": 62
+      "rank": 58
     },
     {
       "player": "DIOP, KHALIFA",
       "team": "BAS",
       "wpa": 72.3,
       "plays": 85,
-      "rank": 63
+      "rank": 59
     },
     {
       "player": "COLSON, BONZIE",
       "team": "ULK",
       "wpa": 72.08,
       "plays": 67,
-      "rank": 64
-    },
-    {
-      "player": "BUTKEVICIUS, ARNAS",
-      "team": "ZAL",
-      "wpa": 71.13,
-      "plays": 89,
-      "rank": 65
-    },
-    {
-      "player": "LUCIC, VLADIMIR",
-      "team": "MUN",
-      "wpa": 71.13,
-      "plays": 97,
-      "rank": 66
+      "rank": 60
     },
     {
       "player": "FOURNIER, EVAN",
       "team": "OLY",
       "wpa": 70.84,
       "plays": 72,
-      "rank": 67
+      "rank": 61
     },
     {
       "player": "COSTELLO, MATTHEW",
       "team": "PAM",
       "wpa": 70.69,
       "plays": 92,
-      "rank": 68
-    },
-    {
-      "player": "GIFFEY, NIELS",
-      "team": "MUN",
-      "wpa": 70.68,
-      "plays": 73,
-      "rank": 69
+      "rank": 62
     },
     {
       "player": "BONGA, ISAAC",
       "team": "PAR",
       "wpa": 70.59,
       "plays": 93,
-      "rank": 70
+      "rank": 63
     },
     {
       "player": "SORKIN, ROMAN",
       "team": "TEL",
       "wpa": 69.96,
       "plays": 76,
-      "rank": 71
+      "rank": 64
     },
     {
-      "player": "BALDWIN, KAMAR",
+      "player": "MIKE, ISIAHA",
       "team": "MUN",
-      "wpa": 69.48,
-      "plays": 93,
-      "rank": 72
+      "wpa": 69.17,
+      "plays": 82,
+      "rank": 65
     },
     {
       "player": "DIALLO, ALPHA",
       "team": "MCO",
       "wpa": 68.15,
       "plays": 83,
-      "rank": 73
-    },
-    {
-      "player": "RATHAN-MAYES, XAVIER",
-      "team": "MUN",
-      "wpa": 68.13,
-      "plays": 121,
-      "rank": 74
+      "rank": 66
     },
     {
       "player": "JANTUNEN, MIKAEL",
       "team": "ULK",
       "wpa": 67.08,
       "plays": 98,
-      "rank": 75
+      "rank": 67
     },
     {
       "player": "BRISSETT, O'SHAE J",
       "team": "TEL",
       "wpa": 65.48,
       "plays": 96,
-      "rank": 76
+      "rank": 68
+    },
+    {
+      "player": "RATHAN-MAYES, XAVIER",
+      "team": "MUN",
+      "wpa": 65.08,
+      "plays": 99,
+      "rank": 69
     },
     {
       "player": "REUVERS, NATHAN",
       "team": "PAM",
       "wpa": 65.02,
       "plays": 91,
-      "rank": 77
+      "rank": 70
     },
     {
       "player": "VESELY, JAN",
       "team": "BAR",
       "wpa": 64.06,
       "plays": 80,
-      "rank": 78
-    },
-    {
-      "player": "BOLMARO, LEANDRO",
-      "team": "MIL",
-      "wpa": 63.7,
-      "plays": 101,
-      "rank": 79
+      "rank": 71
     },
     {
       "player": "PETRUSEV, FILIP",
       "team": "DUB",
       "wpa": 63.67,
       "plays": 110,
-      "rank": 80
+      "rank": 72
     },
     {
       "player": "NIANG, SALIOU",
       "team": "VIR",
       "wpa": 62.96,
       "plays": 90,
-      "rank": 81
+      "rank": 73
     },
     {
       "player": "ROBINSON, JUSTIN",
       "team": "PRS",
       "wpa": 62.94,
       "plays": 91,
-      "rank": 82
-    },
-    {
-      "player": "BIRUTIS, LAURYNAS",
-      "team": "ZAL",
-      "wpa": 62.0,
-      "plays": 103,
-      "rank": 83
+      "rank": 74
     },
     {
       "player": "BLATT, TAMIR",
       "team": "TEL",
       "wpa": 62.0,
       "plays": 72,
-      "rank": 84
+      "rank": 75
     },
     {
       "player": "PUERTO, JOSEP",
       "team": "PAM",
       "wpa": 60.59,
       "plays": 70,
-      "rank": 85
+      "rank": 76
     },
     {
       "player": "MILTON, SHAKE",
       "team": "PAR",
       "wpa": 60.49,
       "plays": 74,
-      "rank": 86
+      "rank": 77
     },
     {
       "player": "WEILER-BABB, NICK",
       "team": "IST",
       "wpa": 59.67,
       "plays": 87,
-      "rank": 87
-    },
-    {
-      "player": "ULANOVAS, EDGARAS",
-      "team": "ZAL",
-      "wpa": 58.23,
-      "plays": 98,
-      "rank": 88
+      "rank": 78
     },
     {
       "player": "MUSA, DZANAN",
       "team": "DUB",
       "wpa": 57.93,
       "plays": 75,
-      "rank": 89
+      "rank": 79
     },
     {
       "player": "SMAILAGIC, ALEN",
       "team": "VIR",
       "wpa": 56.82,
       "plays": 80,
-      "rank": 90
+      "rank": 80
     },
     {
-      "player": "MOTIEJUNAS, DONATAS",
-      "team": "RED",
-      "wpa": 54.97,
-      "plays": 65,
-      "rank": 91
+      "player": "BOOKER, DEVIN",
+      "team": "MIL",
+      "wpa": 56.27,
+      "plays": 69,
+      "rank": 81
     },
     {
       "player": "HERNANGOMEZ, WILLY",
       "team": "BAR",
       "wpa": 54.27,
       "plays": 80,
-      "rank": 92
+      "rank": 82
+    },
+    {
+      "player": "BOLMARO, LEANDRO",
+      "team": "MIL",
+      "wpa": 54.17,
+      "plays": 80,
+      "rank": 83
     },
     {
       "player": "OKEKE, CHUMA",
       "team": "MAD",
       "wpa": 53.95,
       "plays": 66,
-      "rank": 93
+      "rank": 84
     },
     {
       "player": "LEAF, TJ",
       "team": "TEL",
       "wpa": 53.27,
       "plays": 61,
-      "rank": 94
+      "rank": 85
     },
     {
       "player": "SHORTS, TJ",
       "team": "PAN",
       "wpa": 52.59,
       "plays": 62,
-      "rank": 95
+      "rank": 86
     },
     {
       "player": "OSMAN, CEDI",
       "team": "PAN",
       "wpa": 51.67,
       "plays": 60,
-      "rank": 96
+      "rank": 87
     },
     {
       "player": "NDIAYE, MBAYE",
       "team": "ASV",
       "wpa": 51.47,
       "plays": 67,
-      "rank": 97
-    },
-    {
-      "player": "KALINIC, NIKOLA",
-      "team": "RED",
-      "wpa": 50.97,
-      "plays": 101,
-      "rank": 98
+      "rank": 88
     },
     {
       "player": "SATORANSKY, TOMAS",
       "team": "BAR",
       "wpa": 49.94,
       "plays": 86,
-      "rank": 99
+      "rank": 89
     },
     {
       "player": "WAINRIGHT, ISH",
       "team": "HTA",
       "wpa": 49.8,
       "plays": 67,
-      "rank": 100
+      "rank": 90
     },
     {
       "player": "TAVARES, WALTER",
       "team": "MAD",
       "wpa": 49.79,
       "plays": 83,
-      "rank": 101
+      "rank": 91
     },
     {
       "player": "SANTOS, MARCIO",
       "team": "TEL",
       "wpa": 49.49,
       "plays": 71,
-      "rank": 102
+      "rank": 92
     },
     {
       "player": "WRIGHT IV, MCKINLEY",
       "team": "DUB",
       "wpa": 49.36,
       "plays": 100,
-      "rank": 103
+      "rank": 93
     },
     {
       "player": "JACKSON, EDWIN",
       "team": "ASV",
       "wpa": 49.16,
       "plays": 76,
-      "rank": 104
+      "rank": 94
     },
     {
       "player": "OSETKOWSKI, DYLAN",
       "team": "PAR",
       "wpa": 48.71,
       "plays": 73,
-      "rank": 105
+      "rank": 95
     },
     {
       "player": "GRANT, JERIAN",
       "team": "PAN",
       "wpa": 48.7,
       "plays": 74,
-      "rank": 106
+      "rank": 96
     },
     {
       "player": "STRAZEL, MATTHEW",
       "team": "MCO",
       "wpa": 48.35,
       "plays": 65,
-      "rank": 107
+      "rank": 97
     },
     {
       "player": "DECK, GABRIEL",
       "team": "MAD",
       "wpa": 48.33,
       "plays": 75,
-      "rank": 108
+      "rank": 98
+    },
+    {
+      "player": "GIFFEY, NIELS",
+      "team": "MUN",
+      "wpa": 48.25,
+      "plays": 57,
+      "rank": 99
+    },
+    {
+      "player": "ULANOVAS, EDGARAS",
+      "team": "ZAL",
+      "wpa": 46.92,
+      "plays": 79,
+      "rank": 100
     },
     {
       "player": "SLOUKAS, KOSTAS",
       "team": "PAN",
       "wpa": 46.75,
       "plays": 99,
-      "rank": 109
+      "rank": 101
     },
     {
       "player": "LYLES, TREY",
       "team": "MAD",
       "wpa": 46.17,
       "plays": 77,
-      "rank": 110
+      "rank": 102
     },
     {
       "player": "NEBO, JOSH",
       "team": "MIL",
       "wpa": 46.09,
       "plays": 54,
-      "rank": 111
+      "rank": 103
+    },
+    {
+      "player": "LO, MAODO",
+      "team": "ZAL",
+      "wpa": 45.96,
+      "plays": 83,
+      "rank": 104
     },
     {
       "player": "BACON, DWAYNE",
       "team": "DUB",
       "wpa": 45.15,
       "plays": 103,
-      "rank": 112
+      "rank": 105
     },
     {
       "player": "JONES, CARLIK",
       "team": "PAR",
       "wpa": 45.05,
       "plays": 89,
-      "rank": 113
+      "rank": 106
     },
     {
       "player": "NOWELL, MARKQUIS",
       "team": "BAS",
       "wpa": 45.04,
       "plays": 90,
-      "rank": 114
+      "rank": 107
     },
     {
       "player": "LAPROVITTOLA, NICOLAS",
       "team": "BAR",
       "wpa": 44.31,
       "plays": 58,
-      "rank": 115
+      "rank": 108
     },
     {
       "player": "WARD, TYSON",
       "team": "OLY",
       "wpa": 43.88,
       "plays": 65,
-      "rank": 116
+      "rank": 109
     },
     {
       "player": "MASSA, BODIAN",
       "team": "ASV",
       "wpa": 43.8,
       "plays": 76,
-      "rank": 117
-    },
-    {
-      "player": "BROWN, LORENZO",
-      "team": "MIL",
-      "wpa": 43.47,
-      "plays": 70,
-      "rank": 118
+      "rank": 110
     },
     {
       "player": "ALSTON JR., DERRICK",
       "team": "VIR",
       "wpa": 43.15,
       "plays": 63,
-      "rank": 119
-    },
-    {
-      "player": "TUBELIS, AZUOLAS",
-      "team": "ZAL",
-      "wpa": 43.09,
-      "plays": 87,
-      "rank": 120
+      "rank": 111
     },
     {
       "player": "OUATTARA, YAKUBA",
       "team": "PRS",
       "wpa": 42.99,
       "plays": 110,
-      "rank": 121
+      "rank": 112
     },
     {
-      "player": "GABRIEL, WENYEN",
-      "team": "MUN",
-      "wpa": 42.75,
-      "plays": 75,
-      "rank": 122
+      "player": "BIRUTIS, LAURYNAS",
+      "team": "ZAL",
+      "wpa": 42.65,
+      "plays": 70,
+      "rank": 113
     },
     {
       "player": "TAYLOR, KAMERON",
       "team": "PAM",
       "wpa": 42.03,
       "plays": 76,
-      "rank": 123
+      "rank": 114
     },
     {
       "player": "SELJAAS, ZACHARY",
       "team": "ASV",
       "wpa": 41.91,
       "plays": 92,
-      "rank": 124
+      "rank": 115
+    },
+    {
+      "player": "BUTKEVICIUS, ARNAS",
+      "team": "ZAL",
+      "wpa": 41.54,
+      "plays": 60,
+      "rank": 116
+    },
+    {
+      "player": "TUBELIS, AZUOLAS",
+      "team": "ZAL",
+      "wpa": 41.05,
+      "plays": 69,
+      "rank": 117
     },
     {
       "player": "PARKER, JABARI",
       "team": "PAR",
       "wpa": 40.77,
       "plays": 82,
-      "rank": 125
+      "rank": 118
+    },
+    {
+      "player": "KALINIC, NIKOLA",
+      "team": "RED",
+      "wpa": 40.75,
+      "plays": 74,
+      "rank": 119
     },
     {
       "player": "ROGKAVOPOULOS, NIKOLAOS",
       "team": "PAN",
       "wpa": 40.74,
       "plays": 59,
-      "rank": 126
+      "rank": 120
     },
     {
       "player": "WILLIS, DEREK",
       "team": "PRS",
       "wpa": 40.5,
       "plays": 93,
-      "rank": 127
-    },
-    {
-      "player": "DAVIDOVAC, DEJAN",
-      "team": "RED",
-      "wpa": 40.36,
-      "plays": 59,
-      "rank": 128
+      "rank": 121
     },
     {
       "player": "WALKUP, THOMAS",
       "team": "OLY",
       "wpa": 39.61,
       "plays": 54,
-      "rank": 129
+      "rank": 122
     },
     {
       "player": "LLULL, SERGIO",
       "team": "MAD",
       "wpa": 38.8,
       "plays": 53,
-      "rank": 130
+      "rank": 123
     },
     {
       "player": "BERTANS, DAVIS",
       "team": "DUB",
       "wpa": 38.56,
       "plays": 77,
-      "rank": 131
+      "rank": 124
     },
     {
       "player": "M'BAYE, AMATH",
       "team": "PRS",
       "wpa": 38.42,
       "plays": 96,
-      "rank": 132
+      "rank": 125
     },
     {
       "player": "VILDOZA, LUCA",
       "team": "VIR",
       "wpa": 38.12,
       "plays": 67,
-      "rank": 133
+      "rank": 126
     },
     {
       "player": "VAUTIER, BASTIEN",
       "team": "ASV",
       "wpa": 38.11,
       "plays": 83,
-      "rank": 134
+      "rank": 127
     },
     {
-      "player": "MANNION, NICCOLO",
-      "team": "MIL",
-      "wpa": 37.06,
+      "player": "BALDWIN, KAMAR",
+      "team": "MUN",
+      "wpa": 37.85,
       "plays": 60,
-      "rank": 135
+      "rank": 128
     },
     {
       "player": "MALCOLM, COLLIN",
       "team": "HTA",
       "wpa": 36.41,
       "plays": 64,
-      "rank": 136
+      "rank": 129
     },
     {
       "player": "SAKO, NEAL",
       "team": "PAM",
       "wpa": 36.19,
       "plays": 60,
-      "rank": 137
-    },
-    {
-      "player": "DOS SANTOS, YAGO",
-      "team": "RED",
-      "wpa": 35.87,
-      "plays": 62,
-      "rank": 138
+      "rank": 130
     },
     {
       "player": "PRADILLA, JAIME",
       "team": "PAM",
       "wpa": 35.15,
       "plays": 87,
-      "rank": 139
+      "rank": 131
     },
     {
       "player": "HOMMES, DAULTON",
       "team": "PRS",
       "wpa": 34.76,
       "plays": 61,
-      "rank": 140
+      "rank": 132
     },
     {
       "player": "PAJOLA, ALESSANDRO",
       "team": "VIR",
       "wpa": 34.56,
       "plays": 71,
-      "rank": 141
+      "rank": 133
     },
     {
-      "player": "JESSUP, JUSTINIAN",
+      "player": "LUCIC, VLADIMIR",
       "team": "MUN",
-      "wpa": 33.86,
-      "plays": 64,
-      "rank": 142
+      "wpa": 34.11,
+      "plays": 66,
+      "rank": 134
     },
     {
-      "player": "OJELEYE, SEMI",
-      "team": "RED",
-      "wpa": 33.86,
-      "plays": 79,
-      "rank": 143
+      "player": "GABRIEL, WENYEN",
+      "team": "MUN",
+      "wpa": 33.23,
+      "plays": 51,
+      "rank": 135
     },
     {
       "player": "FERNANDO, BRUNO",
       "team": "MAD",
       "wpa": 32.94,
       "plays": 62,
-      "rank": 144
+      "rank": 136
     },
     {
       "player": "SLEVA, DUSTIN",
       "team": "ZAL",
-      "wpa": 32.39,
-      "plays": 96,
-      "rank": 145
+      "wpa": 32.51,
+      "plays": 77,
+      "rank": 137
     },
     {
       "player": "MELLI, NICOLO",
       "team": "ULK",
       "wpa": 32.37,
       "plays": 92,
-      "rank": 146
+      "rank": 138
     },
     {
       "player": "MORGAN, JEREMY",
       "team": "PRS",
       "wpa": 32.0,
       "plays": 86,
-      "rank": 147
+      "rank": 139
     },
     {
       "player": "SMITS, ROLANDS",
       "team": "IST",
       "wpa": 31.92,
       "plays": 62,
-      "rank": 148
+      "rank": 140
     },
     {
       "player": "HOLMES, RICHAUN",
       "team": "PAN",
       "wpa": 31.84,
       "plays": 73,
-      "rank": 149
+      "rank": 141
     },
     {
       "player": "BIBEROVIC, TARIK",
       "team": "ULK",
       "wpa": 31.67,
       "plays": 85,
-      "rank": 150
+      "rank": 142
     },
     {
       "player": "PARRA, JOEL",
       "team": "BAR",
       "wpa": 28.17,
       "plays": 52,
-      "rank": 151
+      "rank": 143
     },
     {
       "player": "BLOSSOMGAME, JARON",
       "team": "MCO",
       "wpa": 26.36,
       "plays": 64,
-      "rank": 152
+      "rank": 144
     },
     {
       "player": "DOKOSSI, ALLAN",
       "team": "PRS",
       "wpa": 26.26,
       "plays": 109,
-      "rank": 153
+      "rank": 145
     },
     {
       "player": "MCCORMACK, DAVID",
       "team": "MUN",
-      "wpa": 25.62,
-      "plays": 72,
-      "rank": 154
+      "wpa": 25.59,
+      "plays": 61,
+      "rank": 146
     },
     {
       "player": "LIGHTY, DAVID",
       "team": "ASV",
       "wpa": 24.77,
       "plays": 74,
-      "rank": 155
+      "rank": 147
     },
     {
       "player": "LEE, SABEN",
       "team": "OLY",
       "wpa": 24.6,
       "plays": 59,
-      "rank": 156
+      "rank": 148
     },
     {
       "player": "JALLOW, KARIM",
       "team": "VIR",
       "wpa": 23.31,
       "plays": 63,
-      "rank": 157
+      "rank": 149
     },
     {
       "player": "JONES, KAI",
       "team": "IST",
       "wpa": 22.84,
       "plays": 54,
-      "rank": 158
-    },
-    {
-      "player": "ELLIS, QUINN",
-      "team": "MIL",
-      "wpa": 20.44,
-      "plays": 89,
-      "rank": 159
+      "rank": 150
     },
     {
       "player": "MITOGLOU, KONSTANTINOS",
       "team": "PAN",
       "wpa": 20.31,
       "plays": 70,
-      "rank": 160
+      "rank": 151
     },
     {
       "player": "YURTSEVEN, OMER",
       "team": "PAN",
       "wpa": 17.68,
       "plays": 71,
-      "rank": 161
+      "rank": 152
     },
     {
       "player": "CLARK III, JIMMY",
       "team": "TEL",
       "wpa": 16.42,
       "plays": 91,
-      "rank": 162
-    },
-    {
-      "player": "SIRVYDIS, DEIVIDAS",
-      "team": "ZAL",
-      "wpa": 16.33,
-      "plays": 52,
-      "rank": 163
+      "rank": 153
     },
     {
       "player": "CAVALIERE, LEOPOLD",
       "team": "PRS",
       "wpa": 16.24,
       "plays": 55,
-      "rank": 164
+      "rank": 154
     },
     {
       "player": "SAMANIC, LUKA",
       "team": "BAS",
       "wpa": 16.19,
       "plays": 52,
-      "rank": 165
+      "rank": 155
     },
     {
       "player": "JOVIC, STEFAN",
       "team": "MUN",
       "wpa": 16.12,
       "plays": 65,
-      "rank": 166
+      "rank": 156
     },
     {
       "player": "FAYE, MOUHAMED",
       "team": "PRS",
       "wpa": 16.01,
       "plays": 70,
-      "rank": 167
+      "rank": 157
     },
     {
       "player": "DIOUF, MOUHAMET",
       "team": "VIR",
       "wpa": 15.69,
       "plays": 54,
-      "rank": 168
+      "rank": 158
     },
     {
       "player": "BAKO, ISMAEL",
       "team": "PRS",
       "wpa": 12.69,
       "plays": 67,
-      "rank": 169
+      "rank": 159
+    },
+    {
+      "player": "ELLIS, QUINN",
+      "team": "MIL",
+      "wpa": 11.6,
+      "plays": 66,
+      "rank": 160
     },
     {
       "player": "BIRCH, KHEM",
       "team": "ULK",
       "wpa": 9.11,
       "plays": 64,
-      "rank": 170
+      "rank": 161
     },
     {
       "player": "PAPAGIANNIS, GEORGIOS",
       "team": "IST",
       "wpa": 7.08,
       "plays": 55,
-      "rank": 171
+      "rank": 162
     },
     {
       "player": "HACKETT, DANIEL",
       "team": "VIR",
       "wpa": 5.42,
       "plays": 60,
-      "rank": 172
+      "rank": 163
     },
     {
       "player": "HAYES, KEVARRIUS",
       "team": "MCO",
       "wpa": -2.23,
       "plays": 52,
-      "rank": 173
+      "rank": 164
     },
     {
       "player": "HERRERA, SEBASTIAN",
       "team": "PRS",
       "wpa": -2.73,
       "plays": 98,
-      "rank": 174
+      "rank": 165
     }
   ],
   "tpm": [
@@ -42751,6 +42688,22 @@
     },
     {
       "date": "2026-07-16",
+      "label": "Final",
+      "odds": {
+        "OLY": 100.0,
+        "PAM": 0.0,
+        "MAD": 0.0,
+        "ULK": 0.0,
+        "ZAL": 0.0,
+        "HTA": 0.0,
+        "PAN": 0.0,
+        "MCO": 0.0,
+        "BAR": 0.0,
+        "RED": 0.0
+      }
+    },
+    {
+      "date": "2026-07-17",
       "label": "Final",
       "odds": {
         "OLY": 100.0,
